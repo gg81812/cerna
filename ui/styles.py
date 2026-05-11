@@ -213,62 +213,63 @@ div[data-testid="column"] { padding: 0 !important; }
     text-align: center; line-height: 1.9;
 }
 
-/* Starter-prompts dropdown — styled to blend with the dark purple LHS */
-.starter-expander {
-    margin: 0.8rem 0;
+/* Starter-prompts toggle button + chip grid — blends with dark purple LHS */
+.starter-toggle-wrap {
+    margin: 0.6rem 0 0.4rem 0;
 }
-.starter-expander + div [data-testid="stExpander"],
-.starter-expander ~ div [data-testid="stExpander"]:first-of-type {
-    background: rgba(20, 10, 40, 0.55) !important;
-    border: 1px solid rgba(123, 63, 228, 0.35) !important;
-    border-radius: 12px !important;
-}
-/* Streamlit renders the expander as a sibling div after our wrapper */
-div[data-testid="stExpander"]:has(+ .starter-expander),
-.starter-expander + div[data-testid="stExpander"] {
-    background: rgba(20, 10, 40, 0.55) !important;
-    border: 1px solid rgba(123, 63, 228, 0.35) !important;
-    border-radius: 12px !important;
-}
-/* Catch-all: the only expander on the page is the starter one — safe to scope globally */
-[data-testid="stExpander"] {
-    background: rgba(20, 10, 40, 0.55) !important;
-    border: 1px solid rgba(123, 63, 228, 0.35) !important;
-    border-radius: 12px !important;
-    margin-bottom: 1rem !important;
-}
-[data-testid="stExpander"] summary {
+/* The toggle button itself */
+.starter-toggle-wrap + div button,
+.starter-toggle-wrap ~ div button[kind="secondary"]:has-text("Quick-start") {
+    background: rgba(20, 10, 40, 0.6) !important;
+    border: 1px solid rgba(123, 63, 228, 0.4) !important;
     color: #E0D4FF !important;
     font-weight: 600 !important;
-    padding: 0.65rem 0.9rem !important;
+    text-align: left !important;
+    padding: 0.55rem 0.9rem !important;
+    font-size: 0.78rem !important;
 }
-[data-testid="stExpander"] summary:hover {
-    background: rgba(123, 63, 228, 0.12) !important;
-    border-radius: 12px !important;
-}
-[data-testid="stExpander"] summary p,
-[data-testid="stExpander"] summary span {
+/* Streamlit-version-resilient catch-all for the starter toggle button.
+   The toggle button has key="starter_toggle" — Streamlit doesn't expose
+   keys as CSS hooks reliably, so we scope by position: the button
+   immediately following the .starter-toggle-wrap marker. */
+.starter-toggle-wrap + div [data-testid="stButton"] > button {
+    background: rgba(20, 10, 40, 0.6) !important;
+    border: 1px solid rgba(123, 63, 228, 0.4) !important;
     color: #E0D4FF !important;
+    font-weight: 600 !important;
+    text-align: left !important;
+    padding: 0.55rem 0.9rem !important;
+    font-size: 0.78rem !important;
+    border-radius: 10px !important;
 }
-/* Expanded content area */
-[data-testid="stExpander"] > details > div {
-    background: transparent !important;
-    padding: 0.6rem 0.7rem !important;
+.starter-toggle-wrap + div [data-testid="stButton"] > button:hover {
+    background: rgba(123, 63, 228, 0.22) !important;
+    border-color: rgba(123, 63, 228, 0.7) !important;
+    color: #FFFFFF !important;
 }
-/* Buttons inside the starter dropdown — keep them readable on dark purple */
-[data-testid="stExpander"] button[kind="secondary"] {
-    background: rgba(123, 63, 228, 0.18) !important;
-    border: 1px solid rgba(123, 63, 228, 0.45) !important;
-    color: #E0D4FF !important;
-    font-size: 0.72rem !important;
-    padding: 0.4rem 0.5rem !important;
+
+/* Chip buttons inside the starter grid — readable on dark purple */
+.starter-chip-grid {
+    margin-bottom: 0.6rem;
+}
+.starter-chip-grid + div [data-testid="stButton"] > button,
+.starter-chip-grid ~ div [data-testid="stButton"] > button {
+    background: rgba(123, 63, 228, 0.22) !important;
+    border: 1px solid rgba(123, 63, 228, 0.5) !important;
+    color: #FFFFFF !important;
+    font-size: 0.7rem !important;
+    font-weight: 500 !important;
+    padding: 0.42rem 0.55rem !important;
     min-height: auto !important;
     white-space: normal !important;
     line-height: 1.25 !important;
+    border-radius: 8px !important;
 }
-[data-testid="stExpander"] button[kind="secondary"]:hover {
-    background: rgba(123, 63, 228, 0.32) !important;
-    border-color: rgba(123, 63, 228, 0.7) !important;
+.starter-chip-grid + div [data-testid="stButton"] > button:hover,
+.starter-chip-grid ~ div [data-testid="stButton"] > button:hover {
+    background: rgba(123, 63, 228, 0.4) !important;
+    border-color: rgba(160, 100, 255, 0.9) !important;
+    color: #FFFFFF !important;
 }
 .left-footer strong { color: rgba(200,180,255,0.8); }
 

@@ -94,18 +94,17 @@ _TYPING_HTML = (
 col_l, col_c = st.columns([0.34, 0.66], gap="small")
 
 with col_l:
+    # Starter-prompts toggle FIRST so it's visible without scrolling.
+    # Auto-hides once the user sends a message.
+    comp.render_starter_grid()
+
     comp.render_left_panel(
         is_speaking=st.session_state.avatar_speaking,
         active_module=st.session_state.active_module,
         kb_counts=kb_counts,
     )
 
-    # Collapsible starter-prompts dropdown lives in the left panel, styled
-    # to match the dark purple background. Hidden once the user sends a message.
-    comp.render_starter_grid()
-
-    # Knowledge-articles footer rendered after the dropdown so it stays
-    # at the bottom of the left panel visual hierarchy.
+    # Knowledge-articles footer rendered at the bottom of the LHS hierarchy.
     comp.render_left_footer(kb_counts)
 
 with col_c:

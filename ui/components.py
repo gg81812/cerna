@@ -369,18 +369,28 @@ def render_top_bar() -> None:
 
 
 def render_starter_grid() -> None:
-    """Collapsible starter prompts dropdown in the left panel.
+    """Toggle button + conditional chip grid for the left panel.
 
-    Hidden by default behind a click-to-open expander styled to match the dark
-    purple LHS background. Auto-hides entirely once a conversation starts.
+    Uses a regular button (not st.expander) for full styling control — the
+    Streamlit expander's default light-lavender background fights our dark
+    purple LHS. Auto-hides entirely once a conversation starts.
     """
     if st.session_state.get("messages"):
         return
 
-    # Wrapper class lets us target the expander styling without affecting
-    # any other expanders in the app.
-    st.markdown('<div class="starter-expander">', unsafe_allow_html=True)
-    with st.expander("⚡ Quick-start prompts", expanded=False):
+    show = st.session_state.get("show_starter", False)
+    arrow = "▾" if show else "▸"
+    label = f"⚡ Quick-start prompts  {arrow}"
+
+    # Wrap so we can style this specific button + the chip grid below
+    st.markdown('<div class="starter-toggle-wrap">', unsafe_allow_html=True)
+    if st.button(label, key="starter_toggle", use_container_width=True):
+        st.session_state.show_starter = not show
+        st.rerun()
+    st.markdown('</div>', unsafe_allow_html=True)
+
+    if show:
+        st.markdown('<div class="starter-chip-grid">', unsafe_allow_html=True)
         # 2-column grid — fits the narrow left panel
         for i, chip in enumerate(PROMPT_CHIPS):
             if i % 2 == 0:
@@ -389,7 +399,7 @@ def render_starter_grid() -> None:
                 if st.button(chip, key=f"chip_{i}", use_container_width=True):
                     st.session_state.pending_prompt = chip
                     st.rerun()
-    st.markdown('</div>', unsafe_allow_html=True)
+        st.markdown('</div>', unsafe_allow_html=True)
 
 
 def render_cerna_response(

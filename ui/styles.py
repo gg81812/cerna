@@ -40,7 +40,6 @@ div[data-testid="column"] { padding: 0 !important; }
 /* ── LEFT PANEL (dark — avatar hero) ── */
 .left-panel {
     width: 100%;
-    min-height: 100vh;
     background: linear-gradient(175deg, #1C0D3F 0%, #2A1260 35%, #1A0935 70%, #0D0720 100%);
     display: flex;
     flex-direction: column;
@@ -48,6 +47,9 @@ div[data-testid="column"] { padding: 0 !important; }
     padding: 2.5rem 1.5rem 1.5rem;
     position: relative;
     overflow: hidden;
+}
+.left-panel-footer-only {
+    padding: 0.5rem 1.5rem 1rem !important;
 }
 .left-panel::before {
     content: '';
@@ -213,61 +215,46 @@ div[data-testid="column"] { padding: 0 !important; }
     text-align: center; line-height: 1.9;
 }
 
-/* Starter-prompts toggle button + chip grid — blends with dark purple LHS */
-.starter-toggle-wrap {
-    margin: 0.6rem 0 0.4rem 0;
-}
-/* The toggle button itself */
-.starter-toggle-wrap + div button,
-.starter-toggle-wrap ~ div button[kind="secondary"]:has-text("Quick-start") {
-    background: rgba(20, 10, 40, 0.6) !important;
-    border: 1px solid rgba(123, 63, 228, 0.4) !important;
-    color: #E0D4FF !important;
+/* Starter-prompts toggle button — styled via Streamlit's st-key-* class
+   selector which is reliably injected onto the element-container wrapping
+   any widget with a `key=` parameter. Same gradient family as .left-panel. */
+.st-key-starter_toggle button,
+.st-key-starter_toggle button p {
+    background: linear-gradient(135deg, #2A1260 0%, #1C0D3F 100%) !important;
+    border: 1px solid rgba(123, 63, 228, 0.5) !important;
+    color: #FFFFFF !important;
     font-weight: 600 !important;
     text-align: left !important;
-    padding: 0.55rem 0.9rem !important;
-    font-size: 0.78rem !important;
-}
-/* Streamlit-version-resilient catch-all for the starter toggle button.
-   The toggle button has key="starter_toggle" — Streamlit doesn't expose
-   keys as CSS hooks reliably, so we scope by position: the button
-   immediately following the .starter-toggle-wrap marker. */
-.starter-toggle-wrap + div [data-testid="stButton"] > button {
-    background: rgba(20, 10, 40, 0.6) !important;
-    border: 1px solid rgba(123, 63, 228, 0.4) !important;
-    color: #E0D4FF !important;
-    font-weight: 600 !important;
-    text-align: left !important;
-    padding: 0.55rem 0.9rem !important;
-    font-size: 0.78rem !important;
+    padding: 0.6rem 0.95rem !important;
+    font-size: 0.82rem !important;
     border-radius: 10px !important;
+    letter-spacing: 0.01em !important;
 }
-.starter-toggle-wrap + div [data-testid="stButton"] > button:hover {
-    background: rgba(123, 63, 228, 0.22) !important;
-    border-color: rgba(123, 63, 228, 0.7) !important;
+.st-key-starter_toggle button:hover,
+.st-key-starter_toggle button:hover p {
+    background: linear-gradient(135deg, #3A1A78 0%, #25115A 100%) !important;
+    border-color: rgba(160, 100, 255, 0.9) !important;
     color: #FFFFFF !important;
 }
 
-/* Chip buttons inside the starter grid — readable on dark purple */
-.starter-chip-grid {
-    margin-bottom: 0.6rem;
-}
-.starter-chip-grid + div [data-testid="stButton"] > button,
-.starter-chip-grid ~ div [data-testid="stButton"] > button {
-    background: rgba(123, 63, 228, 0.22) !important;
-    border: 1px solid rgba(123, 63, 228, 0.5) !important;
+/* Chip buttons — match the toggle palette so the whole LHS feels unified.
+   Streamlit attaches `st-key-chip_0` ... `st-key-chip_7` to each chip container. */
+[class*="st-key-chip_"] button,
+[class*="st-key-chip_"] button p {
+    background: linear-gradient(135deg, #2A1260 0%, #1C0D3F 100%) !important;
+    border: 1px solid rgba(123, 63, 228, 0.45) !important;
     color: #FFFFFF !important;
-    font-size: 0.7rem !important;
+    font-size: 0.72rem !important;
     font-weight: 500 !important;
-    padding: 0.42rem 0.55rem !important;
+    padding: 0.5rem 0.6rem !important;
     min-height: auto !important;
     white-space: normal !important;
-    line-height: 1.25 !important;
+    line-height: 1.3 !important;
     border-radius: 8px !important;
 }
-.starter-chip-grid + div [data-testid="stButton"] > button:hover,
-.starter-chip-grid ~ div [data-testid="stButton"] > button:hover {
-    background: rgba(123, 63, 228, 0.4) !important;
+[class*="st-key-chip_"] button:hover,
+[class*="st-key-chip_"] button:hover p {
+    background: linear-gradient(135deg, #3A1A78 0%, #25115A 100%) !important;
     border-color: rgba(160, 100, 255, 0.9) !important;
     color: #FFFFFF !important;
 }

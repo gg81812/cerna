@@ -262,6 +262,12 @@ def render_left_panel(
         if is_speaking
         else '<div class="idle-dot"></div>'
     )
+    pills_html = "".join(
+        f'<div class="mod-pill{" active" if key == active_module else ""}" '
+        f'style="background:{c}22;border-color:{c}55;color:{c};">{lbl}</div>'
+        for key, (lbl, c) in MODULES.items()
+        if key is not None
+    )
 
     if lottie_data and _LOTTIE_OK:
         _, mid, _ = st.columns([0.3, 2.4, 0.3])
@@ -284,6 +290,7 @@ def render_left_panel(
     <strong>Millennium</strong>, PowerChart, and Clinical workflows.
     Every answer cited to source.
   </div>
+  <div class="mod-pills">{pills_html}</div>
 </div>""", unsafe_allow_html=True)
     else:
         speaking_cls = " speaking" if is_speaking else ""
@@ -303,6 +310,7 @@ def render_left_panel(
     <strong>Millennium</strong>, PowerChart, and Clinical workflows.
     Every answer cited to source.
   </div>
+  <div class="mod-pills">{pills_html}</div>
 </div>""", unsafe_allow_html=True)
 
 

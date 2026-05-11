@@ -372,10 +372,11 @@ def render_top_bar() -> None:
 def render_suggestions() -> None:
     has_msgs = bool(st.session_state.get("messages"))
     with st.expander("Where would you like to start?", expanded=False):
-        row1, row2 = st.columns(3), st.columns(3)
+        # 2-column grid — fits the narrow left panel
         for i, (_, question) in enumerate(SUGGESTIONS):
-            target_row = row1 if i < 3 else row2
-            with target_row[i % 3]:
+            if i % 2 == 0:
+                cols = st.columns(2)
+            with cols[i % 2]:
                 if st.button(question, key=f"sug_{i}", use_container_width=True):
                     st.session_state.pending_prompt = question
                     st.rerun()
@@ -384,10 +385,11 @@ def render_suggestions() -> None:
 def render_prompt_chips() -> None:
     has_msgs = bool(st.session_state.get("messages"))
     with st.expander("⚡ Quick-start prompts", expanded=not has_msgs):
-        row1, row2 = st.columns(4), st.columns(4)
+        # 2-column grid — fits the narrow left panel
         for i, chip in enumerate(PROMPT_CHIPS):
-            target_row = row1 if i < 4 else row2
-            with target_row[i % 4]:
+            if i % 2 == 0:
+                cols = st.columns(2)
+            with cols[i % 2]:
                 if st.button(chip, key=f"chip_{i}", use_container_width=True):
                     st.session_state.pending_prompt = chip
                     st.rerun()

@@ -100,15 +100,28 @@ with col_l:
         kb_counts=kb_counts,
     )
 
+    # Suggestion starters and quick-start prompts now live in the left panel
+    comp.render_suggestions()
+    comp.render_prompt_chips()
+
 with col_c:
     # Header + module filter
     comp.render_top_bar()
 
-    # Suggestion starters — full width, collapsed by default
-    comp.render_suggestions()
-
-    # Collapsible quick-start prompt chips
-    comp.render_prompt_chips()
+    # Chat input — pinned to the top of the conversation area
+    with st.form("chat_input_form", clear_on_submit=True, border=False):
+        ti_col, btn_col = st.columns([0.88, 0.12])
+        with ti_col:
+            user_input = st.text_input(
+                "Ask Cerna",
+                placeholder="Ask about Cerner workflows, configurations, integrations…",
+                label_visibility="collapsed",
+                key="chat_text_input",
+            )
+        with btn_col:
+            submitted = st.form_submit_button("Send", use_container_width=True)
+    if not submitted:
+        user_input = None
 
     # Chat transcript (all stored messages)
     comp.render_chat(st.session_state.messages)
@@ -262,17 +275,12 @@ with col_c:
             st.session_state.avatar_speaking = False
             st.rerun()
 
-    # Chat input (rendered last so it stays at the bottom)
+    # Clinical disclaimer footer for the conversation area
     st.markdown(
-        '<div style="text-align:center;font-size:0.58rem;color:#9CA3AF;margin-top:0.25rem;padding:0 1rem;">'
+        '<div style="text-align:center;font-size:0.58rem;color:#9CA3AF;margin-top:0.5rem;padding:0 1rem;">'
         'Cerna is an AI assistant for Cerner implementation guidance only. '
         'Not a clinical decision tool — always consult a licensed clinician.</div>',
         unsafe_allow_html=True,
-    )
-
-    user_input = st.chat_input(
-        "Ask about Cerner workflows, configurations, integrations…",
-        key="chat_input",
     )
 
 # ── Input routing ─────────────────────────────────────────────────────────────

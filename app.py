@@ -250,6 +250,15 @@ with col_c:
             rewritten_query = prepared.rewritten_query if prepared else query
             refusal         = prepared.refusal         if prepared else ""
 
+            # Append clickable source-URL markdown links to recommendations,
+            # drawn from the top retrieved chunks (skipped for refusals where
+            # nothing was retrieved).
+            if chunks and cerna_resp.recommendations is not None:
+                from source_urls import enrich_recommendations
+                cerna_resp.recommendations = enrich_recommendations(
+                    cerna_resp.recommendations, chunks, max_links=3
+                )
+
             # Render the response card immediately (before rerun, in chat flow)
             comp.render_cerna_response(cerna_resp, sources, classification=classification)
 

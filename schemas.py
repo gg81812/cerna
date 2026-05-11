@@ -29,8 +29,15 @@ _INTERNAL_REF_PATTERNS: list[re.Pattern] = [
         r"[`\"']?[A-Za-z0-9][A-Za-z0-9_\-./]*\.(?:txt|md|json)[`\"']?",
         re.IGNORECASE,
     ),
-    # Bare hyphenated filename refs, e.g. clinical-emar-user-guide.txt or fhir-r4-overview.md
-    re.compile(r"\b[A-Za-z0-9][A-Za-z0-9_\-]*(?:[/\\][A-Za-z0-9_\-]+)*\.(?:txt|md|json)\b"),
+    # Bare hyphenated filename refs, e.g. clinical-emar-user-guide.txt or fhir-r4-overview.md.
+    # Lookbehind/-ahead skip URLs (preceded by / : .) and markdown link syntax
+    # (preceded by [ or ( ; followed by )), so https://example.com/file.md and
+    # [text](https://x/file.md) are preserved.
+    re.compile(
+        r"(?<![A-Za-z0-9_/:.\[\(])"
+        r"[A-Za-z][A-Za-z0-9_\-]+\.(?:txt|md|json)"
+        r"(?![A-Za-z0-9_/\)])"
+    ),
 ]
 
 

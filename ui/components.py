@@ -212,6 +212,14 @@ def _md_to_html(text: str) -> str:
     text = re.sub(r"`([^`]+)`", r"<code>\1</code>", text)
     text = re.sub(r"\*\*(.+?)\*\*", r'<strong style="color:#D8E4F0;">\1</strong>', text)
     text = re.sub(r"\*(.+?)\*", r"<em>\1</em>", text)
+    # Markdown links [text](url) -> clickable hyperlink, opens in new tab.
+    # Run before list/line transforms so the URL doesn't get mangled.
+    text = re.sub(
+        r"\[([^\]]+)\]\((https?://[^\s\)]+)\)",
+        r'<a href="\2" target="_blank" rel="noopener" '
+        r'style="color:#7B3FE4;text-decoration:underline;">\1</a>',
+        text,
+    )
     text = re.sub(
         r"^\s*(\d+)[.)]\s+(.+)$",
         r'<div style="margin:0.25rem 0 0.25rem 0.5rem;">'

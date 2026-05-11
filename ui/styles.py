@@ -529,6 +529,51 @@ div[data-testid="stSelectbox"] > div > div {
     color: #fff !important;
 }
 
+/* ── Top search bar (st.text_input inside chat_input_form) ──
+   Scoped via the st-key-* class Streamlit injects for any widget with key=. */
+.st-key-chat_text_input input {
+    background: #FFFFFF !important;
+    border: 1.5px solid rgba(123,63,228,0.35) !important;
+    border-radius: 12px !important;
+    padding: 0.85rem 1.1rem !important;
+    font-size: 0.95rem !important;
+    font-family: 'DM Sans', sans-serif !important;
+    color: #1F2937 !important;
+    box-shadow: 0 2px 10px rgba(123,63,228,0.08) !important;
+    transition: all 0.18s ease !important;
+}
+.st-key-chat_text_input input:hover {
+    border-color: rgba(123,63,228,0.55) !important;
+    box-shadow: 0 2px 14px rgba(123,63,228,0.14) !important;
+}
+.st-key-chat_text_input input:focus {
+    border-color: #7B3FE4 !important;
+    box-shadow: 0 0 0 3px rgba(123,63,228,0.16), 0 2px 14px rgba(123,63,228,0.18) !important;
+    outline: none !important;
+}
+.st-key-chat_text_input input::placeholder {
+    color: #9CA3AF !important;
+    font-weight: 400 !important;
+}
+/* Send button — match input height + visual weight */
+form[data-testid="stForm"] button[kind="secondaryFormSubmit"],
+form[data-testid="stForm"] button[kind="primaryFormSubmit"] {
+    background: linear-gradient(135deg, #7B3FE4 0%, #5A2DB8 100%) !important;
+    border: none !important;
+    color: #FFFFFF !important;
+    border-radius: 12px !important;
+    padding: 0.85rem 0.6rem !important;
+    font-weight: 600 !important;
+    font-size: 0.88rem !important;
+    box-shadow: 0 2px 10px rgba(123,63,228,0.25) !important;
+    height: 100% !important;
+}
+form[data-testid="stForm"] button[kind="secondaryFormSubmit"]:hover,
+form[data-testid="stForm"] button[kind="primaryFormSubmit"]:hover {
+    background: linear-gradient(135deg, #8A4FFF 0%, #6935D6 100%) !important;
+    box-shadow: 0 2px 14px rgba(123,63,228,0.35) !important;
+}
+
 /* Expander overrides */
 [data-testid="stExpander"] {
     background: #FFFFFF !important;

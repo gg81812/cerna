@@ -510,23 +510,41 @@ def render_cerna_response(
             '</div>',
         ]
 
-    # Source pills with source_quality badge
+    # Reference sources — public URLs of the top retrieved chunks.
+    # Replaces the old filename pill row: internal repo filenames aren't
+    # useful to users; the original public URL is.
     src_list = sources or []
     if src_list:
-        pills = []
-        for s in src_list[:5]:
-            sq = s.get("source_quality", "secondary")
-            if sq == "archival_secondary":
-                pills.append(
-                    f'<span class="src-pill src-pill-archival" '
-                    f'title="Archival community documentation — verify before implementing">'
-                    f'{s["source"]} ⚠</span>'
-                )
-            elif sq == "primary":
-                pills.append(f'<span class="src-pill src-pill-primary">{s["source"]}</span>')
-            else:
-                pills.append(f'<span class="src-pill">{s["source"]}</span>')
-        parts.append(f'<div class="src-row">{"".join(pills)}</div>')
+        try:
+            from source_urls import get_url, get_title
+        except Exception:
+            get_url = lambda _x: None  # type: ignore
+            get_title = lambda _x: None  # type: ignore
+        link_items: list[str] = []
+        seen_urls: set[str] = set()
+        for s in src_list[:8]:
+            fname = s.get("source", "")
+            url = get_url(fname)
+            if not url or url in seen_urls:
+                continue
+            seen_urls.add(url)
+            raw_title = get_title(fname) or fname
+            # Trim 'SOURCE:' prefix some titles still carry
+            title = re.sub(r"^SOURCE\s*[:\-]\s*", "", raw_title, flags=re.IGNORECASE).strip()
+            link_items.append(
+                f'<a href="{url}" target="_blank" rel="noopener" '
+                f'style="color:#7B3FE4;text-decoration:underline;display:block;'
+                f'padding:0.2rem 0;font-size:0.85rem;">{title}</a>'
+            )
+            if len(link_items) >= 3:
+                break
+        if link_items:
+            parts += [
+                '<div class="resp-sec">',
+                '<div class="resp-sec-label">REFERENCE SOURCES</div>',
+                f'<div class="resp-sec-body">{"".join(link_items)}</div>',
+                '</div>',
+            ]
 
     parts.append('</div>')
 

@@ -190,12 +190,13 @@ div[data-testid="column"] { padding: 0 !important; }
 .intro-bubble strong { color: #1ABCB0; font-weight: 600; }
 
 /* Module pills (left panel) */
-.mod-pills { display: flex; flex-wrap: wrap; gap: 6px; justify-content: center; width: 100%; margin-bottom: 1.4rem; }
+.mod-pills { display: flex; flex-wrap: wrap; gap: 5px; justify-content: center; width: 100%; margin-bottom: 1.4rem; }
 .mod-pill {
-    padding: 5px 13px; border-radius: 20px;
-    font-size: 0.7rem; font-weight: 700;
-    letter-spacing: 0.05em; border: 1px solid transparent;
+    padding: 3px 9px; border-radius: 16px;
+    font-size: 0.62rem; font-weight: 700;
+    letter-spacing: 0.04em; border: 1px solid transparent;
     cursor: default; opacity: 0.85;
+    white-space: nowrap;
 }
 .mod-pill.active {
     opacity: 1 !important;

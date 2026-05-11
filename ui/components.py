@@ -4,8 +4,7 @@ ui/components.py — Cerna UI components.
 Public functions:
     render_left_panel(is_speaking, active_module, kb_counts)
     render_top_bar()
-    render_suggestions()
-    render_prompt_chips()
+    render_starter_grid()
     render_chat(messages)
     render_structured_response(plain, sections, sources)
     render_followups(follow_ups, msg_index)
@@ -59,12 +58,12 @@ FEATURES: dict[str, list[tuple[str, str]]] = {
 }
 
 MODULES: dict[str | None, tuple[str, str]] = {
-    None:            ("Auto",                  "#6B7280"),
-    "millennium":    ("Millennium",            "#C74634"),
-    "powerchart":    ("PowerChart (limited)",  "#1ABCB0"),
-    "revenue_cycle": ("Revenue Cycle",         "#7B5EA7"),
-    "fhir":          ("FHIR & APIs",           "#3B82F6"),
-    "clinical":      ("Clinical (limited)",    "#EC4899"),
+    None:            ("Auto",          "#6B7280"),
+    "millennium":    ("Millennium",    "#C74634"),
+    "powerchart":    ("PowerChart",    "#1ABCB0"),
+    "revenue_cycle": ("Revenue Cycle", "#7B5EA7"),
+    "fhir":          ("FHIR & APIs",   "#3B82F6"),
+    "clinical":      ("Clinical",      "#EC4899"),
 }
 
 # Modules with limited primary-source coverage — shown with coverage banner
@@ -369,30 +368,30 @@ def render_top_bar() -> None:
             st.rerun()
 
 
-def render_suggestions() -> None:
-    has_msgs = bool(st.session_state.get("messages"))
-    with st.expander("Where would you like to start?", expanded=False):
-        # 2-column grid — fits the narrow left panel
-        for i, (_, question) in enumerate(SUGGESTIONS):
-            if i % 2 == 0:
-                cols = st.columns(2)
-            with cols[i % 2]:
-                if st.button(question, key=f"sug_{i}", use_container_width=True):
-                    st.session_state.pending_prompt = question
-                    st.rerun()
+def render_starter_grid() -> None:
+    """Always-visible starter prompts shown only when the conversation is empty.
 
+    Mirrors the ChatGPT/Claude default-state pattern: prominent grid of clickable
+    cards directly below the input, no expander to hide them.
+    """
+    if st.session_state.get("messages"):
+        return
 
-def render_prompt_chips() -> None:
-    has_msgs = bool(st.session_state.get("messages"))
-    with st.expander("⚡ Quick-start prompts", expanded=not has_msgs):
-        # 2-column grid — fits the narrow left panel
-        for i, chip in enumerate(PROMPT_CHIPS):
-            if i % 2 == 0:
-                cols = st.columns(2)
-            with cols[i % 2]:
-                if st.button(chip, key=f"chip_{i}", use_container_width=True):
-                    st.session_state.pending_prompt = chip
-                    st.rerun()
+    st.markdown(
+        '<div style="margin-top:1rem;margin-bottom:0.4rem;font-size:0.72rem;'
+        'font-weight:600;color:#7B3FE4;letter-spacing:0.04em;text-transform:uppercase;">'
+        '⚡ Try one of these to get started'
+        '</div>',
+        unsafe_allow_html=True,
+    )
+    # 4-column grid — fits the wide right panel; 2 rows for 8 chips
+    for i, chip in enumerate(PROMPT_CHIPS):
+        if i % 4 == 0:
+            cols = st.columns(4)
+        with cols[i % 4]:
+            if st.button(chip, key=f"chip_{i}", use_container_width=True):
+                st.session_state.pending_prompt = chip
+                st.rerun()
 
 
 def render_cerna_response(

@@ -23,6 +23,34 @@ from pathlib import Path
 _DATA_DIR = Path(__file__).parent / "data"
 _DEAD_URL_FILE = _DATA_DIR / "_dead_urls.txt"
 
+# raw.githubusercontent.com renders as plain text in a browser — ugly and
+# confusing for end users. Rewrite to a rendered view:
+#   - cerner/fhir.cerner.com → the published docs site (fhir.cerner.com)
+#   - any other repo         → the GitHub blob view (renders markdown)
+_RAW_GH_FHIR_RE = re.compile(
+    r"^https?://raw\.githubusercontent\.com/cerner/fhir\.cerner\.com/[^/]+/content/(.+?)\.md/?$",
+    re.IGNORECASE,
+)
+_RAW_GH_GENERIC_RE = re.compile(
+    r"^https?://raw\.githubusercontent\.com/([^/]+)/([^/]+)/([^/]+)/(.+)$",
+    re.IGNORECASE,
+)
+
+
+def _normalize_url(url: str) -> str:
+    """Rewrite raw.githubusercontent.com URLs to a rendered view."""
+    if not url or "raw.githubusercontent.com" not in url:
+        return url
+    m = _RAW_GH_FHIR_RE.match(url)
+    if m:
+        # Published docs site uses trailing-slash paths, no .md suffix
+        return f"https://fhir.cerner.com/{m.group(1)}/"
+    m = _RAW_GH_GENERIC_RE.match(url)
+    if m:
+        owner, repo, branch, path = m.groups()
+        return f"https://github.com/{owner}/{repo}/blob/{branch}/{path}"
+    return url
+
 # Match headers in any of the formats actually used in data/:
 #   `# URL: https://...`         (commented header)
 #   `URL: https://...`           (uncommented)
@@ -126,9 +154,11 @@ def get_url(filename: str) -> str | None:
     if not entry:
         return None
     url = entry[1]
-    if url and url in _dead_urls():
+    if not url:
         return None
-    return url
+    if url in _dead_urls():
+        return None
+    return _normalize_url(url)
 
 
 def get_title(filename: str) -> str | None:

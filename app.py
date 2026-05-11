@@ -117,7 +117,7 @@ with col_c:
         with ti_col:
             user_input = st.text_input(
                 "Ask Cerna",
-                placeholder="Ask about Cerner workflows, configurations, integrations…",
+                placeholder="Ask Cerner…",
                 label_visibility="collapsed",
                 key="chat_text_input",
             )
@@ -281,7 +281,7 @@ with col_c:
     # Clinical disclaimer footer for the conversation area
     st.markdown(
         '<div style="text-align:center;font-size:0.58rem;color:#9CA3AF;margin-top:0.5rem;padding:0 1rem;">'
-        'Cerna is an AI assistant for Cerner implementation guidance only. '
+        'Cerna is a training and reference tool for Cerner / Oracle Health. '
         'Not a clinical decision tool — always consult a licensed clinician.</div>',
         unsafe_allow_html=True,
     )

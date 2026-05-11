@@ -22,32 +22,63 @@ from pathlib import Path
 
 _DATA_DIR = Path(__file__).parent / "data"
 
-_SOURCE_HEADER_RE = re.compile(r"^#\s*SOURCE\s*:\s*(.+?)\s*$", re.IGNORECASE)
-_URL_HEADER_RE = re.compile(r"^#\s*URL\s*:\s*(\S+)\s*$", re.IGNORECASE)
+# Match headers in any of the formats actually used in data/:
+#   `# URL: https://...`         (commented header)
+#   `URL: https://...`           (uncommented)
+#   `# SOURCE: Cerner eMAR ...`  (title with prefix)
+#   `Source: https://...`        (older format — URL inline after Source:)
+_URL_LINE_RE = re.compile(r"^\s*#?\s*URL\s*:\s*(https?\S+)", re.IGNORECASE)
+_SOURCE_URL_RE = re.compile(r"^\s*#?\s*Source\s*:\s*(https?\S+)", re.IGNORECASE)
+_SOURCE_TITLE_RE = re.compile(r"^\s*#?\s*SOURCE\s*:\s*(.+?)\s*$", re.IGNORECASE)
+
+# Heuristic boundary keywords — lines starting with these aren't titles.
+_HEADER_KEYWORDS = ("source:", "url:", "scraped:", "retrieved:", "module:", "title:", "---")
 
 
 def _parse_headers(path: Path) -> tuple[str | None, str | None]:
     """Return (title, url) from the file header; both may be None."""
     title: str | None = None
     url: str | None = None
+    fallback_title: str | None = None
     try:
         with open(path, encoding="utf-8") as f:
-            for line in f.readlines()[:10]:  # headers are always in first ~5 lines
-                if title is None:
-                    m = _SOURCE_HEADER_RE.match(line)
-                    if m:
-                        title = m.group(1).strip()
-                        continue
-                if url is None:
-                    m = _URL_HEADER_RE.match(line)
-                    if m:
-                        url = m.group(1).strip()
-                        continue
-                if title and url:
-                    break
+            lines = f.readlines()[:10]
     except (OSError, UnicodeDecodeError):
-        pass
-    return title, url
+        return None, None
+
+    for raw in lines:
+        line = raw.rstrip()
+        stripped = line.lstrip("# ").strip()
+        if not stripped:
+            continue
+
+        # URL detection (priority: explicit URL: header, then inline Source: URL)
+        if url is None:
+            m = _URL_LINE_RE.match(line) or _SOURCE_URL_RE.match(line)
+            if m:
+                url = m.group(1).strip().rstrip(").,;")
+                continue
+
+        # Title detection: explicit SOURCE: <text> header (not a URL line)
+        if title is None:
+            m = _SOURCE_TITLE_RE.match(line)
+            if m and not m.group(1).lower().startswith(("http://", "https://")):
+                title = m.group(1).strip()
+                continue
+
+        # First plain content line becomes fallback title (skip header rows)
+        lower = stripped.lower()
+        if (
+            fallback_title is None
+            and not any(lower.startswith(k) for k in _HEADER_KEYWORDS)
+            and len(stripped) > 4
+        ):
+            fallback_title = stripped.lstrip("#").strip()
+
+        if title and url:
+            break
+
+    return (title or fallback_title), url
 
 
 @lru_cache(maxsize=1)

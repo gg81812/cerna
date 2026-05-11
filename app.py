@@ -111,6 +111,16 @@ with col_c:
     # Header + module filter
     comp.render_top_bar()
 
+    # Spacer so the input doesn't read as part of the header bar
+    st.markdown(
+        '<div style="height:2.2rem;"></div>'
+        '<div style="font-size:0.78rem;color:#7B3FE4;font-weight:600;'
+        'letter-spacing:0.04em;text-transform:uppercase;margin-bottom:0.45rem;">'
+        'What can I help you with?'
+        '</div>',
+        unsafe_allow_html=True,
+    )
+
     # Chat input — pinned to the top of the conversation area
     with st.form("chat_input_form", clear_on_submit=True, border=False):
         ti_col, btn_col = st.columns([0.88, 0.12])

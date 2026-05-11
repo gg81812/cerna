@@ -553,13 +553,13 @@ Response summary: {response_summary}
 Questions already asked in this conversation:
 {already_asked}
 
-Generate exactly 3 short follow-up questions that:
+Generate exactly 2 short follow-up questions that:
 - Are directly relevant to the topic just discussed
 - Have NOT already been asked above
 - Help the user go deeper or take the next practical step
 - Reference specific Cerner features, modules, or workflows by name
 
-Output ONLY the 3 questions, numbered 1–3, one per line. No extra text.
+Output ONLY the 2 questions, numbered 1–2, one per line. No extra text.
 
 1.""",
 )

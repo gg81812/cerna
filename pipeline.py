@@ -1090,30 +1090,45 @@ def build_pipeline(retriever, llm_json, llm_fast, llm_fast_json):
 
 # ── Follow-up generation (standalone, not part of main pipeline) ──────────────
 
+_FOLLOWUP_FALLBACKS = [
+    "Can you walk me through this step-by-step?",
+    "What are common pitfalls or best practices here?",
+]
+
+
 def make_generate_followups(llm_fast):
     """
-    Returns a function that generates 3 follow-up questions.
+    Returns a function that always produces 2 follow-up questions.
     Kept separate from the main pipeline because it runs AFTER the response
-    is rendered to the user (doesn't block the primary response).
+    is rendered to the user (doesn't block the primary response). If the LLM
+    call fails or under-produces, we backfill from generic Cerner-agnostic
+    prompts so the user always sees two suggestions.
     """
     def generate_followups(query: str, response_summary: str, history: list[dict]) -> list[str]:
-        already_asked = "\n".join(
-            f"- {m['content']}" for m in history if m["role"] == "user"
-        ) or "None"
+        already_asked_set = {m["content"].strip().lower() for m in history if m["role"] == "user"}
+        already_asked = "\n".join(f"- {q}" for q in already_asked_set) or "None"
         prompt_text = FOLLOWUP_PROMPT_TEMPLATE.format(
             question=query,
             response_summary=response_summary[:400].strip(),
             already_asked=already_asked,
         )
+        follow_ups: list[str] = []
         try:
             result = llm_fast.invoke([HumanMessage(content=prompt_text)]).content.strip()
-            follow_ups = []
             for m in re.finditer(r"^\s*\d+[.)]\s*(.+)", result, re.MULTILINE):
                 q = m.group(1).strip()
-                if q:
+                if q and q.lower() not in already_asked_set:
                     follow_ups.append(q)
-            return follow_ups[:3]
         except Exception as exc:
             print(f"[Pipeline:followups] Error: {exc}")
-            return []
+
+        # Backfill from generic fallbacks so the user always sees 2 suggestions
+        for fb in _FOLLOWUP_FALLBACKS:
+            if len(follow_ups) >= 2:
+                break
+            if fb.lower() not in already_asked_set and fb not in follow_ups:
+                follow_ups.append(fb)
+
+        return follow_ups[:2]
+
     return generate_followups

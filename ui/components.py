@@ -536,8 +536,6 @@ def render_cerna_response(
                 f'style="color:#7B3FE4;text-decoration:underline;display:block;'
                 f'padding:0.2rem 0;font-size:0.85rem;">{title}</a>'
             )
-            if len(link_items) >= 3:
-                break
         if link_items:
             parts += [
                 '<div class="resp-sec">',

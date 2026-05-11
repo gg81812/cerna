@@ -1,0 +1,177 @@
+# SOURCE: Cerner eMAR Electronic Medication Administration Record User Guide
+# URL: https://wiki.cerner.com/display/public/1101clinical/eMAR+User+Guide
+# MODULE: Clinical Workflows
+# RETRIEVED: 2026-04-01
+# ---
+
+# Cerner eMAR (Electronic Medication Administration Record) User Guide
+
+## What is the eMAR?
+
+The Electronic Medication Administration Record (eMAR) in Cerner Millennium is the digital replacement for the paper Medication Administration Record (MAR). It displays all active medication orders for a patient, tracks scheduled and as-needed (PRN) administration times, and provides the interface through which nurses document medication administration events.
+
+The eMAR is integrated with PharmNet (Cerner's pharmacy module) and BCMA (Barcode Medication Administration). Medications flow into the eMAR only after they are ordered in CPOE and verified by pharmacy.
+
+## Accessing the eMAR
+
+### From PowerChart
+1. Open the patient's chart in PowerChart.
+2. Click the eMAR tab in the chart menu (location varies by site configuration).
+3. The eMAR opens in a dedicated window showing all current medication orders.
+
+### Standalone eMAR Application
+Many nursing units use the eMAR standalone application on workstations-on-wheels (WOWs):
+1. Log in to the workstation with your AD credentials.
+2. Open the eMAR icon on the desktop.
+3. Search for the patient by name, MRN, or location/bed.
+
+## eMAR Display Layout
+
+### Medication List (Left Panel)
+Lists all active medications grouped by:
+- Schedule type: Continuous (scheduled q4h, q8h, daily, etc.) vs. PRN (as needed)
+- Drug category: routine medications, IV medications, critical medications, etc. (grouping is site-configured)
+
+Each medication row shows:
+- Medication name and dose
+- Route and frequency
+- Pharmacy verification status (Verified, Pending, On Hold)
+- STAT or HIGH_ALERT flags
+
+### Administration Timeline (Right Panel)
+A time-grid showing:
+- Scheduled administration times for each medication
+- Color-coded status bubbles:
+  - Green: Administered on time
+  - Yellow: Due within 30 minutes (or site-configured window)
+  - Red: Overdue (past the administration window)
+  - Gray: Given early or given late (within acceptable window but not on-time)
+  - Blue: Not Given (reason documented)
+  - White/Empty: Not yet due
+
+### Administration Windows
+By default, medications can be documented as "on time" within a 60-minute window around the scheduled time (30 min before to 30 min after). The administration window is configurable per site and per frequency.
+
+## Documenting Medication Administration
+
+### Standard Scheduled Medication
+
+1. Click the due time bubble for the medication you are about to give.
+2. If BCMA is enabled: scan the patient wristband, then scan the medication barcode.
+3. The administration detail screen opens showing: medication name, dose, route, and scheduled time.
+4. Verify the information is correct.
+5. Click "Given" to document the administration.
+6. System records: prsnl_id (nurse), timestamp, dose given, route, BCMA scan confirmation.
+
+### PRN (As Needed) Medication
+
+1. Click the PRN medication row.
+2. Select "Give Now."
+3. Complete BCMA scanning (if enabled).
+4. Enter indication/reason for the PRN (required field — site-configurable code value list).
+5. Click "Given."
+6. PRN effectiveness follow-up may be prompted after a configured time interval (e.g., 30 min after a pain medication).
+
+### IV Drip / Continuous Infusion
+
+1. Click the continuous infusion medication row.
+2. The IV administration screen shows: current rate, concentration, bag volume.
+3. Document: rate change (if applicable), bag change, new bag number, volume infused.
+4. Click "Save" to record the infusion documentation.
+
+### "Not Given" Documentation
+
+When a medication is not administered as scheduled:
+1. Click the overdue time bubble.
+2. Select "Not Given."
+3. Enter a reason from the code value list:
+   - Patient refused
+   - Patient not on unit
+   - Medication not available
+   - Hold ordered
+   - Clinical contraindication
+   - Other (with free-text explanation)
+4. Click "Save." The bubble turns blue in the timeline.
+
+### Partial Dose or Dose Change
+
+1. Click the medication bubble.
+2. Select "Given" and modify the Dose Administered field before saving.
+3. The partial dose is recorded with a note comparing ordered vs. given dose.
+
+## Medication Status and Verification
+
+### Pharmacy Verification States
+- **Ordered** — order placed by provider but not yet reviewed by pharmacy.
+- **Verified** — pharmacy has reviewed, adjusted if needed, and approved for administration. Nurses can only administer Verified medications.
+- **On Hold** — pharmacy has placed the medication on hold (e.g., pending lab result, drug interaction review). Nurses must contact pharmacy before administering.
+- **Discontinued** — medication removed from the eMAR; no further administration.
+
+### STAT Medications
+STAT orders appear in a dedicated STAT section at the top of the eMAR with a red STAT indicator. Pharmacy prioritizes STAT orders and typically verifies within 15–30 minutes. Nurses should monitor for the Verified status change before administering.
+
+## PRN Effectiveness Assessments
+
+For PRN medications configured with effectiveness follow-up (typically pain medications):
+- A follow-up prompt appears in the eMAR at the configured interval after the PRN was given.
+- The nurse documents the patient's response (e.g., pain score before and after).
+- If a second dose is required before the allowed re-dose interval, the eMAR alerts the nurse.
+
+## High-Alert Medication Workflow
+
+Medications flagged as HIGH_ALERT (insulin, heparin, chemotherapy, narcotics) require:
+1. Two-nurse BCMA verification (both nurses scan their badges or login credentials).
+2. Both nurses review and confirm the medication, dose, and patient.
+3. Both nurse IDs are recorded in the administration event.
+
+## Filtering and Sorting the eMAR
+
+- **Due Now filter** — shows only medications due within the current administration window.
+- **All Medications** — shows entire eMAR including medications not yet due.
+- **Critical / High Alert filter** — shows only flagged medications.
+- **IV filter** — shows only infusions and IV medications.
+- **Search by medication name** — filter the medication list by drug name.
+
+## Common Workflows
+
+### Shift Start Check
+1. Filter by "Due Now" to see which medications need administration.
+2. Review any red (overdue) bubbles and investigate or document "Not Given" with reason.
+3. Check STAT orders and any new orders from the night shift.
+
+### Medication Reconciliation at Discharge
+1. Nursing completes eMAR administration documentation for all medications given.
+2. Provider compares home medications to hospital medications in Medication Reconciliation (a separate module linked to the eMAR).
+3. Discharge prescription generated from reconciled medication list.
+
+## Printing the eMAR
+
+1. Click the Print icon in the eMAR toolbar.
+2. Select date range (typically current 24-hour period).
+3. Select which medication categories to include.
+4. Print or save as PDF for paper backup during downtime procedures.
+
+## Troubleshooting
+
+### Medication Not Appearing in eMAR
+- Confirm the order is Active (not pending, discontinued, or on hold) in CPOE.
+- Confirm pharmacy has verified the order (status must be Verified for it to appear as administerable).
+- Check the eMAR filter — it may be filtered to a specific category that excludes the medication.
+
+### Cannot Document Administration (Greyed Out)
+- The medication may be On Hold — contact pharmacy.
+- The administration window may have passed (medication is now more than 1 hour overdue).
+- The user may lack the nursing administration security object — contact the help desk.
+
+### BCMA Scan Failure
+- See the BCMA Administrator Guide for detailed troubleshooting.
+- If BCMA is temporarily unavailable, use the manual override with documented reason.
+
+## Best Practices
+
+1. Document administration at the time of administration — never document in advance or batch at end of shift.
+2. Scan every time — do not skip BCMA scanning for convenience.
+3. Always document "Not Given" with a reason rather than leaving bubbles red.
+4. Check for new STAT orders before starting each medication pass.
+5. Never administer a medication that shows "Ordered" (not Verified) status — contact pharmacy.
+6. Document PRN effectiveness at the required follow-up interval.

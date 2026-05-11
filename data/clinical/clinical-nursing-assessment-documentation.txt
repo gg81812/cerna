@@ -1,0 +1,179 @@
+# SOURCE: Cerner Nursing Assessment Documentation Guide
+# URL: https://wiki.cerner.com/display/public/1101clinical/Nursing+Assessment+Documentation
+# MODULE: Clinical Workflows
+# RETRIEVED: 2026-04-01
+# ---
+
+# Cerner Nursing Assessment Documentation Guide
+
+## Overview
+
+Nursing assessment documentation in Cerner Millennium is performed primarily through PowerForms — structured, configurable electronic forms that capture clinical assessment data in a discrete, codified format. Discrete data captured in PowerForms feeds clinical decision support rules, quality measure calculations, and downstream reporting.
+
+This guide covers nursing assessment workflows using PowerForms and PowerNote within PowerChart.
+
+## PowerForms for Nursing Assessments
+
+### What are PowerForms?
+
+PowerForms are configurable clinical data capture templates built in PowerChart Administration. Each PowerForm consists of one or more sections, and each section contains discrete data elements (clinical event codes mapped to reference data in the Millennium database).
+
+Common nursing assessment PowerForms include:
+- Admission Assessment (head-to-toe)
+- Shift Assessment
+- Pain Assessment
+- Fall Risk Assessment (Morse Fall Scale or JHFAMS)
+- Pressure Injury (Braden Scale)
+- Nutrition Screening (MUST or SNAQ)
+- Skin Assessment
+- Neurological Assessment (GCS, NIH Stroke Scale)
+- Respiratory Assessment
+- Cardiovascular Assessment
+
+### Accessing PowerForms
+
+From PowerChart:
+1. Open the patient's chart.
+2. Click the Documentation tab (or the Forms section in the chart menu).
+3. Click "New Document" or "New Form."
+4. Select the appropriate assessment form from the form picker.
+5. The form opens for data entry.
+
+Alternatively, assessment forms may be embedded in the nursing workflow through the Workflow MPage, where they appear as tasks in the nursing activity list.
+
+## Completing a Nursing Assessment
+
+### Head-to-Toe Admission Assessment
+
+The admission assessment is typically the most comprehensive nursing form, covering all body systems. Standard sections:
+
+1. **Demographics & Baseline**
+   - Height, weight, body mass index (auto-calculated)
+   - Allergies (linked to the Allergy module)
+   - Advance directives (DNR status, healthcare proxy)
+   - Isolation precautions
+
+2. **Neurological**
+   - Level of consciousness (Alert, Lethargic, Obtunded, Comatose)
+   - Orientation (Person, Place, Time, Event)
+   - Glasgow Coma Scale (GCS) — scored 3–15
+   - Pupil assessment (PERRL — Pupils Equal, Round, Reactive to Light)
+   - Extremity strength and sensation
+
+3. **Respiratory**
+   - Respiratory rate, oxygen saturation (SpO2)
+   - Oxygen delivery device and flow rate
+   - Lung sounds (Clear, Diminished, Crackles, Wheezes, Absent)
+   - Sputum characteristics
+
+4. **Cardiovascular**
+   - Heart rate and rhythm
+   - Blood pressure (systolic/diastolic)
+   - Peripheral pulses (present, diminished, absent)
+   - Edema (location and grade +1 to +4)
+   - Skin color and temperature
+
+5. **Gastrointestinal**
+   - Last bowel movement
+   - Bowel sounds (Active, Hypoactive, Hyperactive, Absent — per quadrant)
+   - Nausea, vomiting, appetite
+   - Tube feeding or dietary restrictions
+
+6. **Genitourinary**
+   - Urine output (mL/shift or mL/hour for catheterized patients)
+   - Foley catheter presence, size, insertion date
+   - Urinary characteristics (clear, cloudy, hematuria)
+
+7. **Musculoskeletal**
+   - Mobility level (Ambulatory, Ambulatory with Assist, Non-ambulatory)
+   - Fall risk score (Morse or JHFAMS — auto-calculates based on entered data)
+   - Use of assistive devices (cane, walker, wheelchair)
+
+8. **Skin / Integumentary**
+   - Braden Scale score (auto-calculates from sub-scores: sensory, moisture, activity, mobility, nutrition, friction)
+   - Existing wounds or pressure injuries (stage, location, size in cm, wound characteristics)
+   - IV site assessment (location, date inserted, site condition)
+
+9. **Psychosocial**
+   - Pain assessment (numeric 0–10 scale or FLACC for non-verbal patients)
+   - Mood and behavior observations
+   - Substance use history
+   - Social support
+
+### Shift Assessment
+A shorter assessment capturing key findings at each nursing shift (typically every 8–12 hours):
+- Vital signs (may auto-populate from physiological monitoring integration)
+- Current pain score
+- Brief system review (any changes from prior assessment)
+- IV site check
+- Foley catheter check (if present)
+
+## Documenting Vital Signs
+
+Vital signs can be entered directly in a PowerForm or via a dedicated Vital Signs documentation section:
+- Temperature (F or C), Pulse, Respirations, Blood Pressure (systolic/diastolic), SpO2
+- For mechanically ventilated patients: FiO2, PEEP, Tidal Volume, Minute Ventilation
+- For continuous cardiac monitoring: Heart rate from telemetry (may auto-populate via telemetry interface)
+
+Physiological monitors (bedside monitors, telemetry systems) may be integrated to push vital signs directly into Millennium, reducing manual transcription.
+
+## Fall Risk and Pressure Injury Risk
+
+### Fall Risk Assessment (Morse Fall Scale)
+The Morse Fall Scale is commonly configured as a PowerForm section. It scores six items:
+1. History of falling (No=0, Yes=25)
+2. Secondary diagnosis (No=0, Yes=15)
+3. Ambulatory aid (None/BR/Nurse Assist=0, Crutches/Cane/Walker=15, Furniture=30)
+4. IV/Heparin Lock (No=0, Yes=20)
+5. Gait (Normal/Bedrest/Immobile=0, Weak=10, Impaired=20)
+6. Mental status (Oriented to ability=0, Forgets limitations=15)
+
+Total 0–24: Low risk; 25–44: Moderate risk; 45+: High risk.
+
+High-risk patients auto-trigger a Fall Prevention care plan and require yellow wristband application per hospital policy.
+
+### Braden Scale (Pressure Injury Risk)
+Six subscales each scored 1–4 (some 1–3): Sensory, Moisture, Activity, Mobility, Nutrition, Friction/Shear.
+Score ≤18: At risk for pressure injury; triggers Skin Integrity care plan.
+
+## Electronic Nursing Notes (PowerNote)
+
+For narrative nursing documentation:
+1. Open Documentation tab > New Document > select note type (Nursing Note, Nursing Shift Note, etc.).
+2. PowerNote opens with a template containing pre-filled sections.
+3. Complete the structured sections (may include embedded assessment results from PowerForms).
+4. Add free-text narrative as needed.
+5. Click Sign to complete the note.
+
+Signed nursing notes appear in the chart's Documentation section and are part of the legal medical record.
+
+## Care Plans and Nursing Diagnoses
+
+Cerner Millennium supports nursing care plans linked to the patient's chart:
+1. Open the Care Plans section of the patient's chart.
+2. Add a nursing diagnosis (from NANDA taxonomy integrated in Millennium).
+3. Link nursing interventions (pre-built activity sets or custom interventions).
+4. Document outcomes/goals (patient-specific target metrics).
+5. Evaluate and update care plan at each shift.
+
+High fall risk and high Braden Scale risk automatically suggest and may auto-add associated care plans based on site configuration.
+
+## Documentation Compliance
+
+Joint Commission and CMS require:
+- Admission assessment completed within 24 hours of inpatient admission.
+- Pain assessment documented at minimum each nursing shift.
+- Reassessment after pain interventions.
+- Braden Scale assessment at admission and at least daily thereafter.
+- Fall risk assessment at admission, after a fall, and with clinical status changes.
+
+Compliance with these requirements is monitored via Discern Analytics reports. Incomplete assessments generate workflow alerts in the nursing Workflow MPage.
+
+## Best Practices
+
+1. Complete assessments at the bedside with the patient present — not from the nursing station.
+2. Document in real time — do not wait until the end of a shift to complete assessments.
+3. Use discrete data fields rather than free-text whenever possible — discrete data feeds quality reports and CDS rules.
+4. Reassess and update care plans when the patient's condition changes.
+5. Sign all completed documentation — unsigned forms are not part of the legal record.
+6. Review PowerForm defaults — many facilities pre-populate "normal" defaults; verify they actually match your patient.

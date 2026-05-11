@@ -1,0 +1,161 @@
+# SOURCE: Cerner Denial Management Guide
+# URL: https://wiki.cerner.com/display/public/1101rcm/Denial+Management+Guide
+# MODULE: Revenue Cycle
+# RETRIEVED: 2026-04-01
+# ---
+
+# Cerner Denial Management Guide
+
+## What is Denial Management?
+
+Denial management is the process of identifying, analyzing, appealing, and preventing healthcare claim denials. A claim denial occurs when a payer refuses to pay for a billed service. In Cerner Millennium's Revenue Cycle suite, denial management is handled through the Denial Management module, which captures denial reason codes from 835 ERAs, routes denials to the appropriate worklist, and tracks appeal status through resolution.
+
+## Types of Denials
+
+### Clinical Denials
+Denials based on clinical appropriateness or medical necessity:
+- **Medical Necessity Denial** — payer determines the service was not medically necessary based on the documented diagnosis.
+- **Experimental/Investigational Denial** — service not covered because payer considers it experimental.
+- **Level of Care Denial** — payer determines inpatient care was not necessary and the patient could have been treated in an outpatient setting.
+- **Lack of Prior Authorization** — service required authorization that was not obtained.
+
+### Technical Denials
+Denials based on administrative or coding errors:
+- **Missing Information** — claim lacks required data (NPI, taxonomy, date of service, authorization number).
+- **Timely Filing Denial** — claim submitted after the payer's filing deadline.
+- **Duplicate Claim Denial** — payer already processed an identical claim.
+- **Non-Covered Service** — CPT code or revenue code is not covered by the patient's plan.
+- **Coordination of Benefits (COB)** — primary/secondary payer determination issue.
+- **Bundling Edit Denial** — services were billed separately that should have been bundled.
+
+### Demographic Denials
+- Member not eligible on date of service
+- Incorrect member ID
+- Name mismatch with payer records
+
+## Denial Capture from 835 Remittance
+
+When a payer sends an 835 ERA with denied services:
+- Cerner automatically captures the Claim Adjustment Reason Code (CARC) and Remittance Advice Remark Code (RARC) from the 835.
+- The denial routes to the Denial Management worklist.
+- The account is flagged with: denial date, payer, CARC code, RARC code, denied amount.
+
+Key CARC codes:
+- CARC 1: Deductible amount
+- CARC 2: Coinsurance amount
+- CARC 4: Service not covered by plan
+- CARC 16: Claim lacks information required for adjudication
+- CARC 29: Time limit for filing has expired
+- CARC 96: Non-covered charge(s)
+- CARC 97: Claim bundled with another service
+- CARC 242: Services not provided by network/panel providers
+
+## Denial Management Worklist
+
+### Accessing the Denial Worklist
+
+1. Open Revenue Cycle > Denial Management.
+2. The worklist shows all unresolved denials sorted by:
+   - Denial date (oldest first)
+   - Payer
+   - Denial type
+   - Denied dollar amount
+   - Account/encounter
+
+### Worklist Assignment
+
+Denials are assigned to specialized staff based on denial type:
+- **Clinical denials** → clinical denial management team (nurse reviewers with coding expertise)
+- **Authorization denials** → prior authorization team
+- **Technical/coding denials** → revenue cycle specialists or coders
+- **Demographic denials** → patient access / registration team
+
+### Routing Rules
+
+Configure automatic routing rules in Denial Management:
+1. Navigate to Denial Management Administration > Routing Rules.
+2. Create rules based on: CARC code, RARC code, payer, financial class, denial amount.
+3. Each rule assigns matched denials to a specific worklist/team.
+
+## Denial Resolution Workflow
+
+### Step 1: Analyze the Denial
+
+1. Open the denied account in Denial Management.
+2. Review: denial reason code, payer remittance notes, denied service description, and denial amount.
+3. Cross-reference with the clinical record (PowerChart) to understand the service context.
+
+### Step 2: Determine Action
+
+Based on the denial reason:
+- **Overturn / Appeal** — clinical documentation supports the billed service; file an appeal.
+- **Correct and Resubmit** — a correctable error caused the denial (missing modifier, wrong NPI); fix and resubmit.
+- **Write Off** — denial is valid (non-covered service, timely filing exceeded); write off the balance.
+- **Patient Responsibility** — denial routes the balance to patient billing (deductible, non-covered service).
+- **Escalate** — complex denials routed to senior reviewer or medical director.
+
+### Step 3: Appeal Process
+
+For clinical denials subject to appeal:
+
+**Level 1 Appeal (Internal / Standard Appeal):**
+1. Compile supporting documentation:
+   - Clinical notes (H&P, progress notes, discharge summary)
+   - Relevant lab results or imaging reports
+   - InterQual or MCG clinical criteria evidence supporting medical necessity
+2. Write a formal appeal letter citing:
+   - Patient demographics, claim number, service date
+   - Denial reason and the reason the denial is incorrect
+   - Supporting clinical evidence
+   - Request for reconsideration
+3. Submit appeal via payer portal, fax, or certified mail per payer requirements.
+4. Document appeal submission date and method in Denial Management.
+5. Track appeal deadline (most payers allow 90–180 days from denial date for Level 1 appeal).
+
+**Level 2 Appeal (External Review / IRO):**
+If the Level 1 appeal is unsuccessful:
+1. Request external independent review organization (IRO) review.
+2. For Medicare: file with the Qualified Independent Contractor (QIC).
+3. IRO decision is binding for the payer in most states.
+
+### Step 4: Track Appeal Status
+
+In the Denial Management module:
+- Update appeal status: Appeal Filed, Appeal Pending, Appeal Granted, Appeal Denied.
+- Record the appeal decision and payment amount.
+- For granted appeals: payment posts via 835 on the next remittance cycle.
+
+## Denial Root Cause Analysis and Prevention
+
+### Denial Trending Reports
+
+Run monthly via HealtheAnalytics / Discern Analytics:
+- **Denial Rate by Payer** — % of claims denied by each payer
+- **Denial Rate by CPT Code** — most frequently denied procedures
+- **Denial Rate by Provider** — providers with above-average denial rates (documentation quality issue)
+- **Denial Rate by Denial Reason Code** — top CARC codes driving your denial volume
+- **Appeal Success Rate** — % of appeals that result in payment
+
+Benchmark targets:
+- Overall denial rate: < 5% of submitted claims by volume; < 3% by dollars
+- Appeal overturn rate: > 50% of appealed clinical denials
+
+### Prevention Strategies
+
+| Root Cause | Prevention Action |
+|---|---|
+| Medical necessity denials | CDI program to improve documentation specificity; provider education on payer criteria |
+| Authorization denials | Prior auth management workflow; real-time authorization requirement alerts in CPOE |
+| Timely filing denials | Timely filing monitoring dashboard; charge lag reduction |
+| Bundling denials | CDM and charge scrubbing rule updates aligned with CCI edits |
+| Demographic denials | Insurance eligibility verification at registration; real-time 270/271 verification |
+| Non-covered service denials | Prior auth workflow for non-covered codes; patient notification of non-covered services at registration |
+
+## Best Practices
+
+1. Work denials within 30 days of receipt — delayed appeals have lower success rates and shorter windows.
+2. Track every denial to resolution — unworked denials accumulate and become write-offs.
+3. Build root cause analysis into the denial management process — prevention is more valuable than recovery.
+4. Engage clinical staff in medical necessity denials — physician peer-to-peer reviews have high success rates.
+5. Measure and report denial prevention improvement monthly — teams need feedback to sustain prevention efforts.
+6. Do not routinely write off authorizable denials — most payers allow retroactive authorization in emergencies.

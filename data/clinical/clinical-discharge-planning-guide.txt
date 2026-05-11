@@ -1,0 +1,158 @@
+# SOURCE: Cerner Discharge Planning Workflow Guide
+# URL: https://wiki.cerner.com/display/public/1101clinical/Discharge+Planning+Guide
+# MODULE: Clinical Workflows
+# RETRIEVED: 2026-04-01
+# ---
+
+# Cerner Discharge Planning Workflow Guide
+
+## Overview
+
+Discharge planning in Cerner Millennium is a multidisciplinary workflow coordinated across case management, social work, nursing, pharmacy, and providers. The goal is to ensure safe, timely patient transitions from the inpatient setting with appropriate follow-up, equipment, medication instructions, and community support in place. Cerner supports discharge planning through Care Management tools, Discharge PowerForms, Medication Reconciliation, and Patient Education modules.
+
+## Discharge Planning Workflow
+
+### Step 1: Initial Discharge Assessment (Admission)
+
+Within 24–48 hours of admission, case management and social work complete a discharge planning assessment:
+1. Identify anticipated discharge disposition (home, skilled nursing facility, long-term care, hospice, inpatient rehabilitation).
+2. Assess barriers to discharge (housing instability, caregiver absence, equipment needs, insurance limitations).
+3. Begin arranging post-acute resources if needed (SNF bed search, home health referral, DME orders).
+
+In PowerChart, case managers use the Care Management PowerForm or the Care Management MPage to document:
+- Estimated length of stay (ELOS)
+- Anticipated discharge date (ADD)
+- Discharge disposition
+- Barriers to discharge
+- Post-acute service needs
+
+### Step 2: Interdisciplinary Team Communication
+
+The multidisciplinary team meets (daily or as needed) to review discharge readiness:
+- Physician/NP/PA: clinical status, medical stability criteria met?
+- Nursing: patient and caregiver education complete?
+- Case Management: post-acute placement confirmed?
+- Social Work: psychosocial and transportation barriers resolved?
+- Pharmacy: discharge medication reconciliation complete?
+- Therapy (PT/OT/Speech): functional assessment and equipment needs identified?
+
+Communication is documented via:
+- Interdisciplinary Notes in the patient's chart
+- Care Team MPage (shows all team members' status updates in one view)
+- Length-of-Stay/Discharge Readiness flags in the patient list view
+
+### Step 3: Discharge Order Placement
+
+The discharging provider places a Discharge Order in CPOE:
+1. Open Orders > Add Order > search "Discharge."
+2. Select the appropriate discharge type:
+   - **Discharge to Home** — standard home discharge
+   - **Discharge to Home with Home Health Services** — home health referral required
+   - **Discharge to Skilled Nursing Facility (SNF)** — requires SNF orders and placement confirmation
+   - **Discharge to Inpatient Rehabilitation** — requires rehab admission order
+   - **Discharge to Hospice** — triggers hospice election documentation
+   - **AMA (Against Medical Advice)** — requires AMA form completion
+3. Set target discharge date and time.
+4. The discharge order triggers downstream workflows: medication reconciliation prompt, patient education, discharge instructions.
+
+### Step 4: Medication Reconciliation at Discharge
+
+The provider or clinical pharmacist completes discharge medication reconciliation:
+1. Open Medication Reconciliation from the patient's chart or from the discharge workflow prompt.
+2. Review the three columns:
+   - Home Medications (medications listed at admission)
+   - Hospital Medications (current inpatient orders)
+   - Discharge Medications (what will be prescribed for home)
+3. For each medication, select: Continue, Stop, New Medication, or Modified Dose.
+4. Generate the discharge prescription list.
+5. Send prescriptions electronically to the patient's pharmacy (SureScripts integration) or print.
+
+### Step 5: Patient and Caregiver Education
+
+Nursing and pharmacy provide discharge education:
+1. Open the Patient Education module from the patient's chart.
+2. Select appropriate education materials:
+   - Diagnosis-specific education (e.g., "Heart Failure Management at Home")
+   - Medication education (auto-generated from discharge medication list)
+   - Activity restrictions
+   - Diet instructions
+   - Wound care instructions
+   - Follow-up appointment reminders
+3. Review education materials with the patient and caregiver.
+4. Document: patient's understanding (verbalized understanding, teach-back completed), language preference, materials provided.
+5. Print or email education materials to the patient.
+
+### Step 6: Discharge Instructions
+
+The discharge instructions document is generated from the patient's chart:
+1. Open Discharge Instructions from the chart menu.
+2. The system auto-populates:
+   - Patient demographics and admission/discharge dates
+   - Diagnosis (from the encounter's diagnosis list)
+   - Discharge medications (from medication reconciliation)
+   - Follow-up appointments (from the Scheduling module)
+   - Activity restrictions and diet instructions
+   - Return to ED precautions (when to seek emergency care)
+3. Provider and nurse review and sign the instructions.
+4. Patient and caregiver receive a signed copy (print or patient portal delivery).
+
+### Step 7: Follow-Up Appointment Scheduling
+
+Before discharge:
+1. Provider places follow-up appointment orders in CPOE (e.g., "Primary Care Follow-up within 7 days," "Cardiology Follow-up within 30 days").
+2. Scheduling staff or the patient's care coordinator books the appointments using Cerner Scheduling.
+3. Confirmed appointments populate the discharge instructions automatically.
+
+For 30-day readmission risk reduction:
+- High-risk patients (prior admissions, complex medication regimens, no PCP) receive a post-discharge phone call within 48–72 hours (Case Management workflow).
+- Transitional care programs may be triggered by readmission risk score from the Length-of-Stay MPage.
+
+### Step 8: Physical Discharge
+
+1. Nursing confirms all discharge criteria are met (medication reconciliation complete, instructions signed, transportation arranged).
+2. IV access removed, monitoring equipment discontinued.
+3. Belongings returned to patient.
+4. Patient escorted to exit (wheelchair per policy).
+5. Nursing documents "Patient Discharged" in PowerChart — updates the encounter status.
+6. ADT system triggers a discharge transaction (A03 HL7 message) to downstream systems (billing, lab cancellations, pharmacy stop orders).
+
+## Discharge Documentation Summary
+
+| Document | Author | Location in Chart |
+|---|---|---|
+| Discharge Summary | Physician/APP | Documentation > Discharge Summary |
+| Discharge Instructions | Nurse/Provider | Discharge > Patient Instructions |
+| Discharge Medication List | Provider/Pharmacy | Medication Reconciliation |
+| Education Documentation | Nurse | Documentation > Patient Education |
+| Case Management Note | Case Manager | Documentation > Case Management |
+
+## Special Discharge Scenarios
+
+### Against Medical Advice (AMA)
+1. Patient expresses intent to leave AMA.
+2. Provider documents the risks of leaving against advice.
+3. Patient signs the AMA form (or refusal of the form is documented).
+4. Discharge instructions still provided.
+5. AMA is documented as the discharge disposition.
+
+### Discharge to SNF
+1. Case manager identifies appropriate SNF with an available bed.
+2. Provider completes the skilled nursing orders (rehab, wound care, IV antibiotics, etc.).
+3. The SNF clinical summary (face-to-face evaluation) is required by Medicare within 30 days.
+4. Transfer documentation generated from PowerChart: transfer orders, medication list, clinical summary.
+
+### Hospice Discharge
+1. Patient and family have elected hospice care.
+2. Provider documents terminal diagnosis and 6-month prognosis.
+3. Hospice election form signed.
+4. All curative/life-prolonging orders discontinued or transitioned to comfort-focused orders.
+5. Hospice agency receives clinical summary and medication list.
+
+## Best Practices
+
+1. Begin discharge planning on the day of admission — late planning drives avoidable delays and excess length of stay.
+2. Set and communicate the Anticipated Discharge Date (ADD) each day — align the entire care team.
+3. Complete medication reconciliation at every transition point (admission, transfer, discharge).
+4. Use teach-back to confirm patient understanding of discharge instructions — do not assume comprehension.
+5. Schedule follow-up appointments before the patient leaves — verbal instructions to "call your doctor" result in low follow-up rates.
+6. High-risk patients (heart failure, COPD, sepsis) should have care coordination follow-up within 48 hours.

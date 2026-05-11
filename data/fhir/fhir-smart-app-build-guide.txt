@@ -1,0 +1,82 @@
+Build and Test SMART on FHIR Applications — Oracle Health
+Source: https://docs.oracle.com/en/industries/health/millennium-platform-apis/build-smart-on-fhir-apps/
+Scraped: 2026-04-19
+
+==============================================================
+
+Overview
+
+This page provides resources and steps for developers to build and test applications using the SMART on FHIR specification. Reference the SMART on FHIR tutorial page for SMART applications built with Oracle Health FHIR APIs.
+
+Prerequisites
+
+- Review SMART on FHIR documentation at https://docs.smarthealthit.org/
+- Review FHIR R4 v4.0.1 documentation at https://hl7.org/fhir/R4/
+- Review FHIR R4 REST API endpoints documentation for Oracle Health implementation
+- Develop applications for R4 (DSTU 2 is retired)
+- Review the SMART page for Oracle Health SMART framework information
+- If planning to launch from PowerChart, ensure support for: PowerChart TOC and MPages component embedded in PowerChart
+
+Build and Test Steps
+
+Step 1: Use Open Endpoint for Initial Testing
+- Access the sandbox without authentication
+- Open Sandbox URL: https://fhir-open.cerner.com/r4/ec2458f2-1e24-41c8-b71b-0e701af7583d/
+- Recommended for initial proof of concepts
+- Note: Open endpoint exposes read-only resources; writes available only with authentication
+
+Step 2: Get Support
+- Post questions on Oracle Health Developer Forums at https://forums.oracle.com/ords/apexds/domain/open-developer-experience
+
+Step 3: Review Authorization Framework
+- When ready to test against authenticated endpoint, review Authorization Framework at https://docs.oracle.com/en/industries/health/millennium-platform-apis/fhir-authorization-framework/
+
+Step 4: Register Application in code Console
+- Requires CernerCare account (create upon initial use)
+- Code Console: https://code-console.cerner.com/
+- Select patient from sandbox list for provider-facing applications
+- Test application from new browser window in code Console
+
+Step 5: Test with Authenticated Endpoint
+- Secure Sandbox (Non-Patient): https://fhir-ehr-code.cerner.com/r4/ec2458f2-1e24-41c8-b71b-0e701af7583d/
+- Secure Sandbox (Patient Access): https://fhir-myrecord.cerner.com/r4/ec2458f2-1e24-41c8-b71b-0e701af7583d/
+- Use secure sandbox for authentication and scope testing
+
+Technical Requirements
+
+Application must use HTTPS with valid SSL certificate (Qualys SSL Labs grade A or higher)
+Application URL must be publicly accessible for PowerChart sandbox testing
+Application must be hosted on standard HTTPS port 443
+Include HTML5 DOCTYPE declaration
+Include X-UA-Compatible tag for IE compatibility
+
+Browser Support
+
+- Microsoft Edge (Chromium-based): Recommended
+- Internet Explorer: Supported (minimum IE10)
+- MPages 9.0+: Applications must function with Edge
+- For IE compatibility: use Edge with IE mode
+
+Open Source FHIR Client Libraries
+
+JavaScript: https://github.com/smart-on-fhir/client-js (v0.1.10+ required)
+Java: https://github.com/hapifhir/hapi-fhir
+.NET: https://github.com/FirelyTeam/firely-net-sdk
+Python: https://github.com/smart-on-fhir/client-py
+iOS: https://github.com/smart-on-fhir/Swift-FHIR
+
+Patient Safety Design Considerations
+
+When multiple patient charts are open in PowerChart:
+1. Design application to avoid changing active region without direct user interaction
+2. Ensure application maintains proper patient context at all times
+3. Test in workflows where multiple charts may be open
+4. Each patient chart must be clearly identified and distinguishable
+
+Developers are responsible for conducting risk assessments, particularly in scenarios where clinical safety could be affected.
+
+Additional Resources
+
+- Cerner Ignite APIs for Millennium Reference Pages (Cerner Wiki)
+- code Console Help (Cerner Wiki)
+- Oracle Health Millennium Platform documentation: https://docs.oracle.com/en/industries/health/millennium-platform-apis/index.html

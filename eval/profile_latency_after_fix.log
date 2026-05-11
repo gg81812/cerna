@@ -1,0 +1,139 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loaded 5 queries from hospital set
+[Retriever] Loading embedding model…
+Loading weights:   0%|          | 0/391 [00:00<?, ?it/s]Loading weights:  31%|###       | 120/391 [00:00<00:00, 1190.48it/s]Loading weights:  80%|#######9  | 311/391 [00:00<00:00, 1605.38it/s]Loading weights: 100%|##########| 391/391 [00:00<00:00, 1670.23it/s]
+[1mBertModel LOAD REPORT[0m from: BAAI/bge-large-en-v1.5
+Key                     | Status     |  | 
+------------------------+------------+--+-
+embeddings.position_ids | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+[Retriever] Building BM25 index…
+[Retriever] Ready.
+[Orchestrator] Ready.
+
+Pass 1 — cold run (5 queries)
+  [01] Med won't scan — patient says it's the right one but BCMA ke… [Redis] Unavailable (Timeout connecting to server). Falling back to in-memory cache.
+[QueryRewriter] intent=troubleshooting  modules=['CLINICAL']  ambiguous=False  needs_clarify=False  formal='BCMA barcode medication administration scan failure troubles'
+[Retrieve:pass1] strategy=parallel formal+variants  avg_top3=0.729  threshold=0.55
+[Retrieve:pass2] skipped — pass1 quality sufficient (avg_top3=0.729>=0.55)
+[Retrieve:pass3] skipped — pass2 quality sufficient (avg_top3=0.729>=0.55)
+18719ms  conf=high
+  [02] Wrong patient on the list — I can't see my admitted patient … [QueryRewriter] intent=troubleshooting  modules=['POWERCHART']  ambiguous=False  needs_clarify=False  formal='patient list filter location membership checks in PowerChart'
+[Retrieve:pass1] strategy=parallel formal+variants  avg_top3=0.676  threshold=0.55
+[Retrieve:pass2] skipped — pass1 quality sufficient (avg_top3=0.676>=0.55)
+[Retrieve:pass3] skipped — pass2 quality sufficient (avg_top3=0.676>=0.55)
+7114ms  conf=medium
+  [03] Discharge note gone — I documented it an hour ago and now it… [QueryRewriter] intent=troubleshooting  modules=['CLINICAL']  ambiguous=False  needs_clarify=True  formal='eMAR discharge note documentation and retrieval workflow'
+4453ms  conf=low
+  [04] BCMA stuck on override prompt — the screen won't let me get … [QueryRewriter] intent=troubleshooting  modules=['CLINICAL']  ambiguous=False  needs_clarify=False  formal='BCMA override prompt stuck workflow'
+[Retrieve:pass1] strategy=parallel formal+variants  avg_top3=0.593  threshold=0.55
+[Retrieve:pass2] skipped — pass1 quality sufficient (avg_top3=0.593>=0.55)
+[Retrieve:pass3] skipped — pass2 quality sufficient (avg_top3=0.593>=0.55)
+10832ms  conf=high
+  [05] The MAR is showing a med as overdue but we gave it on time —… [QueryRewriter] intent=troubleshooting  modules=['CLINICAL']  ambiguous=False  needs_clarify=False  formal='late administration correction workflow for medication admin'
+[Retrieve:pass1] strategy=parallel formal+variants  avg_top3=0.696  threshold=0.55
+[Retrieve:pass2] skipped — pass1 quality sufficient (avg_top3=0.696>=0.55)
+[Retrieve:pass3] skipped — pass2 quality sufficient (avg_top3=0.696>=0.55)
+13884ms  conf=high
+
+Pass 2 — cached run (5 queries)
+  [01] Med won't scan — patient says it's the right one but BCMA ke… [Retrieve:pass1] strategy=parallel formal+variants  avg_top3=0.729  threshold=0.55
+[Retrieve:pass2] skipped — pass1 quality sufficient (avg_top3=0.729>=0.55)
+[Retrieve:pass3] skipped — pass2 quality sufficient (avg_top3=0.729>=0.55)
+9067ms  conf=medium
+  [02] Wrong patient on the list — I can't see my admitted patient … [Retrieve:pass1] strategy=parallel formal+variants  avg_top3=0.676  threshold=0.55
+[Retrieve:pass2] skipped — pass1 quality sufficient (avg_top3=0.676>=0.55)
+[Retrieve:pass3] skipped — pass2 quality sufficient (avg_top3=0.676>=0.55)
+10726ms  conf=medium
+  [03] Discharge note gone — I documented it an hour ago and now it… 11ms  conf=low
+  [04] BCMA stuck on override prompt — the screen won't let me get … [Retrieve:pass1] strategy=parallel formal+variants  avg_top3=0.593  threshold=0.55
+[Retrieve:pass2] skipped — pass1 quality sufficient (avg_top3=0.593>=0.55)
+[Retrieve:pass3] skipped — pass2 quality sufficient (avg_top3=0.593>=0.55)
+7333ms  conf=high
+  [05] The MAR is showing a med as overdue but we gave it on time —… [Retrieve:pass1] strategy=parallel formal+variants  avg_top3=0.696  threshold=0.55
+[Retrieve:pass2] skipped — pass1 quality sufficient (avg_top3=0.696>=0.55)
+[Retrieve:pass3] skipped — pass2 quality sufficient (avg_top3=0.696>=0.55)
+[LLM] error category='rate_limit' status=429 attempt=1 ts=2026-05-08T09:30:25.888845+00:00 query='late administration correction workflow for medication administration record'
+[LLM] error category='rate_limit' status=429 attempt=2 ts=2026-05-08T09:30:26.976080+00:00 query='late administration correction workflow for medication administration record'
+[LLM] error category='rate_limit' status=429 attempt=3 ts=2026-05-08T09:30:30.003717+00:00 query='late administration correction workflow for medication administration record'
+[LLM] 8b_fallback succeeded ts=2026-05-08T09:30:33.169443+00:00
+13934ms  conf=high
+
+Results written to: C:\Users\gaurav.garje\OneDrive - Accenture\Desktop\cerna\logs\latency_profile.jsonl
+
+======================================================================
+LATENCY PROFILE — SUMMARY
+======================================================================
+Total queries: 5
+  Cold  (5):    avg=11000ms  p50=10832ms  p95=18719ms  max=18719ms
+  Cached(0):  n/a
+  Refusals(1): avg=4453ms  p50=4453ms  p95=4453ms  max=4453ms
+
+Budget violations:
+  Cold   > 5000ms:    4/5
+  Cached > 2000ms: 0/0
+  Refusal> 1000ms:   1/1
+
+-- Per-step averages (across all queries) ----------------------------------
+  generate                  avg= 5773ms  max=  7248ms  fired=  4x  (46.0% of avg total)
+  understand                avg= 4703ms  max=  7852ms  fired=  5x  (37.5% of avg total)
+  retrieve                  avg= 2073ms  max=  3987ms  fired=  4x  (16.5% of avg total)
+  build_prompt              avg=    2ms  max=     8ms  fired=  4x  (0.0% of avg total)
+  parse                     avg=    0ms  max=     1ms  fired=  4x  (0.0% of avg total)
+  classify_module           avg=    0ms  max=     0ms  fired=  4x  (0.0% of avg total)
+  prepare_retrieval         avg=    0ms  max=     0ms  fired=  4x  (0.0% of avg total)
+  fuse                      avg=    0ms  max=     0ms  fired=  4x  (0.0% of avg total)
+  rerank                    avg=    0ms  max=     0ms  fired=  4x  (0.0% of avg total)
+  gate                      avg=    0ms  max=     0ms  fired=  4x  (0.0% of avg total)
+  route_clarify             avg=    0ms  max=     0ms  fired=  1x  (0.0% of avg total)
+
+-- Top 5 slowest queries --------------------------------------------
+   18719ms  Med won't scan — patient says it's the right one but BCMA keeps rejecting it
+   13884ms  The MAR is showing a med as overdue but we gave it on time — how do I fix the ti
+   10832ms  BCMA stuck on override prompt — the screen won't let me get past it and patient 
+    7114ms  Wrong patient on the list — I can't see my admitted patient anywhere in my censu
+    4453ms  Discharge note gone — I documented it an hour ago and now it's not there
+
+-- Top bottleneck: generate (avg 5773ms) -------------------------
+  -> Check: is streaming enabled? Can classification + generation overlap?
+
+
+-- Cached pass summary ---------------------------------------------
+
+======================================================================
+LATENCY PROFILE — SUMMARY
+======================================================================
+Total queries: 5
+  Cold  (3):    avg=10664ms  p50=10726ms  p95=13934ms  max=13934ms
+  Cached(2):  avg=4539ms  p50=9067ms  p95=9067ms  max=9067ms
+  Refusals(1): avg=11ms  p50=11ms  p95=11ms  max=11ms
+
+Budget violations:
+  Cold   > 5000ms:    3/3
+  Cached > 2000ms: 1/2
+  Refusal> 1000ms:   0/1
+
+-- Per-step averages (across all queries) ----------------------------------
+  generate                  avg= 8088ms  max= 12968ms  fired=  4x  (78.9% of avg total)
+  retrieve                  avg= 2161ms  max=  3403ms  fired=  4x  (21.1% of avg total)
+  parse                     avg=    2ms  max=     8ms  fired=  4x  (0.0% of avg total)
+  understand                avg=    0ms  max=     0ms  fired=  5x  (0.0% of avg total)
+  classify_module           avg=    0ms  max=     0ms  fired=  4x  (0.0% of avg total)
+  prepare_retrieval         avg=    0ms  max=     0ms  fired=  4x  (0.0% of avg total)
+  fuse                      avg=    0ms  max=     0ms  fired=  4x  (0.0% of avg total)
+  rerank                    avg=    0ms  max=     0ms  fired=  4x  (0.0% of avg total)
+  gate                      avg=    0ms  max=     0ms  fired=  4x  (0.0% of avg total)
+  build_prompt              avg=    0ms  max=     0ms  fired=  4x  (0.0% of avg total)
+  route_clarify             avg=    0ms  max=     0ms  fired=  1x  (0.0% of avg total)
+
+-- Top 5 slowest queries --------------------------------------------
+   13934ms  The MAR is showing a med as overdue but we gave it on time — how do I fix the ti
+   10726ms  Wrong patient on the list — I can't see my admitted patient anywhere in my censu
+    9067ms  Med won't scan — patient says it's the right one but BCMA keeps rejecting it
+    7333ms  BCMA stuck on override prompt — the screen won't let me get past it and patient 
+      11ms  Discharge note gone — I documented it an hour ago and now it's not there
+
+-- Top bottleneck: generate (avg 8088ms) -------------------------
+  -> Check: is streaming enabled? Can classification + generation overlap?

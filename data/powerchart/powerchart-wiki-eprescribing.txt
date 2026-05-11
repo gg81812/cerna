@@ -1,0 +1,375 @@
+# SOURCE: Electronic Prescribing — Wikipedia
+# URL: https://en.wikipedia.org/wiki/Electronic_prescribing
+# MODULE: PowerChart
+# RETRIEVED: 2026-05-07
+# ---
+
+Method of medical prescription
+
+Electronic prescription
+ (
+e-prescribing
+ or 
+e-Rx
+) is the computer-based electronic generation, transmission, and filling of a 
+medical prescription
+, taking the place of paper and faxed prescriptions. E-prescribing allows a 
+physician
+, 
+physician assistant
+, 
+pharmacist
+, or 
+nurse practitioner
+ to use digital prescription software to 
+electronically transmit
+ a new prescription or renewal authorization to a community or mail-order 
+pharmacy
+. It outlines the ability to send error-free, accurate, and understandable prescriptions electronically from the 
+healthcare provider
+ to the pharmacy. E-prescribing is meant to reduce the risks associated with traditional prescription script writing. It is also one of the major reasons for the push for 
+electronic medical records
+. By sharing medical prescription information, e-prescribing seeks to connect the patient's team of healthcare providers to facilitate knowledgeable decision making.
+
+Functions
+
+An e-prescribing system used in the United States must be capable of performing all of the following functions:
+
+Patient's identification
+
+Generating a complete active medication list, possibly incorporating electronic data received from an insurance provider
+
+Access to patient historical data
+
+Prescribe or add new medication and select the pharmacy where the prescription will be filled.
+
+Work with an existing medication within the practice, this can involve viewing details of a medication, remove a medication from the active medication list, change dose, etc., for a medication or renew one or more medications
+
+Printing prescriptions
+
+Electronically transmitting prescriptions to a transaction hub
+
+Conducting all safety checks using an integrated 
+decision support system
+, known as a Drug Utilization Review. Safety checks include: automated prompts that offer information on the drug being prescribed, potential inappropriate dose or 
+route of administration
+, drug-drug interactions, allergy concerns, or warnings of caution
+
+Flagging availability of lower cost, therapeutically appropriate alternatives (if any)
+
+Providing information on formulary or tiered formulary medications, patient eligibility, and authorization requirements received electronically from the patient's insurance provider
+
+System integration capabilities (e.g., connection with various databases, connection with pharmacy and pharmacy benefit manager systems)
+
+Educational capabilities (e.g., 
+patient education
+, provider feedback)
+
+Model
+
+High-level dataflow diagram outlining the roles and processes involved in electronic prescribing
+
+The basic components of an electronic prescribing system are the:
+
+Prescriber - typically a physician
+
+Transaction hub
+
+Pharmacy with implemented electronic prescribing software
+
+Pharmacy Benefit Manager (PBM)
+
+The PBM and transaction hub work closely together. The PBM works as an intermediate actor to ensure the accuracy of information, although other models may not include this to streamline the communication process.
+
+In addition to pharmacies, medical tests can also be prescribed.
+
+Prescriber
+
+The prescriber, generally a clinician or healthcare staff, is defined as the electronic prescribing system user and sign into the system through a verification process to authenticate their identity.
+
+The prescriber searches through the database of patient records by using patient-specific information such as first and last name, date of birth, current address etc. Once the correct patient file has been accessed, the prescriber reviews the current medical information and uploads or updates new prescription information to the medical file.
+
+Transaction hub
+
+The transaction hub provides the common link between all actors (prescriber, pharmacy benefit manager, and pharmacy). It stores and maintains a master patient index for quick access to their medical information as well as a list of pharmacies.
+
+When the prescriber uploads new prescription information to the patient file, this is sent to the transaction hub. The transaction hub will verify against the patient index. This will automatically send information about this transaction to the PBM, who will respond to the hub with information on patient eligibility, formulary, and medication history back to the transaction hub. The transaction hub then sends this information to the prescriber to improve patient management and care by completing and authorizing the prescription. Upon which, the prescription information is sent to the pharmacy that the patient primarily goes to.
+
+Pharmacy
+
+When a pharmacy receives the prescription information from the transaction hub, it will send a confirmation message. The pharmacy also has the ability to communicate to the prescriber that the prescription order has been filled through the system. Further system development will soon allow different messages such as a patient not picking up their medication or is late to pick up medication to improve patient management.
+
+Imaging
+
+When an imaging center receives the prescription, the imaging center will then contact the patient and schedule the patient for his/her scan. The advantage of e-prescribing radiology is that often when a patient is handed a paper script, the patient will lose the prescription or wait to call and schedule. This can be disastrous for patients with severe underlying conditions. The imaging center will call and schedule the patient as soon as the referral arrives. There are mobile ePrescribing portals as well as web portals that handle this well, and there are advantages.
+
+Benefits
+
+Compared to paper-based prescribing, e-prescribing can improve health and reduce costs because it can:
+
+Reduce prescribing and dispensing errors
+
+Decrease the work needed to execute a prescription
+
+Speed receipt of prescribed drugs
+
+Avoid more adverse drug interactions and reactions
+
+More reliably offer to substitute less expensive drug alternatives by checking the 
+formulary
+ of the insurance provider in the doctor's office
+
+Improve medication compliance (taking the prescribed medications on time) by reducing lost and unfilled prescriptions and minimizing patient costs
+
+Reduce the incidence of 
+drug diversion
+ (drug abuse) by alerting providers and pharmacists of duplicative prescriptions for 
+controlled substances
+.
+
+Safety improvements are highly desirable; in 2000, the Institute of Medicine identified medication errors as the most common type of 
+medical error
+ in health care, estimating that this leads to several thousand deaths each year.
+
+Improving patient safety and quality of care
+
+Illegibility from handwritten prescriptions is eliminated, decreasing the risk of medication errors while simultaneously decreasing risks related to liability. Oral miscommunications regarding prescriptions can be reduced, as e-prescribing should decrease the need for phone calls between prescribers and dispensers. Causes of medication errors include mistakes by the pharmacist incorrectly interpreting illegible handwriting or ambiguous nomenclature, and lapses in the prescriber's knowledge of desired dosage of a drug or undesired interactions between multiple drugs. Electronic prescribing has the potential to eliminate most of these types of errors. Warning and alert systems are provided at the point of care. E-prescribing systems can enhance an overall medication management process through clinical decision support systems that can perform checks against the patient's current medications for drug-drug interactions, drug-allergy interactions, diagnoses, body weight, age, drug appropriateness, and correct dosing. Based on these algorithms, the system can alert prescribers to contradictions, adverse reactions, and duplicate therapies. The computer can also ensure that clear and unambiguous instructions are encoded in a structured message to the pharmacist, and 
+decision support systems
+ can flag lethal dosages and lethal combinations of drugs.
+ E-prescribing allows for increased access to the patient's medical records and their medication history. Having access to this information from all health care providers at the time of prescribing can support alerts related to drug inappropriateness, in combination with other medications or with specific medical issues at hand. Electronic prescribing has been shown to reduce prescribing errors by up to 30%.
+
+Saving clinicians time
+
+According to estimates, almost 30 percent of prescriptions require pharmacy callbacks.
+ This translates into less time available to the pharmacist for other important functions, such as educating consumers about their medications. In response, E-prescribing can significantly reduce the volume of pharmacy call-backs related to illegibility, mistaken prescription choices, formulary and pharmacy benefits, decreasing the amount of time wasted on the phone. This ultimately impacts office workflow efficiency and overall productivity in a positive manner.
+
+Both prescribers and pharmacists can save time and resources spent on faxing prescriptions through a reduction in labor costs, handling costs, and paper expenses waste due to unreliability.
+
+With e-prescribing, renewal authorization can be an automated process that provides efficiencies for both the prescriber and pharmacist. Pharmacy staff can generate a renewal request (authorization request) that is delivered through the electronic network to the prescriber's system. The prescriber can then review the request and act accordingly by approving or denying the request through updating the system. With limited resource utilization and just a few clicks on behalf of the prescriber, they can complete a medication renewal task while enhancing continuous patient documentation.
+
+Increasing patient convenience and medication compliance
+
+It is estimated that 20% of paper-based prescription orders go unfilled by the patient, partly due to the hassle of dropping off a paper prescription and waiting for it to be filled. By elimination or reducing this waiting period, e-prescribing may help reduce the number of unfilled prescriptions and hence, increasing medication adherence. Allowing the renewal of medications through this electronic system also helps improve the efficiency of this process, reducing obstacles that may result in less patient compliance. Availability of information on when patient's prescriptions are filled can also help clinicians assess patient adherence.
+
+Allowing greater prescriber mobility
+
+Improved prescriber convenience can be achieved when using mobile devices, that work on a wireless network, to write and renew prescriptions. Such mobile devices may include laptops, PDAs, tablet computers, or mobile phones. This freedom of mobility allows prescribers to write/renew prescriptions anywhere, even when not in the office.
+
+Improving drug surveillance/recall ability
+
+E-prescribing systems enable embedded, automated analytic tools to produce queries and reports, which would be close to impossible with a paper-based system. Common examples of such reporting would be: finding all patients with a particular prescription during a drug recall, or the frequency and types of medication provided by certain health care providers.
+
+Limitations
+
+Although e-prescribing has the ability to streamline workflow process and increase the system's efficiency, challenges and limitations that may hinder the widespread adoption of e-prescribing practices include:
+
+Financial Cost and Return on Investment (ROI) - The costs associated with purchasing, implementing, supporting and maintaining such a system may be beyond the means of most small clinical practices, and noted to be one of the greatest implementation barriers. Health care workers who are responsible for medical prescription, especially those in small practices, inner-city areas, or remote rural settings, may bear more than their fair share of the cost associated with e-prescribing. This is in response to the various other stakeholders that may reap the benefits from such a system, without having to financially support it, disseminating their risk substantially. Clinical practices therefore need to invest significantly in both hardware and software, with varying costs based on system specifications (stand alone system or entire EHR system). Even clinics that receive free e-prescribing systems may face financial costs pertaining to management of the interface, customization due to flexibility, training, maintenance, and upgrades. On top of this, the clinic must also take into consideration the lost time and efficiency during the transition period of implementation. As a result, large urban areas may see the greatest ROI when compared to those in rural areas.
+
+Change management - Many underestimate the challenges pertaining to change management when transitioning from paper-based prescriptions to e-prescribing. This is especially true in busy practices where healthcare providers and associated staff are accustomed to their current management system, in which case change management becomes extremely important. Potentially difficult and time-consuming analysis may be needed to understand how to change workflow around the management of prescriptions with the introduction of an electronic system. The change also requires pharmacists to increase their awareness of new types of errors associated with e-prescribing, in order to best target their activities to reduce clinical risk. As a result, steps must be taken to ensure effective planning, training, support, and continuous quality improvement for successful transition.
+
+Hardware and software selection - Choosing the right hardware platform and software applications can be a rather daunting task for practices, especially in regards to small and busy settings. Many have limited access to expert information technology personnel/staff, leading them to struggle with how to get started, appropriate vendor selection, cost and function negotiations, and most importantly, long-term support to ensure continuous functionality and meaningful use.
+
+Erroneous alerts - The inability to effectively use clinical decision support systems due to the erroneous triggering of pop-up alerts with ill-defined software is also a great limitation. Under such circumstances, many opt to turn the notifications off, disabling one of the system's most beneficial aspects.
+
+Integrity of data input - Accidental data entry errors such as selecting the wrong patient or clicking on the wrong choice in a menu of dosages may occur. Software vendors can reduce errors by continually reviewing user feedback and follow best practices in 
+user interface design
+.
+
+Security and privacy - As with many eHealth solutions, privacy of patient information stored in electronic format may lead to the possibility of novel errors, such as inadvertently divulging 
+protected health information
+ on the Internet through inadequate security practices. Instances of negligence may also arise, where employees may forward prescriptions to organizations outside its intended use.
+ Another security issue that needs to be addressed up front is the verification of electronic signatures, in ensuring the medical integrity of the prescriptions received by pharmacists. Hospitals, clinics, and pharmacies are counselled to be protected with firewalls, use strict computer permission settings, and remain vigilant toward signs of an intrusion.
+
+System downtime - Periods of system downtime may arise, either due to network-related issues, hardware failure, or loss of electricity. The inability to use electronic prescribing when the system is not accessible is of great concern, and must be addressed with the discussion of fall-back procedures and mechanisms when such situations arise.
+
+Patient Access Lost - In the event of a development beyond the control of the patient, such as a software malfunction in the health care provider's office, the patient can no longer ask the care provider for a paper prescription to take to a pharmacy (in New York, where e-prescribing is mandatory with exceptions; other states to follow suit) in order to obtain needed medicines. States such as New York,
+ Connecticut,
+ Maine
+ and Pennsylvania
+ do however, allow a prescriber to issue paper prescriptions in cases of temporary technological or electronic failure. This leaves the patient at the mercy of technicians or other undiscoverable workers.
+
+By country
+
+Australia
+
+The vast majority of community medical prescriptions in Australia continue to be delivered on paper, either in printed or hand-written format. Electronic prescription in Australia is currently provided by two service providers, MediSecure and eRx. Both services can be integrated into many of the existing clinical and pharmacy prescribing software systems. Since December 1991, they have become interoperable allowing bilateral transfer of information.
+
+Bangladesh
+
+Private companies started working with electronic prescriptions. On 2017 July easypres.com launched Bangladesh's
+ first cloud-based electronic prescription and patient management software for Doctors in Bangladesh.
+ Within a year, more than a thousand doctors registered for the software out of 83 thousand registered MBBS doctors in Bangladesh for this Digital prescription writing software. High court of Bangladesh issued a rule that doctors need to write the prescription in readable format meaning they need to use software of ALL caps later while writing prescription. This software also stores the medical history of patients and doctors can access these data easily from anywhere using the Internet.
+
+Canada
+
+On March 22, 2016, the 
+Government of Canada
+ allocated funds to 
+Canada Health Infoway
+ to develop an e-prescribing service.
+ Infoway is working with 
+Health Canada
+, the provinces and territories and industry stakeholders to create PrescribeIT, a multi-jurisdiction e-prescribing service. Infoway will create, operate and maintain the service, along with its partners. The service will be financially self-sustaining and is designed to be scaled across the country and will enable prescribers to electronically transmit a prescription to a patient's pharmacy of choice.
+ Physicians, physician assistants, nurse practitioners and other prescribers will be able to use the system either through their existing electronic medical record or through a standalone application. Health Canada included supporting better prescribing practices, including e-prescribing, as part of its Action on Opioid Misuse plan.
+
+Until recently in Canada, it was the position of Health Canada that, to allow for e-prescribing, amendments to Part C of the Food and Drugs Regulations made under the Food and Drugs Act, regulations made under the 
+Controlled Drugs and Substances Act
+ and possibly regulations made under Personal Information Protection and Electronic Documents Act would be required. After further review, Health Canada has concluded that there are currently no regulatory impediments to moving ahead with electronically generated and transmitted prescriptions and that these are permissible to the extent that they achieve the same objectives as written prescriptions. Provinces and territories wishing to proceed with e-prescribing are obligated to ensure that electronic prescriptions meet existing regulatory requirements and achieve the same objectives as written prescriptions. For example, there must be evidence of a genuine practitioner/patient relationship, and in the case of controlled substances, pharmacists filling prescriptions must verify prescriptions are signed by the practitioner before selling or providing drugs containing controlled substances to a patient. Health Canada has collaborated with Canada Health Infoway on the development of a technical document entitled Ensuring the Authenticity of Electronic Prescriptions, in order to provide advice about how to ensure the authenticity of electronic signatures.
+
+Czech Republic
+
+The Czech healthcare system is moving towards a mandatory electronic prescribing system to take effect in 2020. Patients and clinicians will have access to the prescribing records. Codes and names of medications are allocated by the 
+State Institute for Drug Control
+.
+
+Estonia
+
+Electronic prescriptions were introduced in Estonia in January 2010.
+ By mid-2013, 95% of all prescriptions, and by 2014, 99% of the prescriptions in the country were being issued electronically.
+
+e-Prescription, is a centralized paperless system for issuing and handling medical prescriptions. When a doctor prescribes medicine using the system, he or she does so electronically, with the aid of an online form. At the pharmacy, all a patient needs to do is present an ID-card. The pharmacist then retrieves the patient's information from the system and issues the medicine. Because the e-Prescription system draws on data from the national health insurance fund, any state medical subsidies that the patient is entitled to, also appear, and the medicine is discounted accordingly. Another major advantage of the system is that doctor visits are no longer needed for repeat prescriptions. A patient can contact the doctor by e-mail, Skype or phone, and the doctors can issue repeats with just a few clicks, and the patient can collect the medicine from their closest pharmacy. 99% of all prescriptions in the country are issued electronically. This frees up time for patients and doctors, and reduces administrative strain on hospitals.
+
+Europe
+
+This article 
+is written like a 
+personal reflection, personal essay, or argumentative essay
+ that states a Wikipedia editor's personal feelings or presents an original argument about a topic.
+ Please 
+help improve it
+ by rewriting it in an 
+encyclopedic style
+.
+ 
+(
+March 2013
+)
+ (
+Learn how and when to remove this message
+)
+
+The use of electronic prescription has been designated as an important strategic policy to improve health care in Europe. The aim of the European Union is to have a cross-border electronic healthcare system in Europe which will enable EU citizens to obtain e-Prescriptions anywhere in Europe. The Scandinavian countries are leading Europe in deploying e-Prescription. Other countries which use the prescription process routinely are Norway, Denmark, Finland, Sweden, Belgium,
+ the Netherlands, Italy,
+ Iceland, Greece, England, Scotland, Wales and Northern Ireland.
+The European Union is pushing for more cross border health data exchange. Multiple perceived barriers impede its incorporation in clinical practice. There are varying interpretations and implementations of data protection and confidentiality laws in the 27 member states. Infrastructures are not in place to support the system and stakeholders in some jurisdictions are reluctant to embrace e-health due to the high cost and the lack of security of the systems. Interoperability of different systems is only a partial solution. Security and enforcement of privacy must also be equally enforced.
+
+India
+
+In India some private hospitals started using electronic prescription. But a major step was taken by 
+government of West Bengal
+ in August 2014 when they started the process of issuing e-prescriptions instead of hand-written instructions in top government hospitals.
+The biggest advantage of the system is that a patient has all his medical data stored in the server of state health department which can be referred to in future.
+In the private sector, a number of companies have started initiatives to build software to support e-prescriptions.
+
+Russia
+
+With the development and implementation of electronic technologies in Russian healthcare system, electronic prescription became part of the project called 
+EMIAS
+. 
+EMIAS
+ is the digital system designed to increase the quality and access of the medical aid in the public health facility. The project was designed and being implemented as part of «Digital city» program in execution of the Moscow Government's order from April 7, 2014 (as Moscow government amended on 21.05.2013 No. 22-PP). 
+
+The system offers special portal 
+Emias.Info
+, that provides appointment service to the patients and client area with different services including e-Prescription. Government social program allows getting pharmaceutical products for free or with the discount, depending on the category of the citizen.
+
+United Kingdom
+
+About 420 million repeat prescriptions are generated in the UK each year - about 200 for each general practitioner each week. They account for about 80% of the cost of medication in primary care. Paper based Repeat Dispensing Services were introduced by the 
+NHS
+ in 1991, and in 1992 it became possible to use the NHS Electronic Prescription Service for this purpose. In 2017 awareness of the scheme among patients was low.
+
+In October 2017 Keith McNeil, 
+NHS England
+'s chief clinical information officer demanded that NHS hospitals should be moved rapidly onto electronic prescribing in the light of research showing it would cut serious prescribing errors by more than half. There was no information about the extent to which it is happening in hospitals.
+
+After successful pilots in London and the East Midlands it was agreed in April 2018 that electronic prescribing should be introduced in all urgent care settings in England, including 
+NHS 111
+ and other 
+Out-of-hours services
+ so that dispensed medication can be ready for collection at a pharmacy when patients arrive.
+ £78 million was allocated in December 2018 to encourage progress with implementing electronic prescribing in NHS organisations which were struggling.
+
+Electronic prescribing is to start in English hospitals in the summer of 2022, using the IC24 system which was piloted at 
+Midlands Partnership NHS Foundation Trust
+ from 2020.
+
+United States
+
+In the United States, the 
+HITECH Act
+ promotes adoption of this technology by defining e-prescribing as one meaningful use of an 
+electronic medical record
+.
+ Standards for transmitting, recording, and describing prescriptions have been developed by the 
+National Council for Prescription Drug Programs
+, in particular the 
+SCRIPT
+ standard, which describes data formats. Elsewhere in the world, health care systems have been slower to adopt e-prescribing standards.
+
+Adoption of e-prescribing technology has accelerated in the United States, in large part, due to the arrival of Stage 2 of meaningful use. One of the Stage 2 core measures is: "Generate and transmit permissible prescriptions electronically (e-Rx.)" In order to meet this measure, practices must prescribe and transmit at least 50 percent of permissible prescriptions electronically.
+
+Surescripts
+
+According to data released in May 1991 by Surescripts, a company which operates the nation's largest health information (e-prescribing) network, roughly 317,000 office-based physicians now e-prescribe in the United States.
+
+A more recent report released by the Office of the National Coordinator for Health IT in June 2012 finds that 48 percent of U.S. physicians use e-prescribing systems. National growth in e-prescribing over the period September 2008 through June 2012 increased over 40 percent, with individual states increasing adoption anywhere from 28 percent to 70 percent.
+ In 2019, the 
+Federal Trade Commission
+ sued Surescripts, alleging that the company employed unlawful restraints in order to maintain its monopolies over electronic prescribing.
+
+Ukraine
+
+Starting from April 2019, ePrescription is one of the key components of the reimbursement system in Ukraine.
+ The e-prescription module integrates all primary care physicians (over 23,000 doctors) and almost 50% of pharmacies across the country.
+
+While the launch of e-prescription was done quickly, the quality was not compromised. The development of the tool was completed according to international standards as well as HL7 FHIR medical data requirements. Ukrainian eHealth system is a two layer system with central core component developed as storage of dictionaries and rules and private IT-companies who offers e-prescription's functionality through interfaces of the doctors and pharmacists.
+ The e-prescription code is open and available.
+
+As a next step of expansion of eRx functions in Ukraine, Ministry of Health of Ukraine develop the technical requirement for substitution of old-fashioned paper-based prescriptions with digital eRx for all applicable medicines.
+
+Research
+
+Prescription errors
+
+A study in the UK tested the Salford Medication Safety Dashboard (SMASH), a 
+web application
+ to help GPs and pharmacists find people in their electronic health records who might face safety hazards due to prescription errors. The dashboard was successfully used in identifying and helping patients with already registered unsafe prescriptions and later it helped monitoring new cases as they appeared.
+
+See also
+
+Electronic Prescriptions for Controlled Substances
+
+XML
+
+Data theft
+
+Medical privacy
+
+References
+
+Further reading
+
+Marceglia, Sara; Mazzola, Luca; Bonacina, Stefano; Tarquini, Paola; Donzelli, Paolo; Pinciroli, Francesco (2013). "A Comprehensive e-Prescribing Model to Allow Representing, Comparing, and Analyzing Available Systems". 
+Methods of Information in Medicine
+. 
+52
+ (3): 
+199–
+219. 
+doi
+:
+10.3414/ME12-01-0069
+. 
+PMID
+ 
+23591784
+. 
+S2CID
+ 
+21778456
+.
+
+Retrieved from "
+https://en.wikipedia.org/w/index.php?title=Electronic_prescribing&oldid=1352897182
+"

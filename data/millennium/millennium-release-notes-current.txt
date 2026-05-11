@@ -1,0 +1,109 @@
+# SOURCE: Oracle Health Millennium Release Notes — Current Release
+# URL: https://wiki.cerner.com/display/public/MillenniumRelease/Current+Release+Notes
+# MODULE: Millennium Platform
+# RETRIEVED: 2026-04-01
+# ---
+
+# Oracle Health Millennium Release Notes — Current Release
+
+## Release Overview
+
+Oracle Health (formerly Cerner) releases Millennium updates on a semi-annual cadence, typically designated as H1 (spring) and H2 (fall) releases. Each release includes new features, enhancements to existing functionality, performance improvements, regulatory compliance updates, and defect fixes. Organizations must plan and test each release in their CERT domain before promoting to Production.
+
+This document summarizes key areas of the current Millennium release cycle and the types of updates delivered.
+
+## Release Cadence and Deployment
+
+### Release Types
+1. Major releases (H1/H2) — semi-annual; contain new features and significant enhancements; require full regression testing.
+2. Maintenance releases — monthly or as-needed; contain critical defect fixes and security patches; may be deployed with reduced testing scope.
+3. Emergency patches — applied immediately in Production to address patient safety or data integrity issues.
+
+### Deployment Process
+1. Oracle Health publishes release notes and the installation package via the Solution Portal.
+2. The organization's technical team installs the release in the CERT domain.
+3. Build, interface, and regression testing occurs in CERT (typically 4–8 weeks for a major release).
+4. Upon CERT sign-off, the release is promoted to Production during a scheduled maintenance window.
+5. Post-Production validation is performed within 24–48 hours.
+
+## Key Feature Areas in Recent Releases
+
+### Clinical Documentation
+- Enhanced structured documentation templates with embedded clinical decision support rules.
+- Expanded PowerForms capabilities for specialty-specific assessment workflows.
+- Improved Dragon integration for speech-to-text documentation in clinical notes.
+- PowerNote performance improvements reducing documentation save times.
+
+### Computerized Provider Order Entry (CPOE)
+- New medication order duplicate detection alerts with configurable sensitivity thresholds.
+- Enhanced weight-based dosing calculators for pediatric and oncology orders.
+- Improved order set search functionality with synonym matching.
+- SMART on FHIR order integration improvements for third-party clinical decision support tools.
+
+### Pharmacy / PharmNet
+- Updated formulary management tools with real-time payer integration.
+- New outpatient pharmacy queue management interface.
+- Enhanced barcode medication verification (BCMA) workflow for multi-dose containers.
+- Improved IV compounding workflow integration with pharmacy automation systems.
+
+### Revenue Cycle
+- Enhanced charge capture automation for procedure-based workflows.
+- New claims scrubbing rules aligned with current payer specifications.
+- Updated RevElate (HealtheAnalytics) dashboards with new Revenue Integrity views.
+- Improved CDI (Clinical Documentation Improvement) query routing and workflow.
+
+### FHIR and Interoperability
+- Expanded FHIR R4 resource support: additional profiles for Immunization, DocumentReference, and Coverage.
+- SMART on FHIR app launch improvements with better context handling.
+- HL7 v2 interface engine performance improvements for high-volume ADT feeds.
+- CMS interoperability rule compliance updates for Patient Access API.
+
+### MPages and Developer Experience
+- MPages WebView2 migration — legacy Internet Explorer rendering engine replaced with Edge WebView2 for improved security and modern JavaScript support.
+- New MPages JavaScript API methods for expanded patient context access.
+- Performance improvements in MCS (Millennium Communication Server) for high-concurrency MPage environments.
+
+### Security and Compliance
+- Mandatory multi-factor authentication (MFA) enforcement for remote access via Citrix/VDI.
+- Updated audit logging to capture all patient record access events for HIPAA compliance.
+- Enhanced role-based access controls for break-glass (emergency access) workflows.
+- TLS 1.2 minimum enforcement for all Millennium interface connections.
+
+## Deprecated Features
+
+### Retiring in This Release Cycle
+- Internet Explorer-only DEO (Discern Explorer Objects) MPages — organizations must migrate to MCS or FHIR-based architectures before the EOL date.
+- Legacy Cerner Millennium Open Engine (CMOE) — being replaced by the modern Cerner Integration Engine (CIE) for all new interface development.
+- HL7 v2 over raw TCP — new interfaces must use MLLP (Minimum Lower Layer Protocol) or HL7 FHIR REST.
+
+### Planned Future Deprecation
+- Classic Discern Report Builder — being replaced by enhanced CCL development tools and HealtheAnalytics self-service reporting.
+- Legacy PowerNote (text-only notes) — organizations should migrate to structured PowerNote templates.
+
+## Database Schema Changes
+
+Each major release may include Oracle database schema updates:
+- New tables added for new feature areas (check release notes for table names).
+- Column additions to existing tables (backwards-compatible; no existing queries break).
+- Index additions for performance improvements.
+- No column removals or renames in stable tables (schema backward compatibility is maintained).
+
+After an upgrade, re-compile all custom CCL scripts to ensure they reflect the updated schema and pick up performance improvements from new indexes.
+
+## Upgrade Preparation Checklist
+
+Before applying a major Millennium release to CERT:
+
+1. Read the full release notes in the Solution Portal — pay special attention to Known Issues and Required Pre-Install Steps.
+2. Back up all custom CCL scripts and document their locations.
+3. Verify all third-party interface engine (CIE) adapters are certified for the new release version.
+4. Review deprecated feature notices — assess impact on your custom MPages and CCL reports.
+5. Schedule a CERT upgrade window with adequate regression testing time (minimum 4 weeks recommended).
+6. Notify end-user training team of workflow and UI changes requiring retraining.
+7. Confirm Production database backup is current before Production upgrade.
+
+## Getting Help
+
+- Oracle Health Solution Portal — release notes, upgrade packages, known issue tracking
+- uCern Community (community.cerner.com) — peer discussion of upgrade issues
+- Oracle Health Support — 24/7 support line for critical issues during upgrade windows

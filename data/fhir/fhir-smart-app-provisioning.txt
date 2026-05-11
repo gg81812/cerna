@@ -1,0 +1,80 @@
+SMART Application Provisioning — Oracle Health Millennium Platform
+Source: https://docs.oracle.com/en/industries/health/millennium-platform-apis/smart-app-provisioning/
+Scraped: 2026-04-19
+
+==============================================================
+
+Overview
+
+This document describes Oracle Health customer (health system) self-service provisioning and mapping process for SMART applications in a customer environment.
+
+When a developer creates an application in code Console, they are creating an application against the production cloud environment associated with a production-level internal Millennium environment. This application can connect to a customer's production environment.
+
+Prerequisites: The developer must already have an application created in a production environment through code Console.
+
+Note: Self-service provisioning does not apply to CommunityWorks, PowerWorks, or Continuum customers (shared domain customers) unless it fits within the Minimum Viable Strategy (MVS).
+
+RHO Customers (Remote-Hosted Option)
+
+Nonproduction Process:
+1. Customer requests a tenant ID for the domain from Oracle Health Hosting
+2. Developer provides a nonproduction (sandbox) application ID and client ID to the customer
+   - Create account at: https://sandboxcernercare.com/accounts/create
+   - Find credentials in code Console at: https://code-console.cerner.com/
+3. Customer logs an SR to Cerner Ignite APIs for Millennium for provisioning
+4. If the application uses FHIR APIs, customer logs an SR for codable concept mapping
+5. Developer provides external website dependencies for trusted sites on Citrix
+6. Customer completes SMART application setup via Configure SMART Applications in PowerChart or FirstNet
+7. Sandbox URLs:
+   - FHIR: https://fhir-ehr.sandboxcerner.com/r4/<tenant ID>/
+   - EHR: https://api.sandboxcernermillennium.com/<tenant ID>/
+
+Production Process:
+1. Customer requests a tenant ID from Oracle Health Hosting
+2. Developer provides a production application ID and client ID
+3. Customer logs an SR to Cerner Ignite APIs for provisioning (including FHIR URL request and PECA form if applicable)
+4. Customer completes SMART application setup
+5. Production URLs:
+   - FHIR: https://fhir-ehr.cerner.com/r4/<tenant ID>/
+   - EHR: https://api.cernermillennium.com/<tenant ID>/
+
+CHO Customers (Customer-Hosted Option)
+
+Nonproduction Process:
+1. Customer finds tenant ID in Cerner Central at https://sandboxcernercentral.com/
+2. Developer provides nonproduction application ID and client ID
+3. Customer logs SR to Cerner Ignite APIs for Millennium
+4. Customer completes SMART application setup
+
+Production Process:
+1. Customer finds tenant ID in Cerner Central
+2. Developer provides production application ID and client ID
+3. Customer logs SR including PECA form if applicable
+4. Customer completes SMART application setup
+
+Global Customers
+
+Note: Currently, only the FHIR APIs are supported globally.
+
+Region-Specific Base URLs:
+- Asia-Pacific: https://fhir-ehr.au.cerner.com/r4/<tenant ID>
+- Canada: https://fhir-ehr.ca.cerner.com/r4/<tenant ID>
+- UK: https://fhir-ehr.eu.cerner.com/r4/<tenant ID>
+
+Additional Resources
+
+Cerner Wiki:
+- Cerner Ignite APIs for Millennium Reference Pages
+- Implement Scheduling for FHIR
+- Understand Auditing for Cerner Ignite APIs for Millennium
+
+Oracle Health Community:
+- Making Self-Developed SMART Apps Available in Your Domain
+
+Key URLs:
+- Oracle Health Millennium Platform: https://docs.oracle.com/en/industries/health/millennium-platform-apis/index.html
+- Oracle Health Developer Program: https://www.oracle.com/health/developer/
+- Oracle PartnerNetwork: https://www.oracle.com/partnernetwork/program/
+- Developer Forums: https://forums.oracle.com/ords/apexds/domain/open-developer-experience
+
+Document ID: G15083-01 — October 2024

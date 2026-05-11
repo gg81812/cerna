@@ -1,0 +1,151 @@
+# SOURCE: Cerner PowerChart Patient List Configuration Guide
+# URL: https://wiki.cerner.com/display/public/1101PowerChartAmbulatory/Patient+List+Configuration
+# MODULE: PowerChart
+# RETRIEVED: 2026-04-01
+# ---
+
+# Cerner PowerChart Patient List Configuration Guide
+
+## What is a Patient List?
+
+The Patient List is the home screen in PowerChart — the view clinicians see when they first open the application. It shows a list of patients that are relevant to the current user's context, allowing quick navigation to individual patient charts. Patient Lists are highly configurable and can be organized by unit/bed location, provider attribution, care team assignment, or custom clinical criteria.
+
+## Types of Patient Lists
+
+### Location-Based Lists
+Displays all patients currently in a specific unit or set of units:
+- ICU Patient List — all patients in the ICU
+- ED Track Board — all patients in the Emergency Department
+- 4N Unit Census — all patients on the 4th floor North unit
+
+These lists are commonly used by charge nurses and unit administrators to see all patients in their assigned area.
+
+### Provider-Based Lists
+Displays patients attributed to a specific provider:
+- My Attending Patients — all patients where the logged-in provider is the attending physician
+- Resident Patient List — patients on a resident's service
+- Case Manager Panel — patients assigned to a case manager
+
+### Care Team / Service Lists
+Displays patients assigned to a specific clinical service or care team:
+- Cardiology Service List
+- Oncology Team List
+- Social Work Caseload
+
+### Custom Lists
+Clinicians can build personal custom lists based on:
+- Any combination of location, provider, and patient filters
+- Specific patient criteria (diagnosis, flag status, appointment type)
+
+## Configuring Patient Lists
+
+### System-Level Patient List Administration
+
+Administrators configure shared lists in PowerChart Administration:
+
+1. Navigate to PowerChart Administration > Patient Lists > List Administration.
+2. Click "New List."
+3. Enter: List Name, Description, List Type (Location, Provider, Service, Custom).
+4. Configure List Source:
+   - **Location-based**: Select the facility and units to include. Set the encounter type filter (Inpatient, Outpatient, Emergency).
+   - **Provider-based**: Select which provider relationship to use (Attending, Primary, Ordering, etc.).
+   - **Service-based**: Select the service/care team.
+5. Configure default columns (what information appears in each row — see Column Configuration below).
+6. Set List Access (who can see this list):
+   - Public — visible to anyone with the position/location
+   - Private — only visible to the creating user
+   - Role-based — visible to specific positions
+
+### Column Configuration
+
+Each patient list can display columns with relevant clinical data. Available columns include:
+- Patient Name
+- MRN, FIN
+- Age / Date of Birth
+- Sex
+- Location (Unit / Bed)
+- Admission Date
+- Length of Stay (LOS)
+- Estimated Length of Stay (ELOS)
+- Anticipated Discharge Date (ADD)
+- Attending Physician
+- Primary Nurse
+- Diagnosis (admitting, principal)
+- Isolation Status
+- Code Status (Full, DNR, DNI)
+- Diet
+- Fall Risk Score
+- Pain Score (most recent)
+- O2 Requirement
+- Last Vital Signs (time of last documented vitals)
+- Outstanding Orders (count of unsigned/unacknowledged orders)
+- Outstanding Results (count of unreviewed lab/radiology results)
+- Flag Status (custom flags defined by the organization)
+
+Columns can be sorted ascending or descending by clicking the column header.
+
+### Row Coloring and Visual Alerts
+
+Patient list rows can be configured with color-coding based on clinical conditions:
+- Red background: Patient on isolation precautions
+- Yellow background: Fall risk HIGH
+- Orange background: Patient with deterioration index score above threshold
+- Blue icon: Patient with an active alert or unreviewed critical result
+
+Color configurations are set in Patient List Administration > Visual Alerts.
+
+## Creating a Personal Patient List (End User)
+
+Individual clinicians can create personal lists:
+
+1. Open PowerChart > Patient List view.
+2. Click the "+" icon or right-click on the list panel > "Add New List."
+3. Select list type (Personal, My Patients, My Location, etc.).
+4. Configure the criteria for your personal list.
+5. Arrange columns and save.
+
+Personal lists are stored per user and follow the user across workstations (stored in Millennium, not locally).
+
+## Patient List Filters
+
+Within any patient list, users can apply temporary filters without changing the list configuration:
+- **Filter by unit** — narrow a large list to a specific floor or unit
+- **Filter by provider** — narrow to patients of a specific attending
+- **Filter by discharge status** — show only patients expected to discharge today
+- **Search by name or MRN** — quickly find a specific patient within the list
+
+## Track Board (ED Workflow)
+
+The Emergency Department uses a specialized Track Board view (built on the Patient List framework) with:
+- Color-coded patient status (triaged, in room, awaiting results, ready for disposition)
+- Bed assignment and room status
+- Acuity level (triage category ESI 1–5)
+- Time in ED and turnaround time metrics
+- Hovering over a patient shows recent vitals, chief complaint, and assigned provider
+
+Track Board configuration requires additional setup in the ED-specific modules. Coordinate with the Cerner implementation team for Track Board build.
+
+## Sharing Patient Lists
+
+Shared lists can be made available to a team:
+1. Open the list in Patient List Administration.
+2. Set Access to "Public" or assign specific positions.
+3. Users with the matching position will see the shared list in their patient list panel.
+
+## Patient List and Provider Rounding Workflows
+
+Many organizations configure provider-specific rounding lists that show:
+- All patients on the attending's service
+- Columns for: LOS, ELOS, ADD, code status, outstanding labs, outstanding imaging
+- Sort by room number for efficient rounding order
+
+The rounding list can be printed (Patient List > Print List) for use during rounds when paper reference is preferred.
+
+## Best Practices
+
+1. Keep patient list configurations aligned with actual workflow — overly complex lists confuse new staff.
+2. Include ADD (Anticipated Discharge Date) as a visible column — makes daily discharge planning visible to all team members.
+3. Configure isolation status as a visual alert — reduces transmission risk from missed isolation precaution notices.
+4. Create unit-specific shared lists centrally (in administration) rather than having each user build individual lists — ensures consistency.
+5. Audit patient list configurations annually — lists accumulate obsolete entries as units and services change.
+6. Restrict editing of shared lists to informatics administrators — ad-hoc changes by individual users create inconsistency.

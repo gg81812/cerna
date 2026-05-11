@@ -1,0 +1,1624 @@
+{
+  "data/millennium/cross-hl7-v2-millennium.txt": {
+    "doc_source": "hl7_cerner",
+    "doc_type": "spec",
+    "priority_tier": "must",
+    "source_weight": 0.9,
+    "last_updated": "2026-05-07",
+    "title": "SOURCE: HL7 v2 Messaging — Cerner Millennium Integration",
+    "module": "millennium",
+    "source_quality": "primary",
+    "phase": "phase2",
+    "tags": [
+      "cross_module",
+      "millennium",
+      "fhir"
+    ]
+  },
+  "data/millennium/millennium-6b-integration-overview.txt": {
+    "doc_source": "third_party",
+    "doc_type": "community",
+    "priority_tier": "nice",
+    "source_weight": 0.5,
+    "last_updated": "2026-04-18",
+    "title": "Oracle Health Cerner Integration — 6B Implementation Guide",
+    "module": "millennium"
+  },
+  "data/millennium/millennium-ccl-open-source.txt": {
+    "doc_source": "engineering_blog",
+    "doc_type": "blog",
+    "priority_tier": "should",
+    "source_weight": 0.7,
+    "last_updated": "2026-04-16",
+    "title": "SOURCE: Cerner Engineering Blog — CCL Unit, MPages and Architecture Posts",
+    "module": "millennium"
+  },
+  "data/millennium/millennium-ccl-performance-tuning.txt": {
+    "doc_source": "open_cerner",
+    "doc_type": "official",
+    "priority_tier": "must",
+    "source_weight": 0.9,
+    "last_updated": "2026-04-19",
+    "title": "CCL Query Performance Tuning Best Practices — Cerner Millennium",
+    "module": "millennium"
+  },
+  "data/millennium/millennium-ccl-programmer-reference.txt": {
+    "doc_source": "open_cerner",
+    "doc_type": "official",
+    "priority_tier": "must",
+    "source_weight": 0.9,
+    "last_updated": "2026-04-19",
+    "title": "SOURCE: Cerner CCL Programmer Reference Guide",
+    "module": "millennium"
+  },
+  "data/millennium/millennium-cerner-wiki-overview.txt": {
+    "doc_source": "third_party",
+    "doc_type": "official",
+    "priority_tier": "should",
+    "source_weight": 0.6,
+    "last_updated": "2026-05-07",
+    "title": "SOURCE: Oracle Cerner — Wikipedia Overview",
+    "module": "millennium",
+    "source_quality": "secondary",
+    "phase": "phase2"
+  },
+  "data/millennium/millennium-code-sets-guide.txt": {
+    "doc_source": "ucern",
+    "doc_type": "official",
+    "priority_tier": "must",
+    "source_weight": 1.0,
+    "last_updated": "2026-04-19",
+    "title": "Cerner Millennium Code Sets and Code Values — Administrator Reference",
+    "module": "millennium"
+  },
+  "data/millennium/millennium-developer-program.txt": {
+    "doc_source": "engineering_blog",
+    "doc_type": "blog",
+    "priority_tier": "should",
+    "source_weight": 0.7,
+    "last_updated": "2026-04-16",
+    "title": "SOURCE: Oracle Health Millennium Developer Program — Overview",
+    "module": "millennium"
+  },
+  "data/millennium/millennium-discern-analytics-admin.txt": {
+    "doc_source": "ucern",
+    "doc_type": "official",
+    "priority_tier": "must",
+    "source_weight": 1.0,
+    "last_updated": "2026-04-19",
+    "title": "SOURCE: Cerner Discern Analytics Administration Guide",
+    "module": "millennium"
+  },
+  "data/millennium/millennium-discern-rules-engine.txt": {
+    "doc_source": "third_party",
+    "doc_type": "community",
+    "priority_tier": "nice",
+    "source_weight": 0.5,
+    "last_updated": "2026-04-19",
+    "title": "Cerner Millennium Discern Rules Engine — Clinical Alerts and Event-Driven Rules",
+    "module": "millennium"
+  },
+  "data/millennium/millennium-domain-administration-guide.txt": {
+    "doc_source": "ucern",
+    "doc_type": "official",
+    "priority_tier": "must",
+    "source_weight": 1.0,
+    "last_updated": "2026-04-19",
+    "title": "SOURCE: Cerner Millennium Domain Administration Guide",
+    "module": "millennium"
+  },
+  "data/millennium/millennium-engineering-microservices.txt": {
+    "doc_source": "engineering_blog",
+    "doc_type": "blog",
+    "priority_tier": "should",
+    "source_weight": 0.7,
+    "last_updated": "2026-05-07",
+    "title": "SOURCE: Cerner Engineering — Microservices Architecture Patterns",
+    "module": "millennium",
+    "source_quality": "secondary",
+    "phase": "phase2"
+  },
+  "data/millennium/millennium-engineering-terra-accessibility.txt": {
+    "doc_source": "engineering_blog",
+    "doc_type": "blog",
+    "priority_tier": "should",
+    "source_weight": 0.7,
+    "last_updated": "2026-05-07",
+    "title": "SOURCE: Cerner Engineering — Terra Web Application Framework",
+    "module": "millennium",
+    "source_quality": "secondary",
+    "phase": "phase2"
+  },
+  "data/millennium/millennium-implementation-guide.txt": {
+    "doc_source": "ucern",
+    "doc_type": "official",
+    "priority_tier": "must",
+    "source_weight": 1.0,
+    "last_updated": "2026-04-16",
+    "title": "SOURCE: Implementing Oracle Health Cerner EHR — Architecture and Build Guide",
+    "module": "millennium"
+  },
+  "data/millennium/millennium-integration-pathways.txt": {
+    "doc_source": "third_party",
+    "doc_type": "community",
+    "priority_tier": "nice",
+    "source_weight": 0.5,
+    "last_updated": "2026-04-16",
+    "title": "SOURCE: Cerner Oracle Health Integration Guide — APIs and Architecture",
+    "module": "millennium"
+  },
+  "data/millennium/millennium-mpages-development-guide.txt": {
+    "doc_source": "ucern",
+    "doc_type": "official",
+    "priority_tier": "must",
+    "source_weight": 1.0,
+    "last_updated": "2026-04-19",
+    "title": "SOURCE: Cerner MPages Developer Guide",
+    "module": "millennium"
+  },
+  "data/millennium/millennium-mpages-explained.txt": {
+    "doc_source": "open_cerner",
+    "doc_type": "official",
+    "priority_tier": "must",
+    "source_weight": 0.9,
+    "last_updated": "2026-04-16",
+    "title": "SOURCE: Oracle Health MPages — Overview and Development Guide",
+    "module": "millennium"
+  },
+  "data/millennium/millennium-oracle-health-docs-hub.txt": {
+    "doc_source": "third_party",
+    "doc_type": "community",
+    "priority_tier": "nice",
+    "source_weight": 0.5,
+    "last_updated": "2026-04-18",
+    "title": "Oracle Health Applications Documentation Hub",
+    "module": "millennium"
+  },
+  "data/millennium/millennium-oracle-platform-apis.txt": {
+    "doc_source": "open_cerner",
+    "doc_type": "official",
+    "priority_tier": "must",
+    "source_weight": 0.9,
+    "last_updated": "2026-05-07",
+    "title": "SOURCE: Oracle Health Millennium Platform APIs — Index",
+    "module": "millennium",
+    "source_quality": "primary",
+    "phase": "phase2"
+  },
+  "data/millennium/millennium-oracle-wikipedia.txt": {
+    "doc_source": "third_party",
+    "doc_type": "community",
+    "priority_tier": "nice",
+    "source_weight": 0.5,
+    "last_updated": "2026-04-18",
+    "title": "Oracle Health (formerly Cerner Corporation) — Overview",
+    "module": "millennium"
+  },
+  "data/millennium/millennium-platform-apis-index.txt": {
+    "doc_source": "third_party",
+    "doc_type": "community",
+    "priority_tier": "nice",
+    "source_weight": 0.5,
+    "last_updated": "2026-04-18",
+    "title": "Oracle Health Millennium Platform APIs — Get Started Guide",
+    "module": "millennium"
+  },
+  "data/millennium/millennium-release-notes-current.txt": {
+    "doc_source": "third_party",
+    "doc_type": "community",
+    "priority_tier": "nice",
+    "source_weight": 0.5,
+    "last_updated": "2026-04-19",
+    "title": "SOURCE: Oracle Health Millennium Release Notes — Current Release",
+    "module": "millennium"
+  },
+  "data/millennium/millennium-security-user-management.txt": {
+    "doc_source": "third_party",
+    "doc_type": "community",
+    "priority_tier": "nice",
+    "source_weight": 0.5,
+    "last_updated": "2026-04-19",
+    "title": "SOURCE: Cerner Millennium Security and User Management Guide",
+    "module": "millennium"
+  },
+  "data/millennium/millennium-upgrade-planning-guide.txt": {
+    "doc_source": "ucern",
+    "doc_type": "official",
+    "priority_tier": "must",
+    "source_weight": 1.0,
+    "last_updated": "2026-04-19",
+    "title": "SOURCE: Cerner Millennium Upgrade Planning Guide",
+    "module": "millennium"
+  },
+  "data/millennium/millennium-wiki-ehr-interop.txt": {
+    "doc_source": "third_party",
+    "doc_type": "official",
+    "priority_tier": "should",
+    "source_weight": 0.6,
+    "last_updated": "2026-05-07",
+    "title": "SOURCE: Interoperability — Wikipedia",
+    "module": "millennium",
+    "source_quality": "secondary",
+    "phase": "phase2"
+  },
+  "data/millennium/millennium-wiki-hie.txt": {
+    "doc_source": "third_party",
+    "doc_type": "official",
+    "priority_tier": "should",
+    "source_weight": 0.6,
+    "last_updated": "2026-05-07",
+    "title": "SOURCE: Health Information Exchange — Wikipedia",
+    "module": "millennium",
+    "source_quality": "secondary",
+    "phase": "phase2"
+  },
+  "data/millennium/millennium-wiki-hl7.txt": {
+    "doc_source": "third_party",
+    "doc_type": "official",
+    "priority_tier": "should",
+    "source_weight": 0.6,
+    "last_updated": "2026-05-07",
+    "title": "SOURCE: Health Level 7 — Wikipedia",
+    "module": "millennium",
+    "source_quality": "secondary",
+    "phase": "phase2"
+  },
+  "data/millennium/millennium-wiki-ldap.txt": {
+    "doc_source": "third_party",
+    "doc_type": "official",
+    "priority_tier": "should",
+    "source_weight": 0.6,
+    "last_updated": "2026-05-07",
+    "title": "SOURCE: LDAP — Wikipedia",
+    "module": "millennium",
+    "source_quality": "secondary",
+    "phase": "phase2"
+  },
+  "data/millennium/millennium-wiki-mumps.txt": {
+    "doc_source": "third_party",
+    "doc_type": "official",
+    "priority_tier": "should",
+    "source_weight": 0.6,
+    "last_updated": "2026-05-07",
+    "title": "SOURCE: MUMPS Programming Language — Wikipedia (CCL ancestor context)",
+    "module": "millennium",
+    "source_quality": "secondary",
+    "phase": "phase2"
+  },
+  "data/millennium/millennium-wiki-soa.txt": {
+    "doc_source": "third_party",
+    "doc_type": "official",
+    "priority_tier": "should",
+    "source_weight": 0.6,
+    "last_updated": "2026-05-07",
+    "title": "SOURCE: Service-Oriented Architecture — Wikipedia",
+    "module": "millennium",
+    "source_quality": "secondary",
+    "phase": "phase2"
+  },
+  "data/powerchart/powerchart-ahrq-alert-fatigue.txt": {
+    "doc_source": "third_party",
+    "doc_type": "official",
+    "priority_tier": "must",
+    "source_weight": 0.85,
+    "last_updated": "2026-05-07",
+    "title": "SOURCE: AHRQ PSNet Primer — Alert Fatigue",
+    "module": "powerchart",
+    "source_quality": "primary",
+    "phase": "phase2"
+  },
+  "data/powerchart/powerchart-ahrq-cpoe-primer.txt": {
+    "doc_source": "third_party",
+    "doc_type": "official",
+    "priority_tier": "must",
+    "source_weight": 0.85,
+    "last_updated": "2026-05-07",
+    "title": "SOURCE: AHRQ PSNet Primer — Computerized Provider Order Entry",
+    "module": "powerchart",
+    "source_quality": "primary",
+    "phase": "phase2"
+  },
+  "data/powerchart/powerchart-ahrq-handoffs.txt": {
+    "doc_source": "third_party",
+    "doc_type": "official",
+    "priority_tier": "must",
+    "source_weight": 0.85,
+    "last_updated": "2026-05-07",
+    "title": "SOURCE: AHRQ PSNet Primer — Handoffs and Signouts",
+    "module": "powerchart",
+    "source_quality": "primary",
+    "phase": "phase2"
+  },
+  "data/powerchart/powerchart-ahrq-medrec-primer.txt": {
+    "doc_source": "third_party",
+    "doc_type": "official",
+    "priority_tier": "must",
+    "source_weight": 0.85,
+    "last_updated": "2026-05-07",
+    "title": "SOURCE: AHRQ PSNet Primer — Medication Reconciliation",
+    "module": "powerchart",
+    "source_quality": "primary",
+    "phase": "phase2"
+  },
+  "data/powerchart/powerchart-ai-integration-context.txt": {
+    "doc_source": "ucern",
+    "doc_type": "official",
+    "priority_tier": "must",
+    "source_weight": 1.0,
+    "last_updated": "2026-04-19",
+    "title": "PowerChart AI Integration — Overview of AI Capabilities in Cerner PowerChart",
+    "module": "powerchart"
+  },
+  "data/powerchart/powerchart-ai-predictive-ordering.txt": {
+    "doc_source": "ucern",
+    "doc_type": "official",
+    "priority_tier": "must",
+    "source_weight": 1.0,
+    "last_updated": "2026-04-19",
+    "title": "PowerChart AI — Predictive Ordering and AI-Assisted Clinical Documentation",
+    "module": "powerchart"
+  },
+  "data/powerchart/powerchart-clinical-decision-support.txt": {
+    "doc_source": "third_party",
+    "doc_type": "community",
+    "priority_tier": "nice",
+    "source_weight": 0.5,
+    "last_updated": "2026-04-19",
+    "title": "SOURCE: Cerner PowerChart Clinical Decision Support Guide",
+    "module": "powerchart"
+  },
+  "data/powerchart/powerchart-cms-promoting-interop.txt": {
+    "doc_source": "third_party",
+    "doc_type": "official",
+    "priority_tier": "must",
+    "source_weight": 0.85,
+    "last_updated": "2026-05-07",
+    "title": "SOURCE: CMS — Promoting Interoperability Programs",
+    "module": "powerchart",
+    "source_quality": "primary",
+    "phase": "phase2"
+  },
+  "data/powerchart/powerchart-cpoe-alert-configuration.txt": {
+    "doc_source": "ucern",
+    "doc_type": "official",
+    "priority_tier": "must",
+    "source_weight": 1.0,
+    "last_updated": "2026-04-19",
+    "title": "PowerChart CPOE Alert Configuration — FYI Alerts, Hard Stops, and Order Checks",
+    "module": "powerchart"
+  },
+  "data/powerchart/powerchart-cpoe-order-entry-workflow.txt": {
+    "doc_source": "ucern",
+    "doc_type": "official",
+    "priority_tier": "must",
+    "source_weight": 1.0,
+    "last_updated": "2026-04-19",
+    "title": "SOURCE: Cerner PowerChart CPOE Order Entry Workflow Guide",
+    "module": "powerchart"
+  },
+  "data/powerchart/powerchart-hl7-lab-integration.txt": {
+    "doc_source": "third_party",
+    "doc_type": "community",
+    "priority_tier": "nice",
+    "source_weight": 0.5,
+    "last_updated": "2026-04-19",
+    "title": "PowerChart Integration with External Lab Systems via HL7 Interfaces",
+    "module": "powerchart"
+  },
+  "data/powerchart/powerchart-implementation-build.txt": {
+    "doc_source": "ucern",
+    "doc_type": "official",
+    "priority_tier": "must",
+    "source_weight": 1.0,
+    "last_updated": "2026-04-16",
+    "title": "SOURCE: PowerChart Build Configuration — Powerforms, Powerplans, MPages",
+    "module": "powerchart"
+  },
+  "data/powerchart/powerchart-medication-reconciliation.txt": {
+    "doc_source": "ucern",
+    "doc_type": "official",
+    "priority_tier": "must",
+    "source_weight": 1.0,
+    "last_updated": "2026-04-19",
+    "title": "SOURCE: Cerner PowerChart Medication Reconciliation Guide",
+    "module": "powerchart"
+  },
+  "data/powerchart/powerchart-mpages-overview.txt": {
+    "doc_source": "open_cerner",
+    "doc_type": "official",
+    "priority_tier": "must",
+    "source_weight": 0.9,
+    "last_updated": "2026-04-16",
+    "title": "SOURCE: MPages in PowerChart — Summary and Workflow Views",
+    "module": "powerchart"
+  },
+  "data/powerchart/powerchart-onc-certification.txt": {
+    "doc_source": "third_party",
+    "doc_type": "official",
+    "priority_tier": "must",
+    "source_weight": 0.85,
+    "last_updated": "2026-05-07",
+    "title": "SOURCE: ONC Health IT Certification Program",
+    "module": "powerchart",
+    "source_quality": "primary",
+    "phase": "phase2"
+  },
+  "data/powerchart/powerchart-order-sets-cpoe-config.txt": {
+    "doc_source": "ucern",
+    "doc_type": "official",
+    "priority_tier": "must",
+    "source_weight": 1.0,
+    "last_updated": "2026-04-19",
+    "title": "PowerChart Order Sets Configuration Guide — CPOE Administration",
+    "module": "powerchart"
+  },
+  "data/powerchart/powerchart-patient-list-configuration.txt": {
+    "doc_source": "ucern",
+    "doc_type": "official",
+    "priority_tier": "must",
+    "source_weight": 1.0,
+    "last_updated": "2026-04-19",
+    "title": "SOURCE: Cerner PowerChart Patient List Configuration Guide",
+    "module": "powerchart"
+  },
+  "data/powerchart/powerchart-powernote-documentation.txt": {
+    "doc_source": "third_party",
+    "doc_type": "community",
+    "priority_tier": "nice",
+    "source_weight": 0.5,
+    "last_updated": "2026-04-19",
+    "title": "SOURCE: Cerner PowerNote Documentation Guide",
+    "module": "powerchart"
+  },
+  "data/powerchart/powerchart-results-review-inbox.txt": {
+    "doc_source": "third_party",
+    "doc_type": "community",
+    "priority_tier": "nice",
+    "source_weight": 0.5,
+    "last_updated": "2026-04-19",
+    "title": "SOURCE: Cerner PowerChart Results Review and InBasket Guide",
+    "module": "powerchart"
+  },
+  "data/powerchart/powerchart-touch-mobile-guide.txt": {
+    "doc_source": "ucern",
+    "doc_type": "official",
+    "priority_tier": "must",
+    "source_weight": 1.0,
+    "last_updated": "2026-04-19",
+    "title": "SOURCE: Cerner PowerChart Touch Mobile Application Guide",
+    "module": "powerchart"
+  },
+  "data/powerchart/powerchart-user-guide.txt": {
+    "doc_source": "ucern",
+    "doc_type": "official",
+    "priority_tier": "must",
+    "source_weight": 1.0,
+    "last_updated": "2026-04-19",
+    "title": "SOURCE: Cerner PowerChart User Guide",
+    "module": "powerchart"
+  },
+  "data/powerchart/powerchart-wiki-cdss.txt": {
+    "doc_source": "third_party",
+    "doc_type": "official",
+    "priority_tier": "should",
+    "source_weight": 0.6,
+    "last_updated": "2026-05-07",
+    "title": "SOURCE: Clinical Decision Support System — Wikipedia",
+    "module": "powerchart",
+    "source_quality": "secondary",
+    "phase": "phase2"
+  },
+  "data/powerchart/powerchart-wiki-clinical-pathway.txt": {
+    "doc_source": "third_party",
+    "doc_type": "official",
+    "priority_tier": "should",
+    "source_weight": 0.6,
+    "last_updated": "2026-05-07",
+    "title": "SOURCE: Clinical Pathway — Wikipedia",
+    "module": "powerchart",
+    "source_quality": "secondary",
+    "phase": "phase2"
+  },
+  "data/powerchart/powerchart-wiki-cpoe.txt": {
+    "doc_source": "third_party",
+    "doc_type": "official",
+    "priority_tier": "should",
+    "source_weight": 0.6,
+    "last_updated": "2026-05-07",
+    "title": "SOURCE: Computerized Physician Order Entry — Wikipedia",
+    "module": "powerchart",
+    "source_quality": "secondary",
+    "phase": "phase2"
+  },
+  "data/powerchart/powerchart-wiki-ehr.txt": {
+    "doc_source": "third_party",
+    "doc_type": "official",
+    "priority_tier": "should",
+    "source_weight": 0.6,
+    "last_updated": "2026-05-07",
+    "title": "SOURCE: Electronic Health Record — Wikipedia",
+    "module": "powerchart",
+    "source_quality": "secondary",
+    "phase": "phase2"
+  },
+  "data/powerchart/powerchart-wiki-emr-vs-ehr.txt": {
+    "doc_source": "third_party",
+    "doc_type": "official",
+    "priority_tier": "should",
+    "source_weight": 0.6,
+    "last_updated": "2026-05-07",
+    "title": "SOURCE: Electronic Medical Record — Wikipedia",
+    "module": "powerchart",
+    "source_quality": "secondary",
+    "phase": "phase2"
+  },
+  "data/powerchart/powerchart-wiki-eprescribing.txt": {
+    "doc_source": "third_party",
+    "doc_type": "official",
+    "priority_tier": "should",
+    "source_weight": 0.6,
+    "last_updated": "2026-05-07",
+    "title": "SOURCE: Electronic Prescribing — Wikipedia",
+    "module": "powerchart",
+    "source_quality": "secondary",
+    "phase": "phase2"
+  },
+  "data/powerchart/powerchart-wiki-medical-software.txt": {
+    "doc_source": "third_party",
+    "doc_type": "official",
+    "priority_tier": "should",
+    "source_weight": 0.6,
+    "last_updated": "2026-05-07",
+    "title": "SOURCE: Medical Software — Wikipedia",
+    "module": "powerchart",
+    "source_quality": "secondary",
+    "phase": "phase2"
+  },
+  "data/powerchart/powerchart-wiki-mpages.txt": {
+    "doc_source": "third_party",
+    "doc_type": "official",
+    "priority_tier": "should",
+    "source_weight": 0.6,
+    "last_updated": "2026-05-07",
+    "title": "SOURCE: Cerner — Wikipedia (PowerChart and MPages context)",
+    "module": "powerchart",
+    "source_quality": "secondary",
+    "phase": "phase2"
+  },
+  "data/revenue_cycle/rcm-ama-cpt-overview.txt": {
+    "doc_source": "third_party",
+    "doc_type": "official",
+    "priority_tier": "must",
+    "source_weight": 0.8,
+    "last_updated": "2026-05-07",
+    "title": "SOURCE: AMA — CPT Overview and Code Approval Process",
+    "module": "revenue_cycle",
+    "source_quality": "primary",
+    "phase": "phase2"
+  },
+  "data/revenue_cycle/rcm-cdi-integration-guide.txt": {
+    "doc_source": "ucern",
+    "doc_type": "official",
+    "priority_tier": "must",
+    "source_weight": 1.0,
+    "last_updated": "2026-04-19",
+    "title": "SOURCE: Cerner CDI (Clinical Documentation Improvement) Integration Guide",
+    "module": "revenue_cycle"
+  },
+  "data/revenue_cycle/rcm-cdrc-concept-explained.txt": {
+    "doc_source": "open_cerner",
+    "doc_type": "official",
+    "priority_tier": "must",
+    "source_weight": 0.9,
+    "last_updated": "2026-04-16",
+    "title": "SOURCE: Cerner Clinically Driven Revenue Cycle — Concept and Strategy",
+    "module": "revenue_cycle"
+  },
+  "data/revenue_cycle/rcm-cdrc-techtarget-article.txt": {
+    "doc_source": "open_cerner",
+    "doc_type": "official",
+    "priority_tier": "must",
+    "source_weight": 0.9,
+    "last_updated": "2026-04-18",
+    "title": "Revenue Cycle Management (RCM) — Definition and Overview",
+    "module": "revenue_cycle"
+  },
+  "data/revenue_cycle/rcm-cerner-product-overview.txt": {
+    "doc_source": "open_cerner",
+    "doc_type": "official",
+    "priority_tier": "must",
+    "source_weight": 0.9,
+    "last_updated": "2026-04-16",
+    "title": "SOURCE: Cerner Revenue Cycle Management — Product Overview and CDRC Philosophy",
+    "module": "revenue_cycle"
+  },
+  "data/revenue_cycle/rcm-charge-capture-configuration.txt": {
+    "doc_source": "ucern",
+    "doc_type": "official",
+    "priority_tier": "must",
+    "source_weight": 1.0,
+    "last_updated": "2026-04-19",
+    "title": "SOURCE: Cerner Charge Capture Configuration Guide",
+    "module": "revenue_cycle"
+  },
+  "data/revenue_cycle/rcm-charge-capture-reconciliation.txt": {
+    "doc_source": "ucern",
+    "doc_type": "official",
+    "priority_tier": "must",
+    "source_weight": 1.0,
+    "last_updated": "2026-04-16",
+    "title": "SOURCE: Charge Capture and Reconciliation — RCM Metrics and Workflow",
+    "module": "revenue_cycle"
+  },
+  "data/revenue_cycle/rcm-charge-review-workflow.txt": {
+    "doc_source": "ucern",
+    "doc_type": "official",
+    "priority_tier": "must",
+    "source_weight": 1.0,
+    "last_updated": "2026-04-19",
+    "title": "SOURCE: Cerner Charge Review Workflow Guide",
+    "module": "revenue_cycle"
+  },
+  "data/revenue_cycle/rcm-claims-management-guide.txt": {
+    "doc_source": "ucern",
+    "doc_type": "official",
+    "priority_tier": "must",
+    "source_weight": 1.0,
+    "last_updated": "2026-04-19",
+    "title": "SOURCE: Cerner Claims Management Guide",
+    "module": "revenue_cycle"
+  },
+  "data/revenue_cycle/rcm-cms-icd10-overview.txt": {
+    "doc_source": "third_party",
+    "doc_type": "official",
+    "priority_tier": "must",
+    "source_weight": 0.8,
+    "last_updated": "2026-05-07",
+    "title": "SOURCE: CMS — ICD-10 Coding Reference",
+    "module": "revenue_cycle",
+    "source_quality": "primary",
+    "phase": "phase2"
+  },
+  "data/revenue_cycle/rcm-cpt-lookup-ama.txt": {
+    "doc_source": "ucern",
+    "doc_type": "official",
+    "priority_tier": "must",
+    "source_weight": 1.0,
+    "last_updated": "2026-04-18",
+    "title": "CPT Code Set Overview — American Medical Association",
+    "module": "revenue_cycle"
+  },
+  "data/revenue_cycle/rcm-denial-management-guide.txt": {
+    "doc_source": "ucern",
+    "doc_type": "official",
+    "priority_tier": "must",
+    "source_weight": 1.0,
+    "last_updated": "2026-04-19",
+    "title": "SOURCE: Cerner Denial Management Guide",
+    "module": "revenue_cycle"
+  },
+  "data/revenue_cycle/rcm-hfma-revenue-cycle.txt": {
+    "doc_source": "ucern",
+    "doc_type": "official",
+    "priority_tier": "must",
+    "source_weight": 1.0,
+    "last_updated": "2026-04-18",
+    "title": "Healthcare Revenue Cycle Management — HFMA Overview",
+    "module": "revenue_cycle"
+  },
+  "data/revenue_cycle/rcm-him-coding-guide.txt": {
+    "doc_source": "ucern",
+    "doc_type": "official",
+    "priority_tier": "must",
+    "source_weight": 1.0,
+    "last_updated": "2026-04-19",
+    "title": "SOURCE: Cerner HIM Medical Coding Guide",
+    "module": "revenue_cycle"
+  },
+  "data/revenue_cycle/rcm-implementation-build-guide.txt": {
+    "doc_source": "ucern",
+    "doc_type": "official",
+    "priority_tier": "must",
+    "source_weight": 1.0,
+    "last_updated": "2026-04-16",
+    "title": "SOURCE: Revenue Cycle Build Tasks — CDI, HIM, Interface Engine Configuration",
+    "module": "revenue_cycle"
+  },
+  "data/revenue_cycle/rcm-medcare-workflow-guide.txt": {
+    "doc_source": "ucern",
+    "doc_type": "official",
+    "priority_tier": "must",
+    "source_weight": 1.0,
+    "last_updated": "2026-04-16",
+    "title": "SOURCE: Cerner RCM Workflows — RevElate, Charge Capture, CDI, HealtheAnalytics",
+    "module": "revenue_cycle"
+  },
+  "data/revenue_cycle/rcm-overview-module-map.txt": {
+    "doc_source": "ucern",
+    "doc_type": "official",
+    "priority_tier": "must",
+    "source_weight": 1.0,
+    "last_updated": "2026-04-19",
+    "title": "SOURCE: Cerner Revenue Cycle Management — Overview and Module Map",
+    "module": "revenue_cycle"
+  },
+  "data/revenue_cycle/rcm-patient-access-guide.txt": {
+    "doc_source": "ucern",
+    "doc_type": "official",
+    "priority_tier": "must",
+    "source_weight": 1.0,
+    "last_updated": "2026-04-19",
+    "title": "SOURCE: Cerner Patient Access Guide",
+    "module": "revenue_cycle"
+  },
+  "data/revenue_cycle/rcm-patient-accounting-user-guide.txt": {
+    "doc_source": "ucern",
+    "doc_type": "official",
+    "priority_tier": "must",
+    "source_weight": 1.0,
+    "last_updated": "2026-04-19",
+    "title": "SOURCE: Cerner Patient Accounting User Guide",
+    "module": "revenue_cycle"
+  },
+  "data/revenue_cycle/rcm-revelate-product-guide.txt": {
+    "doc_source": "ucern",
+    "doc_type": "official",
+    "priority_tier": "must",
+    "source_weight": 1.0,
+    "last_updated": "2026-04-19",
+    "title": "Oracle Health RevElate — Cerner Revenue Cycle Management Platform Guide",
+    "module": "revenue_cycle"
+  },
+  "data/revenue_cycle/rcm-wiki-claim-denial.txt": {
+    "doc_source": "third_party",
+    "doc_type": "official",
+    "priority_tier": "should",
+    "source_weight": 0.6,
+    "last_updated": "2026-05-07",
+    "title": "SOURCE: U.S. Health Insurance and Claim Adjudication — Wikipedia",
+    "module": "revenue_cycle",
+    "source_quality": "secondary",
+    "phase": "phase2"
+  },
+  "data/revenue_cycle/rcm-wiki-cpt.txt": {
+    "doc_source": "third_party",
+    "doc_type": "official",
+    "priority_tier": "should",
+    "source_weight": 0.6,
+    "last_updated": "2026-05-07",
+    "title": "SOURCE: Current Procedural Terminology — Wikipedia",
+    "module": "revenue_cycle",
+    "source_quality": "secondary",
+    "phase": "phase2"
+  },
+  "data/revenue_cycle/rcm-wiki-hipaa.txt": {
+    "doc_source": "third_party",
+    "doc_type": "official",
+    "priority_tier": "should",
+    "source_weight": 0.6,
+    "last_updated": "2026-05-07",
+    "title": "SOURCE: HIPAA — Wikipedia",
+    "module": "revenue_cycle",
+    "source_quality": "secondary",
+    "phase": "phase2"
+  },
+  "data/revenue_cycle/rcm-wiki-icd10-cm.txt": {
+    "doc_source": "third_party",
+    "doc_type": "official",
+    "priority_tier": "should",
+    "source_weight": 0.6,
+    "last_updated": "2026-05-07",
+    "title": "SOURCE: ICD-10-CM — Wikipedia",
+    "module": "revenue_cycle",
+    "source_quality": "secondary",
+    "phase": "phase2"
+  },
+  "data/revenue_cycle/rcm-wiki-icd10.txt": {
+    "doc_source": "third_party",
+    "doc_type": "official",
+    "priority_tier": "should",
+    "source_weight": 0.6,
+    "last_updated": "2026-05-07",
+    "title": "SOURCE: ICD-10 — Wikipedia",
+    "module": "revenue_cycle",
+    "source_quality": "secondary",
+    "phase": "phase2"
+  },
+  "data/revenue_cycle/rcm-wiki-medical-billing.txt": {
+    "doc_source": "third_party",
+    "doc_type": "official",
+    "priority_tier": "should",
+    "source_weight": 0.6,
+    "last_updated": "2026-05-07",
+    "title": "SOURCE: Medical Billing — Wikipedia",
+    "module": "revenue_cycle",
+    "source_quality": "secondary",
+    "phase": "phase2"
+  },
+  "data/revenue_cycle/rcm-wiki-revenue-cycle.txt": {
+    "doc_source": "third_party",
+    "doc_type": "official",
+    "priority_tier": "should",
+    "source_weight": 0.6,
+    "last_updated": "2026-05-07",
+    "title": "SOURCE: Revenue Cycle Management — Wikipedia",
+    "module": "revenue_cycle",
+    "source_quality": "secondary",
+    "phase": "phase2"
+  },
+  "data/revenue_cycle/rcm-wiki-x12-837.txt": {
+    "doc_source": "third_party",
+    "doc_type": "official",
+    "priority_tier": "should",
+    "source_weight": 0.6,
+    "last_updated": "2026-05-07",
+    "title": "SOURCE: X12 EDI Standards (837 claims) — Wikipedia",
+    "module": "revenue_cycle",
+    "source_quality": "secondary",
+    "phase": "phase2"
+  },
+  "data/fhir/fhir-account-resource.md": {
+    "doc_source": "hl7_cerner",
+    "doc_type": "spec",
+    "priority_tier": "must",
+    "source_weight": 0.9,
+    "last_updated": "2026-05-07",
+    "title": "SOURCE: FHIR R4 Account Resource — Cerner Implementation",
+    "module": "fhir",
+    "source_quality": "primary",
+    "phase": "phase2"
+  },
+  "data/fhir/fhir-allergy-intolerance.md": {
+    "doc_source": "hl7_cerner",
+    "doc_type": "spec",
+    "priority_tier": "must",
+    "source_weight": 0.9,
+    "last_updated": "2026-04-16",
+    "title": "SOURCE: FHIR R4 AllergyIntolerance Resource — Cerner Implementation",
+    "module": "fhir"
+  },
+  "data/fhir/fhir-appointment.md": {
+    "doc_source": "hl7_cerner",
+    "doc_type": "spec",
+    "priority_tier": "must",
+    "source_weight": 0.9,
+    "last_updated": "2026-04-16",
+    "title": "SOURCE: FHIR R4 Appointment Resource — Cerner Implementation",
+    "module": "fhir"
+  },
+  "data/fhir/fhir-binary-resource.md": {
+    "doc_source": "hl7_cerner",
+    "doc_type": "spec",
+    "priority_tier": "must",
+    "source_weight": 0.9,
+    "last_updated": "2026-04-16",
+    "title": "SOURCE: FHIR R4 Binary Resource — Cerner Implementation",
+    "module": "fhir"
+  },
+  "data/fhir/fhir-care-plan.md": {
+    "doc_source": "hl7_cerner",
+    "doc_type": "spec",
+    "priority_tier": "must",
+    "source_weight": 0.9,
+    "last_updated": "2026-04-16",
+    "title": "SOURCE: FHIR R4 CarePlan Resource — Cerner Implementation",
+    "module": "fhir"
+  },
+  "data/fhir/fhir-cerner-integration-deep-dive.txt": {
+    "doc_source": "third_party",
+    "doc_type": "community",
+    "priority_tier": "nice",
+    "source_weight": 0.5,
+    "last_updated": "2026-04-18",
+    "title": "Cerner / Oracle Health Integration Guide — Deep Dive",
+    "module": "fhir"
+  },
+  "data/fhir/fhir-charge-item.md": {
+    "doc_source": "hl7_cerner",
+    "doc_type": "spec",
+    "priority_tier": "must",
+    "source_weight": 0.9,
+    "last_updated": "2026-05-07",
+    "title": "SOURCE: FHIR R4 ChargeItem Resource — Cerner Implementation",
+    "module": "fhir",
+    "source_quality": "primary",
+    "phase": "phase2"
+  },
+  "data/fhir/fhir-communication-resource.md": {
+    "doc_source": "third_party",
+    "doc_type": "community",
+    "priority_tier": "nice",
+    "source_weight": 0.5,
+    "last_updated": "2026-04-19",
+    "title": "Communication | R4 API",
+    "module": "fhir"
+  },
+  "data/fhir/fhir-condition-resource.md": {
+    "doc_source": "hl7_cerner",
+    "doc_type": "spec",
+    "priority_tier": "must",
+    "source_weight": 0.9,
+    "last_updated": "2026-04-16",
+    "title": "SOURCE: FHIR R4 Condition Resource — Cerner Implementation",
+    "module": "fhir"
+  },
+  "data/fhir/fhir-coverage-resource.md": {
+    "doc_source": "third_party",
+    "doc_type": "community",
+    "priority_tier": "nice",
+    "source_weight": 0.5,
+    "last_updated": "2026-04-16",
+    "title": "SOURCE: FHIR R4 Coverage Resource — Cerner Implementation",
+    "module": "fhir"
+  },
+  "data/fhir/fhir-developer-program-guide.txt": {
+    "doc_source": "engineering_blog",
+    "doc_type": "blog",
+    "priority_tier": "should",
+    "source_weight": 0.7,
+    "last_updated": "2026-04-19",
+    "title": "Cerner Developer Program and open.cerner.com — FHIR API Developer Guide",
+    "module": "fhir"
+  },
+  "data/fhir/fhir-device-resource.md": {
+    "doc_source": "hl7_cerner",
+    "doc_type": "spec",
+    "priority_tier": "must",
+    "source_weight": 0.9,
+    "last_updated": "2026-05-07",
+    "title": "SOURCE: FHIR R4 Device Resource — Cerner Implementation",
+    "module": "fhir",
+    "source_quality": "primary",
+    "phase": "phase2"
+  },
+  "data/fhir/fhir-diagnostic-report.md": {
+    "doc_source": "third_party",
+    "doc_type": "community",
+    "priority_tier": "nice",
+    "source_weight": 0.5,
+    "last_updated": "2026-04-16",
+    "title": "SOURCE: FHIR R4 DiagnosticReport Resource — Cerner Implementation",
+    "module": "fhir"
+  },
+  "data/fhir/fhir-document-reference.md": {
+    "doc_source": "third_party",
+    "doc_type": "community",
+    "priority_tier": "nice",
+    "source_weight": 0.5,
+    "last_updated": "2026-04-16",
+    "title": "SOURCE: FHIR R4 DocumentReference Resource — Cerner Implementation",
+    "module": "fhir"
+  },
+  "data/fhir/fhir-encounter-resource.md": {
+    "doc_source": "third_party",
+    "doc_type": "community",
+    "priority_tier": "nice",
+    "source_weight": 0.5,
+    "last_updated": "2026-04-16",
+    "title": "SOURCE: FHIR R4 Encounter Resource — Cerner Implementation",
+    "module": "fhir"
+  },
+  "data/fhir/fhir-engineering-blog-posts.txt": {
+    "doc_source": "engineering_blog",
+    "doc_type": "blog",
+    "priority_tier": "should",
+    "source_weight": 0.7,
+    "last_updated": "2026-04-18",
+    "title": "Cerner Engineering Blog — Articles and Topics",
+    "module": "fhir"
+  },
+  "data/fhir/fhir-faqs-common-issues.txt": {
+    "doc_source": "third_party",
+    "doc_type": "community",
+    "priority_tier": "nice",
+    "source_weight": 0.5,
+    "last_updated": "2026-04-18",
+    "title": "FHIR FAQs and Common Issues — Oracle Health Millennium Platform",
+    "module": "fhir"
+  },
+  "data/fhir/fhir-financial-transaction.md": {
+    "doc_source": "hl7_cerner",
+    "doc_type": "spec",
+    "priority_tier": "must",
+    "source_weight": 0.9,
+    "last_updated": "2026-05-07",
+    "title": "SOURCE: FHIR R4 FinancialTransaction Resource — Cerner Implementation",
+    "module": "fhir",
+    "source_quality": "primary",
+    "phase": "phase2"
+  },
+  "data/fhir/fhir-goal-resource.md": {
+    "doc_source": "third_party",
+    "doc_type": "community",
+    "priority_tier": "nice",
+    "source_weight": 0.5,
+    "last_updated": "2026-04-16",
+    "title": "SOURCE: FHIR R4 Goal Resource — Cerner Implementation",
+    "module": "fhir"
+  },
+  "data/fhir/fhir-hl7-appointment.txt": {
+    "doc_source": "third_party",
+    "doc_type": "community",
+    "priority_tier": "nice",
+    "source_weight": 0.5,
+    "last_updated": "2026-04-18",
+    "title": "FHIR v4.0.1 Appointment Resource",
+    "module": "fhir"
+  },
+  "data/fhir/fhir-hl7-fhir-integration.txt": {
+    "doc_source": "third_party",
+    "doc_type": "community",
+    "priority_tier": "nice",
+    "source_weight": 0.5,
+    "last_updated": "2026-04-18",
+    "title": "Oracle Health (Cerner) HL7 FHIR Integration — Deep Dive",
+    "module": "fhir"
+  },
+  "data/fhir/fhir-hl7-medication-request.txt": {
+    "doc_source": "third_party",
+    "doc_type": "community",
+    "priority_tier": "nice",
+    "source_weight": 0.5,
+    "last_updated": "2026-04-18",
+    "title": "FHIR v4.0.1 MedicationRequest Resource",
+    "module": "fhir"
+  },
+  "data/fhir/fhir-hl7-observation.txt": {
+    "doc_source": "third_party",
+    "doc_type": "community",
+    "priority_tier": "nice",
+    "source_weight": 0.5,
+    "last_updated": "2026-04-18",
+    "title": "FHIR v4.0.1 Observation Resource",
+    "module": "fhir"
+  },
+  "data/fhir/fhir-hl7-patient.txt": {
+    "doc_source": "third_party",
+    "doc_type": "community",
+    "priority_tier": "nice",
+    "source_weight": 0.5,
+    "last_updated": "2026-04-18",
+    "title": "FHIR v4.0.1 Patient Resource",
+    "module": "fhir"
+  },
+  "data/fhir/fhir-immunization-resource.md": {
+    "doc_source": "third_party",
+    "doc_type": "community",
+    "priority_tier": "nice",
+    "source_weight": 0.5,
+    "last_updated": "2026-04-16",
+    "title": "SOURCE: FHIR R4 Immunization Resource — Cerner Implementation",
+    "module": "fhir"
+  },
+  "data/fhir/fhir-insurance-plan.md": {
+    "doc_source": "hl7_cerner",
+    "doc_type": "spec",
+    "priority_tier": "must",
+    "source_weight": 0.9,
+    "last_updated": "2026-05-07",
+    "title": "SOURCE: FHIR R4 InsurancePlan Resource — Cerner Implementation",
+    "module": "fhir",
+    "source_quality": "primary",
+    "phase": "phase2"
+  },
+  "data/fhir/fhir-location-resource.md": {
+    "doc_source": "third_party",
+    "doc_type": "community",
+    "priority_tier": "nice",
+    "source_weight": 0.5,
+    "last_updated": "2026-04-16",
+    "title": "SOURCE: FHIR R4 Location Resource — Cerner Implementation",
+    "module": "fhir"
+  },
+  "data/fhir/fhir-medication-administration.md": {
+    "doc_source": "hl7_cerner",
+    "doc_type": "spec",
+    "priority_tier": "must",
+    "source_weight": 0.9,
+    "last_updated": "2026-04-16",
+    "title": "SOURCE: FHIR R4 MedicationAdministration Resource — Cerner Implementation",
+    "module": "fhir"
+  },
+  "data/fhir/fhir-medication-request.md": {
+    "doc_source": "hl7_cerner",
+    "doc_type": "spec",
+    "priority_tier": "must",
+    "source_weight": 0.9,
+    "last_updated": "2026-04-16",
+    "title": "SOURCE: FHIR R4 MedicationRequest Resource — Cerner Implementation",
+    "module": "fhir"
+  },
+  "data/fhir/fhir-observation-resource.md": {
+    "doc_source": "hl7_cerner",
+    "doc_type": "spec",
+    "priority_tier": "must",
+    "source_weight": 0.9,
+    "last_updated": "2026-04-16",
+    "title": "SOURCE: FHIR R4 Observation Resource — Cerner Implementation",
+    "module": "fhir"
+  },
+  "data/fhir/fhir-oracle-api-r4-overview.txt": {
+    "doc_source": "third_party",
+    "doc_type": "community",
+    "priority_tier": "nice",
+    "source_weight": 0.5,
+    "last_updated": "2026-04-18",
+    "title": "FHIR R4 (4.0.1) API Overview — Oracle Health Millennium Platform",
+    "module": "fhir"
+  },
+  "data/fhir/fhir-oracle-developer-program.txt": {
+    "doc_source": "engineering_blog",
+    "doc_type": "blog",
+    "priority_tier": "should",
+    "source_weight": 0.7,
+    "last_updated": "2026-04-18",
+    "title": "Oracle Health (Cerner Millennium) Developer Program",
+    "module": "fhir"
+  },
+  "data/fhir/fhir-organization-resource.md": {
+    "doc_source": "third_party",
+    "doc_type": "community",
+    "priority_tier": "nice",
+    "source_weight": 0.5,
+    "last_updated": "2026-04-16",
+    "title": "SOURCE: FHIR R4 Organization Resource — Cerner Implementation",
+    "module": "fhir"
+  },
+  "data/fhir/fhir-patient-resource.md": {
+    "doc_source": "hl7_cerner",
+    "doc_type": "spec",
+    "priority_tier": "must",
+    "source_weight": 0.9,
+    "last_updated": "2026-04-16",
+    "title": "SOURCE: FHIR R4 Patient Resource — Cerner Implementation",
+    "module": "fhir"
+  },
+  "data/fhir/fhir-person-resource.md": {
+    "doc_source": "hl7_cerner",
+    "doc_type": "spec",
+    "priority_tier": "must",
+    "source_weight": 0.9,
+    "last_updated": "2026-05-07",
+    "title": "SOURCE: FHIR R4 Person Resource — Cerner Implementation",
+    "module": "fhir",
+    "source_quality": "primary",
+    "phase": "phase2"
+  },
+  "data/fhir/fhir-practitioner-resource.md": {
+    "doc_source": "third_party",
+    "doc_type": "community",
+    "priority_tier": "nice",
+    "source_weight": 0.5,
+    "last_updated": "2026-04-16",
+    "title": "SOURCE: FHIR R4 Practitioner Resource — Cerner Implementation",
+    "module": "fhir"
+  },
+  "data/fhir/fhir-procedure-resource.md": {
+    "doc_source": "third_party",
+    "doc_type": "community",
+    "priority_tier": "nice",
+    "source_weight": 0.5,
+    "last_updated": "2026-04-16",
+    "title": "SOURCE: FHIR R4 Procedure Resource — Cerner Implementation",
+    "module": "fhir"
+  },
+  "data/fhir/fhir-questionnaire-response.md": {
+    "doc_source": "hl7_cerner",
+    "doc_type": "spec",
+    "priority_tier": "must",
+    "source_weight": 0.9,
+    "last_updated": "2026-05-07",
+    "title": "SOURCE: FHIR R4 QuestionnaireResponse Resource — Cerner Implementation",
+    "module": "fhir",
+    "source_quality": "primary",
+    "phase": "phase2"
+  },
+  "data/fhir/fhir-r4-overview.md": {
+    "doc_source": "hl7_cerner",
+    "doc_type": "spec",
+    "priority_tier": "must",
+    "source_weight": 0.9,
+    "last_updated": "2026-04-16",
+    "title": "SOURCE: Cerner FHIR R4 Overview",
+    "module": "fhir"
+  },
+  "data/fhir/fhir-related-person.md": {
+    "doc_source": "third_party",
+    "doc_type": "community",
+    "priority_tier": "nice",
+    "source_weight": 0.5,
+    "last_updated": "2026-04-16",
+    "title": "SOURCE: FHIR R4 RelatedPerson Resource — Cerner Implementation",
+    "module": "fhir"
+  },
+  "data/fhir/fhir-service-request.md": {
+    "doc_source": "hl7_cerner",
+    "doc_type": "spec",
+    "priority_tier": "must",
+    "source_weight": 0.9,
+    "last_updated": "2026-05-07",
+    "title": "SOURCE: FHIR R4 ServiceRequest Resource — Cerner Implementation",
+    "module": "fhir",
+    "source_quality": "primary",
+    "phase": "phase2"
+  },
+  "data/fhir/fhir-slot-resource.md": {
+    "doc_source": "third_party",
+    "doc_type": "community",
+    "priority_tier": "nice",
+    "source_weight": 0.5,
+    "last_updated": "2026-04-16",
+    "title": "SOURCE: FHIR R4 Slot Resource — Cerner Implementation",
+    "module": "fhir"
+  },
+  "data/fhir/fhir-smart-app-build-guide.txt": {
+    "doc_source": "ucern",
+    "doc_type": "official",
+    "priority_tier": "must",
+    "source_weight": 1.0,
+    "last_updated": "2026-04-18",
+    "title": "Build and Test SMART on FHIR Applications — Oracle Health",
+    "module": "fhir"
+  },
+  "data/fhir/fhir-smart-app-overview.txt": {
+    "doc_source": "third_party",
+    "doc_type": "community",
+    "priority_tier": "nice",
+    "source_weight": 0.5,
+    "last_updated": "2026-04-18",
+    "title": "SMART Application Overview — Oracle Health Developer's Guide",
+    "module": "fhir"
+  },
+  "data/fhir/fhir-smart-app-provisioning.txt": {
+    "doc_source": "third_party",
+    "doc_type": "community",
+    "priority_tier": "nice",
+    "source_weight": 0.5,
+    "last_updated": "2026-04-18",
+    "title": "SMART Application Provisioning — Oracle Health Millennium Platform",
+    "module": "fhir"
+  },
+  "data/fhir/fhir-smart-on-fhir-spec.txt": {
+    "doc_source": "third_party",
+    "doc_type": "community",
+    "priority_tier": "nice",
+    "source_weight": 0.5,
+    "last_updated": "2026-04-18",
+    "title": "SMART on FHIR — Standards and Specifications",
+    "module": "fhir"
+  },
+  "data/fhir/fhir-smart-tutorial.txt": {
+    "doc_source": "third_party",
+    "doc_type": "community",
+    "priority_tier": "nice",
+    "source_weight": 0.5,
+    "last_updated": "2026-04-18",
+    "title": "Accessing Cerner's FHIR API — SMART on FHIR Tutorial",
+    "module": "fhir"
+  },
+  "data/fhir/fhir-us-core-implementation-guide.txt": {
+    "doc_source": "ucern",
+    "doc_type": "official",
+    "priority_tier": "must",
+    "source_weight": 1.0,
+    "last_updated": "2026-04-18",
+    "title": "US Core Implementation Guide v8.0.1 (STU 8)",
+    "module": "fhir"
+  },
+  "data/clinical/clinical-ahrq-falls-primer.txt": {
+    "doc_source": "third_party",
+    "doc_type": "official",
+    "priority_tier": "must",
+    "source_weight": 0.85,
+    "last_updated": "2026-05-07",
+    "title": "SOURCE: AHRQ PSNet Primer — Falls",
+    "module": "clinical",
+    "source_quality": "primary",
+    "phase": "phase2"
+  },
+  "data/clinical/clinical-ahrq-handoffs-clinical.txt": {
+    "doc_source": "third_party",
+    "doc_type": "official",
+    "priority_tier": "must",
+    "source_weight": 0.85,
+    "last_updated": "2026-05-07",
+    "title": "SOURCE: AHRQ PSNet Primer — Communication Between Clinicians",
+    "module": "clinical",
+    "source_quality": "primary",
+    "phase": "phase2"
+  },
+  "data/clinical/clinical-ahrq-medication-errors.txt": {
+    "doc_source": "third_party",
+    "doc_type": "official",
+    "priority_tier": "must",
+    "source_weight": 0.85,
+    "last_updated": "2026-05-07",
+    "title": "SOURCE: AHRQ PSNet Primer — Medication Errors and ADEs",
+    "module": "clinical",
+    "source_quality": "primary",
+    "phase": "phase2"
+  },
+  "data/clinical/clinical-ahrq-rapid-response.txt": {
+    "doc_source": "third_party",
+    "doc_type": "official",
+    "priority_tier": "must",
+    "source_weight": 0.85,
+    "last_updated": "2026-05-07",
+    "title": "SOURCE: AHRQ PSNet Primer — Rapid Response Systems",
+    "module": "clinical",
+    "source_quality": "primary",
+    "phase": "phase2"
+  },
+  "data/clinical/clinical-ai-scribe-powerchart.txt": {
+    "doc_source": "ucern",
+    "doc_type": "official",
+    "priority_tier": "must",
+    "source_weight": 1.0,
+    "last_updated": "2026-04-16",
+    "title": "SOURCE: Clinical Documentation Workflow — eMAR, CPOE, Note Generation in Cerner",
+    "module": "clinical"
+  },
+  "data/clinical/clinical-ana-nursing-standards.txt": {
+    "doc_source": "third_party",
+    "doc_type": "community",
+    "priority_tier": "nice",
+    "source_weight": 0.5,
+    "last_updated": "2026-04-18",
+    "title": "ANA Nursing Position Statements — Official Policy Positions",
+    "module": "clinical"
+  },
+  "data/clinical/clinical-bcma-barcode-admin-guide.txt": {
+    "doc_source": "ucern",
+    "doc_type": "official",
+    "priority_tier": "must",
+    "source_weight": 1.0,
+    "last_updated": "2026-04-19",
+    "title": "SOURCE: Cerner BCMA Barcode Medication Administration Administrator Guide",
+    "module": "clinical"
+  },
+  "data/clinical/clinical-cdc-hai.txt": {
+    "doc_source": "third_party",
+    "doc_type": "official",
+    "priority_tier": "must",
+    "source_weight": 0.8,
+    "last_updated": "2026-05-07",
+    "title": "SOURCE: CDC — Healthcare-Associated Infections",
+    "module": "clinical",
+    "source_quality": "primary",
+    "phase": "phase2"
+  },
+  "data/clinical/clinical-cdc-immunization.txt": {
+    "doc_source": "third_party",
+    "doc_type": "community",
+    "priority_tier": "nice",
+    "source_weight": 0.5,
+    "last_updated": "2026-04-18",
+    "title": "CDC Immunization Schedules for Healthcare Professionals",
+    "module": "clinical"
+  },
+  "data/clinical/clinical-cms-restraint-cop.txt": {
+    "doc_source": "third_party",
+    "doc_type": "official",
+    "priority_tier": "must",
+    "source_weight": 0.8,
+    "last_updated": "2026-05-07",
+    "title": "SOURCE: CMS — Conditions of Participation: Restraint and Seclusion",
+    "module": "clinical",
+    "source_quality": "primary",
+    "phase": "phase2"
+  },
+  "data/clinical/clinical-discharge-planning-guide.txt": {
+    "doc_source": "ucern",
+    "doc_type": "official",
+    "priority_tier": "must",
+    "source_weight": 1.0,
+    "last_updated": "2026-04-19",
+    "title": "SOURCE: Cerner Discharge Planning Workflow Guide",
+    "module": "clinical"
+  },
+  "data/clinical/clinical-emar-user-guide.txt": {
+    "doc_source": "ucern",
+    "doc_type": "official",
+    "priority_tier": "must",
+    "source_weight": 1.0,
+    "last_updated": "2026-04-19",
+    "title": "SOURCE: Cerner eMAR Electronic Medication Administration Record User Guide",
+    "module": "clinical"
+  },
+  "data/clinical/clinical-firstnet-ed-tracking.txt": {
+    "doc_source": "third_party",
+    "doc_type": "community",
+    "priority_tier": "nice",
+    "source_weight": 0.5,
+    "last_updated": "2026-04-19",
+    "title": "Cerner FirstNet — Emergency Department Tracking and Clinical Workflows",
+    "module": "clinical"
+  },
+  "data/clinical/clinical-implementation-build-guide.txt": {
+    "doc_source": "ucern",
+    "doc_type": "official",
+    "priority_tier": "must",
+    "source_weight": 1.0,
+    "last_updated": "2026-04-16",
+    "title": "SOURCE: Clinical Build Tasks — Powerforms, Powerplans, CareGuides, OFCt Testing",
+    "module": "clinical"
+  },
+  "data/clinical/clinical-ismp-main.txt": {
+    "doc_source": "third_party",
+    "doc_type": "community",
+    "priority_tier": "nice",
+    "source_weight": 0.5,
+    "last_updated": "2026-04-18",
+    "title": "ISMP — Institute for Safe Medication Practices",
+    "module": "clinical"
+  },
+  "data/clinical/clinical-joint-commission-safety.txt": {
+    "doc_source": "third_party",
+    "doc_type": "community",
+    "priority_tier": "nice",
+    "source_weight": 0.5,
+    "last_updated": "2026-04-18",
+    "title": "2025 National Patient Safety Goals (NPSGs) — Hospital Program",
+    "module": "clinical"
+  },
+  "data/clinical/clinical-medication-administration-workflow.txt": {
+    "doc_source": "ucern",
+    "doc_type": "official",
+    "priority_tier": "must",
+    "source_weight": 1.0,
+    "last_updated": "2026-04-19",
+    "title": "SOURCE: Cerner Medication Administration Workflow Guide",
+    "module": "clinical"
+  },
+  "data/clinical/clinical-nursing-assessment-documentation.txt": {
+    "doc_source": "third_party",
+    "doc_type": "community",
+    "priority_tier": "nice",
+    "source_weight": 0.5,
+    "last_updated": "2026-04-19",
+    "title": "SOURCE: Cerner Nursing Assessment Documentation Guide",
+    "module": "clinical"
+  },
+  "data/clinical/clinical-patient-safety-event-reporting.txt": {
+    "doc_source": "third_party",
+    "doc_type": "community",
+    "priority_tier": "nice",
+    "source_weight": 0.5,
+    "last_updated": "2026-04-19",
+    "title": "SOURCE: Cerner Patient Safety Event Reporting Guide",
+    "module": "clinical"
+  },
+  "data/clinical/clinical-pharmnet-pharmacy-workflow.txt": {
+    "doc_source": "ucern",
+    "doc_type": "official",
+    "priority_tier": "must",
+    "source_weight": 1.0,
+    "last_updated": "2026-04-19",
+    "title": "SOURCE: Cerner PharmNet Pharmacy Workflow Guide",
+    "module": "clinical"
+  },
+  "data/clinical/clinical-powerforms-admin-guide.txt": {
+    "doc_source": "ucern",
+    "doc_type": "official",
+    "priority_tier": "must",
+    "source_weight": 1.0,
+    "last_updated": "2026-04-19",
+    "title": "SOURCE: Cerner PowerForms Administrator Guide",
+    "module": "clinical"
+  },
+  "data/clinical/clinical-powerplans-admin-guide.txt": {
+    "doc_source": "ucern",
+    "doc_type": "official",
+    "priority_tier": "must",
+    "source_weight": 1.0,
+    "last_updated": "2026-04-19",
+    "title": "SOURCE: Cerner PowerPlans (Order Sets) Administrator Guide",
+    "module": "clinical"
+  },
+  "data/clinical/clinical-scheduling-configuration-guide.txt": {
+    "doc_source": "ucern",
+    "doc_type": "official",
+    "priority_tier": "must",
+    "source_weight": 1.0,
+    "last_updated": "2026-04-19",
+    "title": "SOURCE: Cerner Scheduling Configuration Guide",
+    "module": "clinical"
+  },
+  "data/clinical/clinical-surginet-perioperative.txt": {
+    "doc_source": "third_party",
+    "doc_type": "community",
+    "priority_tier": "nice",
+    "source_weight": 0.5,
+    "last_updated": "2026-04-19",
+    "title": "Cerner SurgiNet — Surgical and Perioperative Workflow Management",
+    "module": "clinical"
+  },
+  "data/clinical/clinical-wiki-bcma.txt": {
+    "doc_source": "third_party",
+    "doc_type": "official",
+    "priority_tier": "should",
+    "source_weight": 0.6,
+    "last_updated": "2026-05-07",
+    "title": "SOURCE: Bar Code Medication Administration — Wikipedia",
+    "module": "clinical",
+    "source_quality": "secondary",
+    "phase": "phase2"
+  },
+  "data/clinical/clinical-wiki-clinical-decision-support.txt": {
+    "doc_source": "third_party",
+    "doc_type": "official",
+    "priority_tier": "should",
+    "source_weight": 0.6,
+    "last_updated": "2026-05-07",
+    "title": "SOURCE: Patient Safety — Wikipedia",
+    "module": "clinical",
+    "source_quality": "secondary",
+    "phase": "phase2"
+  },
+  "data/clinical/clinical-wiki-emar.txt": {
+    "doc_source": "third_party",
+    "doc_type": "official",
+    "priority_tier": "should",
+    "source_weight": 0.6,
+    "last_updated": "2026-05-07",
+    "title": "SOURCE: Medication Administration Record — Wikipedia",
+    "module": "clinical",
+    "source_quality": "secondary",
+    "phase": "phase2"
+  },
+  "data/clinical/clinical-wiki-fall-prevention.txt": {
+    "doc_source": "third_party",
+    "doc_type": "official",
+    "priority_tier": "should",
+    "source_weight": 0.6,
+    "last_updated": "2026-05-07",
+    "title": "SOURCE: Fall Prevention — Wikipedia",
+    "module": "clinical",
+    "source_quality": "secondary",
+    "phase": "phase2"
+  },
+  "data/clinical/clinical-wiki-medrec.txt": {
+    "doc_source": "third_party",
+    "doc_type": "official",
+    "priority_tier": "should",
+    "source_weight": 0.6,
+    "last_updated": "2026-05-07",
+    "title": "SOURCE: Medication Reconciliation — Wikipedia",
+    "module": "clinical",
+    "source_quality": "secondary",
+    "phase": "phase2"
+  },
+  "data/clinical/clinical-wiki-pain-assessment.txt": {
+    "doc_source": "third_party",
+    "doc_type": "official",
+    "priority_tier": "should",
+    "source_weight": 0.6,
+    "last_updated": "2026-05-07",
+    "title": "SOURCE: Pain Scale — Wikipedia",
+    "module": "clinical",
+    "source_quality": "secondary",
+    "phase": "phase2"
+  },
+  "data/clinical/clinical-wiki-restraint-medical.txt": {
+    "doc_source": "third_party",
+    "doc_type": "official",
+    "priority_tier": "should",
+    "source_weight": 0.6,
+    "last_updated": "2026-05-07",
+    "title": "SOURCE: Physical Restraint — Wikipedia (medical use)",
+    "module": "clinical",
+    "source_quality": "secondary",
+    "phase": "phase2"
+  },
+  "data/clinical/clinical-wiki-sepsis-treatment.txt": {
+    "doc_source": "third_party",
+    "doc_type": "official",
+    "priority_tier": "should",
+    "source_weight": 0.6,
+    "last_updated": "2026-05-07",
+    "title": "SOURCE: Sepsis — Wikipedia (clinical recognition and bundle)",
+    "module": "clinical",
+    "source_quality": "secondary",
+    "phase": "phase2"
+  }
+}

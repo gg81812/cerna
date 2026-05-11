@@ -1,0 +1,174 @@
+# SOURCE: Cerner PowerChart Touch Mobile Application Guide
+# URL: https://wiki.cerner.com/display/public/1101PowerChartAmbulatory/PowerChart+Touch+Mobile
+# MODULE: PowerChart
+# RETRIEVED: 2026-04-01
+# ---
+
+# Cerner PowerChart Touch Mobile Application Guide
+
+## What is PowerChart Touch?
+
+PowerChart Touch is Cerner's native mobile application for iOS (iPhone and iPad) and Android, providing physicians and advanced practice providers with on-the-go access to patient information, clinical results, and limited order entry capabilities. It is designed for quick reference and lightweight clinical tasks during rounds, between appointments, and when away from a workstation.
+
+PowerChart Touch connects securely to the organization's Cerner Millennium backend via the Millennium Mobile API layer (SMART on FHIR or the proprietary Millennium mobile API, depending on version).
+
+## System Requirements
+
+- **iOS**: iOS 15 or later (current recommendation); iPhone 12 or newer, iPad Air 3rd gen or newer
+- **Android**: Android 11 or later; most modern flagship devices supported
+- **Network**: Requires network connectivity to the organization's Cerner environment; VPN required for off-campus access
+- **Authentication**: Active Directory credentials; MFA (multi-factor authentication) required per most organizational policies
+
+## Getting Started
+
+### Installation
+
+1. Download "PowerChart Touch" from the Apple App Store (iOS) or Google Play Store (Android).
+2. On first launch, enter your organization's Cerner server address (provided by your IT department).
+3. Log in with your AD credentials.
+4. If MFA is enabled, complete the MFA challenge.
+5. The app connects to your Millennium environment and loads your patient list.
+
+### Initial Configuration
+
+On first login:
+- Accept the confidentiality acknowledgment.
+- The app syncs your patient list and preferences from Millennium.
+- Notifications can be enabled (InBasket alerts, critical result notifications).
+
+## Core Features
+
+### Patient List
+
+The mobile patient list mirrors the provider's desktop patient list in PowerChart:
+- Shows your attributed patients (Attending, Primary, or custom list depending on configuration)
+- Each patient row: name, age, location/bed, admitting diagnosis, LOS
+- Pull down to refresh the list
+- Search/filter by patient name
+
+Tap any patient to open the patient chart.
+
+### Patient Chart
+
+Key chart sections available in PowerChart Touch:
+
+**Summary / Overview**
+- Quick snapshot: diagnosis, attending, location, LOS
+- Current vital signs (most recent)
+- Active problem list
+- Code status and isolation alerts
+
+**Medications**
+- View active inpatient medications
+- See administration status for the last 24 hours
+- View medication history
+
+**Results**
+- Lab results (list and flowsheet views)
+- Critical value flags prominently displayed
+- Radiology report text
+- Vital signs trend
+
+**Documentation**
+- View existing signed clinical notes
+- Create new notes (limited — see Order/Documentation section below)
+
+**Orders**
+- View active orders
+- Place new orders (limited order types depending on version and configuration)
+
+### Viewing Lab Results on Mobile
+
+1. Open the patient chart > Results.
+2. Scroll through the results list.
+3. Tap a result to see full panel details.
+4. Tap "Trend" to view a result over time in a mini graph.
+5. Critical values are highlighted in red with a banner alert.
+
+### InBasket on Mobile
+
+The mobile InBasket shows:
+- Pending lab results requiring acknowledgment
+- Critical result notifications
+- Patient messages from MyChart
+- Urgent messages from clinical staff
+
+Acknowledge results and respond to messages from within the app. Cosigning verbal orders may require the desktop application for full review capability.
+
+### Order Entry via PowerChart Touch
+
+Mobile order entry is available with appropriate security configuration:
+- Medication orders: search, select, and enter dose/frequency details; submit for pharmacy verification
+- Lab orders: order common panels and collections
+- Radiology orders: place with indication and urgency
+- PRN medications: approve PRN as-needed requests from nursing
+
+Not all order types may be available on mobile — complex orderable items (order sets, PowerPlans) typically require the desktop application.
+
+### Notifications and Alerts
+
+With push notifications enabled:
+- Critical lab values generate an immediate push notification with patient name and result value.
+- New patient messages from MyChart generate a notification.
+- Pending InBasket items that exceed configured age thresholds generate reminders.
+
+Notification settings configured per user in the app settings and in Millennium Mobile Administration.
+
+## Security and HIPAA Compliance
+
+### Device Security Requirements
+
+Organizations typically enforce via MDM (Mobile Device Management):
+- Screen lock (PIN, biometric) required
+- Remote wipe capability (if device is lost/stolen, IT can wipe the Cerner app data)
+- Encryption at rest (standard on modern iOS and Android)
+- No PHI stored locally — all data fetched in real time, never cached to device storage
+- App automatically locks after a configurable idle timeout (typically 2–5 minutes)
+
+### Secure Messaging
+
+PowerChart Touch integrates with Cerner Secure Messaging (or Tiger Connect / Vocera if configured) for provider-to-provider clinical communication:
+- HIPAA-compliant text messaging
+- Message delivery confirmation
+- Auto-expiration of messages containing PHI
+- Group messaging for care team coordination
+
+Do NOT use standard SMS/text messaging for clinical communication — it is not HIPAA-compliant.
+
+### Photo and Camera Restrictions
+
+PowerChart Touch may be configured to:
+- Block screenshots when PHI is displayed
+- Disallow camera usage within the app (to prevent accidental PHI capture)
+- MDM policies enforce these restrictions at the OS level
+
+## Troubleshooting
+
+### Cannot Log In
+- Verify your AD username and password are correct (try logging in to another Cerner application from a workstation).
+- Ensure VPN is connected if accessing off-campus.
+- Check that MFA is set up correctly with your current phone number.
+- Contact the help desk — your account may need to be provisioned for mobile access.
+
+### Patient List Not Loading / Outdated
+- Pull down to refresh the patient list.
+- Log out and log back in.
+- If the issue persists, the mobile API server may be experiencing issues — check with IT.
+
+### Results Not Appearing
+- Confirm the result has been finalized in the lab or RIS (preliminary results may not appear in mobile).
+- Check the filter settings in the Results view — a date range filter may be excluding the result.
+
+### App Running Slowly
+- Close and reopen the app.
+- Ensure you are connected to Wi-Fi rather than cellular data for better performance.
+- Check if the Millennium server is under high load (other users may experience the same slowness).
+
+## Best Practices
+
+1. Enable MFA and use biometric authentication — never use a simple PIN for a device with access to PHI.
+2. Lock your device immediately when stepping away — even for a few seconds.
+3. Report lost or stolen devices to IT immediately so the app data can be remotely wiped.
+4. Use PowerChart Touch for quick lookups and time-sensitive tasks — for complex order entry or documentation, use the desktop application.
+5. Use the secure messaging function for all clinical communication — never text PHI over standard SMS.
+6. Keep the app updated — security patches are distributed via app updates.

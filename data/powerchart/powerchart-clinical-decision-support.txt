@@ -1,0 +1,154 @@
+# SOURCE: Cerner PowerChart Clinical Decision Support Guide
+# URL: https://wiki.cerner.com/display/public/1101PowerChartAmbulatory/Clinical+Decision+Support
+# MODULE: PowerChart
+# RETRIEVED: 2026-04-01
+# ---
+
+# Cerner PowerChart Clinical Decision Support (CDS) Guide
+
+## What is Clinical Decision Support?
+
+Clinical Decision Support (CDS) in Cerner PowerChart refers to a set of automated tools that provide clinicians with relevant, actionable information and alerts at the point of care to improve decision-making. CDS encompasses: order entry alerts (drug interactions, allergy checks, dose range warnings), best practice advisories (BPAs), clinical reminders, care gap notifications, and quality measure dashboards.
+
+Cerner's CDS framework integrates with CPOE, documentation workflows, and the clinical data repository to fire rules based on real-time patient data.
+
+## CDS Alert Categories
+
+### Order Entry CDS
+
+Fires during CPOE order entry:
+
+**Allergy Alerts**
+- Triggered when an ordered medication matches a documented patient allergy or has a cross-reactive compound match.
+- Alert levels: Hard stop (order cannot proceed without override) or Soft stop (override allowed with reason).
+- Hard stops are typically reserved for anaphylaxis-documented allergies to the same drug class.
+
+**Drug-Drug Interaction (DDI) Alerts**
+- Triggered when the new medication interacts with an existing active medication.
+- Severity tiers: Contraindicated (highest), Severe, Moderate, Mild.
+- Contraindicated alerts should function as hard stops.
+- Moderate and Mild alerts are typically soft stops — provider must acknowledge.
+- Alert source: First DataBank (FDB) or Multum drug interaction database, integrated with Millennium.
+
+**Drug-Disease Interaction Alerts**
+- Triggered when an ordered medication has a known risk in the context of a patient's documented diagnosis.
+- Example: NSAID ordered for a patient with documented CKD Stage 3.
+
+**Dose Range Alerts**
+- Triggered when the ordered dose falls outside the expected therapeutic range.
+- Weight-based dose range checks for pediatrics and oncology.
+- Uses patient weight from the most recent vital signs.
+
+**Duplicate Order Alerts**
+- Triggered when a similar order is already active.
+- Prevents double-ordering of the same medication or lab test.
+
+**Formulary Alerts**
+- Triggered when a non-formulary medication is ordered.
+- Suggests therapeutic substitution alternatives.
+
+### Best Practice Advisories (BPAs)
+
+BPAs are proactive, evidence-based reminders that appear in the provider's workflow — typically during chart review or order entry — when patient data triggers a clinical recommendation.
+
+Examples:
+- "Patient has not received an influenza vaccine this season — order now?"
+- "Patient meets sepsis criteria (2 SIRS criteria + suspected infection) — consider Sepsis Bundle initiation."
+- "Patient with diabetes — last HbA1c > 3 months ago — order now?"
+- "Patient on warfarin — INR not checked in 7 days — order INR."
+- "Patient on opioids for >7 days — consider naloxone co-prescription per hospital policy."
+
+BPAs are configured by clinical informatics with input from quality, pharmacy, and medical staff. Each BPA has:
+- Trigger condition (logic evaluated against patient data)
+- Recommendation text
+- One-click action (order, document, or navigate to relevant screen)
+- Override reason options
+- Acknowledgment requirement
+
+### Clinical Reminders
+
+Similar to BPAs but focused on periodic preventive care tasks and chronic disease management gaps:
+- Colorectal cancer screening due
+- Mammogram overdue
+- Blood pressure out of target range (chronic hypertension management)
+- BMI screening and counseling
+- Annual depression screening
+
+Clinical reminders appear in the provider's InBasket or on the patient summary MPage.
+
+### Inpatient-Specific CDS
+
+**Deterioration Index / Early Warning Scores**
+- Cerner's Patient Deterioration Detection (PDD) or the Modified Early Warning Score (MEWS) calculates risk of clinical deterioration based on vital signs, lab values, and nursing assessments.
+- Alerts escalate through nursing, charge nurse, and rapid response team tiers based on score thresholds.
+- Alerts appear in the nursing Workflow MPage and can generate InBasket messages to the attending provider.
+
+**Sepsis Alert**
+- Automatically identifies patients meeting Sepsis-3 criteria (SOFA score or clinical suspicion + organ dysfunction).
+- Generates a BPA to the ordering provider with a one-click sepsis bundle initiation.
+- Tracks bundle compliance for quality reporting.
+
+**VTE Prophylaxis Reminder**
+- Identifies inpatients without active DVT prophylaxis (LMWH or sequential compression device orders).
+- Generates a reminder to order VTE prophylaxis or document clinical contraindication.
+
+**Antibiotic Stewardship Alerts**
+- Identifies patients on broad-spectrum antibiotics for > 72 hours without culture results.
+- Prompts de-escalation consideration.
+- Alerts patients with positive culture results — de-escalate to targeted therapy.
+
+## Configuring CDS Alerts
+
+### Accessing CDS Administration
+
+1. Log in as an administrator with Clinical Decision Support access.
+2. Navigate to PowerChart Administration > CDS > Rule Administration.
+3. The CDS console shows all active and inactive rules.
+
+### Configuring BPA Logic
+
+Each BPA rule is built with:
+- **Trigger Event** — what action fires the rule evaluation (order entry, chart open, documentation sign).
+- **Patient Criteria** — CCL-like expressions evaluating patient data (age, diagnoses, lab values, active orders, vitals).
+- **Recommendation Text** — the message displayed to the provider.
+- **Action Buttons** — one-click actions (Add to Orders, Document, Dismiss, Defer).
+- **Override Reasons** — code value list of acceptable reasons to dismiss the alert without acting.
+- **Firing Frequency** — how often the same alert re-fires for the same patient (once per encounter, daily, on each login, etc.).
+
+### Alert Fatigue Management
+
+Alert fatigue — where clinicians override alerts reflexively without reading them — is a major patient safety risk. Mitigation strategies:
+
+1. **Reduce low-value alerts** — quarterly review of override rates; deactivate alerts with >95% override rates without action.
+2. **Tier alert severity** — not every alert needs to be a hard stop. Use hard stops sparingly (life-threatening situations only).
+3. **Contextualize alerts** — show the patient-specific data driving the alert (e.g., "Renal function: CrCl 18 mL/min — dose adjustment recommended").
+4. **Simplify override reasons** — long lists of reasons make overrides feel laborious; keep to 3–5 meaningful choices.
+5. **Measure, monitor, and optimize** — track alert fire rates, override rates, and workflow impact monthly.
+
+### CDS Alert Performance Metrics
+
+Key metrics tracked via Discern Analytics:
+- Alert fire rate per 100 orders
+- Alert acceptance rate (% acted upon vs. overridden)
+- Override rate by alert type and by provider
+- Time to acknowledge alerts
+- Impact on order workflow (orders placed after alert vs. cancelled)
+
+## Drug Database Integration
+
+Cerner integrates with clinical drug knowledge databases (First DataBank or Multum) that are updated quarterly:
+- Drug-drug interaction tables
+- Allergy cross-reactivity tables
+- Dose range reference data
+- Drug-disease contraindication data
+
+After each database update, clinical pharmacy reviews changes for impact and adjusts alert configurations as needed.
+
+## Best Practices
+
+1. Calibrate alert thresholds carefully — a well-calibrated CDS system fires actionable alerts at a rate of <5 per encounter.
+2. Review alert override rates monthly — alerts overridden >90% of the time are causing fatigue without delivering value.
+3. Involve frontline clinicians in BPA design — alerts built without provider input have low adoption and high override rates.
+4. Document the evidence base for every BPA — alerts without cited evidence lose credibility quickly.
+5. Test CDS rules in CERT before activating in Production — logic errors in live CDS rules cause patient safety events.
+6. Periodically sunset outdated alerts — guidelines change; old CDS rules can become inaccurate or harmful over time.

@@ -1,0 +1,132 @@
+# Cerner Developer Program and open.cerner.com — FHIR API Developer Guide
+# MODULE: FHIR
+# SYNTHETIC KNOWLEDGE BASE — Cerna RAG System
+
+## What Is the Cerner Developer Program?
+
+The Cerner Developer Program (now the Oracle Health Developer Program) is Cerner's open API initiative that gives external developers, healthcare ISVs, and app builders access to Cerner FHIR R4 APIs, SMART on FHIR app launch infrastructure, and developer tools. The program is centered around the **open.cerner.com** portal, which serves as the official documentation hub for all Cerner open APIs.
+
+The Developer Program enables:
+- Third-party application integration with Cerner-hosted patient data via FHIR R4
+- SMART on FHIR app launch from within the PowerChart EHR context
+- OAuth 2.0 authorization flows for both EHR-launch and standalone-launch apps
+- Access to Cerner's published FHIR conformance statements and capability statements
+
+## open.cerner.com — The Developer Portal
+
+**open.cerner.com** is the primary resource for developers building against Cerner FHIR APIs. It provides:
+
+- **FHIR API Reference**: complete documentation of all supported FHIR R4 resources and their Cerner-specific implementation details
+- **SMART on FHIR Authorization Guide**: step-by-step OAuth 2.0 authorization flow documentation
+- **Sandbox Environment**: a Millennium sandbox tenant where developers can test without PHI
+- **Developer Registration**: account creation and application registration for API access credentials
+- **Conformance Statements**: Cerner's FHIR Capability Statements listing all supported interactions
+
+## Developer Program Registration Process
+
+### Step 1: Create a Developer Account
+1. Visit **open.cerner.com**
+2. Click **Register** and create a developer account with your organization email
+3. Provide your name, organization, and intended use case
+4. Verify email and activate account
+
+### Step 2: Register Your Application
+1. Log into the developer portal dashboard
+2. Navigate to **My Applications > New Application**
+3. Provide application details:
+   - **Application Name**: display name shown to users during authorization
+   - **Redirect URIs**: OAuth callback URL(s) your app handles
+   - **Launch Type**: EHR Launch, Standalone Launch, or both
+   - **Application Type**: Confidential client (server-side) or Public client (mobile/SPA)
+   - **FHIR Scope Requirements**: list all FHIR scopes your app needs (see Scopes section below)
+4. Submit for review — Cerner reviews applications for compliance and security
+5. Receive **client_id** (and **client_secret** for confidential clients) after approval
+
+### Step 3: Configure with Your Cerner Instance
+For production deployment:
+1. Submit your approved application to your Cerner client success team
+2. The Cerner implementation team registers your app in the provider's Millennium instance
+3. PowerChart administrators configure the app launch point in **Application Administration**
+4. For SMART EHR launch apps: configure the launch URL and context parameters
+
+## Sandbox Environment
+
+The Cerner Developer Sandbox provides a full Millennium tenant with synthetic patient data for testing FHIR API integrations:
+
+- **Sandbox FHIR Base URL**: `https://fhir-open.cerner.com/r4/ec2458f2-1e24-41c8-b71b-0e701af7583d`
+- **Authorization Base URL**: `https://authorization.cerner.com`
+- **Sandbox Patient IDs**: test patients available in developer portal documentation
+- **No PHI**: sandbox contains only synthetic, generated patient data
+- Rate limits apply in sandbox (lower than production): check portal for current limits
+
+### Sandbox vs. Production
+| Feature | Sandbox | Production |
+|---------|---------|-----------|
+| PHI | No (synthetic data only) | Yes (real patient data) |
+| OAuth required | Optional (open FHIR endpoint available for GET) | Required |
+| Rate limits | Permissive (testing use) | Enforced (per agreement) |
+| Capability | Subset of resources | Full production resource set |
+
+## FHIR API Access via Developer Program
+
+### Open (Unauthenticated) Endpoint
+For development and testing, Cerner provides an open FHIR endpoint that does not require OAuth:
+- Base URL pattern: `https://fhir-open.cerner.com/r4/{tenant_id}/`
+- Supports GET operations on most resources without authentication
+- **Not for production use** — no PHI access, synthetic data only
+
+### Authenticated (OAuth) Endpoint
+For production and PHI-containing data:
+- Base URL pattern: `https://fhir-ehr.cerner.com/r4/{tenant_id}/`
+- All requests require Bearer token in Authorization header
+- Scopes must match what was approved in app registration
+
+## OAuth 2.0 Authorization in Developer Program Context
+
+### Getting Authorization Credentials
+After registering your app, you receive:
+- **client_id**: your application's unique identifier
+- **client_secret**: (confidential clients only) secret for server-side token exchange
+
+### Authorization Endpoints
+- **Authorization endpoint**: `https://authorization.cerner.com/tenants/{tenant_id}/protocols/oauth2/profiles/smart-v1/personas/provider/authorize`
+- **Token endpoint**: `https://authorization.cerner.com/tenants/{tenant_id}/protocols/oauth2/profiles/smart-v1/token`
+
+### Scopes Required for Common Operations
+| Operation | Required Scope |
+|-----------|---------------|
+| Read patient demographics | `patient/Patient.read` or `user/Patient.read` |
+| Read lab results | `patient/Observation.read` |
+| Read medication orders | `patient/MedicationRequest.read` |
+| Read appointments | `user/Appointment.read` |
+| Read all data (patient launch) | `launch/patient` + specific resource scopes |
+| Read all data (provider launch) | `launch` + specific resource scopes |
+| Offline access (refresh tokens) | `offline_access` |
+
+## Cerner Open Source — GitHub
+
+Cerner maintains open-source projects on GitHub at **github.com/cerner**:
+- **fhir-client-cerner-extensions**: JavaScript library for FHIR client integration with Cerner-specific extensions
+- **bunsen**: FHIR data processing utilities for Apache Spark (analytics use cases)
+- **cql-exec-fhir**: CQL (Clinical Quality Language) execution against FHIR resources
+- **millennium-ext-cda**: CDA (Clinical Document Architecture) generation utilities
+- The open source CCL project is also hosted here, providing CCL utilities that relate to FHIR resource mapping
+
+open.cerner.com references these GitHub repositories and provides documentation for using them alongside the FHIR APIs.
+
+## Developer Program Support Resources
+
+- **Developer Community Forum**: forum at open.cerner.com for API questions and announcements
+- **GitHub Issues**: report API bugs or documentation gaps on the Cerner GitHub repos
+- **Code Samples**: open.cerner.com provides sample code for common FHIR operations in JavaScript, Python, and Java
+- **Change Log**: API versioning changes and deprecation notices published at open.cerner.com/changelog
+- **Status Page**: API availability status and incident history at status.cerner.com
+
+## Important Policies for Developer Program Participants
+
+1. **Terms of Service**: all registered applications must comply with Cerner Developer Program Terms of Service
+2. **Data Use Agreement**: PHI-accessible production apps require an executed BAA (Business Associate Agreement) with the healthcare organization, not with Cerner
+3. **HIPAA Compliance**: developers are responsible for HIPAA-compliant handling of any PHI retrieved via FHIR APIs
+4. **App Review**: Cerner reviews applications for security (OAuth redirect URI validation, scope appropriateness)
+5. **Rate Limits**: production API rate limits are enforced per client_id; excessive requests result in 429 (Too Many Requests) responses
+6. **Scope Minimization**: only request the FHIR scopes your app actually needs — minimize PHI exposure per privacy principles

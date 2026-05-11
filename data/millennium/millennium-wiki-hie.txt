@@ -1,0 +1,297 @@
+# SOURCE: Health Information Exchange — Wikipedia
+# URL: https://en.wikipedia.org/wiki/Health_information_exchange
+# MODULE: Millennium Platform
+# RETRIEVED: 2026-05-07
+# ---
+
+Mobilization of health care information electronically across organizations
+
+Health Information Exchange
+ (
+HIE
+) is the electronic exchange of 
+health care
+ information across organizations within a region, community, or hospital system. Participants in this data exchange are collectively called Health Information Networks (HINs). HIE may also refer to the Health Information Organization (HIO) facilitating the exchange. HIE aims to facilitate access to and retrieval of clinical data, particularly to support 
+public health
+ authorities in 
+analyzing the health of the population
+.
+
+In the 
+United States
+, the 
+Office of the National Coordinator for Health Information Technology
+ supports statewide health information exchange through financial grants. These grants were legislated into the 
+HITECH components
+ of the 
+American Recovery and Reinvestment Act of 2009
+.
+ 
+Regional Health Information Organizations
+ (
+RHIOs
+) are typically geographically defined entities that develop and manage contractual agreements, facilitate electronic information exchange, and establish and maintain HIE standards.
+ Federal and state regulations regarding HIEs and 
+health information technology
+ (HIT) are still being defined. Federal regulations and incentive programs such as "Meaningful Use", formally known as the EHR Incentive Program,
+ are changing. Most HIEs and RHIOs remain tied to federal, state, or independent grant funding to remain operational. Some exceptions exist, such as the Indiana HIE.
+
+Storage and gathering of information
+
+Data architecture models
+
+In a centralized model of HIE, there is a central (or master) 
+database
+ that holds a copy of every patient’s records. Information is uploaded to a single database from which any provider in the HIE can access and download. In a federated model of HIE, there is no master database; records are exchanged electronically among providers when needed.
+
+Patient consent
+
+Exchanges in the US must operate with patient consent to comply with not only the 
+Health Insurance Portability and Accountability Act (HIPAA)
+ but also a variety of state and federal laws and regulations. This was clarified by the 
+Office of Civil Rights
+ in the January 2013 
+Final Omnibus Rule Update
+ to HIPAA.
+
+Explicit consent and implicit consent are two methods for gaining patient consent. With explicit consent, or 
+opt-in
+, a patient is not automatically enrolled into the HIE by default and generally must submit a written request to join the exchange. In implicit patient consent, or 
+opt-out
+, patients give implicit consent to join an HIE when they agree to use the services of a healthcare provider who participates in an HIE and sign the provider's Notice Of Privacy Practices. Patients can request to opt out of the HIE, generally with a written form.
+
+Notable European health information exchanges
+
+Netherlands
+
+Frysian Health Information Exchange
+
+Connecting the 
+Medical Centre Leeuwarden
+ and the Academic Center in Groningen with community hospitals such as Nij Smellinghe Hospital in 
+Drachten
+,
+ the Friesland Regional Cardiology Network reduces patient hospital stays by one or two days.
+ Once records are uploaded to the cardiology network, they remain available for consultation at any time, allowing healthcare providers to review a patient's previous episodes of care.
+
+North of the Netherlands – XDS Network
+
+Hospitals in the Dutch provinces 
+Groningen
+, 
+Friesland
+, and 
+Drenthe
+ have created a (diagnostic) image exchange network to phase out CD/DVD-based exchanges using an HIE (XDS) platform. St. Gerrit, the local HIE organization, has gradually expanded the network since 2014, spanning 10 hospitals to date.
+
+Others
+
+ZorgNetOost
+
+Radboud University Medical Center
+
+Image Exchange South East-Brabant – 
+Maxima Medical Center
+, Elkerliek Hospital, 
+Catharina Hospital
+ Eindhoven, St. Anna Hospital
+
+Regional Exchange Network West-Brabant
+
+Image Exchange Network Breda – Amphia Hospital, Dr. Bernard Verbeeten Institute, Elisabeth-TweeSteden Hospital
+
+Rotterdam Exchange Network RijnmondNet
+
+Zorgring Noord-Holland Noord
+
+United Kingdom
+
+Sussex and Surrey
+
+Bristol
+
+Great Ormond Street 
+Hospital
+
+Ireland
+
+NIMIS
+
+Finland
+
+Helsinki-Uusimaa Health District
+
+Notable United States Health Information Exchanges
+
+Individual exchanges
+
+This section 
+needs additional citations for 
+verification
+.
+ Please help 
+improve this article
+ by 
+adding citations to reliable sources
+ in this section. Unsourced material may be challenged and removed.
+ 
+(
+September 2016
+)
+ (
+Learn how and when to remove this message
+)
+
+1. Chesapeake Regional Information System for our Patients (CRISP)
+
+CRISP
+ serves as the state-designated HIE for 
+Maryland
+ and the 
+District of Columbia
+. It is a nonprofit organization that connects healthcare providers and patients to enhance care coordination and patient outcomes. CRISP integrates health information from hospitals, laboratories, pharmacies, and other healthcare entities, enabling providers to access real-time patient data. It focuses on ensuring that providers have access to the information they need to make informed clinical decisions.
+
+Key Features:
+
+Real-time 
+health data
+ sharing.
+
+Analytics services to support public health initiatives.
+
+Broad provider participation, including small practices and large hospital systems.
+
+2. Health Info Net
+
+Health Info Net operates as the state-designated HIE in 
+Maine
+, offering a centralized repository of health data for its users. It connects hospitals, clinics, and other healthcare providers, creating a comprehensive view of patients' medical histories. By reducing redundant testing and improving clinical decision-making, Health Info Net aims to enhance the quality and efficiency of healthcare delivery.
+
+Key Features:
+
+Advanced analytics to support population health management.
+
+A strong emphasis on privacy and security.
+
+A patient-centric approach that empowers individuals with access to their data.
+
+3. Arizona Health Information Exchange
+
+Arizona's Health Information Exchange, led by the state's Medicaid agency, provides a web-based platform to facilitate the exchange of health information among providers. This system helps bridge the gap between healthcare organizations and ensures that patient medical records are accessible regardless of the provider they visit. The 
+Arizona
+ HIE has been instrumental in improving care coordination and reducing costs associated with fragmented care.
+
+Key Features:
+
+Statewide data sharing among healthcare providers.
+
+Emphasis on Medicaid integration to improve care for under-served populations.
+
+Tools to enhance care quality and reduce redundancies.
+
+4. Indiana Health Information Exchange (IHIE)
+
+The Indiana Health Information Exchange is a nonprofit organization recognized as one of the largest and most comprehensive HIEs in the United States. IHIE connects hospitals, physician practices, laboratories, and other healthcare entities across Indiana, facilitating a seamless flow of information. Its services are designed to provide healthcare providers with complete and timely data to support better decision-making and patient care.
+
+Key Features:
+
+Robust data analytics for quality improvement initiatives.
+
+Supports clinical research and healthcare innovation.
+
+Collaboration with public health agencies to enhance statewide healthcare efforts.
+
+5. Manifest MedEx
+
+Manifest MedEx is a nonprofit HIE based in 
+California
+, focusing on real-time health information exchange to improve care coordination and patient outcomes. It collaborates with hospitals, health plans, and healthcare providers to deliver a comprehensive view of patient data. Manifest MedEx emphasizes the importance of actionable insights to drive better healthcare outcomes.
+
+Key Features:
+
+Real-time alerts for critical health events.
+
+Integration of claims data with clinical records for a holistic view of patient health.
+
+Strong partnerships with health plans and accountable care organizations.
+
+6. Colorado Regional Health Information Organization (CORHIO)
+
+The Colorado Regional Health Information Organization serves as the state-designated HIE for Colorado. CORHIO connects healthcare providers, including hospitals, clinics, long-term care facilities, and laboratories, to ensure seamless access to patient data. Its mission is to improve the quality, safety, and cost-effectiveness of healthcare delivery through technology and collaboration.
+
+Key Features:
+
+A comprehensive network of healthcare providers across Colorado.
+
+Focus on public health reporting and disease tracking.
+
+Support for rural healthcare providers through specialized programs.
+
+See also
+
+DICOM
+ (Digital Imaging and Communications in Medicine)
+
+LOINC
+ (Logical Observation Identifiers Names and Codes)
+
+Health informatics
+
+Health Level 7
+ (HL7)
+
+Integrating the Healthcare Enterprise
+ (IHE)
+
+Medical imaging
+
+Regional Health Information Organization
+ (RHIO)
+
+References
+
+Sources
+
+McGowan, Julie J.; Overhage, J. Marc; Barnes, Mike; McDonald, Clement J. (April 2004). 
+"Indianapolis I3: The third generation Integrated Advanced Information Management Systems"
+. 
+Journal of the Medical Library Association
+. 
+92
+ (2): 
+179–
+87. 
+PMC
+ 
+385298
+. 
+PMID
+ 
+15098046
+.
+
+Marchibroda, Janet; Bordenick, Jennifer Covich (29 August 2005). 
+Emerging Trends and Issues in Health Information Exchange: Selected findings from eHealth Initiative Foundation's Second Annual Survey of State, Regional and Community-based Health Information Exchange Initiatives and Organizations
+ 
+(PDF)
+ (Report). Washington, DC: eHealth Initiative. 
+OCLC
+ 
+61482941
+.
+
+Hagland, Mark (2009). 
+Transformative Quality: The Emerging Revolution in Health Care Performance
+. New York: CRC Press. 
+ISBN
+ 
+978-1-4200-8492-4
+. 
+OCLC
+ 
+502919031
+.
+
+Retrieved from "
+https://en.wikipedia.org/w/index.php?title=Health_information_exchange&oldid=1311137279
+"

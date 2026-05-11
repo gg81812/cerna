@@ -1,0 +1,115 @@
+# SOURCE: Revenue Cycle Management — Wikipedia
+# URL: https://en.wikipedia.org/wiki/Revenue_cycle_management
+# MODULE: Revenue Cycle
+# RETRIEVED: 2026-05-07
+# ---
+
+Process used to track revenue from patients
+
+This article 
+provides insufficient context for those unfamiliar with the subject
+.
+ Please help 
+improve the article
+ by 
+providing more context for the reader
+.
+ 
+(
+September 2015
+)
+ (
+Learn how and when to remove this message
+)
+
+Revenue cycle management (RCM)
+ is the process used by 
+healthcare systems
+ in the United States and other countries to track the revenue from patients, from their initial appointment or encounter with the healthcare system to final payment of a 
+balance
+. It is a normal part of 
+health administration
+ in some countries. The revenue cycle can be defined as "all administrative and clinical functions that contribute to the capture, management, and collection of patient service revenue."
+
+Overview
+
+The revenue cycle begins when a patient schedules an appointment and it ends when the healthcare provider has accepted all payments. Errors in revenue cycle management can lead to the healthcare provider receiving delayed payments or no payment at all. Because the revenue cycle process is complex and subject to regulatory oversight, healthcare providers may chose to turn over their revenue cycle management to companies that handle this process with specialized agents and proprietary technologies.
+
+The revenue cycle typically includes several stages such as patient registration, insurance verification, charge capture, medical coding, claim submission, payment posting, and accounts receivable follow-up.
+ Each of these stages involves both administrative and clinical inputs, and inefficiencies at any stage can affect the overall financial performance of a healthcare organization.
+
+Proper revenue cycle management is intended to ensure that billing errors are reduced so that reimbursements from the insurance companies are maximized. Revenue cycle management teams are responsible for maintaining compliance with coding regulations, such as the 
+ICD-10
+ code update in the United States. Using the right coding for services rendered by a practice is intended to ensure that insurance claims can be processed and that the practitioner is compensated for all of their services rendered.
+
+In addition to coding compliance, revenue cycle management also involves adherence to healthcare regulations such as the 
+Health Insurance Portability and Accountability Act
+ (HIPAA), which governs patient data privacy and security in the United States.
+ Compliance requirements can influence documentation standards, billing workflows, and data handling practices within the revenue cycle.
+
+Denial management is the process of addressing denied 
+insurance claims
+ and is an integral part of revenue cycle management (RCM). Denial management for 
+healthcare in the United States
+ is considered to be the most unwieldy area within patient financial services.
+ Denial management increases create 
+payer friction
+.
+
+Common causes of claim denials include incomplete patient information, coding errors, lack of medical necessity, and missed filing deadlines.
+ Effective denial management strategies often involve root cause analysis, staff training, and process improvements to prevent recurring issues.
+
+In 2024, the global revenue cycle management market was estimated at $344 billion.
+
+Revenue cycle management is often considered a segment of the greater healthcare IT industry which includes 
+HIS
+, 
+RIS
+, 
+EHR
+, 
+PACS
+, 
+CPOE
+, 
+VNA
+, 
+mHealth
+, 
+healthcare analytics
+, 
+telehealth
+, 
+supply chain management
+, 
+CRM
+, fraud management, and claims management.
+
+Increasingly, revenue cycle management systems incorporate automation and data analytics to improve efficiency, reduce manual errors, and enhance financial forecasting.
+ Technologies such as artificial intelligence and machine learning are being explored to optimize claim processing, detect anomalies, and predict denial risks in advance.
+
+References
+
+This 
+insurance
+-related article is a 
+stub
+. You can help Wikipedia by 
+adding missing information
+.
+v
+t
+e
+
+This business-related article is a 
+stub
+. You can help Wikipedia by 
+adding missing information
+.
+v
+t
+e
+
+Retrieved from "
+https://en.wikipedia.org/w/index.php?title=Revenue_cycle_management&oldid=1349663331
+"

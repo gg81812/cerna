@@ -1,0 +1,577 @@
+# SOURCE: Fall Prevention — Wikipedia
+# URL: https://en.wikipedia.org/wiki/Fall_prevention
+# MODULE: Clinical Workflows
+# RETRIEVED: 2026-05-07
+# ---
+
+Interventions to prevent injury in domestic settings
+
+Fall prevention
+ includes any action taken to help reduce the number of accidental 
+falls
+ suffered by susceptible individuals, such as the 
+elderly
+ and people with 
+neurological
+ (
+Parkinson's
+, 
+Multiple sclerosis
+, 
+stroke
+ survivors, 
+Guillain-Barre
+, 
+traumatic brain injury
+, incomplete 
+spinal cord injury
+) or 
+orthopedic
+ (lower limb or spinal column fractures or 
+arthritis
+, post-surgery, 
+joint replacement
+, lower limb 
+amputation
+, 
+soft tissue
+ injuries) indications.
+
+Adults aged 65 years and older have a 30% chance of falling each year, making fall-related injuries the leading cause of accident-related death for this demographic.
+
+Impact of falls
+
+Falls and fall-related injuries are among the most common but serious medical problems experienced by 
+older adults
+. Nearly one-third of older people fall each year, half of which fall more than once per year.
+ Over 3 million Americans over the age of 65 visited hospital emergency departments in 2015 due to fall-related injuries, with over 1.6 million being admitted.
+ Because of decreased 
+bone density
+ due to 
+osteoporosis
+, mobility, and reflexes, falls often result in 
+hip fractures
+ and other fractures, 
+head injuries
+, and 
+death
+ in older adults. 
+Accidental injuries
+ are the fifth most common cause of death in older adults.
+ 75% of hip fracture patients do not recover completely and show signs of overall health deterioration.
+
+Predicting falls
+
+Insufficient evidence exists that any fall risk 
+screening
+ instrument is adequate for predicting falls.
+ While the strongest predictors of fall risk tend to include a history of falls during the past year, 
+gait
+, and 
+balance
+ abnormalities,
+ existing 
+models
+ show a strong 
+bias
+ and therefore mostly fail to differentiate between adults that are at low risk and high risk of falling.
+
+Physical activity
+
+One of the most important things for fall prevention in elderly populations is to stay physically fit. Physical activity is important for older adults because it plays a major role in limiting the loss of muscle mass and strength, while also stimulating postural control.
+ There are some exercise types that have a higher rate of effectiveness for prevention of falls than others. Postural training is one of the main key exercises to prevent falls.
+[
+citation needed
+]
+ It focuses on improving balance and stability. 
+Pilates
+ is a type of training shown to improve the postural system.
+
+It is important to combine muscle strengthening exercises and balance training together to ensure reduced risks of falls.
+ An older adult should be focusing more on strengthening their legs, hip, and core muscles. Strengthening these muscles will provide them with more stability. These exercises may minimize or reduce physical 
+frailty
+.
+
+After the age of 50, adults experience a decrease in muscle mass (
+sarcopenia
+) by approximately 2% every year.
+ 
+Resistance training
+ can slow down the rate of loss in muscle mass and strength. It has been recommended that older adults participate in resistance training two to three times a week to weaken the effects of sarcopenia.
+ 
+Resistance training
+ also has a positive impact on older adults and can cause a major increase in strength and muscle size.
+ Having a resistance training regimen that includes challenging balance workouts for three or more hours per week results in a lesser chance of falling.
+ Resistance training has been shown to be beneficial beyond fall prevention, as it also helps improve functional mobility and 
+activities of daily living
+ such as walking endurance, gait speed, and stair climbing.
+
+Resistance exercise two or three times a week with ankle weights or elastic bands (Otago exercise) can rebuild lost muscle mass, improve balance and strength, and reduce falls in adults of all ages.
+
+Specialized facilities and programs like seniors' parks can support to keep the elderly in shape and increase their resistance to falling. These facilities contain specialized equipment and training stations where elderly people can exercise. The parks usually have an extended amount of space and different stages reserved for different body exercises.
+
+Multicomponent exercise with both 
+aerobic
+ and 
+anaerobic
+ components can provide positive outcomes together with specific balance integrations.
+
+Another type of exercise that can be beneficial in decreasing fall risk, specifically in older women, is pilates. Pilates can effectively improve balance which in turn decreases the risk of falls.
+[
+citation needed
+]
+ Pilates also leads to an increase in mobility as well which contributes to a lower fall risk.
+[
+citation needed
+]
+ Due to pilates showing positive effects on balance, leg strength, and mental well-being, this allows older adults to be more physically and mentally strong. These factors can allow for elderly people to be more confident to decrease their fall risk.
+
+Other forms of training, such as 
+aerobic
+, 
+anaerobic
+, and 
+proprioceptive
+ exercises can also be used to increase balance to lower the risk of falls in the elderly population.
+
+Adherence
+
+Adherence
+ is one of the challenges of a successful fall prevention exercise program. Average adherence in group-based fall prevention exercise programs is around 66%, mostly due to the highly repetitive nature of the programs and the extremely long duration required for noticeable benefits to accrue.
+ Adherence to physical therapy can be even lower.
+ When adherence is below 70%, effectiveness of fall prevention physical exercise programs can drop to less than 10%.
+
+Environmental modification
+
+Grab rails on a longer-distance 
+commuter train
+ catering for mainly seated passengers
+
+A staircase with metal handrails
+
+Front-wheeled walker.
+
+Grab bar
+ mounted in a bathroom
+The home environment can present many hazards. Common places for injurious falls include the bathtub and stairs. Changes to the home environment are aimed at reducing hazards and helping support a person in daily activities; they include minimizing clutter, installing 
+grab bars
+ in the bathroom, and installing non-slip 
+decals
+ to slippery surfaces.
+
+Environmental modifications, like improving lighting, removing tripping hazards, and repairing uneven surfaces, further contribute to fall prevention. Addressing these hazards within everyday settings helps make interventions practical and accessible, empowering older adults to actively engage in improving their stability and reducing fall risks.
+
+Stairs can be improved by installing 
+handrails
+ on both sides, improving lighting, and adding colour contrast between steps. Improvement in lighting and 
+luminance
+ levels can aid elderly people in assessing and negotiating hazards. 
+Occupational therapists
+ can help clients improve fall prevention behaviours.
+ In addition, they can instruct clients and their family members on factors that contribute to falls, and implement environmental modifications and strategies to decrease the risk of falls.
+ There is currently insufficient scientific evidence to ensure the effectiveness of modification of the home environment to reduce injuries.
+ Evidence suggests that pre-discharge home assessments are associated with a reduced risk of falling.
+
+Safety technology
+
+Important improvements to prevent falls include 
+handrails
+ and grab bars, which should be easy to grip or grasp and should be near any stairs or change in floor level. Floors should always be flat and level, with no exposed corners or edges. Patterned floors can be dangerous if they create misleading or distorted images of the floor surface, and should be avoided.
+
+There are special handles and closed handgrips available in 
+bathrooms
+ and lavatories to help users bend down or over. For example, extra support for users when moving include 
+walking sticks
+, 
+crutches
+, and support frames, such as a 
+walker
+. Flexible handles such as 
+hanging straps
+ can also be useful supports.
+
+Medication management
+
+Certain medications can increase fall risk factors for people. The aim of medical management is to identify factors that can contribute to falls and fracture risk such as 
+osteoporosis
+, 
+polypharmacy
+, 
+balance
+ and 
+gait
+ problems, loss of 
+vision
+ and a history of falls.
+
+The 
+Beers Criteria
+ is a list of medications that are potentially inappropriate for use in the elderly and some of them increase the risk of falls.
+
+Healthcare
+
+In a clinical environment, fall prevention strategies include the use of specific tests for gait and balance assessments, multifactorial interventions, medication review, physical exercises, vision and footwear intervention, physiotherapy referral, environment modification, 
+risk stratification
+, management of 
+osteoporosis
+ and 
+fracture
+ risk, and 
+cardiovascular
+ interventions.
+
+Challenges for falls prevention include such as transportation barriers, gaps in continuity of care, and the need for sustained support for frail individuals.
+[
+citation needed
+]
+ Long-term, sustainable fall-prevention programs benefit from partnerships between healthcare providers, caregivers, and community resources, helping to maintain independence and enhance quality of life for older adults. These efforts not only improve patient outcomes but also reduce the broader strain on healthcare systems, highlighting the societal value of comprehensive, community-based fall-prevention interventions.
+
+Questions around effectiveness of current approaches (physical exercise and multifactorial interventions) have been found in multiple settings, including 
+long-term care facilities
+ and hospitals.
+ Physical exercise programs seem to have limited effectiveness
+ (approximately 25%). Even 
+multifactorial
+ interventions,
+ which include extensive physical 
+exercise
+, 
+medication
+ adjustment, and environmental modification only lower fall risk by 31% after 12 months,
+ and by 21% after 24 months.
+
+Occupational and physical therapy
+
+In older adults, physical training and perturbation therapy
+[
+clarification needed
+]
+ is directed to improving balance recovery responses and preventing falls.
+ Gait-related changes in the elderly provide a greater chance of stability during walking due to slower speed and greater base of support, but they also increase the chance of slipping or tripping and falling.
+ Appropriate joint moment generation is required to create sufficient push-off for balance recovery.
+[
+clarification needed
+]
+ Age-related changes in muscles, tendons, and neural structures may contribute to slower reactive responses. Interventions involving resistance training along with perturbation training may prove to be beneficial in improving muscle strength and balance recovery.
+
+Stroke exercises help patients regain mobility and strength in their bodies, and must be done regularly to regain muscle tone that helps prevent falls.
+
+In hospitals
+
+In hospitals, falls are the most common safety incident affecting the elderly.
+[
+citation needed
+]
+ They represent a common concern for hospital staff and can cause a variety of injuries from minor to major and induce anxiety and a fear of falling. Educating patients and staff about falls can reduce their incidence. Interventions that address multiple factors can have a positive impact on hospital fall rates. These multi-factorial interventions can include improved nurse handover procedures, addressing the reaction time to call buttons, exercise therapies, 
+hip protectors
+ and safe footwear among others. Chair alarms, bed alarms, or wearable sensors do not seem to contribute to the prevention of falls in hospitals.
+
+In England, suggestions for preventing falls in acute hospitals include clarifying what roles and responsibilities staff members have in prevention, adopting a multidisciplinary approach, reducing the bureaucratic burden affecting risk assessment and monitoring, and providing patients with personally tailored information about the risks and prevention of falls.
+
+In emergency settings, Physical therapist and occupational therapist interventions reduce the chances of being readmitted into hospitals and shorten the overall length of stay. About 16% eligible geriatric patients receive these high- value evaluation during their acute visits after a fall which improves their quality of life.
+
+Other measures
+
+Other preventative measures with positive effects include strength and balance training, home 
+risk assessment
+,
+ the withdrawal of 
+psychotropic
+ medication, 
+cardiac pacing
+ for those with 
+carotid sinus hypersensitivity
+, and 
+tai chi
+.
+[
+citation needed
+]
+ The introduction of semi-immersive 
+virtual reality
+ 
+simulation
+ during 
+treadmill
+ 
+training
+ might help the elderly to improve balance and reduce the risk of falls.
+
+Assistive technology
+ can also help in prevention, although it is mostly reactive in case of a fall.
+
+Motor-cognitive training can also be beneficial for healthy aging and fall prevention.
+
+Risk factors of falls
+
+Older adults
+
+Adults over the age of 65 are more prone to falls than younger, healthy adults.
+ Most 
+falls in older adults
+ are due to:
+
+Living a 
+sedentary lifestyle
+ long term that increases loss of muscle function.
+
+Gait deviations
+ – These are the main changes that occur in the gait patterns of older adults, which may contribute to the incidence of falls. Older adults may experience a 10–20% reduction in gait velocity and reduction in stride length, an increase in stance width and double support phase, or a bent posture.
+ Studies show that a wider stride does not necessarily increase stability, and may instead increase the likelihood of experiencing falls.
+
+Limitations in mobility – Loss of mobility increases the risk of falls in situations which, under normal circumstances, would pose a low risk of falling (such as walking up/down stairs).
+
+Reduced muscle strength, especially in the lower body, which leads to difficulties standing up.
+
+Poor reaction time – Aging is associated with the gradual slowing of an individual's reaction time.
+
+Accidents
+/environmental factors – Falls may occur due to dangerous or unstable surfaces, such as wet surfaces, ice, stairs, or rugs; or inappropriate footwear. Reliable 
+floor slip resistance testing
+ can help identify and remediate slippery floors that can cause preventable accidents.
+
+Balance disorders
+ – 
+vertigo
+, 
+syncope
+, unsteadiness, 
+ataxias
+
+Visual, sensory, motor, and cognitive impairment
+
+Medications and alcohol consumption – Dizziness, drowsiness and confusion can occur as side effects of some medications. Alcohol consumption causes a delay in reflexes and diminishes balance and fine motor control via its inhibitory effects on nerve pathways in the 
+cerebellum
+.
+
+Acute and chronic infections
+
+Dehydration
+
+Stroke
+
+Individuals who have had a 
+stroke
+ have higher fall rates. Approximately 30% fall at least once a year and 15% fall twice or more.
+ Risk factors for falls in stroke survivors are:
+
+Gait deviations – Disturbance of gait is a common problem post-stroke and a common contributor of falls, predicting a continual functional decline. Velocity, cadence, stride time, stride length, and temporal symmetry index are reduced and result in significant gait deterioration.
+ Reduced propulsion at push-off, decreased leg flexion during the swing phase, reduced stability during the stance phase, and reduced automaticity of walking occur.
+
+Reduced 
+muscle tone
+ and weakness
+
+Side effects of drugs
+
+Hypoglycemia
+
+Hypotension
+
+Communication disorders
+
+Hemianopia
+
+Visuospatial 
+agnosia
+
+Parkinson's disease
+
+Most people with 
+Parkinson's disease
+ (PD) fall and many experience recurrent falls.
+ A study reported that over 50% of persons with PD fell recurrently.
+ Direct and indirect causes of falls in patients with PD include:
+
+Gait deviations – Decreased gait velocity and stride length due to 
+hypokinetic
+ movement, decreased cadence due to 
+bradykinetic
+ movements. Affected individuals also exhibit flat foot strike.
+
+Sudden falls
+
+Freezing and 
+festination
+ episodes
+
+Postural instability
+
+Intensified 
+dyskinesia
+
+Autonomic system disorders – 
+orthostatic hypotension
+, neurocardiogenic 
+syncope
+, 
+postural orthostatic tachycardia syndrome
+
+Neurological and sensory disturbances – muscle weakness of lower limbs, deep sensibility impairment, 
+epileptic seizure
+, cognitive impairment, 
+visual impairment
+, balance impairment
+
+Cardiovascular disease
+
+Drugs
+
+Multiple sclerosis
+
+There is a high prevalence of falls among persons with 
+multiple sclerosis
+ (MS), with approximately 50% reporting a fall within the past six months.
+ About 30% of those individuals report falling multiple times.
+[
+citation needed
+]
+
+Gait deviations – Gait variability is elevated in individuals with MS.
+ Stride length, cadence, and velocity decrease, while stance duration and cycle duration increase.
+
+Foot drop
+
+Ataxia
+ – vestibular ataxia results in loss of balance. Symptoms are exacerbated when the eyes are closed and the base of support is reduced.
+
+Reduced 
+proprioception
+
+Improper or reduced use of assistive devices
+
+Vision – blurred vision, double vision, loss of peripheral vision
+
+Cognitive changes – Approximately 50% of affected individuals experience difficulty with their cognition over the course of the disease, which affects planning, organizing, problem-solving, and the ability to accurately perceive the environment.
+[
+citation needed
+]
+ When these problems interfere with walking, it may result in a fall.
+
+Neurological medications – causes fatigue,
+ weakness, dizziness
+
+Dementia
+
+Studies suggest that men with dementia are twice as likely to fall as women.
+ Common causes of falls in 
+dementia
+ include:
+
+Gait deviations – Slower walking speed, reduced cadence, and step length, increased postural flexion, increased double support time
+
+Postural instability – Gait changes and impaired balance. People with balance deficits are at more risk of falling than those with a normal gait and intact balance.
+
+Lack of physical exercise
+
+Visual impairment - Blurry vision, low vision, and loss of peripheral vision. Eyesight cannot be fixed or corrected by glasses.
+
+Fatigue
+
+Medications – 
+psychotropic drugs
+ have effects on balance, reaction time and other sensorimotor functions, 
+orthostatic hypotension
+, and 
+extrapyramidal symptoms
+.
+
+Fear of falling
+
+Basophobia is a term used in many circumstances to describe the 
+fear of falling
+ in either normal or special situations. It refers to uncomfortable sensations that may be experienced by older people. These sensations can include lower-body weakness or loss of balance, which can induce a frightening sensation of falling that can lead to serious and potentially fatal injuries.
+[
+self-published source?
+]
+
+Fear of falling
+ has become a serious and common concern among older adults and impedes on one's participation in daily activities. Negative consequences can result to impaired mobility, loss of independence, and a decreased quality of life. The state of an individual's 
+quality of life
+ is important when regarding both positive and negative elements that may prohibit them from living life to the fullest. In some situations, the recurrent thought about falling has also been shown to lead to death within the elderly community.
+[
+citation needed
+]
+ In a study done
+[
+specify
+]
+, experiences of falling were significantly associated with the fear of falling. The results showed that those who experienced falls within the previous month or previous year related their fall through recurrent thoughts of falling.
+ This may lead to low self-confidence even when participating in nonhazardous activates. Rates of fear of falling in older adult communities range from 21.0% to 85.0% among those who have a history of falls and 33.0% to 46.0% among those who do not have a history of falling.
+ Basophobia and its related activity avoidance among the elderly may lead to a cycle of falls and functional impairment. It is important to be aware of this when working with the older population and recommending preventive strategies. Many strategies include the participation in community and home-based exercise programs, 
+cognitive behavioral therapy
+, yoga, meditation, and practicing good 
+sleep hygiene
+.
+ Restriction of these activities could lead to muscle weakness, postural instability, deconditioning and a higher prevalence of falls.
+[
+citation needed
+]
+
+Healthy young individuals
+
+Accidents are the most common cause of falls involving healthy adults, which may be the result of tripping on stairs, improper footwear, dark surroundings, slippery surfaces, uneven ground, or lack of exercise.
+[
+citation needed
+]
+ Studies suggest that women are more prone to falling than men in all age groups.
+ The most common injuries among younger patients occur in the hands, wrists, knees, and ankles.
+
+See also
+
+Morse Fall Scale
+
+Falling (accident)
+
+Falls in older adults
+
+Fall Prevention Center of Excellence
+
+Light ergonomics
+
+Lighting for the elderly
+
+Safety engineering
+
+Safety equipment
+
+Home modifications
+
+Home automation for elderly and disabled people
+
+Assisted living
+
+Assistive technology
+
+References
+
+Further reading
+
+Lord SR, Sherrington C, Menz HB, Close JC (March 2007). 
+Falls in Older People: Risk Factors and Strategies for Prevention
+. Cambridge University Press. 
+ISBN
+ 
+978-0-521-68099-8
+.
+
+External links
+
+Fall prevention
+ 
+NHS Choices
+, 6 March 2025
+
+Fall prevention for older adults
+ 
+US Centers for Disease Control and Prevention
+, 9 May 2024
+
+About Falls in the Workplace
+ US Centers for Disease Control and Prevention, 
+National Institute for Occupational Safety and Health
+, 23 January 2024
+
+Retrieved from "
+https://en.wikipedia.org/w/index.php?title=Fall_prevention&oldid=1346724779
+"

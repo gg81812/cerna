@@ -1,0 +1,6 @@
+{"id": "hs-nurse-013", "total_ms": 9081, "confidence": "error", "response": "ERROR: 'CernaResponse' object has no attribute 'response'", "prompt_type": "generic"}
+{"id": "hs-nurse-015", "total_ms": 7436, "confidence": "error", "response": "ERROR: 'CernaResponse' object has no attribute 'response'", "prompt_type": "generic"}
+{"id": "hs-physician-001", "total_ms": 2770, "confidence": "error", "response": "ERROR: 'CernaResponse' object has no attribute 'response'", "prompt_type": "generic"}
+{"id": "hs-physician-002", "total_ms": 3814, "confidence": "error", "response": "ERROR: 'CernaResponse' object has no attribute 'response'", "prompt_type": "generic"}
+{"id": "hs-clerk-001", "total_ms": 1078, "confidence": "error", "response": "ERROR: 'CernaResponse' object has no attribute 'response'", "prompt_type": "generic"}
+{"id": "hs-it-005", "total_ms": 3070, "confidence": "error", "response": "ERROR: 'CernaResponse' object has no attribute 'response'", "prompt_type": "generic"}

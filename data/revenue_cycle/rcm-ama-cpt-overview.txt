@@ -1,0 +1,176 @@
+# SOURCE: AMA — CPT Overview and Code Approval Process
+# URL: https://www.ama-assn.org/practice-management/cpt/cpt-overview-and-code-approval
+# MODULE: Revenue Cycle
+# RETRIEVED: 2026-05-07
+# ---
+
+Practice Management
+
+ CPT®
+
+CPT® code set overview
+
+Updated
+
+Jan 23, 2026
+
+|
+
+6 Min Read
+
+Member Benefits
+
+Save
+
+Print
+
+Share
+
+ Copy link
+ 
+
+ Share via Email
+ 
+
+ Share to Facebook
+ 
+
+ Share to Twitter
+ 
+
+ Share to Bluesky
+ 
+
+ Share to LinkedIn
+ 
+
+ Share to Doximity
+ 
+
+Contents
+
+What is a CPT® code?
+Types of CPT codes
+How are CPT codes created & maintained?
+CPT codes evolve with medicine
+Developer resources
+CPT code applications & criteria
+
+What is a CPT® code?
+The Current Procedural Terminology (CPT®) code set is a listing of terms and five-digit codes that primarily describe medical services and procedures performed by physicians and other qualified health care professionals. As the code set has evolved, the codes also now describe algorithm or AI-enabled services, and services provided by clinical staff and other care team providers. 
+
+ 
+ 
+ 
+ Sign up for CPT® News
+ 
+
+ 
+
+Get the latest news about CPT® codes and content emailed directly to your inbox each month from the AMA. All subscriptions are free!
+
+Subscribe Now
+
+As a uniform language for reporting physician-patient interactions, the CPT code set is well-adopted by physician practices, health systems and payers across the United States. It is used across the country to report procedures, tests and evaluation and management (E/M) services under public and private health insurance programs. The codes enable interoperability, and are vital to defining, tracking, coordinating and communicating the delivery of care. CPT codes also play a foundational role in supporting 
+value-based care
+ and future-focused payment models.
+From preventive medicine to digitally enabled care and advanced AI-enabled services, the CPT code set reflects both established care and the latest advancements in medicine. It offers physicians and payers the means to report and track new health care technologies, and provides reliable data that drives standardized measurement, analysis and benchmarking to enable the delivery of high-quality care.
+The development and management of the CPT code set relies on a rigorous, transparent and open 
+process
+ led by the independent CPT Editorial Panel. Trusted by the health care community for more than 55 years, this AMA-convened process ensures clinically valid codes are issued, updated and maintained on a regular basis to accurately reflect current clinical practice and innovation in medicine.
+Types of CPT codes
+Designated by the U.S. Department of Health and Human Services under the Health Insurance Portability and Accountability Act (HIPAA) as a national coding set for physician and other health care professional services and procedures, the CPT code set accurately encompasses the full range of health care services.
+All CPT codes are five-digits and can be either numeric or alphanumeric, depending on the category. CPT code descriptors are clinically focused and utilize common standards so that a diverse set of users can have a common understanding across the clinical health care paradigm.
+There are various types of CPT codes:
+Category I:
+ These codes have descriptors that correspond to a procedure or service. Codes range from 00100–99499 and are generally ordered into sub-categories based on procedure/service type and anatomy.
+Category II:
+ These alphanumeric tracking codes are supplemental codes used for performance measurement. These codes are intended to facilitate data collection on the quality of care rendered by coding certain services and test results that support nationally established performance measures and have an evidence base supporting quality patient care.
+Category III:
+ These are temporary alphanumeric codes for new and developing technology, procedures and services. The use of these codes allows physicians and other qualified health care professionals, insurers, health services researchers and health policy experts to identify emerging technology, services, procedures, and service paradigms for clinical efficacy, utilization and outcomes.
+Proprietary Laboratory Analyses (PLA) codes:
+ These codes describe proprietary clinical laboratory analyses and can be either provided by a single (“solesource”) laboratory or licensed or marketed to multiple providing laboratories that are cleared or approved by the Food and Drug Administration (FDA)). This category includes but is not limited to Advanced Diagnostic Laboratory Tests (ADLTs) and Clinical Diagnostic Laboratory Tests (CDLTs), as defined under the Protecting Access to Medicare Act of 2014 (PAMA). 
+How are CPT codes created & maintained?
+For more than 55 years, the CPT code set has been the primary medical language used to describe and communicate the delivery of medical services and procedures across health care, enabling seamless processing and advanced analytics for that care. The CPT code set is 
+constantly updated
+ by the CPT Editorial Panel with insight from clinical and industry experts to reflect current clinical practice and the latest innovations to help improve the delivery of care.
+The CPT Editorial Panel is an independent group of clinical expert volunteers appointed by the AMA Board of Trustees and is responsible for maintaining and updating the CPT code set. Their role is to ensure that code changes undergo evidence-based review and meet specific criteria.
+The CPT Editorial Panel is supported by CPT Advisors, groups of physicians nominated by the national medical specialty societies represented in the AMA House of Delegates and the AMA Health Care Professionals Advisory Committee (HCPAC). As clinical experts in their fields, the primary role of CPT Advisors is to advise the CPT Editorial Panel on procedure coding and appropriate nomenclature by proposing revision to the code set, working with industry stakeholders as they consider additions and changes to the CPT code set, and in educating their membership on the use and benefits of CPT codes.
+The CPT Editorial Panel meets three times a year to review the applications for either new codes or revisions to existing codes. Anyone who wishes to 
+participate
+ can register to attend a Panel meeting or submit an application for a new or updated CPT code.
+CPT codes evolve with medicine
+As medicine evolves with clinical innovations such as genomic testing and digital medicine, physicians, innovators and any other stakeholders working within the health care space, the CPT code set stands primed and ready to evolve with 
+input
+ from stakeholders across the health care landscape. 
+If you have questions on how to engage and get involved with the CPT Editorial Process, please contact Chad Whitney at 
+[email protected]
+.
+Developer resources
+Technology developers will need to understand how and when CPT codes are updated as they are creating new products, services and systems that use CPT content. To learn how to build and test innovations with CPT codes before those innovations are launched into the market, visit the 
+CPT Developer Program
+ webpage.
+CPT code applications & criteria
+Review the criteria for CPT Category I, Category II, Category III and PLA codes, access applications via the CPT Smart App and read frequently asked questions.
+Code change instructions
+CPT code applications
+FAQ: CPT applications
+Criteria for CPT Category I and Category III codes
+Criteria for CPT Category II codes
+CPT PLA code resources
+Category II application
+Sample format for required CPT clinical vignettes
+
+  
+ 
+
+CPT® Codes
+ 
+
+Catalog of Topics
+
+ FEATURED STORIES
+ 
+
+ Why better enforcement of the No Surprises Act is needed now
+ 
+
+ May 1, 2026
+ 
+
+|
+
+ 6 Min Read
+ 
+
+ What’s behind the persistent gender gap in physician burnout
+ 
+
+ Apr 30, 2026
+ 
+
+|
+
+ 6 Min Read
+ 
+
+ Is your physician colleague at risk for suicide? Signs to look for
+ 
+
+ Apr 29, 2026
+ 
+
+|
+
+ 5 Min Read
+ 
+
+ What doctors wish patients knew about Lyme disease
+ 
+
+ May 1, 2026
+ 
+
+|
+
+ 15 Min Read

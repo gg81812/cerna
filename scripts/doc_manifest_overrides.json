@@ -1,0 +1,464 @@
+{
+  "_comment": "Hand-curated manifest patches for files the filename classifier mis-tags. Applied AFTER auto-classification by tag_documents.py. Phase 2 additions live here.",
+  "data/fhir/fhir-service-request.md": {
+    "doc_source": "hl7_cerner",
+    "doc_type": "spec",
+    "priority_tier": "must",
+    "source_weight": 0.9,
+    "source_quality": "primary",
+    "phase": "phase2"
+  },
+  "data/fhir/fhir-person-resource.md": {
+    "doc_source": "hl7_cerner",
+    "doc_type": "spec",
+    "priority_tier": "must",
+    "source_weight": 0.9,
+    "source_quality": "primary",
+    "phase": "phase2"
+  },
+  "data/fhir/fhir-device-resource.md": {
+    "doc_source": "hl7_cerner",
+    "doc_type": "spec",
+    "priority_tier": "must",
+    "source_weight": 0.9,
+    "source_quality": "primary",
+    "phase": "phase2"
+  },
+  "data/fhir/fhir-account-resource.md": {
+    "doc_source": "hl7_cerner",
+    "doc_type": "spec",
+    "priority_tier": "must",
+    "source_weight": 0.9,
+    "source_quality": "primary",
+    "phase": "phase2"
+  },
+  "data/fhir/fhir-charge-item.md": {
+    "doc_source": "hl7_cerner",
+    "doc_type": "spec",
+    "priority_tier": "must",
+    "source_weight": 0.9,
+    "source_quality": "primary",
+    "phase": "phase2"
+  },
+  "data/fhir/fhir-financial-transaction.md": {
+    "doc_source": "hl7_cerner",
+    "doc_type": "spec",
+    "priority_tier": "must",
+    "source_weight": 0.9,
+    "source_quality": "primary",
+    "phase": "phase2"
+  },
+  "data/fhir/fhir-insurance-plan.md": {
+    "doc_source": "hl7_cerner",
+    "doc_type": "spec",
+    "priority_tier": "must",
+    "source_weight": 0.9,
+    "source_quality": "primary",
+    "phase": "phase2"
+  },
+  "data/fhir/fhir-questionnaire-response.md": {
+    "doc_source": "hl7_cerner",
+    "doc_type": "spec",
+    "priority_tier": "must",
+    "source_weight": 0.9,
+    "source_quality": "primary",
+    "phase": "phase2"
+  },
+  "data/millennium/millennium-engineering-microservices.txt": {
+    "doc_source": "engineering_blog",
+    "doc_type": "blog",
+    "priority_tier": "should",
+    "source_weight": 0.7,
+    "source_quality": "secondary",
+    "phase": "phase2"
+  },
+  "data/millennium/millennium-engineering-terra-accessibility.txt": {
+    "doc_source": "engineering_blog",
+    "doc_type": "blog",
+    "priority_tier": "should",
+    "source_weight": 0.7,
+    "source_quality": "secondary",
+    "phase": "phase2"
+  },
+  "data/millennium/millennium-oracle-platform-apis.txt": {
+    "doc_source": "open_cerner",
+    "doc_type": "official",
+    "priority_tier": "must",
+    "source_weight": 0.9,
+    "source_quality": "primary",
+    "phase": "phase2"
+  },
+  "data/millennium/cross-hl7-v2-millennium.txt": {
+    "doc_source": "hl7_cerner",
+    "doc_type": "spec",
+    "priority_tier": "must",
+    "source_weight": 0.9,
+    "source_quality": "primary",
+    "phase": "phase2",
+    "tags": [
+      "cross_module",
+      "millennium",
+      "fhir"
+    ]
+  },
+  "data/revenue_cycle/rcm-cms-icd10-overview.txt": {
+    "doc_source": "third_party",
+    "doc_type": "official",
+    "priority_tier": "must",
+    "source_weight": 0.8,
+    "source_quality": "primary",
+    "phase": "phase2"
+  },
+  "data/revenue_cycle/rcm-ama-cpt-overview.txt": {
+    "doc_source": "third_party",
+    "doc_type": "official",
+    "priority_tier": "must",
+    "source_weight": 0.8,
+    "source_quality": "primary",
+    "phase": "phase2"
+  },
+  "data/clinical/clinical-cms-restraint-cop.txt": {
+    "doc_source": "third_party",
+    "doc_type": "official",
+    "priority_tier": "must",
+    "source_weight": 0.8,
+    "source_quality": "primary",
+    "phase": "phase2"
+  },
+  "data/clinical/clinical-ahrq-falls-primer.txt": {
+    "doc_source": "third_party",
+    "doc_type": "official",
+    "priority_tier": "must",
+    "source_weight": 0.85,
+    "source_quality": "primary",
+    "phase": "phase2"
+  },
+  "data/clinical/clinical-ahrq-handoffs-clinical.txt": {
+    "doc_source": "third_party",
+    "doc_type": "official",
+    "priority_tier": "must",
+    "source_weight": 0.85,
+    "source_quality": "primary",
+    "phase": "phase2"
+  },
+  "data/clinical/clinical-ahrq-medication-errors.txt": {
+    "doc_source": "third_party",
+    "doc_type": "official",
+    "priority_tier": "must",
+    "source_weight": 0.85,
+    "source_quality": "primary",
+    "phase": "phase2"
+  },
+  "data/clinical/clinical-ahrq-rapid-response.txt": {
+    "doc_source": "third_party",
+    "doc_type": "official",
+    "priority_tier": "must",
+    "source_weight": 0.85,
+    "source_quality": "primary",
+    "phase": "phase2"
+  },
+  "data/clinical/clinical-cdc-hai.txt": {
+    "doc_source": "third_party",
+    "doc_type": "official",
+    "priority_tier": "must",
+    "source_weight": 0.8,
+    "source_quality": "primary",
+    "phase": "phase2"
+  },
+  "data/clinical/clinical-wiki-bcma.txt": {
+    "doc_source": "third_party",
+    "doc_type": "official",
+    "priority_tier": "should",
+    "source_weight": 0.6,
+    "source_quality": "secondary",
+    "phase": "phase2"
+  },
+  "data/clinical/clinical-wiki-clinical-decision-support.txt": {
+    "doc_source": "third_party",
+    "doc_type": "official",
+    "priority_tier": "should",
+    "source_weight": 0.6,
+    "source_quality": "secondary",
+    "phase": "phase2"
+  },
+  "data/clinical/clinical-wiki-emar.txt": {
+    "doc_source": "third_party",
+    "doc_type": "official",
+    "priority_tier": "should",
+    "source_weight": 0.6,
+    "source_quality": "secondary",
+    "phase": "phase2"
+  },
+  "data/clinical/clinical-wiki-fall-prevention.txt": {
+    "doc_source": "third_party",
+    "doc_type": "official",
+    "priority_tier": "should",
+    "source_weight": 0.6,
+    "source_quality": "secondary",
+    "phase": "phase2"
+  },
+  "data/clinical/clinical-wiki-medrec.txt": {
+    "doc_source": "third_party",
+    "doc_type": "official",
+    "priority_tier": "should",
+    "source_weight": 0.6,
+    "source_quality": "secondary",
+    "phase": "phase2"
+  },
+  "data/clinical/clinical-wiki-pain-assessment.txt": {
+    "doc_source": "third_party",
+    "doc_type": "official",
+    "priority_tier": "should",
+    "source_weight": 0.6,
+    "source_quality": "secondary",
+    "phase": "phase2"
+  },
+  "data/clinical/clinical-wiki-restraint-medical.txt": {
+    "doc_source": "third_party",
+    "doc_type": "official",
+    "priority_tier": "should",
+    "source_weight": 0.6,
+    "source_quality": "secondary",
+    "phase": "phase2"
+  },
+  "data/clinical/clinical-wiki-sepsis-treatment.txt": {
+    "doc_source": "third_party",
+    "doc_type": "official",
+    "priority_tier": "should",
+    "source_weight": 0.6,
+    "source_quality": "secondary",
+    "phase": "phase2"
+  },
+  "data/millennium/millennium-cerner-wiki-overview.txt": {
+    "doc_source": "third_party",
+    "doc_type": "official",
+    "priority_tier": "should",
+    "source_weight": 0.6,
+    "source_quality": "secondary",
+    "phase": "phase2"
+  },
+  "data/millennium/millennium-wiki-ehr-interop.txt": {
+    "doc_source": "third_party",
+    "doc_type": "official",
+    "priority_tier": "should",
+    "source_weight": 0.6,
+    "source_quality": "secondary",
+    "phase": "phase2"
+  },
+  "data/millennium/millennium-wiki-hie.txt": {
+    "doc_source": "third_party",
+    "doc_type": "official",
+    "priority_tier": "should",
+    "source_weight": 0.6,
+    "source_quality": "secondary",
+    "phase": "phase2"
+  },
+  "data/millennium/millennium-wiki-hl7.txt": {
+    "doc_source": "third_party",
+    "doc_type": "official",
+    "priority_tier": "should",
+    "source_weight": 0.6,
+    "source_quality": "secondary",
+    "phase": "phase2"
+  },
+  "data/millennium/millennium-wiki-ldap.txt": {
+    "doc_source": "third_party",
+    "doc_type": "official",
+    "priority_tier": "should",
+    "source_weight": 0.6,
+    "source_quality": "secondary",
+    "phase": "phase2"
+  },
+  "data/millennium/millennium-wiki-mumps.txt": {
+    "doc_source": "third_party",
+    "doc_type": "official",
+    "priority_tier": "should",
+    "source_weight": 0.6,
+    "source_quality": "secondary",
+    "phase": "phase2"
+  },
+  "data/millennium/millennium-wiki-soa.txt": {
+    "doc_source": "third_party",
+    "doc_type": "official",
+    "priority_tier": "should",
+    "source_weight": 0.6,
+    "source_quality": "secondary",
+    "phase": "phase2"
+  },
+  "data/powerchart/powerchart-ahrq-alert-fatigue.txt": {
+    "doc_source": "third_party",
+    "doc_type": "official",
+    "priority_tier": "must",
+    "source_weight": 0.85,
+    "source_quality": "primary",
+    "phase": "phase2"
+  },
+  "data/powerchart/powerchart-ahrq-cpoe-primer.txt": {
+    "doc_source": "third_party",
+    "doc_type": "official",
+    "priority_tier": "must",
+    "source_weight": 0.85,
+    "source_quality": "primary",
+    "phase": "phase2"
+  },
+  "data/powerchart/powerchart-ahrq-handoffs.txt": {
+    "doc_source": "third_party",
+    "doc_type": "official",
+    "priority_tier": "must",
+    "source_weight": 0.85,
+    "source_quality": "primary",
+    "phase": "phase2"
+  },
+  "data/powerchart/powerchart-ahrq-medrec-primer.txt": {
+    "doc_source": "third_party",
+    "doc_type": "official",
+    "priority_tier": "must",
+    "source_weight": 0.85,
+    "source_quality": "primary",
+    "phase": "phase2"
+  },
+  "data/powerchart/powerchart-cms-promoting-interop.txt": {
+    "doc_source": "third_party",
+    "doc_type": "official",
+    "priority_tier": "must",
+    "source_weight": 0.85,
+    "source_quality": "primary",
+    "phase": "phase2"
+  },
+  "data/powerchart/powerchart-onc-certification.txt": {
+    "doc_source": "third_party",
+    "doc_type": "official",
+    "priority_tier": "must",
+    "source_weight": 0.85,
+    "source_quality": "primary",
+    "phase": "phase2"
+  },
+  "data/powerchart/powerchart-wiki-cdss.txt": {
+    "doc_source": "third_party",
+    "doc_type": "official",
+    "priority_tier": "should",
+    "source_weight": 0.6,
+    "source_quality": "secondary",
+    "phase": "phase2"
+  },
+  "data/powerchart/powerchart-wiki-clinical-pathway.txt": {
+    "doc_source": "third_party",
+    "doc_type": "official",
+    "priority_tier": "should",
+    "source_weight": 0.6,
+    "source_quality": "secondary",
+    "phase": "phase2"
+  },
+  "data/powerchart/powerchart-wiki-cpoe.txt": {
+    "doc_source": "third_party",
+    "doc_type": "official",
+    "priority_tier": "should",
+    "source_weight": 0.6,
+    "source_quality": "secondary",
+    "phase": "phase2"
+  },
+  "data/powerchart/powerchart-wiki-ehr.txt": {
+    "doc_source": "third_party",
+    "doc_type": "official",
+    "priority_tier": "should",
+    "source_weight": 0.6,
+    "source_quality": "secondary",
+    "phase": "phase2"
+  },
+  "data/powerchart/powerchart-wiki-emr-vs-ehr.txt": {
+    "doc_source": "third_party",
+    "doc_type": "official",
+    "priority_tier": "should",
+    "source_weight": 0.6,
+    "source_quality": "secondary",
+    "phase": "phase2"
+  },
+  "data/powerchart/powerchart-wiki-eprescribing.txt": {
+    "doc_source": "third_party",
+    "doc_type": "official",
+    "priority_tier": "should",
+    "source_weight": 0.6,
+    "source_quality": "secondary",
+    "phase": "phase2"
+  },
+  "data/powerchart/powerchart-wiki-medical-software.txt": {
+    "doc_source": "third_party",
+    "doc_type": "official",
+    "priority_tier": "should",
+    "source_weight": 0.6,
+    "source_quality": "secondary",
+    "phase": "phase2"
+  },
+  "data/powerchart/powerchart-wiki-mpages.txt": {
+    "doc_source": "third_party",
+    "doc_type": "official",
+    "priority_tier": "should",
+    "source_weight": 0.6,
+    "source_quality": "secondary",
+    "phase": "phase2"
+  },
+  "data/revenue_cycle/rcm-wiki-claim-denial.txt": {
+    "doc_source": "third_party",
+    "doc_type": "official",
+    "priority_tier": "should",
+    "source_weight": 0.6,
+    "source_quality": "secondary",
+    "phase": "phase2"
+  },
+  "data/revenue_cycle/rcm-wiki-cpt.txt": {
+    "doc_source": "third_party",
+    "doc_type": "official",
+    "priority_tier": "should",
+    "source_weight": 0.6,
+    "source_quality": "secondary",
+    "phase": "phase2"
+  },
+  "data/revenue_cycle/rcm-wiki-hipaa.txt": {
+    "doc_source": "third_party",
+    "doc_type": "official",
+    "priority_tier": "should",
+    "source_weight": 0.6,
+    "source_quality": "secondary",
+    "phase": "phase2"
+  },
+  "data/revenue_cycle/rcm-wiki-icd10-cm.txt": {
+    "doc_source": "third_party",
+    "doc_type": "official",
+    "priority_tier": "should",
+    "source_weight": 0.6,
+    "source_quality": "secondary",
+    "phase": "phase2"
+  },
+  "data/revenue_cycle/rcm-wiki-icd10.txt": {
+    "doc_source": "third_party",
+    "doc_type": "official",
+    "priority_tier": "should",
+    "source_weight": 0.6,
+    "source_quality": "secondary",
+    "phase": "phase2"
+  },
+  "data/revenue_cycle/rcm-wiki-medical-billing.txt": {
+    "doc_source": "third_party",
+    "doc_type": "official",
+    "priority_tier": "should",
+    "source_weight": 0.6,
+    "source_quality": "secondary",
+    "phase": "phase2"
+  },
+  "data/revenue_cycle/rcm-wiki-revenue-cycle.txt": {
+    "doc_source": "third_party",
+    "doc_type": "official",
+    "priority_tier": "should",
+    "source_weight": 0.6,
+    "source_quality": "secondary",
+    "phase": "phase2"
+  },
+  "data/revenue_cycle/rcm-wiki-x12-837.txt": {
+    "doc_source": "third_party",
+    "doc_type": "official",
+    "priority_tier": "should",
+    "source_weight": 0.6,
+    "source_quality": "secondary",
+    "phase": "phase2"
+  }
+}

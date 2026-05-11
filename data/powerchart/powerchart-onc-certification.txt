@@ -1,0 +1,108 @@
+# SOURCE: ONC Health IT Certification Program
+# URL: https://www.healthit.gov/topic/certification-ehrs/about-onc-health-it-certification-program
+# MODULE: PowerChart
+# RETRIEVED: 2026-05-07
+# ---
+
+About the ONC Health IT Certification Program - ONC - Office of the National Coordinator for Health Information Technology
+
+ 
+
+ An official website of the United States government
+ 
+
+Here’s how you know
+
+Here’s how you know
+
+Official websites use .gov
+
+ A
+ 
+.gov
+
+ website belongs to an official government organization in the
+ United States.
+ 
+
+Secure .gov websites use HTTPS
+
+ A
+ 
+lock
+
+ (
+ 
+
+ ) or
+ 
+https://
+
+ means you’ve safely connected to the .gov website. Share sensitive
+ information only on official, secure websites.
+ 
+
+Menu
+
+Certification of Health IT
+Certification of Health IT
+About
+About
+About the ONC Health IT Certification Program
+Oversight & Surveillance
+Enforcement Discretion Notices
+Process
+Process
+Certification Process
+Conformance Methods
+ONC Conformance Test Tools
+ONC-Authorized Certification Bodies (ONC-ACBs)
+ONC-Authorized Testing Laboratories (ATLs)
+ONC-Approved Testing Partners
+Certified Health IT Complaint Process
+Certification Criteria
+Certification Criteria
+Certification Criteria Overview
+Certification Program Test Method
+Criteria Updates by Regulatory Deadline
+Base Electronic Health Record (EHR) Definition 
+Standards Version Advancement Process (SVAP) 
+(Archived) Test Method
+Conditions & Maintenance of Certification
+Conditions & Maintenance of Certification
+Conditions & Maintenance of Certification Overview
+Insights Condition
+Real World Testing
+Resources
+Resources
+Certification Program Regulations
+Program Resources
+Certified Health IT Product List (CHPL)
+
+About the ONC Health IT Certification Program
+
+The Office of the National Coordinator for Health Information Technology (ONC) Health IT Certification Program (Certification Program) is a voluntary certification program established by the ONC to provide for the certification of health IT.  Requirements for certification are established by standards, implementation specifications and certification criteria adopted by the Secretary at the Department of Health and Human Services (HHS). The Certification Program supports the availability of certified health IT for its encouraged and required use under other federal, state and private programs. The Certification Program is run as a third-party product conformity assessment scheme for health information technology (health IT) based on the principles of the International Standards Organization (ISO) and International Electrotechnical Commission (IEC) framework.
+
+Download Overview [PDF – 510KB]
+
+Launched in 2010, the Certification Program supports the Promoting Interoperability (PI) Programs (previously Medicare and Medicaid EHR Incentive Programs) administered by the Centers for Medicare & Medicaid Services (CMS). While the PI Programs continue to require the use of certified health IT, the use of certified health IT has expanded to other government and non-government programs. The Certification Program has released three editions of certification criteria and regulations for new/expanded Certification Program requirements. These new editions of certification criteria include more robust technical and interoperability requirements, ONC-Authorized Certification Body (ONC-ACB) in-the-field surveillance expectations, and cost transparency and disclosure requirements for health IT developers’ certified health IT. These additional disclosure requirements have been adopted to ensure users of certified health IT are fully informed about certain types of limitations and additional costs associated with the ability to implement or use certified health IT in a manner consistent with its certification.
+
+The graphic below shows the organizational structure of the Certification Program. As illustrated, ONC manages the overall program while working with other agencies and entities in the following capacities:
+
+External Link Notice
+
+Continue
+
+Cancel
+
+×
+
+ 
+
+Welcome to HealthIT.gov!
+
+Thank you for visiting the HealthIT.gov website! We welcome your feedback using the "Submit Feedback" button at the bottom of the page to help us improve your experience!
+
+Close
+
+Don't show again

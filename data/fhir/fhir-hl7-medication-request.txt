@@ -1,0 +1,53 @@
+FHIR v4.0.1 MedicationRequest Resource
+Source: https://hl7.org/fhir/R4/medicationrequest.html
+Scraped: 2026-04-18
+
+==============================================================
+
+Resource Definition
+
+The MedicationRequest is a FHIR resource representing "an order or request for both supply of the medication and the instructions for administration of the medication to a patient." Rather than using terms like "MedicationPrescription" or "MedicationOrder," this naming convention generalizes usage across inpatient and outpatient settings, including care plans and other workflow patterns.
+
+Scope and Usage
+
+This resource encompasses all types of medication orders for patients, including:
+- Inpatient medication orders
+- Community pharmacy orders
+- Over-the-counter medications
+- Total parenteral nutrition
+- Diet and vitamin supplements
+- Medication-related device orders
+
+The resource is classified as a "request" resource from a FHIR workflow perspective. Multiple items requiring simultaneous ordering are handled through separate MedicationRequest instances that can be linked using various mechanisms depending on workflow needs.
+
+Key Elements
+
+Required Elements:
+- Status: Current order state (active, on-hold, cancelled, completed, entered-in-error, stopped, draft, unknown)
+- Intent: Request classification (proposal, plan, order, original-order, reflex-order, filler-order, instance-order, option)
+- Medication: Identification via CodeableConcept or Reference
+- Subject: Patient or group receiving medication
+
+Important Optional Elements:
+- Priority: Urgency level (routine, urgent, asap, stat)
+- DoNotPerform: Boolean flag prohibiting the request
+- AuthoredOn: Prescription creation date/time
+- Requester: Individual, organization, or device initiating request
+- ReasonCode/ReasonReference: Clinical justification
+- DosageInstruction: Administration guidance
+- DispenseRequest: Supply details including quantity, refills, validity period
+- Substitution: Allowance and reasoning for generic/alternative medications
+
+Related Resources
+
+The MedicationRequest connects to several related medication domain resources:
+- MedicationDispense: Supply provision following prescription
+- MedicationAdministration: Patient consumption or administration record
+- MedicationStatement: Reported medication usage (not prescribe-dispense-administer sequence)
+
+Maturity and Status
+
+- Maturity Level: 3
+- Standards Status: Trial Use
+- Security Category: Patient
+- Compartments: Encounter, Patient, Practitioner

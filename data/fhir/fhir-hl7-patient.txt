@@ -1,0 +1,58 @@
+FHIR v4.0.1 Patient Resource
+Source: https://hl7.org/fhir/R4/patient.html
+Scraped: 2026-04-18
+
+==============================================================
+
+Overview
+
+The Patient resource documents "Demographics and other administrative information about an individual or animal receiving care or other health-related services."
+
+Scope and Coverage
+
+This resource addresses patient data across multiple healthcare contexts:
+- Curative activities
+- Psychiatric care
+- Social services
+- Pregnancy care
+- Nursing and assisted living
+- Dietary services
+- Personal health and exercise tracking
+
+The resource focuses on "who" information — demographic details needed for administrative, financial, and logistical procedures. Organizations typically maintain patient records, meaning individuals receiving care at multiple facilities may have multiple Patient resource instances.
+
+Key Limitations
+
+Not all demographic concepts appear in the base resource (race, ethnicity, organ donor status, nationality). Such fields exist in jurisdiction-specific profiles or standard extensions, as requirements and value sets vary significantly across regions.
+
+Primary Data Elements
+
+Administrative Elements:
+- Identifiers (0 or more)
+- Active status (0 or 1)
+- Names (0 or more)
+- Contact points/telecom (0 or more)
+- Gender (0 or 1)
+- Birth date (0 or 1)
+- Deceased status (0 or 1, as boolean or dateTime)
+
+Address and Status:
+- Addresses (0 or more)
+- Marital status (0 or 1)
+- Multiple birth indicator (0 or 1)
+- Photos (0 or more)
+
+Relationship and Care:
+- Contact parties: guardians, partners, friends (0 or more)
+- Communication languages with preference flags (0 or more)
+- General practitioners (0 or more)
+- Managing organization (0 or 1)
+- Patient links referencing related Patient or RelatedPerson records (0 or more)
+
+Maturity Status
+
+The Patient resource achieved Normative status beginning with version 4.0.0, indicating stable, standardized specifications approved as an ANSI standard.
+
+Related Resources
+
+The Patient resource connects with 50+ other FHIR resources including Encounter, Observation, Condition, Procedure, Appointment, and many others across clinical, administrative, and financial domains.

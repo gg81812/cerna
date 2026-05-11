@@ -1,0 +1,137 @@
+# SOURCE: Cerner Charge Capture Configuration Guide
+# URL: https://wiki.cerner.com/display/public/1101rcm/Charge+Capture+Configuration
+# MODULE: Revenue Cycle
+# RETRIEVED: 2026-04-01
+# ---
+
+# Cerner Charge Capture Configuration Guide
+
+## What is Charge Capture in Cerner?
+
+Charge capture is the process of converting clinical services rendered to patients into billable charge lines that can be submitted to payers for reimbursement. In Cerner Millennium's Clinically Driven Revenue Cycle (CDRC) model, charge capture is largely automated — clinical events (orders placed, procedures performed, services documented) trigger charge lines automatically through rules-based charge triggers.
+
+This guide covers the configuration and management of charge capture rules, charge catalogs, and charge review workflows.
+
+## Charge Trigger Types
+
+### Order-Based Charge Triggers
+
+The most common charge mechanism. When a provider places an order in CPOE, the act of ordering (or order completion) fires a charge:
+- **Lab orders** — charge fires when the order is placed (or when the result is resulted, depending on configuration).
+- **Radiology orders** — charge fires when the radiology procedure is completed.
+- **Pharmacy orders** — medication charge fires when dispensed or administered (depending on payer rules).
+- **Procedure orders** — charge fires upon order completion or upon documentation of procedure performance.
+
+Configuration steps:
+1. Open Charge Services Administration > Order-Based Charge Rules.
+2. Select the orderable item (or order catalog entry).
+3. Define the trigger event (order placed, order completed, result resulted).
+4. Map to the charge line (CDM item): CPT code, revenue code, description.
+5. Set the quantity rule (one charge per order vs. one charge per administration).
+6. Set facility/department applicability (some charges apply only to specific cost centers).
+7. Save and activate.
+
+### Documentation-Based Charge Triggers
+
+Triggered when a specific piece of clinical documentation is signed:
+- Evaluation and Management (E&M) charges triggered when a provider signs a note with a specific note type (e.g., "Office Visit Note" triggers a 99213 level charge).
+- Procedure note signature triggers procedure charge (e.g., signing a "Laceration Repair Note" triggers the laceration repair CPT code).
+
+Configuration steps:
+1. Navigate to Charge Services > Documentation-Based Charge Rules.
+2. Select the note type or PowerForm event code that triggers the charge.
+3. Map to the CDM item.
+4. Set E&M level calculation method (Total Time or Medical Decision Making, per CMS guidelines).
+
+### Manual Charge Entry
+
+For services that cannot be automated:
+- Nursing provides daily charge entry for services not captured by orders or documentation (bedside procedures, supply charges, nursing-specific charges).
+- Charge entry screen accessed from the patient's chart or from the Charge Entry standalone module.
+- Charge entry staff select charges from the CDM (Charge Description Master) and submit.
+
+## Charge Description Master (CDM)
+
+### What is the CDM?
+
+The CDM is the master list of all billable services, procedures, supplies, and drugs offered by the organization. Each CDM item contains:
+- CDM number — unique identifier
+- Description — human-readable service description
+- CPT/HCPCS code — procedure code for claims
+- Revenue code — UB-04 revenue code for institutional claims
+- Charge amount — the gross charge (before contractual adjustments)
+- Department/cost center — which department bills this item
+- Active/Inactive status
+
+### Managing the CDM
+
+CDM maintenance is performed by charge integrity or revenue cycle analysts:
+1. Navigate to Charge Services > CDM Management.
+2. Search for an existing CDM item to review or modify.
+3. To add a new item: click "New CDM Item" and complete all required fields.
+4. Update CPT codes annually when CMS publishes the CPT code set update (effective January 1 each year).
+5. Crosswalk outdated CPT codes to new codes in the CDM update workflow.
+6. Test new CDM items in CERT before activating in Production.
+
+### Annual CDM Review
+
+Best practice: conduct a comprehensive CDM review annually (typically October–November in preparation for the January 1 CPT update):
+- Remove inactive or low-volume CDM items that haven't been charged in >2 years.
+- Verify CPT codes match current AMA CPT code descriptions.
+- Verify charge amounts are aligned with current payer contract rates and cost analysis.
+- Verify revenue codes are compliant with NUBC (National Uniform Billing Committee) guidelines.
+
+## Charge Review Workflow
+
+### What is Charge Review?
+
+After charge triggers fire and charge lines are generated, they are subject to review before the claim is generated. Charge review catches errors, omissions, and inconsistencies before they reach the payer.
+
+The Charge Review queue in Cerner shows:
+- Encounters with charges ready for review
+- Encounters with charge edits (automated error flags from charge scrubbing rules)
+- Encounters with missing charges (charge lag alerts)
+
+### Charge Scrubbing Rules
+
+Automated rules that flag charge line issues before review:
+- Missing required modifier (e.g., laterality modifier missing on a bilateral procedure)
+- CPT code not billable with current payer
+- Charge combination that triggers a bundling rule (two codes that cannot be billed together per CCI edits)
+- Quantity outside expected range
+- Service date outside the encounter date range
+
+### Charge Review Workflow Steps
+
+1. Charge reviewer opens the Charge Review queue (from the Charge Review module).
+2. Reviews each encounter flagged for review.
+3. For each charge line: verify the service was rendered, the CPT code is correct, modifiers are appropriate.
+4. Resolve edits: correct erroneous codes, add missing modifiers, remove duplicate charges.
+5. Approve the encounter for claim generation.
+6. Flagged encounters that cannot be resolved are escalated to coding or clinical staff for clarification.
+
+## Charge Lag Monitoring
+
+Charge lag is the delay between the date a service is rendered and the date the charge is submitted to the payer. High charge lag increases days in accounts receivable (AR).
+
+Key metrics:
+- **Days to Charge** — average days between service date and charge submission date
+- **Charge Lag Rate** — % of encounters with charges not submitted within the target window (typically 2–5 days)
+
+Acceptable benchmarks:
+- Inpatient: charges submitted within 2 business days of discharge
+- Outpatient: charges submitted same day or next business day
+
+Monitoring in HealtheAnalytics / Discern Analytics:
+- Charge Lag Dashboard shows encounters by unit/department/provider with oldest unsubmitted charges.
+- Alerts to charge review supervisors when charge lag exceeds threshold.
+
+## Best Practices
+
+1. Automate as many charge triggers as possible — manual charge entry introduces lag and errors.
+2. Keep the CDM clean — inactive items create confusion for charge entry staff and increase error rates.
+3. Perform annual CDM reviews aligned with the January 1 CPT code updates.
+4. Monitor charge lag daily for inpatient accounts — catch missed charges before accounts are closed.
+5. Establish charge scrubbing rules for your top 10 denial reasons — catching these pre-submission reduces denial rates.
+6. Educate ordering providers on how their orders drive charges — helps with compliance and documentation specificity.
+7. Test all new charge rules in CERT before activating in Production.

@@ -1,0 +1,195 @@
+2025 National Patient Safety Goals (NPSGs) — Hospital Program
+Source: https://www.americandatanetwork.com/patient-safety/national-patient-safety-goals-2025/ (Joint Commission content)
+Effective: January 1, 2025
+Scraped: 2026-04-19
+
+Note: Effective January 1, 2026, NPSGs will be replaced with National Performance Goals (NPGs).
+
+==============================================================
+
+NPSG #1: Identify Patients Correctly
+
+Goal: Use at least two patient identifiers when providing care, treatment, and services.
+
+Key Requirements:
+- Apply dual identifiers during medication administration, blood/specimen collection, and procedures
+- Never use room numbers or physical location as identifiers
+- Label specimen containers in the patient's presence
+- Implement distinct identification methods for newborns
+
+Implementation Strategies:
+- Deploy barcode medication administration (BCMA) systems (reduces errors by 57.5% per research)
+- Verify identifiers at bedside during specimen labeling
+- Flag look-alike/sound-alike names in EHR systems
+- Encourage patient participation in identity verification
+- Integrate patient photographs into EHR systems
+- Conduct regular compliance audits
+
+Cerner Implementation: Cerner BCMA workflow, patient photo integration in PowerChart, duplicate MRN alerts.
+
+==============================================================
+
+NPSG #2: Improve Staff Communication
+
+Goal: Report critical results of tests and diagnostic procedures on a timely basis.
+
+Key Requirements:
+- Develop written procedures for managing critical results
+- Define critical result definitions and reporting timeframes
+- Identify reporting recipients and responsible parties
+- Evaluate timeliness of critical result communication
+
+Implementation Strategies:
+- Implement structured handoff protocols (I-PASS methodology)
+- Establish closed-loop communication for critical findings
+- Use secure texting for result notification (reduces from 11.3 minutes to 3.0 minutes)
+- Require read-back verification for verbal orders
+- Conduct TeamSTEPPS training
+- Deploy AI-driven alert systems for critical value escalation
+
+Cerner Implementation: PowerChart critical result alerts, secure messaging, handoff report configuration.
+
+==============================================================
+
+NPSG #3: Use Medicines Safely
+
+Goal: Label all medications and solutions; manage anticoagulant therapy safely; maintain accurate medication information.
+
+Medication Labeling (NPSG 03.04.01):
+- Label medications on and off sterile fields in procedural settings
+- Include: medication name, strength, amount, diluent, expiration
+- Verify labels verbally and visually by two qualified individuals
+- Label immediately upon preparation (unless instantly administered)
+
+Anticoagulant Therapy (NPSG 03.05.01):
+- Use approved, evidence-based protocols for anticoagulation management
+- Implement reversal protocols and bleeding management guidelines
+- Utilize perioperative management protocols for oral anticoagulants
+- Prefer unit-dose products, prefilled syringes, or premixed infusions
+
+Medication Reconciliation (NPSG 03.06.01):
+- Obtain complete medication history upon admission/initial visit
+- Compare home medications with hospital orders; resolve discrepancies
+- Provide discharge medication lists with education
+- Explain medication management importance to patients
+
+Implementation Strategies:
+- Pharmacy-led medication reconciliation (reduces discrepancies from 90% to 47%)
+- Deploy BCMA and smart infusion pumps with dose-error reduction
+- Use automated dispensing cabinets with safety alerts
+- Educate patients on high-risk medications
+
+Cerner Implementation: PharmNet anticoagulation protocols, BCMA, discharge medication reconciliation workflow, Best Practice Advisories for missing reconciliation.
+
+==============================================================
+
+NPSG #4: Use Alarms Safely
+
+Goal: Improve the safety of clinical alarm systems.
+
+Key Requirements:
+- Establish alarm safety as leadership priority
+- Identify most important alarm signals based on clinical risk
+- Develop policies addressing alarm settings, disabling, and monitoring
+- Check alarm signals for accurate settings and proper operation
+
+Implementation Strategies:
+- Convene multidisciplinary alarm management committee
+- Develop evidence-based policies to reduce non-actionable alarms
+- Customize alarm thresholds to individual patient conditions
+- Route critical alarms to responsible staff via smartphones/pagers
+- Implement alarm analytics dashboards
+- Deploy predictive AI tools for deterioration detection
+
+Cerner Implementation: CareAware medical device integration, alarm routing configuration in Cerner Millennium.
+
+==============================================================
+
+NPSG #5: Prevent Infection
+
+Goal: Comply with CDC or WHO hand hygiene guidelines.
+
+Key Requirements:
+- Implement program following CDC/WHO guideline categories IA, IB, IC
+- Set goals for improving compliance
+- Improve compliance based on established goals
+
+Implementation Strategies:
+- Adhere to "5 Moments for Hand Hygiene" guidelines
+- Employ electronic monitoring or observational audits
+- Provide immediate, specific compliance feedback
+- Establish compliance targets (e.g., >90% hospital-wide)
+
+==============================================================
+
+NPSG #6: Reduce Risk for Suicide
+
+Goal: Reduce the risk for suicide.
+
+Key Requirements:
+- Conduct environmental risk assessment
+- Screen all psychiatric/behavioral health patients for suicidal ideation (age 12+)
+- Use evidence-based assessment tools (e.g., Columbia-Suicide Severity Rating Scale, PHQ-9)
+- Document suicide risk level and mitigation plan
+- Provide counseling and follow-up care information at discharge
+
+Implementation Strategies:
+- Conduct thorough suicide risk assessments
+- Use ligature-resistant rooms; remove environmental hazards
+- Perform frequent risk re-assessments
+- Develop personalized safety plans for discharge
+- Post-discharge follow-up within 24-48 hours (significantly reduces suicide rates)
+
+Cerner Implementation: PHQ-9 and Columbia screening integrated in FirstNet and PowerChart flowsheets, BPA alerts for incomplete suicide screening.
+
+==============================================================
+
+NPSG #7: Improve Health Care Equity
+
+Goal: Improving healthcare equity is a quality and safety priority.
+
+Key Requirements:
+- Designate individual(s) to lead equity improvement activities
+- Assess patients' health-related social needs (HRSNs)
+- Identify disparities by stratifying quality/safety data by sociodemographic characteristics
+- Develop written action plan addressing at least one identified disparity
+- Annually inform stakeholders about equity improvement progress
+
+Implementation Strategies:
+- Stratify key quality/safety data by race, ethnicity, language, insurance type
+- Screen patients for social determinants of health (SDOH)
+- Ensure interpreter services availability
+- Publish annual equity reports with stratified data
+
+Cerner Implementation: SDOH screening documentation in PowerChart, population health dashboards for equity metrics, interpreter service tracking.
+
+==============================================================
+
+NPSG #8: Prevent Mistakes in Surgery
+
+Goal: Conduct preprocedure verification; mark procedure sites; perform time-out before procedure.
+
+Preprocedure Verification (UP 01.01.01):
+- Verify correct procedure for correct patient at correct site
+- Involve patient in verification when possible
+- Verify availability of required documentation (history/physical, consent, assessments)
+- Verify labeled diagnostic/radiology results are properly displayed
+
+Procedure Site Marking (UP 01.02.01):
+- Mark sites when multiple locations exist
+- Marking performed by licensed practitioner accountable for procedure
+- Mark at or near site with sufficiently permanent mark visible after skin preparation
+
+Time-Out (UP 01.03.01):
+- Conduct standardized time-out immediately before invasive procedure/incision
+- Initiated by designated team member
+- Team agrees on: correct patient identity, correct site, procedure to be done
+- Document time-out completion
+
+Implementation Strategies:
+- Use standardized preprocedure verification checklist
+- Adopt WHO Surgical Safety Checklist (19 items)
+- Promote culture allowing any team member to speak up
+- Audit time-out completion regularly
+
+Cerner Implementation: SurgiNet perioperative workflows include time-out documentation, surgical safety checklist, patient identification verification at each phase.

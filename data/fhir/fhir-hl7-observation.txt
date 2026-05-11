@@ -1,0 +1,72 @@
+FHIR v4.0.1 Observation Resource
+Source: https://hl7.org/fhir/R4/observation.html
+Scraped: 2026-04-18
+
+==============================================================
+
+Overview
+
+The Observation resource represents "measurements and simple assertions made about a patient, device or other subject." It serves as a central element in healthcare for supporting diagnosis, monitoring progress, and determining baselines and patterns.
+
+Resource Status
+
+- Maturity Level: Normative (from v4.0.0)
+- Security Category: Patient
+- Standards: ANSI-approved
+- Current Version: Release 4 (R4); newer version 5.0.0 available
+
+Scope and Usage
+
+The Observation resource functions as an event resource within FHIR workflows. Common applications include:
+
+- Vital signs (body weight, blood pressure, temperature)
+- Laboratory data (blood glucose, estimated GFR)
+- Imaging results (bone density, fetal measurements)
+- Clinical findings (abdominal tenderness)
+- Device measurements (EKG data, pulse oximetry)
+- Clinical assessment tools (APGAR scores, Glasgow Coma Scale)
+- Personal characteristics (eye color)
+- Social history and core characteristics
+
+Key Boundaries
+
+Observation is specifically designed for measurements and point-in-time assessments. It should not replace specialized resources like AllergyIntolerance, MedicationStatement, FamilyMemberHistory, Procedure, or Condition for their respective use cases.
+
+The DiagnosticReport resource provides clinical context for sets of observations rather than replacing Observation itself.
+
+Core Elements
+
+Required Fields:
+- status: registered | preliminary | final | amended
+- code: What was observed (CodeableConcept)
+
+Key Optional Elements:
+- identifier: Business identifier
+- basedOn: Fulfilling plan/proposal/order
+- subject: Patient, group, device, or location
+- effective[x]: Observation timing (dateTime, Period, Timing, or instant)
+- performer: Who performed the observation
+- value[x]: Result (supports 11 different data types)
+- interpretation: High, low, normal assessment
+- referenceRange: Normal/recommended range guidance
+- component: Multiple component observations (for composite results like blood pressure)
+
+Data Types Supported
+
+The value[x] field flexibly accepts:
+Quantity, CodeableConcept, string, boolean, integer, Range, Ratio, SampledData, time, dateTime, Period
+
+Reference Ranges
+
+Observations support guidance through reference ranges with:
+- Low and high bounds
+- Applicability codes (population, age)
+- Textual descriptions for non-quantitative results
+
+Related Resources
+
+Observation connects to numerous FHIR resources including Condition, DiagnosticReport, MedicationRequest, Procedure, and many others to provide comprehensive clinical context.
+
+Profiles
+
+The Vital Signs profile establishes minimum expectations for recording vital sign observations with standardized structure.

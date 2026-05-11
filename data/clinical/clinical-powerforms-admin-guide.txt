@@ -1,0 +1,159 @@
+# SOURCE: Cerner PowerForms Administrator Guide
+# URL: https://wiki.cerner.com/display/public/1101clinical/PowerForms+Admin+Guide
+# MODULE: Clinical Workflows
+# RETRIEVED: 2026-04-01
+# ---
+
+# Cerner PowerForms Administrator Guide
+
+## What are PowerForms?
+
+PowerForms are configurable electronic clinical documentation forms in Cerner Millennium. They enable the capture of clinical data in a discrete, structured format — allowing the data to feed clinical decision support (CDS) rules, quality measure calculations, and reporting. PowerForms are used for nursing assessments, specialty-specific clinical evaluations, wound documentation, vital signs, and many other clinical workflows.
+
+Unlike free-text PowerNotes, PowerForms produce discrete coded data (clinical events) stored in the CLINICAL_EVENT table. This makes PowerForm data machine-queryable for population health analytics, quality reporting, and research.
+
+## PowerForms Architecture
+
+### Clinical Events
+Each question/field in a PowerForm maps to one or more clinical event codes. When a clinician fills in a value and saves a form, the value is stored as a CLINICAL_EVENT record with:
+- event_cd — the code value identifying what was measured (e.g., "Pain Intensity Score")
+- result_val — the recorded value
+- result_units_cd — units (if applicable)
+- result_status_cd — status (Auth = documented and signed)
+- event_end_dt_tm — when the observation was recorded
+- prsnl_id — the documenting clinician
+
+### Form Relationships
+- **Form** — the top-level template (e.g., "Nursing Shift Assessment")
+- **Section** — logical groupings within the form (e.g., "Neurological," "Cardiovascular")
+- **Data Element** — individual question/field (maps to a clinical event code)
+- **Answer** — available discrete responses for a data element (from a code value set)
+
+## Building PowerForms in PowerChart Administration
+
+### Accessing Form Administration
+1. Log in to PowerChart with System Administrator or Clinical Informatics access.
+2. Navigate to System Administration > Clinical Administration > PowerForms > Form Administration.
+3. The Form Administration console shows all existing forms and their status (Active, Draft, Inactive).
+
+### Creating a New PowerForm
+
+1. Click "New Form" in Form Administration.
+2. Enter a Form Name (this appears in the clinician's form picker), Description, and Module (e.g., Nursing, Physical Therapy, Pharmacy).
+3. Set the Form Status to "Draft" until ready to test.
+4. Add Sections:
+   - Click "Add Section" and give it a name.
+   - Set section display properties (collapsible, show/hide conditions).
+5. Add Data Elements to each section:
+   - Click "Add Data Element" within a section.
+   - Search for the clinical event code by name or code number.
+   - If the event code doesn't exist, create a new one via Clinical Event Code Administration.
+   - Set element properties: required vs. optional, default value, display name, input type (dropdown, free text, numeric, date/time, check box).
+6. Save the draft form.
+
+### Data Element Input Types
+
+- **Discrete (dropdown)** — user selects from a pre-defined list of coded answers. Preferred for standardization.
+- **Free text** — user types narrative. Avoid except when discrete coding is impossible.
+- **Numeric** — user enters a number within a specified range (min/max configurable).
+- **Date/time** — user enters or selects a date and optionally a time.
+- **Checkbox** — Yes/No binary value.
+- **Calculated** — auto-calculated from other fields (e.g., Braden Scale score = sum of subscores).
+
+### Configuring Score Calculations (e.g., Braden Scale, Morse Fall Scale)
+
+1. Add individual sub-score data elements to the form (e.g., Sensory Perception 1–4, Moisture 1–4, etc.).
+2. Add a "Calculated" data element for the total score.
+3. In the calculation editor: sum the sub-score event codes.
+4. Set the score result to auto-populate when the form is completed.
+5. Optionally, configure a risk classification result (Low/Moderate/High) calculated from the total score range.
+
+### Conditional Logic (Show/Hide Rules)
+
+Data elements or entire sections can be shown or hidden based on prior answers:
+- Example: Show "IV site assessment" section only if "Patient has an IV" = Yes.
+- Example: Show "Reason for override" field only if "BCMA Override" = Yes.
+
+Configure in: Data Element Properties > Conditional Display > Add Condition.
+
+## Form Activation and Deployment
+
+### Testing the Form
+
+Before activating:
+1. Set form status to "Testing."
+2. Assign the form to a test position/location in Form Assignment.
+3. Log in as a test user with that position.
+4. Open a test patient and document the form completely.
+5. Verify all data elements save correctly.
+6. Run a CCL query against CLINICAL_EVENT to confirm discrete values are captured.
+
+### Activating the Form
+
+1. Set form status to "Active" in Form Administration.
+2. Assign the form to appropriate positions and locations in Form Assignment:
+   - Navigate to Clinical Administration > PowerForms > Form Assignment.
+   - Select the active form.
+   - Add position/location combinations (e.g., RN position at ICU location).
+3. Clinicians with the assigned position at the assigned location will see the form in their documentation picker.
+
+### Form Assignment to Workflow MPage
+
+Forms can also be triggered automatically in the nursing Workflow MPage as scheduled tasks:
+1. Navigate to Workflow MPage Administration.
+2. Add the PowerForm as a scheduled activity (e.g., "Pain Assessment q4h for all ICU patients").
+3. The task appears in the nursing activity list and links directly to the form.
+
+## Versioning and Form Updates
+
+### Updating an Active Form
+
+Never delete or inactivate a form that has existing documented records — this breaks the link to historical data. Instead:
+1. Create a new version of the form (duplicate the existing form).
+2. Make changes to the new version.
+3. Test the new version.
+4. Activate the new version and deactivate the old version.
+5. Historical records retain the old form structure; new documentation uses the new form.
+
+## Clinical Event Code Management
+
+### Creating a New Clinical Event Code
+
+1. Navigate to Clinical Administration > Clinical Event Codes.
+2. Click "New Event Code."
+3. Define: Event Name, Event Set (grouping), Data Type (numeric, character, coded, date).
+4. If coded type: link to a Code Value Set containing the acceptable responses.
+5. Set the Unit of Measure (for numeric types).
+6. Save and activate.
+
+### Mapping to Reference Data
+Clinical event codes must map to standard terminologies for interoperability:
+- LOINC codes for lab and vital sign events
+- SNOMED CT for clinical findings
+- Configure mappings in Clinical Administration > Terminology Management.
+
+## Reporting from PowerForms
+
+All PowerForm data is queryable via CCL through the CLINICAL_EVENT table. Key query patterns:
+
+    SELECT ce.event_end_dt_tm, ce.result_val, cv.display AS result_text
+    FROM CLINICAL_EVENT ce, CODE_VALUE cv
+    PLAN ce
+      WHERE ce.person_id = 12345.00
+        AND ce.event_cd = (SELECT cv2.code_value FROM CODE_VALUE cv2
+                           WHERE cv2.code_set = 72 AND cv2.event_cd_disp = "Braden Scale Score"
+                             AND cv2.active_ind = 1)
+        AND ce.result_status_cd NOT IN (canceled, in-error codes)
+    JOIN cv
+      WHERE cv.code_value = ce.result_cd
+        AND cv.active_ind = 1
+
+## Best Practices
+
+1. Use discrete input types (dropdown, numeric) instead of free text wherever possible — discrete data is reportable; free text is not.
+2. Map all new clinical event codes to standard terminologies (LOINC, SNOMED) at the time of creation.
+3. Test forms thoroughly in the CERT domain before activating in Production.
+4. Version forms instead of modifying active forms with existing data.
+5. Coordinate new form development with Quality, Compliance, and Analytics teams to ensure the captured data meets reporting needs.
+6. Retire unused forms by setting status to Inactive — cluttered form pickers cause documentation errors.
+7. Use conditional logic to simplify forms — show only what is relevant given prior answers.

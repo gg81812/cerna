@@ -1,0 +1,1474 @@
+# SOURCE: Charge Capture and Reconciliation — RCM Metrics and Workflow
+# URL: https://resources.cerecore.net/charge-capture-and-reconciliation-for-strong-revenue-cycle-management
+# MODULE: Revenue Cycle
+# RETRIEVED: 2026-04-16
+# ---
+
+<!doctype html><!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en" > <![endif]--><!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en" >        <![endif]--><!--[if IE 8]>    <html class="no-js lt-ie9" lang="en" >               <![endif]--><!--[if gt IE 8]><!--><html class="no-js" lang="en"><!--<![endif]--><head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="author" content="Dawn Osborn, MHS, RHIA, CPC, MT">
+    <meta name="description" content="A healthcare organization is planting the seeds for a strong revenue cycle and maximum charge capture and reimbursement.&nbsp;">
+    <meta name="generator" content="HubSpot">
+    <title>Charge Capture and Reconciliation for Strong Revenue Cycle Management</title>
+    <link rel="shortcut icon" href="https://resources.cerecore.net/hubfs/CereCore%20Logos/CereCore_Favicon.svg">
+    
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <script src="/hs/hsstatic/jquery-libs/static-1.4/jquery/jquery-1.11.2.js"></script>
+<script src="/hs/hsstatic/jquery-libs/static-1.4/jquery-migrate/jquery-migrate-1.2.1.js"></script>
+<script>hsjQuery = window['jQuery'];</script>
+    <meta property="og:description" content="A healthcare organization is planting the seeds for a strong revenue cycle and maximum charge capture and reimbursement.&nbsp;">
+    <meta property="og:title" content="Charge Capture and Reconciliation for Strong Revenue Cycle Management">
+    <meta name="twitter:description" content="A healthcare organization is planting the seeds for a strong revenue cycle and maximum charge capture and reimbursement.&nbsp;">
+    <meta name="twitter:title" content="Charge Capture and Reconciliation for Strong Revenue Cycle Management">
+
+    
+
+    
+    <style>
+a.cta_button{-moz-box-sizing:content-box !important;-webkit-box-sizing:content-box !important;box-sizing:content-box !important;vertical-align:middle}.hs-breadcrumb-menu{list-style-type:none;margin:0px 0px 0px 0px;padding:0px 0px 0px 0px}.hs-breadcrumb-menu-item{float:left;padding:10px 0px 10px 10px}.hs-breadcrumb-menu-divider:before{content:'›';padding-left:10px}.hs-featured-image-link{border:0}.hs-featured-image{float:right;margin:0 0 20px 20px;max-width:50%}@media (max-width: 568px){.hs-featured-image{float:none;margin:0;width:100%;max-width:100%}}.hs-screen-reader-text{clip:rect(1px, 1px, 1px, 1px);height:1px;overflow:hidden;position:absolute !important;width:1px}
+</style>
+
+
+<style>
+  @media(max-width:1280px){
+    .parallax-img{display:none;}
+  }
+
+  .fancybox-slide--video .fancybox-content{
+    max-width: 1024px;
+    height:auto;
+  }
+</style>
+
+<link rel="stylesheet" href="https://resources.cerecore.net/hubfs/hub_generated/module_assets/1/48793523334/1741992721862/module_Header.min.css">
+<link rel="stylesheet" href="https://resources.cerecore.net/hubfs/hub_generated/module_assets/1/54231303865/1741992756408/module_Blog_Services_Module.min.css">
+
+<style>
+
+
+
+  .hero {
+    background-size: cover;
+    background-position: center center;
+    position: relative;
+  }
+
+  .hero__media-wrapper{width:100%;}
+  .hero__media-wrapper > a{display:inline-block;}
+  .hero__media-wrapper.image-left-text-right .hero__media-accent { right: auto; left: -3.75rem; }
+
+
+
+  .hero__media-wrapper .play-icon {
+    background-image: url(https://cdn2.hubspot.net/hubfs/4456034/play-button.png);
+    background-repeat: no-repeat;
+    background-position: left top;
+    width: 89px;
+    height: 89px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -44px;
+    margin-top: -44px;
+    opacity: 0.7;
+    z-index: 10;
+  }
+  .hero__media-wrapper .play-icon:hover,
+  .hero__media-wrapper .play-icon:focus{
+    opacity: 0.8;
+  }
+  h5.hero-feature-text { text-transform: uppercase; padding-bottom: 5px; }
+
+
+  /* .hero h1,
+  .hero h2,
+  .hero h3,
+  .hero h4 {
+  color: var(--text-color-white);
+  } */
+
+
+
+  .hero--has-video-background video {
+    object-fit: cover;
+  }
+
+  .hero--has-video-background video::-webkit-media-controls {
+    display: none !important;
+  }
+
+  .hero--centered {
+    text-align: center;
+  }
+
+  .hero--centered > .container > .row {
+    justify-content: center;
+  }
+
+  .hero--reversed > .container > .row {
+    flex-direction: row-reverse;
+  }
+
+  .hero .container {
+    position: relative;
+    z-index: 20;
+  }
+
+  .hero__media {
+    display: flex;
+    justify-content: center;
+    position: relative;
+  }
+
+  .hero__media-wrapper {
+    position: relative;
+    z-index: 10;
+  }
+  .hero__media-wrapper > a{
+    display:inline-block;width:100%;
+    border-radius:20px;
+    box-shadow: 0px 5px 50px 0px rgb(6 24 18 / 20%);
+    -webkit-box-shadow: 0px 5px 50px 0px rgb(6 24 18 / 20%);
+    overflow:hidden;
+  }
+  .homepage .hero__media-wrapper > a {
+    box-shadow: none;
+    -webkit-box-shadow: none;
+  }
+  .hero__media-wrapper > a > img{
+    width:100%;
+  }
+  .hero__media-wrapper > img {
+    width: 100%;border-radius:20px;
+    box-shadow: 0px 5px 50px 0px rgb(6 24 18 / 20%);
+    -webkit-box-shadow: 0px 5px 50px 0px rgb(6 24 18 / 20%);
+  }
+  .hero__media-accent {
+    position: absolute;
+    right: -3.75rem;
+    bottom: -3.75rem;
+    z-index: -2;
+  }
+
+  .hero__media-accent_2 {
+    position: absolute;
+    left: -3.75rem;
+    bottom: -3.75rem;
+    z-index: -2;
+  }
+
+  .hero__content {
+    /*   color: var(--text-color-white); */
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .hero__btn-block {
+    padding-top: 1.75rem;
+  }
+
+  .hero__btn-block a {
+    margin-right: 20px;
+    margin-bottom: 20px;
+  }
+
+  .hero__btn-block a:last-of-type {
+    margin-right: 0;
+    margin-bottom: 0;
+  }
+  .video-wrapper-main {
+    position: relative;
+    box-shadow: 0px 5px 50px 0px rgb(6 24 18 / 20%);
+    -webkit-box-shadow: 0px 5px 50px 0px rgb(6 24 18 / 20%);
+    border-radius: 20px;
+    overflow: hidden;
+  }
+  .video-wrapper-main img { width: 100%; }
+  @media(max-width:1200px){
+    .hero__media-accent, .hero__media-accent_2{display:none;}
+  }
+
+  @media screen and (max-width: 991px) {
+    /*   .hero {
+    padding: 5rem 0;
+  } */
+
+    .hero .row {
+      flex-direction: column-reverse;
+    }
+    .hero .row.image_right_text_left {
+      flex-direction: unset;
+    }
+    .bio-inner .mobile_image_bottom.hero .row { flex-direction: unset; }
+    .hero .row > .col:last-child {
+      margin-bottom: 3rem;
+    }
+    .row.image_right_text_left .col.col-1-2:last-child { margin-bottom: 0; margin-top: 3rem; }
+    .hero .row>.col-2-3{
+      margin-bottom:0px !important;
+    }
+
+    .hero .col-1-2,
+    .hero .col-2-3 {
+      width: 100% !important;
+    }
+
+    /*   .hero__media-wrapper {
+    margin-top: 4rem;
+  } */
+
+    .hero--reversed > .container > .row {
+      flex-direction: column-reverse;
+    }
+
+    .hero--reversed > .container > .row .col:first-of-type {
+      margin-bottom: 0;
+    }
+
+    .hero--centered .row > .col {
+      margin-bottom: 0;
+    }
+    .hero__media-accent, .hero__media-accent_2{display:none;}
+  }
+
+  @media(max-width:767px){
+    .hero__btn-block{text-align:center;}
+  }
+
+  @media screen and (max-width: 479px) {
+    .hero__btn-block a {
+      margin-right: 0;
+    }
+    .hero__media-wrapper a img { max-width: 100%; max-height: 100%; width: 100%; height: 100%; }
+  }
+
+
+
+
+  body.services-inner h1.hero__heading { padding-bottom: 0; }
+  .hero-top-shape , .hero-bottom-shape{ pointer-events:none; }
+  @media(max-width:991px){
+    .hero.mobile-white-bg{ background:#fff !important;}
+  }
+
+  @media(min-width:1281px){
+    .bio-inner .hero .row { margin-bottom: 50px; }
+  }
+  .bio-inner .hero__media-wrapper > a{position:relative;}
+
+  .hero {
+    background-size: cover;
+    background-position: center center;
+    position: relative;
+  }
+
+
+  /*   .hero__content h4{font-weight:600;} */
+
+  @media(max-width:991px){
+    .hero__media-wrapper{text-align:center !important;}
+  }
+
+  .hero__content_wrapper > *:not(:last-child) { margin-bottom: 20px; }
+
+  .Charge Capture and Reconciliation for Strong Revenue Cycle Management.no-zindex .hero__media-wrapper{z-index:inherit;}
+  .Charge Capture and Reconciliation for Strong Revenue Cycle Management.no-zindex > .container{z-index:inherit;}
+
+  @media(min-width:1201px){
+    h1.hero__heading { font-size: 48px; line-height: 60px; } 
+  }
+
+
+  /* Blog Post Styles */
+
+  .post_body { padding: 90px 20px 50px; max-width: 770px !important; width: 100% !important; }
+  .blog-author-section { margin-bottom: 20px; }
+  .blog-author-section p { font-size: 16px; padding-bottom: 10px; font-weight: 700; color: var(--primary-color-bigstone); }
+  .blog-author-section p a{text-decoration:underline;}
+  .blog-author-section p a:not(:hover){color: var(--primary-color-bigstone);}
+  .blog-author-section p i{color:var(--primary-color-scarlet);}
+  span.read-more { text-transform: uppercase; margin-right: 10px; }
+  .blog-author-section a.topic-link {text-transform:uppercase;}
+
+  .blog_post_body_wrapper_main a:not(.btn) { color: var(--link-color); text-decoration: underline; }
+  .blog_post_body_wrapper_main a:not(.btn):hover { color: var(--primary-color-bigstone);}
+  .blog_post_body_wrapper_main ul { padding-left: 50px !important; margin-top: 0 !important;margin-bottom: 30px !important; }
+  .blog_post_body_wrapper_main ul li:before { background-image: none !important; width: 4px !important; height: 4px !important; background-color: var(--primary-color-bigstone); border-radius: 100%; left: -10px !important; top: 11px !important; }
+  .blog_post_body_wrapper_main ol { padding-left: 50px !important; margin-top: 0 !important;margin-bottom: 30px !important; }
+  .blog_post_body_wrapper_main ol ol{padding-left:0px !important;}
+  .blog_post_body_wrapper_main ol li::marker{color:var(--primary-color-shipgray);font-weight:700;}
+  
+  .blog_post_body_wrapper_main blockquote { font-size: 20px; font-weight: 300; font-style: normal; padding: 40px 60px 30px; border: 0; line-height: 34px;margin-bottom:0px; }
+  .blog_post_body_wrapper_main blockquote:before { content: '\f10d'; position: absolute; left: 0;right:auto; top: 0;width:auto; font-family: 'FontAwesome'; font-style: normal; font-size: 40px; color: var(--primary-color-scarlet); display: flex; flex-wrap: wrap; align-items: center; justify-content: center; }
+  .blog_post_body_wrapper_main blockquote:after { position: absolute; left: auto;right:0; bottom: 0;width:auto; font-family: 'FontAwesome'; font-style: normal; font-size: 40px; color: var(--primary-color-scarlet); display: flex; flex-wrap: wrap; align-items: center; justify-content: center; }
+  .blog_post_body_wrapper_main blockquote p{padding-bottom:0px;}
+  
+  .blog_post_body_wrapper_main h2{font-size:34px;line-height:44px;}
+  .blog_post_body_wrapper_main h3{font-size:28px;line-height:38px;}
+  .blog_post_body_wrapper_main h6{font-size:16px;line-height:24px;}
+
+  @media(max-width:1200px){
+    .blog_post_body_wrapper_main ul { padding-left: 10px !important; }
+    .blog_post_body_wrapper_main ol { padding-left: 20px !important;}
+    
+    .blog_post_body_wrapper_main h2{font-size:28px;line-height:38px;}
+    .blog_post_body_wrapper_main h3{font-size:26px;line-height:28px;}
+  }
+  @media(max-width:767px){
+    .blog_post_body_wrapper_main blockquote{padding:50px 0 50px;}
+  }
+  
+</style>
+
+
+<link rel="stylesheet" href="https://resources.cerecore.net/hubfs/hub_generated/module_assets/1/48661564803/1741992719997/module_lead-magnet.min.css">
+
+<style>
+  .blog-author-wapper { text-align: center; }
+  .blog-author-image img { margin: 0 auto; border-radius: 15px; margin-bottom: 30px; box-shadow: 10px 3px 20px rgb(0 0 0 / 15%); }
+  .blog-author-wapper p { font-weight: 400; }
+  .author-linkedin { margin-bottom: 20px; font-size: 22px; margin-top: 5px; }
+  .author-linkedin a:not(:hover){color:var(--primary-color-bigstone);}
+
+  .read-bio-link { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; }
+  .read-bio-link a { color: var(--primary-color-bigstone); font-weight: 700; display: flex; flex-wrap: wrap; align-items: center; justify-content: center; }
+  .read-bio-link a i{color:var(--primary-color-scarlet)}
+  .read-bio-link a i { color: var(--primary-color-scarlet); margin-left: 10px; margin-top: 2px; }
+
+  .author-bio-popup { position: fixed; top: 0; left: 0; width: 100%; height: 100vh; z-index: 22222; background: rgb(30, 30, 30,0.5);display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center; }
+  .popup-listing-main-wrapper { max-width: 700px !important; border-radius: 20px; padding: 0 !important; background: #fff; margin: 0 auto;overflow:hidden; }
+  .popup-listing-upper {
+    background: #192441;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+  }
+  .popup-listing-upper-left { width: 175px; background-size: cover; background-position: center; background-repeat: no-repeat; }
+  .popup-listing-upper-right { width: calc(100% - 175px); padding: 30px 34px; }
+  .popup-list-upper-wrapper { max-width: 330px;text-align:left; }
+  .popup-listing-upper-right h4 { color: #fff; padding-bottom: 0; }
+  .popup-listing-upper-right p { color: #fff; padding-bottom: 0; margin-top: 5px; font-weight: 700; }
+  .popup-list-upper-wrapper button.btn-close { border: 0; background: transparent; color: #fff; font-size: 22px; position: absolute; right: 10px; top: 10px; opacity: 0.7; cursor: pointer; }
+  .popup-listing-lower { padding: 35px 30px;text-align:left; }
+  .popup-listing-lower p { line-height: 1.65; }
+  .popup-listing-lower > *:last-child { margin-bottom: 0; padding-bottom: 0; }
+</style>
+
+<link rel="stylesheet" href="https://resources.cerecore.net/hubfs/hub_generated/module_assets/1/53849717771/1741992754455/module_related-posts-blog.min.css">
+
+<style>
+
+  .cards .container { position: relative; z-index: 20; }
+
+  .related-posts-top-shape , .related-posts-bottom-shape{ pointer-events:none; }
+
+  .module_16300825605322728.related-posts {
+    background-size: cover;
+    background-position: center center;
+    position: relative;
+  }
+
+  .related-posts video { position: absolute; left: 0; top: 0; width: 100%; height: 100%;object-fit:cover;pointer-events:none; }
+  @media(max-width:767px){
+    .related-posts video{display:none;}
+  }
+
+  
+
+  
+  .module_16300825605322728.related-posts--has-dark-overlay:after {
+    position: absolute;
+    z-index: 10;
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: #000000;
+    opacity:100%;
+  }
+  
+
+  .module_16300825605322728 .row .col-1-3:nth-child(3n):before { content: ''; background-image: url(https://resources.cerecore.net/hubfs/plus-shape-blu.png); width: 299px; height: 121px; background-size: 100%; background-repeat: no-repeat; right: -60px; top: -30px;position:absolute; }
+
+  @media(max-width:1280px){
+    .module_16300825605322728 .row .col-1-3:nth-child(3n):before{display:none;}
+  }
+</style>
+
+<link rel="stylesheet" href="https://resources.cerecore.net/hubfs/hub_generated/module_assets/1/48847197975/1741992736395/module_BOFU.min.css">
+
+<style>
+
+
+  
+
+  .lr-form video { position: absolute; left: 0; top: 0; width: 100%; height: 100%;object-fit: cover;pointer-events:none; }
+  @media(max-width:767px){
+    .lr-form video{display:none;}
+  }
+
+  @media(min-width:1401px){
+    .lr-form-social-links-responsive{display:none !important;}
+  }
+  @media(max-width:1400px){
+    .lr-form-social-links.desktop{display:none;}
+  }
+
+  .lr-form .container{position:relative;z-index:20;}
+  .lr-form-social-links ul { padding: 0; margin: 0; list-style: none; }
+  .lr-form-social-links li:not(:last-child) { margin-bottom: 10px; }
+  .lr-form-social-links { position: absolute; left: -90px; padding: 15px 10px 9px; }
+  .lr-form-social-links svg { width: 20px; }
+
+  .lr-form-social-links-responsive { padding: 10px 20px 5px; display: inline-block; }
+  .lr-form-social-links-responsive ul { padding: 0; margin: 0; list-style: none;display:flex;flex-wrap:wrap; }
+  .lr-form-social-links-responsive li:not(:last-child) {margin-right:15px; }
+  .lr-form-social-links-responsive svg { width: 20px; }
+
+  .lr-form-top-shape , .lr-form-bottom-shape{ pointer-events:none; }
+
+  .module_1627686005544107.lr-form {
+    background-size: cover;
+    background-position: center center;
+    position: relative;
+  }
+
+  
+  .module_1627686005544107.lr-form-has-dark-overlay:after {
+    position: absolute;
+    z-index: 10;
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: #000000;
+    opacity:100%;
+  }
+  
+</style>
+
+<link rel="stylesheet" href="https://resources.cerecore.net/hubfs/hub_generated/module_assets/1/48838855721/1741992734079/module_Footer.min.css">
+    
+
+    
+<!--  Added by GoogleAnalytics4 integration -->
+<script>
+var _hsp = window._hsp = window._hsp || [];
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+
+var useGoogleConsentModeV2 = true;
+var waitForUpdateMillis = 1000;
+
+
+if (!window._hsGoogleConsentRunOnce) {
+  window._hsGoogleConsentRunOnce = true;
+
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'analytics_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'wait_for_update': waitForUpdateMillis
+  });
+
+  if (useGoogleConsentModeV2) {
+    _hsp.push(['useGoogleConsentModeV2'])
+  } else {
+    _hsp.push(['addPrivacyConsentListener', function(consent){
+      var hasAnalyticsConsent = consent && (consent.allowed || (consent.categories && consent.categories.analytics));
+      var hasAdsConsent = consent && (consent.allowed || (consent.categories && consent.categories.advertisement));
+
+      gtag('consent', 'update', {
+        'ad_storage': hasAdsConsent ? 'granted' : 'denied',
+        'analytics_storage': hasAnalyticsConsent ? 'granted' : 'denied',
+        'ad_user_data': hasAdsConsent ? 'granted' : 'denied',
+        'ad_personalization': hasAdsConsent ? 'granted' : 'denied'
+      });
+    }]);
+  }
+}
+
+gtag('js', new Date());
+gtag('set', 'developer_id.dZTQ1Zm', true);
+gtag('config', 'G-QJWE1XQX0P');
+</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QJWE1XQX0P"></script>
+
+<!-- /Added by GoogleAnalytics4 integration -->
+
+
+<!-- Google Tag Manager HAWKE -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-P3XF8JV');</script>
+<!-- End Google Tag Manager -->
+<script src="https://kit.fontawesome.com/0fdee766bd.js" crossorigin="anonymous"></script>
+<link rel="amphtml" href="https://resources.cerecore.net/charge-capture-and-reconciliation-for-strong-revenue-cycle-management?hs_amp=true">
+
+<meta property="og:image" content="https://resources.cerecore.net/hubfs/Resource%20Thumbnails/GettyImages-695810036-1.jpg">
+<meta property="og:image:width" content="965">
+<meta property="og:image:height" content="643">
+<meta property="og:image:alt" content="Revenue meeting">
+<meta name="twitter:image" content="https://resources.cerecore.net/hubfs/Resource%20Thumbnails/GettyImages-695810036-1.jpg">
+<meta name="twitter:image:alt" content="Revenue meeting">
+
+<meta property="og:url" content="https://resources.cerecore.net/charge-capture-and-reconciliation-for-strong-revenue-cycle-management">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="canonical" href="https://resources.cerecore.net/charge-capture-and-reconciliation-for-strong-revenue-cycle-management">
+
+<meta property="og:type" content="article">
+<link rel="alternate" type="application/rss+xml" href="https://resources.cerecore.net/rss.xml">
+<meta name="twitter:domain" content="resources.cerecore.net">
+<script src="//platform.linkedin.com/in.js" type="text/javascript">
+    lang: en_US
+</script>
+
+<meta http-equiv="content-language" content="en">
+<link rel="stylesheet" href="//7052064.fs1.hubspotusercontent-na1.net/hubfs/7052064/hub_generated/template_assets/DEFAULT_ASSET/1775507681128/template_layout.min.css">
+
+
+<link rel="stylesheet" href="https://resources.cerecore.net/hubfs/hub_generated/template_assets/1/48661567399/1741927492945/template_style.min.css">
+<link rel="stylesheet" href="https://resources.cerecore.net/hubfs/hub_generated/template_assets/1/52054316326/1741927491937/template_blogs.min.css">
+
+
+    <!-- Fonts and FancyBox -->
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&amp;family=Open+Sans:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet">
+
+<!-- Font Awesome Icons -->
+<!--<script src="https://kit.fontawesome.com/e26f501cbd.js" crossorigin="anonymous"></script>-->
+<!-- <script src="https://kit.fontawesome.com/0fdee766bd.js" crossorigin="anonymous"></script> -->
+
+
+<!-- Lazy Loading -->
+<script src="https://cdn.jsdelivr.net/npm/lozad/dist/lozad.min.js"></script>
+
+<!-- Parallax Image and FancyBox -->
+<script src="https://resources.cerecore.net/hubfs/hub_generated/template_assets/1/48659744672/1741927499688/template_simpleParallax.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.css" integrity="sha512-nNlU0WK2QfKsuEmdcTwkeh+lhGs6uyOxuUs+n+0oXSYDok5qy0EI0lt01ZynHq6+p/tbgpZ7P+yUb+r71wqdXg==" crossorigin="anonymous" referrerpolicy="no-referrer">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.js" integrity="sha512-j7/1CJweOskkQiS5RD9W8zhEG9D9vpgByNGxPIqkO5KrXrwyDAroM9aQ9w8J7oRqwxGyz429hPVk/zR6IOMtSA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
+
+
+
+
+
+
+
+    
+
+</head>
+<body class="   hs-content-id-170405431363 hs-blog-post hs-blog-id-53849926766" style="">
+    <div class="header-container-wrapper">
+    <div class="header-container container-fluid">
+
+<div class="row-fluid-wrapper row-depth-1 row-number-1 ">
+<div class="row-fluid ">
+<div class="span12 widget-span widget-type-custom_widget " style="" data-widget-type="custom_widget" data-x="0" data-w="12">
+<div id="hs_cos_wrapper_module_162768565425361" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module"><div class="header-module">
+  <div class="header-upper">
+    <div class="container">
+      <div class="header-upper-flex">
+        <div class="header-upper-left">
+          <p> 
+            
+            
+            
+            
+            <a href=""></a></p>
+        </div>
+        <div class="header-upper-right">
+          <a href="javascript:;" class="search-toggle"><i class="fas fa-search"></i></a>
+          <div class="header-upper-menu">
+            <ul>
+              
+              <li>
+                
+                
+                
+                
+                
+                
+                <a href="https://jobs.crelate.com/portal/cerecore/" target="_blank" rel="noopener">Find Jobs</a></li>
+              
+              <li>
+                
+                
+                
+                
+                
+                
+                <a href="https://cerecoreinternational.net/" target="_blank" rel="noopener">CereCore Intl</a></li>
+              
+              <li>
+                
+                
+                
+                
+                <a href="https://events.cerecore.net">Events</a></li>
+              
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="header-search-flex">
+      <div class="container">
+        <form action="/hs-search-results" class="hs-form">
+          <input type="text" class="hs-search-field__input" name="term" autocomplete="off" aria-label="Search" placeholder="Search…">
+          <input type="hidden" name="type" value="SITE_PAGE">
+          <input type="hidden" name="type" value="LANDING_PAGE">
+          <input type="hidden" name="type" value="BLOG_POST">
+          <input type="hidden" name="type" value="LISTING_PAGE">
+          <input aria-label="Search" type="Submit" value="Submit">
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <div class="header-lower">
+    <div class="container">
+      <div class="header-lower-flex">
+        <div class="header-lower-left">
+          <span id="hs_cos_wrapper_module_162768565425361_" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_logo" style="" data-hs-cos-general-type="widget" data-hs-cos-type="logo"><a href="//www.cerecore.net" id="hs-link-module_162768565425361_" style="border-width:0px;border:0px;"><img src="https://resources.cerecore.net/hs-fs/hubfs/CereCoreLogo-4C_R.png?width=1935&amp;height=929&amp;name=CereCoreLogo-4C_R.png" class="hs-image-widget " height="929" style="height: auto;width:1935px;border-width:0px;border:0px;" width="1935" alt="" title="" srcset="https://resources.cerecore.net/hs-fs/hubfs/CereCoreLogo-4C_R.png?width=968&amp;height=465&amp;name=CereCoreLogo-4C_R.png 968w, https://resources.cerecore.net/hs-fs/hubfs/CereCoreLogo-4C_R.png?width=1935&amp;height=929&amp;name=CereCoreLogo-4C_R.png 1935w, https://resources.cerecore.net/hs-fs/hubfs/CereCoreLogo-4C_R.png?width=2903&amp;height=1394&amp;name=CereCoreLogo-4C_R.png 2903w, https://resources.cerecore.net/hs-fs/hubfs/CereCoreLogo-4C_R.png?width=3870&amp;height=1858&amp;name=CereCoreLogo-4C_R.png 3870w, https://resources.cerecore.net/hs-fs/hubfs/CereCoreLogo-4C_R.png?width=4838&amp;height=2323&amp;name=CereCoreLogo-4C_R.png 4838w, https://resources.cerecore.net/hs-fs/hubfs/CereCoreLogo-4C_R.png?width=5805&amp;height=2787&amp;name=CereCoreLogo-4C_R.png 5805w" sizes="(max-width: 1935px) 100vw, 1935px"></a></span>
+        </div>
+        <div class="header-lower-right">
+          <span id="hs_cos_wrapper_module_162768565425361_" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_menu" style="" data-hs-cos-general-type="widget" data-hs-cos-type="menu"><div id="hs_menu_wrapper_module_162768565425361_" class="hs-menu-wrapper active-branch flyouts hs-menu-flow-horizontal" role="navigation" data-sitemap-name="default" data-menu-id="48817518372" aria-label="Navigation Menu">
+ <ul role="menu">
+  <li class="hs-menu-item hs-menu-depth-1 hs-item-has-children" role="none"><a href="https://cerecore.net/services" aria-haspopup="true" aria-expanded="false" role="menuitem">Services</a>
+   <ul role="menu" class="hs-menu-children-wrapper">
+    <li class="hs-menu-item hs-menu-depth-2 hs-item-has-children" role="none"><a href="javascript:;" role="menuitem">Application Services</a>
+     <ul role="menu" class="hs-menu-children-wrapper">
+      <li class="hs-menu-item hs-menu-depth-3" role="none"><a href="https://cerecore.net/services/data-interoperability" role="menuitem">Data &amp; Interoperability</a></li>
+      <li class="hs-menu-item hs-menu-depth-3" role="none"><a href="https://cerecore.net/services/epic-services" role="menuitem">Epic</a></li>
+      <li class="hs-menu-item hs-menu-depth-3" role="none"><a href="https://cerecore.net/services/meditech-services" role="menuitem">MEDITECH</a></li>
+      <li class="hs-menu-item hs-menu-depth-3" role="none"><a href="https://cerecore.net/services/oracle-health-cerner" role="menuitem">Oracle Health (Cerner)</a></li>
+      <li class="hs-menu-item hs-menu-depth-3" role="none"><a href="https://cerecore.net/services/servicenow" role="menuitem">ServiceNow</a></li>
+     </ul></li>
+    <li class="hs-menu-item hs-menu-depth-2 hs-item-has-children" role="none"><a href="javascript:;" role="menuitem">Support Services</a>
+     <ul role="menu" class="hs-menu-children-wrapper">
+      <li class="hs-menu-item hs-menu-depth-3" role="none"><a href="https://cerecore.net/services/clinical-help-desk" role="menuitem">Clinical Help Desk</a></li>
+      <li class="hs-menu-item hs-menu-depth-3" role="none"><a href="https://cerecore.net/services/it-help-desk" role="menuitem">IT Help Desk</a></li>
+      <li class="hs-menu-item hs-menu-depth-3" role="none"><a href="https://cerecore.net/services/legacy-application-support" role="menuitem">Legacy Application Support</a></li>
+     </ul></li>
+    <li class="hs-menu-item hs-menu-depth-2 hs-item-has-children" role="none"><a href="javascript:;" role="menuitem">Advisory Services</a>
+     <ul role="menu" class="hs-menu-children-wrapper">
+      <li class="hs-menu-item hs-menu-depth-3" role="none"><a href="https://cerecore.net/services/it-strategy-leadership" role="menuitem">IT Strategy &amp; Leadership</a></li>
+      <li class="hs-menu-item hs-menu-depth-3" role="none"><a href="https://cerecore.net/services/cybersecurity" role="menuitem">Cybersecurity </a></li>
+      <li class="hs-menu-item hs-menu-depth-3" role="none"><a href="https://cerecore.net/services/revenue-cycle" role="menuitem">Revenue Cycle</a></li>
+     </ul></li>
+    <li class="hs-menu-item hs-menu-depth-2" role="none"><a href="https://cerecore.net/services/it-infrastructure-networking" role="menuitem">IT Infrastructure &amp; Networking</a></li>
+    <li class="hs-menu-item hs-menu-depth-2" role="none"><a href="https://cerecore.net/services/staffing-services" role="menuitem">Staffing Services</a></li>
+   </ul></li>
+  <li class="hs-menu-item hs-menu-depth-1" role="none"><a href="https://cerecore.net/how-we-help-clients" role="menuitem">How We Help Clients</a></li>
+  <li class="hs-menu-item hs-menu-depth-1 hs-item-has-children" role="none"><a href="https://cerecore.net/about-cerecore" aria-haspopup="true" aria-expanded="false" role="menuitem">About CereCore</a>
+   <ul role="menu" class="hs-menu-children-wrapper">
+    <li class="hs-menu-item hs-menu-depth-2" role="none"><a href="https://cerecore.net/careers" role="menuitem">Careers</a></li>
+    <li class="hs-menu-item hs-menu-depth-2" role="none"><a href="https://cerecore.net/leadership-and-history" role="menuitem">Leadership &amp; History</a></li>
+   </ul></li>
+  <li class="hs-menu-item hs-menu-depth-1 hs-item-has-children" role="none"><a href="javascript:;" aria-haspopup="true" aria-expanded="false" role="menuitem">Resources &amp; Results</a>
+   <ul role="menu" class="hs-menu-children-wrapper">
+    <li class="hs-menu-item hs-menu-depth-2" role="none"><a href="https://resources.cerecore.net" role="menuitem">Resources</a></li>
+    <li class="hs-menu-item hs-menu-depth-2" role="none"><a href="https://cerecore.net/results" role="menuitem">Results</a></li>
+    <li class="hs-menu-item hs-menu-depth-2" role="none"><a href="https://podcast.cerecore.net" role="menuitem">Podcast</a></li>
+    <li class="hs-menu-item hs-menu-depth-2" role="none"><a href="https://cerecore.net/in-the-news" role="menuitem">News</a></li>
+    <li class="hs-menu-item hs-menu-depth-2" role="none"><a href="https://cerecore.net/chime-cio-survey" role="menuitem">CHIME CIO Survey</a></li>
+   </ul></li>
+  <li class="hs-menu-item hs-menu-depth-1" role="none"><a href="https://cerecore.net/contact" role="menuitem">Connect With Us</a></li>
+ </ul>
+</div></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div></div>
+
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+    </div><!--end header -->
+</div><!--end header wrapper -->
+
+<div class="body-container-wrapper">
+    <div class="body-container container-fluid">
+
+<div class="row-fluid-wrapper row-depth-1 row-number-1 ">
+<div class="row-fluid ">
+<div class="span12 widget-span widget-type-custom_widget " style="" data-widget-type="custom_widget" data-x="0" data-w="12">
+<div id="hs_cos_wrapper_module_163001519737769" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module widget-type-blog_content" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module">
+    <!-- Hero Banner -->
+<section class="hero padding_top_large padding_bottom_large " style="background-image: url('https://resources.cerecore.net/hubfs/banner-bg.png'); background-position:center center;">
+<div class="container">
+<div class="row image_right_text_left" style="align-items:center;">
+<div class="col col-1-2">
+<div class="hero__content" style="text-align:left;">
+<h1>
+<span id="hs_cos_wrapper_name" class="hs_cos_wrapper hs_cos_wrapper_meta_field hs_cos_wrapper_type_text" style="" data-hs-cos-general-type="meta_field" data-hs-cos-type="text">Charge Capture and Reconciliation for Strong Revenue Cycle Management</span>
+</h1>
+</div>
+</div>
+<div class="col col-1-2">
+<div class="hero__media">
+<div class="hero__media-wrapper" style="text-align:right">
+<img src="https://resources.cerecore.net/hubfs/Resource%20Thumbnails/GettyImages-695810036-1.jpg">
+<div class="hero__media-accent parallax-img">
+<img src="https://resources.cerecore.net/hubfs/elipse-shape-1.png">
+</div>
+</div>            
+</div>
+</div>
+</div>
+</div>
+</section>
+<div id="hs_cos_wrapper_module_1630439023577100" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module"><!-- GLOBAL MODULE: CereCore June2021/modules/Blog Services Module -->
+<section class="blog-services-bar">
+<div class="container">
+<div class="blog-services-bar-flex">
+<h4>Stay up to date on our latest blogs and content</h4>
+<a class="btn btn--3" href="https://cerecore.net/resources-library-subscribe">Subscribe</a>
+</div>
+</div>
+</section></div>
+<div class="container post_body">
+<div class="blog-author-section">
+<p>
+By <a class="author-link" href="https://resources.cerecore.net/author/dawn-osborn">Dawn Osborn, MHS, RHIA, CPC, MT</a> | Jun 14, 2024<span></span></p>
+<p>
+<i class="fas fa-stopwatch"></i>
+<span class="read-more">3 minute read</span>
+<i class="fas fa-tags"></i>
+<a class="topic-link" href="https://resources.cerecore.net/tag/ehr-emr">EHR/EMR</a>|
+<a class="topic-link" href="https://resources.cerecore.net/tag/hospital-revenue-cycle">Hospital Revenue Cycle</a>|
+<a class="topic-link" href="https://resources.cerecore.net/tag/it-strategy">IT Strategy</a>
+</p>
+</div>
+<div class="blog_post_body_wrapper_main">
+<span id="hs_cos_wrapper_post_body" class="hs_cos_wrapper hs_cos_wrapper_meta_field hs_cos_wrapper_type_rich_text" style="" data-hs-cos-general-type="meta_field" data-hs-cos-type="rich_text"><p><span data-contrast="auto">In today’s competitive market, it is important to get credit for the work that is being completed within the healthcare continuum. The work effort within a healthcare organization or provider organization is measurable – a lab test performed, an imaging study, an office visit, a surgical procedure. Whether it be a surgery, an inpatient or outpatient hospitalization, a diagnostic test or a therapeutic intervention – the provider needs to capture the revenue and bill for the service. So how does one verify that all of the care given translates into billable revenue?</span><span data-ccp-props="{&quot;201341983&quot;:0,&quot;335559739&quot;:160,&quot;335559740&quot;:259}">&nbsp;</span></p>
+<!--more--><p><strong><span data-contrast="auto">Step 1: Determine the Charge Capture Method</span></strong><span data-ccp-props="{&quot;201341983&quot;:0,&quot;335559739&quot;:160,&quot;335559740&quot;:259}">&nbsp;</span></p>
+<p><span data-contrast="auto">The first step is to determine how the charge will be captured. Examine how the clinical system or EHR module is being used for charge capture and make sure that all billing codes have been entered.&nbsp;</span><span data-ccp-props="{&quot;201341983&quot;:0,&quot;335559739&quot;:160,&quot;335559740&quot;:259}">&nbsp;</span></p>
+<p><span data-contrast="auto">If unsure, create or run a report to verify that every test, procedure, visit, etc has a billing code(s) attached that is valid and accurate within the system.&nbsp;</span><span data-ccp-props="{&quot;201341983&quot;:0,&quot;335559739&quot;:160,&quot;335559740&quot;:259}">&nbsp;</span></p>
+<p><span data-contrast="auto">At least annually, complete a review of all billing codes to make sure the attached cpt or hcpcs codes have not changed or been updated. In addition, make sure the pricing is accurate. If there is not a billing method within the clinical system, then document a manual workflow for charge capture.</span><span data-ccp-props="{&quot;201341983&quot;:0,&quot;335559739&quot;:160,&quot;335559740&quot;:259}">&nbsp;</span></p>
+<p><strong><span data-contrast="auto">Step 2: Verify Charge Accuracy</span></strong><span data-ccp-props="{&quot;201341983&quot;:0,&quot;335559739&quot;:160,&quot;335559740&quot;:259}">&nbsp;</span></p>
+<p><span data-contrast="auto">Once you are certain that all charges are being captured within the clinical system, the next step is to review the billing side of things. Charge Accuracy can be defined as: the capture of revenue and billing codes for all performed procedures, tests or services on the date of service they are performed – e.g. Did </span><span>all</span><span data-contrast="auto"> charges created by the clinical system post to the financial billing system?</span><span data-ccp-props="{&quot;201341983&quot;:0,&quot;335559739&quot;:160,&quot;335559740&quot;:259}">&nbsp;</span></p>
+<p><em>There are 5-6 key items needed for posting charges in patient accounting:&nbsp;&nbsp;</em></p>
+<ul>
+<li><span data-contrast="auto">patient account number</span><span data-ccp-props="{&quot;201341983&quot;:0,&quot;335559739&quot;:160,&quot;335559740&quot;:259}">&nbsp;</span></li>
+<li><span data-contrast="auto">date of service</span><span data-ccp-props="{&quot;201341983&quot;:0,&quot;335559739&quot;:160,&quot;335559740&quot;:259}">&nbsp;</span></li>
+<li><span data-contrast="auto">billing code (cpt, hcpcs)</span><span data-ccp-props="{&quot;201341983&quot;:0,&quot;335559739&quot;:160,&quot;335559740&quot;:259}">&nbsp;</span></li>
+<li><span data-contrast="auto">quantity</span><span data-ccp-props="{&quot;201341983&quot;:0,&quot;335559739&quot;:160,&quot;335559740&quot;:259}">&nbsp;</span></li>
+<li><span data-contrast="auto">charge</span><span data-ccp-props="{&quot;201341983&quot;:0,&quot;335559739&quot;:160,&quot;335559740&quot;:259}">&nbsp;</span></li>
+<li><span data-contrast="auto">provider (for professional billing only)</span><span data-ccp-props="{&quot;201341983&quot;:0,&quot;335559739&quot;:160,&quot;335559740&quot;:259}">&nbsp;</span></li>
+</ul>
+<p><span data-contrast="auto">Also, If any of the billing data is rejected for any reason, then a responsible individual(s) needs to be assigned to correct the reason why the charges did not post accurately. These should also be corrected immediately (within 1-2 business days) so that they post on the account and are sent to Coding for review. Some of the reasons charges may reject at the time of posting in patient accounting include:&nbsp;</span><span data-contrast="auto"></span></p>
+<ul>
+<li><span data-contrast="auto">incorrect account chosen for that service date/range of dates</span><span data-ccp-props="{&quot;201341983&quot;:0,&quot;335559739&quot;:160,&quot;335559740&quot;:259}">&nbsp;</span></li>
+<li><span data-contrast="auto">incorrect date of service sent with the billing code</span><span data-ccp-props="{&quot;201341983&quot;:0,&quot;335559739&quot;:160,&quot;335559740&quot;:259}">&nbsp;</span></li>
+<li><span data-contrast="auto">inactive or invalid billing codes</span><span data-ccp-props="{&quot;201341983&quot;:0,&quot;335559739&quot;:160,&quot;335559740&quot;:259}">&nbsp;</span></li>
+<li><span data-contrast="auto">inactive or invalid provider</span><span data-ccp-props="{&quot;201341983&quot;:0,&quot;335559739&quot;:160,&quot;335559740&quot;:259}">&nbsp;</span></li>
+</ul>
+<p><strong><span data-contrast="auto">Step 3: Perform Coding Review</span></strong><span data-ccp-props="{&quot;201341983&quot;:0,&quot;335559739&quot;:160,&quot;335559740&quot;:259}">&nbsp;</span></p>
+<p><span data-contrast="auto">Whether the billing be institutional or professional, the accounts or charges need a diagnosis entered. This can be at the account level (for institutional billing) or at the transaction level (for professional billing). Also, there may be surgical procedures that need to be coded by a certified coder.&nbsp;</span><span data-ccp-props="{&quot;201341983&quot;:0,&quot;335559739&quot;:160,&quot;335559740&quot;:259}">&nbsp;</span></p>
+<p><span data-contrast="auto">Another function of Coding is to run the accounts through an encoder for compliant coding edits. At that time, the coders may need to add or remove procedure codes, CPT/HCPCS codes and/or modifiers to complete the process of compliant coding and billing. Regardless of the circumstance, coding review is a critical part of medical billing and directly drives compliance and reimbursement.</span><span data-ccp-props="{&quot;201341983&quot;:0,&quot;335559739&quot;:160,&quot;335559740&quot;:259}">&nbsp;</span></p>
+<p><strong><span data-contrast="auto">Step 4: Establish Metrics</span></strong><span data-ccp-props="{&quot;201341983&quot;:0,&quot;335559739&quot;:160,&quot;335559740&quot;:259}">&nbsp;</span></p>
+<p><span data-contrast="auto">A metric in healthcare billing is a measured statistic designed to benchmark accuracy and timeliness as they pertain to the revenue cycle.&nbsp; There are a few key metrics worth mentioning as they relate to Charge Capture.</span><span data-ccp-props="{&quot;201341983&quot;:0,&quot;335559739&quot;:160,&quot;335559740&quot;:259}">&nbsp;</span></p>
+<ul>
+<li data-leveltext="" data-font="Symbol" data-listid="7" data-list-defn-props="{&quot;335552541&quot;:1,&quot;335559682&quot;:7,&quot;335559685&quot;:720,&quot;335559991&quot;:360,&quot;469769226&quot;:&quot;Symbol&quot;,&quot;469769242&quot;:[8226],&quot;469777803&quot;:&quot;left&quot;,&quot;469777804&quot;:&quot;&quot;,&quot;469777815&quot;:&quot;hybridMultilevel&quot;}" aria-setsize="-1" data-aria-posinset="1" data-aria-level="1"><span data-contrast="auto">Late Charges: Each clinical system must enter charges in a timely fashion, 3 days is a common metric. If charges are entered past that date, they are considered “late charges” and they may result in having to refile claims that have already gone out to payers. This in turn can result in denials for duplicate claims.&nbsp;Days Not Final Coded: Coding must code accounts, usually within 4 days of service date or discharge. Anything past the 4-day standard is considered “days not final coded (DNFC)”.</span><span data-ccp-props="{&quot;201341983&quot;:0,&quot;335559739&quot;:160,&quot;335559740&quot;:259}">&nbsp;</span></li>
+</ul>
+<ul>
+<li data-leveltext="" data-font="Symbol" data-listid="7" data-list-defn-props="{&quot;335552541&quot;:1,&quot;335559682&quot;:7,&quot;335559685&quot;:720,&quot;335559991&quot;:360,&quot;469769226&quot;:&quot;Symbol&quot;,&quot;469769242&quot;:[8226],&quot;469777803&quot;:&quot;left&quot;,&quot;469777804&quot;:&quot;&quot;,&quot;469777815&quot;:&quot;hybridMultilevel&quot;}" aria-setsize="-1" data-aria-posinset="2" data-aria-level="1"><span data-contrast="auto">Days not Final Billed: Next, bill cutoff must occur, and claims must be created. Each day that the bill cutoff cannot occur due to billing flags that need attention are called “days not final billed (DNFB)”. This could include items such as missing guarantor data or missing subscriber information, etc.&nbsp;</span><span data-ccp-props="{&quot;201341983&quot;:0,&quot;335559739&quot;:160,&quot;335559740&quot;:259}">&nbsp;</span></li>
+</ul>
+<ul>
+<li data-leveltext="" data-font="Symbol" data-listid="7" data-list-defn-props="{&quot;335552541&quot;:1,&quot;335559682&quot;:7,&quot;335559685&quot;:720,&quot;335559991&quot;:360,&quot;469769226&quot;:&quot;Symbol&quot;,&quot;469769242&quot;:[8226],&quot;469777803&quot;:&quot;left&quot;,&quot;469777804&quot;:&quot;&quot;,&quot;469777815&quot;:&quot;hybridMultilevel&quot;}" aria-setsize="-1" data-aria-posinset="3" data-aria-level="1"><span data-contrast="auto">Clean Claims: The Clean Claim rate means that when the electronic claims are sent to the clearinghouse, they should not flag again for incorrect diagnosis or missing charge or insurance data. If that occurs, then a biller has to intervene. So having a clean claim rate under 5% is ideal.</span><span data-ccp-props="{&quot;201341983&quot;:0,&quot;335559739&quot;:160,&quot;335559740&quot;:259}">&nbsp;</span></li>
+<li><span data-contrast="auto">Denial Rate: If accounts are coded accurately with all required billing information, then they ideally will not be denied. According to the Healthcare Financial Management Association (HFMA), the average denial rate is 5-10% of total billed charges overall, but the goal should be less than 10%.</span></li>
+</ul>
+<p><strong><span data-contrast="auto">Step 5: Measure Progress</span></strong><span data-ccp-props="{&quot;201341983&quot;:0,&quot;335559739&quot;:160,&quot;335559740&quot;:259}">&nbsp;</span><span data-ccp-props="{&quot;201341983&quot;:0,&quot;335559739&quot;:160,&quot;335559740&quot;:259}"></span></p>
+<p><span data-contrast="auto">Since each of these steps is measurable, progress toward overall revenue cycle “good health” can be monitored.&nbsp;Once the methods for charge capture are documented and the metrics established, a baseline can be created and then measured against the national average to see improvements. This can then be reported and trended for areas of improvement.</span><span><br></span></p>
+<p><strong><span data-contrast="auto">Summary</span></strong><span data-ccp-props="{&quot;201341983&quot;:0,&quot;335559739&quot;:160,&quot;335559740&quot;:259}">&nbsp;</span></p>
+<p><span data-contrast="auto">By verifying charge capture methods, measuring charge accuracy, verifying accurate coding and monitoring key charge-related metrics, a healthcare organization is planting the seeds for a strong revenue cycle and maximum charge capture and reimbursement.</span><span data-ccp-props="{&quot;201341983&quot;:0,&quot;335559739&quot;:160,&quot;335559740&quot;:259}">&nbsp;</span></p>
+<p style="font-weight: bold;">References</p>
+<ul>
+<li data-leveltext="" data-font="Symbol" data-listid="9" data-list-defn-props="{&quot;335552541&quot;:1,&quot;335559685&quot;:720,&quot;335559991&quot;:360,&quot;469769226&quot;:&quot;Symbol&quot;,&quot;469769242&quot;:[8226],&quot;469777803&quot;:&quot;left&quot;,&quot;469777804&quot;:&quot;&quot;,&quot;469777815&quot;:&quot;hybridMultilevel&quot;}" aria-setsize="-1" data-aria-posinset="1" data-aria-level="1"><span data-contrast="auto"><a href="https://www.hfma.org/revenue-cycle/kpis/7-kpis-providers-should-be-tracking/#:~:text=Initial%20denials&amp;text=The%20industry%20average%20denial%20rate,submitted%20in%20the%20same%20timeframe" rel="noopener" target="_blank" style="font-weight: bold;">HFMA Metrics</a></span></li>
+</ul></span>
+</div>
+</div>
+</div>
+
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+<div class="row-fluid-wrapper row-depth-1 row-number-2 ">
+<div class="row-fluid ">
+<div class="span12 widget-span widget-type-custom_widget " style="" data-widget-type="custom_widget" data-x="0" data-w="12">
+<div id="hs_cos_wrapper_module_16300202690812160" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module">
+	</div>
+
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+<div class="row-fluid-wrapper row-depth-1 row-number-3 ">
+<div class="row-fluid ">
+<div class="span12 widget-span widget-type-custom_widget " style="" data-widget-type="custom_widget" data-x="0" data-w="12">
+<div id="hs_cos_wrapper_module_1630079737971343" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module widget-type-blog_content" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module">
+    <div class="blog-author-section">
+<div class="container">
+<div class="blog-author-wapper">
+<div class="blog-author-image">
+<img src="">
+</div>
+<h5>
+About the Author:<br>
+Dawn Osborn, MHS, RHIA, CPC, MT
+</h5>
+<p>Healthcare Information Technology Consultant, CereCore</p>
+<div class="author-linkedin">
+<a href="https://www.linkedin.com/in/dawn-osborn-1298a4134/">
+<i class="fab fa-linkedin-in"></i>
+</a>
+</div>
+<div class="read-bio-link">
+<a href="javascript:;">Read Bio <i class="fas fa-angle-double-right"></i></a>
+</div>
+<div class="author-bio-popup" style="display:none;">
+<div class="container">
+<div class="popup-listing-main-wrapper">
+<div class="popup-listing-upper">
+<div class="popup-listing-upper-left" style="background-image:url();">
+</div>
+<div class="popup-listing-upper-right">
+<div class="popup-list-upper-wrapper">
+<h4>Dawn Osborn, MHS, RHIA, CPC, MT</h4>
+<p>Healthcare Information Technology Consultant, CereCore</p>
+<button data-fancybox-close="" class="btn-close"><i class="fas fa-times" aria-hidden="true"></i></button>
+</div>
+</div>
+</div>
+<div class="popup-listing-lower">
+Healthcare Information Technology Consultant, CereCore
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+<div class="row-fluid-wrapper row-depth-1 row-number-4 ">
+<div class="row-fluid ">
+<div class="span12 widget-span widget-type-custom_widget " style="" data-widget-type="custom_widget" data-x="0" data-w="12">
+<div id="hs_cos_wrapper_module_16300825605322728" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module"><section class="cards related-posts module_16300825605322728 padding_top_medium padding_bottom_medium " style="background-color:#ffffff;">
+  <div class="container">
+
+    <div class="related-posts__intro" style="text-align:center;">
+      <h2>Related Posts</h2>
+      
+    </div>
+
+    
+    
+    
+    
+    <div class="row row--card-row  accent-right-margin ">      
+      
+      <div class="col col-1-3">
+        <div class="cards__col-image">
+          <a href="https://resources.cerecore.net/what-retail-taught-this-healthcare-leader-about-the-patient-experience"><img src="https://resources.cerecore.net/hubfs/Resource%20Thumbnails/GettyImages-2195105900-1.jpg" alt="What Retail Taught This Healthcare Leader About the Patient Experience"></a>
+        </div>
+        <div class="cards__col-content">
+          <a href="https://resources.cerecore.net/what-retail-taught-this-healthcare-leader-about-the-patient-experience"><h4>What Retail Taught This Healthcare Leader About the Patient Experience</h4></a>
+          <div class="cards__tag-list">
+            <div class="cards__tag-list-wrapper">
+              
+              <a class="blog-post__tag-link" href="https://resources.cerecore.net/tag/ehr-emr">EHR/EMR</a>,
+              
+              <a class="blog-post__tag-link" href="https://resources.cerecore.net/tag/epic">Epic</a>,
+              
+              <a class="blog-post__tag-link" href="https://resources.cerecore.net/tag/it-advisory">IT Advisory</a>,
+              
+              <a class="blog-post__tag-link" href="https://resources.cerecore.net/tag/client-perspectives">Client Perspectives</a>,
+              
+              <a class="blog-post__tag-link" href="https://resources.cerecore.net/tag/it-strategy">IT Strategy</a>
+              
+              <div class="cards__tags-time-read">
+                
+                
+                
+                
+                
+                2 minute read
+                
+
+              </div>
+            </div>
+          </div>
+
+          <div class="cards__more-link-wrapper">             
+            <a class="cards__more-link" href="https://resources.cerecore.net/what-retail-taught-this-healthcare-leader-about-the-patient-experience">Read More <i class="fas fa-angle-double-right"></i></a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col col-1-3">
+        <div class="cards__col-image">
+          <a href="https://resources.cerecore.net/the-truth-about-how-hospital-size-shapes-it-strategy"><img src="https://resources.cerecore.net/hubfs/Resource%20Thumbnails/GettyImages-2169088809-2.jpg" alt="The Truth About How Hospital Size Shapes IT Strategy"></a>
+        </div>
+        <div class="cards__col-content">
+          <a href="https://resources.cerecore.net/the-truth-about-how-hospital-size-shapes-it-strategy"><h4>The Truth About How Hospital Size Shapes IT Strategy</h4></a>
+          <div class="cards__tag-list">
+            <div class="cards__tag-list-wrapper">
+              
+              <a class="blog-post__tag-link" href="https://resources.cerecore.net/tag/blog">Blog</a>,
+              
+              <a class="blog-post__tag-link" href="https://resources.cerecore.net/tag/infographic-checklist">Infographic / Checklist</a>
+              
+              <div class="cards__tags-time-read">
+                
+                
+                
+                
+                
+                6 minute read
+                
+
+              </div>
+            </div>
+          </div>
+
+          <div class="cards__more-link-wrapper">             
+            <a class="cards__more-link" href="https://resources.cerecore.net/the-truth-about-how-hospital-size-shapes-it-strategy">Read More <i class="fas fa-angle-double-right"></i></a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col col-1-3">
+        <div class="cards__col-image">
+          <a href="https://resources.cerecore.net/the-strong-partnerships-and-talent-strategies-healthcare-cios-need"><img src="https://resources.cerecore.net/hubfs/Resource%20Thumbnails/GettyImages-2204034143-1.jpg" alt="The Strong Partnerships and Talent Strategies Healthcare CIOs Need"></a>
+        </div>
+        <div class="cards__col-content">
+          <a href="https://resources.cerecore.net/the-strong-partnerships-and-talent-strategies-healthcare-cios-need"><h4>The Strong Partnerships and Talent Strategies Healthcare CIOs Need</h4></a>
+          <div class="cards__tag-list">
+            <div class="cards__tag-list-wrapper">
+              
+              <a class="blog-post__tag-link" href="https://resources.cerecore.net/tag/blog">Blog</a>,
+              
+              <a class="blog-post__tag-link" href="https://resources.cerecore.net/tag/infographic-checklist">Infographic / Checklist</a>
+              
+              <div class="cards__tags-time-read">
+                
+                
+                
+                
+                
+                4 minute read
+                
+
+              </div>
+            </div>
+          </div>
+
+          <div class="cards__more-link-wrapper">             
+            <a class="cards__more-link" href="https://resources.cerecore.net/the-strong-partnerships-and-talent-strategies-healthcare-cios-need">Read More <i class="fas fa-angle-double-right"></i></a>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+    <div class="row">
+      <div class="col col-full-width">
+        <div class="related-posts__btn-block justify-content-center">
+          
+
+          
+          
+        </div>
+      </div>
+    </div>
+  </div>
+  
+
+  
+
+  
+  
+</section>
+
+
+</div>
+
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+<div class="row-fluid-wrapper row-depth-1 row-number-5 ">
+<div class="row-fluid ">
+<div class="span12 widget-span widget-type-custom_widget " style="" data-widget-type="custom_widget" data-x="0" data-w="12">
+<div id="hs_cos_wrapper_module_1627686005544107" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module"><section class="lr-form module_1627686005544107 padding_bottom_medium padding_top_medium   lr-form--has-image-background" style="background-image: url('https://resources.cerecore.net/hubfs/bofu-bg.png');background-position:center center;" id="form-section">
+  <div class="container">
+    <div class="row lr-form-row">
+      
+      <div class="col col-1-2">
+        <div class="lr-form__form-wrapper">
+          <div class="lr-form__form-header">
+            <h2>Put Us to Work</h2>
+          </div>
+          <p class="font-24">
+            Let us know how we can support your initiatives and take some of the heavy lifting from healthcare IT.
+          </p>
+          
+          <div class="lr-form__embed-code-wrapper">
+            <span id="hs_cos_wrapper_module_1627686005544107_" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_form" style="" data-hs-cos-general-type="widget" data-hs-cos-type="form"><h3 id="hs_cos_wrapper_form_941432465_title" class="hs_cos_wrapper form-title" data-hs-cos-general-type="widget_field" data-hs-cos-type="text"></h3>
+
+<div id="hs_form_target_form_941432465"></div>
+
+
+
+
+
+
+
+
+
+</span>
+          </div>
+        </div>
+      </div>
+      <div class="col col-1-2" style="text-align:;">
+        
+        <div class="lr-form__accent_image">
+          
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  
+  
+</section> 
+
+
+</div>
+
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+    </div><!--end body -->
+</div><!--end body wrapper -->
+
+<div class="footer-container-wrapper">
+    <div class="footer-container container-fluid">
+
+<div class="row-fluid-wrapper row-depth-1 row-number-1 ">
+<div class="row-fluid ">
+<div class="span12 widget-span widget-type-custom_widget " style="" data-widget-type="custom_widget" data-x="0" data-w="12">
+<div id="hs_cos_wrapper_module_162768565624563" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module"><div class="footer-module">
+  <div class="footer-upper">
+    <div class="container">
+      <div class="footer-upper-flex">
+        <div class="footer-upper-left">
+          
+          
+          
+          
+          
+          <a href="https://cerecore.net" class="footer-logo">
+            <img src="https://resources.cerecore.net/hubfs/footer-logo.png" alt="CereCore Logo">
+          </a><br>
+          <a href="tel:8552769112" class="phone-number">855.276.9112</a>
+          <p></p>
+          <a href="mailto:info@cerecore.net" class="email-adress"> <i class="fas fa-envelope-open"></i> info@cerecore.net</a>
+          <div class="social-links">
+            <p>
+              Connect With Us:
+            </p>
+            <ul>
+              
+              <li>
+                
+                
+                
+                
+                
+                <a href="https://www.linkedin.com/company/cerecore-tech">
+                  
+                    <span id="hs_cos_wrapper_module_162768565624563_" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_icon" style="" data-hs-cos-general-type="widget" data-hs-cos-type="icon"><svg version="1.0" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 448 512" aria-hidden="true"><g id="LinkedIn1_layer"><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z" /></g></svg></span>
+                  
+                </a>
+              </li>
+              
+              <li>
+                
+                
+                
+                
+                
+                <a href="https://twitter.com/CereCore">
+                  
+                    <span id="hs_cos_wrapper_module_1623753596630449_" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_icon" style="" data-hs-cos-general-type="widget" data-hs-cos-type="icon">
+                      <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 448 512"><path d="M64 32C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64zm297.1 84L257.3 234.6 379.4 396H283.8L209 298.1 123.3 396H75.8l111-126.9L69.7 116h98l67.7 89.5L313.6 116h47.5zM323.3 367.6L153.4 142.9H125.1L296.9 367.6h26.3z" /></svg>
+                    </span>
+                  
+                </a>
+              </li>
+              
+              <li>
+                
+                
+                
+                
+                
+                <a href="https://www.facebook.com/cerecore/">
+                  
+                    <span id="hs_cos_wrapper_module_162768565624563_" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_icon" style="" data-hs-cos-general-type="widget" data-hs-cos-type="icon"><svg version="1.0" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 448 512" aria-hidden="true"><g id="Facebook Square2_layer"><path d="M400 32H48A48 48 0 0 0 0 80v352a48 48 0 0 0 48 48h137.25V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.27c-30.81 0-40.42 19.12-40.42 38.73V256h68.78l-11 71.69h-57.78V480H400a48 48 0 0 0 48-48V80a48 48 0 0 0-48-48z" /></g></svg></span>
+                  
+                </a>
+              </li>
+              
+              <li>
+                
+                
+                
+                
+                
+                
+                
+                <a href="https://www.youtube.com/@cerecore" target="_blank" rel="noopener">
+                  
+                    <span id="hs_cos_wrapper_module_162768565624563_" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_icon" style="" data-hs-cos-general-type="widget" data-hs-cos-type="icon"><svg version="1.0" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 576 512" aria-hidden="true"><g id="YouTube3_layer"><path d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z" /></g></svg></span>
+                  
+                </a>
+              </li>
+              
+            </ul>
+          </div>
+        </div>
+        <div class="footer-upper-right">
+          <span id="hs_cos_wrapper_module_162768565624563_" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_simple_menu" style="" data-hs-cos-general-type="widget" data-hs-cos-type="simple_menu"><div id="hs_menu_wrapper_module_162768565624563_" class="hs-menu-wrapper active-branch flyouts hs-menu-flow-horizontal" role="navigation" data-sitemap-name="" data-menu-id="" aria-label="Navigation Menu">
+ <ul role="menu" class="active-branch">
+  <li class="hs-menu-item hs-menu-depth-1 hs-item-has-children" role="none"><a href="https://cerecore.net/services" aria-haspopup="true" aria-expanded="false" role="menuitem" target="_self">Services</a>
+   <ul role="menu" class="hs-menu-children-wrapper">
+    <li class="hs-menu-item hs-menu-depth-2 hs-item-has-children" role="none"><a href="javascript:void(0);" role="menuitem" target="_self">Application Services</a>
+     <ul role="menu" class="hs-menu-children-wrapper">
+      <li class="hs-menu-item hs-menu-depth-3" role="none"><a href="https://cerecore.net/services/data-interoperability" role="menuitem" target="_self">Data &amp; Interoperability</a></li>
+      <li class="hs-menu-item hs-menu-depth-3" role="none"><a href="https://cerecore.net/services/epic-services" role="menuitem" target="_self">Epic </a></li>
+      <li class="hs-menu-item hs-menu-depth-3" role="none"><a href="https://cerecore.net/services/meditech-services" role="menuitem" target="_self">MEDITECH </a></li>
+      <li class="hs-menu-item hs-menu-depth-3" role="none"><a href="https://cerecore.net/services/oracle-health-cerner" role="menuitem" target="_self">Oracle Health (Cerner)</a></li>
+      <li class="hs-menu-item hs-menu-depth-3" role="none"><a href="https://cerecore.net/services/servicenow" role="menuitem" target="_self">ServiceNow</a></li>
+     </ul></li>
+    <li class="hs-menu-item hs-menu-depth-2 hs-item-has-children" role="none"><a href="javascript:void(0);" role="menuitem" target="_self">Support Services</a>
+     <ul role="menu" class="hs-menu-children-wrapper">
+      <li class="hs-menu-item hs-menu-depth-3" role="none"><a href="https://cerecore.net/services/clinical-help-desk" role="menuitem" target="_self">Clinical Help Desk</a></li>
+      <li class="hs-menu-item hs-menu-depth-3" role="none"><a href="https://cerecore.net/services/it-help-desk" role="menuitem" target="_self">IT Help Desk</a></li>
+      <li class="hs-menu-item hs-menu-depth-3" role="none"><a href="https://cerecore.net/services/legacy-application-support" role="menuitem" target="_self">Legacy Application Support</a></li>
+     </ul></li>
+    <li class="hs-menu-item hs-menu-depth-2" role="none"><a href="https://cerecore.net/services/it-infrastructure-networking" role="menuitem" target="_self">IT Infrastructure &amp; Networking</a></li>
+    <li class="hs-menu-item hs-menu-depth-2" role="none"><a href="https://cerecore.net/services/staffing-services" role="menuitem" target="_self">Staffing Services</a></li>
+    <li class="hs-menu-item hs-menu-depth-2 hs-item-has-children" role="none"><a href="javascript:void(0);" role="menuitem" target="_self">Advisory Services</a>
+     <ul role="menu" class="hs-menu-children-wrapper">
+      <li class="hs-menu-item hs-menu-depth-3" role="none"><a href="https://cerecore.net/services/it-strategy-leadership" role="menuitem" target="_self">IT Strategy &amp; Leadership</a></li>
+      <li class="hs-menu-item hs-menu-depth-3" role="none"><a href="https://cerecore.net/services/cybersecurity" role="menuitem" target="_self">Cybersecurity</a></li>
+      <li class="hs-menu-item hs-menu-depth-3" role="none"><a href="https://cerecore.net/services/revenue-cycle" role="menuitem" target="_self">Revenue Cycle</a></li>
+     </ul></li>
+   </ul></li>
+  <li class="hs-menu-item hs-menu-depth-1 hs-item-has-children active-branch" role="none"><a href="https://cerecore.net/about-cerecore" aria-haspopup="true" aria-expanded="false" role="menuitem" target="_self">About CereCore</a>
+   <ul role="menu" class="hs-menu-children-wrapper active-branch">
+    <li class="hs-menu-item hs-menu-depth-2" role="none"><a href="https://cerecore.net/how-we-help-clients" role="menuitem" target="_self">How we help clients</a></li>
+    <li class="hs-menu-item hs-menu-depth-2 hs-item-has-children" role="none"><a href="https://cerecore.net/careers" role="menuitem" target="_self">Careers</a>
+     <ul role="menu" class="hs-menu-children-wrapper">
+      <li class="hs-menu-item hs-menu-depth-3" role="none"><a href="https://jobs.crelate.com/portal/cerecore/" role="menuitem" target="_self">Find Jobs</a></li>
+     </ul></li>
+    <li class="hs-menu-item hs-menu-depth-2" role="none"><a href="https://cerecoreinternational.net/" role="menuitem" target="_self">CereCore International</a></li>
+    <li class="hs-menu-item hs-menu-depth-2 active hs-item-has-children active-branch" role="none"><a href="https://resources.cerecore.net" role="menuitem" target="_self">Resources</a>
+     <ul role="menu" class="hs-menu-children-wrapper">
+      <li class="hs-menu-item hs-menu-depth-3" role="none"><a href="https://meditech-library.cerecore.net" role="menuitem" target="_self">MEDITECH Resource Library Login</a></li>
+      <li class="hs-menu-item hs-menu-depth-3" role="none"><a href="https://events.cerecore.net" role="menuitem" target="_self">Events</a></li>
+     </ul></li>
+   </ul></li>
+ </ul>
+</div></span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer-lower">
+    <div class="footer-lower-container">
+      <p>© <script type="text/javascript">document.write(new Date().getFullYear());</script> All Rights Reserved CereCore
+        
+        <span>
+          
+          
+          
+          
+          
+          <a href="https://cerecore.net/terms-of-service">
+            Terms of Service
+          </a>
+        </span>
+        
+        <span>
+          
+          
+          
+          
+          
+          <a href="https://cerecore.net/privacy-policy#california-direct-marketing-privacy-rights">
+            California Notice at Collection
+          </a>
+        </span>
+        
+        <span>
+          
+          
+          
+          
+          
+          <a href="https://cerecore.net/privacy-policy">
+            Privacy Policy
+          </a>
+        </span>
+        
+        <span>
+          
+          
+          
+          
+          
+          <a href="https://cerecore.net/responsible-disclosure">
+            Responsible Disclosure
+          </a>
+        </span>
+        
+      </p>
+    </div>
+  </div>
+</div></div>
+
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+    </div><!--end footer -->
+</div><!--end footer wrapper -->
+
+    
+<!-- HubSpot performance collection script -->
+<script defer src="/hs/hsstatic/content-cwv-embed/static-1.1293/embed.js"></script>
+<script src="https://resources.cerecore.net/hubfs/hub_generated/template_assets/1/52077185900/1741927502589/template_jquery-2.22.min.js"></script>
+<script src="https://resources.cerecore.net/hubfs/hub_generated/template_assets/1/52077144219/1741927503137/template_isotop.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-migrate/3.3.2/jquery-migrate.min.js"></script>
+
+
+
+<script>
+  var images = document.querySelectorAll('.parallax-img');
+  new simpleParallax(images, {
+    overflow: true,
+    scale:1.5,
+    transition: 'cubic-bezier(0,0,1,1)',
+  });
+
+
+  //   $('[data-fancybox]').fancybox({
+  //     helpers: {
+  //       overlay: {
+  //         locked: false
+  //       }
+  //     }
+  //   });
+
+</script>
+
+<script>
+var hsVars = hsVars || {}; hsVars['language'] = 'en';
+</script>
+
+<script src="/hs/hsstatic/cos-i18n/static-1.53/bundles/project.js"></script>
+<script src="https://resources.cerecore.net/hubfs/hub_generated/module_assets/1/48793523334/1741992721862/module_Header.min.js"></script>
+<script src="/hs/hsstatic/keyboard-accessible-menu-flyouts/static-1.17/bundles/project.js"></script>
+
+<script>
+  $('.read-bio-link a').on('click',function(){
+    $('.author-bio-popup').fadeIn();
+  })
+  $('.btn-close').on('click',function(){
+    $('.author-bio-popup').fadeOut();
+  })
+</script>
+
+
+    <!--[if lte IE 8]>
+    <script charset="utf-8" src="https://js.hsforms.net/forms/v2-legacy.js"></script>
+    <![endif]-->
+
+<script data-hs-allowed="true" src="/_hcms/forms/v2.js"></script>
+
+    <script data-hs-allowed="true">
+        var options = {
+            portalId: '2680158',
+            formId: 'f0010c79-002b-49d5-913a-ae4f5f73b93e',
+            formInstanceId: '4531',
+            
+            pageId: '170405431363',
+            
+            region: 'na1',
+            
+            
+            
+            
+            pageName: "Charge Capture and Reconciliation for Strong Revenue Cycle Management",
+            
+            
+            
+            inlineMessage: "Thanks for submitting the form.",
+            
+            
+            rawInlineMessage: "Thanks for submitting the form.",
+            
+            
+            hsFormKey: "a9d5e8cd821d5a41d9ec73960f626269",
+            
+            
+            css: '',
+            target: '#hs_form_target_form_941432465',
+            
+            
+            
+            
+            
+            
+            
+            contentType: "blog-post",
+            
+            
+            
+            formsBaseUrl: '/_hcms/forms/',
+            
+            
+            
+            formData: {
+                cssClass: 'hs-form stacked hs-custom-form'
+            }
+        };
+
+        options.getExtraMetaDataBeforeSubmit = function() {
+            var metadata = {};
+            
+
+            if (hbspt.targetedContentMetadata) {
+                var count = hbspt.targetedContentMetadata.length;
+                var targetedContentData = [];
+                for (var i = 0; i < count; i++) {
+                    var tc = hbspt.targetedContentMetadata[i];
+                     if ( tc.length !== 3) {
+                        continue;
+                     }
+                     targetedContentData.push({
+                        definitionId: tc[0],
+                        criterionId: tc[1],
+                        smartTypeId: tc[2]
+                     });
+                }
+                metadata["targetedContentMetadata"] = JSON.stringify(targetedContentData);
+            }
+
+            return metadata;
+        };
+
+        hbspt.forms.create(options);
+    </script>
+
+<script src="https://resources.cerecore.net/hubfs/hub_generated/module_assets/1/48838855721/1741992734079/module_Footer.min.js"></script>
+
+<!-- Start of HubSpot Analytics Code -->
+<script type="text/javascript">
+var _hsq = _hsq || [];
+_hsq.push(["setContentType", "blog-post"]);
+_hsq.push(["setCanonicalUrl", "https:\/\/resources.cerecore.net\/charge-capture-and-reconciliation-for-strong-revenue-cycle-management"]);
+_hsq.push(["setPageId", "170405431363"]);
+_hsq.push(["setContentMetadata", {
+    "contentPageId": 170405431363,
+    "legacyPageId": "170405431363",
+    "contentFolderId": null,
+    "contentGroupId": 53849926766,
+    "abTestId": null,
+    "languageVariantId": 170405431363,
+    "languageCode": "en",
+    
+    
+}]);
+</script>
+
+<script type="text/javascript" id="hs-script-loader" async defer src="/hs/scriptloader/2680158.js"></script>
+<!-- End of HubSpot Analytics Code -->
+
+
+<script type="text/javascript">
+var hsVars = {
+    render_id: "551d5ddd-78e4-4772-a8cb-4371493ee073",
+    ticks: 1775547896229,
+    page_id: 170405431363,
+    
+    content_group_id: 53849926766,
+    portal_id: 2680158,
+    app_hs_base_url: "https://app.hubspot.com",
+    cp_hs_base_url: "https://cp.hubspot.com",
+    language: "en",
+    analytics_page_type: "blog-post",
+    scp_content_type: "",
+    
+    analytics_page_id: "170405431363",
+    category_id: 3,
+    folder_id: 0,
+    is_hubspot_user: false
+}
+</script>
+
+
+<script defer src="/hs/hsstatic/HubspotToolsMenu/static-1.640/js/index.js"></script>
+
+<!-- Start of HubSpot Embed Code -->
+<script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/2680158.js"></script>
+<!-- End of HubSpot Embed Code -->
+
+<div id="fb-root"></div>
+  <script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v3.0";
+  fjs.parentNode.insertBefore(js, fjs);
+ }(document, 'script', 'facebook-jssdk'));</script> <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+ 
+
+
+    
+    <!-- Generated by the HubSpot Template Builder - template version 1.03 -->
+
+</body></html>

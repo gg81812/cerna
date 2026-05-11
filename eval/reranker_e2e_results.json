@@ -1,0 +1,274 @@
+{
+  "run_date": "2026-04-20",
+  "n_queries": 10,
+  "avg_khr_baseline": 0.32,
+  "avg_khr_reranked": 0.0,
+  "avg_delta": -0.32,
+  "verdict": "DISABLE",
+  "baseline": [
+    {
+      "id": "mil-013",
+      "khr": 0.8,
+      "confidence": "high",
+      "latency_ms": 35269,
+      "error": null,
+      "response_excerpt": "**DIRECT ANSWER**\nTo implement a custom Discern rule to fire clinical alerts in Millennium, you'll need to create a new CCL program in Discern Explorer. This involves writing a CCL script that meets the specific requirements of your clinical alert wo",
+      "category": "complex"
+    },
+    {
+      "id": "mil-015",
+      "khr": 0.8,
+      "confidence": "high",
+      "latency_ms": 32368,
+      "error": null,
+      "response_excerpt": "**DIRECT ANSWER**\nCerner Millennium manages multi-facility data partitioning through the use of Community MRNs (CMRNs) and facility-to-MRN mappings. When a patient has different MRNs at different facilities within the same Millennium instance, the CM",
+      "category": "complex"
+    },
+    {
+      "id": "fhir-013",
+      "khr": 0.8,
+      "confidence": "high",
+      "latency_ms": 40062,
+      "error": null,
+      "response_excerpt": "**DIRECT ANSWER**\nTo implement a SMART on FHIR standalone launch for a patient-facing app, you'll need to follow these steps. First, ensure you have a Cerner developer profile and obtain an authorization code. Then, clone the Cerner SMART tutorial re",
+      "category": "complex"
+    },
+    {
+      "id": "rc-013",
+      "khr": 0.8,
+      "confidence": "high",
+      "latency_ms": 36609,
+      "error": null,
+      "response_excerpt": "**DIRECT ANSWER**\nYou're asking about custom charge routing rules in Cerner Revenue Cycle. Custom charge routing rules in Cerner Revenue Cycle allow you to configure specific rules for routing charges to different departments or locations within your",
+      "category": "complex"
+    },
+    {
+      "id": "pc-013",
+      "khr": 0.0,
+      "confidence": "low",
+      "latency_ms": 15375,
+      "error": null,
+      "response_excerpt": "**DIRECT ANSWER**\nThe Groq API's daily token quota has been exhausted. Please wait until midnight UTC for the limit to reset.\n\n**CONTEXT & EXPLANATION**\n\n\n**RECOMMENDATIONS**\nThe free Groq tier resets at midnight UTC. Consider upgrading to a paid pla",
+      "category": "complex"
+    },
+    {
+      "id": "mil-014",
+      "khr": 0.0,
+      "confidence": "low",
+      "latency_ms": 4639,
+      "error": null,
+      "response_excerpt": "**DIRECT ANSWER**\nThe Groq API's daily token quota has been exhausted. Please wait until midnight UTC for the limit to reset.\n\n**CONTEXT & EXPLANATION**\n\n\n**RECOMMENDATIONS**\nThe free Groq tier resets at midnight UTC. Consider upgrading to a paid pla",
+      "category": "formal"
+    },
+    {
+      "id": "pc-012",
+      "khr": 0.0,
+      "confidence": "low",
+      "latency_ms": 6487,
+      "error": null,
+      "response_excerpt": "**DIRECT ANSWER**\nThe Groq API's daily token quota has been exhausted. Please wait until midnight UTC for the limit to reset.\n\n**CONTEXT & EXPLANATION**\n\n\n**RECOMMENDATIONS**\nThe free Groq tier resets at midnight UTC. Consider upgrading to a paid pla",
+      "category": "formal"
+    },
+    {
+      "id": "fhir-015",
+      "khr": 0.0,
+      "confidence": "low",
+      "latency_ms": 12186,
+      "error": null,
+      "response_excerpt": "**DIRECT ANSWER**\nI don't have sufficient information in my Cerner knowledge base to answer this question confidently.\n\n**CONTEXT & EXPLANATION**\nThe retrieved documents do not contain enough relevant information on this topic.\n\n**RECOMMENDATIONS**\nT",
+      "category": "formal"
+    },
+    {
+      "id": "rc-015",
+      "khr": 0.0,
+      "confidence": "low",
+      "latency_ms": 37250,
+      "error": null,
+      "response_excerpt": "**DIRECT ANSWER**\nThe Groq API's daily token quota has been exhausted. Please wait until midnight UTC for the limit to reset.\n\n**CONTEXT & EXPLANATION**\n\n\n**RECOMMENDATIONS**\nThe free Groq tier resets at midnight UTC. Consider upgrading to a paid pla",
+      "category": "keyword_fail_risk"
+    },
+    {
+      "id": "pc-015",
+      "khr": 0.0,
+      "confidence": "low",
+      "latency_ms": 36391,
+      "error": null,
+      "response_excerpt": "**DIRECT ANSWER**\nThe Groq API's daily token quota has been exhausted. Please wait until midnight UTC for the limit to reset.\n\n**CONTEXT & EXPLANATION**\n\n\n**RECOMMENDATIONS**\nThe free Groq tier resets at midnight UTC. Consider upgrading to a paid pla",
+      "category": "keyword_fail_risk"
+    }
+  ],
+  "reranked": [
+    {
+      "id": "mil-013",
+      "khr": 0.0,
+      "confidence": "low",
+      "latency_ms": 2608,
+      "error": null,
+      "response_excerpt": "**DIRECT ANSWER**\nThe Groq API's daily token quota has been exhausted. Please wait until midnight UTC for the limit to reset.\n\n**CONTEXT & EXPLANATION**\n\n\n**RECOMMENDATIONS**\nThe free Groq tier resets at midnight UTC. Consider upgrading to a paid pla",
+      "category": "complex"
+    },
+    {
+      "id": "mil-015",
+      "khr": 0.0,
+      "confidence": "low",
+      "latency_ms": 4223,
+      "error": null,
+      "response_excerpt": "**DIRECT ANSWER**\nThe Groq API's daily token quota has been exhausted. Please wait until midnight UTC for the limit to reset.\n\n**CONTEXT & EXPLANATION**\n\n\n**RECOMMENDATIONS**\nThe free Groq tier resets at midnight UTC. Consider upgrading to a paid pla",
+      "category": "complex"
+    },
+    {
+      "id": "fhir-013",
+      "khr": 0.0,
+      "confidence": "low",
+      "latency_ms": 3825,
+      "error": null,
+      "response_excerpt": "**DIRECT ANSWER**\nThe Groq API's daily token quota has been exhausted. Please wait until midnight UTC for the limit to reset.\n\n**CONTEXT & EXPLANATION**\n\n\n**RECOMMENDATIONS**\nThe free Groq tier resets at midnight UTC. Consider upgrading to a paid pla",
+      "category": "complex"
+    },
+    {
+      "id": "rc-013",
+      "khr": 0.0,
+      "confidence": "low",
+      "latency_ms": 3514,
+      "error": null,
+      "response_excerpt": "**DIRECT ANSWER**\nThe Groq API's daily token quota has been exhausted. Please wait until midnight UTC for the limit to reset.\n\n**CONTEXT & EXPLANATION**\n\n\n**RECOMMENDATIONS**\nThe free Groq tier resets at midnight UTC. Consider upgrading to a paid pla",
+      "category": "complex"
+    },
+    {
+      "id": "pc-013",
+      "khr": 0.0,
+      "confidence": "low",
+      "latency_ms": 3029,
+      "error": null,
+      "response_excerpt": "**DIRECT ANSWER**\nThe Groq API's daily token quota has been exhausted. Please wait until midnight UTC for the limit to reset.\n\n**CONTEXT & EXPLANATION**\n\n\n**RECOMMENDATIONS**\nThe free Groq tier resets at midnight UTC. Consider upgrading to a paid pla",
+      "category": "complex"
+    },
+    {
+      "id": "mil-014",
+      "khr": 0.0,
+      "confidence": "low",
+      "latency_ms": 3946,
+      "error": null,
+      "response_excerpt": "**DIRECT ANSWER**\nThe Groq API's daily token quota has been exhausted. Please wait until midnight UTC for the limit to reset.\n\n**CONTEXT & EXPLANATION**\n\n\n**RECOMMENDATIONS**\nThe free Groq tier resets at midnight UTC. Consider upgrading to a paid pla",
+      "category": "formal"
+    },
+    {
+      "id": "pc-012",
+      "khr": 0.0,
+      "confidence": "low",
+      "latency_ms": 3268,
+      "error": null,
+      "response_excerpt": "**DIRECT ANSWER**\nThe Groq API's daily token quota has been exhausted. Please wait until midnight UTC for the limit to reset.\n\n**CONTEXT & EXPLANATION**\n\n\n**RECOMMENDATIONS**\nThe free Groq tier resets at midnight UTC. Consider upgrading to a paid pla",
+      "category": "formal"
+    },
+    {
+      "id": "fhir-015",
+      "khr": 0.0,
+      "confidence": "low",
+      "latency_ms": 3295,
+      "error": null,
+      "response_excerpt": "**DIRECT ANSWER**\nI don't have sufficient information in my Cerner knowledge base to answer this question confidently.\n\n**CONTEXT & EXPLANATION**\nThe retrieved documents do not contain enough relevant information on this topic.\n\n**RECOMMENDATIONS**\nT",
+      "category": "formal"
+    },
+    {
+      "id": "rc-015",
+      "khr": 0.0,
+      "confidence": "low",
+      "latency_ms": 23487,
+      "error": null,
+      "response_excerpt": "**DIRECT ANSWER**\nThe Groq API's daily token quota has been exhausted. Please wait until midnight UTC for the limit to reset.\n\n**CONTEXT & EXPLANATION**\n\n\n**RECOMMENDATIONS**\nThe free Groq tier resets at midnight UTC. Consider upgrading to a paid pla",
+      "category": "keyword_fail_risk"
+    },
+    {
+      "id": "pc-015",
+      "khr": 0.0,
+      "confidence": "low",
+      "latency_ms": 35398,
+      "error": null,
+      "response_excerpt": "**DIRECT ANSWER**\nThe Groq API's daily token quota has been exhausted. Please wait until midnight UTC for the limit to reset.\n\n**CONTEXT & EXPLANATION**\n\n\n**RECOMMENDATIONS**\nThe free Groq tier resets at midnight UTC. Consider upgrading to a paid pla",
+      "category": "keyword_fail_risk"
+    }
+  ],
+  "comparison": [
+    {
+      "id": "mil-013",
+      "category": "complex",
+      "question": "How do you implement a custom Discern rule to fire clinical alerts in Millennium?",
+      "base_khr": 0.8,
+      "rank_khr": 0.0,
+      "delta": -0.8
+    },
+    {
+      "id": "mil-015",
+      "category": "complex",
+      "question": "How does Cerner Millennium manage multi-facility data partitioning?",
+      "base_khr": 0.8,
+      "rank_khr": 0.0,
+      "delta": -0.8
+    },
+    {
+      "id": "fhir-013",
+      "category": "complex",
+      "question": "How do you implement a SMART on FHIR standalone launch for a patient-facing app?",
+      "base_khr": 0.8,
+      "rank_khr": 0.0,
+      "delta": -0.8
+    },
+    {
+      "id": "rc-013",
+      "category": "complex",
+      "question": "How do you configure custom charge routing rules in Cerner Revenue Cycle?",
+      "base_khr": 0.8,
+      "rank_khr": 0.0,
+      "delta": -0.8
+    },
+    {
+      "id": "pc-013",
+      "category": "complex",
+      "question": "How do you build a complex PowerNote template with dynamic content and auto-population?",
+      "base_khr": 0.0,
+      "rank_khr": 0.0,
+      "delta": 0.0
+    },
+    {
+      "id": "mil-014",
+      "category": "formal",
+      "question": "What are the performance tuning best practices for CCL queries on large patient populations?",
+      "base_khr": 0.0,
+      "rank_khr": 0.0,
+      "delta": 0.0
+    },
+    {
+      "id": "pc-012",
+      "category": "formal",
+      "question": "How are FYI alerts and hard stops configured in CPOE?",
+      "base_khr": 0.0,
+      "rank_khr": 0.0,
+      "delta": 0.0
+    },
+    {
+      "id": "fhir-015",
+      "category": "formal",
+      "question": "How do you map Cerner proprietary data to FHIR R4 Observation resources?",
+      "base_khr": 0.0,
+      "rank_khr": 0.0,
+      "delta": 0.0
+    },
+    {
+      "id": "rc-015",
+      "category": "keyword_fail_risk",
+      "question": "How does Cerner's CDI workflow integrate with physician query management?",
+      "base_khr": 0.0,
+      "rank_khr": 0.0,
+      "delta": 0.0
+    },
+    {
+      "id": "pc-015",
+      "category": "keyword_fail_risk",
+      "question": "How does PowerChart integrate with external lab systems via HL7 interfaces?",
+      "base_khr": 0.0,
+      "rank_khr": 0.0,
+      "delta": 0.0
+    }
+  ]
+}

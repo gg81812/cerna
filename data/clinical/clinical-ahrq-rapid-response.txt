@@ -1,0 +1,282 @@
+# SOURCE: AHRQ PSNet Primer — Rapid Response Systems
+# URL: https://psnet.ahrq.gov/primer/rapid-response-systems
+# MODULE: Clinical Workflows
+# RETRIEVED: 2026-05-07
+# ---
+
+Rapid Response Systems
+
+Citation Text:
+
+Rapid Response Systems. PSNet [internet]. Rockville (MD): Agency for Healthcare Research and Quality, US Department of Health and Human Services. 2019.
+
+Copy Citation
+
+Format:
+
+Google Scholar
+BibTeX
+EndNote X3 XML
+EndNote 7 XML
+Endnote tagged
+PubMedId
+RIS
+
+Download Citation
+
+Save
+
+ 
+Save to your library
+
+Print
+
+Download PDF
+
+Share
+
+Facebook
+
+Twitter
+
+Linkedin
+
+Copy URL
+
+ Cite
+ 
+
+ Citation
+
+Citation Text:
+
+Rapid Response Systems. PSNet [internet]. Rockville (MD): Agency for Healthcare Research and Quality, US Department of Health and Human Services. 2019.
+
+Copy Citation
+
+Format:
+
+Google Scholar
+BibTeX
+EndNote X3 XML
+EndNote 7 XML
+Endnote tagged
+PubMedId
+RIS
+
+Download Citation
+
+UC Davis PSNet Editorial Team | September 15, 2024
+
+PSNet primers are regularly reviewed and updated by the UC Davis PSNet Editorial Team to ensure that they reflect current research and practice in the patient safety field. Last reviewed in 2024.
+Background
+Rapid response teams represent an intuitively simple concept: When a patient demonstrates signs of imminent clinical deterioration, a team of providers is summoned to the bedside to immediately assess and treat the patient with the goal of 
+preventing 
+intensive care unit transfer, cardiac arrest, or death. Such teams have become a widely used patient safety intervention due in large part to their inclusion in the Institute for Healthcare Improvement's "
+100,000 Lives Campaign
+" in 2005. However, the rapid response team concept has come to exemplify the tension between those arguing for swift implementation of conceptually attractive patient safety interventions supported by anecdotal evidence of benefit and those advocating a more rigorous, evidence-based–and inevitably slower–approach.
+Patients whose condition deteriorates acutely while hospitalized often exhibit warning signs (such as abnormal vital signs) in the hours before experiencing adverse clinical outcomes. In contrast to standard cardiac arrest or "code blue" teams, which are summoned only after cardiopulmonary arrest occurs, rapid response teams are designed to intervene during this critical period, usually on patients on general medical or surgical wards.
+Several different models of rapid response teams exist (see Table 1), and a 2006 
+consensus conference
+ advocated use of the term "rapid response system" (RRS) as a unifying term. 
+Hospitalists
+ are increasingly assuming RRS duties, either as the primary responder or to assist nurse-led teams.
+Table 1. Rapid Response System Models
+ 
+Model
+Personnel
+Duties
+Medical Emergency Team
+Physicians (critical care or hospitalist) and nurses
+Respond to emergencies
+Critical Care Outreach
+Critical care physicians and nurses
+ 
+Respond to emergencies
+Follow up on patients discharged from ICU
+Proactively evaluate high-risk ward patients
+Educate ward staff
+Rapid Response Team
+Critical care nurse, respiratory therapist, and physician (critical care or hospitalist) backup
+ 
+Respond to emergencies
+Follow up on patients discharged from ICU
+Proactively evaluate high-risk ward patients
+Educate and act as liaison to ward staff
+A useful construct is to consider RRSs as having "afferent" (the criteria for calling) and "efferent" (responsive) arms. Despite differences in team structure, the criteria used to summon the teams are generally similar. Bedside staff are encouraged to call the team when any of a number of prespecified criteria (Table 2) are met. At certain hospitals, 
+patients and family members
+ are also permitted to call the team. Recent research has focused on development of more sophisticated "
+track-and-trigger
+" bedside monitoring systems that could be used to automatically trigger intervention when certain physiologic abnormalities are detected.
+Typical Rapid Response System Calling Criteria
+Any staff member may call the team if one of the following criteria is met:
+Heart rate over 140/min or less than 40/min
+Respiratory rate over 28/min or less than 8/min
+Systolic blood pressure greater than 180 mmHg or less than 90 mmHg
+Oxygen saturation less than 90% despite supplementation
+Acute change in mental status
+Urine output less than 50 cc over 4 hours
+Staff member has significant concern about the patient's condition
+Additional criteria used at some institutions:
+Chest pain unrelieved by nitroglycerin
+Threatened airway
+Seizure
+Uncontrolled pain
+Evidence of Effectiveness
+Early publications on RRSs reported significant improvements in clinical outcomes, but multiple subsequent 
+systematic reviews
+ have tempered the initial enthusiasm. The best available evidence indicates that RRSs 
+slightly reduce
+ unexpected cardiac arrests in ward patients, but they do not affect overall in-hospital mortality. The reasons for the inconsistent effects of RRSs are complex, and in some cases, may be related to local practice and cultural reasons that result in the team being underutilized. RRSs are very popular among 
+nursing staff
+ and can contribute to detection of underlying patient safety issues in hospitals.
+Current Context
+Some form of rapid response team is present in most hospitals in the United States, spurred by the 2008 
+Joint Commission
+ 
+National Patient Safety Goal
+, which required hospitals to implement systems to enable "healthcare staff members to directly request additional assistance from a specially trained individual(s) when the patient's condition appears to be worsening."
+
+This project was funded under contract number 75Q80119C00004 from the Agency for Healthcare Research and Quality (AHRQ), U.S. Department of Health and Human Services. The authors are solely responsible for this report’s contents, findings, and conclusions, which do not necessarily represent the views of AHRQ. Readers should not interpret any statement in this report as an official position of AHRQ or of the U.S. Department of Health and Human Services. None of the authors has any affiliation or financial involvement that conflicts with the material presented in this report. 
+View AHRQ Disclaimers
+
+Save
+
+ 
+Save to your library
+
+Print
+
+Download PDF
+
+Share
+
+Facebook
+
+Twitter
+
+Linkedin
+
+Copy URL
+
+ Cite
+ 
+
+ Citation
+
+Citation Text:
+
+Rapid Response Systems. PSNet [internet]. Rockville (MD): Agency for Healthcare Research and Quality, US Department of Health and Human Services. 2019.
+
+Copy Citation
+
+Format:
+
+Google Scholar
+BibTeX
+EndNote X3 XML
+EndNote 7 XML
+Endnote tagged
+PubMedId
+RIS
+
+Download Citation
+
+Sections
+
+Background
+
+Current Context
+
+Editor's Picks
+
+ 
+Rapid response systems.
+July 18, 2024
+
+Understanding the enablers and barriers to implementing a patient-led escalation system: a qualitative study.
+July 10, 2024
+
+Critical care nurses' role in rapid response teams: a qualitative systematic review.
+May 22, 2024
+
+Opinions of nurses and physicians on a patient, family and visitor activated rapid response system in use across two hospital settings.
+February 28, 2024
+
+View More
+
+Related Glossary Term(s)
+
+ 
+Rapid Response Team
+
+Medical Emergency Team
+
+Related Resources
+
+Patient Safety Primers
+
+Failure to Rescue
+
+January 29, 2025
+
+Patient Safety Primers
+
+Long-term Care and Patient Safety
+
+April 10, 2024
+
+Patient Safety Primers
+
+Inpatient Transitions of Care: Challenges and Safety Practices
+
+March 27, 2024
+
+Patient Safety Primers
+
+National Patient Safety Goals
+
+March 27, 2024
+
+Patient Safety Primers
+
+Retained Surgical Items: Definition and Epidemiology.
+
+January 4, 2024
+
+Patient Safety Primers
+
+Digital Health Literacy
+
+October 31, 2023
+
+Patient Safety Primers
+
+Personal Health Literacy
+
+August 30, 2023
+
+Patient Safety Primers
+
+Coronavirus Disease 2019 (COVID-19) and Safety of Older Adults Residing in Nursing Homes
+
+February 24, 2022
+
+Patient Safety Primers
+
+COVID-19 and Dentistry: Challenges and Opportunities for Providing Safe Care
+
+February 23, 2022
+
+Patient Safety Primers
+
+Deprescribing as a Patient Safety Strategy
+
+October 27, 2021
+
+View More
+
+See More About The Topic
+
+ 
+ Rapid Response Team

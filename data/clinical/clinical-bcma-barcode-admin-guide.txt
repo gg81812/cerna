@@ -1,0 +1,144 @@
+# SOURCE: Cerner BCMA Barcode Medication Administration Administrator Guide
+# URL: https://wiki.cerner.com/display/public/1101clinical/BCMA+Administration+Guide
+# MODULE: Clinical Workflows
+# RETRIEVED: 2026-04-01
+# ---
+
+# Cerner BCMA (Barcode Medication Administration) Administrator Guide
+
+## What is BCMA?
+
+Barcode Medication Administration (BCMA) is a patient safety technology integrated into Cerner Millennium's clinical workflows. BCMA uses barcode scanning to verify the "Five Rights" of medication administration at the point of care: Right Patient, Right Drug, Right Dose, Right Route, and Right Time.
+
+In Cerner Millennium, BCMA is part of the eMAR (Electronic Medication Administration Record) module and works with PharmNet (pharmacy) to ensure that only verified, dispensed medications are administered to the correct patient.
+
+## How BCMA Works
+
+1. The nurse opens the patient's eMAR on a workstation-on-wheels (WOW) or wall-mounted terminal.
+2. The nurse scans the patient's wristband barcode to confirm patient identity.
+3. The nurse scans the medication barcode on the unit-dose package.
+4. Millennium compares the scanned medication against the current active medication orders.
+5. If all five rights match, the system allows documentation of the administration.
+6. If a mismatch is detected, the system displays a warning and may block administration depending on configuration.
+
+## Administrative Setup
+
+### System Requirements
+
+- All patient beds must have barcode wristbands generated at admission (handled by ADT/registration workflow).
+- Unit-dose medications must have scannable barcodes (GS1/NDC standard or facility-specific).
+- Workstations require a connected USB or wireless barcode scanner.
+- Scanners must be configured to emit CR/LF at the end of each scan.
+
+### Wristband Configuration
+
+1. Open Clinical Administration > BCMA > Wristband Settings.
+2. Select the barcode symbology (Code 39, Code 128, or 2D DataMatrix — match what your label printer supports).
+3. Configure the barcode content: typically FIN (Financial Identification Number) or encounter_id.
+4. Set the wristband label template in Label Manager.
+5. Test wristband generation by printing a test label and scanning it at a test workstation.
+
+### Scanner Configuration
+
+1. Ensure the barcode scanner model is on the Cerner-approved hardware list (available in the Solution Portal).
+2. Program the scanner to emit the correct prefix/suffix characters expected by Millennium (typically no prefix, CR suffix).
+3. Deploy scanner configuration settings via your organization's MDM (Mobile Device Management) or USB scanner configuration barcodes.
+
+### BCMA Scanning Configuration
+
+Open Clinical Administration > BCMA > Scanning Rules to configure:
+
+- **Patient ID barcode format** — which patient identifier is encoded in the wristband barcode (FIN, MRN, or person_id).
+- **Medication barcode formats** — accepted barcode symbologies (NDC, GS1 DataBar, custom).
+- **Overriding scan failures** — whether nurses can override a "no match" warning and document anyway (requires a reason code).
+- **Required vs. optional scanning** — configure which medication types require BCMA scanning (e.g., HIGH_ALERT_MED = scanning required, TOPICAL = scanning optional).
+
+## Medication Administration Workflow with BCMA
+
+### Standard Workflow Steps
+
+1. Nurse opens the patient's eMAR in PowerChart or via the eMAR standalone application.
+2. Nurse clicks on the medication due for administration.
+3. System prompts: "Scan Patient ID."
+4. Nurse scans the patient wristband.
+5. System validates patient match. If mismatch: "Patient ID does not match — do you want to override?" (if override is enabled).
+6. System prompts: "Scan Medication."
+7. Nurse scans the unit-dose medication barcode.
+8. System validates medication against the active order. If match: administration screen opens.
+9. Nurse reviews dose, route, and confirms administration.
+10. System records the administration event in eMAR with nurse's prsnl_id, timestamp, and scan confirmation flag.
+
+### High-Alert Medication Workflow
+
+For medications flagged as HIGH_ALERT (e.g., insulin, heparin, chemotherapy):
+
+1. A second nurse scan is required (dual-nurse verification).
+2. Both nurse IDs are recorded in the MED_ADMIN_EVENT record.
+3. The system may display an additional clinical alert with required acknowledgment.
+
+### Override Workflow
+
+When a scan fails to match:
+1. System displays the mismatch warning with details (what was scanned vs. what is ordered).
+2. If override is configured, nurse selects an override reason from a code value list.
+3. Override is documented in the eMAR with reason code and nurse ID.
+4. Overrides are tracked and reportable for pharmacy and nursing quality review.
+
+## Reporting and Compliance
+
+### Override Reports
+
+Run via Discern Analytics or PharmNet Pharmacy Reports:
+- BCMA Override Rate by Unit
+- BCMA Override Rate by Medication Type
+- BCMA Override Rate by Nurse
+
+High override rates may indicate:
+- Label quality issues (barcodes not scanning reliably)
+- Medication barcode not on file in Millennium pharmacy catalog
+- Workflow non-compliance (nurses bypassing scanning intentionally)
+
+### Compliance Reports
+
+- BCMA Compliance Rate by Unit — % of administrations documented with confirmed scan
+- BCMA Compliance Rate by Medication — useful for identifying problem drug lots
+- Missed BCMA Scans — administrations without a confirmed scan event
+
+### Integration with Pharmacy
+
+BCMA depends on accurate pharmacy dispensing data:
+- Only medications with a pharmacy dispense record can be scanned and matched.
+- Floor stock medications (not dispensed per-patient) require special BCMA configuration or are typically excluded from barcode verification.
+- IV medications compounded in the pharmacy need unit-dose barcode labels applied by the pharmacy before delivery to the floor.
+
+## Troubleshooting
+
+### Scanner Not Responding
+- Verify USB or wireless connection.
+- Check scanner configuration: print a scan test configuration page from the scanner's setup barcodes.
+- Ensure the cursor is in a scan-ready field in the eMAR before scanning.
+
+### Patient Wristband Not Scanning
+- Check that the wristband was generated (not handwritten or from a different system).
+- Check barcode print quality — blurry or low-contrast barcodes will not scan reliably.
+- Re-print the wristband from ADT if damaged or faded.
+
+### Medication Barcode Not Found
+- The medication's barcode may not be in the Cerner pharmacy catalog (ITEM table).
+- Pharmacy administrator adds the barcode: Clinical Administration > Pharmacy > Item Barcode Management.
+- Add the NDC or GS1 barcode associated with the specific drug lot.
+
+### "Wrong Patient" Alert When Patient Is Correct
+- Verify the wristband barcode encodes the correct encounter FIN or MRN.
+- Check that the patient's encounter is active (not discharged accidentally).
+- Confirm the wristband barcode configuration matches the actual wristband format.
+
+## Best Practices
+
+1. Scan every patient for every medication, every time — never skip "just this once."
+2. Replace wristbands immediately if they become damaged, wet, or unreadable.
+3. Never administer a medication without first scanning the patient wristband.
+4. Never scan a patient's wristband from a photo or print — the physical wristband must always be scanned.
+5. Report scanner hardware failures to the help desk immediately — do not work around broken equipment.
+6. Review BCMA override reports weekly with unit nursing leadership.
+7. Conduct annual BCMA training refreshers for all nursing staff.

@@ -1,0 +1,70 @@
+Revenue Cycle Management (RCM) — Definition and Overview
+Source: https://www.techtarget.com/searchhealthit/definition/revenue-cycle-management-RCM
+Scraped: 2026-04-19
+
+==============================================================
+
+Definition
+
+"Revenue cycle management (RCM) is the financial process, utilizing medical billing software, that healthcare facilities use to track patient care episodes from registration and appointment scheduling to the final payment of a balance."
+
+Core Purpose
+
+RCM manages all revenue-generating functions in healthcare organizations, beginning when patients seek services and ending when payment is fully collected from patients and insurers.
+
+Key Components of the Revenue Cycle
+
+- Charge capture
+- Claim submission
+- Coding (ICD-10, CPT)
+- Patient collections
+- Preregistration
+- Registration
+- Remittance processing
+- Third-party follow-up
+- Utilization review
+
+Data Integration
+
+RCM connects administrative data (patient names, insurance details) with clinical information (medical history, treatment records, health conditions) to streamline operations and reduce rework.
+
+Insurer Communication
+
+Healthcare providers use standardized coding systems — ICD-10 for diagnoses and CPT codes for procedures — when submitting care summaries to insurance companies to determine coverage and patient responsibility.
+
+System Benefits
+
+Effective RCM systems:
+- Reduce payment delays
+- Automate administrative tasks
+- Decrease claim denials
+- Provide analytics for monitoring revenue goals
+- Identify process improvement opportunities
+
+Modern Technology Integration
+
+Contemporary systems incorporate:
+- Data analytics and dashboards
+- Cognitive computing for accurate code assignment
+- Robotic process automation
+- AI-driven prior authorization workflows
+
+Cerner RevElate
+
+Cerner developed a next-generation patient accounting system called Cerner RevElate that combines capabilities from its two major revenue cycle management products. RevElate is described as "an open, extensible API platform" enabling data exchange regardless of how different technologies were designed.
+
+Recent Cerner RCM Developments:
+- Cerner partnership with AKASA leveraged AI for revenue cycle automation
+- Banner Health expanded Cerner partnership for end-to-end RCM across 28 hospitals in 6 states
+- Cerner has faced challenges including a $38M medical billing lawsuit settlement with a NY hospital
+
+Cerner Revenue Cycle Modules
+
+Core modules in Cerner's Revenue Cycle suite:
+- Patient Access: Scheduling, registration, insurance verification
+- Health Information Management (HIM): Coding, chart completion, release of information
+- Charge Services: Charge capture, charge review, charge routing
+- Claims Management: Claim generation, scrubbing, submission, status tracking
+- Accounts Receivable: Denial management, payment posting, follow-up workflows
+- Contract Management: Expected reimbursement calculation, payer contract configuration
+- Patient Accounting: Statement generation, patient payment plans, collections

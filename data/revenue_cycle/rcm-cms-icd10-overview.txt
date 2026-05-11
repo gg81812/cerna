@@ -1,0 +1,307 @@
+# SOURCE: CMS — ICD-10 Coding Reference
+# URL: https://www.cms.gov/medicare/coding-billing/icd-10-codes
+# MODULE: Revenue Cycle
+# RETRIEVED: 2026-05-07
+# ---
+
+Pages in this section
+
+ICD-10 codes
+
+ICD-10 Files & News Archive
+
+ICD-10 Coordination and Maintenance Committee Meetings
+
+Process for Requesting New/Revised ICD-10-PCS Procedure Codes
+
+ICD-10 Coordination and Maintenance Committee Procedure Code Materials
+
+ICD-9-CM Diagnosis and Procedure Codes: Abbreviated and Full Code Titles
+
+Updates and Revisions to ICD-9-CM Procedure Codes (Addendum)
+
+ICD-10
+
+What’s New?
+CMS announces 80 new ICD-10-PCS codes
+ (PDF)
+, effective April 1, 2026
+The April 1, 2026 procedure code update files are now available.  Use these codes for discharges occurring from April 1, 2026 -September 30, 2026, and for patient encounters occurring from April 1, 2026 – September 30, 2026.
+Stay up to date on ICD-10!
+ Sign up for 
+email updates
+.
+On October 1, 2015, the health care industry transitioned from ICD-9 to ICD-10 codes for diagnoses and inpatient procedures. Use ICD-10 to code services provided on or after October 1, 2015. ICD-10 applies to all parties covered by the 
+Health Insurance Portability and Accountability Act (HIPAA)
+, not just providers who bill Medicare or Medicaid.
+ICD-10 Files
+ 
+2026 ICD-10 CM & PCS files
+2026 ICD-10-CM files
+These files include updates for FY 2026. Use these codes for discharges occurring from April 1, 2026 – September 30, 2026, and for patient encounters occurring from April 1, 2026– September 30, 2026. 
+April 1, 2026 Code Descriptions in Tabular Order (ZIP)
+April 1, 2026 Addendum (ZIP)
+April 1, 2026 Code Tables, Tabular and Index (ZIP)
+April 1, 2026 Conversion Table (ZIP)
+These files include updates for FY 2026. Use these codes for discharges occurring from October 1, 2025 – March 31, 2026, and for patient encounters occurring from October 1, 2025– March 31, 2026.  
+2026 POA Exempt Codes (ZIP)
+2026 Conversion Table (ZIP)
+ - Updated 08/07/2025
+2026 Code Descriptions in Tabular Order (ZIP)
+2026 Addendum
+ (ZIP)
+2026 Code Tables, Tabular and Index
+ (ZIP)
+FY 2026 ICD-10-CM Coding Guidelines (PDF)
+2026 ICD-10-PCS files
+These files include updates for FY 2026. Use these codes for discharges occurring from April 1, 2026 – September 30, 2026. 
+April 1, 2026 ICD-10-PCS Order File (Long and Abbreviated Titles) (ZIP)
+April 1, 2026 Official ICD-10-PCS Coding Guidelines (PDF)
+April 1, 2026 Version Update Summary (ZIP)
+April 1, 2026 ICD-10-PCS Codes File (ZIP)
+April 1, 2026 ICD-10-PCS Conversion Table (ZIP)
+April 1, 2026 ICD-10-PCS Code Tables and Index (ZIP)
+April 1, 2026 ICD-10-PCS Addendum (ZIP)
+These files include updates for FY 2026. Use these codes for discharges occurring from October 1, 2025 – March 31, 2026.
+2026 ICD-10-PCS Order File (Long and Abbreviated Titles) (ZIP)
+2026 Official ICD-10-PCS Coding Guidelines (PDF)
+2026 Version Update Summary
+ (ZIP)
+2026 ICD-10-PCS Codes File
+ (ZIP)
+2026 ICD-10-PCS Conversion Table
+ (ZIP)
+2026 ICD-10-PCS Code Tables and Index
+ (ZIP)
+2026 ICD-10-PCS Addendum
+ (ZIP)
+2025 ICD-10 CM & PCS files
+2025 ICD-10-CM files
+These files include updates for FY 2025. Use the 2025 POA Exempt Codes file and the 2025 Conversion Table for discharges occurring from October 1, 2024 – September 30, 2025, and for patient encounters occurring from October 1, 2024 – September 30, 2025.  Use the 2025 Code Descriptions in Tabular Order, 2025 Addendum, 2025 Code Tables, Tabular and Index, and the FY 2025 ICD-10-CM Guidelines files for discharges occurring from October 1, 2024 – March 31, 2025, and for patient encounters occurring from October 1, 2024 – March 31, 2025.
+2025 POA Exempt Codes (ZIP)
+2025 Conversion Table (ZIP)
+2025 Code Descriptions in Tabular Order (ZIP)
+2025 Addendum (ZIP)
+2025 Code Tables, Tabular and Index (ZIP)
+FY 2025 ICD-10-CM Coding Guidelines (PDF)
+ 
+These files include updates for FY 2025. Use these code files for discharges occurring from April 1, 2025 – September 30, 2025, and for patient encounters occurring from April 1, 2025 – September 30, 2025. 
+Note:
+ There are no changes to the 2025 POA Exempt Codes file or the 2025 Conversion Table.
+2025 Code Descriptions in Tabular Order (ZIP)
+2025 Addendum (ZIP)
+2025 Code Tables, Tabular and Index (ZIP)
+2025 ICD-10-CM Coding Guidelines – NOT YET AVAILABLE
+ 
+2025 ICD-10-PCS files
+These files include updates for FY 2025. Use these codes for discharges occurring from October 1, 2024 – March 31, 2025.
+2025 ICD-10-PCS Order File (Long and Abbreviated Titles) (ZIP)
+2025 Official ICD-10-PCS Coding Guidelines (PDF)
+2025 Version Update Summary (ZIP)
+2025 ICD-10-PCS Codes File (ZIP)
+2025 ICD-10-PCS Conversion Table (ZIP)
+2025 ICD-10-PCS Code Tables and Index (ZIP)
+ - Updated 07/09/2024
+2025 ICD-10-PCS Addendum (ZIP)
+ - Updated 07/09/2024
+ 
+These files include the updates for April 1, 2025.  Use these codes for discharges occurring from April 1, 2025 – September 30, 2025.
+2025 ICD-10-PCS Order File (Long and Abbreviated Titles) (ZIP)
+2025 Official ICD-10-PCS Coding Guidelines (PDF) – NOT YET AVAILABLE
+2025 Version Update Summary (ZIP)
+2025 ICD-10-PCS Codes File (ZIP)
+2025 ICD-10-PCS Conversion Table (ZIP)
+2025 ICD-10-PCS Code Tables and Index (ZIP)
+2025 ICD-10-PCS Addendum (ZIP)
+2024 ICD-10 CM & PCS files
+2024 ICD-10-CM files
+These files include updates for FY 2024. Use these codes for discharges occurring from October 1, 2023 – September 30, 2024 and for patient encounters occurring from October 1, 2023 – September 30, 2024.
+The ICD-10-CM April 1, 2024 update addresses typographical errors. There are no new diagnosis codes being implemented. The files below contain information on the ICD-10-CM updates effective with discharges on and after April 1, 2024.
+2024 POA Exempt Codes (ZIP)
+2024 Conversion Table (ZIP)
+ - Updated 09/21/2023
+2024 Addendum (ZIP)
+ - Updated 02/01/2024
+2024 Code Descriptions in Tabular Order (ZIP)
+ - Updated 02/01/2024
+2024 Code Tables, Tabular and Index (ZIP)
+ - Updated 02/01/2024
+FY 2024 ICD-10-CM Coding Guidelines (PDF)
+ - Updated 02/01/2024
+2024 Errata (PDF)
+ - July 26, 2023
+2024 ICD-10-PCS files
+These files include updates for FY 2024. Use these codes for discharges occurring from October 1, 2023 – September 30, 2024.
+The updated ICD-10-PCS code files include 41 new procedure codes effective April 01, 2024. 
+2024 ICD-10-PCS Order File (Long and Abbreviated Titles) (ZIP)
+ - Updated 12/19/2023
+2024 Official ICD-10-PCS Coding Guidelines (PDF)
+ - Updated 12/19/2023
+2024 Version Update Summary (ZIP)
+ - Updated 12/19/2023
+2024 ICD-10-PCS Codes File (ZIP)
+ - Updated 12/19/2023
+2024 ICD-10-PCS Conversion Table (ZIP)
+ - Updated 12/19/2023
+2024 ICD-10-PCS Code Tables and Index (ZIP)
+ - Updated 12/19/2023
+2024 ICD-10-PCS Addendum (ZIP)
+ - Updated 12/19/2023
+ERRATA - April 1 2024 ICD-10-PCS code update (PDF)
+ - Posted 04/29/2024
+Note:
+There is no FY 2024 GEMs file. As stated in the FY 2016 IPPS/LTCH PPS final rule (80 FR 49388), the GEMs have been updated on an annual basis as part of the ICD-10 Coordination and Maintenance Committee meetings process and will continue to be updated for approximately 3 years after ICD-10 is implemented.
+2023 ICD-10 CM & PCS files
+2023 ICD-10-CM files
+These files include updates for FY 2023. Use these codes for discharges occurring from October 1, 2022 – September 30, 2023 and for patient encounters occurring from October 1, 2022 – September 30, 2023.
+Effective April 1, 2023, the CDC’s National Center for Health Statistics (NCHS) implemented 42 new diagnosis codes into the ICD-10-CM. These codes help collect health-related social needs (HRSNs) – an individual’s unmet, adverse social conditions that contribute to poor health outcomes.
+2023 POA Exempt Codes (ZIP)
+ - Updated 03/01/2023
+2023 Conversion Table (ZIP)
+ - Updated 01/23/2023
+2023 Code Descriptions in Tabular Order (ZIP)
+ - Updated 01/11/2023
+2023 Addendum (ZIP)
+ - Updated 01/11/2023
+2023 Code Tables, Tabular and Index (ZIP)
+ - Updated 01/11/2023
+FY 2023 ICD-10-CM Coding Guidelines (PDF)
+ - Updated 01/11/2023
+2023 ICD-10-PCS files
+These files include updates for FY 2023. Use these codes for discharges occurring from October 1, 2022 – September 30, 2023.
+The updated ICD-10-PCS code files include 34 new procedure codes effective April 01, 2023.
+2023 ICD-10-PCS Order File (Long and Abbreviated Titles) (ZIP)
+ – Updated 01/11/2023
+2023 Official ICD-10-PCS Coding Guidelines (PDF)
+2023 Version Update Summary (ZIP)
+ - Updated 01/11/2023
+2023 ICD-10-PCS Codes File (ZIP)
+ - Updated 01/11/2023
+2023 ICD-10-PCS Conversion Table (ZIP)
+ - Updated 01/11/2023
+2023 ICD-10-PCS Code Tables and Index (ZIP)
+ - Updated 01/11/2023
+2023 ICD-10-PCS Addendum (ZIP)
+ - Updated 01/11/2023
+Note:
+There is no FY 2023 GEMs file. As stated in the FY 2016 IPPS/LTCH PPS final rule (80 FR 49388), the GEMs have been updated on an annual basis as part of the ICD-10 Coordination and Maintenance Committee meetings process and will continue to be updated for approximately 3 years after ICD-10 is implemented.
+2022 ICD-10 CM & PCS files
+2022 ICD-10-CM files
+These files include updates for FY 2022. Use these codes for discharges occurring from October 1, 2021 – September 30, 2022 and for patient encounters occurring from October 1, 2021 – September 30, 2022.
+In response to the COVID-19 public health emergency, the CDC’s National Center for Health Statistics (NCHS) implemented 3 new diagnosis codes, Z28.310, Z28.311 and Z28.39, into the ICD-10-CM, for reporting COVID-19 vaccination status effective April 1, 2022.
+The files below contain information on the ICD-10-CM updates effective with discharges on and after April 1, 2022.
+2022 POA Exempt Codes (ZIP)
+ - Updated 02/15/2022
+2022 Conversion Table (ZIP)
+ - Updated 02/01/2022
+2022 Code Descriptions in Tabular Order (ZIP)
+ - Updated 02/01/2022
+2022 Addendum (ZIP)
+ - Updated 02/01/2022
+2022 Code Tables, Tabular and Index (ZIP)
+ - Updated 02/01/2022
+FY 2022 ICD-10-CM Coding Guidelines (PDF)
+ - Updated 02/01/2022
+2022 ICD-10-PCS files
+These files include updates for FY 2022. Use these codes for discharges occurring from October 1, 2021 – September 30, 2022.
+In response to the COVID-19 public health emergency, CMS implemented 9 new procedure codes into the ICD-10-PCS to describe the introduction or infusion of therapeutics, including vaccines for COVID-19 treatment, effective April 1, 2022.
+The files below contain information on the ICD-10-PCS COVID-19 updates effective with discharges on and after April 1, 2022. 
+Additional files containing information related to 2 newer procedure codes is located below as ERRATA.
+2022 ERRATA (ZIP)
+ - 01/12/2022
+2022 ICD-10-PCS Order File (Long and Abbreviated Titles) (ZIP)
+ - Updated 12/01/2021
+2022 Official ICD-10-PCS Coding Guidelines (PDF)
+ - Updated 12/01/2021
+2022 Version Update Summary (ZIP)
+ - Updated 12/01/2021
+2022 ICD-10-PCS Codes File (ZIP)
+ - Updated 12/01/2021
+2022 ICD-10-PCS Conversion Table (ZIP)
+ - Updated 12/01/2021
+2022 ICD-10-PCS Code Tables and Index (ZIP)
+ - Updated 12/01/2021
+2022 ICD-10-PCS Addendum (ZIP)
+ - Updated 12/01/2021
+Note:
+There is no FY 2022 GEMs file. As stated in the FY 2016 IPPS/LTCH PPS final rule (80 FR 49388), the GEMs have been updated on an annual basis as part of the ICD-10 Coordination and Maintenance Committee meetings process and will continue to be updated for approximately 3 years after ICD-10 is implemented.
+2021 ICD-10 CM & PCS files
+2021 ICD-10-CM files
+These files include updates for FY 2021. Use these codes for discharges occurring from October 1, 2020 – September 30, 2021 and for patient encounters occurring from October 1, 2020 – September 30, 2021.
+In response to the COVID-19 public health emergency, the CDC’s National Center for Health Statistics (NCHS) implemented 6 new diagnosis codes into the ICD-10-CM, effective January 1, 2021.
+The files below contain information on the ICD-10-CM COVID-19 updates effective with discharges and patient encounters on and after January 1, 2021.
+2021 Coding Guidelines (PDF)
+ - Updated 12/16/2020
+2021 POA Exempt Codes (ZIP)
+ - Updated 12/04/2020
+2021 Code Descriptions in Tabular Order (ZIP)
+ – Updated 12/16/2020
+2021 Addendum (ZIP)
+ – Updated 12/16/2020
+2021 Code Tables, Tabular and Index (ZIP)
+ – Updated 12/16/2020
+2021 Conversion Table (ZIP)
+ – Updated 12/16/2020
+2021 ICD-10-PCS files
+These files include updates for FY 2021. Use these codes for discharges occurring from October 1, 2020 – September 30, 2021.
+In response to the COVID-19 public health emergency, CMS implemented 21 new procedure codes into the ICD-10-PCS to describe the introduction or infusion of therapeutics, effective January 1, 2021.
+The files below contain information on the ICD-10-PCS COVID-19 updates effective with discharges on and after January 1, 2021.
+2021 ICD-10-PCS Order File (Long and Abbreviated Titles) (ZIP)
+ - Updated 12/01/2020
+2021 Official ICD-10-PCS Coding Guidelines (PDF)
+ - Updated 12/01/2020
+2021 ICD-10-PCS Code Tables and Index (ZIP)
+ - Updated 12/01/2020
+2021 ICD-10-PCS Addendum (ZIP)
+ - Updated 12/01/2020
+2021 ICD-10-PCS Codes File (ZIP)
+ - Updated 12/01/2020
+2021 ICD-10-PCS Conversion Table (ZIP)
+ - Updated 12/01/2020
+2021 Version Update Summary (PDF)
+ - Updated 12/01/2020
+Note:
+There is no FY 2021 GEMs file. As stated in the FY 2016 IPPS/LTCH PPS final rule (80 FR 49388), the GEMs have been updated on an annual basis as part of the ICD-10 Coordination and Maintenance Committee meetings process and will continue to be updated for approximately 3 years after ICD-10 is implemented.
+For older files and announcements, visit 
+ICD-10 Files & News Archive
+.
+ICD-10 Resources
+Diagnosis Coding: Using the ICD-10-CM
+ web-based training
+Procedure Coding: Using the ICD-10-PCS
+ web-based training
+Health Care Code Sets: ICD-10 (PDF)
+ fact sheet
+Medicare Coverage Database
+Federal Register Final Rule for Medical Loss Ratio
+Federal Register Final Rule for ICD-10
+Federal Register Final Rule for Electronic Transaction Standards
+Need Help?
+Submit specific coding questions to the 
+American Hospital Association’s Coding Clinic Advisor
+ (the official U.S. clearinghouse on medical coding).
+Contact your Medicare Administrative Contractor (MAC) for questions about claims processing and payment or local coverage decisions. Find your 
+MAC's website
+.
+For questions about National Coverage Determinations, 
+contact CAG
+.
+Visit 
+MEARIS
+ (trademark) to submit a request to update the ICD-10-PCS procedure codes. Learn more about the 
+Process for Requesting ICD-10-PCS Procedure Codes
+.
+Submit requests to update the ICD-10-CM diagnosis codes to 
+nchsicd10cm@cdc.gov
+. The CDC develops and maintains ICD-10-CM.
+ 
+
+Related Links
+
+Versions 5010 and D.0 & 3.0
+
+Page Last Modified:
+
+03/10/2026 08:33 PM
+
+Help with File Formats and Plug-Ins

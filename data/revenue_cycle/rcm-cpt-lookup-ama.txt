@@ -1,0 +1,52 @@
+CPT Code Set Overview — American Medical Association
+Source: https://www.ama-assn.org/practice-management/cpt/cpt-overview-and-code-approval
+Scraped: 2026-04-19
+
+==============================================================
+
+What is a CPT Code?
+
+The Current Procedural Terminology (CPT) code set consists of "five-digit codes that primarily describe medical services and procedures performed by physicians and other qualified health care professionals." These codes now encompass algorithm-enabled services and care team provider services as well.
+
+CPT codes function as standardized language for reporting physician-patient interactions across U.S. healthcare, enabling interoperability among practices, health systems, and payers. They support value-based care models and help track health care technologies while providing data for measurement and benchmarking.
+
+Types of CPT Codes
+
+Category I codes (00100–99499): Numeric codes corresponding to established procedures or services, organized by type and anatomy. The primary codes used for billing.
+
+Category II codes: Alphanumeric tracking codes used for performance measurement to facilitate data collection on care quality and test results supporting nationally established performance measures.
+
+Category III codes: Temporary alphanumeric codes for emerging technology, procedures, and services, allowing identification of new technologies for evaluation of clinical efficacy and utilization.
+
+PLA codes: Describe proprietary clinical laboratory analyses, including Advanced Diagnostic Laboratory Tests (ADLTs) and Clinical Diagnostic Laboratory Tests (CDLTs) as defined under PAMA.
+
+Code Development and Maintenance
+
+The independent CPT Editorial Panel, appointed by the AMA Board of Trustees, maintains and updates the CPT code set. Panel members work with CPT Advisors — physicians nominated by national medical specialty societies — to ensure evidence-based review of code changes.
+
+The Panel meets three times yearly to review applications for new codes or revisions. Stakeholders can attend meetings or submit applications for code modifications.
+
+CPT Code Structure
+
+Format: 5-digit numeric codes (Category I) or alphanumeric (Category II/III)
+Categories in Category I:
+- Evaluation and Management (99202–99499)
+- Anesthesia (00100–01999)
+- Surgery (10004–69990)
+- Radiology (70010–79999)
+- Pathology and Laboratory (80047–89398)
+- Medicine (90281–99199)
+
+Cerner Revenue Cycle Integration
+
+Cerner Millennium integrates CPT codes throughout the Revenue Cycle workflow:
+- Charge capture: CPT codes attached to clinical orders and procedures
+- Medical coding: Coders assign CPT codes from clinical documentation
+- Claim generation: CPT codes included on UB-04 and CMS-1500 claim forms
+- Modifier management: CPT modifiers managed through charge entry workflows
+- Fee schedule configuration: CPT-based fee schedules in Cerner contract management
+- Encoder integration: Cerner integrates with 3M and Optum encoders for CPT/ICD-10 coding assistance
+
+Evolution with Medicine
+
+The CPT code set evolves alongside clinical innovations in genomics, digital medicine, and AI-enabled services.

@@ -1,0 +1,131 @@
+Cerner / Oracle Health Integration Guide — Deep Dive
+Source: https://www.tactionsoft.com/blog/cerner-oracle-health-integration-guide/
+Scraped: 2026-04-19
+
+==============================================================
+
+Key Takeaways
+
+Cerner now operates as Oracle Health following Oracle's $28.3 billion acquisition in June 2022, maintaining approximately 25% market share among U.S. EHR vendors. Oracle Health supports multiple integration pathways:
+- FHIR R4 APIs (Ignite APIs)
+- HL7 v2 messaging via Cerner Open Interface (COI)
+- Proprietary Millennium APIs
+- CCDA document exchange
+- CDS Hooks
+
+Recommendation: Use FHIR R4 as primary method; supplement with HL7 v2 only when real-time event data is essential. Avoid new proprietary API development due to migration risk.
+
+Taction Software reports that Cerner/Oracle Health integrations typically require 15–20% less time than equivalent Epic integrations due to more centralized hosting architecture.
+
+Platform Architecture
+
+Cerner Millennium is the centralized clinical and administrative platform. Core components:
+- Millennium Objects (MObj): Internal data model storing clinical data
+- PowerChart: Primary clinician interface for charting and order entry
+- HealtheLife: Patient-facing portal (comparable to Epic's MyChart)
+- Cerner Open Interface (COI): HL7 v2 messaging engine handling ADT, orders, results, and scheduling
+- Millennium Gateway: Hosts FHIR and proprietary REST APIs
+- CareAware: Medical device integration platform
+- Oracle Health Cloud Infrastructure (OHCI): Oracle-managed cloud environment
+
+Integration Methods Comparison
+
+| Method | Best For | Future-Proof |
+|--------|----------|-------------|
+| FHIR R4 (Ignite APIs) | Modern apps, patient access | ***** |
+| HL7 v2 (COI) | Real-time clinical events | *** |
+| Millennium Proprietary APIs | Deep workflow integration | ** |
+| CCDA Document Exchange | Clinical document sharing | *** |
+| CDS Hooks | Clinical decision support | **** |
+
+FHIR R4 APIs (Ignite APIs)
+
+Supported resources include:
+- Clinical: Patient, Encounter, Condition, Procedure, AllergyIntolerance, Immunization
+- Medications: MedicationRequest, MedicationAdministration, MedicationStatement
+- Results: Observation, DiagnosticReport, DocumentReference
+- Care coordination: CarePlan, CareTeam, Goal
+- Scheduling: Appointment, Schedule, Slot
+- Administrative: Practitioner, PractitionerRole, Organization, Location
+- Financial: Claim, ChargeItem, Account
+
+Endpoint structure: Base URL pattern is https://{fhir-server}/r4/{tenant-id}/
+
+Write operations: Support CREATE (POST), UPDATE (PUT), and PATCH for select resources including Appointment, Condition, Observation, and DocumentReference.
+
+HL7 v2 Common Message Types
+
+| Message | Trigger | Notes |
+|---------|---------|-------|
+| ADT^A01 | Admission | FIN in PV1-19 as visit ID |
+| ADT^A03 | Discharge | Includes DG1 segments |
+| ADT^A04 | Registration | Most common ADT in ambulatory |
+| ADT^A08 | Update | High volume — filter carefully |
+| ORM^O01 | New order | Lab, radiology, medications |
+| ORU^R01 | Result | Lab results, radiology reports |
+| SIU^S12 | New appointment | SCH segment contains details |
+| MDM^T02 | Document | TXA segment with metadata |
+| RDE^O11 | Pharmacy encode | Millennium-preferred over ORM |
+| DFT^P03 | Charge posting | Financial transaction |
+
+Millennium uses multiple patient ID types in PID-3: MRN, FIN, CMRN, Millennium Person ID.
+
+SMART on FHIR and CDS Hooks
+
+Supported CDS Hooks:
+- patient-view: triggered when clinician opens patient chart
+- order-select: triggered when clinician selects order
+- order-sign: triggered when clinician signs orders
+- encounter-start: triggered at encounter creation
+- encounter-discharge: triggered at discharge
+
+Hook response types:
+- Information cards: display alerts, reminders, relevant information
+- Suggestion cards: propose actions (add order, update diagnosis)
+- App link cards: launch a SMART app
+
+CCDA Document Exchange
+
+Document types generated:
+- Continuity of Care Document (CCD)
+- Discharge Summary
+- Referral Note
+- Progress Note
+- Operative Note
+- Consultation Note
+- History and Physical
+
+Exchange methods: CommonWell Health Alliance, Carequality, Direct messaging, FHIR DocumentReference
+
+Integration Timeline and Cost
+
+| Integration Type | Cost Range | Timeline |
+|-----------------|-----------|----------|
+| FHIR R4 read-only | $35,000–$70,000 | 2–4 months |
+| FHIR R4 read/write | $70,000–$160,000 | 4–7 months |
+| HL7 v2 single interface (ADT) | $25,000–$55,000 | 2–3 months |
+| HL7 v2 multi-interface | $70,000–$180,000 | 4–8 months |
+| SMART on FHIR embedded app | $50,000–$130,000 | 3–6 months |
+| Full bidirectional | $130,000–$300,000+ | 6–12 months |
+
+Common Integration Challenges
+
+1. Cerner Code Value Resolution: HL7 v2 messages contain Cerner-internal code values instead of standard terminologies.
+   Solution: Build code value translation layer from Cerner code value exports.
+
+2. High-Volume ADT A08 Messages: Millennium generates A08 messages at very high volume.
+   Solution: Build intelligent A08 filtering comparing only relevant fields.
+
+3. Multi-Facility Identifier Management: Different MRNs per facility in multi-facility domains.
+   Solution: Use CMRN for cross-facility patient identification.
+
+4. Oracle Platform Transition Uncertainty: Uncertainty around which APIs have long-term support.
+   Solution: Build on FHIR R4; architect with abstraction layers.
+
+Testing and Go-Live Process
+
+Stage 1: Sandbox Development (4–8 weeks)
+Stage 2: Customer-Specific Testing (3–6 weeks)
+Stage 3: Security Review (2–4 weeks)
+Stage 4: User Acceptance Testing (2–3 weeks)
+Stage 5: Production Go-Live (1–2 weeks)

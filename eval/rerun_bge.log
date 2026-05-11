@@ -1,0 +1,181 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Rate-limited IDs in hospital_eval_v2_results_bge.jsonl: 26
+  hs-cross-003
+  hs-cross-004
+  hs-cross-005
+  hs-cross-006
+  hs-cross-007
+  hs-cross-010
+  hs-it-009
+  hs-it-010
+  hs-it-011
+  hs-it-012
+  hs-it-013
+  hs-it-015
+  hs-it-016
+  hs-it-017
+  hs-nurse-016
+  hs-physician-011
+  hs-nurse-017
+  hs-nurse-018
+  hs-clerk-013
+  hs-clerk-014
+  hs-clerk-015
+  hs-clerk-017
+  hs-nurse-019
+  hs-nurse-020
+  hs-nurse-021
+  hs-nurse-022
+
+Initialising orchestrator (BGE collection)…
+[Retriever] Loading embedding model…
+Loading weights:   0%|          | 0/391 [00:00<?, ?it/s]Loading weights:  66%|######6   | 259/391 [00:00<00:00, 2588.67it/s]Loading weights: 100%|##########| 391/391 [00:00<00:00, 2570.82it/s]
+[1mBertModel LOAD REPORT[0m from: BAAI/bge-large-en-v1.5
+Key                     | Status     |  | 
+------------------------+------------+--+-
+embeddings.position_ids | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+[Retriever] Building BM25 index…
+[Retriever] Ready.
+[Orchestrator] Ready.
+[01/26] hs-cross-003           Charges aren't dropping for a procedure that was clearl… [Redis] Unavailable (Timeout connecting to server). Falling back to in-memory cache.
+[QueryRewriter] intent=troubleshooting  modules=['REVENUE_CYCLE', 'CLINICAL']  ambiguous=False  needs_clarify=False  formal='charge capture clinical documentation vs RCM charge visibili'
+[Retrieve:pass1] strategy=parallel formal+variants  avg_top3=0.738  threshold=0.55
+[Retrieve:pass2] skipped — pass1 quality sufficient (avg_top3=0.738>=0.55)
+[Retrieve:pass3] skipped — pass2 quality sufficient (avg_top3=0.738>=0.55)
+PASS         khr=80%  conf=high  16877ms
+[02/26] hs-cross-004           Discharge summary signed but the prescription didn't tr… [QueryRewriter] intent=troubleshooting  modules=['CLINICAL', 'REVENUE_CYCLE']  ambiguous=False  needs_clarify=False  formal='prescription transmission failure from discharge summary to '
+[Retrieve:pass1] strategy=parallel formal+variants  avg_top3=0.671  threshold=0.55
+[Retrieve:pass2] skipped — pass1 quality sufficient (avg_top3=0.671>=0.55)
+[Retrieve:pass3] skipped — pass2 quality sufficient (avg_top3=0.671>=0.55)
+FAIL(honest) khr=80%  conf=medium  6083ms
+[03/26] hs-cross-005           Lab result came in but didn't update the patient's prob… [QueryRewriter] intent=question  modules=['POWERCHART', 'CLINICAL']  ambiguous=False  needs_clarify=False  formal='Lab result integration with problem list workflow in PowerCh'
+[Retrieve:pass1] strategy=parallel formal+variants  avg_top3=0.691  threshold=0.55
+[Retrieve:pass2] skipped — pass1 quality sufficient (avg_top3=0.691>=0.55)
+[Retrieve:pass3] skipped — pass2 quality sufficient (avg_top3=0.691>=0.55)
+FAIL(honest) khr=80%  conf=medium  19005ms
+[04/26] hs-cross-006           Order in PowerChart says complete but the floor never g… [QueryRewriter] intent=troubleshooting  modules=['POWERCHART']  ambiguous=False  needs_clarify=False  formal='PowerChart task completion status discrepancy between order '
+[Retrieve:pass1] strategy=parallel formal+variants  avg_top3=0.615  threshold=0.55
+[Retrieve:pass2] skipped — pass1 quality sufficient (avg_top3=0.615>=0.55)
+[Retrieve:pass3] skipped — pass2 quality sufficient (avg_top3=0.615>=0.55)
+PASS         khr=100%  conf=medium  31167ms
+[05/26] hs-cross-007           Patient's allergy was added in registration but BCMA st… [QueryRewriter] intent=troubleshooting  modules=['CLINICAL']  ambiguous=False  needs_clarify=False  formal='BCMA medication administration list allergy display workflow'
+[Retrieve:pass1] strategy=parallel formal+variants  avg_top3=0.686  threshold=0.55
+[Retrieve:pass2] skipped — pass1 quality sufficient (avg_top3=0.686>=0.55)
+[Retrieve:pass3] skipped — pass2 quality sufficient (avg_top3=0.686>=0.55)
+FAIL(honest) khr=80%  conf=medium  28209ms
+[06/26] hs-cross-010           Patient transferred from ED to ICU but the medication l… [QueryRewriter] intent=troubleshooting  modules=['CLINICAL']  ambiguous=False  needs_clarify=False  formal='medication administration record transfer from ED to ICU wor'
+[Retrieve:pass1] strategy=parallel formal+variants  avg_top3=0.661  threshold=0.55
+[Retrieve:pass2] skipped — pass1 quality sufficient (avg_top3=0.661>=0.55)
+[Retrieve:pass3] skipped — pass2 quality sufficient (avg_top3=0.661>=0.55)
+FAIL(honest) khr=80%  conf=medium  25817ms
+[07/26] hs-it-009              Need to pull billing accounts via FHIR — does Cerner ex… [QueryRewriter] intent=question  modules=['FHIR', 'MILLENNIUM']  ambiguous=False  needs_clarify=False  formal='Cerner FHIR R4 API billing account exposure'
+[Retrieve:pass1] strategy=parallel formal+variants  avg_top3=0.812  threshold=0.55
+[Retrieve:pass2] skipped — pass1 quality sufficient (avg_top3=0.812>=0.55)
+[Retrieve:pass3] skipped — pass2 quality sufficient (avg_top3=0.812>=0.55)
+PASS         khr=100%  conf=high  23807ms
+[08/26] hs-it-010              How do I get the list of orders for a patient via FHIR … [QueryRewriter] intent=question  modules=['FHIR']  ambiguous=False  needs_clarify=False  formal='FHIR R4 patient resource API query for retrieving combined l'
+[Retrieve:pass1] strategy=parallel formal+variants  avg_top3=0.799  threshold=0.55
+[Retrieve:pass2] skipped — pass1 quality sufficient (avg_top3=0.799>=0.55)
+[Retrieve:pass3] skipped — pass2 quality sufficient (avg_top3=0.799>=0.55)
+PASS         khr=60%  conf=high  26755ms
+[09/26] hs-it-011              Patient appears in two facilities under different MRNs … [QueryRewriter] intent=question  modules=['FHIR']  ambiguous=False  needs_clarify=False  formal='FHIR cross-organization patient identity resource'
+[Retrieve:pass1] strategy=parallel formal+variants  avg_top3=0.769  threshold=0.55
+[Retrieve:pass2] skipped — pass1 quality sufficient (avg_top3=0.769>=0.55)
+[Retrieve:pass3] skipped — pass2 quality sufficient (avg_top3=0.769>=0.55)
+PASS         khr=60%  conf=medium  27645ms
+[10/26] hs-it-012              Need implant history for a patient — pacemaker manufact… [QueryRewriter] intent=question  modules=['FHIR']  ambiguous=False  needs_clarify=False  formal='FHIR resource for pacemaker implant history'
+[Retrieve:pass1] strategy=parallel formal+variants  avg_top3=0.783  threshold=0.55
+[Retrieve:pass2] skipped — pass1 quality sufficient (avg_top3=0.783>=0.55)
+[Retrieve:pass3] skipped — pass2 quality sufficient (avg_top3=0.783>=0.55)
+PASS         khr=100%  conf=high  27043ms
+[11/26] hs-it-013              Looking at moving Cerner integrations from monolith to … [QueryRewriter] intent=question  modules=['FHIR', 'MILLENNIUM']  ambiguous=False  needs_clarify=False  formal='Cerner engineering recommended patterns for microservices ar'
+[Retrieve:pass1] strategy=parallel formal+variants  avg_top3=0.728  threshold=0.55
+[Retrieve:pass2] skipped — pass1 quality sufficient (avg_top3=0.728>=0.55)
+[Retrieve:pass3] skipped — pass2 quality sufficient (avg_top3=0.728>=0.55)
+PASS         khr=60%  conf=medium  25283ms
+[12/26] hs-it-015              Building a new Millennium integration — where's the can… [QueryRewriter] intent=question  modules=['MILLENNIUM', 'FHIR']  ambiguous=False  needs_clarify=False  formal='Millennium API integration canonical index'
+[Retrieve:pass1] strategy=parallel formal+variants  avg_top3=0.780  threshold=0.55
+[Retrieve:pass2] skipped — pass1 quality sufficient (avg_top3=0.780>=0.55)
+[Retrieve:pass3] skipped — pass2 quality sufficient (avg_top3=0.780>=0.55)
+PASS         khr=100%  conf=high  24514ms
+[13/26] hs-it-016              What's CCL and when do I use it instead of FHIR for dat… [QueryRewriter] intent=question  modules=['MILLENNIUM', 'FHIR']  ambiguous=False  needs_clarify=False  formal='Cerner Clinical Knowledge Manager CCL data extraction workfl'
+[Retrieve:pass1] strategy=parallel formal+variants  avg_top3=0.709  threshold=0.55
+[Retrieve:pass2] skipped — pass1 quality sufficient (avg_top3=0.709>=0.55)
+[Retrieve:pass3] skipped — pass2 quality sufficient (avg_top3=0.709>=0.55)
+PASS         khr=80%  conf=high  19080ms
+[14/26] hs-it-017              Hospital is moving Millennium to OCI — what changes ope… [QueryRewriter] intent=question  modules=['MILLENNIUM']  ambiguous=False  needs_clarify=False  formal='Millennium OCI migration operational impact'
+[Retrieve:pass1] strategy=parallel formal+variants  avg_top3=0.710  threshold=0.55
+[Retrieve:pass2] skipped — pass1 quality sufficient (avg_top3=0.710>=0.55)
+[Retrieve:pass3] skipped — pass2 quality sufficient (avg_top3=0.710>=0.55)
+PASS         khr=80%  conf=high  25380ms
+[15/26] hs-nurse-016           My patient list keeps refreshing to a different unit — … [QueryRewriter] intent=question  modules=['POWERCHART']  ambiguous=False  needs_clarify=False  formal='PowerChart patient list unit assignment workflow'
+[Retrieve:pass1] strategy=parallel formal+variants  avg_top3=0.716  threshold=0.55
+[Retrieve:pass2] skipped — pass1 quality sufficient (avg_top3=0.716>=0.55)
+[Retrieve:pass3] skipped — pass2 quality sufficient (avg_top3=0.716>=0.55)
+PASS         khr=80%  conf=medium  23870ms
+[16/26] hs-physician-011       Discharge med rec isn't carrying forward home meds I co… [QueryRewriter] intent=question  modules=['CLINICAL']  ambiguous=False  needs_clarify=False  formal='eMAR discharge medication reconciliation home medication car'
+[Retrieve:pass1] strategy=parallel formal+variants  avg_top3=0.689  threshold=0.55
+[Retrieve:pass2] skipped — pass1 quality sufficient (avg_top3=0.689>=0.55)
+[Retrieve:pass3] skipped — pass2 quality sufficient (avg_top3=0.689>=0.55)
+PASS         khr=80%  conf=high  27569ms
+[17/26] hs-nurse-017           Discharge med rec — patient says he stopped taking the … [QueryRewriter] intent=question  modules=['CLINICAL']  ambiguous=False  needs_clarify=False  formal='Discharge medication reconciliation process for patients who'
+[Retrieve:pass1] strategy=parallel formal+variants  avg_top3=0.736  threshold=0.55
+[Retrieve:pass2] skipped — pass1 quality sufficient (avg_top3=0.736>=0.55)
+[Retrieve:pass3] skipped — pass2 quality sufficient (avg_top3=0.736>=0.55)
+PASS         khr=80%  conf=high  28518ms
+[18/26] hs-nurse-018           Trying to sign off on a med using PowerChart Touch on t… [QueryRewriter] intent=troubleshooting  modules=['CLINICAL', 'POWERCHART']  ambiguous=False  needs_clarify=False  formal='BCMA scanner connectivity issues during medication administr'
+[Retrieve:pass1] strategy=parallel formal+variants  avg_top3=0.705  threshold=0.55
+[Retrieve:pass2] skipped — pass1 quality sufficient (avg_top3=0.705>=0.55)
+[Retrieve:pass3] skipped — pass2 quality sufficient (avg_top3=0.705>=0.55)
+PASS         khr=100%  conf=medium  25340ms
+[19/26] hs-clerk-013           Registering a minor — guarantor isn't the parent on fil… [QueryRewriter] intent=question  modules=['CLINICAL']  ambiguous=False  needs_clarify=False  formal='minor registration workflow guarantor parent custody arrange'
+[Retrieve:pass1] strategy=parallel formal+variants  avg_top3=0.525  threshold=0.55
+[Retrieve:pass2] strategy=HyDE  avg_top3=0.574  trigger=pass1_avg(0.525)<0.55
+[Retrieve:pass3] skipped — pass2 quality sufficient (avg_top3=0.574>=0.55)
+FAIL(honest) khr=80%  conf=medium  31079ms
+[20/26] hs-clerk-014           Provider documented a procedure that needs both an ICD-… [QueryRewriter] intent=question  modules=['REVENUE_CYCLE']  ambiguous=False  needs_clarify=False  formal='ICD-10 and CPT code placement on claim'
+[Retrieve:pass1] strategy=parallel formal+variants  avg_top3=0.718  threshold=0.55
+[Retrieve:pass2] skipped — pass1 quality sufficient (avg_top3=0.718>=0.55)
+[Retrieve:pass3] skipped — pass2 quality sufficient (avg_top3=0.718>=0.55)
+PASS         khr=100%  conf=high  22266ms
+[21/26] hs-clerk-015           Claim came back with denial reason CO-97 — what do I do… [QueryRewriter] intent=troubleshooting  modules=['REVENUE_CYCLE']  ambiguous=False  needs_clarify=False  formal='claim denial reason CO-97 revenue cycle workflow'
+[Retrieve:pass1] strategy=parallel formal+variants  avg_top3=0.743  threshold=0.55
+[Retrieve:pass2] skipped — pass1 quality sufficient (avg_top3=0.743>=0.55)
+[Retrieve:pass3] skipped — pass2 quality sufficient (avg_top3=0.743>=0.55)
+PASS         khr=100%  conf=high  24798ms
+[22/26] hs-clerk-017           We're moving from legacy patient accounting to RevElate… [QueryRewriter] intent=question  modules=['REVENUE_CYCLE']  ambiguous=False  needs_clarify=False  formal='RevElate revenue cycle platform daily AR workflow changes'
+[Retrieve:pass1] strategy=parallel formal+variants  avg_top3=0.648  threshold=0.55
+[Retrieve:pass2] skipped — pass1 quality sufficient (avg_top3=0.648>=0.55)
+[Retrieve:pass3] skipped — pass2 quality sufficient (avg_top3=0.648>=0.55)
+PASS         khr=60%  conf=high  28857ms
+[23/26] hs-nurse-019           Patient pulled out the IV and is trying to get out of b… [QueryRewriter] intent=question  modules=['CLINICAL']  ambiguous=False  needs_clarify=False  formal='escalation criteria for restraint orders in clinical workflo'
+[Retrieve:pass1] strategy=parallel formal+variants  avg_top3=0.662  threshold=0.55
+[Retrieve:pass2] skipped — pass1 quality sufficient (avg_top3=0.662>=0.55)
+[Retrieve:pass3] skipped — pass2 quality sufficient (avg_top3=0.662>=0.55)
+FAIL(honest) khr=60%  conf=low  26847ms
+[24/26] hs-nurse-020           Sepsis BPA fired again — patient already has fluids and… [QueryRewriter] intent=troubleshooting  modules=['CLINICAL']  ambiguous=False  needs_clarify=False  formal='Sepsis Business Performance Alert (BPA) dismissal criteria'
+[Retrieve:pass1] strategy=parallel formal+variants  avg_top3=0.686  threshold=0.55
+[Retrieve:pass2] skipped — pass1 quality sufficient (avg_top3=0.686>=0.55)
+[Retrieve:pass3] skipped — pass2 quality sufficient (avg_top3=0.686>=0.55)
+FAIL(honest) khr=100%  conf=high  25480ms
+[25/26] hs-nurse-021           BCMA flagged the heparin as high-alert — second-nurse v… [QueryRewriter] intent=question  modules=['CLINICAL']  ambiguous=False  needs_clarify=False  formal='BCMA high-alert medication workflow second-nurse verificatio'
+[Retrieve:pass1] strategy=parallel formal+variants  avg_top3=0.741  threshold=0.55
+[Retrieve:pass2] skipped — pass1 quality sufficient (avg_top3=0.741>=0.55)
+[Retrieve:pass3] skipped — pass2 quality sufficient (avg_top3=0.741>=0.55)
+PASS         khr=100%  conf=high  24375ms
+[26/26] hs-nurse-022           Pain assessment template won't let me document a numeri… [QueryRewriter] intent=troubleshooting  modules=['CLINICAL']  ambiguous=False  needs_clarify=False  formal='numeric pain assessment template documentation issue in non-'
+[Retrieve:pass1] strategy=parallel formal+variants  avg_top3=0.661  threshold=0.55
+[Retrieve:pass2] skipped — pass1 quality sufficient (avg_top3=0.661>=0.55)
+[Retrieve:pass3] skipped — pass2 quality sufficient (avg_top3=0.661>=0.55)
+PASS         khr=100%  conf=high  10741ms
+
+======================================================================
+RE-RUN COMPLETE  —  26 queries in 12.1 min
+======================================================================
+Pass:        19/26
+Bad fails:   0
+Still RL:    0
+Appended to: C:\Users\gaurav.garje\OneDrive - Accenture\Desktop\cerna\eval\hospital_eval_v2_results_bge.jsonl

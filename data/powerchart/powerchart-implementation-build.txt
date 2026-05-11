@@ -1,0 +1,1096 @@
+# SOURCE: PowerChart Build Configuration — Powerforms, Powerplans, MPages
+# URL: https://www.ghit.digital/insight/detail/implementing-oracle-health-cerner-ehr
+# MODULE: PowerChart
+# RETRIEVED: 2026-04-16
+# ---
+
+<!DOCTYPE html>
+<html lang="" class="loading ">
+<head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />  
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"> 
+    <base href="https://www.ghit.digital/" />
+
+    
+                <title>Implementing Oracle Health - Cerner EHR</title>
+        <meta name="description" content="Implementing Oracle Health (Cerner) EHR - GHIT Digital POV    This is a deep, implementation-focused guide for replacing an existing Electronic Health Record (EHR) system with Oracle Health’s (formerly Cerner Millennium) EHR in large health systems or with the Department of Veterans Affairs (VA) federal EHR modernization context. Program managers, technical managers, solution experts, and capture/delivery teams who plan, execute, and sustain a multi-site EHR replace/modernization program can benefit from this GHIT Digital POV. The guidance covers program setup, technical architecture, integration recipes, configuration and build specifics, data migration approaches, testing strategy (including OFCt/Functional Champion support), cutover strategies, hypercare, and long-term sustainment.">
+        <meta name="author" content="GHIT DIIGITAL">
+        <meta name=”robots” content=”index, follow”>
+        <meta name="keywords" content="EHR, Cerner, Oracle Health, Implementation, Integration"/>
+        <meta property="og:title" content="Implementing Oracle Health - Cerner EHR" />
+                <meta property="og:image" content="https://www.ghit.digital/assets/admin/insight/21f52-oracle-heath-cerner-ehr.png"/>
+                <meta property="og:description" content="Implementing Oracle Health (Cerner) EHR - GHIT Digital POV    This is a deep, implementation-focused guide for replacing an existing Electronic Health Record (EHR) system with Oracle Health’s (formerly Cerner Millennium) EHR in large health systems or with the Department of Veterans Affairs (VA) federal EHR modernization context. Program managers, technical managers, solution experts, and capture/delivery teams who plan, execute, and sustain a multi-site EHR replace/modernization program can benefit from this GHIT Digital POV. The guidance covers program setup, technical architecture, integration recipes, configuration and build specifics, data migration approaches, testing strategy (including OFCt/Functional Champion support), cutover strategies, hypercare, and long-term sustainment." />
+        <meta property="og:site_name" content="GHIT DIGITAL" />
+        <meta name="twitter:title" content="Implementing Oracle Health - Cerner EHR">
+        <meta name="twitter:description" content="Implementing Oracle Health (Cerner) EHR - GHIT Digital POV    This is a deep, implementation-focused guide for replacing an existing Electronic Health Record (EHR) system with Oracle Health’s (formerly Cerner Millennium) EHR in large health systems or with the Department of Veterans Affairs (VA) federal EHR modernization context. Program managers, technical managers, solution experts, and capture/delivery teams who plan, execute, and sustain a multi-site EHR replace/modernization program can benefit from this GHIT Digital POV. The guidance covers program setup, technical architecture, integration recipes, configuration and build specifics, data migration approaches, testing strategy (including OFCt/Functional Champion support), cutover strategies, hypercare, and long-term sustainment.">
+                <meta property="twitter:image" content="https://www.ghit.digital/assets/admin/insight/21f52-oracle-heath-cerner-ehr.png"/>
+                
+
+    <link rel="shortcut icon" href="https://www.ghit.digital/assets/frontend/img/favicon.png"> 
+
+    </head>
+<body class=" ">
+
+<link href="https://www.ghit.digital/assets/frontend/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://www.ghit.digital/assets/frontend/css/bootstrap-icons.css" rel="stylesheet">
+<link href="https://www.ghit.digital/assets/frontend/css/all.min.css" rel="stylesheet">
+<link href="https://www.ghit.digital/assets/frontend/css/fontawesome.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://www.ghit.digital/assets/frontend/css/swiper-bundle.min.css">
+<link rel="stylesheet" href="https://www.ghit.digital/assets/frontend/css/magnific-popup.css">
+<link rel="stylesheet" href="https://www.ghit.digital/assets/frontend/css/animate.min.css">
+<link rel="stylesheet" href="https://www.ghit.digital/assets/frontend/css/style.css">
+<link rel="stylesheet" href="https://www.ghit.digital/assets/frontend/css/toastr.css">
+<script src="https://www.ghit.digital/assets/frontend/js/jquery-3.6.0.min.js"></script>
+<style type="text/css">
+   #loading {
+   width: 100%;
+   height: 100%;
+   top: 0;
+   left: 0;
+   position: fixed;
+   display: block;
+   opacity: 0.7;
+   background-color: #fff;
+   z-index: 9999;
+   text-align: center;
+   }
+   #loading-image {
+   position: absolute;
+   top: 250px;
+   left: 630px;
+   z-index: 100;
+   }
+</style>
+<style type="text/css">
+   .hide_data{
+    display: none;
+  }
+  .show_data{
+    display: block;
+  }
+  .hide_v{
+   display: none;
+  }
+</style>
+<!--
+   <div id="loading" style="display: none">
+  <img id="loading-image" src="https://www.ghit.digital/assets/admin/images/loaders.gif" alt="Loading..." />
+</div> 
+
+<div class="preloader">
+	<div class="loader">
+		<span></span>
+		<span></span>
+		<span></span>
+		<span></span>
+	</div>
+</div>
+-->
+
+<header class="header-area position_top">
+ <div class="site-logo">
+    <div class="logo">
+       <a href="https://www.ghit.digital/"><img src="https://www.ghit.digital/assets/frontend/img/logo.png" alt="image"></a>
+    </div>
+ </div>
+ <div class="main-menu">
+    <nav class="main-nav">
+       <div class="mobile-menu-logo">
+          <a href="https://www.ghit.digital/"><img src="https://www.ghit.digital/assets/frontend/img/logo.png" alt=""></a>
+          <div class="remove">
+             <i class="bi bi-plus-lg"></i>
+          </div>
+       </div>
+       <ul>
+          <li class="has-child active">
+             <a class="home_as" href="https://www.ghit.digital/">
+                <i class="fa fa-home" aria-hidden="true"></i>
+              Home </a>
+          </li>
+          
+
+                    <li>
+             <a href="javascript:void(0)">Domains</a>
+             <i class="bi bi-chevron-down"></i>
+             <ul class="sub-menu">
+                                <li><a href="https://www.ghit.digital/domain/government">Government</a></li>
+                               <li><a href="https://www.ghit.digital/domain/healthcare">Healthcare</a></li>
+                               <li><a href="https://www.ghit.digital/domain/insurance">Insurance</a></li>
+                               <li><a href="https://www.ghit.digital/domain/technology">Technology</a></li>
+                
+             </ul>
+          </li>
+          
+                         
+          <li>
+             <a href="javascript:void(0)">Capabilities</a>
+             <i class="bi bi-chevron-down"></i>
+             <ul class="sub-menu">
+             <li><a href="https://www.ghit.digital/rfp-writing-services"> RFP Writing </a></li>
+                               <li><a href="https://www.ghit.digital/capability/digital-services">Digital Services</a></li>
+                               <li><a href="https://www.ghit.digital/capability/cloud-services">Cloud Services</a></li>
+                               <li><a href="https://www.ghit.digital/capability/data-services">Data Services</a></li>
+                               <li><a href="https://www.ghit.digital/capability/project-services">Project Services</a></li>
+                
+             </ul>
+          </li>
+         
+         <li>
+             <a href="javascript:void(0)">About Us</a>
+             <i class="bi bi-chevron-down"></i>
+             <ul class="sub-menu">
+                <li><a href="https://www.ghit.digital/about-us">About GHIT</a></li>
+                <li><a href="https://www.ghit.digital/certifications">Certifications</a></li>
+                <li><a href="https://www.ghit.digital/contact-us">Contact GHIT</a></li>
+                <li><a href="https://www.ghit.digital/partner">Clients & Partners</a></li>
+             </ul>
+          </li>
+         
+          
+          
+          <li>
+             <a>Careers</a>
+             <i class="bi bi-chevron-down"></i>
+             <ul class="sub-menu">
+                
+                               <li><a href="https://www.ghit.digital/careers/digital-services">Digital Services</a></li>
+                               <li><a href="https://www.ghit.digital/careers/cloud-services">Cloud Services</a></li>
+                               <li><a href="https://www.ghit.digital/careers/data-services">Data Services</a></li>
+                               <li><a href="https://www.ghit.digital/careers/project-services">Project Services</a></li>
+                
+             </ul>
+          </li>
+          
+
+          <li><a href="https://www.ghit.digital/insight">Insights </a></li>
+          <!-- <li><a href="contact_us.php">Contact Us</a></li> -->
+       </ul>
+       <div class="get-qoute d-flex justify-content-center d-lg-none d-block pt-50">
+          <div class="cmn-btn">
+             <div class="line-1"></div>
+             <div class="line-2"></div>
+             <a href="javascript:void(0)">Get A Quote</a>
+          </div>
+       </div>
+    </nav>
+ </div>
+ <div class="nav-right">
+    <div class="get-qoute">
+       <div class="">
+                  <form id="search_form" >
+          <input type="text" placeholder="Search" class="search_inpt" id="search_val">
+          <button type="submit" class="search_btn" >
+             <i class="fa fa-search" aria-hidden="true"></i>
+          </button>
+         </form>
+                  <div class="hspro_list_cass" id="hspro_list2" style="display: none; float: left;" ></div>
+       </div>
+    </div>
+    <div class="mobile-menu">
+       <a href="javascript:void(0)" class="cross-btn">
+       <span class="cross-top"></span>
+       <span class="cross-middle"></span>
+       <span class="cross-bottom"></span>
+       </a>
+    </div>
+ </div>
+</header>
+
+<main class="creasoft-wrap">
+<main class="creasoft-wrap">
+   <div class="line_wrap">
+      <div class="line_item"></div>
+      <div class="line_item"></div>
+      <div class="line_item"></div>
+      <div class="line_item"></div>
+      <div class="line_item"></div>
+   </div>
+   <section class="breadcrumbs">
+      <div class="container">
+         <div class="row">
+            <div class="col-12">
+               <div class="breadcrumb-wrapper">
+                  <div class="breadcrumb-cnt">
+                     <h1>Insight</h1>
+                     <span>
+                     <a href="https://www.ghit.digital/">Home</a>  
+                     <!-- <i class="bi bi-arrow-right"></i -->
+                     </span>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </section>
+
+   
+   <section class="blog-details-area sec-mar-top">
+            <div class="container">
+               <div class="row">
+                  <div class="col-lg-8">
+                                          <div class="blog-details-content">
+                        <h3>Implementing Oracle Health - Cerner EHR</h3>
+                        <div class="author-date layout2">
+                           <a href="javascript:void(0)">GHIT Digital </a> 
+                           <a href="javascript:void(0)">18.09.2025</a>
+                        </div>
+                        <div class="details-thumb">
+                           <img src="https://www.ghit.digital/assets/admin/insight/21f52-oracle-heath-cerner-ehr.png" alt="">
+                        </div>
+                        <p><strong>Implementing Oracle Health - Cerner&nbsp;EHR I A GHIT Digital POV</strong></p>
+
+<p>&nbsp;</p>
+
+<p>This is a deep, implementation-focused guide for replacing an existing Electronic Health Record (EHR) system with Oracle Health&rsquo;s (formerly Cerner Millennium) EHR in large health systems or with the Department of Veterans Affairs (VA) federal EHR modernization context. Program managers, technical managers, solution experts, and capture/delivery teams who plan, execute, and sustain a multi-site EHR replace/modernization program can benefit from this GHIT Digital POV. The guidance covers program setup, technical architecture, integration recipes, configuration and build specifics, data migration approaches, testing strategy (including OFCt/Functional Champion support), cutover strategies, hypercare, and long-term sustainment.</p>
+
+<p>&nbsp;</p>
+
+<p><strong>Background: VA EHR Modernization and program context</strong></p>
+
+<p><strong>Why VA is unique:</strong></p>
+
+<p>&bull; The VA maintains one of the largest, most-complex healthcare IT environments in the U.S., historically operating the Veterans Health Information Systems and Technology Architecture (VistA) across 130+ local instances. Replacing VistA with a single, Federal EHR (Oracle Health Millennium) is a decade-scale program that requires coordinated governance across national, VISN, and local site stakeholders. (See VA EHRM program materials and GAO/OIG coverage.)</p>
+
+<p>&bull; The VA&rsquo;s EHR modernization program involves not only replacing clinical systems at hospital and clinic sites, but also interfacing and co-existing with DoD solutions (MHS GENESIS), VA-specific identity and benefits systems, and large volumes of legacy clinical content. This scale changes the migration, testing, and change-management calculus compared to typical commercial implementations.</p>
+
+<p>Key program realities observed in federal deployments: large configuration backlogs, rigorous OFCt/Functional Champion testing requirements, need for strong ticket management and operational telemetry, and intensive clinical reconciliation work for medication lists, allergies, and problem lists. GAO and VA OIG reports document these practical challenges and the need for tight governance during deployment.</p>
+
+<p>&nbsp;</p>
+
+<p><strong>Oracle Health (Cerner Millennium) &mdash; product snapshot (latest capabilities)</strong></p>
+
+<h1>Core clinical and enterprise modules:</h1>
+
+<p>&nbsp;</p>
+
+<p>PowerChart (clinician charting and documentation), PowerOrders / CPOE, PowerNote, FirstNet (ED), SurgiNet (perioperative), RadNet (radiology), PathNet (lab/pathology), MPages (custom clinician UI dashboards), Discern/CCL (clinical decision logic &amp; reporting), and enterprise analytics via Oracle Health Data Intelligence / HealtheIntent.</p>
+
+<h1>Modern integration &amp; developer surface:</h1>
+
+<p>&nbsp;</p>
+
+<p>Oracle Health provides HL7 FHIR R4 REST APIs (including bulk-data capabilities), SMART-on-FHIR embedding into MPages, and traditional HL7 v2 interfaces for ADT/Orders/Results flows. The Millennium Operational Data Store (ODS) bundle and related analytics feed types underpin migrations and downstream reporting.</p>
+
+<h1>Cloud and hosting:</h1>
+
+<p>&nbsp;</p>
+
+<p>Oracle positions Oracle Cloud Infrastructure (OCI) as the primary infrastructure for Oracle Health, offering commercial and government regions, Oracle Health managed hosting options, and OCI reference architectures and landing zones tailored to healthcare workloads. Oracle has signaled product modernization efforts toward a next-generation cloud-native EHR with embedded analytics and AI capabilities.</p>
+
+<p>&nbsp;</p>
+
+<p><strong>Implementation Approach &mdash; replacing an existing with Oracle Health (Cerner) EHR</strong></p>
+
+<p>This section describes an operator-friendly, technical program sequence designed for a site or multi-site federal rollout where an existing EHR/EMR (for example VistA or other commercial EHR) is being replaced by Oracle Health Millennium.</p>
+
+<p>&nbsp;</p>
+
+<p><strong>Phase 0 &mdash; Program setup &amp; governance (4&ndash;8 weeks)</strong></p>
+
+<p>&bull; Establish governance across national, VISN, and local levels (steering committee, technical design authority, clinical advisory board, and site program leads).</p>
+
+<p>&bull; Define deployment model: big-bang vs phased/layered cutover, and baseline the site readiness criteria for hardware, connectivity, identity, and security.</p>
+
+<p>&bull; Create a program risk register, escalation ladder, and communications cadence (daily standups for sprint teams; weekly steering updates; monthly executive reviews).</p>
+
+<p>&bull; Inventory current-state systems and interfaces (ADT, LIS, RIS/PACS, scheduling, billing, pharmacy systems, external HIEs). Produce an authoritative Interface Catalog.</p>
+
+<p>&nbsp;</p>
+
+<p><strong>Phase 1 &mdash; Requirements, design &amp; build plan (6&ndash;12 weeks)</strong></p>
+
+<p>&bull; Run structured workshops by domain (inpatient, ED, periop, pharmacy, radiology, lab, behavioral health) to translate clinical workflows into Build Workbook artifacts.</p>
+
+<p>&bull; Capture role-based security profiles and target MPage layouts; define PowerPlans, orderables, and catalog reconciliation approaches.</p>
+
+<p>&bull; Define data migration scope: what to import into the active EHR (commonly &#39;active problem list, meds, allergies, immunizations, labs, encounter history &mdash; last 2 years&#39;), what to archive (legacy archive with SSO), and retention policies.</p>
+
+<p>&bull; Define acceptance criteria and test cases tied to each build item (traceability matrix: Requirement &rarr; Build Item &rarr; Test Case &rarr; Acceptance Sign-off).</p>
+
+<p>&nbsp;</p>
+
+<p><strong>Phase 2 &mdash; Build &amp; integration (12&ndash;24 weeks, iterative)</strong></p>
+
+<p>&bull; Environment strategy: Dev / Unit Test &rarr; Integration &rarr; System &rarr; UAT (OFCt) &rarr; Pre-Prod &rarr; Prod. Enforce automated build and deployment pipelines where possible for non-production artifacts.</p>
+
+<p>&bull; Configuration &amp; build tasks: MPages components, powerforms, powerplans, CareGuides (if used), Discern rule sets, security roles, and order catalog mapping.</p>
+
+<p>&bull; Integration tasks: integration engine configuration (canonical bus), HL7 v2 channels for ADT/Orders/Results, FHIR fa&ccedil;ade for apps, OAuth2 / SAML for SSO, and API gateway for SMART apps.</p>
+
+<p>&bull; Data feeds: configure Millennium ODS extract bundles and downstream ETL to populate analytics EDW / HealtheIntent. Validate feed completeness and scheduling.</p>
+
+<p>&bull; Data migration pilot: execute small-scope end-to-end migration (one clinic or ward) to validate extraction, transform, reconciliation, and import patterns.</p>
+
+<p>&nbsp;</p>
+
+<p><strong>Phase 3 &mdash; Testing &amp; functional-champion validation (6&ndash;12 weeks)</strong></p>
+
+<p>&bull; Unit testing of build artifacts (MPages, Discern rules, powerplans).</p>
+
+<p>&bull; Integrated testing involving HL7 v2 and FHIR data flows, and back-end EDW consumes.</p>
+
+<p>&bull; Functional Champion (OFCt) support: clinical users (nurses, physicians, pharmacy) run scenario-based acceptance tests. Maintain defect/ticket triage with SLOs and severity levels.</p>
+
+<p>&bull; Performance &amp; load testing (simulated concurrent clinician loads) and failover testing for high availability and disaster recovery.</p>
+
+<p>&nbsp;</p>
+
+<p><strong>Phase 4 &mdash; Training &amp; knowledge transfer (3&ndash;8 weeks + ongoing)</strong></p>
+
+<p>&bull; Role-based training paths (physician, nurse, allied health, scheduling, pharmacy).</p>
+
+<p>&bull; Simulation labs with synthetic patients; build a &#39;playbook&#39; for common workflows and failure modes.</p>
+
+<p>&bull; Train-the-trainer &amp; national/VISN knowledge transfer sessions; prepare runbooks and escalation guides for hypercare.</p>
+
+<p>&nbsp;</p>
+
+<p><strong>Phase 5 &mdash; Cutover, go-live &amp; hypercare (2&ndash;6 weeks intensive)</strong></p>
+
+<p>&bull; Cutover strategy: freeze windows (data write freeze) and final delta migration. Validate identity matching and reconciliation before go-live.</p>
+
+<p>&bull; Command center operations: 24/7 triage, priority lanes for patient-safety issues, and a ticket backfill plan for configuration changes.</p>
+
+<p>&bull; Hypercare to productize frequent fixes into documented build changes with post-go-live sprints for optimization.</p>
+
+<p>&nbsp;</p>
+
+<p><strong>Phase 6 &mdash; Optimization &amp; sustainment (ongoing)</strong></p>
+
+<p>&bull; Backlog management, recurring governance, and continuous improvement sprints.</p>
+
+<p>&bull; Monitoring &amp; observability: track API latency, queue depths, major incident dashboards, user satisfaction metrics, and clinical KPIs.</p>
+
+<p>&bull; Security patching and OCI configuration hardening; periodic disaster recovery drills.</p>
+
+<p>&nbsp;</p>
+
+<p><strong>Data migration &mdash; practical mechanics and recommendations</strong></p>
+
+<h1>1)Scope and retention:</h1>
+
+<p>Determine which domains to migrate into the active EHR vs archive (e.g., 24 months active clinical detail; remainder archived). Provide a solution for scanned documents and images (VNA with single-sign-on to legacy archive).</p>
+
+<h1>2) Extraction &amp; transform:</h1>
+
+<p>Extract canonical ODBC/DB or HL7/CCD/CCDA exports from legacy systems. Define transformation rules to map: provider identifiers, location/encounter mapping, orderables, medication codings (RxNorm mapping), LOINC for labs, and SNOMED or ICD mappings for problem lists.</p>
+
+<h1>3) Identity resolution:</h1>
+
+<p>Build a robust MPI crosswalk for facility identifiers, provider NPI mapping, and patient matching (deterministic + probabilistic), and define manual reconciliation workflows for ambiguous matches.</p>
+
+<h1>4) Medication reconciliation:</h1>
+
+<p>Handle active meds, historical meds, and integrate pharmacy systems to ensure orderable codes and dosing semantics align to Cerner order catalog.</p>
+
+<h1>5) Testing:</h1>
+
+<p>Validate migrated data with clinicians via reconciliation reports and sample chart validations; produce reconciliation sign-off artifacts as part of go/no-go gates.</p>
+
+<p>&nbsp;</p>
+
+<p><strong>Integration architecture &mdash; recommended patterns</strong></p>
+
+<p>&bull; Canonical Bus / Integration Engine: implement a canonical message bus (Mirth, Oracle SOA, or OIC / integration engine) to normalize ADT, ORM, ORU, and DFT messages and route them to the correct Millennium interfaces.</p>
+
+<p>&bull; HL7 v2 for low-latency interfaces: retain real-time HL7 v2 channels for ADT/Orders/Results to preserve operational timeliness.</p>
+
+<p>&bull; FHIR &amp; SMART: use FHIR R4 for apps, analytics, and external read/write integrations; embed SMART-on-FHIR apps in MPages for clinician workflows.</p>
+
+<p>&bull; API Gateway &amp; IAM: front FHIR endpoints with an API gateway (security, rate-limiting, auditing) and integrate OAuth2 / OpenID Connect for SMART app authorization and SSO.</p>
+
+<p>&bull; Bulk/extract pipelines: use HealtheIntent / Data Syndication APIs to offload large analytic or research extracts asynchronously to EDW or data lakes.</p>
+
+<p>&nbsp;</p>
+
+<p><strong>Security, compliance &amp; OCI considerations</strong></p>
+
+<p>&bull; OCI hosting: Oracle Cloud Infrastructure (OCI) offers commercial and government regions, Oracle Health managed hosting, and well-architected reference architectures tailored for healthcare workloads. OCI provides compartmentalization, dedicated regions, and robust IAM that aligns to NIST and FedRAMP expectations for federal customers.</p>
+
+<p>&bull; Data residency &amp; gov-cloud: for VA and federal customers, plan for government cloud region deployments and evaluate dedicated tenancy or FedRAMP-authorized region offerings.</p>
+
+<p>&bull; Backup &amp; DR: implement cross-region replicaton and a documented DR runbook; validate RTO/RPO targets during pre-prod tests.</p>
+
+<p>&bull; Observability: instrument Millennium components and integration engine with centralized logging, metrics, and alerting. Implement SIEM and privileged access monitoring.</p>
+
+<p>&nbsp;</p>
+
+<p><strong>Configuration management, build promotion &amp; quality gates</strong></p>
+
+<p>&bull; Promote artifacts using a formal pipeline: Dev &rarr; Integration &rarr; System &rarr; OFCt UAT &rarr; Pre-Prod &rarr; Prod. Maintain versioned build artifacts and a change-control board for configuration changes.</p>
+
+<p>&bull; Discern / CCL: maintain a unit-test harness for Discern rules. Track the mapping from rules to clinical acceptance criteria and preserve test data for regression runs.</p>
+
+<p>&bull; MPages and UI accelerators: package MPages components into deployable bundles and maintain a component catalog for reuse across sites.</p>
+
+<p>&nbsp;</p>
+
+<p><strong>Testing strategy &mdash; OFCt and Functional Champions</strong></p>
+
+<p>&bull; OFCt role: structure testing so that Functional Champions (OFCt) receive curated test scripts matched to clinical scenarios; record results, defects, and remediation timelines. Use severity-based SLAs for critical patient-safety defects.</p>
+
+<p>&bull; Automated regression: automate smoke and regression tests for key workflows (login, chart open, med order, eMAR flows) to accelerate sprint validation cycles and reduce manual regression effort.</p>
+
+<p>&bull; Synthetic test data: create realistic synthetic patients to preserve privacy while enabling repeatable test scenarios.</p>
+
+<p>&nbsp;</p>
+
+<p><strong>Cutover playbook highlights (what a program manager must plan)</strong></p>
+
+<p>&bull; Detailed cutover timeline with freeze windows for source systems and a final delta ETL/INGEST procedure.</p>
+
+<p>&bull; Reconciliation windows and manual reconciliation teams for ambiguous identity or medication matches.</p>
+
+<p>&bull; Escalation &amp; rollback playbook with defined decision gates and rollback window duration.</p>
+
+<p>&bull; Command center staffing and hot-fix lanes (clinical safety lane; configuration change lane; integration lane).</p>
+
+<p>&bull; Post-go-live metrics to monitor in first 72 hours and first 30 days (critical incident count, median ticket MTTR, rate of medication discrepancies).</p>
+
+<p>&nbsp;</p>
+
+<p><strong>Risks observed in federal rollouts and mitigations (evidence-backed)</strong></p>
+
+<p>&bull; Configuration backlog: federal deployments have reported thousands of configuration change requests; mitigation: prioritize by clinical risk and maintain a triage cadence with rapid remediation teams.</p>
+
+<p>&bull; Performance &amp; major incidents: VA reports documented major incidents; mitigation: enforce pre-prod performance tests, capacity planning, and runbooked incident responses.</p>
+
+<p>&bull; Clinical safety and data integrity: medication transmission errors and reconciliation problems have been cited in OIG findings; mitigation: independent clinical validation, pharmacy parallel checks, and focused post-go-live audits.</p>
+
+<p>&nbsp;</p>
+
+<p><strong>GHIT Digital accelerators &mdash; how to de-risk and accelerate</strong></p>
+
+<p>&bull; Prebuilt MPages UI templates for core workflows (admit/discharge, med reconciliation, ED tracking).</p>
+
+<p>&bull; A Discern rule library with unit tests and clinical traceability artifacts.</p>
+
+<p>&bull; Integration templates (HL7 v2 canonical mappings and FHIR fa&ccedil;ade templates) and an OCI API-gateway blueprint.</p>
+
+<p>&bull; Test-harness: automated smoke/regression scripts (login, orders, eMAR flows, ADT reconciliation).</p>
+
+<p>&bull; A knowledge-transfer curriculum aligned to OFCt roles (national/VISN/local enablement playbooks).</p>
+
+<p>&nbsp;</p>
+
+<p><strong>Program-level milestone checklist (RFP-friendly)</strong></p>
+
+<table border="0" cellpadding="0" cellspacing="0">
+	<tbody>
+		<tr>
+			<td style="width:192px">
+			<p><strong>Milestone</strong></p>
+			</td>
+			<td style="width:192px">
+			<p><strong>Typical Duration</strong></p>
+			</td>
+			<td style="width:192px">
+			<p><strong>Deliverables (examples)</strong></p>
+			</td>
+		</tr>
+		<tr>
+			<td style="width:192px">
+			<p><strong>Governance &amp; discovery</strong></p>
+			</td>
+			<td style="width:192px">
+			<p>0&ndash;8 weeks</p>
+			</td>
+			<td style="width:192px">
+			<p>Governance artifacts, Build Workbook, Interfaces, Test Plan, Training, Cutover Plan</p>
+			</td>
+		</tr>
+		<tr>
+			<td style="width:192px">
+			<p><strong>Detailed design &amp; Build Workbook</strong></p>
+			</td>
+			<td style="width:192px">
+			<p>6&ndash;12 weeks</p>
+			</td>
+			<td style="width:192px">
+			<p>Governance artifacts, Build Workbook, Interfaces, Test Plan, Training, Cutover Plan</p>
+			</td>
+		</tr>
+		<tr>
+			<td style="width:192px">
+			<p><strong>Iterative build &amp; interfaces configured</strong></p>
+			</td>
+			<td style="width:192px">
+			<p>12&ndash;24 weeks</p>
+			</td>
+			<td style="width:192px">
+			<p>Governance artifacts, Build Workbook, Interfaces, Test Plan, Training, Cutover Plan</p>
+			</td>
+		</tr>
+		<tr>
+			<td style="width:192px">
+			<p><strong>OFCt-aligned testing &amp; UAT</strong></p>
+			</td>
+			<td style="width:192px">
+			<p>6&ndash;12 weeks</p>
+			</td>
+			<td style="width:192px">
+			<p>Governance artifacts, Build Workbook, Interfaces, Test Plan, Training, Cutover Plan</p>
+			</td>
+		</tr>
+		<tr>
+			<td style="width:192px">
+			<p><strong>Training &amp; simulation</strong></p>
+			</td>
+			<td style="width:192px">
+			<p>3&ndash;8 weeks</p>
+			</td>
+			<td style="width:192px">
+			<p>Governance artifacts, Build Workbook, Interfaces, Test Plan, Training, Cutover Plan</p>
+			</td>
+		</tr>
+		<tr>
+			<td style="width:192px">
+			<p><strong>Cutover &amp; hypercare</strong></p>
+			</td>
+			<td style="width:192px">
+			<p>2&ndash;6 weeks</p>
+			</td>
+			<td style="width:192px">
+			<p>Governance artifacts, Build Workbook, Interfaces, Test Plan, Training, Cutover Plan</p>
+			</td>
+		</tr>
+		<tr>
+			<td style="width:192px">
+			<p><strong>Optimization &amp; sustainment</strong></p>
+			</td>
+			<td style="width:192px">
+			<p>ongoing</p>
+			</td>
+			<td style="width:192px">
+			<p>Governance artifacts, Build Workbook, Interfaces, Test Plan, Training, Cutover Plan</p>
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p><strong>References &amp; evidence (selected authoritative sources)</strong></p>
+
+<p>Oracle press release &mdash; Oracle completes acquisition of Cerner (June 2022)<br />
+<a href="https://www.oracle.com/news/announcement/oracle-completes-acquisition-of-cerner-2022-06-07/">https://www.oracle.com/news/announcement/oracle-completes-acquisition-of-cerner-2022-06-07/</a></p>
+
+<p>Oracle Health Millennium Platform &mdash; FHIR R4 APIs (developer docs)<br />
+<a href="https://docs.oracle.com/en/industries/health/millennium-platform-apis/mfrap/r4_overview.html">https://docs.oracle.com/en/industries/health/millennium-platform-apis/mfrap/r4_overview.html</a></p>
+
+<p>Oracle Health Data Intelligence / HealtheIntent &mdash; Millennium ODS feed types<br />
+<a href="https://docs.healtheintent.com/feed_types/millennium-ods/v1/">https://docs.healtheintent.com/feed_types/millennium-ods/v1/</a></p>
+
+<p>VA EHR Modernization program &mdash; Digital.va (program overview &amp; deployment schedule)<br />
+<a href="https://digital.va.gov/ehr-modernization/">https://digital.va.gov/ehr-modernization/</a></p>
+
+<p>GAO report: VA making incremental improvements but more remains to be done (Mar 2025)<br />
+<a href="https://www.gao.gov/products/gao-25-106874">https://www.gao.gov/products/gao-25-106874</a></p>
+
+<p>VA press release: EHR deployment 2026 update (Mar 6, 2025)<br />
+<a href="https://news.va.gov/press-room/va-to-complete-federal-ehr-deployment-at-nine-additional-sites-in-2026/">https://news.va.gov/press-room/va-to-complete-federal-ehr-deployment-at-nine-additional-sites-in-2026/</a></p>
+
+<p>Oracle Cloud Infrastructure for Health (OCI) &mdash; Oracle Health Cloud pages<br />
+<a href="https://www.oracle.com/health/cloud/">https://www.oracle.com/health/cloud/</a></p>
+
+<p>HealtheIntent Data Syndication API documentation<br />
+<a href="https://docs.healtheintent.com/api/v1/data-syndication">https://docs.healtheintent.com/api/v1/data-syndication</a></p>
+
+<p>&nbsp;</p>
+
+<p><strong>Reach out to GHIT Digital for RFP or DEMO</strong></p>
+
+<p>Monika V</p>
+
+<p>646.734.6482</p>
+
+<p><a href="mailto:Monike@GHIT.digital">Monike@GHIT.digital</a></p>
+                        
+                     </div>
+                                       </div>
+                  <div class="col-lg-4">
+                     <div class="sidebar-widget">
+                        <div class="widget-search">
+                           <form id="search_insight" action="#" method="post">
+                              <input type="text" name="search" placeholder="Search Here" id="insight_val">
+                              <button type="submit"><i class="bi bi-search"></i></button>
+                           </form>
+                        </div>
+                           <div class="hsinsight_list_cass" id="hsinsight_list" style="display: none" ></div>
+                     </div>
+                     <div class="sidebar-widget">
+                        <h4>Newest Post</h4>
+                                                <div class="recent-post">
+                           <div class="recent-thumb">
+                              <a href="https://www.ghit.digital/insight/detail/ghit-digital-for-healthcare-payers"><img src="https://www.ghit.digital/assets/admin/insight/5841e-ghit-digital-tech-services-for-payers.png" alt=""></a>
+                           </div>
+                           <div class="recent-post-cnt">
+                              <span>27.01.2026</span>
+                              <h5><a href="https://www.ghit.digital/insight/detail/ghit-digital-for-healthcare-payers">GHIT Digital for Healthcare Payers</a></h5>
+                           </div>
+                        </div>
+                                                <div class="recent-post">
+                           <div class="recent-thumb">
+                              <a href="https://www.ghit.digital/insight/detail/databricks-for-healthcare"><img src="https://www.ghit.digital/assets/admin/insight/80949-data-bricks.png" alt=""></a>
+                           </div>
+                           <div class="recent-post-cnt">
+                              <span>06.01.2026</span>
+                              <h5><a href="https://www.ghit.digital/insight/detail/databricks-for-healthcare">Databricks for HealthCare </a></h5>
+                           </div>
+                        </div>
+                                                <div class="recent-post">
+                           <div class="recent-thumb">
+                              <a href="https://www.ghit.digital/insight/detail/population-health-management-vs-care-management-what-is-the-difference"><img src="https://www.ghit.digital/assets/admin/insight/4a74b-phm.jpeg" alt=""></a>
+                           </div>
+                           <div class="recent-post-cnt">
+                              <span>06.01.2026</span>
+                              <h5><a href="https://www.ghit.digital/insight/detail/population-health-management-vs-care-management-what-is-the-difference">Population Health Management Vs Care Management - What is the difference?</a></h5>
+                           </div>
+                        </div>
+                                                <div class="recent-post">
+                           <div class="recent-thumb">
+                              <a href="https://www.ghit.digital/insight/detail/iron-mountain-software-services-for-hcls"><img src="https://www.ghit.digital/assets/admin/insight/3c520-845d8a98-a6bd-4a00-b361-3837c882a646.png" alt=""></a>
+                           </div>
+                           <div class="recent-post-cnt">
+                              <span>29.12.2025</span>
+                              <h5><a href="https://www.ghit.digital/insight/detail/iron-mountain-software-services-for-hcls">Iron Mountain Software Services for HCLS</a></h5>
+                           </div>
+                        </div>
+                                                <div class="recent-post">
+                           <div class="recent-thumb">
+                              <a href="https://www.ghit.digital/insight/detail/risk-adjustment-for-health-plans-what-and-why"><img src="https://www.ghit.digital/assets/admin/insight/0a522-risk-adjustment-pic.jpeg" alt=""></a>
+                           </div>
+                           <div class="recent-post-cnt">
+                              <span>19.12.2025</span>
+                              <h5><a href="https://www.ghit.digital/insight/detail/risk-adjustment-for-health-plans-what-and-why">Risk Adjustment for Health Plans: What and Why?</a></h5>
+                           </div>
+                        </div>
+                                                <div class="recent-post">
+                           <div class="recent-thumb">
+                              <a href="https://www.ghit.digital/insight/detail/leading-healthcare-payers-neutral-pov-by-ghit-digital"><img src="https://www.ghit.digital/assets/admin/insight/bdbfb-whatsapp-image-2025-11-23-at-01.39.19_78c87c3c.jpg" alt=""></a>
+                           </div>
+                           <div class="recent-post-cnt">
+                              <span>22.11.2025</span>
+                              <h5><a href="https://www.ghit.digital/insight/detail/leading-healthcare-payers-neutral-pov-by-ghit-digital">Leading Healthcare Payers — Neutral POV by GHIT Digital</a></h5>
+                           </div>
+                        </div>
+                                                <div class="recent-post">
+                           <div class="recent-thumb">
+                              <a href="https://www.ghit.digital/insight/detail/transforming-healthcare-operations-through-ai-powered-bpaas-excellence"><img src="https://www.ghit.digital/assets/admin/insight/62d6a-whatsapp-image-2025-11-03-at-23.26.41_134b5075.jpg" alt=""></a>
+                           </div>
+                           <div class="recent-post-cnt">
+                              <span>04.11.2025</span>
+                              <h5><a href="https://www.ghit.digital/insight/detail/transforming-healthcare-operations-through-ai-powered-bpaas-excellence">Transforming Healthcare Operations through AI-Powered BPaaS Excellence</a></h5>
+                           </div>
+                        </div>
+                                                <div class="recent-post">
+                           <div class="recent-thumb">
+                              <a href="https://www.ghit.digital/insight/detail/ai-in-healthcare-enterprise-transformation-across-payers-providers-pharma"><img src="https://www.ghit.digital/assets/admin/insight/2502d-whatsapp-image-2025-10-30-at-22.27.43_5af96fbd.jpg" alt=""></a>
+                           </div>
+                           <div class="recent-post-cnt">
+                              <span>02.11.2025</span>
+                              <h5><a href="https://www.ghit.digital/insight/detail/ai-in-healthcare-enterprise-transformation-across-payers-providers-pharma">AI in Healthcare: Enterprise Transformation Across Payers, Providers & Pharma</a></h5>
+                           </div>
+                        </div>
+                                                <div class="recent-post">
+                           <div class="recent-thumb">
+                              <a href="https://www.ghit.digital/insight/detail/low-code-solutions-in-healthcare"><img src="https://www.ghit.digital/assets/admin/insight/79e04-chatgpt-image-oct-24-2025-05_26_29-pm.png" alt=""></a>
+                           </div>
+                           <div class="recent-post-cnt">
+                              <span>24.10.2025</span>
+                              <h5><a href="https://www.ghit.digital/insight/detail/low-code-solutions-in-healthcare">LOW - CODE SOLUTIONS IN HEALTHCARE</a></h5>
+                           </div>
+                        </div>
+                                                <div class="recent-post">
+                           <div class="recent-thumb">
+                              <a href="https://www.ghit.digital/insight/detail/-diwali-2025-spreading-light-joy-innovation-with-ghit"><img src="https://www.ghit.digital/assets/admin/insight/4c61b-whatsapp-image-2025-10-20-at-12.04.41.jpeg" alt=""></a>
+                           </div>
+                           <div class="recent-post-cnt">
+                              <span>19.10.2025</span>
+                              <h5><a href="https://www.ghit.digital/insight/detail/-diwali-2025-spreading-light-joy-innovation-with-ghit">? Diwali 2025: Spreading Light, Joy & Innovation with GHIT ?</a></h5>
+                           </div>
+                        </div>
+                                             </div>
+                  </div>
+               </div>
+            </div>
+         </section>
+   
+   <div class="clear"></div>
+   <br> <br> <br> <br> <br>
+   <div class="clear"></div>
+</main>
+<footer>
+	  <div class="container">
+	     <div class="footer-top">
+	        <div class="row">
+	           <div class="col-md-3 col-lg-3 col-xl-3">
+	              <div class="footer-widget">
+	                 <div class="footer-logo">
+	                    <a href="#"><img src="https://www.ghit.digital/assets/frontend/img/logo.png" alt="" class="logo_foot" >  </a>
+	                 </div>
+	                 <p></p>
+	                 <div class="fotr_sec">
+                       Women & Minority Owned (WMOB) 
+                    </div>
+                    <div class="fotr_sec">
+                       DUNS &nbsp; : &nbsp; 05-998-5071                    </div>
+                    <div class="fotr_sec">
+                       SIC &nbsp; : &nbsp; 7211 / 7371                    </div>
+                    <div class="fotr_sec">
+                       NAICS &nbsp; : &nbsp; 541511 / 541512 / 541618 / 541330                     </div>
+                 <p></p>
+	                 <ul class="social-media-icons">
+	                    <li><a href="https://www.facebook.com/profile.php?id=100091810368923"><i class="fab fa-facebook-f"></i></a></li>
+	                    <li><a href="https://twitter.com/GHITDigital"><i class="fab fa-twitter"></i></a></li>
+	                    
+	                    <li><a href="https://www.linkedin.com/company/ghit-digital/about/"><i class="fab fa-linkedin"></i></a></li>
+	                 </ul>
+	              </div>
+	           </div>
+	           	           <div class="col-md-3 col-lg-3 col-xl-3">
+	              <div class="footer-widget">
+	                 <h4>Domains</h4>
+	                 <ul class="footer-menu">
+	                 		                    <li><a href="https://www.ghit.digital/domain/government">Government</a></li>
+	                  	                    <li><a href="https://www.ghit.digital/domain/healthcare">Healthcare</a></li>
+	                  	                    <li><a href="https://www.ghit.digital/domain/insurance">Insurance</a></li>
+	                  	                    <li><a href="https://www.ghit.digital/domain/technology">Technology</a></li>
+	                  	                 </ul>
+	              </div>
+	           </div>
+	         		           	           <div class="col-md-3 col-lg-3 col-xl-3">
+	              <div class="footer-widget">
+	                 <h4>Capabilities</h4>
+	                 <ul class="footer-menu">
+	                 		                    <li><a href="https://www.ghit.digital/capability/digital-services">Digital Services</a></li>
+	                  	                    <li><a href="https://www.ghit.digital/capability/cloud-services">Cloud Services</a></li>
+	                  	                    <li><a href="https://www.ghit.digital/capability/data-services">Data Services</a></li>
+	                  	                    <li><a href="https://www.ghit.digital/capability/project-services">Project Services</a></li>
+	                    
+	                 </ul>
+	              </div>
+	           </div>
+	         		           <div class="col-md-3 col-lg-3 col-xl-3">
+	              <div class="footer-widget">
+	                 <h4>Contacts</h4>
+	                 <div class="number">
+	                    <div class="num-icon">
+	                       <i class="fas fa-phone-alt"></i>
+	                    </div>
+	                    <div class="phone">
+	                       <a href="tel:+1 201.792.8924">+1 201.792.8924</a>
+	                       <a href="tel:+91 9315952386">+91 9315952386</a>
+	                    </div>
+	                 </div>
+	                 <div class="office-mail">
+	                    <div class="mail-icon">
+	                       <i class="far fa-envelope"></i>
+	                    </div>
+	                    <div class="email">
+	                       <a href="mailto:Monika@GHIT.digital"><span class="__cf_email__" data-cfemail="">Monika@GHIT.digital</span></a>
+	                       <a href="mailto:Sharique@GHIT.digital"><span class="__cf_email__" data-cfemail="">Sharique@GHIT.digital</span></a>
+	                    </div>
+	                 </div>
+	                 <div class="address">
+	                    <div class="address-icon">
+	                       <i class="fas fa-map-marker-alt"></i>
+	                    </div>
+	                    <p>MonMass, Inc.<br> 3200 Rt 47<br> Millville, NJ<br> USA 08332</p>
+	                 </div>
+	              </div>
+	           </div>
+	        </div>
+	     </div>
+	     <div class="footer-bottom">
+	        <div class="row align-items-center">
+	           <div class="col-12 col-md-4 col-lg-4 col-xl-5">
+	              <div class="copy-txt">
+	                 <span>Copyright 2022 <b>GHIT DIGITAL</b> </span>
+	              </div>
+	           </div>
+	           <div class="col-12 col-md-8 col-lg-8 col-xl-7">
+	              <ul class="footer-bottom-menu">
+	                 <li><a href="https://www.ghit.digital/privacy-policy">Privacy Policy</a></li>
+	                 <li><a href="https://www.ghit.digital/terms-of-use">Terms of Use</a></li>
+	                 
+	              </ul>
+	           </div>
+	        </div>
+	     </div>
+	  </div>
+	</footer>
+</main>
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+ 
+   
+  <!-- Modal -->
+  <div class="modal fade" id="partner" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          
+          <h4 class="modal-title p_company_name"></h4>
+          <button type="button" class="close p_close" data-dismiss="modal">&times;</button>
+        </div>
+        <div class="modal-body">
+          <p>
+          	 <div class="col-lg-12 or-2 text-center">               
+               <div class="sec-title layout2 text-center">
+                  <span class="p_company_name"></span>                  
+               </div>
+               <div class="about-left">
+                  <img src="" class="min_sub_img p_image" >
+                   <!-- main_serv_sub -->
+                   <span class="part_info p_description">
+                	</span>
+                   <br> 
+               </div>               
+            </div>
+          </p>
+        </div>
+         
+      </div>
+      
+    </div>
+  </div>
+ 
+<div class="cursor"></div>  
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-VXFB2FT6WM"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-VXFB2FT6WM');
+</script>
+  <!-- Load Scripts Start-->
+  	
+      <script src="https://www.ghit.digital/assets/frontend/js/popper.min.js"></script>
+      <script src="https://www.ghit.digital/assets/frontend/js/bootstrap.min.js"></script>
+      <script src="https://www.ghit.digital/assets/frontend/js/swiper-bundle.min.js"></script>
+      <script src="https://www.ghit.digital/assets/frontend/js/waypoints.min.js"></script>
+      <script src="https://www.ghit.digital/assets/frontend/js/jquery.counterup.min.js"></script>
+      <script src="https://www.ghit.digital/assets/frontend/js/isotope.pkgd.min.js"></script>
+      <script src="https://www.ghit.digital/assets/frontend/js/jquery.magnific-popup.min.js"></script>
+      <script src="https://www.ghit.digital/assets/frontend/js/wow.min.js"></script>
+      <script src="https://www.ghit.digital/assets/frontend/js/custom.js"></script>
+      <script src="https://www.ghit.digital/assets/frontend/js/script.js"></script>
+      <script src="https://www.ghit.digital/assets/frontend/js/toastr.js"></script>
+      <!-- Load Scripts End-->
+      
+   </body>
+
+<script type="text/javascript"> 
+   function isValidEmailAddress(emailAddress) 
+   {
+
+      var pattern = new RegExp(/^(("[\w-\s]+")|([\w-]+(?:\.[\w-]+)*)|("[\w-\s]+")([\w-]+(?:\.[\w-]+)*))(@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$)|(@\[?((25[0-5]\.|2[0-4][0-9]\.|1[0-9]{2}\.|[0-9]{1,2}\.))((25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\.){2}(25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\]?$)/i);
+
+      return pattern.test(emailAddress);
+   }
+      /* event for dont allow to enter white space */
+
+  $(document).on('keydown', '.space', function(e) 
+  {
+    if (e.which === 32 &&  e.target.selectionStart === 0) 
+    {
+      return false;
+    }  
+  });
+
+
+  $(document).on('keydown', '.space2', function(e) { 
+    // var phone=$("#contact_phone").val();
+    // console.log(e.keyCode);
+    var phone=$(this).val();
+    if(e.keyCode==8 || e.keyCode==46 || e.keyCode==36 || e.keyCode==9 || e.keyCode==13 )
+    {
+      return true;
+    }
+    if(phone.length<=9)
+    {
+      return true;
+    }else{
+      return false;
+    }      
+  });
+
+  function setInputFilter(textbox, inputFilter) {
+  ["input", "keydown", "keyup", "mousedown", "mouseup", "select", "contextmenu", "drop"].forEach(function(event) {
+    textbox.addEventListener(event, function() {
+      if (inputFilter(this.value)) {
+        this.oldValue = this.value;
+        this.oldSelectionStart = this.selectionStart;
+        this.oldSelectionEnd = this.selectionEnd;
+      } else if (this.hasOwnProperty("oldValue")) {
+        this.value = this.oldValue;
+        this.setSelectionRange(this.oldSelectionStart, this.oldSelectionEnd);
+      } else {
+        this.value = "";
+      }
+    });
+  });
+}
+</script>
+<script type="text/javascript">   
+  $(document).ready(function()
+  {
+	$(document).on("submit","#contact_us",function(e) 
+	{
+		e.preventDefault();    
+		// alert("fasdf");
+		// return false;
+		var cyour_name=$.trim($("#cyour_name").val());
+		var cemail=$.trim($("#cemail").val());
+		var cmessage=$.trim($("#cmessage").val());
+		// alert(sub_email);
+		var error=1;
+
+		if(cyour_name=="")
+		{
+			swal("","Please Enter Your Name","warning");      
+			error=0;
+			return false;
+		}		
+
+		if(cemail=="")
+		{
+			swal("","Please Enter Email Id","warning");      
+			error=0;
+			return false;
+		}
+
+		if(cemail!='')
+		{
+			if(!isValidEmailAddress(cemail))
+			{             
+			error=0;                
+			swal("","Please Enter Valid Email Id","warning");
+			return false;
+			}                  
+		} 
+
+		if(cmessage=="")
+		{
+			swal("","Please Enter Message","warning");      
+			error=0;
+			return false;
+		}      
+
+		if(error==1)
+		{
+			$('#loading').show(); 
+			$.ajax({
+			type: 'POST',
+			url: "https://www.ghit.digital/ajax/contact_us",
+			data: {'first_name':cyour_name,'email':cemail,'message':cmessage},   
+			success: function(response)
+			{       
+				response=$.trim(response);
+				$('#loading').hide();          
+				if(response=='success')
+				{
+				 swal("","Request Send Successfully",'success');
+				 $('#contact_us')[0].reset();
+				}else if(response=='email')
+				{
+				 swal("","You already Subscribed with Us.!!",'warning');
+				}
+				else
+				{               
+				 swal("","Something Went Wrong",'warning');
+				}
+			}  
+			}); 
+		}
+	});
+});
+</script>   
+<script>'undefined'=== typeof _trfq || (window._trfq = []);'undefined'=== typeof _trfd && (window._trfd=[]),_trfd.push({'tccl.baseHost':'secureserver.net'},{'ap':'cpsh-oh'},{'server':'p3plzcpnl508410'},{'dcenter':'p3'},{'cp_id':'10635325'},{'cp_cl':'8'}) // Monitoring performance to make your website faster. If you want to opt-out, please contact web hosting support.</script><script src='https://img1.wsimg.com/traffic-assets/js/tccl.min.js'></script></html>
+
+
+
+
+<!--Start of Tawk.to Script-->
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/642bca244247f20fefe9b097/1gt5gr8mm';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
+<!--End of Tawk.to Script-->
+<script type="text/javascript">
+	function isNumberKey(evt){
+	    var charCode = (evt.which) ? evt.which : event.keyCode
+	    if (charCode > 31 && (charCode < 48 || charCode > 57))
+	        return false;
+	    return true;
+	}
+
+	function isNumberdotKey(evt){
+	    var charCode = (evt.which) ? evt.which : event.keyCode
+	    if (charCode > 31 && ((charCode < 48 || charCode > 57) && charCode != 46))
+	        return false;
+	    return true;
+	}
+</script>
+
+<script language="Javascript" type="text/javascript">
+ 
+        function onlyAlphabets(e, t) {
+            try {
+                if (window.event) {
+                    var charCode = window.event.keyCode;
+                }
+                else if (e) {
+                    var charCode = e.which;
+                }
+                else { return true; }
+                if ((charCode > 64 && charCode < 91) || (charCode > 96 && charCode < 123) || charCode == 8 || charCode == 116 || charCode == 46 || charCode == 13 || charCode == 9 || charCode == 32)
+                    return true;
+                else
+                    return false;
+            }
+            catch (err) {
+                alert(err.Description);
+            }
+        } 
+</script>
+
+
+<script type="text/javascript">
+				//document.getElementsByTagName( "html" )[0].classList.remove( "loading" );
+				// All browsers
+				//document.getElementsByTagName( "html" )[0].className.replace( /loading/, "" );
+				// Or with jQuery
+				//$( "html" ).removeClass( "loading" );
+			</script>
+			
+<script type="text/javascript">
+				document.getElementsByTagName( "html" )[0].classList.remove( "loading" );
+				// All browsers
+				document.getElementsByTagName( "html" )[0].className.replace( /loading/, "" );
+				// Or with jQuery
+				$( "html" ).removeClass( "loading" );
+			</script>
+			
+			
+	
+		</body>
+<script>'undefined'=== typeof _trfq || (window._trfq = []);'undefined'=== typeof _trfd && (window._trfd=[]),_trfd.push({'tccl.baseHost':'secureserver.net'},{'ap':'cpsh-oh'},{'server':'p3plzcpnl508410'},{'dcenter':'p3'},{'cp_id':'10635325'},{'cp_cl':'8'}) // Monitoring performance to make your website faster. If you want to opt-out, please contact web hosting support.</script><script src='https://img1.wsimg.com/traffic-assets/js/tccl.min.js'></script></html>

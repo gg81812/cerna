@@ -1,0 +1,657 @@
+# SOURCE: Oracle Health Millennium Developer Program — Overview
+# URL: https://6b.health/insight/what-is-the-oracle-health-cerner-millennium-developer-program/
+# MODULE: Millennium Platform
+# RETRIEVED: 2026-04-16
+# ---
+
+<!DOCTYPE html>
+<html lang="en_GB">
+
+<head><script  defer src="https://6b.health/wp-content/cache/minify/8e4bb.default.include.3f5d7e.js"></script>
+
+    <meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
+
+	<title>What Is The Oracle Health (Cerner Millennium) Developer Program? - 6B</title>
+	<meta name="description" content="Discover the Oracle Health (Cerner Millennium) Developer Program. Learn how APIs, FHIR, developer tools, sandbox access, and Oracle PartnerNetwork help digital health innovators build, test, and commercialise integrated healthcare solutions." />
+	<link rel="canonical" href="https://6b.health/insight/what-is-the-oracle-health-cerner-millennium-developer-program/" />
+	<meta property="og:locale" content="en_GB" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="What Is The Oracle Health (Cerner Millennium) Developer Program? - 6B" />
+	<meta property="og:description" content="Discover the Oracle Health (Cerner Millennium) Developer Program. Learn how APIs, FHIR, developer tools, sandbox access, and Oracle PartnerNetwork help digital health innovators build, test, and commercialise integrated healthcare solutions." />
+	<meta property="og:url" content="https://6b.health/insight/what-is-the-oracle-health-cerner-millennium-developer-program/" />
+	<meta property="og:site_name" content="6B" />
+	<meta property="article:published_time" content="2025-06-21T14:57:13+00:00" />
+	<meta name="author" content="info@6b.health" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:label1" content="Written by" />
+	<meta name="twitter:data1" content="info@6b.health" />
+	<meta name="twitter:label2" content="Estimated reading time" />
+	<meta name="twitter:data2" content="3 minutes" />
+	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"Article","@id":"https://6b.health/insight/what-is-the-oracle-health-cerner-millennium-developer-program/#article","isPartOf":{"@id":"https://6b.health/insight/what-is-the-oracle-health-cerner-millennium-developer-program/"},"author":{"name":"info@6b.health","@id":"https://6b.health/#/schema/person/d9c4ffa9830ee5a8a8a840d790793b2b"},"headline":"What Is The Oracle Health (Cerner Millennium) Developer Program?","datePublished":"2025-06-21T14:57:13+00:00","mainEntityOfPage":{"@id":"https://6b.health/insight/what-is-the-oracle-health-cerner-millennium-developer-program/"},"wordCount":465,"publisher":{"@id":"https://6b.health/#organization"},"articleSection":["EPR Integration","Insight"],"inLanguage":"en-GB"},{"@type":"WebPage","@id":"https://6b.health/insight/what-is-the-oracle-health-cerner-millennium-developer-program/","url":"https://6b.health/insight/what-is-the-oracle-health-cerner-millennium-developer-program/","name":"What Is The Oracle Health (Cerner Millennium) Developer Program? - 6B","isPartOf":{"@id":"https://6b.health/#website"},"datePublished":"2025-06-21T14:57:13+00:00","description":"Discover the Oracle Health (Cerner Millennium) Developer Program. Learn how APIs, FHIR, developer tools, sandbox access, and Oracle PartnerNetwork help digital health innovators build, test, and commercialise integrated healthcare solutions.","inLanguage":"en-GB","potentialAction":[{"@type":"ReadAction","target":["https://6b.health/insight/what-is-the-oracle-health-cerner-millennium-developer-program/"]}]},{"@type":"WebSite","@id":"https://6b.health/#website","url":"https://6b.health/","name":"6B","description":"","publisher":{"@id":"https://6b.health/#organization"},"potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://6b.health/?s={search_term_string}"},"query-input":{"@type":"PropertyValueSpecification","valueRequired":true,"valueName":"search_term_string"}}],"inLanguage":"en-GB"},{"@type":"Organization","@id":"https://6b.health/#organization","name":"6B","url":"https://6b.health/","logo":{"@type":"ImageObject","inLanguage":"en-GB","@id":"https://6b.health/#/schema/logo/image/","url":"https://6b.health/wp-content/uploads/2025/06/cropped-android-chrome-512x512-2.png","contentUrl":"https://6b.health/wp-content/uploads/2025/06/cropped-android-chrome-512x512-2.png","width":512,"height":512,"caption":"6B"},"image":{"@id":"https://6b.health/#/schema/logo/image/"}},{"@type":"Person","@id":"https://6b.health/#/schema/person/d9c4ffa9830ee5a8a8a840d790793b2b","name":"info@6b.health","image":{"@type":"ImageObject","inLanguage":"en-GB","@id":"https://6b.health/#/schema/person/image/","url":"https://secure.gravatar.com/avatar/d6778c498c2e27a648ac95078494693dc90b47b573dd5fc4f26c42492c7e70b8?s=96&d=mm&r=g","contentUrl":"https://secure.gravatar.com/avatar/d6778c498c2e27a648ac95078494693dc90b47b573dd5fc4f26c42492c7e70b8?s=96&d=mm&r=g","caption":"info@6b.health"},"sameAs":["https://6b.health"],"url":"https://6b.health/author/info6b-health/"}]}</script>
+
+
+<link rel='dns-prefetch' href='//www.google.com' />
+<link rel='dns-prefetch' href='//rsms.me' />
+<style id='wp-img-auto-sizes-contain-inline-css' type='text/css'>
+img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
+/*# sourceURL=wp-img-auto-sizes-contain-inline-css */
+</style>
+<style id='classic-theme-styles-inline-css' type='text/css'>
+/*! This file is auto-generated */
+.wp-block-button__link{color:#fff;background-color:#32373c;border-radius:9999px;box-shadow:none;text-decoration:none;padding:calc(.667em + 2px) calc(1.333em + 2px);font-size:1.125em}.wp-block-file__button{background:#32373c;color:#fff;text-decoration:none}
+/*# sourceURL=/wp-includes/css/classic-themes.min.css */
+</style>
+<style id='global-styles-inline-css' type='text/css'>
+:root{--wp--preset--aspect-ratio--square: 1;--wp--preset--aspect-ratio--4-3: 4/3;--wp--preset--aspect-ratio--3-4: 3/4;--wp--preset--aspect-ratio--3-2: 3/2;--wp--preset--aspect-ratio--2-3: 2/3;--wp--preset--aspect-ratio--16-9: 16/9;--wp--preset--aspect-ratio--9-16: 9/16;--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgb(6,147,227) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgb(252,185,0) 0%,rgb(255,105,0) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgb(255,105,0) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgb(255, 255, 255), 6px 6px rgb(0, 0, 0);--wp--preset--shadow--crisp: 6px 6px 0px rgb(0, 0, 0);}:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}body .is-layout-flex{display: flex;}.is-layout-flex{flex-wrap: wrap;align-items: center;}.is-layout-flex > :is(*, div){margin: 0;}body .is-layout-grid{display: grid;}.is-layout-grid > :is(*, div){margin: 0;}:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+/*# sourceURL=global-styles-inline-css */
+</style>
+
+<link rel='stylesheet' id='cmplz-general-css' href='https://6b.health/wp-content/plugins/complianz-gdpr/assets/css/cookieblocker.min.css' type='text/css' media='all' />
+<link rel='stylesheet' id='stylesheet-css' href='https://6b.health/wp-content/themes/theme/dist/generated/dist.css' type='text/css' media='all' />
+<link rel='stylesheet' id='inter-font-css' href='https://rsms.me/inter/inter.css' type='text/css' media='all' />
+<script type="text/javascript" src="https://6b.health/wp-includes/js/jquery/jquery.min.js" id="jquery-core-js"></script>
+<script type="text/javascript" src="https://6b.health/wp-includes/js/jquery/jquery-migrate.min.js" id="jquery-migrate-js"></script>
+
+			<style>.cmplz-hidden {
+					display: none !important;
+				}</style><link rel="icon" type="image/png" sizes="16x16" href="https://6b.health/wp-content/uploads/2025/07/cropped-Fav-16x16.png" />
+<link rel="icon" type="image/png" sizes="32x32" href="https://6b.health/wp-content/uploads/2025/07/cropped-Fav-32x32.png" />
+<link rel="icon" type="image/png" sizes="96x96" href="https://6b.health/wp-content/uploads/2025/07/cropped-Fav-96x96.png" />
+<link rel="icon" type="image/png" sizes="128x128" href="https://6b.health/wp-content/uploads/2025/07/cropped-Fav-128x128.png" />
+<link rel="icon" type="image/png" sizes="196x196" href="https://6b.health/wp-content/uploads/2025/07/cropped-Fav-196x196.png" />
+<link rel="apple-touch-icon-precomposed" sizes="57x57" href="https://6b.health/wp-content/uploads/2025/07/cropped-Fav-57x57.png" />
+<link rel="apple-touch-icon-precomposed" sizes="60x60" href="https://6b.health/wp-content/uploads/2025/07/cropped-Fav-60x60.png" />
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="https://6b.health/wp-content/uploads/2025/07/cropped-Fav-72x72.png" />
+<link rel="apple-touch-icon-precomposed" sizes="76x76" href="https://6b.health/wp-content/uploads/2025/07/cropped-Fav-76x76.png" />
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="https://6b.health/wp-content/uploads/2025/07/cropped-Fav-114x114.png" />
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="https://6b.health/wp-content/uploads/2025/07/cropped-Fav-120x120.png" />
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://6b.health/wp-content/uploads/2025/07/cropped-Fav-144x144.png" />
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="https://6b.health/wp-content/uploads/2025/07/cropped-Fav-152x152.png" />
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://6b.health/wp-content/uploads/2025/07/cropped-Fav-144x144.png" />
+<meta name="msapplication-TileImage" content="https://6b.health/wp-content/uploads/2025/07/cropped-Fav-144x144.png" />
+<meta name="msapplication-square70x70logo" content="https://6b.health/wp-content/uploads/2025/07/cropped-Fav-70x70.png" />
+<meta name="msapplication-square150x150logo" content="https://6b.health/wp-content/uploads/2025/07/cropped-Fav-150x150.png" />
+<meta name="msapplication-square310x310logo" content="https://6b.health/wp-content/uploads/2025/07/cropped-Fav-310x310.png" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-2R02STY3E6"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-2R02STY3E6');
+</script>
+
+<script type="text/javascript" src="https://www.52data-venture.com/js/808847.js" defer></script>
+<noscript><img src="https://www.52data-venture.com/808847.png" style="display:none;" /></noscript></head>
+
+<body class="wp-singular post-template-default single single-post postid-873 single-format-standard wp-theme-theme">
+
+  <header class="header-fixed" role="banner">
+    <div class="container h-full flex items-center">
+        <a href="/" id="header-logo" aria-label="Go to the homepage">
+            <svg xmlns="http://www.w3.org/2000/svg" width="771" height="313" viewBox="0 0 771 313" fill="none">
+                <path d="M722.504 147.726C733.919 141.868 743.504 132.371 750.037 120.446C756.569 108.521 759.754 94.7072 759.184 80.7661C759.515 69.7954 757.641 58.8805 753.697 48.8136C749.753 38.7467 743.839 29.7804 736.383 22.5653C717.59 6.38663 694.09 -1.55758 670.359 0.245505H545.911V311.844H674.585C700.112 313.803 725.421 305.492 745.876 288.433C754.162 280.203 760.671 270.008 764.92 258.605C769.169 247.202 771.05 234.884 770.423 222.564C770.617 206.289 766.226 190.353 757.863 176.981C749.167 163.32 736.785 153.076 722.504 147.726ZM666.471 48.8249C677.339 48.0937 688.068 51.8321 696.608 59.3254C700.232 62.9446 703.083 67.4149 704.953 72.4109C706.824 77.407 707.667 82.8029 707.421 88.2061C707.717 93.9016 706.923 99.6022 705.093 104.933C703.262 110.264 700.435 115.105 696.798 119.138C688.384 127.096 677.503 131.097 666.471 130.29H598.07V48.89L666.471 48.8249ZM598.07 262.841V176.557H671.871C702.007 176.557 717.075 190.998 717.075 219.878C717.397 225.791 716.523 231.709 714.517 237.199C712.512 242.689 709.425 247.612 705.484 251.608C695.88 259.744 683.941 263.735 671.885 262.841H598.07Z" fill="black"/>
+                <path d="M410.989 109.128C396.579 108.368 382.224 111.418 369.372 117.97C356.52 124.523 345.626 134.346 337.79 146.447C336.829 119.39 342.845 92.5391 355.262 68.472C360.307 60.4515 367.411 53.9273 375.836 49.5777C384.26 45.228 393.697 43.2116 403.166 43.7382C415.146 42.2943 427.213 45.6198 436.757 52.995C446.301 60.3703 452.553 71.2022 454.161 83.1469H506.39C503.428 59.2378 491.348 37.3909 472.664 22.1547C452.629 6.9308 427.914 -0.854551 402.76 0.13448C385.977 -0.753014 369.24 2.57956 354.081 9.82695C338.922 17.0743 325.827 28.0049 315.993 41.6173C295.976 69.3037 285.968 108.858 285.968 160.28C285.968 223.159 301.457 266.617 332.435 290.655C352.577 305.298 377.031 312.821 401.932 312.035C430.849 313.205 459.066 302.965 480.486 283.528C490.546 273.872 498.427 262.183 503.602 249.241C508.777 236.3 511.127 222.405 510.496 208.484C511.282 182.35 501.845 156.938 484.187 137.636C474.711 127.967 463.283 120.424 450.662 115.508C438.041 110.593 424.516 108.418 410.989 109.128ZM362.039 250.404C356.808 244.954 352.73 238.509 350.048 231.452C347.365 224.394 346.133 216.87 346.425 209.326C346.13 201.8 347.341 194.29 349.987 187.237C352.633 180.184 356.661 173.729 361.836 168.249C367.039 162.952 373.294 158.8 380.2 156.06C387.105 153.321 394.508 152.054 401.932 152.342C409.265 152.067 416.573 153.342 423.377 156.083C430.182 158.824 436.331 162.97 441.42 168.249C446.538 173.759 450.516 180.224 453.126 187.273C455.736 194.322 456.926 201.817 456.628 209.326C457.339 224.437 452.015 239.211 441.826 250.404C436.642 255.673 430.42 259.81 423.553 262.553C416.687 265.297 409.324 266.587 401.932 266.342C394.541 266.587 387.178 265.297 380.311 262.553C373.445 259.81 367.222 255.673 362.039 250.404Z" fill="black"/>
+                <path d="M93.0158 -0.00585938H151.678L56.5148 312.126H0.269531L93.0158 -0.00585938Z" fill="#005EB8"/>
+                <path d="M207.204 -0.00585938H265.866L170.703 312.126H114.458L207.204 -0.00585938Z" fill="#005EB8"/>
+            </svg>
+        </a>
+        <div class="navigation-controls ml-auto">
+            <div class="flex justify-end items-center gap-4">
+                <label for="country-switcher" class="sr-only">Select country</label>
+                <select id="country-switcher"
+                        class="pl-1 pr-3 rounded border border-gray-300 bg-white text-sm uppercase h-[30px]"
+                        aria-label="Select country"
+                        data-default="UK">
+                                    <option value="UK"
+                     selected='selected'>
+                    UK                    </option>
+                                    <option value="US"
+                    >
+                    US                    </option>
+                                    <option value="CA"
+                    >
+                    CA                    </option>
+                                    <option value="AU"
+                    >
+                    AU                    </option>
+                                    <option value="NZ"
+                    >
+                    NZ                    </option>
+                                    <option value="DE"
+                    >
+                    DE                    </option>
+                                    <option value="FR"
+                    >
+                    FR                    </option>
+                                    <option value="ES"
+                    >
+                    ES                    </option>
+                                    <option value="IT"
+                    >
+                    IT                    </option>
+                                    <option value="NL"
+                    >
+                    NL                    </option>
+                                    <option value="SE"
+                    >
+                    SE                    </option>
+                                    <option value="NO"
+                    >
+                    NO                    </option>
+                                    <option value="DK"
+                    >
+                    DK                    </option>
+                                    <option value="FI"
+                    >
+                    FI                    </option>
+                                    <option value="IE"
+                    >
+                    IE                    </option>
+                                    <option value="CH"
+                    >
+                    CH                    </option>
+                                    <option value="AT"
+                    >
+                    AT                    </option>
+                                    <option value="BE"
+                    >
+                    BE                    </option>
+                                    <option value="PT"
+                    >
+                    PT                    </option>
+                                    <option value="PL"
+                    >
+                    PL                    </option>
+                                    <option value="GR"
+                    >
+                    GR                    </option>
+                                    <option value="AE"
+                    >
+                    AE                    </option>
+                                    <option value="SG"
+                    >
+                    SG                    </option>
+                                    <option value="IN"
+                    >
+                    IN                    </option>
+                                    <option value="JP"
+                    >
+                    JP                    </option>
+                                </select>
+                <a href="/contact/" class="btn get-in-touch bg-secondaryColor text-customBlue uppercase hidden sm:inline-block" aria-label="Contact 6B">Get In Touch</a>
+                <button id="hamburger" class="hamburger primary-nav__toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="primary-menu">
+                    <i></i>
+                    <i></i>
+                </button>
+            </div>
+        </div>
+    </div>
+</header>
+
+<section id="primary-menu" class="flex flex-col fixed top-0 left-0 w-full h-screen bg-primaryColor z-30 transform translate-y-[-100%] pointer-events-none transition-transform transition-opacity duration-500 ease-in-out">
+    <div class="container">
+        <div class="flex flex-col items-end pt-[30px]">
+            <div class="w-full lg:w-1/2">
+                <nav class="primary-menu-nav">
+                    <div class="h-full">
+                        <ul id="lowerMenu" class="header-lower-primary-mobile"><li class="header-lower-menu-mobile__item header-lower-menu-mobile__item--has-sub-menu menu-item-animate"><div class="header-lower-sub-menu-mobile__link-container"><a href="#" class="accessible header-lower-menu-mobile__link header-lower-menu-mobile__link--has-sub-menu" aria-label="About">About</a></div><ul class='header-lower-sub-menu-mobile'><li class="header-lower-sub-menu-mobile__item"><div class="header-lower-sub-menu-mobile__link-container"><a href="https://6b.health/story-and-purpose/" class="accessible header-lower-menu-mobile__link" aria-label="Story and Purpose">Story and Purpose</a></div></li><li class="header-lower-sub-menu-mobile__item"><div class="header-lower-sub-menu-mobile__link-container"><a href="https://6b.health/public-sector-frameworks/" class="accessible header-lower-menu-mobile__link" aria-label="Public Sector Frameworks">Public Sector Frameworks</a></div></li><li class="header-lower-sub-menu-mobile__item"><div class="header-lower-sub-menu-mobile__link-container"><a href="https://6b.health/social-value/" class="accessible header-lower-menu-mobile__link" aria-label="Social Value">Social Value</a></div></li><li class="header-lower-sub-menu-mobile__item"><div class="header-lower-sub-menu-mobile__link-container"><a href="https://6b.health/sustainability/" class="accessible header-lower-menu-mobile__link" aria-label="Sustainability">Sustainability</a></div></li><li class="header-lower-sub-menu-mobile__item"><div class="header-lower-sub-menu-mobile__link-container"><a href="https://6b.health/who-we-work-with/" class="accessible header-lower-menu-mobile__link" aria-label="Who We Work With">Who We Work With</a></div></li></ul></li><li class="header-lower-menu-mobile__item header-lower-menu-mobile__item--has-sub-menu menu-item-animate"><div class="header-lower-sub-menu-mobile__link-container"><a href="#" class="accessible header-lower-menu-mobile__link header-lower-menu-mobile__link--has-sub-menu" aria-label="Services">Services</a></div><ul class='header-lower-sub-menu-mobile'><li class="header-lower-sub-menu-mobile__item"><div class="header-lower-sub-menu-mobile__link-container"><a href="https://6b.health/services/strategy-and-innovation/" class="accessible header-lower-menu-mobile__link" aria-label="Strategy and Innovation">Strategy and Innovation</a></div></li><li class="header-lower-sub-menu-mobile__item"><div class="header-lower-sub-menu-mobile__link-container"><a href="https://6b.health/services/research-and-design/" class="accessible header-lower-menu-mobile__link" aria-label="Research and Design">Research and Design</a></div></li><li class="header-lower-sub-menu-mobile__item"><div class="header-lower-sub-menu-mobile__link-container"><a href="https://6b.health/services/technology-delivery/" class="accessible header-lower-menu-mobile__link" aria-label="Technology Delivery">Technology Delivery</a></div></li><li class="header-lower-sub-menu-mobile__item"><div class="header-lower-sub-menu-mobile__link-container"><a href="https://6b.health/services/interoperability-and-integration/" class="accessible header-lower-menu-mobile__link" aria-label="Interoperability and Integration">Interoperability and Integration</a></div></li><li class="header-lower-sub-menu-mobile__item"><div class="header-lower-sub-menu-mobile__link-container"><a href="https://6b.health/services/managed-services/" class="accessible header-lower-menu-mobile__link" aria-label="Managed Services">Managed Services</a></div></li></ul></li><li class="header-lower-menu-mobile__item header-lower-menu-mobile__item--has-sub-menu menu-item-animate"><div class="header-lower-sub-menu-mobile__link-container"><a href="#" class="accessible header-lower-menu-mobile__link header-lower-menu-mobile__link--has-sub-menu" aria-label="Resources">Resources</a></div><ul class='header-lower-sub-menu-mobile'><li class="header-lower-sub-menu-mobile__item"><div class="header-lower-sub-menu-mobile__link-container"><a href="https://6b.health/case-studies/" class="accessible header-lower-menu-mobile__link" aria-label="Case Studies">Case Studies</a></div></li><li class="header-lower-sub-menu-mobile__item"><div class="header-lower-sub-menu-mobile__link-container"><a href="https://6b.health/insights/" class="accessible header-lower-menu-mobile__link" aria-label="Insights">Insights</a></div></li></ul></li><li class="header-lower-menu-mobile__item menu-item-animate"><div class="header-lower-sub-menu-mobile__link-container"><a href="https://6b.health/careers/" class="accessible header-lower-menu-mobile__link" aria-label="Careers">Careers</a></div></li><li class="header-lower-menu-mobile__item menu-item-animate"><div class="header-lower-sub-menu-mobile__link-container"><a href="https://6b.health/contact/" class="accessible header-lower-menu-mobile__link" aria-label="Contact">Contact</a></div></li></ul>                    </div>
+                </nav>
+            </div>
+            <form role="search" method="get" class="flex items-center border-t border-white px-3 py-1 w-full lg:w-1/2 mt-10" action="https://6b.health/">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 30 30" fill="white">
+                    <path d="M26.2833 30L16.3083 19.5C15.5167 20.1667 14.6062 20.6944 13.5771 21.0833C12.5479 21.4722 11.4528 21.6667 10.2917 21.6667C7.41528 21.6667 4.9809 20.6181 2.98854 18.5208C0.996181 16.4236 0 13.8611 0 10.8333C0 7.80556 0.996181 5.24306 2.98854 3.14583C4.9809 1.04861 7.41528 0 10.2917 0C13.1681 0 15.6024 1.04861 17.5948 3.14583C19.5872 5.24306 20.5833 7.80556 20.5833 10.8333C20.5833 12.0556 20.3986 13.2083 20.0292 14.2917C19.6597 15.375 19.1583 16.3333 18.525 17.1667L28.5 27.6667L26.2833 30ZM10.2917 18.3333C12.2708 18.3333 13.9531 17.6042 15.3385 16.1458C16.724 14.6875 17.4167 12.9167 17.4167 10.8333C17.4167 8.75 16.724 6.97917 15.3385 5.52083C13.9531 4.0625 12.2708 3.33333 10.2917 3.33333C8.3125 3.33333 6.63021 4.0625 5.24479 5.52083C3.85938 6.97917 3.16667 8.75 3.16667 10.8333C3.16667 12.9167 3.85938 14.6875 5.24479 16.1458C6.63021 17.6042 8.3125 18.3333 10.2917 18.3333Z" fill="white"/>
+                </svg>
+                <input
+                    id="header-search-text"
+                    class="flex-grow !text-white placeholder-white/40 focus:outline-none border-none bg-transparent"
+                    type="search"
+                    placeholder="I need help integrating with IM1"
+                    value=""
+                    name="s"
+                    aria-label="Site search"
+                />
+                <button type="submit" class="ml-4 text-white flex gap-2" aria-label="Submit search">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="10" height="15" viewBox="0 0 14 22" fill="white" class="mt-[4px]">
+                        <path d="M8.32973 10.8649L0 2.53514L2.53514 0L13.4 10.8649L2.53514 21.7297L0 19.1946L8.32973 10.8649Z" fill="white"/>
+                    </svg>
+                    <span>
+                        Search
+                    </span>
+                </button>
+            </form>
+        </div>
+    </div>
+</section>
+
+    <section data-row-layout="hero_article" aria-labelledby="article-hero-title">
+        <div class="bg-primaryColor">
+            <div class="container">
+                <div class="w-full md:w-2/3 pt-[100px] pb-[25px]">
+                    <h1 class="text-4xl lg:text-[35px] text-white font-medium !leading-normal mb-0" id="article-hero-title">What Is The Oracle Health (Cerner Millennium) Developer Program?</h1>
+                                            <div class="w-[100px] h-1 bg-white mb-4 mt-8"></div>
+                        <p class="text-white mb-6">
+                            <span>Written by <strong class="text-white">Technical Team</strong></span>
+                            <span class="hidden md:inline">|</span>
+                            <span>Last updated 21.06.2025</span>
+                            <span class="hidden md:inline">|</span>
+                            <span>2 minute read</span>
+                        </p>
+                                    </div>
+            </div>
+        </div>
+    </section>
+    <!-- Breadcrumbs -->
+    <section aria-label="Breadcrumb">
+        <div class="container">
+            <div class="w-full mt-4 pb-4 border-b border-primaryColor">
+            <div class="flex flex-wrap items-center"><a class="inline-block text-sm mr-2 text-primaryColor underline" href="https://6b.health" aria-label="Home">Home</a><span class="text-sm text-primaryColor mr-2">></span><a href="/insights" class="text-sm mr-2 text-primaryColor underline" aria-label="Insights">Insights</a><span class="text-sm text-primaryColor mr-2">></span><span class="inline-block text-sm text-primaryColor font-semibold">What Is The Oracle Health (Cerner Millennium) Developer Program?</span></div>            </div>
+        </div>
+    </section>
+    <div id="Top" class="container py-[30px]">
+        <div class="lg:flex lg:gap-[30px] relative overflow-visible">
+                        <aside class="lg:w-2/12 w-full lg:sticky top-[80px] h-fit self-start ">
+                                                            <div class="category_filter mb-10">
+                            <div class="text-sm font-semibold mb-2">ARTICLE CONTENTS</div>
+                            <ul class="article-headings list-none m-0 p-0 text-primaryColor text-sm">
+                                <li><a href="#section-unlocking-the-power-of-cerner-apis-and-tools-0" class="block py-1 border-t border-primaryColor" aria-label="Jump to section:Unlocking the Power of Cerner APIs and Tools">Unlocking the Power of Cerner APIs and Tools</a></li><li><a href="#section-the-oracle-health-developer-program-1" class="block py-1 border-t border-primaryColor" aria-label="Jump to section:The Oracle Health Developer Program">The Oracle Health Developer Program</a></li><li><a href="#section-path-to-cerner-integration-commercialisation-2" class="block py-1 border-t border-primaryColor" aria-label="Jump to section:Path to Cerner Integration Commercialisation">Path to Cerner Integration Commercialisation</a></li>                                                            </ul>
+                        </div>
+                                                </aside>
+                        <div class="ml-[-20px] lg:ml-0 w-[calc(100%+40px)] 
+                lg:w-10/12 xl:w-7/12            ">
+                <div class="space-y-4 text-base text-gray-700 wysiwyg bg-white p-0 px-[20px] lg:px-[30px] py-[30px] lg:py-[30px]">
+                    <p>Oracle Health (Cerner Millennium) is the most widely used EPR in NHS Trusts in England, with 35 NHS Trusts (at the time of writing this post) having implemented Oracle Health EHR (Cerner Millennium).</p>
+<p>Integrating solutions with Oracle Health is critical for enhancing care delivery and operational efficiency, and the Oracle Health EHR (Cerner Millennium) Developer Program is designed to support digital health innovators with integration, providing a robust platform for developing, testing, and commercialising applications that integrate with Oracle Health.</p>
+<p>With access to Oracle Health Millennium API documentation, best practice guidelines, and a testing sandbox, developers can leverage the Developer Program to experiment and refine their solutions before bringing them to market. This support helps streamline the development process, reducing time-to-market for new healthcare applications.</p>
+<h2 id="section-unlocking-the-power-of-cerner-apis-and-tools-0">Unlocking the Power of Cerner APIs and Tools</h2>
+<p>APIs are the backbone of modern healthcare IT systems, offering powerful opportunities for transforming care delivery. The Oracle Health Developer Program documents API capabilities native to the Millennium Platform, enabling developers to build their own applications or integrate with independent software vendors. This open ecosystem approach not only fosters innovation but also ensures that healthcare organisations can tailor their technology solutions to meet specific needs.</p>
+<p>The Oracle Health Developer Program also provides access to a wealth of resources designed to support developers at every stage of their journey. This includes detailed API documentation, best practices, and a suite of developer tools. These resources are complemented by training materials, enabling developers to have the knowledge and skills needed to effectively utilise the Oracle Health Millennium Platform.</p>
+<h2 id="section-the-oracle-health-developer-program-1">The Oracle Health Developer Program</h2>
+<p>At the heart of the Oracle Health Developer Program is a vibrant developer community. This forum offers a space for developers to share technical questions, collaborate on solutions, and learn from one another. This spirit of open collaboration is key to driving continuous innovation and improvement within the Oracle Health ecosystem.</p>
+<p>The Oracle Health Developer Program also provides comprehensive development resources, including documentation, education, and information necessary for connecting apps and devices to the Oracle Health Millennium Platform. Developers can browse various versions of documentation for the HL7 FHIR standard, including DSTU 2 and R4 implementations. Additionally, the program includes resources on SMART documentation and numerous open-source FHIR implementations, supporting a wide range of development needs.</p>
+<h2 id="section-path-to-cerner-integration-commercialisation-2">Path to Cerner Integration Commercialisation</h2>
+<p>Once an application is market-ready, the Oracle PartnerNetwork (accessed via the Developer Program) provides a streamlined path to commercialisation. This network helps developers gain the necessary skills and Oracle expertise to earn customer trust and relevancy.</p>
+<p>By partnering with Oracle, and accessing the Oracle Developer Program, developers can leverage a well-established platform to reach a broader audience and ensure the successful deployment of their Oracle Health (Cerner Millennium) integrated solutions in real-world healthcare settings.</p>
+                                            
+                        <div class="border-t border-primaryColor pt-[30px] !mt-8 hidden xl:inline-block">
+                            <p class="text-white leading-snug mb-4">
+                                Need help with Cerner Millennium EPR integration? Get in touch today, or find out more about our <a href="https://6b.health/services/interoperability-and-integration/secondary-care-epr-integration/oracle-health-cerner-integration/" aria-label="Find out more about our Oracle Health Cerner Integration services">Oracle Health Cerner Integration</a> services.
+                            </p>
+                            <a href="/contact/" class="btn bg-secondaryColor text-customBlue uppercase w-auto inline-block !no-underline" aria-label="Contact Us" aria-labelledby="help-title-873">Get in touch</a>
+                        </div>
+
+                        
+                                    </div>
+                                    <div class="px-[20px] lg:px-0">
+                        <div class="bg-primaryColor rounded-[10px] p-6 mb-8 mt-8 inline-block xl:hidden w-full">
+                                                            <h3 class="text-white leading-snug mb-4" id="help-title-873">Need help with Cerner Millennium EPR integration?</h3>
+                                <p class="text-white mb-4">Is your team looking for help with Cerner Millennium EPR integration? Click the button below.</p>
+                                                        <a href="/contact/" class="btn bg-secondaryColor text-customBlue uppercase w-auto inline-block" aria-label="Contact Us" aria-labelledby="help-title-873">Get in touch</a>
+                        </div>
+                    </div>
+                            </div>
+                            <aside class="lg:w-3/12 w-full lg:sticky top-[80px] h-fit self-start mt-[40px] lg:mt-0 hidden xl:inline-block">
+                    <div class="bg-primaryColor rounded-[10px] p-6 mb-8">
+                                                    <h3 class="text-white leading-snug mb-4" id="help-title-873">Need help with Cerner Millennium EPR integration?</h3>
+                            <p class="text-sm text-white mb-4">Is your team looking for help with Cerner Millennium EPR integration? Click the button below.</p>
+                                                <a href="/contact/" class="btn bg-secondaryColor text-customBlue uppercase w-auto inline-block" aria-label="Contact Us" aria-labelledby="help-title-873">Get in touch</a>
+                    </div>
+                    <div class="social-share-vertical">
+                        <div class="text-sm font-semibold mb-2">SHARE</div>
+<div class="social-share-links" role="navigation" aria-label="Share this post">
+    <a href="mailto:?subject=What Is The Oracle Health (Cerner Millennium) Developer Program?&body=What Is The Oracle Health (Cerner Millennium) Developer Program? - https://6b.health/insight/what-is-the-oracle-health-cerner-millennium-developer-program/" aria-label="Share by email">
+        <svg role="img" aria-label="Share via Email" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#ffffff"><path d="M120-160v-640l760 320-760 320Zm80-120 474-200-474-200v140l240 60-240 60v140Zm0 0v-400 400Z"/></svg>
+    </a>
+    <a href="https://x.com/intent/post?url=https%3A%2F%2F6b.health%2Finsight%2Fwhat-is-the-oracle-health-cerner-millennium-developer-program%2F&text=What+Is+The+Oracle+Health+%28Cerner+Millennium%29+Developer+Program%3F" target="_blank" rel="noopener" aria-label="Share on X">
+        <svg role="img" aria-label="Share via X" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 21 21" fill="none">
+            <path d="M0.0600855 0.671263C0.0514789 0.684172 0.74861 1.6352 1.60496 2.77987C2.46132 3.92454 4.2816 6.3602 5.65004 8.18909L8.13734 11.5155L7.97812 11.6963C7.88775 11.7952 6.05886 13.7704 3.91582 16.0856C1.77279 18.4051 0.0127494 20.3157 0.00844615 20.3372C-0.000160409 20.3588 0.374225 20.376 0.912135 20.3717L1.82873 20.3674L2.12996 20.036C2.29779 19.8553 3.85558 18.1727 5.5941 16.2922C7.33263 14.4116 8.80435 12.8194 8.86459 12.7506L8.97218 12.6258L9.83283 13.779C10.3062 14.4116 11.6101 16.1588 12.7289 17.6563L14.7687 20.376H17.8886C20.4834 20.376 21.0041 20.3674 20.9869 20.32C20.974 20.2856 20.1822 19.2184 19.2269 17.9403C18.2716 16.6666 17.1785 15.2034 16.7998 14.6956C16.4168 14.1879 15.2937 12.6774 14.2953 11.3477C13.297 10.0137 12.4793 8.90343 12.4793 8.88622C12.4793 8.8561 17.7552 3.12844 19.5496 1.21348L20.0617 0.66696H19.1193L18.1812 0.671263L17.0839 1.85897C16.4814 2.51307 15.0054 4.11389 13.8005 5.40917L11.6187 7.76737L8.97218 4.23007L6.32136 0.688477L3.20148 0.66696C1.48447 0.654049 0.0686921 0.658352 0.0600855 0.671263ZM7.45312 4.48397C8.473 5.85241 10.048 7.95671 10.9517 9.16594C11.8554 10.3709 13.8607 13.0561 15.4099 15.126C16.9591 17.2002 18.2414 18.9172 18.263 18.9473C18.2888 18.986 17.9832 18.9989 16.8687 18.9989H15.4443L12.6214 15.2206C6.10619 6.51512 2.81849 2.11716 2.77976 2.05261C2.75394 2.01389 3.04656 2.00098 4.16972 2.00098H5.5941L7.45312 4.48397Z" fill="#ffffff"/>
+        </svg>
+    </a>
+    <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2F6b.health%2Finsight%2Fwhat-is-the-oracle-health-cerner-millennium-developer-program%2F&title=What+Is+The+Oracle+Health+%28Cerner+Millennium%29+Developer+Program%3F" target="_blank" rel="noopener" aria-label="Share on LinkedIn">
+        <svg role="img" aria-label="Share via Linkedin" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 22 22" fill="none">
+            <path d="M20.3715 0H1.62422C0.726172 0 0 0.708984 0 1.58555V20.4102C0 21.2868 0.726172 22 1.62422 22H20.3715C21.2696 22 22 21.2868 22 20.4145V1.58555C22 0.708984 21.2696 0 20.3715 0ZM6.52695 18.7473H3.26134V8.2457H6.52695V18.7473ZM4.89415 6.81484C3.84571 6.81484 2.99922 5.96835 2.99922 4.92422C2.99922 3.88008 3.84571 3.03359 4.89415 3.03359C5.93828 3.03359 6.78476 3.88008 6.78476 4.92422C6.78476 5.96406 5.93828 6.81484 4.89415 6.81484ZM18.7473 18.7473H15.4859V13.6426C15.4859 12.4266 15.4645 10.8582 13.7886 10.8582C12.0914 10.8582 11.8336 12.1859 11.8336 13.5566V18.7473H8.57656V8.2457H11.7047V9.68087H11.7477C12.1816 8.85587 13.2473 7.98359 14.8328 7.98359C18.1371 7.98359 18.7473 10.1578 18.7473 12.9852V18.7473Z" fill="#ffffff"/>
+        </svg>
+    </a>
+</div>                    </div>
+                </aside>
+                    </div>
+    </div>
+
+    <section data-row-layout="featured_links" aria-labelledby="related-links-title-873">
+        <div class="container-outer bg-white">
+            <div class="container lg:py-[30px]">
+                <div class="flex items-center w-full">
+                                            <h2 id="related-links-title-873" class="text-primaryColor mb-0">More Cerner Insights</h2>
+                        <a href="/insights" class="ml-auto underline text-primaryColor hidden lg:inline-block" aria-label="View All Insights">View All Insights</a>
+                                    </div>
+                <div class="page_link_list-container grid grid-cols-1 sm:grid-cols-2 gap-x-[30px]">
+                                            <a href="https://6b.health/insight/how-to-build-a-smart-on-fhir-app-for-oracle-health-cerner-millennium/" class="page_link_list text-primaryColor border-primaryColor" aria-label="Read: How to Build a SMART on FHIR App for Oracle Health (Cerner Millennium)">
+                            <span>How to Build a SMART on FHIR App for Oracle Health (Cerner Millennium)</span>
+                            <svg class='' width='30' height='30' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'>
+    <path d='M6.42036 17.65L5.37036 16.6L15.2204 6.75H6.27036V5.25H17.7704V16.75H16.2704V7.8L6.42036 17.65Z' fill='#005eb8'/>
+    </svg>                        </a>
+                                            <a href="https://6b.health/insight/oracle-health-cerner-api-integration/" class="page_link_list text-primaryColor border-primaryColor" aria-label="Read: Oracle Health (Cerner) API Integration">
+                            <span>Oracle Health (Cerner) API Integration</span>
+                            <svg class='' width='30' height='30' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'>
+    <path d='M6.42036 17.65L5.37036 16.6L15.2204 6.75H6.27036V5.25H17.7704V16.75H16.2704V7.8L6.42036 17.65Z' fill='#005eb8'/>
+    </svg>                        </a>
+                                            <a href="https://6b.health/insight/oracle-health-cerner-hl7-fhir-integration/" class="page_link_list text-primaryColor border-primaryColor" aria-label="Read: Oracle Health (Cerner) HL7 FHIR Integration">
+                            <span>Oracle Health (Cerner) HL7 FHIR Integration</span>
+                            <svg class='' width='30' height='30' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'>
+    <path d='M6.42036 17.65L5.37036 16.6L15.2204 6.75H6.27036V5.25H17.7704V16.75H16.2704V7.8L6.42036 17.65Z' fill='#005eb8'/>
+    </svg>                        </a>
+                                            <a href="https://6b.health/insight/publishing-your-integration-to-the-oracle-health-cerner-millennium-marketplace/" class="page_link_list text-primaryColor border-primaryColor" aria-label="Read: Publishing Your Integration To The Oracle Health (Cerner Millennium) Marketplace">
+                            <span>Publishing Your Integration To The Oracle Health (Cerner Millennium) Marketplace</span>
+                            <svg class='' width='30' height='30' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'>
+    <path d='M6.42036 17.65L5.37036 16.6L15.2204 6.75H6.27036V5.25H17.7704V16.75H16.2704V7.8L6.42036 17.65Z' fill='#005eb8'/>
+    </svg>                        </a>
+                                    </div>
+            </div>
+        </div>
+    </section>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const ukToggle = document.querySelector('.uk-toggle');
+    const rowToggle = document.querySelector('.row-toggle');
+    const ukContent = document.querySelector('.uk-content');
+    const rowContent = document.querySelector('.row-content');
+
+    function toggleAccordion(openToggle, openContent, closeToggle, closeContent) {
+        // Open selected
+        openToggle.setAttribute('aria-expanded', 'true');
+        openToggle.querySelector('.accordion-icon').textContent = '−';
+        openContent.style.display = 'block';
+
+        // Close other
+        closeToggle.setAttribute('aria-expanded', 'false');
+        closeToggle.querySelector('.accordion-icon').textContent = '+';
+        closeContent.style.display = 'none';
+    }
+
+    // Default: show UK
+    toggleAccordion(ukToggle, ukContent, rowToggle, rowContent);
+
+    ukToggle.addEventListener('click', function () {
+        toggleAccordion(ukToggle, ukContent, rowToggle, rowContent);
+    });
+
+    rowToggle.addEventListener('click', function () {
+        toggleAccordion(rowToggle, rowContent, ukToggle, ukContent);
+    });
+});
+</script>
+
+        <footer role="contentinfo">
+    <div class="bg-primaryColor pt-[40px] lg:pt-[60px] relative overflow-hidden">
+        <div class="container">
+            <div class="z-[4] relative">
+                                <div class="flex flex-col lg:flex-row gap-[50px] pb-[40px] lg:pb-[60px] lg:items-center">
+                    <div class="text-white text-[28px] font-medium">Ready to transform healthcare?</div>
+                    <a href="/contact/" class="btn bg-secondaryColor text-customBlue uppercase lg:ml-auto h-[30px] whitespace-nowrap w-fit" aria-label="Contact 6B">Get In Touch</a>
+                </div>
+                                <div class="flex flex-col md:flex-row justify-between text-white text-sm gap-10 pb-10 border-t border-white/30 pt-10 ">
+                    <!-- Links Section -->
+                    <div>
+                        <h4 class="text-white text-xs font-semibold uppercase mb-[15px]">Links</h4>
+                        <ul class="space-y-1">
+                            <li><a href="/story-and-purpose/" aria-label="About 6B">About</a></li>
+                            <li><a href="/services/" aria-label="6B Services">Services</a></li>
+                                                            <li><a href="/insights/" aria-label="6B Insights">Insights</a></li>
+                                                        <li><a href="/careers/" aria-label="Careers">Careers</a></li>
+                            <li><a href="/contact/" aria-label="Contact 6B">Contact</a></li>
+                            <li><a href="https://support.6bdigital.com/login" target="_blank" aria-label="Customer Portal">Customer Portal</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="text-white text-xs font-semibold uppercase mb-[15px]">Documents</h4>
+                        <ul class="space-y-1">
+                            <li><a href="/privacy-policy/" aria-label="Privacy Policy">Privacy Policy</a></li>
+                            <li><a href="/data-processing/" aria-label="Data Processing">Data Processing</a></li>
+                            <li><a href="/accessibility/" aria-label="Accessibility">Accessibility</a></li>
+                            <li><a href="/sustainability/" aria-label="Sustainability">Sustainability</a></li>
+                            <li><a href="/sitemap/" aria-label="Sitemap">Sitemap</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="text-white text-xs font-semibold uppercase mb-[15px]">Capabilities</h4>
+                        <ul class="space-y-1">
+                            <li><a href="https://6b.health/services/strategy-and-innovation/" aria-label="Strategy and Innovation">Strategy and Innovation</a></li><li><a href="https://6b.health/services/research-and-design/" aria-label="Research and Design">Research and Design</a></li><li><a href="https://6b.health/services/technology-delivery/" aria-label="Technology Delivery">Technology Delivery</a></li><li><a href="https://6b.health/services/interoperability-and-integration/" aria-label="Interoperability and Integration">Interoperability and Integration</a></li><li><a href="https://6b.health/services/managed-services/" aria-label="Managed Services">Managed Services</a></li>                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="text-white text-xs font-semibold uppercase mb-[15px]">Connect</h4>
+                        <p><a href="mailto:info@6b.health" class="text-white" aria-label="Email 6B">info@6b.health</a></p>
+                        <p class="mb-3"><a href="tel:01133501290" class="text-white" aria-label="Call 6B">0113 350 1290</a></p>
+                        <div class="flex space-x-4">
+                            <a href="https://x.com/6b_digital" rel="noopener" target="_blank" aria-label="Follow 6B on X">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 21 21" fill="none">
+                                    <path d="M0.0600855 0.671263C0.0514789 0.684172 0.74861 1.6352 1.60496 2.77987C2.46132 3.92454 4.2816 6.3602 5.65004 8.18909L8.13734 11.5155L7.97812 11.6963C7.88775 11.7952 6.05886 13.7704 3.91582 16.0856C1.77279 18.4051 0.0127494 20.3157 0.00844615 20.3372C-0.000160409 20.3588 0.374225 20.376 0.912135 20.3717L1.82873 20.3674L2.12996 20.036C2.29779 19.8553 3.85558 18.1727 5.5941 16.2922C7.33263 14.4116 8.80435 12.8194 8.86459 12.7506L8.97218 12.6258L9.83283 13.779C10.3062 14.4116 11.6101 16.1588 12.7289 17.6563L14.7687 20.376H17.8886C20.4834 20.376 21.0041 20.3674 20.9869 20.32C20.974 20.2856 20.1822 19.2184 19.2269 17.9403C18.2716 16.6666 17.1785 15.2034 16.7998 14.6956C16.4168 14.1879 15.2937 12.6774 14.2953 11.3477C13.297 10.0137 12.4793 8.90343 12.4793 8.88622C12.4793 8.8561 17.7552 3.12844 19.5496 1.21348L20.0617 0.66696H19.1193L18.1812 0.671263L17.0839 1.85897C16.4814 2.51307 15.0054 4.11389 13.8005 5.40917L11.6187 7.76737L8.97218 4.23007L6.32136 0.688477L3.20148 0.66696C1.48447 0.654049 0.0686921 0.658352 0.0600855 0.671263ZM7.45312 4.48397C8.473 5.85241 10.048 7.95671 10.9517 9.16594C11.8554 10.3709 13.8607 13.0561 15.4099 15.126C16.9591 17.2002 18.2414 18.9172 18.263 18.9473C18.2888 18.986 17.9832 18.9989 16.8687 18.9989H15.4443L12.6214 15.2206C6.10619 6.51512 2.81849 2.11716 2.77976 2.05261C2.75394 2.01389 3.04656 2.00098 4.16972 2.00098H5.5941L7.45312 4.48397Z" fill="white"/>
+                                </svg>
+                            </a>
+                            <a href="https://www.linkedin.com/company/6b-health" rel="noopener" target="_blank" aria-label="Follow 6B on Linkedin">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 22 22" fill="none">
+                                    <path d="M20.3715 0H1.62422C0.726172 0 0 0.708984 0 1.58555V20.4102C0 21.2868 0.726172 22 1.62422 22H20.3715C21.2696 22 22 21.2868 22 20.4145V1.58555C22 0.708984 21.2696 0 20.3715 0ZM6.52695 18.7473H3.26134V8.2457H6.52695V18.7473ZM4.89415 6.81484C3.84571 6.81484 2.99922 5.96835 2.99922 4.92422C2.99922 3.88008 3.84571 3.03359 4.89415 3.03359C5.93828 3.03359 6.78476 3.88008 6.78476 4.92422C6.78476 5.96406 5.93828 6.81484 4.89415 6.81484ZM18.7473 18.7473H15.4859V13.6426C15.4859 12.4266 15.4645 10.8582 13.7886 10.8582C12.0914 10.8582 11.8336 12.1859 11.8336 13.5566V18.7473H8.57656V8.2457H11.7047V9.68087H11.7477C12.1816 8.85587 13.2473 7.98359 14.8328 7.98359C18.1371 7.98359 18.7473 10.1578 18.7473 12.9852V18.7473Z" fill="white"/>
+                                </svg>
+                            </a>
+                            <a href="https://www.instagram.com/6bdigital/" rel="noopener" target="_blank" aria-label="Follow 6B on Instagram">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 22 22" fill="none">
+                                    <path d="M11 1.98085C13.9391 1.98085 14.2871 1.99375 15.443 2.04531C16.5172 2.09257 17.0973 2.27305 17.4839 2.42344C17.9953 2.62109 18.3649 2.86172 18.7473 3.24415C19.134 3.63087 19.3703 3.99609 19.568 4.50743C19.7183 4.89415 19.8989 5.47851 19.9462 6.54844C19.9977 7.70859 20.0105 8.05665 20.0105 10.9914C20.0105 13.9305 19.9977 14.2786 19.9462 15.4344C19.8989 16.5087 19.7183 17.0886 19.568 17.4754C19.3703 17.9868 19.1297 18.3563 18.7473 18.7386C18.3605 19.1254 17.9953 19.3618 17.4839 19.5594C17.0973 19.7098 16.5129 19.8902 15.443 19.9375C14.2828 19.9891 13.9348 20.002 11 20.002C8.06094 20.002 7.7129 19.9891 6.55703 19.9375C5.48281 19.8902 4.90274 19.7098 4.51602 19.5594C4.00469 19.3618 3.63516 19.1212 3.25274 18.7386C2.86602 18.352 2.62969 17.9868 2.43203 17.4754C2.28165 17.0886 2.10118 16.5043 2.05391 15.4344C2.00234 14.2743 1.98946 13.9261 1.98946 10.9914C1.98946 8.05234 2.00234 7.70429 2.05391 6.54844C2.10118 5.47422 2.28165 4.89415 2.43203 4.50743C2.62969 3.99609 2.87031 3.62656 3.25274 3.24415C3.63946 2.85743 4.00469 2.62109 4.51602 2.42344C4.90274 2.27305 5.48712 2.09257 6.55703 2.04531C7.7129 1.99375 8.06094 1.98085 11 1.98085ZM11 0C8.01368 0 7.63984 0.0128906 6.4668 0.0644531C5.29805 0.116016 4.49453 0.305078 3.79844 0.575781C3.07227 0.859375 2.45781 1.2332 1.84766 1.84766C1.2332 2.45781 0.859375 3.07227 0.575781 3.79415C0.305078 4.49453 0.116016 5.29375 0.0644531 6.4625C0.0128906 7.63984 0 8.01368 0 11C0 13.9864 0.0128906 14.3602 0.0644531 15.5332C0.116016 16.702 0.305078 17.5055 0.575781 18.2016C0.859375 18.9277 1.2332 19.5422 1.84766 20.1524C2.45781 20.7625 3.07227 21.1406 3.79415 21.4199C4.49453 21.6906 5.29375 21.8797 6.4625 21.9312C7.63555 21.9828 8.00937 21.9957 10.9957 21.9957C13.9821 21.9957 14.3558 21.9828 15.529 21.9312C16.6977 21.8797 17.5011 21.6906 18.1973 21.4199C18.9192 21.1406 19.5337 20.7625 20.1437 20.1524C20.754 19.5422 21.1321 18.9277 21.4114 18.2058C21.6821 17.5055 21.8712 16.7063 21.9227 15.5375C21.9743 14.3645 21.9871 13.9906 21.9871 11.0043C21.9871 8.01797 21.9743 7.64415 21.9227 6.47109C21.8712 5.30234 21.6821 4.49884 21.4114 3.80274C21.1406 3.07227 20.7668 2.45781 20.1524 1.84766C19.5422 1.2375 18.9277 0.859375 18.2058 0.580078C17.5055 0.309375 16.7063 0.120313 15.5375 0.06875C14.3602 0.0128906 13.9864 0 11 0Z" fill="white"/>
+                                    <path d="M11 5.34961C7.88048 5.34961 5.34961 7.88048 5.34961 11C5.34961 14.1196 7.88048 16.6504 11 16.6504C14.1196 16.6504 16.6504 14.1196 16.6504 11C16.6504 7.88048 14.1196 5.34961 11 5.34961ZM11 14.6652C8.97619 14.6652 7.33477 13.0238 7.33477 11C7.33477 8.97619 8.97619 7.33477 11 7.33477C13.0238 7.33477 14.6652 8.97619 14.6652 11C14.6652 13.0238 13.0238 14.6652 11 14.6652Z" fill="white"/>
+                                    <path d="M18.1929 5.12628C18.1929 5.85675 17.6 6.44541 16.8739 6.44541C16.1433 6.44541 15.5547 5.85244 15.5547 5.12628C15.5547 4.39579 16.1477 3.80713 16.8739 3.80713C17.6 3.80713 18.1929 4.4001 18.1929 5.12628Z" fill="white"/>
+                                </svg>
+                            </a>
+                            <a href="https://www.youtube.com/@6b745" rel="noopener" target="_blank" aria-label="Follow 6B on Youtube">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="white" class="mt-[-3px]">
+                                    <path d="M10,15L15.19,12L10,9V15M21.56,7.17C21.69,7.64 21.78,8.27 21.84,9.07C21.91,9.87 21.94,10.56 21.94,11.16L22,12C22,14.19 21.84,15.8 21.56,16.83C21.31,17.73 20.73,18.31 19.83,18.56C19.36,18.69 18.5,18.78 17.18,18.84C15.88,18.91 14.69,18.94 13.59,18.94L12,19C7.81,19 5.2,18.84 4.17,18.56C3.27,18.31 2.69,17.73 2.44,16.83C2.31,16.36 2.22,15.73 2.16,14.93C2.09,14.13 2.06,13.44 2.06,12.84L2,12C2,9.81 2.16,8.2 2.44,7.17C2.69,6.27 3.27,5.69 4.17,5.44C4.64,5.31 5.5,5.22 6.82,5.16C8.12,5.09 9.31,5.06 10.41,5.06L12,5C16.19,5 18.8,5.16 19.83,5.44C20.73,5.69 21.31,6.27 21.56,7.17Z" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Certifications Section -->
+                    <div class="flex flex-col items-start md:items-end space-y-2 border-t border-white/30 md:border-0 pt-10 md:pt-0">
+                        <div class="flex flex-wrap gap-6 items-center">
+                                                        <a href="https://www.dsptoolkit.nhs.uk/OrganisationSearch/Q3U9K" aria-label="6B NHSDSPT assurance" rel="noopener" target="_blank">
+                                <img src="https://6b.health/wp-content/themes/theme/assets/img/NHS-DSPT.png" alt="NHS DSPT" class="h-10" />
+                            </a>
+                                                        <img src="https://6b.health/wp-content/themes/theme/assets/img/Great-Place-To-Work.png" alt="Great Place To Work" class="h-10" />
+                            <a href="https://6b.health/wp-content/themes/theme/assets/files/ISO27001.pdf" aria-label="6B ISO27001 certificate" rel="noopener" target="_blank">
+                                <img src="https://6b.health/wp-content/themes/theme/assets/img/ISO-27001.png" alt="ISO 27001" class="h-10" />
+                            </a>
+                            <a href="/public-sector-frameworks/" aria-label="6B ISOPublic Sector Frameworks">
+                                <img src="https://6b.health/wp-content/themes/theme/assets/img/CCS-Supplier.png" alt="Crown Commercial Supplier" class="h-10" />
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- Bottom Bar -->
+    <div class="bg-white py-10 relative overflow-hidden">
+        <div class="container">
+            <div class="flex flex-col justify-start text-sm w-full">
+                <div class="w-full lg:w-2/3">
+                    <p class="text-primaryColor">© 2026 6B. All rights reserved. See <a href="https://docs.google.com/document/d/1sgPxm21BE9yzD7upum1bslW7IWyExiZ8/edit?tab=t.0" target="_blank" aria-label="Terms of Use">Terms of Use</a> for more information.</p>
+                    <p class="text-primaryColor">6B Digital Ltd is a limited company registered in England and Wales with registered number 08780271 and its registered office at 1 Paragon Business Park, The Office Campus, Red Hall Court, Wakefield, WF1 2UY, West Yorkshire, England. A list of members of 6B is available at Companies House.</p>
+                    <p class="text-primaryColor mb-0">Throughout this website, “we”, 6B, “us” and “our” refers to 6B Digital Ltd, and/or to one or more of the member firms of 6B Digital Ltd, each of which is a separate legal entity.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+        <script type="speculationrules">
+{"prefetch":[{"source":"document","where":{"and":[{"href_matches":"/*"},{"not":{"href_matches":["/wp-*.php","/wp-admin/*","/wp-content/uploads/*","/wp-content/*","/wp-content/plugins/*","/wp-content/themes/theme/*","/*\\?(.+)"]}},{"not":{"selector_matches":"a[rel~=\"nofollow\"]"}},{"not":{"selector_matches":".no-prefetch, .no-prefetch a"}}]},"eagerness":"conservative"}]}
+</script>
+
+<!-- Consent Management powered by Complianz | GDPR/CCPA Cookie Consent https://wordpress.org/plugins/complianz-gdpr -->
+<div id="cmplz-cookiebanner-container"><div class="cmplz-cookiebanner cmplz-hidden banner-1 bottom-right-view-preferences optin cmplz-bottom-right cmplz-categories-type-view-preferences" aria-modal="true" data-nosnippet="true" role="dialog" aria-live="polite" aria-labelledby="cmplz-header-1-optin" aria-describedby="cmplz-message-1-optin">
+	<div class="cmplz-header">
+		<div class="cmplz-logo"></div>
+		<div class="cmplz-title" id="cmplz-header-1-optin">Manage Cookie Consent</div>
+		<div class="cmplz-close" tabindex="0" role="button" aria-label="Close dialogue">
+			<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="times" class="svg-inline--fa fa-times fa-w-11" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 352 512"><path fill="currentColor" d="M242.72 256l100.07-100.07c12.28-12.28 12.28-32.19 0-44.48l-22.24-22.24c-12.28-12.28-32.19-12.28-44.48 0L176 189.28 75.93 89.21c-12.28-12.28-32.19-12.28-44.48 0L9.21 111.45c-12.28 12.28-12.28 32.19 0 44.48L109.28 256 9.21 356.07c-12.28 12.28-12.28 32.19 0 44.48l22.24 22.24c12.28 12.28 32.2 12.28 44.48 0L176 322.72l100.07 100.07c12.28 12.28 32.2 12.28 44.48 0l22.24-22.24c12.28-12.28 12.28-32.19 0-44.48L242.72 256z"></path></svg>
+		</div>
+	</div>
+
+	<div class="cmplz-divider cmplz-divider-header"></div>
+	<div class="cmplz-body">
+		<div class="cmplz-message" id="cmplz-message-1-optin">To provide the best experiences, we use technologies like cookies to store and/or access device information. Consenting to these technologies will allow us to process data such as browsing behavior or unique IDs on this site. Not consenting or withdrawing consent, may adversely affect certain features and functions.</div>
+		<!-- categories start -->
+		<div class="cmplz-categories">
+			<details class="cmplz-category cmplz-functional" >
+				<summary>
+						<span class="cmplz-category-header">
+							<span class="cmplz-category-title">Functional</span>
+							<span class='cmplz-always-active'>
+								<span class="cmplz-banner-checkbox">
+									<input type="checkbox"
+										   id="cmplz-functional-optin"
+										   data-category="cmplz_functional"
+										   class="cmplz-consent-checkbox cmplz-functional"
+										   size="40"
+										   value="1"/>
+									<label class="cmplz-label" for="cmplz-functional-optin" tabindex="0"><span class="screen-reader-text">Functional</span></label>
+								</span>
+								Always active							</span>
+							<span class="cmplz-icon cmplz-open">
+								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"  height="18" ><path d="M224 416c-8.188 0-16.38-3.125-22.62-9.375l-192-192c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L224 338.8l169.4-169.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-192 192C240.4 412.9 232.2 416 224 416z"/></svg>
+							</span>
+						</span>
+				</summary>
+				<div class="cmplz-description">
+					<span class="cmplz-description-functional">The technical storage or access is strictly necessary for the legitimate purpose of enabling the use of a specific service explicitly requested by the subscriber or user, or for the sole purpose of carrying out the transmission of a communication over an electronic communications network.</span>
+				</div>
+			</details>
+
+			<details class="cmplz-category cmplz-preferences" >
+				<summary>
+						<span class="cmplz-category-header">
+							<span class="cmplz-category-title">Preferences</span>
+							<span class="cmplz-banner-checkbox">
+								<input type="checkbox"
+									   id="cmplz-preferences-optin"
+									   data-category="cmplz_preferences"
+									   class="cmplz-consent-checkbox cmplz-preferences"
+									   size="40"
+									   value="1"/>
+								<label class="cmplz-label" for="cmplz-preferences-optin" tabindex="0"><span class="screen-reader-text">Preferences</span></label>
+							</span>
+							<span class="cmplz-icon cmplz-open">
+								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"  height="18" ><path d="M224 416c-8.188 0-16.38-3.125-22.62-9.375l-192-192c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L224 338.8l169.4-169.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-192 192C240.4 412.9 232.2 416 224 416z"/></svg>
+							</span>
+						</span>
+				</summary>
+				<div class="cmplz-description">
+					<span class="cmplz-description-preferences">The technical storage or access is necessary for the legitimate purpose of storing preferences that are not requested by the subscriber or user.</span>
+				</div>
+			</details>
+
+			<details class="cmplz-category cmplz-statistics" >
+				<summary>
+						<span class="cmplz-category-header">
+							<span class="cmplz-category-title">Statistics</span>
+							<span class="cmplz-banner-checkbox">
+								<input type="checkbox"
+									   id="cmplz-statistics-optin"
+									   data-category="cmplz_statistics"
+									   class="cmplz-consent-checkbox cmplz-statistics"
+									   size="40"
+									   value="1"/>
+								<label class="cmplz-label" for="cmplz-statistics-optin" tabindex="0"><span class="screen-reader-text">Statistics</span></label>
+							</span>
+							<span class="cmplz-icon cmplz-open">
+								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"  height="18" ><path d="M224 416c-8.188 0-16.38-3.125-22.62-9.375l-192-192c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L224 338.8l169.4-169.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-192 192C240.4 412.9 232.2 416 224 416z"/></svg>
+							</span>
+						</span>
+				</summary>
+				<div class="cmplz-description">
+					<span class="cmplz-description-statistics">The technical storage or access that is used exclusively for statistical purposes.</span>
+					<span class="cmplz-description-statistics-anonymous">The technical storage or access that is used exclusively for anonymous statistical purposes. Without a subpoena, voluntary compliance on the part of your Internet Service Provider, or additional records from a third party, information stored or retrieved for this purpose alone cannot usually be used to identify you.</span>
+				</div>
+			</details>
+			<details class="cmplz-category cmplz-marketing" >
+				<summary>
+						<span class="cmplz-category-header">
+							<span class="cmplz-category-title">Marketing</span>
+							<span class="cmplz-banner-checkbox">
+								<input type="checkbox"
+									   id="cmplz-marketing-optin"
+									   data-category="cmplz_marketing"
+									   class="cmplz-consent-checkbox cmplz-marketing"
+									   size="40"
+									   value="1"/>
+								<label class="cmplz-label" for="cmplz-marketing-optin" tabindex="0"><span class="screen-reader-text">Marketing</span></label>
+							</span>
+							<span class="cmplz-icon cmplz-open">
+								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"  height="18" ><path d="M224 416c-8.188 0-16.38-3.125-22.62-9.375l-192-192c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L224 338.8l169.4-169.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-192 192C240.4 412.9 232.2 416 224 416z"/></svg>
+							</span>
+						</span>
+				</summary>
+				<div class="cmplz-description">
+					<span class="cmplz-description-marketing">The technical storage or access is required to create user profiles to send advertising, or to track the user on a website or across several websites for similar marketing purposes.</span>
+				</div>
+			</details>
+		</div><!-- categories end -->
+			</div>
+
+	<div class="cmplz-links cmplz-information">
+		<a class="cmplz-link cmplz-manage-options cookie-statement" href="#" data-relative_url="#cmplz-manage-consent-container">Manage options</a>
+		<a class="cmplz-link cmplz-manage-third-parties cookie-statement" href="#" data-relative_url="#cmplz-cookies-overview">Manage services</a>
+		<a class="cmplz-link cmplz-manage-vendors tcf cookie-statement" href="#" data-relative_url="#cmplz-tcf-wrapper">Manage {vendor_count} vendors</a>
+		<a class="cmplz-link cmplz-external cmplz-read-more-purposes tcf" target="_blank" rel="noopener noreferrer nofollow" href="https://cookiedatabase.org/tcf/purposes/">Read more about these purposes</a>
+			</div>
+
+	<div class="cmplz-divider cmplz-footer"></div>
+
+	<div class="cmplz-buttons">
+		<button class="cmplz-btn cmplz-accept">Accept</button>
+		<button class="cmplz-btn cmplz-deny">Deny</button>
+		<button class="cmplz-btn cmplz-view-preferences">View preferences</button>
+		<button class="cmplz-btn cmplz-save-preferences">Save preferences</button>
+		<a class="cmplz-btn cmplz-manage-options tcf cookie-statement" href="#" data-relative_url="#cmplz-manage-consent-container">View preferences</a>
+			</div>
+
+	<div class="cmplz-links cmplz-documents">
+		<a class="cmplz-link cookie-statement" href="#" data-relative_url="">{title}</a>
+		<a class="cmplz-link privacy-statement" href="#" data-relative_url="">{title}</a>
+		<a class="cmplz-link impressum" href="#" data-relative_url="">{title}</a>
+			</div>
+
+</div>
+</div>
+					<div id="cmplz-manage-consent" data-nosnippet="true"><button class="cmplz-btn cmplz-hidden cmplz-manage-consent manage-consent-1">Manage consent</button>
+
+</div><script type="text/javascript" src="https://6b.health/wp-content/themes/theme/assets/js/country-switcher.js" id="country-switcher-js"></script>
+<script type="text/javascript" id="gforms_recaptcha_recaptcha-js-extra">
+/* <![CDATA[ */
+var gforms_recaptcha_recaptcha_strings = {"nonce":"20f2b15439","disconnect":"Disconnecting","change_connection_type":"Resetting","spinner":"https://6b.health/wp-content/plugins/gravityforms/images/spinner.svg","connection_type":"classic","disable_badge":"","change_connection_type_title":"Change Connection Type","change_connection_type_message":"Changing the connection type will delete your current settings.  Do you want to proceed?","disconnect_title":"Disconnect","disconnect_message":"Disconnecting from reCAPTCHA will delete your current settings.  Do you want to proceed?","site_key":"6Lc_NXwrAAAAAAJ9O_RNyn-HfWzfpuZYHD4wyU93"};
+//# sourceURL=gforms_recaptcha_recaptcha-js-extra
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://www.google.com/recaptcha/api.js?render=6Lc_NXwrAAAAAAJ9O_RNyn-HfWzfpuZYHD4wyU93&amp;ver=1.7.0" id="gforms_recaptcha_recaptcha-js"></script>
+<script type="text/javascript" id="cmplz-cookiebanner-js-extra">
+/* <![CDATA[ */
+var complianz = {"prefix":"cmplz_","user_banner_id":"1","set_cookies":[],"block_ajax_content":"","banner_version":"24","version":"7.4.0.1","store_consent":"","do_not_track_enabled":"","consenttype":"optin","region":"uk","geoip":"","dismiss_timeout":"","disable_cookiebanner":"","soft_cookiewall":"","dismiss_on_scroll":"","cookie_expiry":"365","url":"https://6b.health/wp-json/complianz/v1/","locale":"lang=en&locale=en_GB","set_cookies_on_root":"","cookie_domain":"","current_policy_id":"46","cookie_path":"/","categories":{"statistics":"statistics","marketing":"marketing"},"tcf_active":"","placeholdertext":"Click to accept {category} cookies and enable this content","css_file":"https://6b.health/wp-content/uploads/complianz/css/banner-{banner_id}-{type}.css?v=24","page_links":{"uk":{"cookie-statement":{"title":"Privacy Policy","url":"https://6b.health/privacy-policy/"},"privacy-statement":{"title":"Privacy Policy","url":"https://6b.health/privacy-policy/"}}},"tm_categories":"","forceEnableStats":"","preview":"","clean_cookies":"","aria_label":"Click to accept {category} cookies and enable this content"};
+//# sourceURL=cmplz-cookiebanner-js-extra
+/* ]]> */
+</script>
+<script defer type="text/javascript" src="https://6b.health/wp-content/plugins/complianz-gdpr/cookiebanner/js/complianz.min.js" id="cmplz-cookiebanner-js"></script>
+    </body>
+</html>
+<!--
+Performance optimized by W3 Total Cache. Learn more: https://www.boldgrid.com/w3-total-cache/
+
+Object Caching 114/171 objects using Redis
+Page Caching using Redis 
+Minified using Disk
+
+Served from: 6b.health @ 2026-04-16 18:11:50 by W3 Total Cache
+-->

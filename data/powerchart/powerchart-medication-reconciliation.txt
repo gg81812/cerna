@@ -1,0 +1,131 @@
+# SOURCE: Cerner PowerChart Medication Reconciliation Guide
+# URL: https://wiki.cerner.com/display/public/1101PowerChartAmbulatory/Medication+Reconciliation
+# MODULE: PowerChart
+# RETRIEVED: 2026-04-01
+# ---
+
+# Cerner PowerChart Medication Reconciliation Guide
+
+## What is Medication Reconciliation?
+
+Medication reconciliation is the clinical process of comparing a patient's current medication orders against all medications the patient has been taking at a prior care setting or at home. The goal is to identify and resolve discrepancies — omissions, duplications, dosing errors, or unsafe drug interactions — that arise during care transitions.
+
+In Cerner Millennium, medication reconciliation is performed using the Medication Reconciliation module within PowerChart, which provides a side-by-side view of: Home Medications, Inpatient Orders, and the reconciled Discharge Medication List.
+
+Medication reconciliation is required by The Joint Commission's National Patient Safety Goal (NPSG) 03.06.01 at every care transition: admission, transfer, and discharge.
+
+## Medication Reconciliation in PowerChart
+
+### Accessing Medication Reconciliation
+
+From PowerChart:
+1. Open the patient's chart.
+2. Click "Medication Reconciliation" in the chart navigation, OR
+3. Access from the discharge workflow prompt when a Discharge Order is placed.
+
+### The Three-Column View
+
+The Medication Reconciliation screen presents three columns:
+
+**Column 1: Home Medications (Prior to Admission)**
+Medications the patient was taking before the current encounter:
+- Imported from the patient's medication history (from prior visits, ADT, or HIE connections)
+- Manually entered by the admitting nurse or provider during the admission assessment
+- Imported from the patient's MyChart self-reported medication list (if configured)
+- Downloaded from external pharmacy records via SureScripts integration
+
+Each home medication shows: drug name, dose, route, frequency, and source (patient-reported, pharmacy fill history, prior encounter).
+
+**Column 2: Hospital / Inpatient Medications (Current Orders)**
+The current active inpatient medication orders from CPOE:
+- Linked in real time from the ORDERS table
+- Shows: drug name, dose, route, frequency, order status (Ordered/Verified/Active)
+
+**Column 3: Discharge Medications (Reconciled List)**
+The medication list the patient will take after discharge:
+- Built by the provider during medication reconciliation
+- Each entry is one of: Continue (same drug/dose as home), Modify (dose or frequency changed), New Medication, Stop (discontinue at discharge)
+
+### Completing Admission Medication Reconciliation
+
+1. Open Medication Reconciliation at the time of admission.
+2. Review Column 1 (Home Medications) with the patient or caregiver to confirm accuracy.
+3. Add, edit, or remove medications from the home list as needed.
+4. For each home medication, indicate what should happen during the hospital stay:
+   - **Continue (reconcile to inpatient order)** — links the home medication to an active or new inpatient order.
+   - **Hold** — medication held during hospitalization (document reason).
+   - **No Inpatient Equivalent** — patient takes this medication at home but no inpatient order is needed.
+
+The reconciliation confirms the inpatient orders represent an intentional, correct translation of the home medication list.
+
+### Completing Discharge Medication Reconciliation
+
+1. Open Medication Reconciliation when discharge is being planned.
+2. Review all active inpatient orders (Column 2).
+3. For each medication, specify what happens at discharge:
+   - **Continue at home** — prescription sent to outpatient pharmacy; dose/route/frequency may be adjusted.
+   - **Discontinue** — stop at discharge (document reason: completed course, side effect, no longer indicated).
+   - **New medication** — started during hospitalization, to be continued at home.
+4. Review Column 1 (home medications taken before admission):
+   - Were all pre-admission medications either resumed or intentionally discontinued?
+   - Are there any home medications that were not addressed during the reconciliation?
+5. Generate the discharge prescription list from the reconciled Column 3.
+6. Sign the Medication Reconciliation document — this creates a legal record of the reconciliation.
+
+### Handling Discrepancies
+
+When a discrepancy is found between the home medication list and the current inpatient orders:
+1. The system flags medications that appear in Column 1 but have no corresponding inpatient order.
+2. The provider reviews each flagged medication and either: places the missing inpatient order, OR documents "intentional omission" with a clinical reason.
+3. Common discrepancies:
+   - Home medication not continued without documentation
+   - Dose changed without acknowledging the original home dose
+   - Duplicate medications (e.g., two ACE inhibitors from different sources)
+
+## Transfer Reconciliation
+
+When a patient transfers between units (e.g., ICU to step-down unit):
+1. The admitting provider for the receiving unit opens Medication Reconciliation.
+2. Reviews orders active in the transferring unit.
+3. Confirms which orders should continue in the new care setting.
+4. Modifies or discontinues orders as appropriate for the new level of care.
+
+Transfer reconciliation is often abbreviated compared to admission/discharge reconciliation but must address any care-setting-specific medications (e.g., insulin drips discontinued when ICU-level monitoring is no longer available).
+
+## SureScripts Integration (Pharmacy Fill History)
+
+When SureScripts is configured:
+- Medication fill history from retail pharmacies is imported into the Home Medications list automatically.
+- Provides a more objective medication history than patient self-report.
+- Data availability depends on pharmacy participation (most large retail chains participate).
+- Updates may lag 24–48 hours behind actual fills.
+
+## Medication History Source Documentation
+
+The Medication Reconciliation module tracks the source of each home medication entry:
+- Patient/family report
+- Pharmacy fill history (SureScripts)
+- Prior encounter
+- HIE (Health Information Exchange)
+- Medication administration record from prior facility
+
+Source documentation is important for identifying potentially unreliable entries (patient-reported medications have higher error rates than pharmacy records).
+
+## Compliance and Reporting
+
+Medication reconciliation compliance is tracked via Discern Analytics:
+- % of admissions with completed medication reconciliation within 24 hours
+- % of discharges with completed discharge medication reconciliation before discharge order close
+- Discrepancy rates by unit, provider, or medication type
+- Intentional omission documentation rates
+
+Joint Commission surveys routinely review medication reconciliation documentation and audit for compliance.
+
+## Best Practices
+
+1. Perform admission medication reconciliation with the patient and/or a knowledgeable caregiver present — patient-reported lists alone are unreliable.
+2. Use SureScripts pharmacy fill data as a cross-reference, not as the sole source — patients may take medications not filled at a pharmacy.
+3. Document every intentional omission — "patient allergic to ACE inhibitors" is a clinically necessary note, not paperwork.
+4. Assign clear ownership for reconciliation at each transition — unclear accountability leads to gaps.
+5. Pharmacists performing medication reconciliation catch significantly more discrepancies than nurses alone — involve pharmacy in high-complexity patients.
+6. Never leave reconciliation until after the discharge order is closed — incomplete reconciliation is a leading cause of post-discharge medication errors.

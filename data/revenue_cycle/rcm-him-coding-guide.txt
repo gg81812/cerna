@@ -1,0 +1,161 @@
+# SOURCE: Cerner HIM Medical Coding Guide
+# URL: https://wiki.cerner.com/display/public/1101rcm/HIM+Coding+Guide
+# MODULE: Revenue Cycle
+# RETRIEVED: 2026-04-01
+# ---
+
+# Cerner HIM (Health Information Management) Medical Coding Guide
+
+## Overview
+
+Health Information Management (HIM) coding in Cerner Millennium is performed using the Enterprise Coding workstation, which provides medical coders with access to the patient's clinical documentation, charge lines, and coding tools in a single unified interface. Coders assign ICD-10-CM diagnosis codes and ICD-10-PCS/CPT procedure codes to each patient encounter based on the documentation in the medical record.
+
+Accurate coding is the foundation of the revenue cycle — it determines the DRG (Diagnosis Related Group) for inpatient accounts, the APC (Ambulatory Payment Classification) for outpatient encounters, and all downstream billing and quality reporting.
+
+## Coding Workflow in Cerner Enterprise Coding
+
+### Accessing the Coding Workstation
+
+1. Open Enterprise Coding from the Cerner Revenue Cycle applications menu.
+2. The coding queue appears showing accounts ready for coding.
+3. Accounts are sorted by: account type (inpatient/outpatient), discharge date, financial class (Medicare first per regulatory priority).
+
+### Account Assignment
+
+Accounts are assigned to individual coders or coding pools:
+- Auto-assignment: accounts route to available coders in the queue automatically.
+- Manual assignment: coding supervisors assign accounts based on coder specialization (e.g., cardiology coder for cardiac cases).
+- Inpatient accounts are typically coded by specialist inpatient coders.
+- Outpatient accounts may be auto-coded by the CAC (Computer-Assisted Coding) system and reviewed by a coder.
+
+### Opening an Account for Coding
+
+1. Click on the account in the coding queue.
+2. The account opens in the coding workstation with a split-screen view:
+   - Left panel: Clinical documentation (H&P, discharge summary, progress notes, procedure notes, operative notes, pathology reports)
+   - Right panel: Coding entry screen (diagnosis and procedure code entry)
+3. The coder reads through the clinical record and assigns codes.
+
+## ICD-10-CM Diagnosis Coding
+
+### Inpatient Diagnosis Coding (Uniform Hospital Discharge Data Set — UHDDS)
+
+For inpatient accounts, coders follow UHDDS guidelines:
+- **Principal Diagnosis** — the condition established after study to be chiefly responsible for causing the patient's admission. This is not always the admitting diagnosis.
+- **Secondary Diagnoses** — comorbid conditions and complications that affected patient care (documented, evaluated, treated, or affected the management of the patient).
+- **Present on Admission (POA) Indicator** — each diagnosis coded must be flagged as Present on Admission (Y), Not Present on Admission (N), Unknown (U), or Clinically Undetermined (W).
+
+### Code Sequencing Rules
+
+- The principal diagnosis must be sequenced first.
+- For obstetric cases: obstetric code is always the principal diagnosis.
+- For injury/poisoning: use the injury code as principal; external cause codes (V, W, X, Y series) are secondary.
+
+### Common Coding Guidelines
+
+1. **Code to the Highest Degree of Specificity** — use the most specific ICD-10-CM code available based on documentation. Unspecified codes should be used only when documentation does not provide specificity.
+2. **Physician Query When Needed** — if documentation is unclear, ambiguous, or conflicting, coders query the physician via CDI workflow (not resolve ambiguity independently).
+3. **Combination Codes** — ICD-10-CM contains many combination codes that capture both a condition and its manifestation in a single code (e.g., E11.40 — Type 2 diabetes mellitus with diabetic neuropathy, unspecified).
+4. **Coding from Confirmed Diagnoses Only** — do not code signs and symptoms that are routinely associated with a confirmed diagnosis; code the confirmed diagnosis.
+5. **Coding Uncertain Diagnoses (Inpatient Only)** — for inpatient accounts, conditions documented as "possible," "probable," or "suspected" may be coded as if confirmed (per UHDDS guidelines). This does not apply to outpatient coding.
+
+## ICD-10-PCS Procedure Coding (Inpatient)
+
+ICD-10-PCS is the procedure code set used for inpatient surgical and procedural coding. ICD-10-PCS codes are 7 characters long, each character representing a specific axis of classification:
+
+1. Section (Medical & Surgical, Imaging, Laboratory, etc.)
+2. Body System (Central Nervous System, Heart, Respiratory, etc.)
+3. Root Operation (Excision, Repair, Fusion, etc.)
+4. Body Part (specific anatomical location)
+5. Approach (Open, Laparoscopic, Endoscopic, Percutaneous, etc.)
+6. Device (No device, Drain, Synthetic Substitute, etc.)
+7. Qualifier (Diagnostic, No qualifier, etc.)
+
+Example: 0FB04ZX = Excision (F) of Gallbladder (B04) via Percutaneous Endoscopic (4) approach, Diagnostic qualifier (X).
+
+### CPT Coding (Outpatient / Professional)
+
+For outpatient and professional claims, coders assign CPT (Current Procedural Terminology) codes:
+- E&M codes (99202–99499) for office visits, hospital visits, and consultations
+- Surgical codes (10000–69999) for procedures
+- Radiology codes (70000–79999) for imaging
+- Laboratory codes (80000–89999) for lab tests
+- Medicine codes (90000–99199) for non-surgical procedures
+
+E&M code selection is based on:
+- Medical Decision Making (MDM) complexity, OR
+- Total time spent in patient care on date of encounter
+(Per 2021 CMS E&M guidelines update.)
+
+## DRG Management (Inpatient)
+
+### What is a DRG?
+
+A Diagnosis Related Group (DRG) is a patient classification system that groups inpatient cases with similar clinical characteristics and resource consumption. Medicare and most payers reimburse inpatient stays at a fixed DRG rate rather than itemized charges.
+
+The DRG is determined by:
+- Principal diagnosis (primary driver)
+- Major procedures performed
+- Presence of complications and comorbidities (CCs) or major complications and comorbidities (MCCs)
+- Discharge disposition (home, SNF, expired)
+- Age (for some DRGs)
+
+### Impact of Documentation on DRG
+
+Documentation specificity dramatically affects DRG assignment and reimbursement:
+- A principal diagnosis of "Sepsis" (A41.9) vs. "Severe Sepsis with Septic Shock" (A41.9 + R65.21) can differ by thousands of dollars in DRG payment.
+- Documenting "acute kidney injury" as a secondary diagnosis vs. leaving it undocumented affects CC/MCC status.
+- This is why CDI (Clinical Documentation Improvement) is a critical partner to the coding function.
+
+### DRG Review
+
+Cerner Enterprise Coding displays the MS-DRG assignment in real time as codes are entered. Coders review:
+- Is the MS-DRG appropriate given the clinical complexity of the case?
+- Are all CCs and MCCs captured based on the documentation?
+- Are any diagnosis codes missing that would impact DRG?
+
+## Computer-Assisted Coding (CAC)
+
+Cerner integrates with AI/NLP-based CAC technology (nThrive or 3M 360 Encompass are common in Cerner environments) that:
+- Scans clinical documentation using natural language processing
+- Suggests ICD-10-CM and CPT codes based on text analysis
+- Highlights the source text that supports each suggested code
+
+Coders review CAC suggestions and accept, reject, or modify them. CAC significantly reduces coding time for routine accounts but still requires human review for accuracy.
+
+## CDI and Coder Collaboration
+
+CDI specialists and coders work closely:
+- CDI queries physicians during the hospital stay to improve documentation.
+- Coders review the responses to CDI queries at coding time.
+- If a CDI query response is still ambiguous, the coder may generate a post-discharge query (most payers allow post-discharge queries for accuracy improvement).
+- Coders communicate DRG impact data back to CDI to focus query targets.
+
+## Coding Quality and Compliance
+
+### Coding Accuracy Reviews
+
+Coding managers perform regular accuracy reviews:
+- Internal audits: 5–10% random sample of coded accounts each month
+- Focused audits: high-risk areas (complex diagnoses, high-dollar DRGs, frequently denied codes)
+- External audits: periodic third-party coding audits
+
+Coding accuracy benchmark: > 95% accuracy rate (ICD-10-CM and CPT).
+
+### Compliance Risks
+
+- **Upcoding** — assigning codes that represent a higher severity or cost than documented; a federal compliance violation.
+- **Undercoding** — assigning codes of lesser specificity than documented; leaves reimbursement on the table.
+- **Query leading** — querying physicians in a way that suggests the desired clinical conclusion; not acceptable.
+- **Coding from memory** — assigning codes based on assumed diagnoses without documentation support.
+
+All coding must be supported by documentation in the medical record.
+
+## Best Practices
+
+1. Code from the most complete documentation available — for inpatient, always read the discharge summary first.
+2. Query when in doubt — never assume clinical facts not in the documentation.
+3. Use a codebook or encoder for every code — do not code from memory.
+4. Document query responses in the coding workstation for audit trail purposes.
+5. Review DRG assignments for high-complexity inpatient cases with CDI before account finalization.
+6. Stay current with annual ICD-10 and CPT code updates (effective October 1 for ICD-10, January 1 for CPT).

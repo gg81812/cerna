@@ -1,0 +1,165 @@
+# SOURCE: Cerner Patient Safety Event Reporting Guide
+# URL: https://wiki.cerner.com/display/public/1101clinical/Patient+Safety+Event+Reporting
+# MODULE: Clinical Workflows
+# RETRIEVED: 2026-04-01
+# ---
+
+# Cerner Patient Safety Event Reporting Guide
+
+## Overview
+
+Patient safety event reporting in healthcare organizations using Cerner Millennium is typically handled through a dedicated Patient Safety / Incident Reporting module. Cerner's primary offering in this space is the RL6 (Risk & Compliance) module, which integrates with Millennium clinical data. Some organizations also use third-party solutions (Quantros, Quantros CAP, Origami, or RLDatix) connected via Cerner integration.
+
+This guide covers the workflow for reporting patient safety events, near misses, and adverse events in a Cerner-integrated environment.
+
+## Types of Reportable Events
+
+### Adverse Events
+Events that cause patient harm that are not expected outcomes of the patient's illness:
+- Medication errors (wrong drug, dose, route, patient, or time)
+- Patient falls (with or without injury)
+- Pressure injuries acquired during hospitalization
+- Healthcare-associated infections (CLABSI, CAUTI, SSI, VAP)
+- Procedure-related complications
+- Transfusion reactions
+- Diagnostic errors with patient harm
+
+### Near Misses (Close Calls)
+Events that had the potential for harm but did not reach the patient:
+- Medication intercepted before administration
+- BCMA scan mismatch caught and corrected
+- Incorrect patient identification caught before a procedure
+
+### Sentinel Events
+Serious, unexpected events involving death, severe physical or psychological harm, or risk thereof. Sentinel events trigger mandatory root cause analysis (RCA) and Joint Commission reporting requirements.
+
+### Good Catches
+Proactive identification and correction of a safety hazard before it causes harm. Organizations actively encourage Good Catch reporting to build a safety culture.
+
+## Reporting Workflow
+
+### Step 1: Recognize the Event
+The clinical staff member involved in or witnessing the event initiates the report. Reports should be submitted as soon as possible after the event — ideally within the same shift.
+
+### Step 2: Access the Safety Reporting System
+From PowerChart:
+1. Open the patient's chart (for patient-linked events).
+2. Click the Safety Event icon in the toolbar, or navigate to: Clinical > Patient Safety > New Event Report.
+3. Alternatively, access the standalone safety reporting portal (URL provided by your organization).
+
+Some facilities have a direct shortcut on the PowerChart toolbar for faster access during busy clinical situations.
+
+### Step 3: Complete the Event Report
+
+A standard patient safety event report captures:
+
+**Patient Information** (auto-populated from Millennium if accessed from the chart):
+- Patient name, MRN, encounter ID
+- Admission date, unit, bed
+- Attending provider
+
+**Event Details**:
+- Event date and time
+- Event type (from a standardized code value list)
+- Event description (free text narrative of what happened)
+- Contributing factors (equipment failure, communication breakdown, training gap, fatigue, staffing, etc.)
+- Witnesses to the event
+
+**Outcome**:
+- Level of patient harm (None, Minor, Moderate, Major, Death — per NCC MERP or similar taxonomy)
+- Immediate actions taken
+- Notification of attending provider (Yes/No, and when)
+- Notification of family (Yes/No)
+
+**Medications** (for medication error reports):
+- Medication name and NDC
+- Ordered dose vs. administered dose
+- Error type (prescribing, transcribing, dispensing, administering, monitoring)
+- Detection point (pharmacist review, BCMA, nurse, patient)
+
+### Step 4: Submit the Report
+- Click Submit to send the report to the patient safety team.
+- The reporter receives a confirmation number.
+- The report is routed to the appropriate reviewer (Risk Management, Patient Safety Officer, unit manager) per organizational workflow rules.
+
+### Step 5: Review and Investigation
+
+The patient safety team:
+1. Reviews the report for completeness and severity.
+2. Classifies the event using the organization's taxonomy (may auto-map to NCC MERP for medications).
+3. Conducts follow-up investigation (RCA for sentinel/serious events).
+4. Documents corrective actions.
+5. Closes the report with outcome and action plan documentation.
+
+## Medication Error Reporting
+
+Medication errors are among the most common safety events in Cerner-integrated environments. Key reporting categories:
+
+### Error Types (NCC MERP Categories)
+- Category A: Circumstances that could cause error but did not reach the patient
+- Category B: Error occurred but did not reach the patient
+- Category C: Error reached patient but caused no harm
+- Category D: Error reached patient; required monitoring to confirm no harm
+- Category E–I: Error reached patient and caused temporary to permanent harm or death
+
+### Integration with BCMA Data
+Cerner BCMA generates automatic event records for:
+- Scan mismatches that were overridden by a nurse
+- Medications administered outside the allowed time window
+- Duplicate administrations attempted
+
+These BCMA records can be linked to safety event reports for more complete investigation data.
+
+## Fall Event Reporting
+
+When a patient falls:
+1. Immediately ensure patient safety (call for help if needed).
+2. Notify the provider and document the fall assessment in the patient's chart.
+3. Complete the post-fall assessment PowerForm in the patient's eMAR or nursing documentation:
+   - Time and location of fall
+   - Was the patient found on the floor or observed falling?
+   - Injury assessment (None, Laceration, Fracture, Head injury, etc.)
+   - Fall prevention measures in place at time of fall
+   - Was the fall witnessed?
+4. File a patient safety event report in the incident reporting system.
+5. Update the Fall Risk Assessment in PowerForms.
+6. Activate fall prevention care plan if not already in place.
+
+## Pressure Injury Reporting
+
+Hospital-acquired pressure injuries (HAPIs) are tracked as patient safety events:
+1. Nursing identifies a new or worsened pressure injury during skin assessment.
+2. Wound care nurse or skin champion evaluates and stages the injury.
+3. Stage 2–4, unstageable, and deep tissue injuries are reportable events.
+4. Complete a pressure injury safety event report.
+5. Stage 3, Stage 4, and unstageable injuries are CMS-reportable "never events."
+
+## Regulatory Reporting
+
+### Joint Commission
+Sentinel events must be reported to The Joint Commission within 72 hours. A Root Cause Analysis (RCA) must be completed and submitted within 45 days.
+
+### CMS
+Certain "never events" (Stage 3/4 pressure injuries, certain falls with injury, wrong-site surgeries) trigger mandatory CMS reporting and may affect hospital payment.
+
+### State Health Departments
+Many states require mandatory reporting of serious adverse events to the state health department within 24–72 hours.
+
+### Integration with External Registries
+Cerner integration can push anonymized event data to:
+- AHRQ Patient Safety Organization (PSO) data repositories
+- State patient safety reporting systems
+- National Hospital Patient Safety Reporting (NHR)
+
+## Confidentiality and Protections
+
+Patient safety event reports filed through an approved Patient Safety Organization (PSO) program are protected under the PSQIA (Patient Safety and Quality Improvement Act) — they cannot be used in malpractice litigation. Ensure your organization's reporting system is registered with a federally-listed PSO to receive this protection.
+
+## Best Practices
+
+1. Report all events, near misses, and Good Catches — a strong reporting culture is the foundation of safety improvement.
+2. Focus on systems, not individuals — safety events are almost always system failures, not individual failures.
+3. Submit reports promptly — details are most accurate immediately after the event.
+4. Never use safety event reports for punitive actions against individual staff — this chills reporting culture.
+5. Close the loop — share aggregate safety data and corrective actions with frontline staff.
+6. Review BCMA override data proactively — it predicts medication errors before they cause harm.

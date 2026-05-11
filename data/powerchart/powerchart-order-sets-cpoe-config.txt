@@ -1,0 +1,154 @@
+# PowerChart Order Sets Configuration Guide — CPOE Administration
+# MODULE: PowerChart
+# SYNTHETIC KNOWLEDGE BASE — Cerna RAG System
+
+## What Are Order Sets in PowerChart CPOE?
+
+Order sets in Cerner PowerChart CPOE (Computerized Provider Order Entry) are pre-configured collections of clinical orders grouped by condition, procedure, or care pathway. They allow clinicians to place multiple related orders simultaneously with a single selection, ensuring standardized care protocols and reducing order entry time.
+
+Order sets are built and managed in the **Order Set Catalog** in Cerner Millennium, accessible through **PowerChart Administration > Order Catalog Management**. They are also called PowerPlan-based order sets or simple catalog order sets depending on their structure.
+
+## Types of Order Sets
+
+### 1. Simple Order Sets (Order Catalog Groupings)
+- Flat list of orders without phases or branching logic
+- Used for simple bundles like "Admit to Medicine" or "Pre-Op Labs"
+- Built directly in the Order Catalog
+
+### 2. PowerPlan-Based Order Sets
+- Structured with phases (e.g., "Day 1", "Day 2-7", "Discharge")
+- Support conditional logic and branching (if/then order activation)
+- Allow mandatory, optional, and conditional orders within sections
+- Used for complex care pathways such as sepsis bundles, CHF management, or chemotherapy protocols
+- Built in **PowerPlan Administration** under Cerner Solutions
+
+### 3. Preference Lists / Personal Order Sets
+- Provider-created personal order groupings
+- Not shared organization-wide unless promoted to catalog
+- Used for frequently ordered combinations specific to a provider's workflow
+
+## Configuring an Order Set in CPOE
+
+### Step 1: Access Order Set Administration
+1. Navigate to **Cerner Solutions** (build/configuration environment)
+2. Open **Catalog Maintenance** or **PowerPlan Administration**
+3. Select the environment (TRAIN for initial build, PROD after testing)
+4. Open the **Order Set Catalog** and click **New Order Set**
+
+### Step 2: Define the Order Set Header
+- **Name**: descriptive name following naming convention (e.g., "ADULT INPATIENT PNEUMONIA BUNDLE")
+- **Type**: select Simple Order Set or PowerPlan
+- **Order Type Category**: Inpatient, Outpatient, Emergency, or All
+- **Care Setting**: unit or location filter (leave blank for all units)
+- **Status**: Draft during build; activate after testing
+- **Facility**: assign to specific facility or system-wide
+- **Synonyms**: alternate search terms so clinicians can find the order set
+
+### Step 3: Add Orders to the Order Set
+
+**For a Simple Order Set:**
+1. Click **Add Order** within each section
+2. Search for the order by name (e.g., "CBC with Differential", "Lisinopril tablet")
+3. Configure order defaults:
+   - Frequency (e.g., DAILY, Q8H)
+   - Route (e.g., oral, IV)
+   - Duration (e.g., 7 days)
+   - Priority (routine, STAT, urgent)
+4. Mark orders as **Required**, **Pre-Selected**, or **Optional**:
+   - Required: must be ordered (cannot be unchecked)
+   - Pre-Selected: checked by default but can be removed
+   - Optional: unchecked by default, clinician chooses
+
+**For a PowerPlan Order Set:**
+1. Create **Phases** representing care timeline stages
+2. Within each phase, create **Order Sections** (Labs, Medications, Diet, Activity, etc.)
+3. Add orders to each section with section-level defaults
+4. Configure **Phase Activation** criteria:
+   - Automatic (fires when plan starts)
+   - Manual (clinician activates each phase)
+   - Conditional (fires when specific event occurs)
+5. Add **Clinical Orderable Instructions** (free-text instructions within sections)
+
+### Step 4: Configure the Order Set Catalog Entry
+1. Set **Search Terms** and **Keywords** for discoverability in CPOE search
+2. Assign **Clinical Categories** (e.g., Cardiology, Pulmonary, General Surgery)
+3. Link to a **Care Pathway** or **Clinical Protocol** if applicable
+4. Set **Effective Date Range** for the order set
+
+### Step 5: Build Order Sections
+Organize orders into logical sections for clinician usability:
+
+| Section Type | Example Content |
+|-------------|-----------------|
+| Admission Orders | Admit to unit, attending physician, code status |
+| Vital Signs | Frequency of vital monitoring |
+| Activity | Bed rest, ambulate TID, fall precautions |
+| Diet | NPO, clear liquids, cardiac diet |
+| IV Fluids | NS 1L IV PRN, heparin drip |
+| Medications | Standing and PRN medications |
+| Laboratory | Admission labs, daily monitoring labs |
+| Imaging | Chest X-ray on admission |
+| Respiratory | Oxygen therapy, nebulizer treatments |
+| Nursing | Q-shift assessments, intake/output monitoring |
+| Consults | Specialty consult orders |
+
+### Step 6: Set Order Defaults and CDS Integration
+For each order within the set:
+1. **Pre-populate clinical data**: default dose, frequency, route based on the protocol
+2. **Link CDS rules**: specify which clinical decision support rules apply to this order set
+3. **Add clinical orderable comments**: reference guidelines or protocol steps
+4. **Configure conditional orders**: "If WBC > 12, add broad-spectrum antibiotics" (PowerPlan only)
+
+### Step 7: Test in Training Environment
+1. Log into PowerChart in the TRAIN domain
+2. Open a test patient encounter
+3. Navigate to **CPOE > Add Order > Search Order Sets**
+4. Search for and launch your order set by name
+5. Verify all orders, defaults, and sections appear correctly
+6. Place test orders and confirm they create properly in the Orders activity
+7. Validate CDS alerts fire appropriately for at-risk orders
+
+### Step 8: Activate and Deploy
+1. Return to Order Set Administration
+2. Set order set status to **Active**
+3. Confirm effective date
+4. Notify clinical teams and provide education on the new order set
+5. Monitor first-week usage for missing orders or workflow friction
+
+## Managing Existing Order Sets
+
+### Updating an Active Order Set
+- Changes to active order sets take effect immediately for NEW order set launches (existing placed orders are not retroactively changed)
+- Always version-track changes in your build documentation
+- For major revisions, create a new order set and inactivate the old one after a transition period
+
+### Retiring an Order Set
+1. Set order set status to **Inactive** (not deleted)
+2. Historical encounters that used the order set retain all placed orders
+3. The order set no longer appears in CPOE search for new patients
+
+### Order Set Performance Metrics
+Monitor order set adoption in **Discern Analytics > Order Set Reports**:
+- Modification rate: % of orders that clinicians change from defaults
+- Completion rate: % of order set orders that are placed vs. removed
+- Time to order: comparison before/after order set implementation
+
+## FYI Alerts and Hard Stops Within Order Sets
+
+Within an order set, individual orders can carry **order checks** (CDS rules):
+- **FYI alerts**: informational pop-ups that do not interrupt order signing
+- **Warnings**: alerts that require explicit acknowledgment before proceeding
+- **Hard stops**: orders cannot be signed without mandatory action (e.g., allergy override reason)
+
+Configure alert thresholds in **PowerChart Administration > CDS Rule Administration**.
+
+## Best Practices for Order Set Configuration
+
+1. **Involve clinical stakeholders** (physicians, nurses, pharmacists) in order set design
+2. **Mirror evidence-based guidelines** (e.g., IDSA, ACC/AHA, SHEA) for clinical order sets
+3. **Limit the number of pre-selected orders** — pre-selecting too many creates cognitive overload
+4. **Use "optional but available"** for less common orders rather than including in all encounters
+5. **Test with actual clinicians** in TRAIN before going live
+6. **Set governance review cycle** — review order sets annually or with guideline updates
+7. **Name consistently**: include patient population, care setting, and clinical focus in the name
+8. **Avoid duplicates**: search existing catalog before creating new order sets — prefer updating existing ones

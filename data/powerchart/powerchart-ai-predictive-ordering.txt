@@ -1,0 +1,155 @@
+# PowerChart AI — Predictive Ordering and AI-Assisted Clinical Documentation
+# MODULE: PowerChart
+# SYNTHETIC KNOWLEDGE BASE — Cerna RAG System
+
+## What Is PowerChart AI?
+
+PowerChart AI is Oracle Health's suite of artificial intelligence and machine learning capabilities embedded within the PowerChart clinical documentation environment. It encompasses predictive ordering, AI-assisted documentation, ambient clinical intelligence, and clinical decision support driven by machine learning models rather than rule-based logic.
+
+PowerChart AI represents Oracle Health's integration of AI from the Oracle Cloud Infrastructure (OCI) AI Services platform into the Cerner Millennium clinical workflow.
+
+## Predictive Ordering
+
+### Overview
+Predictive ordering uses machine learning to analyze historical ordering patterns and patient context to suggest the most likely next orders a clinician will want. Instead of a clinician searching through the order catalog, the system proactively surfaces high-probability orders in a "recommended orders" panel.
+
+### How Predictive Ordering Works
+
+The predictive ordering model:
+1. Analyzes **current patient context**: diagnosis, age, sex, active medications, lab results, care setting
+2. Compares against **historical ordering patterns**: what similar patients received and what was clinically appropriate
+3. Applies **provider preference weighting**: individual provider's ordering history influences personalized suggestions
+4. Surfaces **top N predicted orders** in the CPOE interface with confidence scores
+
+### Configuration Steps for Predictive Ordering
+
+**Prerequisites**:
+- Oracle Health cloud contract including AI services entitlement
+- OCI connectivity and data sharing agreement executed
+- Minimum historical data requirement: 12+ months of ordering data in the instance
+
+**Step 1: Enable Predictive Ordering Feature Flag**
+1. Navigate to **PowerChart Administration > AI Settings > Predictive Ordering**
+2. Enable the feature toggle for your domain
+3. Select data scope: facility-level, provider-level, or system-wide model
+
+**Step 2: Configure Order Panel Display**
+1. In **PowerChart Administration > CPOE Layout**, add the "AI Suggested Orders" panel
+2. Position the panel in the CPOE workflow (typically above the order search field)
+3. Set the number of suggested orders to display (recommended: 5-10)
+4. Configure the confidence threshold for display (minimum 70% confidence)
+
+**Step 3: Configure Model Training Parameters**
+1. Navigate to **AI Administration > Model Configuration > Predictive Ordering**
+2. Select training population:
+   - Encounter type filter (inpatient, outpatient, emergency)
+   - Care setting filter (ICU, medical-surgical, oncology)
+   - Time window for training data (rolling 12 months recommended)
+3. Enable **provider personalization**: model learns individual provider ordering preferences
+4. Set model refresh cadence (weekly retraining recommended)
+
+**Step 4: Configure Clinical Safety Guardrails**
+1. Define **excluded order classes**: ensure the AI does not suggest controlled substances, chemotherapy, or high-alert medications without explicit criteria
+2. Enable **allergy and interaction checking** for all AI-suggested orders (same CDS checks as manual orders)
+3. Set **confidence minimum threshold**: orders below this threshold are suppressed from suggestions
+
+**Step 5: Monitor and Tune the Model**
+- Review **Predictive Ordering Analytics** in OCI AI dashboard weekly for first 90 days
+- Track: suggestion acceptance rate, top accepted vs. rejected suggestions, false positive rate
+- Tune confidence thresholds based on clinician feedback
+
+### Predictive Ordering in the PowerChart Workflow
+
+In the CPOE order entry workflow:
+1. Clinician opens a patient chart and navigates to Order Entry
+2. **AI Suggested Orders** panel displays top predicted orders with confidence percentages
+3. Clinician can click individual suggested orders to add them to the order list
+4. Selected orders go through standard CPOE workflow (CDS checks, sign, verify)
+5. Clinician can also search catalog normally — AI suggestions are additive, not mandatory
+
+## Ambient Clinical Intelligence (ACI)
+
+### Overview
+Ambient Clinical Intelligence (also called AI Scribe or voice-to-documentation) captures the clinician-patient conversation using secure audio processing and automatically drafts clinical documentation — including SOAP notes, H&P sections, and assessment/plan — within PowerNote.
+
+### How ACI Works
+1. Clinician activates the ambient microphone (via tablet, dedicated device, or integrated room mic)
+2. The conversation is transcribed and processed by Oracle's AI models
+3. Structured clinical data is extracted: HPI, ROS, exam findings, assessment, plan
+4. A draft note is inserted into PowerNote using the appropriate template
+5. The clinician reviews, edits, and signs the AI-generated note
+
+### Configuration Steps for Ambient Clinical Intelligence
+
+**Step 1: Enable ACI in PowerChart Administration**
+1. Navigate to **Administration > AI Settings > Ambient Clinical Intelligence**
+2. Enable the feature for selected provider roles and care settings
+3. Configure the compatible PowerNote template (must support ACI placeholders)
+
+**Step 2: Set Up Audio Capture Device Integration**
+- Compatible devices: Nuance DAX, Oracle AI Scribe microphone, iPad with PowerChart app
+- Configure device pairing in **Device Management > ACI Audio Devices**
+- Ensure HIPAA-compliant audio storage and processing agreements are in place
+
+**Step 3: Configure Documentation Template Mapping**
+1. Navigate to **PowerNote Administration > ACI Template Mapping**
+2. Map AI output fields to PowerNote sections:
+   - Chief Complaint → CC section
+   - HPI narrative → HPI section
+   - Review of Systems → ROS section
+   - Physical Exam findings → Exam section
+   - Assessment → Assessment section
+   - Plan (orders, follow-up) → Plan section
+3. Configure which fields require human review before auto-population
+4. Set fields as "AI Suggested" (amber color) to indicate clinician review needed
+
+**Step 4: Provider Training and Enablement**
+- Train providers on how to activate/deactivate ACI during the encounter
+- Explain patient consent workflow (must inform patient of ambient recording)
+- Provide guidance on reviewing and editing AI-generated content
+
+## Machine Learning in Clinical Decision Support
+
+PowerChart AI also integrates ML-based alerts that differ from traditional rule-based CDS:
+
+### Sepsis Prediction Model
+- Analyzes vital signs, lab trends, and medication orders continuously
+- Predicts sepsis risk score (0-100) for each inpatient
+- Fires advisory alert at configurable score threshold (typically 70+)
+- Configuration: **CDS Administration > ML Rules > Sepsis Prediction**
+
+### Readmission Risk Scoring
+- ML model assesses 30-day readmission probability at discharge
+- Integrates with discharge planning workflow in PowerChart
+- High-risk patients flagged for social work and case management review
+- Configuration: **Administration > AI Settings > Readmission Risk**
+
+### Deterioration Index (DI)
+- Continuous monitoring of vital signs for early deterioration detection
+- Alerts nursing team before overt clinical decompensation
+- Especially useful in step-down and medical-surgical settings
+- Based on validated modified early warning score (MEWS) augmented with ML
+
+## Enabling Predictive Ordering — Configuration Checklist
+
+| Step | Task | Owner |
+|------|------|-------|
+| 1 | Execute OCI AI services agreement | IT/Legal |
+| 2 | Confirm historical data availability (12+ months) | Analytics |
+| 3 | Enable feature flag in PowerChart Admin | CIS/Informatics |
+| 4 | Configure CPOE panel display | Build Team |
+| 5 | Define excluded order classes and safety guardrails | Pharmacy/Clinical |
+| 6 | Set confidence threshold | CIS Team |
+| 7 | Test in TRAIN domain with pilot providers | Informatics |
+| 8 | Train clinicians and superusers | Education Team |
+| 9 | Go-live in PROD with monitoring | All Teams |
+| 10 | Weekly analytics review for first 90 days | Analytics/Informatics |
+
+## PowerChart AI Best Practices
+
+1. **Establish governance**: AI suggestions require clinical governance approval before go-live — include CMO, CMIO, CIO, and legal in planning
+2. **Patient consent**: document your ambient AI consent process; some states require explicit patient consent for room audio capture
+3. **Physician trust**: never force AI suggestions — keep them optional and clearly labeled as AI-generated
+4. **Monitor bias**: regularly audit AI suggestion acceptance rates across different patient populations and provider types to detect potential bias
+5. **Integration testing**: test all AI-suggested orders through full CPOE workflow including CDS checks
+6. **Provider feedback loop**: build a mechanism for providers to flag inappropriate AI suggestions directly in the UI

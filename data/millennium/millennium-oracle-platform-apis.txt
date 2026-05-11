@@ -1,0 +1,177 @@
+# SOURCE: Oracle Health Millennium Platform APIs — Index
+# URL: https://docs.oracle.com/en/industries/health/millennium-platform-apis/index.html
+# MODULE: Millennium Platform
+# RETRIEVED: 2026-05-07
+# ---
+
+Help Center Home
+
+ 
+Get Started 
+
+ 
+Access APIs 
+
+ 
+Guides 
+
+ 
+EHR APIs 
+
+ 
+FHIR R4 APIs 
+
+ 
+FHIR R4 Bulk Data Access APIs 
+
+ 
+FHIR DSTU 2 APIs 
+
+ 
+Authorization Framework 
+
+ 
+SMART Applications 
+
+ 
+SMART Application Provisioning 
+
+ 
+Multi-Tenant Domains 
+
+ 
+R4 Public Endpoints for Patients 
+
+ 
+R4 Public Endpoints for Providers 
+
+ 
+Oracle Health Developer Forums 
+
+ 
+Frequently Asked Questions (FAQ) 
+
+Home
+
+Industries
+
+Health
+
+Oracle Health Millennium Platform
+
+Oracle Health Millennium Platform
+
+Oracle Health Millennium Platform provides APIs across the Oracle Health products built on top of the Millennium platform. These APIs allow you to use the HL7 FHIR standard in your SMART application.
+
+Caution:
+ Oracle no longer supports DSTU 2 FHIR APIs. For more information, see the 
+FHIR DSTU2 End of Support
+ announcement on the Oracle Health Developer Forums. This functionality is replaced by the R4 version. Update your applications to use R4 as soon as possible to prevent interruptions to service. Contact your Oracle representative for information on implementing R4.
+
+Questions?
+ See the 
+Oracle Health Developer Forums
+ for support and to connect with other developers across multiple API venues.
+
+Get Started
+
+Introduction to HL7 FHIR
+
+ 
+Introducing HL7 FHIR 
+
+ 
+Version history of HL7 FHIR 
+
+ 
+R4 versions of HL7 FHIR standard 
+
+ 
+DSTU 2 versions of HL7 FHIR standard 
+
+ 
+U.S. Core Data for Interoperability 
+
+Libraries
+
+ 
+Open Source FHIR Client 
+
+ 
+Open Sandbox and Secure Sandbox:
+
+ 
+R4 
+
+ 
+DSTU 2 
+
+ 
+FHIR R4 Public Endpoints
+
+ 
+Patients 
+
+ 
+Providers 
+
+Electronic Health Record (EHR) Key Features
+
+ 
+Overview 
+
+ 
+All REST Endpoints 
+
+FHIR R4 Key Features
+
+ 
+Overview 
+
+ 
+Bulk data access 
+
+ 
+All REST endpoints 
+
+FHIR DSTU 2 Key Features
+
+ 
+Overview 
+
+ 
+All REST endpoints 
+
+SMART
+
+ 
+SMART applications 
+
+ 
+Tutorial of SMART on FHIR 
+
+ 
+Specification to build and test SMART on FHIR applications 
+
+Authorization Framework
+
+ 
+Overview 
+
+ 
+Prerequisites for application registration 
+
+ 
+Register an application 
+
+ 
+FHIR service authorization specification 1.0 
+
+ 
+TLS and Oracle Health FHIR API guidance 
+
+ 
+HL7 SMART App Launch Active User Presence extension 
+
+ 
+Authorization Framework FAQ

@@ -1,0 +1,299 @@
+# SOURCE: AHRQ PSNet Primer — Falls
+# URL: https://psnet.ahrq.gov/primer/falls
+# MODULE: Clinical Workflows
+# RETRIEVED: 2026-05-07
+# ---
+
+Falls
+
+Citation Text:
+
+Falls. PSNet [internet]. Rockville (MD): Agency for Healthcare Research and Quality, US Department of Health and Human Services. 2019.
+
+Copy Citation
+
+Format:
+
+Google Scholar
+BibTeX
+EndNote X3 XML
+EndNote 7 XML
+Endnote tagged
+PubMedId
+RIS
+
+Download Citation
+
+Save
+
+ 
+Save to your library
+
+Print
+
+Download PDF
+
+Share
+
+Facebook
+
+Twitter
+
+Linkedin
+
+Copy URL
+
+ Cite
+ 
+
+ Citation
+
+Citation Text:
+
+Falls. PSNet [internet]. Rockville (MD): Agency for Healthcare Research and Quality, US Department of Health and Human Services. 2019.
+
+Copy Citation
+
+Format:
+
+Google Scholar
+BibTeX
+EndNote X3 XML
+EndNote 7 XML
+Endnote tagged
+PubMedId
+RIS
+
+Download Citation
+
+UC Davis PSNet Editorial Team | June 15, 2024
+
+PSNet primers are regularly reviewed and updated by the UC Davis PSNet Editorial Team to ensure that they reflect current research and practice in the patient safety field. Last reviewed in 2024.
+Background
+Falls are a common and devastating complication of hospital and 
+long-term care
+, particularly in older adults. Epidemiologic 
+studies
+ have found that falls occur at a rate of 3–5 per 1000 bed-days, and the Agency for Healthcare Research and Quality 
+estimates
+ that 700,000 to 1 million hospitalized patients fall each year. Patients in long-term care facilities are also at very high risk of falls. Approximately 
+half
+ of the 1.6 million nursing home residents in the United States fall each year, and a 2014 
+report
+ by the Office of the Inspector General found that nearly 10% 
+of adverse events experienced by Medicare skilled nursing facility residents were falls resulting in significant injury
+.
+More than 
+one-third
+ of in-hospital falls result in injury, including serious injuries such as fractures and head trauma. Death or serious injury resulting from a fall while being cared for in a health care facility is considered a 
+never event
+, and the Centers for Medicare and Medicaid Services do not reimburse hospitals for additional costs associated with patient falls. Falls that do not result in injury can be serious as well. As noted in a 
+PSNet perspective
+, "even supposedly 'no harm' falls can cause distress and anxiety to patients, their family members, and health care staff, and may mark the beginning of a negative cycle where fear of falling leads an older person to restrict his or her activity, with consequent further losses of strength and independence."
+This Primer will focus on fall prevention in health care facilities, because these are generally placed under the umbrella of health care–associated harms. Falls in community-dwelling patients are also very common and highly morbid; the Centers for Disease Control and Prevention has published guides for 
+patients
+ and 
+clinicians
+ on preventing falls in outpatients. Of course, some of these may represent patient safety issues if, for example, a sedating medication was a root cause.
+Preventing Falls in Healthcare Settings
+Fall prevention has been the subject of intensive research and quality improvement efforts, which have helped define key elements of successful fall prevention programs. Prevention efforts begin with assessing individual patients' risk for falls. There are several existing clinical prediction rules for identifying high-risk patients, but none has been shown to be significantly more accurate than others. Most falls occur in elderly patients, especially those who are experiencing 
+delirium
+, are prescribed psychoactive medications such as benzodiazepines, or have baseline difficulties with strength, mobility, or balance. However, non elderly patients who are acutely ill are also at risk for falls.
+There are two overarching considerations in planning a fall prevention program. First, fall prevention measures must be individualized—there is no "one size fits all" method to preventing falls. A successful program must include a 
+combination 
+of strategies:
+environmental measures
+, such as nonslip floors or ensuring patients are within nurses' line of sight
+clinical interventions such as minimizing deliriogenic medications
+care process interventions such as using a standardized risk assessment tool
+cultural interventions emphasizing that fall prevention is a multidisciplinary responsibility
+technological/logistical interventions such as bed alarms or lowering the bed height
+The program should explicitly tackle the underlying assumption held by many health care providers that falls are inevitable and not necessarily preventable. Measures to improve the overall culture of safety in a particular unit may be helpful. A 2011 
+PSNet perspective
+ discussed the specific components most often used in successful fall prevention interventions. They include:
+Multidisciplinary (rather than solely nursing) responsibility for intervention.
+Staff and patient education (if provided by health professionals and structured rather than ad hoc).
+An individualized plan of care that is responsive to individuals' differing risk factors, needs, and preferences.
+Provision of safe footwear (rather than solely advice on safe footwear).
+A focus on prevention, detection, and treatment of delirium.
+Review and (where appropriate) discontinuation of "culprit" medications associated with increased risk of falls, especially psychotropic medication.
+Continence management, including routines of offering frequent assistance to use the toilet.
+Early access to advice, mobility aids, and (where appropriate) exercise from physiotherapists.
+A postfall review used as an opportunity to plan secondary prevention, including a careful history to identify potential syncope.
+The other consideration is acknowledging the tension between fall prevention and other goals of a patient's hospitalization. A large body of literature documents that elderly patients lose mobility and functional status rapidly during hospitalizations, and that this loss of functional status has long-term consequences. Promoting mobility and activity has therefore become a key component of programs to improve outcomes of hospital care in elderly patients. Overzealous efforts to limit falls may therefore have the adverse consequence of limiting mobility during hospitalization, limiting patients' ability to recover from acute illness and putting them at risk of further complications.
+The evidence regarding the efficacy of specific fall prevention programs has been mixed. One widely cited, high-quality randomized 
+trial
+ documented a significant reduction in falls among elderly patients by using an individualized fall prevention intervention drawing on many of the elements listed above. It is likely that differences among patient populations, risk factors, and hospital environmental factors may limit the generalizability of published interventions across hospitals. AHRQ has published toolkits with implementation guides for fall prevention programs in 
+hospitalized patients
+ and patients in 
+long-term care settings
+. These toolkits emphasize the role of local 
+safety culture
+ and the need for committed 
+organizational leadership
+ in developing a successful fall prevention program.
+Current Context
+Fall prevention is a 
+National Patient Safety Goal
+ for both hospitals and long-term care facilities. The Joint Commission highlighted the importance of preventing falls in a 2015 
+Sentinel Event Alert
+. As noted above, falls with injury are a serious reportable event for The Joint Commission and are considered a "never event" by CMS. The most recent 
+data
+ from AHRQ's National Scorecard on rates of Healthcare Associated Complications (HACs) indicates that fall rates at US hospitals declined by approximately 5% between 2014 and 2017.
+
+This project was funded under contract number 75Q80119C00004 from the Agency for Healthcare Research and Quality (AHRQ), U.S. Department of Health and Human Services. The authors are solely responsible for this report’s contents, findings, and conclusions, which do not necessarily represent the views of AHRQ. Readers should not interpret any statement in this report as an official position of AHRQ or of the U.S. Department of Health and Human Services. None of the authors has any affiliation or financial involvement that conflicts with the material presented in this report. 
+View AHRQ Disclaimers
+
+Save
+
+ 
+Save to your library
+
+Print
+
+Download PDF
+
+Share
+
+Facebook
+
+Twitter
+
+Linkedin
+
+Copy URL
+
+ Cite
+ 
+
+ Citation
+
+Citation Text:
+
+Falls. PSNet [internet]. Rockville (MD): Agency for Healthcare Research and Quality, US Department of Health and Human Services. 2019.
+
+Copy Citation
+
+Format:
+
+Google Scholar
+BibTeX
+EndNote X3 XML
+EndNote 7 XML
+Endnote tagged
+PubMedId
+RIS
+
+Download Citation
+
+Sections
+
+Background
+
+Current Context
+
+Related Patient Safety Primers
+
+ 
+Deprescribing as a Patient Safety Strategy
+October 27, 2021
+
+Long-term Care and Patient Safety
+April 10, 2024
+
+Nursing and Patient Safety
+April 21, 2021
+
+Editor's Picks
+
+ 
+Cost of inpatient falls and cost-benefit analysis of implementation of an evidence-based fall prevention program.
+February 1, 2023
+
+Fall prevention with the Smart Socks System reduces hospital fall rates.
+September 7, 2022
+
+The Nursing Home Expert Panel’s Falls Investigation Guide Toolkit: How-To Guide.
+August 17, 2022
+
+Strength of improvement recommendations from injurious fall investigations: a retrospective multi-incident analysis.
+April 13, 2022
+
+View More
+
+Related WebM&M
+
+ 
+Failure to Ensure Patient Safety Leads to Patient Falls in Nursing Homes.
+April 26, 2023
+
+Related Resources
+
+Patient Safety Primers
+
+Never Events
+
+September 15, 2024
+
+Patient Safety Primers
+
+Patient Safety 101
+
+June 15, 2024
+
+Adverse Health Events in Minnesota: Annual Reports.
+
+June 4, 2024
+
+Patient Safety Primers
+
+Long-term Care and Patient Safety
+
+April 10, 2024
+
+Patient Safety Innovations
+
+Preventing Falls Through Patient and Family Engagement to Create Customized Prevention Plans
+
+May 31, 2023
+
+Annual Perspective
+
+Improving Diagnostic Safety and Quality 
+
+April 26, 2023
+
+Using Safety-II and resilient healthcare principles to learn from Never Events.
+
+April 8, 2020
+
+The tension between promoting mobility and preventing falls in the hospital.
+
+July 10, 2017
+
+National Scorecard on Rates of Hospital-Acquired Conditions 2010 to 2015: Interim Data From National Efforts to Make Health Care Safer.
+
+December 21, 2016
+
+Annual Perspective
+
+Measuring and Responding to Deaths From Medical Errors
+
+March 22, 2016
+
+View More
+
+See More About The Topic
+
+ 
+ Hospitals
+
+ Physicians
+
+ Facility and Group Administrators
+
+ Medicine
+
+ Patient Falls
+
+View More

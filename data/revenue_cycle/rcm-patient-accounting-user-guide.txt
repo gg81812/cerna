@@ -1,0 +1,166 @@
+# SOURCE: Cerner Patient Accounting User Guide
+# URL: https://wiki.cerner.com/display/public/1101rcm/Patient+Accounting+Guide
+# MODULE: Revenue Cycle
+# RETRIEVED: 2026-04-01
+# ---
+
+# Cerner Patient Accounting User Guide
+
+## What is Patient Accounting?
+
+Patient Accounting is the financial management function within Cerner Millennium's Revenue Cycle suite that handles the posting, tracking, and management of patient account balances after claims are processed by payers. It encompasses insurance payment posting, contractual adjustment processing, patient billing, payment plan management, and account resolution (write-offs, collections, financial assistance applications).
+
+Patient Accounting is the back-end of the revenue cycle — it manages the financial life of an account from initial claim submission through final balance resolution.
+
+## Account Balance Lifecycle
+
+1. **Charge Generation** — billable services create charges on the account.
+2. **Primary Insurance Billing** — claim submitted to primary payer.
+3. **Primary Payment/Adjudication** — payer posts payment and Explanation of Benefits (EOB).
+4. **Contractual Adjustment** — the difference between billed charges and the contracted rate is written off.
+5. **Secondary Insurance Billing** — remaining balance billed to secondary insurance (if applicable).
+6. **Patient Responsibility** — remaining balance after all insurance payments moves to patient billing.
+7. **Patient Statement** — patient receives a bill for the remaining balance.
+8. **Payment / Payment Plan** — patient pays or enters a payment plan.
+9. **Resolution** — account reaches zero balance (paid, written off, or in collections).
+
+## Accessing Patient Accounting
+
+1. Open Revenue Cycle > Patient Accounting from the Cerner applications menu.
+2. The main screen shows: the accounts worklist, AR aging summary, and account search.
+3. Search for a specific account by: patient name, MRN, FIN, account number, or date range.
+
+## Payment Posting
+
+### Insurance Payment Posting (835 ERA)
+
+Electronic Remittance Advice (835) files from payers are processed automatically:
+1. Cerner imports the 835 file from the clearinghouse.
+2. The system matches each payment transaction to the corresponding claim/account.
+3. Payment is posted: charge balance reduced by the paid amount.
+4. Contractual adjustments are applied: the difference between billed charge and payer-allowed amount is written off.
+5. Remaining balance is calculated and moved to:
+   - Secondary insurance (if applicable)
+   - Patient responsibility (deductible, co-pay, co-insurance)
+
+### Manual Payment Posting
+
+For paper checks, ERA exceptions, or payments that didn't auto-post:
+1. Navigate to Patient Accounting > Payment Posting > Manual Payment Entry.
+2. Enter: check number, amount, payer, date received.
+3. Search for and open the patient account.
+4. Apply the payment to the appropriate charges.
+5. Apply contractual adjustments per the payer's EOB.
+6. Balance forward to next payer or patient.
+
+### Unapplied Payments
+
+Payments received without a matching account are held as unapplied credits:
+1. Work the Unapplied Credit Report daily.
+2. Research each unapplied payment by contacting the payer with the check number and payer reference.
+3. Identify the correct account and apply the payment.
+4. If the credit cannot be matched and is a true overpayment: initiate a refund to the payer.
+
+## Patient Billing
+
+### Statement Generation
+
+After primary (and secondary) insurance adjudicates, patient responsibility balances generate patient statements:
+1. Statements are generated in scheduled batches (typically weekly).
+2. Statement content:
+   - Patient demographics and account number
+   - Service dates and descriptions
+   - Total charges, insurance payments, adjustments
+   - Patient responsibility balance
+   - Payment options (online, phone, mail)
+3. Statements are mailed or delivered via patient portal (MyChart).
+
+### Online Patient Portal (MyChart)
+
+With MyChart configured:
+- Patients receive an email notification when a new statement is available.
+- Patients log in to MyChart > Billing > Current Balances.
+- Patients can pay online with credit/debit card or bank transfer.
+- Payments post automatically to the account.
+
+### Payment Plans
+
+For patients unable to pay their balance in full:
+1. Open the account in Patient Accounting > Payment Plan Management.
+2. Calculate an affordable monthly payment based on the balance and patient's financial situation.
+3. Create the payment plan:
+   - Plan start date
+   - Monthly payment amount
+   - Plan duration (number of payments)
+   - Auto-pay setup (optional — credit card or bank account on file)
+4. Document the plan terms and patient signature.
+5. Payment plan accounts are monitored monthly for adherence.
+
+### Financial Assistance Application Processing
+
+When a patient applies for charity care or financial assistance:
+1. Patient submits application with income documentation.
+2. Financial counselor reviews in the Financial Assistance module.
+3. Calculate FPL percentage based on reported income and household size.
+4. Approve assistance at the appropriate level (100% write-off, 50% discount, sliding scale).
+5. Apply the financial assistance adjustment to the account.
+6. Document the approval in the account notes with effective date.
+
+## AR Management and Collections
+
+### AR Aging
+
+Accounts Receivable (AR) is tracked in aging buckets:
+- Current (0–30 days)
+- 31–60 days
+- 61–90 days
+- 91–120 days
+- 120+ days
+
+Goal: minimize balances in the 90+ day buckets. High aging AR indicates collection workflow problems or payer adjudication delays.
+
+### Follow-Up Workflow
+
+For accounts that haven't been paid within expected timeframes:
+1. The AR Follow-Up Queue in Patient Accounting shows accounts by payer and aging bucket.
+2. AR specialists work accounts by:
+   - Calling the payer to check claim status
+   - Submitting 276 (Claim Status Inquiry) electronically
+   - Re-submitting claims if the payer shows no record of receipt
+   - Filing appeals for denied accounts
+3. Document all follow-up actions in the account notes field (date, who was contacted, what was said, next action).
+
+### Bad Debt and Collections
+
+When all collection efforts are exhausted:
+1. Account is flagged for bad debt review by a supervisor.
+2. If approved: balance written off to bad debt (adjustment code = bad debt write-off).
+3. Account may be referred to a collection agency:
+   - Cerner can interface with collection agency systems to transfer account data.
+   - Patient receives a collection agency notice as required by law.
+   - Collection agency payments are posted as they are received.
+
+### Charity Care vs. Bad Debt
+
+Important distinction:
+- **Charity Care** — patient was identified as financially unable to pay and approved for assistance. Write-off is a planned business decision. Not reported as bad debt.
+- **Bad Debt** — patient was able to pay but did not. Account goes through collections. Reported as bad debt on financial statements.
+
+## Key Patient Accounting Reports
+
+- **AR Aging by Payer** — identify which payers have the most aged balances
+- **Collection Rate by Financial Class** — % of billed charges collected from each payer type
+- **Days to Payment** — average days from service date to payment receipt
+- **Denial Rate** — % of claims denied by payer
+- **Net Collection Rate** — total payments received / (total charges – contractual adjustments)
+- **Charity Care Write-Off Report** — total approved charity care by period and demographics
+- **Payment Plan Delinquency** — payment plans with missed payments
+
+## Best Practices
+
+1. Post 835 ERA files daily — unposted remittances hide true AR balances and delay patient billing.
+2. Work unapplied credits weekly — unresolved credits create audit risk and may represent patient overpayments requiring refund.
+3. Contact patients with balances > $500 by phone rather than relying solely on paper statements — phone contact rates are significantly higher.
+4. Set payment plan default durations based on balance tier (e.g., balances $0–500 = 3 months; $500–2000 = 6 months; >$2000 = 12 months or discuss longer).
+5. Monitor denial rate daily — spikes in denial rate require immediate root cause investigation.
+6. Screen every uninsured patient for financial assistance before transferring to bad debt.

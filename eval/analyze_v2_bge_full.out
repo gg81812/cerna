@@ -1,0 +1,49 @@
+========================================================================
+Phase 2 BGE — FULL v2 measurement (post cleanup re-run)
+Source: hospital_eval_v2_results_bge.jsonl  (raw rows=106, dedup unique=80)
+Cleanup-rerun rows: 26
+========================================================================
+
+OVERALL (full 80 BGE)         : 60/80 (75.0%)
+Original 55 (BGE)             : 40/55 (72.7%)
+New 25 (BGE)                  : 20/25 (80.0%)
+  — MiniLM reference for new 25 was 23/25 (92.0%)
+
+Still rate-limited after rerun: 0
+
+Bad failures                  : 0
+Honest failures               : 20
+
+-- Per-module on the new 25 (vs MiniLM 92% headline) --------------------
+  clinical       : 2/4 (50.0%)
+  fhir           : 4/4 (100.0%)
+  millennium     : 4/5 (80.0%)
+  powerchart     : 6/7 (85.7%)
+  revenue_cycle  : 4/5 (80.0%)
+
+-- Per-persona on full 80 (BGE) ----------------------------------------
+  nurse      : 18/22 (81.8%)
+  clerk      : 12/17 (70.6%)
+  physician  : 10/14 (71.4%)
+  it         : 16/17 (94.1%)
+  cross      : 4/10 (40.0%)
+
+-- Per-module on full 80 (BGE) -----------------------------------------
+  clinical       : 12/20 (60.0%)
+  fhir           : 4/4 (100.0%)
+  millennium     : 12/13 (92.3%)
+  powerchart     : 19/24 (79.2%)
+  revenue_cycle  : 13/19 (68.4%)
+
+-- Latency (end-to-end, full 80 BGE merged) ----------------------------
+  avg=24342ms  p50=25550ms  p95=37849ms  p99=55812ms  max=55812ms
+
+-- Confidence distribution --------------------------------------------
+  high     : 39
+  medium   : 32
+  low      : 9
+
+-- Actual behavior distribution ---------------------------------------
+  answer     : 71
+  clarify    : 8
+  refuse     : 1

@@ -1,0 +1,42 @@
+# SOURCE: CMS — Promoting Interoperability Programs
+# URL: https://www.cms.gov/medicare/regulations-guidance/promoting-interoperability-programs
+# MODULE: PowerChart
+# RETRIEVED: 2026-05-07
+# ---
+
+Promoting Interoperability Programs
+
+About the Medicare Promoting Interoperability Programs
+The Medicare Promoting Interoperability Program is a quality program with the goal of driving quality improvement, safety, and efficiency of healthcare by promoting and prioritizing interoperability and the exchange of health care data through the use of certified electronic health record (EHR) technology (CEHRT). Eligible hospitals and critical access hospitals (CAHs) participate by submitting data to the Centers for Medicare & Medicaid Services (CMS) on measures that demonstrate the meaningful use of CEHRT.
+Background
+The Medicare Promoting Interoperability Program for eligible hospitals and CAHs and the Merit-based Incentive Payment System (MIPS) Promoting Interoperability Performance Category for eligible clinicians were preceded by the Medicare and Medicaid EHR Incentive Programs. Established in 2011 as required in the Health Information Technology for Economic and Clinical Health (HITECH) Act, under the American Recovery and Reinvestment Act (ARRA) of 2009, eligible hospitals, CAHs, and eligible professionals (now referred to as MIPS eligible clinicians) were incentivized to adopt and meaningfully use CEHRT.
+In 2015, the Medicare Access and CHIP Reauthorization Act (MACRA) sunset the Medicare EHR Incentive Program for eligible professionals and incorporated similar requirements into MIPS as one of the four performance categories, which includes the Promoting Interoperability performance category. The Medicare Promoting Interoperability Program for eligible hospitals and CAHs continues, while the Medicaid Promoting Interoperability Program ended on December 31, 2021.
+Overview of Program Requirements 
+Eligible hospitals and CAHs are required to submit measure data focused on the objectives of electronic prescribing, health information exchange, provider to patient exchange, public health and clinical data exchange, and protecting patient health information, as well as electronic clinical quality measure (eCQM) data; answer attestations; and earn a minimum total score based on CMS’ data collection and submission timelines for the current reporting period. Users should refer to the official rules and regulations published by CMS in rulemaking.
+Latest News
+Stay up to date on the latest Medicare Promoting Interoperability Program news and updates subscribing to the 
+CMS Promoting Interoperability Programs Listserv
+.
+Contact Information
+For information regarding the Medicare Promoting Interoperability Program including the Hardship Exception Process and electronic clinical quality measure (eCQM) reporting, please submit questions to the 
+QualityNet Question and Answer Site 
+at 
+https://cmsqualitysupport.servicenowservices.com/qnet_qa?id=ask_a_question
+ or (844) 472-4477.
+For information about the CMS  Hospital Quality Reporting (HQR) System, including user roles, reports, data upload, and troubleshooting error messages, please submit questions to the Center for Clinical Standards and Quality (CCSQ) Service Center at 
+QnetSupport@cms.hhs.gov
+ or (866) 288-8912.
+MIPS eligible clinicians are part of the Quality Payment Program (QPP). Contact the QPP help desk for assistance at 
+QPP@cms.hhs.gov
+ or (866) 288-8292. To submit a ticket for the QPP Service Center, please visit 
+https://cmsqualitysupport.servicenowservices.com/ccsq_support_central
+.
+Get more in-depth information about the 
+Medicare Promotion Interoperability Program
+.
+
+Page Last Modified:
+
+11/24/2025 12:15 PM
+
+Help with File Formats and Plug-Ins

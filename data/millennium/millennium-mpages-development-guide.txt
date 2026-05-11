@@ -1,0 +1,193 @@
+# SOURCE: Cerner MPages Developer Guide
+# URL: https://wiki.cerner.com/display/public/1101discernHP/MPages+Developer+Guide
+# MODULE: Millennium Platform
+# RETRIEVED: 2026-04-01
+# ---
+
+# Cerner MPages Developer Guide
+
+## What are MPages?
+
+MPages (Millennium Pages) are customizable, web-based clinical views embedded within PowerChart and other Cerner Millennium applications. MPages extend the core EHR by allowing developers and organizations to build purpose-built clinical workflow components — such as specialty-specific summary views, order dashboards, patient rounding lists, and quality scorecards — that display real-time Millennium data in a browser-rendered frame within the application.
+
+MPages are built using standard web technologies (HTML, CSS, JavaScript) and communicate with the Millennium backend via:
+- Discern Explorer Objects (DEO) — ActiveX/COM objects that execute CCL queries from within the browser frame
+- MPages JavaScript API (MPAGES_EVENT, MPageControls) — event-driven JavaScript API for data access and UI interaction
+- Cerner SMART on FHIR APIs — for newer MPages that use FHIR R4 REST calls instead of DEO
+
+## MPages Architecture
+
+### Client-Side (Browser Frame)
+MPages run in an embedded Internet Explorer (legacy) or Edge WebView2 (modern) frame inside PowerChart. The MPage HTML/JS files are loaded from the Millennium file system (typically $CCL_DIR/mpages/) or from an external web server configured in the MPages administrative console.
+
+### Server-Side (Millennium Communication Server)
+For MPages that use the MCS (Millennium Communication Server) architecture:
+- JavaScript calls MCS JavaScript proxy functions
+- MCS routes requests to CCL scripts running on the Millennium application tier
+- Results return as JSON or XML to the browser frame
+
+### DEO Architecture (Legacy)
+Older MPages use Discern Explorer Objects — ActiveX controls injected into the browser frame that can directly call CCL scripts. DEO-based MPages:
+- Only work in Internet Explorer or IE-compatibility mode
+- Are being phased out in favor of MCS and FHIR-based architectures
+- Require the client machine to have the DEO ActiveX controls installed
+
+## Development Environment Setup
+
+### Required Tools
+1. Visual Studio Code (recommended) or any web editor
+2. Node.js — for running local build tools and linters
+3. Access to a Millennium Test/CERT domain for integration testing
+4. Cerner MPages SDK — available via the Cerner Developer Portal (developer.cerner.com)
+5. PowerChart installed on your development workstation (for MPage hosting during development)
+
+### File Structure
+
+    my_mpage/
+    ├── index.html          # Entry point loaded by PowerChart
+    ├── css/
+    │   └── mpage.css       # Styles
+    ├── js/
+    │   ├── main.js         # Application logic
+    │   ├── mpage_api.js    # MPages API wrappers
+    │   └── data_service.js # CCL data access layer
+    └── lib/
+        └── jquery.min.js   # Third-party libraries
+
+### Deploying to Millennium
+1. Copy MPage files to the designated directory on the Millennium file system (e.g., $CCL_DIR/mpages/my_mpage/).
+2. Register the MPage in PowerChart Administration:
+   - Open PowerChart Administration > MPages.
+   - Add a new MPage entry pointing to the index.html path.
+   - Assign to appropriate clinical components (patient banner, tab, or workflow step).
+3. Assign the MPage to positions/locations via Clinical Component Administration.
+
+## Building Your First MPage
+
+### Basic HTML Structure
+
+    <!DOCTYPE html>
+    <html>
+    <head>
+      <meta charset="UTF-8">
+      <title>My MPage</title>
+      <link rel="stylesheet" href="css/mpage.css">
+    </head>
+    <body>
+      <div id="content">Loading...</div>
+      <script src="lib/jquery.min.js"></script>
+      <script src="js/mpage_api.js"></script>
+      <script src="js/main.js"></script>
+    </body>
+    </html>
+
+### Loading Patient Data via MCS
+
+Using the MPages JavaScript API to load the current patient's active problems:
+
+    // Request current patient context
+    MPAGES_EVENT("PATIENT_CONTEXT", function(patientContext) {
+      var personId = patientContext.person_id;
+      var encntrId = patientContext.encntr_id;
+
+      // Call a CCL script via MCS
+      window.external.DiscernObjectFactory("DYNDOC").AsyncLoadXMLData(
+        "MY_PROBLEMS_SCRIPT",  // CCL script name
+        patientContext.person_id + "," + patientContext.encntr_id,
+        function(xmlResult) {
+          renderProblems(xmlResult);
+        }
+      );
+    });
+
+### Handling Patient Context
+
+MPages automatically receive patient context when the patient changes in PowerChart. Listen for context changes:
+
+    MPAGES_EVENT("PATIENT_CONTEXT", function(ctx) {
+      // ctx.person_id — current patient's person_id (f8 as string)
+      // ctx.encntr_id — current encounter's encntr_id (f8 as string)
+      // ctx.prsnl_id — logged-in provider's prsnl_id
+      // ctx.position_cd — logged-in provider's position code value
+      loadPatientData(ctx.person_id, ctx.encntr_id);
+    });
+
+### Working with CCL Backend Scripts
+
+Write a CCL script that returns JSON for your MPage:
+
+    PROGRAM MY_PROBLEMS_SCRIPT
+      DECLARE person_id = f8 WITH NOCONSTANT, PROTECT
+      SET person_id = CNVTREAL(REQDATA[1])
+
+      SELECT DISTINCT
+        d.diagnosis_id,
+        cv.display AS problem_name,
+        d.onset_dt_tm
+      FROM DIAGNOSIS d, CODE_VALUE cv
+      PLAN d
+        WHERE d.person_id = person_id
+          AND d.active_ind = 1
+          AND d.diag_type_cd = (SELECT cv2.code_value FROM CODE_VALUE cv2
+                                 WHERE cv2.code_set = 17 AND cv2.cdf_meaning = "PROBLEM"
+                                   AND cv2.active_ind = 1)
+      JOIN cv
+        WHERE cv.code_value = d.diag_cd
+          AND cv.active_ind = 1
+      WITH FORMAT, JSON
+    END GO
+
+## MPages Administrative Console
+
+### Accessing the Admin Console
+1. Open PowerChart as a user with Administrative access.
+2. Navigate to System Administration > MPages.
+3. Here you manage: registered MPages, clinical component assignments, and version settings.
+
+### Component Placement Options
+MPages can be placed in several locations within PowerChart:
+- Patient Summary tab — the main patient overview area
+- Provider Workflow tab — workflow-centric view for specific roles
+- Clinical Note sidebar — supplementary data shown next to documentation
+- Order Entry panel — contextual information during order placement
+- Results Viewer sidebar — supplementary context alongside lab/imaging results
+- Standalone tab — a full-width tab in the PowerChart patient chart
+
+### Version Management
+Each MPage registration can point to a specific version (folder path) of the MPage files. Use version directories to manage staged deployments:
+- /mpages/my_mpage/v1.0/ — current production version
+- /mpages/my_mpage/v2.0/ — new version being tested
+
+Switching versions requires only updating the admin console registration — no application server restart needed.
+
+## MPages and Single Sign-On
+
+MPages inherit the PowerChart user session. The logged-in user's identity, position, and location context are passed automatically to MCS and DEO calls. MPages do not need to re-authenticate the user.
+
+For FHIR-based MPages using SMART on FHIR, a separate OAuth 2.0 authorization flow is required (see the FHIR & Integrations documentation).
+
+## Performance Guidelines
+
+1. Minimize the number of CCL script calls per page load — batch related data into a single script where possible.
+2. Cache static reference data (code values, facility lists) client-side to avoid repeated backend calls.
+3. Use async data loading — never block the UI thread waiting for CCL results.
+4. Paginate large result sets — never attempt to load more than 500 rows into a single MPage view.
+5. Test under realistic patient data volume in the CERT domain before Production deployment.
+6. Set MAXREC in all CCL scripts called by your MPage to prevent runaway queries.
+
+## Troubleshooting
+
+### MPage Not Displaying
+- Check the file path in the MPages admin console registration.
+- Verify the MPage folder and files exist on the Millennium file system.
+- Check browser console (F12) for JavaScript errors.
+- Confirm the user's position is assigned the clinical component containing the MPage.
+
+### Data Not Loading
+- Verify the CCL script name in the MCS call matches the compiled script name exactly.
+- Run the CCL script directly in Discern Explorer to confirm it returns data.
+- Check that the user has security access to the data the CCL script queries.
+
+### Context Not Updating
+- Ensure you are listening to MPAGES_EVENT("PATIENT_CONTEXT") — not a one-time load.
+- Confirm the MPage is registered as a "context-aware" component in the admin console.

@@ -1,0 +1,168 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loaded 15 queries from hospital set
+[Retriever] Loading embedding model…
+Loading weights:   0%|          | 0/391 [00:00<?, ?it/s]Loading weights:  74%|#######3  | 288/391 [00:00<00:00, 2879.25it/s]Loading weights: 100%|##########| 391/391 [00:00<00:00, 2892.66it/s]
+[1mBertModel LOAD REPORT[0m from: BAAI/bge-large-en-v1.5
+Key                     | Status     |  | 
+------------------------+------------+--+-
+embeddings.position_ids | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+[Retriever] Building BM25 index…
+[Retriever] Ready.
+[Orchestrator] Ready.
+
+Pass 1 — cold run (15 queries)
+  [01] Med won't scan — patient says it's the right one but BCMA ke… [Redis] Unavailable (Timeout connecting to server). Falling back to in-memory cache.
+[QueryRewriter] intent=troubleshooting  modules=['CLINICAL']  ambiguous=False  needs_clarify=False  formal='BCMA barcode medication administration scan failure troubles'
+[Retrieve:pass1] strategy=parallel formal+variants  avg_top3=0.729  threshold=0.55
+[Retrieve:pass2] skipped — pass1 quality sufficient (avg_top3=0.729>=0.55)
+[Retrieve:pass3] skipped — pass2 quality sufficient (avg_top3=0.729>=0.55)
+15475ms  conf=high
+  [02] Wrong patient on the list — I can't see my admitted patient … [QueryRewriter] intent=troubleshooting  modules=['CLINICAL']  ambiguous=False  needs_clarify=False  formal='patient list filter or location or list-membership checks'
+[Retrieve:pass1] strategy=parallel formal+variants  avg_top3=0.655  threshold=0.55
+[Retrieve:pass2] skipped — pass1 quality sufficient (avg_top3=0.655>=0.55)
+[Retrieve:pass3] skipped — pass2 quality sufficient (avg_top3=0.655>=0.55)
+5995ms  conf=medium
+  [03] Discharge note gone — I documented it an hour ago and now it… [QueryRewriter] intent=troubleshooting  modules=['CLINICAL']  ambiguous=False  needs_clarify=True  formal='eMAR discharge note documentation and retrieval workflow'
+11699ms  conf=low
+  [04] BCMA stuck on override prompt — the screen won't let me get … [QueryRewriter] intent=troubleshooting  modules=['CLINICAL']  ambiguous=False  needs_clarify=False  formal='BCMA override prompt stuck workflow'
+[Retrieve:pass1] strategy=parallel formal+variants  avg_top3=0.593  threshold=0.55
+[Retrieve:pass2] skipped — pass1 quality sufficient (avg_top3=0.593>=0.55)
+[Retrieve:pass3] skipped — pass2 quality sufficient (avg_top3=0.593>=0.55)
+35711ms  conf=high
+  [05] The MAR is showing a med as overdue but we gave it on time —… [QueryRewriter] intent=troubleshooting  modules=['CLINICAL']  ambiguous=False  needs_clarify=False  formal='late administration correction workflow for medication admin'
+[Retrieve:pass1] strategy=parallel formal+variants  avg_top3=0.696  threshold=0.55
+[Retrieve:pass2] skipped — pass1 quality sufficient (avg_top3=0.696>=0.55)
+[Retrieve:pass3] skipped — pass2 quality sufficient (avg_top3=0.696>=0.55)
+18215ms  conf=high
+  [06] Patient's allergies aren't showing up in the medication admi… [QueryRewriter] intent=question  modules=['CLINICAL']  ambiguous=False  needs_clarify=False  formal='allergy display in eMAR medication administration list workf'
+[Retrieve:pass1] strategy=parallel formal+variants  avg_top3=0.667  threshold=0.55
+[Retrieve:pass2] skipped — pass1 quality sufficient (avg_top3=0.667>=0.55)
+[Retrieve:pass3] skipped — pass2 quality sufficient (avg_top3=0.667>=0.55)
+11537ms  conf=high
+  [07] PRN med showing up as scheduled on the MAR — did pharmacy pu… [QueryRewriter] intent=troubleshooting  modules=['CLINICAL']  ambiguous=False  needs_clarify=True  formal='PRN medication administration record MAR display error'
+21748ms  conf=low
+  [08] Wristband won't scan at the start of my shift — getting a pa… [QueryRewriter] intent=troubleshooting  modules=['CLINICAL']  ambiguous=False  needs_clarify=False  formal='BCMA barcode medication administration patient wristband sca'
+[Retrieve:pass1] strategy=parallel formal+variants  avg_top3=0.757  threshold=0.55
+[Retrieve:pass2] skipped — pass1 quality sufficient (avg_top3=0.757>=0.55)
+[Retrieve:pass3] skipped — pass2 quality sufficient (avg_top3=0.757>=0.55)
+32473ms  conf=high
+  [09] Drug interaction alert keeps firing for this patient even th… [QueryRewriter] intent=troubleshooting  modules=['CLINICAL']  ambiguous=False  needs_clarify=False  formal='drug interaction alert firing despite pharmacy review and ap'
+[Retrieve:pass1] strategy=parallel formal+variants  avg_top3=0.658  threshold=0.55
+[Retrieve:pass2] skipped — pass1 quality sufficient (avg_top3=0.658>=0.55)
+[Retrieve:pass3] skipped — pass2 quality sufficient (avg_top3=0.658>=0.55)
+22666ms  conf=medium
+  [10] How do I document a medication I just gave that wasn't on th… [QueryRewriter] intent=question  modules=['CLINICAL']  ambiguous=False  needs_clarify=False  formal='eMAR medication administration record home medication docume'
+[Retrieve:pass1] strategy=parallel formal+variants  avg_top3=0.747  threshold=0.55
+[Retrieve:pass2] skipped — pass1 quality sufficient (avg_top3=0.747>=0.55)
+[Retrieve:pass3] skipped — pass2 quality sufficient (avg_top3=0.747>=0.55)
+31236ms  conf=medium
+  [11] My shift handoff report won't generate — getting an error wh… [QueryRewriter] intent=troubleshooting  modules=['POWERCHART']  ambiguous=False  needs_clarify=False  formal='PowerChart shift handoff report generation error troubleshoo'
+[Retrieve:pass1] strategy=parallel formal+variants  avg_top3=0.658  threshold=0.55
+[Retrieve:pass2] skipped — pass1 quality sufficient (avg_top3=0.658>=0.55)
+[Retrieve:pass3] skipped — pass2 quality sufficient (avg_top3=0.658>=0.55)
+23935ms  conf=medium
+  [12] I can't find a patient on my task list even though they were… [QueryRewriter] intent=troubleshooting  modules=['CLINICAL']  ambiguous=False  needs_clarify=True  formal='task list patient not found admitted this morning'
+20749ms  conf=low
+  [13] I need to give a medication per the physician order but the … 8ms  conf=low
+  [14] eMAR isn't showing the last dose I documented an hour ago — … [QueryRewriter] intent=troubleshooting  modules=['CLINICAL']  ambiguous=False  needs_clarify=True  formal='eMAR medication administration record last dose documentatio'
+20682ms  conf=low
+  [15] The order changed to a new dose but eMAR still shows the old… 7ms  conf=low
+
+Pass 2 — cached run (15 queries)
+  [01] Med won't scan — patient says it's the right one but BCMA ke… [Retrieve:pass1] strategy=parallel formal+variants  avg_top3=0.729  threshold=0.55
+[Retrieve:pass2] skipped — pass1 quality sufficient (avg_top3=0.729>=0.55)
+[Retrieve:pass3] skipped — pass2 quality sufficient (avg_top3=0.729>=0.55)
+8686ms  conf=high
+  [02] Wrong patient on the list — I can't see my admitted patient … [Retrieve:pass1] strategy=parallel formal+variants  avg_top3=0.655  threshold=0.55
+[Retrieve:pass2] skipped — pass1 quality sufficient (avg_top3=0.655>=0.55)
+[Retrieve:pass3] skipped — pass2 quality sufficient (avg_top3=0.655>=0.55)
+6669ms  conf=medium
+  [03] Discharge note gone — I documented it an hour ago and now it… 7ms  conf=low
+  [04] BCMA stuck on override prompt — the screen won't let me get … [Retrieve:pass1] strategy=parallel formal+variants  avg_top3=0.593  threshold=0.55
+[Retrieve:pass2] skipped — pass1 quality sufficient (avg_top3=0.593>=0.55)
+[Retrieve:pass3] skipped — pass2 quality sufficient (avg_top3=0.593>=0.55)
+6564ms  conf=high
+  [05] The MAR is showing a med as overdue but we gave it on time —… [Retrieve:pass1] strategy=parallel formal+variants  avg_top3=0.696  threshold=0.55
+[Retrieve:pass2] skipped — pass1 quality sufficient (avg_top3=0.696>=0.55)
+[Retrieve:pass3] skipped — pass2 quality sufficient (avg_top3=0.696>=0.55)
+8260ms  conf=high
+  [06] Patient's allergies aren't showing up in the medication admi… [Retrieve:pass1] strategy=parallel formal+variants  avg_top3=0.667  threshold=0.55
+[Retrieve:pass2] skipped — pass1 quality sufficient (avg_top3=0.667>=0.55)
+[Retrieve:pass3] skipped — pass2 quality sufficient (avg_top3=0.667>=0.55)
+7041ms  conf=high
+  [07] PRN med showing up as scheduled on the MAR — did pharmacy pu… 8ms  conf=low
+  [08] Wristband won't scan at the start of my shift — getting a pa… [Retrieve:pass1] strategy=parallel formal+variants  avg_top3=0.757  threshold=0.55
+[Retrieve:pass2] skipped — pass1 quality sufficient (avg_top3=0.757>=0.55)
+[Retrieve:pass3] skipped — pass2 quality sufficient (avg_top3=0.757>=0.55)
+7801ms  conf=medium
+  [09] Drug interaction alert keeps firing for this patient even th… [Retrieve:pass1] strategy=parallel formal+variants  avg_top3=0.658  threshold=0.55
+[Retrieve:pass2] skipped — pass1 quality sufficient (avg_top3=0.658>=0.55)
+[Retrieve:pass3] skipped — pass2 quality sufficient (avg_top3=0.658>=0.55)
+7897ms  conf=medium
+  [10] How do I document a medication I just gave that wasn't on th… [Retrieve:pass1] strategy=parallel formal+variants  avg_top3=0.747  threshold=0.55
+[Retrieve:pass2] skipped — pass1 quality sufficient (avg_top3=0.747>=0.55)
+[Retrieve:pass3] skipped — pass2 quality sufficient (avg_top3=0.747>=0.55)
+6254ms  conf=medium
+  [11] My shift handoff report won't generate — getting an error wh… [Retrieve:pass1] strategy=parallel formal+variants  avg_top3=0.658  threshold=0.55
+[Retrieve:pass2] skipped — pass1 quality sufficient (avg_top3=0.658>=0.55)
+[Retrieve:pass3] skipped — pass2 quality sufficient (avg_top3=0.658>=0.55)
+5918ms  conf=medium
+  [12] I can't find a patient on my task list even though they were… 11ms  conf=low
+  [13] I need to give a medication per the physician order but the … 7ms  conf=low
+  [14] eMAR isn't showing the last dose I documented an hour ago — … 7ms  conf=low
+  [15] The order changed to a new dose but eMAR still shows the old… 9ms  conf=low
+
+Results written to: C:\Users\gaurav.garje\OneDrive - Accenture\Desktop\cerna\logs\latency_profile.jsonl
+
+======================================================================
+LATENCY PROFILE — SUMMARY
+======================================================================
+Total queries: 15
+  Cold  (15):    avg=18142ms  p50=20682ms  p95=35711ms  max=35711ms
+  Cached(0):  n/a
+  Refusals(6): avg=12482ms  p50=20682ms  p95=21748ms  max=21748ms
+
+Budget violations:
+  Cold   > 5000ms:    13/15
+  Cached > 2000ms: 0/0
+  Refusal> 1000ms:   4/6
+
+-- Per-step averages (across all queries) ----------------------------------
+  understand                avg=13913ms  max= 28810ms  fired= 15x  (66.5% of avg total)
+  generate                  avg= 5605ms  max=  9022ms  fired=  9x  (26.8% of avg total)
+  retrieve                  avg= 1418ms  max=  2977ms  fired=  9x  (6.8% of avg total)
+  build_prompt              avg=    0ms  max=     7ms  fired=  9x  (0.0% of avg total)
+  classify_module           avg=    0ms  max=     0ms  fired=  9x  (0.0% of avg total)
+  prepare_retrieval         avg=    0ms  max=     0ms  fired=  9x  (0.0% of avg total)
+  fuse                      avg=    0ms  max=     0ms  fired=  9x  (0.0% of avg total)
+  rerank                    avg=    0ms  max=     0ms  fired=  9x  (0.0% of avg total)
+  gate                      avg=    0ms  max=     0ms  fired=  9x  (0.0% of avg total)
+  parse                     avg=    0ms  max=     0ms  fired=  9x  (0.0% of avg total)
+  route_clarify             avg=    0ms  max=     0ms  fired=  4x  (0.0% of avg total)
+  route_clinical            avg=    0ms  max=     0ms  fired=  2x  (0.0% of avg total)
+
+-- Top 5 slowest queries --------------------------------------------
+   35711ms  BCMA stuck on override prompt — the screen won't let me get past it and patient 
+   32473ms  Wristband won't scan at the start of my shift — getting a patient not found erro
+   31236ms  How do I document a medication I just gave that wasn't on the MAR — patient brou
+   23935ms  My shift handoff report won't generate — getting an error when I try to print it
+   22666ms  Drug interaction alert keeps firing for this patient even though pharmacy alread
+
+-- Top bottleneck: understand (avg 13913ms) -------------------------
+Traceback (most recent call last):
+  File "C:\Users\gaurav.garje\OneDrive - Accenture\Desktop\cerna\eval\profile_latency.py", line 223, in <module>
+    main()
+    ~~~~^^
+  File "C:\Users\gaurav.garje\OneDrive - Accenture\Desktop\cerna\eval\profile_latency.py", line 216, in main
+    print_latency_report(cold_records, set())
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gaurav.garje\OneDrive - Accenture\Desktop\cerna\eval\profile_latency.py", line 152, in print_latency_report
+    print("  \u2192 Check: is the understand LLM call cached? Can it use the fast model?")
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gaurav.garje\AppData\Local\Python\pythoncore-3.14-64\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u2192' in position 2: character maps to <undefined>

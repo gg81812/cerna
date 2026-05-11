@@ -1,0 +1,144 @@
+# SOURCE: Cerner Discern Analytics Administration Guide
+# URL: https://wiki.cerner.com/display/public/1101discernHP/Discern+Analytics
+# MODULE: Millennium Platform
+# RETRIEVED: 2026-04-01
+# ---
+
+# Discern Analytics Administration Guide
+
+## What is Discern Analytics?
+
+Discern Analytics is Cerner Millennium's integrated reporting and business intelligence platform. It enables healthcare organizations to create custom reports, perform ad-hoc data mining, build operational dashboards, and extract data from the Millennium clinical and financial database for analysis. Discern Analytics is built on top of CCL (Cerner Command Language) and provides both a graphical report builder and a code-based scripting interface.
+
+Discern Analytics is accessible from within PowerChart and other Millennium applications and is also available as a standalone module. Reports can be scheduled to run automatically, output to various formats (PDF, Excel, CSV), and distributed via Millennium's internal messaging system.
+
+## Core Components
+
+### Discern Explorer
+Discern Explorer is the primary user interface for developing and running CCL-based reports in Millennium. Users with appropriate security access can open, edit, compile, and execute CCL scripts from Discern Explorer.
+
+Key functions:
+- Open and edit .prg (CCL program) files
+- Compile CCL scripts against the current domain
+- Execute scripts and view results in a tabular pane
+- Save output to file (CSV, PDF, tab-delimited)
+- Schedule recurring report execution
+
+### Discern Report Builder
+A graphical, wizard-based tool for non-programmer report creation. Report Builder allows clinical and operational staff to design tabular reports by selecting tables, columns, and filter criteria without writing CCL code. The output is converted to a CCL script behind the scenes.
+
+### Discern Analytics Dashboards
+Provides configurable visual dashboards using chart types (bar, line, pie, gauge) built on pre-defined CCL data sources. Dashboards are role-specific and can display:
+- Operational metrics (bed occupancy, order turnaround times)
+- Clinical quality indicators
+- Revenue cycle performance data
+
+### HealtheAnalytics (RevElate)
+A separate Oracle Health product that provides population health analytics using data extracted from Millennium via nightly ETL processes into a de-identified analytics data mart. HealtheAnalytics is used for quality measure reporting (CQMs), population health management, and value-based care analytics.
+
+## Administrative Setup
+
+### User Security for Discern Analytics
+
+Access to Discern Analytics is controlled via Cerner Security (Discern Security Manager). Key security objects:
+
+- DISCERN_ANALYTICS_USER — allows viewing and running shared reports
+- DISCERN_ANALYTICS_DEVELOPER — allows creating and editing CCL scripts
+- DISCERN_ANALYTICS_ADMIN — allows managing report libraries and scheduling
+
+Steps to grant access:
+1. Open Discern Security Manager (DSM) from the Cerner toolbar.
+2. Navigate to Security > Position Management.
+3. Find the user's position.
+4. Add the appropriate Discern Analytics security object.
+5. Apply changes and have the user re-login.
+
+### Report Libraries
+
+Reports are organized in shared libraries stored on the Millennium file system (typically $CCL_DIR). Administrators manage:
+- Who can create reports in shared vs. personal libraries
+- Folder permissions within the library
+- Version control (saving older versions before overwriting)
+
+### Scheduling Reports
+
+1. Open Discern Explorer.
+2. Open the report you want to schedule.
+3. Go to Report > Schedule.
+4. Configure: frequency (daily, weekly, monthly), time, output format, and distribution list.
+5. The Millennium Job Scheduler handles execution via Operational Thresholds.
+
+## CCL Development in Discern Analytics
+
+All Discern Analytics reports are ultimately CCL scripts. See the CCL Programmer Reference for full syntax. Key practices for analytics reports:
+
+### Parameterized Reports
+Reports accept runtime parameters that users enter before execution:
+
+    PROMPT "Enter start date: " = sysdate[1,10] WITH MASK = "##/##/####"
+    PROMPT "Enter facility: " = " "
+
+### Output Formatting
+
+    WITH HEADING, SEPARATOR = "|", FORMAT, NOBREAK
+    WITH OUTERJOIN = table_alias
+
+For Excel-friendly output, use CSV separators and wrap in:
+
+    WITH SEPARATOR = ",", FORMAT, NOCOUNTVAR
+
+### Joining Across Domains
+Discern Analytics queries run in the context of a single Millennium domain. For cross-domain reporting, data must be extracted via interface or HealtheAnalytics ETL.
+
+## Common Report Categories
+
+### Clinical Reports
+- Active inpatient census (current admissions by unit/bed)
+- Lab results pending or abnormal flag
+- Medication administration records (eMAR audit)
+- Nursing assessment completion rates
+- Discharge summary documentation status
+
+### Operational Reports
+- Bed occupancy and length-of-stay (LOS)
+- Order entry turnaround times
+- Radiology report completion times
+- Pharmacy order fill rates
+
+### Revenue Cycle Reports
+- Charge capture reconciliation
+- Accounts receivable aging
+- Denial rates by payer
+- Coding completeness rates
+
+### Quality and Compliance
+- Core measure compliance (e.g., sepsis bundle, VTE prophylaxis)
+- Provider documentation timeliness
+- Clinical documentation improvement (CDI) query rates
+
+## Performance Best Practices
+
+1. Always filter by date ranges — unbounded queries on large tables (CLINICAL_EVENT, ORDERS) will time out.
+2. Use MAXREC to cap result sets during development and testing.
+3. Create indexed queries: use primary keys (person_id, encntr_id) as join columns whenever possible.
+4. Avoid scanning text columns (name, note_text) without prefix filters.
+5. Use NOBREAK selectively — it prevents subtotals but allows longer result sets per group.
+6. Schedule heavy reports during off-peak hours (nights, weekends) to avoid degrading clinical system performance.
+7. Monitor the Discern Analytics Job Queue in the Operational Thresholds console for long-running jobs.
+
+## Troubleshooting
+
+### Script Compile Errors
+- "Identifier not found" — check table/column spelling and case; all Millennium identifiers are uppercase.
+- "Invalid join path" — ensure JOIN tables have a valid path back to the PLAN table.
+- "Code set mismatch" — verify the code_set number for your CODE_VALUE filter.
+
+### Empty Results
+- Verify active_ind = 1 filters are present.
+- Check that date parameters are in the correct format (MM/DD/YYYY).
+- Confirm the user has data access to the requested facility/unit.
+
+### Performance Issues
+- Add MAXREC to identify if large data volumes are the cause.
+- Review the execution plan by running with STAT option.
+- Check if required indexes exist on filtered columns.

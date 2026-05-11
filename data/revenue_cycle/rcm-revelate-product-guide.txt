@@ -1,0 +1,157 @@
+# Oracle Health RevElate — Cerner Revenue Cycle Management Platform Guide
+# MODULE: Revenue Cycle
+# SYNTHETIC KNOWLEDGE BASE — Cerna RAG System
+
+## What is RevElate in Cerner?
+
+RevElate is Oracle Health's (formerly Cerner's) modern revenue cycle management platform. RevElate is Cerner's next-generation Revenue Cycle solution, replacing and modernizing the legacy Cerner Patient Accounting, Claims Management, and Denial Management modules. Cerner RevElate unifies clinical and financial workflows under the Clinically Driven Revenue Cycle (CDRC) philosophy into a single cloud-native platform.
+
+RevElate in Cerner provides:
+- A redesigned, analytics-forward revenue cycle user experience
+- Cloud-native architecture on Oracle Cloud Infrastructure (OCI)
+- AI/ML capabilities for predictive analytics and automated denial prevention
+- End-to-end revenue cycle management from patient access through accounts receivable
+
+RevElate is Oracle Health's (formerly Cerner's) modern revenue cycle management platform, representing the next generation of Cerner's revenue cycle capabilities. RevElate unifies the clinical and financial workflows of the Clinically Driven Revenue Cycle (CDRC) philosophy into a single, cloud-native platform. It replaces and modernizes legacy Cerner Revenue Cycle modules (Patient Accounting, Claims Management, Denial Management) with a redesigned, analytics-forward user experience.
+
+RevElate is built on Oracle Cloud Infrastructure (OCI) and leverages AI/ML capabilities for predictive analytics, automated denial prevention, and financial performance optimization.
+
+## RevElate Core Modules
+
+### RevElate Patient Access
+Pre-service financial workflows:
+- Online scheduling with built-in insurance eligibility verification
+- Pre-registration and demographic management
+- Prior authorization management with real-time payer integration
+- Financial counseling with patient cost estimation tool (price transparency)
+- Digital consent forms and advance directive capture
+
+### RevElate Charge Services
+Charge capture and review:
+- Clinically driven automatic charge trigger engine (orders and documentation drive charges)
+- Real-time charge scrubbing with payer-specific edit libraries
+- Charge review workstation with AI-suggested corrections
+- Charge Description Master (CDM) management and annual update tools
+- Charge lag monitoring dashboard
+
+### RevElate Coding (CAC Integration)
+AI-assisted coding:
+- Computer-Assisted Coding (CAC) with NLP-based code suggestions
+- DRG optimization analysis
+- CDI query workflow integration
+- Coding quality measurement and audit tools
+- ICD-10-CM, CPT, and ICD-10-PCS encoder integration
+
+### RevElate Claims Management
+Claims lifecycle management:
+- Electronic claim generation (837P/837I) with real-time validation
+- Clearinghouse integration (Change Healthcare, Availity, Waystar)
+- Claims status tracking (276/277 integration)
+- Remittance processing (835 ERA auto-posting)
+- Timely filing monitoring with automated alerts
+
+### RevElate Denial Management
+AI-powered denial prevention and recovery:
+- Predictive denial identification — AI model flags claims most likely to deny before submission
+- Denial capture from 835 with automatic CARC/RARC categorization
+- Denial worklist with appeal workflow
+- Automated appeal letter generation
+- Root cause analysis dashboard
+
+### RevElate Patient Financial Experience
+Patient billing and self-service:
+- Patient-friendly statements (plain language, no healthcare jargon)
+- Online payment portal with credit card, bank transfer, and payment plan options
+- MyChart integration for statement delivery and payment via patient portal
+- AI-assisted financial assistance screening
+- Payment plan management with auto-pay enrollment
+
+### RevElate Analytics (HealtheAnalytics)
+Revenue cycle performance analytics:
+- Revenue integrity dashboards (CMI trend, DRG shift analysis, charge lag)
+- AR aging and collection performance dashboards
+- Denial rate analysis with root cause trending
+- Financial forecast and budget vs. actual reporting
+- Benchmarking against national and peer organization data
+
+## Key RevElate Differentiators
+
+### AI-Powered Predictive Denial Prevention
+
+RevElate's AI/ML models analyze historical claim data to:
+1. Score each claim with a denial probability score before submission.
+2. Flag high-risk claims for human review prior to submission.
+3. Identify the specific claim elements most likely causing the elevated denial risk.
+4. Recommend corrective actions (add modifier, verify authorization, update diagnosis).
+
+Outcome: organizations using RevElate's predictive denial engine typically see a 20–30% reduction in initial denial rates.
+
+### Real-Time Eligibility and Prior Authorization
+
+Unlike legacy systems that batch eligibility verification, RevElate performs:
+- Real-time eligibility verification at the moment of scheduling or registration
+- Real-time prior authorization status check at registration
+- Automated prior auth submission for common services via 278 EDI
+- Smart scheduling alerts when a prior auth is required but not yet obtained
+
+### Unified Revenue and Clinical View
+
+RevElate's care management and revenue cycle views are unified:
+- CDI specialists see financial impact (CMI, DRG) alongside clinical documentation.
+- Charge review specialists see the clinical record alongside the charge lines.
+- Case managers see LOS projections alongside financial class and estimated reimbursement.
+
+### Price Transparency and Patient Experience
+
+CMS price transparency rules require hospitals to publish standard charges. RevElate includes:
+- Machine-readable price file generation compliant with CMS transparency requirements
+- Patient cost estimation tool: patients receive personalized cost estimates before service based on their specific insurance plan
+- Comparison shopping integration (some configurations)
+
+## RevElate Implementation Considerations
+
+### Migration from Legacy Cerner Revenue Cycle
+
+Organizations migrating to RevElate from legacy Cerner Revenue Cycle modules should:
+1. Assess current module versions — RevElate replaces specific legacy modules; some may be upgraded in phases.
+2. Plan CDM migration — CDM items must be mapped from the legacy format to the RevElate CDM structure.
+3. Train revenue cycle staff on the RevElate user interface — navigation differs significantly from legacy modules.
+4. Configure payer-specific business rules — RevElate's payer rule engine requires initial configuration based on payer contracts.
+5. Test in CERT domain before Production activation.
+
+### Integration with Existing Millennium Clinical Modules
+
+RevElate integrates with:
+- PowerChart CPOE — orders drive charge triggers in RevElate charge services
+- PharmNet — pharmacy dispenses trigger medication charges
+- eMAR — medication administration events create medication administration charges
+- Clinical documentation — note signatures trigger E&M charge events
+- Scheduling — appointment creation initiates pre-authorization workflows
+
+## RevElate Reporting and Analytics
+
+### Standard Dashboards
+
+Available out-of-the-box in RevElate:
+- **Revenue Integrity Dashboard** — overall financial health: net revenue, AR days, collection rate
+- **Charge Capture Performance** — charge lag, missing charge rate, CDM utilization
+- **Coding Performance** — coder productivity, coding accuracy rate, DRG distribution
+- **Claims Performance** — first-pass acceptance rate, timely filing compliance, clearinghouse rejection rate
+- **Denial Dashboard** — denial rate by payer, CARC distribution, appeal success rate, denial prevention score
+- **Patient Financial Experience** — patient payment rate, average days to patient payment, portal adoption, financial assistance utilization
+
+### Custom Reporting
+
+RevElate connects to the Oracle Health HealtheAnalytics cloud data warehouse, enabling:
+- Custom report building with no-code report designer
+- Data export to organizational BI tools (Power BI, Tableau)
+- Population health and financial analytics combined in single queries
+
+## Best Practices for RevElate Users
+
+1. Leverage the predictive denial model — work high-denial-risk claims before submission rather than managing denials reactively after the fact.
+2. Enroll patients in auto-pay for payment plans — auto-pay payment plans have significantly higher completion rates than manual payment plans.
+3. Use the patient cost estimation tool at every pre-registration — patients who receive financial counseling before service pay faster and at higher rates.
+4. Configure prior auth alerts in RevElate scheduling — catching missing authorizations before the service date is far less costly than clinical denials.
+5. Review the denial prevention scorecard weekly — AI model performance improves as staff act on its recommendations, creating a virtuous improvement loop.
+6. Enable RevElate analytics push notifications for executives — real-time revenue integrity alerts drive faster leadership response to emerging problems.

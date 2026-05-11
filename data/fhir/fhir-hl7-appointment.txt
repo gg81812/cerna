@@ -1,0 +1,46 @@
+FHIR v4.0.1 Appointment Resource
+Source: https://hl7.org/fhir/R4/appointment.html
+Scraped: 2026-04-18
+
+==============================================================
+
+Overview
+
+The Appointment resource represents "a booking of a healthcare event among patient(s), practitioner(s), related person(s) and/or device(s) for a specific date/time."
+
+Key Purpose
+
+Appointments document planned meetings that may occur in the future or past. They support various healthcare scenarios including scheduled surgeries, clinical follow-ups, clinician conferences, and equipment reservations. Visits can be in-person or remote.
+
+Basic Workflow Steps
+
+Discovery/Addressing: Determine contact details for the scheduling resource, typically via the Schedule resource.
+
+Availability Check (Optional): Review available Slot resources linked to a Schedule to identify bookable times.
+
+Appointment Request: A requester creates an Appointment with status "proposed" and participant status "needs-action."
+
+Reply Process: Participants update their participation status. Multiple systems may generate AppointmentResponse entries.
+
+Status Confirmation: The overall appointment status reflects participant responses using pub-sub techniques.
+
+Waitlisting (Optional): Create waitlisted appointments for preferred times, notifying patients when slots become available.
+
+Two Workflow Styles
+
+Community Style: Select specific available times and make requests directly.
+
+Clinical Style: Involves complex multi-system checking and timing considerations; requires queue-like processing.
+
+Core Data Elements
+
+- Status: proposed, pending, booked, arrived, fulfilled, cancelled, noshow, entered-in-error, checked-in, or waitlist
+- Timing: Start/end dates and duration information
+- Participants: Patients, practitioners, devices, locations with required/optional designation
+- Reason: Clinical codes and resource references (conditions, procedures, observations)
+- Service Details: Category, type, and specialty information
+- Instructions: Patient-facing guidance separate from internal comments
+
+Relationship to Other Resources
+
+Appointments typically generate Encounters when services begin. The AppointmentResponse resource handles participant confirmations. Location participation is tracked through participant references rather than separate location fields.

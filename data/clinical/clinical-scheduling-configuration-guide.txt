@@ -1,0 +1,154 @@
+# SOURCE: Cerner Scheduling Configuration Guide
+# URL: https://wiki.cerner.com/display/public/1101clinical/Scheduling+Configuration+Guide
+# MODULE: Clinical Workflows
+# RETRIEVED: 2026-04-01
+# ---
+
+# Cerner Scheduling Configuration Guide
+
+## What is Cerner Scheduling?
+
+Cerner Millennium's Scheduling module (also called Cerner Scheduling or SurgiNet Scheduling for surgical cases) provides appointment scheduling, resource management, and patient flow management for outpatient clinics, procedural areas, and diagnostic departments. It is tightly integrated with PowerChart (for provider schedule views and follow-up order scheduling) and with the ADT module (encounter creation on patient check-in).
+
+## Key Concepts
+
+### Resources
+A resource is any schedulable entity in the Cerner system:
+- **Provider resources** — individual physicians, APPs, nurses who see patients
+- **Location resources** — exam rooms, procedure suites, OR rooms
+- **Equipment resources** — MRI scanners, ultrasound machines, infusion chairs
+
+Each resource has a schedule template defining when it is available.
+
+### Appointment Types
+An appointment type defines the kind of visit and its default scheduling parameters:
+- Duration (default time block in minutes)
+- Resource requirements (which provider + room type are needed)
+- Scheduling rules (minimum lead time, maximum advance scheduling, age restrictions)
+- Instructions to patient (preparation instructions, what to bring)
+
+Examples: New Patient Visit (60 min), Follow-Up Visit (20 min), ECHO Cardiogram (45 min), Chemotherapy Infusion (4 hours).
+
+### Schedule Templates
+Templates define a resource's recurring availability:
+- Days and times the resource is available
+- Which appointment types can be scheduled in each time slot
+- Blocked times (lunch, administrative time, holidays)
+- Override capabilities for specific dates
+
+### Order-Based Scheduling
+When a provider places a follow-up order in CPOE (e.g., "Cardiology Follow-up in 2 weeks"), the scheduling system receives the order and:
+- Suggests available slots based on the order parameters
+- Links the scheduled appointment to the originating order
+- Tracks order-to-appointment completion for quality reporting
+
+## Administrative Setup
+
+### Creating an Appointment Type
+
+1. Open Scheduling Administration (from Cerner administrative tools).
+2. Navigate to Setup > Appointment Types.
+3. Click New.
+4. Enter: Type Name, Duration (minutes), Description, Patient Instructions.
+5. Configure Scheduling Rules:
+   - Minimum lead time (how far in advance must this be scheduled?)
+   - Maximum advance scheduling horizon (how far out can this be booked?)
+   - Required resources (provider type, room type, equipment)
+6. Set Visit Type code (maps to CPT billing category).
+7. Link to order type (for order-driven scheduling).
+8. Save and activate.
+
+### Creating a Schedule Template
+
+1. Navigate to Setup > Templates.
+2. Select the resource (provider or location).
+3. Click "New Template."
+4. Set: template name, effective date range, recurrence pattern (weekly, biweekly, monthly).
+5. For each day of the week:
+   - Set open time and close time.
+   - Divide into time blocks (e.g., 8:00–12:00 for AM clinic, 13:00–17:00 for PM clinic).
+   - Assign appointment types to each block.
+6. Add blocked times (lunch, staff meeting, administrative block).
+7. Set slot capacity per block (how many simultaneous appointments).
+8. Save and apply the template.
+
+### Building a Provider's Weekly Schedule
+
+1. Navigate to the provider's resource in Scheduling Administration.
+2. Apply the appropriate template (e.g., "Cardiology Monday/Wednesday/Friday Clinic").
+3. Add date-specific overrides for holidays, vacation, or conference dates.
+4. Set overbooking rules (if applicable): maximum percentage above template capacity.
+
+## Scheduling Appointment Types
+
+### New Patient Visits
+- Longer duration (45–90 minutes typically).
+- May require advance information gathering (records request, insurance pre-authorization).
+- Often limited in number per session — gate capacity with scheduling rules.
+
+### Follow-Up Visits
+- Shorter duration (15–30 minutes).
+- Linked to an originating PowerChart order when provider places a follow-up order at discharge.
+- Some organizations use automated scheduling (patient receives a call or portal message to self-schedule within a defined window).
+
+### Procedure Scheduling (SurgiNet)
+For procedural cases (endoscopy, cardiac catheterization, surgery):
+- Cases require multi-resource scheduling: OR room + surgical team + equipment + anesthesia.
+- Cases have pre-op, procedure, and recovery time phases.
+- Pre-procedure prep orders and anesthesia evaluation orders linked to the scheduled case.
+- Cases visible in the SurgiNet OR daily schedule board.
+
+### Diagnostic Scheduling (Radiology, Lab)
+Diagnostic appointments:
+- Radiology (MRI, CT, X-ray, ultrasound) scheduled via Scheduling module with RIS (Radiology Information System) integration.
+- Lab draw appointments scheduled for outpatient lab.
+- Results route back to PowerChart.
+
+## Patient Check-In Workflow
+
+### Check-In Steps
+
+1. Patient arrives at clinic reception.
+2. Registration staff opens Scheduling > Today's Schedule for the clinic.
+3. Find the patient's appointment.
+4. Verify patient demographics and insurance (may trigger insurance eligibility check via Cerner RevElate).
+5. Click "Check In."
+6. An encounter is created in Millennium (if not pre-created): visit type, facility, attending provider linked.
+7. Patient wristband printed (if needed for BCMA / safety purposes in procedure areas).
+8. Patient moves to waiting area; appointment status updates to "Checked In."
+
+### No-Show and Cancellation
+
+- If a patient does not arrive by the scheduled time: scheduler marks as "No Show."
+- No-show rates are tracked for quality improvement and provider productivity reporting.
+- Cancellations with adequate notice: slot made available for another patient.
+- Last-minute cancellations (<24 hours) tracked separately.
+
+## Patient Self-Scheduling (MyChart Integration)
+
+With Cerner MyChart (patient portal) configured:
+1. Eligible patients receive a scheduling invitation via MyChart message.
+2. Patient logs in to MyChart and selects from available appointment slots.
+3. Appointment books in Cerner Scheduling in real time.
+4. Patient receives automated reminder (email, SMS, or MyChart notification) 24–48 hours before the appointment.
+5. Patients can cancel or reschedule via MyChart up to a configurable lead time before the appointment.
+
+## Reporting
+
+Key scheduling reports available via Discern Analytics:
+
+- **Provider Productivity** — appointments scheduled, completed, no-shows, cancellations per provider per period
+- **Slot Utilization** — % of available slots filled (by location, provider, or appointment type)
+- **Wait Time Report** — average days from referral/order to appointment
+- **No-Show Rate by Appointment Type**
+- **Cancellation Rate and Lead Time**
+- **Follow-Up Order Completion Rate** — % of discharge follow-up orders that resulted in a completed appointment
+
+## Best Practices
+
+1. Build templates that reflect actual clinical availability — inflated templates create the illusion of access but result in high no-show rates when slots are triple-booked.
+2. Create appointment types with realistic durations — underestimating leads to chronic schedule delays.
+3. Block administrative time explicitly in templates — unblocked administrative time gets filled with patient appointments, leaving providers no time for documentation.
+4. Set scheduling lead times for new patients — avoids booking new patients on tomorrow's schedule when intake preparation is required.
+5. Monitor wait times weekly — greater than 7 days for follow-up visits or 21 days for new patients indicates a capacity or scheduling workflow problem.
+6. Link follow-up orders to appointment types — enables tracking of order-to-appointment completion, a key readmission prevention metric.

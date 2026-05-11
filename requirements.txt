@@ -1,0 +1,40 @@
+# Cerna — Cerner AI Specialist  (v1.3.0 POV)
+# Install: pip install -r requirements.txt
+# Re-run pipeline: python scripts/tag_documents.py && python ingest.py
+
+# ── Core framework ────────────────────────────────────────────────────────────
+streamlit>=1.35.0
+
+# ── LangChain core + community ────────────────────────────────────────────────
+langchain>=0.3.0
+langchain-core>=0.3.0
+langchain-text-splitters>=0.3.0
+langchain-community>=0.3.0
+
+# ── LangChain integrations ────────────────────────────────────────────────────
+langchain-huggingface>=0.1.0
+langchain-chroma>=0.1.0
+
+# ── LLM backend ───────────────────────────────────────────────────────────────
+langchain-groq>=0.2.0
+
+# ── Embeddings ────────────────────────────────────────────────────────────────
+sentence-transformers>=3.0.0
+
+# ── Vector store ──────────────────────────────────────────────────────────────
+chromadb>=0.5.0
+
+# ── Hybrid retrieval ──────────────────────────────────────────────────────────
+rank-bm25>=0.2.0
+
+# ── Avatar animation ──────────────────────────────────────────────────────────
+streamlit-lottie>=0.0.5
+
+# ── Structured outputs ────────────────────────────────────────────────────────
+pydantic>=2.0.0
+
+# ── Caching ───────────────────────────────────────────────────────────────────
+redis==5.0.8          # pinned — falls back to in-memory LRU if Redis is unreachable
+
+# ── Environment & utilities ───────────────────────────────────────────────────
+python-dotenv>=1.0.0

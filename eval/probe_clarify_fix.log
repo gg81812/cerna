@@ -1,0 +1,39 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Re-running 5 queries; marker=clarify_fix_probe
+[Retriever] Loading embedding model…
+Loading weights:   0%|          | 0/391 [00:00<?, ?it/s]Loading weights:  51%|#####1    | 200/391 [00:00<00:00, 1998.92it/s]Loading weights: 100%|##########| 391/391 [00:00<00:00, 2037.34it/s]
+[1mBertModel LOAD REPORT[0m from: BAAI/bge-large-en-v1.5
+Key                     | Status     |  | 
+------------------------+------------+--+-
+embeddings.position_ids | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+[Retriever] Building BM25 index…
+[Retriever] Ready.
+[Orchestrator] Ready.
+[01/5] hs-clerk-013           Registering a minor — guarantor isn't the parent on fil... [Redis] Unavailable (Timeout connecting to server). Falling back to in-memory cache.
+[QueryRewriter] intent=question  modules=['REVENUE_CYCLE', 'CLINICAL']  ambiguous=False  needs_clarify=True  formal='minor patient registration guarantor custody arrangement wor'
+PASS         khr=20%  conf=low  behav=clarify  7284ms
+[02/5] hs-it-014              Standing up an internal MPages portal — does Cerner hav... [QueryRewriter] intent=question  modules=['MILLENNIUM']  ambiguous=False  needs_clarify=False  formal='Cerner Millennium MPages portal accessibility-compliant comp'
+[Retrieve:pass1] strategy=parallel formal+variants  avg_top3=0.708  threshold=0.55
+[Retrieve:pass2] skipped — pass1 quality sufficient (avg_top3=0.708>=0.55)
+[Retrieve:pass3] skipped — pass2 quality sufficient (avg_top3=0.708>=0.55)
+PASS         khr=60%  conf=medium  behav=answer  9817ms
+[03/5] hs-nurse-019           Patient pulled out the IV and is trying to get out of b... [QueryRewriter] intent=question  modules=['CLINICAL']  ambiguous=False  needs_clarify=True  formal='restraint order escalation workflow for patient safety vs on'
+PASS         khr=60%  conf=low  behav=clarify  3859ms
+[04/5] hs-nurse-020           Sepsis BPA fired again — patient already has fluids and... [QueryRewriter] intent=troubleshooting  modules=['CLINICAL']  ambiguous=False  needs_clarify=True  formal='Sepsis BPA workflow for patients with fluids and antibiotics'
+PASS         khr=40%  conf=low  behav=clarify  2508ms
+[05/5] hs-physician-012       Order set has a med I usually swap — can I save my pref... [QueryRewriter] intent=question  modules=['POWERCHART']  ambiguous=False  needs_clarify=False  formal='Saving a custom medication order set as a favorite in PowerC'
+[Retrieve:pass1] strategy=parallel formal+variants  avg_top3=0.658  threshold=0.55
+[Retrieve:pass2] skipped — pass1 quality sufficient (avg_top3=0.658>=0.55)
+[Retrieve:pass3] skipped — pass2 quality sufficient (avg_top3=0.658>=0.55)
+PASS         khr=60%  conf=medium  behav=answer  11177ms
+
+================================================================
+Done. 5/5 pass.  Written to eval\probe_clarify_fix.jsonl
+  hs-clerk-013           expected=clarify  actual=clarify  PASS
+  hs-it-014              expected=answer   actual=answer   PASS
+  hs-nurse-019           expected=clarify  actual=clarify  PASS
+  hs-nurse-020           expected=clarify  actual=clarify  PASS
+  hs-physician-012       expected=answer   actual=answer   PASS

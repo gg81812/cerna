@@ -1,0 +1,165 @@
+# SOURCE: Cerner PowerPlans (Order Sets) Administrator Guide
+# URL: https://wiki.cerner.com/display/public/1101clinical/PowerPlans+Admin+Guide
+# MODULE: Clinical Workflows
+# RETRIEVED: 2026-04-01
+# ---
+
+# Cerner PowerPlans (Order Sets) Administrator Guide
+
+## What are PowerPlans?
+
+PowerPlans (also known as Order Sets in some Cerner documentation) are pre-configured, evidence-based collections of orders that providers initiate with a single action in PowerChart. They standardize care pathways for common clinical scenarios — such as admission for pneumonia, hip fracture post-operative care, or sepsis management — by presenting a structured set of recommended orders that the provider can review and modify before signing.
+
+PowerPlans reduce variation in care, improve adherence to evidence-based guidelines, and reduce time spent on repetitive order entry.
+
+## Types of PowerPlans
+
+### Admission PowerPlans
+Comprehensive order sets used at the time of inpatient admission for a specific diagnosis or procedure. Typically include: diet, activity level, vital sign frequency, nursing tasks, IV access, medications, lab orders, and imaging orders.
+
+Example: "Pneumonia Admission — Community Acquired" includes:
+- Activity: Out of bed with assistance
+- Diet: Regular as tolerated
+- Vital signs: q4h
+- Pulse oximetry: continuous
+- IV access: Peripheral IV × 1
+- IV fluids: Normal Saline 0.9% at 125 mL/hr
+- Medications: Azithromycin 500mg PO daily, Ceftriaxone 1g IV q24h
+- Labs: CBC, CMP, Procalcitonin, Blood cultures × 2
+- Imaging: Chest X-ray PA/Lateral
+
+### Procedure / Post-Op PowerPlans
+Used after specific surgical or procedural interventions. Include post-procedure monitoring orders, activity restrictions, wound care, pain management, and DVT prophylaxis.
+
+### Protocol-Based PowerPlans
+Used for clinical protocols requiring frequent adjustments. Examples:
+- Sepsis Bundle (Surviving Sepsis Campaign)
+- Insulin Infusion Protocol
+- Heparin Drip Protocol
+- Alcohol Withdrawal Protocol (CIWA)
+
+These often include conditional order logic (if/then branching) based on clinical parameters.
+
+### Phase-Based PowerPlans
+Complex plans divided into phases that activate at different times in the care episode:
+- Phase 1: Operative
+- Phase 2: PACU (Recovery)
+- Phase 3: Floor
+- Phase 4: Discharge
+
+Orders in each phase activate when the phase is initiated by nursing or provider.
+
+## Building a PowerPlan in PowerChart Administration
+
+### Accessing PowerPlan Administration
+1. Open PowerChart Administration.
+2. Navigate to Clinical Administration > Order Management > PowerPlan Administration.
+3. The console shows existing PowerPlans organized by type and specialty.
+
+### Creating a New PowerPlan
+
+1. Click "New PowerPlan."
+2. Enter a name (e.g., "Hip Arthroplasty Post-Op — Adult"), description, and owning specialty.
+3. Select PowerPlan type (Admission, Procedure, Protocol, Phase-Based).
+4. Set status to "In Development."
+
+### Adding Order Sections
+
+Organize orders into logical sections:
+- Section examples: Activity, Diet, Vital Signs, Monitoring, IV Access, Medications, Labs, Imaging, Nursing Orders.
+- Each section has a section name and display order (sequence in which sections appear to the provider).
+
+### Adding Individual Orders
+
+Within each section, add orders:
+1. Click "Add Order" in the section.
+2. Search for the order from the CPOE order catalog by name, synonym, or order code.
+3. Select the order.
+4. Configure order details: dose, route, frequency, duration, start time offset (e.g., "Start 2 hours after plan initiation"), and any required additional order details.
+5. Set order status:
+   - **Pre-selected (checked)** — order appears checked by default; provider must uncheck to exclude.
+   - **Unchecked (optional)** — order appears unchecked; provider must check to include.
+   - **Required** — order cannot be removed by the provider.
+
+### Conditional/Branching Orders
+
+For protocol-based plans with conditional logic:
+1. Add an "IF/THEN" conditional group.
+2. Define the condition (e.g., "If patient weight > 100 kg").
+3. Add one set of orders for the Yes branch and another for the No branch.
+4. The provider sees only the applicable branch based on patient data.
+
+### Medications in PowerPlans
+
+Medication orders in PowerPlans can be configured with:
+- Default dose with allowed range (e.g., "Acetaminophen 650mg PO q6h PRN pain — dose range 325–1000mg")
+- Weight-based dosing (dose calculated automatically from patient weight in Millennium)
+- Allergy-linked alternatives (if patient allergic to penicillin, display alternative antibiotic)
+- Duration and stop date/time
+
+## PowerPlan Governance
+
+### Physician/Pharmacist Review
+
+All PowerPlans must be reviewed and approved before activation:
+1. Pharmacy reviews all medication orders for formulary compliance and dosing.
+2. Medical staff committee (or specialty committee) reviews for clinical appropriateness and evidence base.
+3. Nursing reviews nursing orders and tasks.
+4. Compliance reviews for regulatory requirements.
+
+Formal approval is documented in the organization's PowerPlan governance log.
+
+### Evidence Base Documentation
+Each PowerPlan should have an associated evidence summary document (attached in the PowerPlan metadata field) citing:
+- Clinical guidelines (e.g., Surviving Sepsis Campaign 2023)
+- Hospital policy references
+- Specialty society recommendations
+
+### Annual Review Cycle
+PowerPlans should be reviewed annually (or whenever referenced guidelines are updated) by the owning clinical committee to ensure continued accuracy and evidence alignment.
+
+## Activating and Deploying PowerPlans
+
+### Activation
+1. After governance approval, open the PowerPlan in Administration.
+2. Set status to "Active."
+3. Assign the PowerPlan to appropriate facilities and departments in the Assignment configuration.
+4. Set the PowerPlan catalog entry (how it appears in the provider's search).
+
+### Access Control
+Control which providers can initiate which PowerPlans:
+- PowerPlan can be restricted to specific positions (e.g., Orthopedic Surgery only).
+- Or made available to all ordering providers.
+
+## Using PowerPlans in Clinical Workflow
+
+### Provider Initiates a PowerPlan
+
+1. Provider opens the patient's chart in PowerChart.
+2. Navigates to the Orders section.
+3. Selects "Add PowerPlan" or searches the PowerPlan catalog.
+4. Selects the appropriate PowerPlan.
+5. The plan opens with all pre-selected orders checked.
+6. Provider reviews each section:
+   - Unchecks any orders not appropriate for this patient.
+   - Checks any optional orders that are needed.
+   - Modifies doses, routes, frequencies as clinically appropriate.
+7. Provider signs — all checked orders route to pharmacy, nursing, radiology, and lab per their respective workflows.
+
+### Modifying an Active PowerPlan
+After signing, the provider can:
+- Add orders: initiate additional individual orders alongside the plan.
+- Modify individual orders: open the order and change details.
+- Discontinue orders: right-click and discontinue.
+- Transition to next phase (for phase-based plans).
+
+## Best Practices for PowerPlan Build
+
+1. Keep PowerPlans focused — one condition, one patient population per plan. Broad "catch-all" plans confuse providers.
+2. Pre-select evidence-based defaults — providers can opt out, but defaults should reflect best practice.
+3. Avoid very long plans — plans with >50 orders have low completion rates. Break into specialty sub-plans.
+4. Use consistent naming conventions — makes searching the catalog easier.
+5. Include pharmacy in the review process for every medication order.
+6. Date-stamp and version-track all changes — use the governance log.
+7. Audit plan utilization via Discern Analytics — low utilization may indicate a usability or workflow fit problem.
+8. Test in CERT with a simulated patient before activating in Production.

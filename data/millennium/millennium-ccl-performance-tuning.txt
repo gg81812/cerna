@@ -1,0 +1,255 @@
+# CCL Query Performance Tuning Best Practices — Cerner Millennium
+# MODULE: Millennium
+# SYNTHETIC KNOWLEDGE BASE — Cerna RAG System
+
+## Overview
+
+CCL (Cerner Command Language) performance tuning is essential for reports and scripts that query large patient populations in Millennium. Without proper optimization, CCL queries against production databases with millions of encounters can take hours to run or fail entirely. This guide covers indexing strategies, query patterns, join optimization, and common performance pitfalls.
+
+## Database Indexing in Millennium
+
+Millennium tables are indexed for specific clinical workflows. CCL queries that align with available indexes run in milliseconds; queries that bypass indexes cause full table scans.
+
+### Key Indexed Columns
+
+| Table | Indexed Columns | Notes |
+|-------|-----------------|-------|
+| ENCOUNTER | encntr_id, person_id, reg_dt_tm, encntr_type_cd | Always filter by date range |
+| ORDERS | order_id, encntr_id, catalog_cd, active_ind | Include active_ind filter |
+| ORDER_ACTION | order_action_id, order_id, action_dt_tm | Use action_dt_tm for date range |
+| CLINICAL_EVENT | event_id, encntr_id, event_cd, result_status_cd | Filter by event_cd and status |
+| PERSON | person_id | Never join without limiting ENCOUNTER first |
+| PRSNL | prsnl_id, username | For provider lookups |
+| CODE_VALUE | code_value, code_set | Always index-efficient |
+
+### Golden Rule: Date-Range First
+Always filter on an indexed date column early in your query to limit the candidate rows:
+
+```ccl
+/* SLOW: No date filter — full table scan on ENCOUNTER (millions of rows) */
+select e.encntr_id, p.name_full_formatted
+from encounter e, person p
+where e.person_id = p.person_id
+  and e.encntr_type_cd = cv_inpatient
+
+/* FAST: Date filter applied first */
+select e.encntr_id, p.name_full_formatted
+from encounter e, person p
+where e.person_id = p.person_id
+  and e.encntr_type_cd = cv_inpatient
+  and e.reg_dt_tm between cnvtdatetime("01-JAN-2025 00:00:00")
+                       and cnvtdatetime("31-DEC-2025 23:59:59")
+```
+
+## Query Optimization Techniques
+
+### 1. Use PLAN/JOIN to Control Join Order
+
+CCL's query optimizer does not always choose the optimal join order. Use `PLAN`...`JOIN` to force the most selective table first:
+
+```ccl
+/* Let optimizer decide — may be suboptimal */
+select o.order_id, ce.result_val
+from orders o, clinical_event ce
+where o.encntr_id = ce.encntr_id
+  and o.catalog_cd = cv_lab_glucose
+
+/* Force orders as driving table */
+select o.order_id, ce.result_val
+plan o
+  where o.catalog_cd = cv_lab_glucose
+    and o.active_ind = 1
+    and o.orig_order_dt_tm >= cnvtdatetime("01-JAN-2025 00:00:00")
+join ce
+  where ce.order_id = outerjoin(o.order_id)
+    and ce.valid_until_dt_tm > cnvtdatetime(sysdate)
+with nocounter
+```
+
+### 2. Avoid SELECT * on Large Tables
+Always select only needed columns. SELECT * forces the database to retrieve all column data even if you only display 2 fields.
+
+```ccl
+/* SLOW */
+select * from clinical_event ce where ...
+
+/* FAST */
+select ce.event_id, ce.event_cd, ce.result_val, ce.result_status_cd
+from clinical_event ce where ...
+```
+
+### 3. Use Subqueries for Population Filtering
+For large population reports, build a subquery to identify the target cohort first, then retrieve clinical data:
+
+```ccl
+/* Step 1: Build cohort of diabetic inpatients */
+select into "nl:"
+  encntr_id = e.encntr_id
+from encounter e, diagnosis d
+where e.encntr_type_cd = cv_inpatient
+  and e.reg_dt_tm >= cnvtdatetime("01-JAN-2025 00:00:00")
+  and d.encntr_id = e.encntr_id
+  and d.diag_type_cd = cv_admitting
+  and d.nomenclature_id = (select n.nomenclature_id
+                           from nomenclature n
+                           where n.source_string like "E11%"
+                             and n.source_vocabulary_cd = cv_icd10)
+detail
+  stat add_rec to cohort_rec
+    cohort_rec->encntr_id[cohort_rec->cnt] = e.encntr_id
+  end
+with nocounter
+
+/* Step 2: Query clinical events only for cohort */
+select ce.result_val, ce.event_cd
+from clinical_event ce
+where ce.encntr_id = value(mem_encntr_id)  /* join to in-memory cohort */
+```
+
+### 4. Leverage the WITH NOCOUNTER Clause
+`WITH NOCOUNTER` prevents Millennium from counting total rows before returning results — significantly faster for large result sets:
+
+```ccl
+select e.encntr_id, e.reg_dt_tm
+from encounter e
+where e.encntr_type_cd = cv_inpatient
+  and e.reg_dt_tm >= cnvtdatetime("01-JAN-2025 00:00:00")
+with nocounter  /* Add this for large queries */
+```
+
+### 5. Avoid LIKE with Leading Wildcard
+Leading wildcard patterns (`LIKE "%value"`) cannot use indexes:
+
+```ccl
+/* SLOW: leading wildcard forces full scan */
+where p.name_full_formatted like "%SMITH"
+
+/* FAST: trailing wildcard uses index */
+where p.name_full_formatted like "SMITH%"
+```
+
+### 6. Limit Result Sets with MAXREC
+Use `MAXREC` or `HEAD` in development to prevent runaway queries:
+
+```ccl
+select top 100 e.encntr_id, e.reg_dt_tm
+from encounter e
+where e.encntr_type_cd = cv_inpatient
+with maxrec = 100  /* Development/testing safeguard */
+```
+
+## Index Hints and Table Statistics
+
+Millennium uses Oracle Database (or SQL Server in some legacy configurations). For severe performance issues in Oracle-based Millennium:
+
+```ccl
+/* Use Oracle hint via ORACLEHINT clause (advanced) */
+select /*+ INDEX(e ENCOUNTER_PK) */ e.encntr_id
+from encounter e
+where e.encntr_type_cd = cv_inpatient
+  and e.reg_dt_tm >= cnvtdatetime("01-JAN-2025 00:00:00")
+```
+
+Engage your Cerner Technical Account Manager (TAM) or DBA team for table statistics refresh if query performance has degraded after a large data load.
+
+## Performance Tuning for Specific Query Patterns
+
+### Patient Population Queries (>100k encounters)
+
+Use a **two-pass approach**:
+1. First pass: collect encounter IDs into a record structure (in-memory)
+2. Second pass: join against clinical tables using the in-memory set
+
+This avoids repeated joins on the full ENCOUNTER table.
+
+```ccl
+record cohort_enc (
+  1 cnt = i4
+  1 qual[*]
+    2 encntr_id = f8
+)
+
+/* Pass 1: Collect cohort */
+select into "nl:"
+from encounter e
+where e.encntr_type_cd = cv_inpatient
+  and e.reg_dt_tm between cnvtdatetime("01-JAN-2025 00:00:00")
+                      and cnvtdatetime("01-APR-2025 23:59:59")
+detail
+  cohort_enc->cnt = cohort_enc->cnt + 1
+  stat alterlist(cohort_enc->qual, cohort_enc->cnt)
+  cohort_enc->qual[cohort_enc->cnt].encntr_id = e.encntr_id
+with nocounter
+
+/* Pass 2: Query orders for cohort */
+select o.order_id, o.catalog_cd
+from orders o
+where expand(ndx, 1, cohort_enc->cnt, o.encntr_id, cohort_enc->qual[ndx].encntr_id)
+  and o.active_ind = 1
+with nocounter
+```
+
+### Avoiding Row-by-Row Processing
+
+Avoid CCL's `DETAIL` section for row-level processing on large sets. Use SQL aggregate functions (`COUNT`, `SUM`, `MAX`, `MIN`) directly in the query instead:
+
+```ccl
+/* SLOW: Loop in DETAIL section */
+select into "nl:"
+from encounter e
+detail
+  total_count = total_count + 1
+end
+
+/* FAST: Use SQL aggregation */
+select count(*) as total_count
+from encounter e
+where e.encntr_type_cd = cv_inpatient
+  and e.reg_dt_tm >= cnvtdatetime("01-JAN-2025 00:00:00")
+```
+
+## Monitoring and Profiling
+
+### CCL Execution Time Tracking
+Add timestamps to long-running scripts to identify bottlenecks:
+
+```ccl
+declare start_dt = dq8 with noconstant(cnvtdatetime(sysdate))
+
+/* ... query section ... */
+
+declare end_dt = dq8 with noconstant(cnvtdatetime(sysdate))
+declare elapsed_sec = f8 with noconstant(datetimediff(end_dt, start_dt, 4))
+call echo(build("Query elapsed: ", trim(cnvtstring(elapsed_sec, 10, 3)), " seconds"))
+```
+
+### Discern Explorer Query Monitor
+In **Discern Explorer > Tools > Query Monitor**, Cerner administrators can view:
+- Currently executing CCL scripts
+- Query execution plans (with Oracle database access)
+- Historical execution times for scheduled reports
+- Sessions consuming excessive CPU or I/O
+
+## Performance Best Practices Summary
+
+1. **Always use a date range filter** as the first predicate on large tables
+2. **Use PLAN/JOIN** to control join order for multi-table queries
+3. **Build an in-memory cohort** before querying clinical details for large populations
+4. **Select only needed columns** — never SELECT *
+5. **Use WITH NOCOUNTER** on queries returning large row counts
+6. **Avoid leading wildcards** in LIKE predicates
+7. **Test with MAXREC** during development to prevent runaway queries
+8. **Use SQL aggregates** instead of row-level DETAIL counting
+9. **Index alignment**: structure WHERE clause to match available indexes
+10. **Engage Cerner TAM** for Oracle query plan analysis on persistent performance issues
+
+## Common Performance Pitfalls
+
+| Anti-Pattern | Impact | Solution |
+|--------------|--------|----------|
+| No date range on ENCOUNTER | Full table scan (minutes to hours) | Always filter reg_dt_tm |
+| Joining PERSON without ENCOUNTER filter | Joins 50M+ person rows | Drive from filtered ENCOUNTER |
+| SELECT * on CLINICAL_EVENT | Reads all BLOB columns | Select specific columns only |
+| Row-level processing in DETAIL | O(n) performance | Use SQL aggregation |
+| Hard-coded numeric code values | Breaks on code value rebuild | Always use uar_get_code_by() |
+| Nested subqueries without indexes | Full scan for each outer row | Use EXPAND or record structure |

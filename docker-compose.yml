@@ -1,0 +1,60 @@
+version: "3.9"
+
+# Cerna local development stack.
+# - redis: persistent cache + quota store (named volume survives restarts)
+# - app:   Streamlit on :8501 (waits for Redis to be healthy before starting)
+#
+# Usage:
+#   docker compose up            # start both services
+#   docker compose up redis      # start Redis only (run app.py locally)
+#   docker compose down          # stop and remove containers (data volume preserved)
+#   docker compose down -v       # also remove the redis_data volume (wipes cache)
+
+services:
+  redis:
+    image: redis:7-alpine
+    container_name: cerna_redis
+    restart: unless-stopped
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+    command: redis-server --save 60 1 --loglevel warning
+    networks:
+      - cerna_net
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
+      timeout: 5s
+      retries: 3
+      start_period: 5s
+
+  app:
+    build: .
+    container_name: cerna_app
+    restart: unless-stopped
+    ports:
+      - "8501:8501"
+    environment:
+      REDIS_HOST: redis       # Docker service name resolves inside the bridge network
+      REDIS_PORT: "6379"
+      REDIS_DB: "0"
+    env_file:
+      - .env                  # loads GROQ_API_KEY and any overrides
+    depends_on:
+      redis:
+        condition: service_healthy
+    networks:
+      - cerna_net
+    volumes:
+      - ./chroma_store:/app/chroma_store   # pre-built ChromaDB KB (read-only at runtime)
+      - ./data:/app/data                   # source documents (read-only at runtime)
+      - ./logs:/app/logs                   # structured JSONL trace logs (writable)
+
+volumes:
+  redis_data:
+    driver: local
+
+networks:
+  cerna_net:
+    driver: bridge

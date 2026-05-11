@@ -1,0 +1,181 @@
+# SOURCE: Cerner PowerChart CPOE Order Entry Workflow Guide
+# URL: https://wiki.cerner.com/display/public/1101PowerChartAmbulatory/CPOE+Order+Entry
+# MODULE: PowerChart
+# RETRIEVED: 2026-04-01
+# ---
+
+# Cerner PowerChart CPOE Order Entry Workflow Guide
+
+## What is CPOE?
+
+Computerized Provider Order Entry (CPOE) is the process by which clinicians directly enter medication orders, lab orders, radiology orders, nursing orders, and other clinical orders into Cerner PowerChart. CPOE eliminates handwritten orders and verbal orders in non-emergency situations, improving safety by enabling real-time clinical decision support (CDS) at the point of order entry.
+
+In Cerner Millennium, CPOE is integrated with the order catalog (all orderable items), CDS rules (allergy checks, drug-drug interactions, dose range alerts), pharmacy verification, and downstream order fulfillment workflows.
+
+## Accessing CPOE
+
+### From PowerChart
+
+1. Open the patient's chart.
+2. Click "Orders" in the chart navigation bar.
+3. Click "Add Order" to open the order entry interface.
+4. The CPOE order entry screen opens with an order search bar.
+
+### From a PowerPlan
+
+For structured, evidence-based order sets:
+1. Click "Add Order" > Search for PowerPlan by name or specialty.
+2. Select the PowerPlan.
+3. Review and modify pre-selected orders.
+4. Click "Sign" to submit all selected orders at once.
+
+## Order Entry Workflow
+
+### Searching for an Order
+
+1. Type the order name in the search bar (e.g., "amoxicillin", "CBC", "chest x-ray", "NPO after midnight").
+2. The system searches the order catalog by name, synonym, and mapped terms.
+3. Select the appropriate order from the results list.
+
+### Completing Order Details
+
+After selecting an order, a detail form opens with fields specific to the order type:
+
+**Medication Orders:**
+- Drug name and form (e.g., Metoprolol Succinate ER 25mg tablet)
+- Dose and dose unit (mg, mcg, units, etc.)
+- Route (PO, IV, SC, IM, etc.)
+- Frequency (daily, q8h, q12h, PRN, etc.)
+- Start date and time (immediate or scheduled)
+- Duration / stop date (e.g., 7 days, or "until discontinued")
+- PRN reason (if frequency is PRN)
+- Special instructions (free-text field for complex administration instructions)
+- Pharmacy priority (Routine, STAT, Urgent)
+
+**Lab Orders:**
+- Test name (e.g., Basic Metabolic Panel, Blood Culture × 2)
+- Collection time (ASAP, timed draw, with next routine)
+- Number of collections (for serial or repeat orders)
+- Clinical indication (optional)
+
+**Radiology Orders:**
+- Exam type and modality (CT, MRI, X-ray, ultrasound)
+- Body part and laterality
+- Contrast preference (with/without)
+- Clinical indication / reason for exam
+- Patient transport mode (if inpatient)
+- Urgency (Routine, Urgent, STAT)
+
+**Nursing Orders:**
+- Order type (vital signs, intake/output, wound care, fall precautions, etc.)
+- Frequency or duration
+- Special instructions
+
+### Clinical Decision Support Alerts
+
+As the provider completes order details, CDS rules fire in real time:
+
+**Allergy Alerts:**
+- If the ordered medication has a cross-reference match to a documented patient allergy, an allergy alert dialog appears.
+- The provider must either: Cancel the order, or Override with a documented clinical reason.
+- Allergy overrides are logged for pharmacy and safety review.
+
+**Drug-Drug Interaction Alerts:**
+- Significant interactions between the new order and existing medications generate an alert.
+- Alert severity levels: High (stop and review), Moderate (caution), Low (informational).
+- High-severity alerts require override documentation.
+
+**Dose Range Alerts:**
+- For weight-based medications, the system calculates the expected dose range from the patient's weight.
+- Doses outside the expected range generate a warning.
+- Particularly important for pediatric and oncology orders.
+
+**Duplicate Order Detection:**
+- If a similar order is already active, the system flags a potential duplicate.
+- Provider confirms the new order is intentional or cancels it.
+
+**Indication-Based Alerts:**
+- Some medications require documentation of clinical indication (e.g., anticoagulants require documented indication to enable full order entry).
+
+### Signing Orders
+
+After completing all required fields and addressing CDS alerts:
+1. Click "Sign" to submit the order.
+2. The order writes to the ORDERS table with order_status = "Ordered."
+3. Pharmacy orders route to the PharmNet verification queue.
+4. Lab orders route to the laboratory system (LIS) via HL7 or Cerner Lab.
+5. Radiology orders route to the RIS via HL7.
+6. Nursing orders appear in the nursing task list and eMAR.
+
+### Cosignature Workflows
+
+For mid-level providers (NPs, PAs, residents) where institutional policy requires cosignature:
+1. The order is placed and signed by the ordering provider.
+2. An InBasket message routes to the designated co-signer (attending physician).
+3. The attending reviews and cosigns in the InBasket.
+4. The co-signature is documented in the order record.
+
+## Order Management
+
+### Modifying an Active Order
+
+1. Open the Orders section of the patient's chart.
+2. Find the active order.
+3. Right-click > Modify.
+4. Change the order details as needed.
+5. Sign the modification.
+6. A new order record is created; the previous version is retained in history.
+
+### Discontinuing an Order
+
+1. Find the active order.
+2. Right-click > Discontinue.
+3. Select a discontinue reason (optional, may be required by policy).
+4. Sign.
+5. The order status changes to "Discontinued." Pharmacy is notified to stop dispensing.
+
+### Placing STAT Orders
+
+For urgent orders:
+1. Enter the order as normal.
+2. Set priority to "STAT."
+3. Sign.
+4. STAT pharmacy orders appear at the top of the pharmacy queue with a red STAT indicator.
+5. STAT lab and radiology orders are prioritized at their respective departments.
+
+## Order Catalog Management
+
+### Adding New Order Items
+
+Clinical informaticists or pharmacy staff manage the order catalog:
+1. Navigate to Cerner Administration > Order Management > Order Catalog.
+2. Search for the item to add or click "New."
+3. Complete required fields: order type, name, synonyms, default details.
+4. For medications: link to the PharmNet drug catalog item.
+5. Test the order in the CERT domain before activating in Production.
+
+### Order Synonyms
+
+Providers search for orders by name. Synonyms improve searchability:
+- Add common trade names as synonyms for generic medications (e.g., "Tylenol" → acetaminophen).
+- Add abbreviations (e.g., "CBC" → Complete Blood Count).
+- Add specialty-specific terms used by local clinicians.
+
+## Verbal and Telephone Orders
+
+Despite CPOE, verbal orders are permitted in emergencies:
+1. A nurse receives a verbal order from a provider.
+2. Nurse enters the order in PowerChart on the provider's behalf.
+3. The order is entered as a "Verbal Order" — marked with the ordering provider's name and date/time.
+4. The ordering provider must cosign the verbal order within the policy-defined timeframe (typically 24 hours).
+5. Unsigned verbal orders generate InBasket alerts to the ordering provider.
+
+## Best Practices
+
+1. Use PowerPlans for common clinical scenarios — they reduce individual order errors and promote evidence-based care.
+2. Never ignore allergy or high-severity drug-drug interaction alerts — they are the last safety barrier before pharmacy.
+3. Document clinical rationale when overriding CDS alerts — overrides without rationale may be a compliance risk.
+4. Use the Indication field on all high-risk medications (narcotics, anticoagulants, antibiotics) — enables antibiotic stewardship and controlled substance monitoring.
+5. STAT orders should be reserved for truly urgent clinical needs — over-use of STAT priority degrades pharmacy response times for genuinely urgent orders.
+6. Cosign verbal orders within policy-defined timeframes — overdue cosignatures generate compliance flags.
+7. Review CPOE alerts before dismissing — alert fatigue leads to missed critical warnings.

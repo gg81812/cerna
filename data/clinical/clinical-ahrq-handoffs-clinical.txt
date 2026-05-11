@@ -1,0 +1,279 @@
+# SOURCE: AHRQ PSNet Primer — Communication Between Clinicians
+# URL: https://psnet.ahrq.gov/primer/communication-between-clinicians
+# MODULE: Clinical Workflows
+# RETRIEVED: 2026-05-07
+# ---
+
+Communication Between Clinicians
+
+Citation Text:
+
+Communication Between Clinicians. PSNet [internet]. Rockville (MD): Agency for Healthcare Research and Quality, US Department of Health and Human Services. 2019.
+
+Copy Citation
+
+Format:
+
+Google Scholar
+BibTeX
+EndNote X3 XML
+EndNote 7 XML
+Endnote tagged
+PubMedId
+RIS
+
+Download Citation
+
+Save
+
+ 
+Save to your library
+
+Print
+
+Download PDF
+
+Share
+
+Facebook
+
+Twitter
+
+Linkedin
+
+Copy URL
+
+ Cite
+ 
+
+ Citation
+
+Citation Text:
+
+Communication Between Clinicians. PSNet [internet]. Rockville (MD): Agency for Healthcare Research and Quality, US Department of Health and Human Services. 2019.
+
+Copy Citation
+
+Format:
+
+Google Scholar
+BibTeX
+EndNote X3 XML
+EndNote 7 XML
+Endnote tagged
+PubMedId
+RIS
+
+Download Citation
+
+UC Davis PSNet Editorial Team | March 15, 2025
+
+PSNet primers are regularly reviewed and updated by the UC Davis PSNet Editorial Team to ensure that they reflect current research and practice in the patient safety field. Last reviewed in 2025.
+Background
+This Patient Safety Primer will discuss methods of improving communication between clinicians in the context of routine patient care and emergency situations. Issues involving communication between clinicians at times of transitions in care are discussed in the 
+Handoffs
+, 
+Readmission and Adverse Events after Hospital Discharge
+, and 
+Checklists
+ Patient Safety Primers.
+The dynamic environment in which health care is delivered requires clinicians to maintain 
+situational awareness.
+ The concept of situational awareness refers to the ability to access and track data relevant to the task at hand, comprehend the data, forecast what may happen based on the data, and formulate an appropriate plan in response. In a clinical context, maintaining situational awareness requires information sharing and open dialogue among clinicians in order to achieve a shared 
+mental model
+—the "big picture" of the patient's condition and immediate priorities for care.
+Situational awareness cannot be achieved without clear and high-quality communication between all of the providers who are caring for a patient. For example, if a patient on a medical ward begins to deteriorate, the bedside nurse will need to communicate information about the patient's known diagnoses, symptoms, vital signs, and acuity in a clear and timely fashion to the responding clinician who, in turn, will need to respond respectfully, process and comprehend the new information, and devise a plan. Any breakdown in this chain of communication will lead to impaired situational awareness, and patients may be harmed as a result. A WebM&M 
+case
+ details the death of an infant shortly after repair of a congenital heart defect. Both the intensive care unit team and the cardiac surgery team were aware of the patient's deteriorating condition, but each assumed the other was primarily managing the problem. Poor communication between the two teams meant the severity of the patient's condition was not appreciated until it was too late.
+Unfortunately, problems with communication between clinicians are pervasive and clearly result in preventable patient harm. Seminal studies have shown that poor levels of communication exist between clinicians at all levels of the health care system. The Joint Commission has found that communication issues are the most common root cause of sentinel events (serious and preventable patient harm incidents). In the operating room, poor communication has been 
+directly linked
+ to surgical complications and has also been implicated in 
+malpractice lawsuits
+ in multiple clinical settings.
+Methods of Improving Communication Between Providers
+The factors that impair effective communication between providers often relate to cultural norms and expectations within the health care environment. Rigid hierarchies, in which authority gradients discourage frontline workers from raising concerns with leadership, are persistent within health care and a known contributor to 
+preventable harm
+. Overtly 
+disruptive and unprofessional behavior
+ is less common, but has a chilling effect on communication and teamwork. More subtle issues, such as nonverbal cues, interpersonal relations, and group dynamics, can affect communication in ways that may not be readily apparent, even to the parties involved. In many ways, these factors contribute to the overall 
+culture of safety
+ within an organization.
+Approaches to improving communication between clinicians share common goals, but differ depending on the context. Efforts to enhance communication in the course of routine patient care have focused on developing standardized communication protocols for transmission of important information. For example, 
+read-back
+ protocols are now standard practice for communication of critical test results in order to reduce errors of omission. The 
+Situation-Background-Assessment-Recommendation (SBAR)
+ approach is widely used to facilitate communication between nurses and physicians by offering a standardized way of communicating the clinical assessment of a patient requiring acute attention. Used correctly, SBAR can be an effective tool to minimize 
+authority 
+gradients. Daily patient safety 
+huddles 
+enable all team members to participate in improving patient safety. 
+Successes and concerns from the prior day and concerns for the current day are shared by each team member, along with updates on patient safety measures and initiatives.
+At the health care system level, formal 
+teamwork training
+ programs explicitly focus on enhancing communication behaviors within teams, and a growing body of literature demonstrates that improved team behaviors lead to better patient outcomes. The 
+unit-based safety team
+ model, which emphasizes teamwork training approaches within a geographic unit, has also been effective in improving safety culture. Organizations are also taking a more proactive stance in addressing disruptive and unprofessional behavior by clinicians at all levels.
+Current Context
+The Joint Commission includes "improving staff communication" as one of its 
+National Patient Safety Goals
+, emphasizing the importance of communicating test results accurately. The National Quality Forum also includes multiple approaches to enhancing communication as part of the 
+Safe Practices for Better Healthcare
+.
+
+This project was funded under contract number 75Q80119C00004 from the Agency for Healthcare Research and Quality (AHRQ), U.S. Department of Health and Human Services. The authors are solely responsible for this report’s contents, findings, and conclusions, which do not necessarily represent the views of AHRQ. Readers should not interpret any statement in this report as an official position of AHRQ or of the U.S. Department of Health and Human Services. None of the authors has any affiliation or financial involvement that conflicts with the material presented in this report. 
+View AHRQ Disclaimers
+
+Save
+
+ 
+Save to your library
+
+Print
+
+Download PDF
+
+Share
+
+Facebook
+
+Twitter
+
+Linkedin
+
+Copy URL
+
+ Cite
+ 
+
+ Citation
+
+Citation Text:
+
+Communication Between Clinicians. PSNet [internet]. Rockville (MD): Agency for Healthcare Research and Quality, US Department of Health and Human Services. 2019.
+
+Copy Citation
+
+Format:
+
+Google Scholar
+BibTeX
+EndNote X3 XML
+EndNote 7 XML
+Endnote tagged
+PubMedId
+RIS
+
+Download Citation
+
+Sections
+
+Background
+
+Current Context
+
+Related Patient Safety Primers
+
+ 
+Culture of Safety
+September 15, 2024
+
+Teamwork Training
+September 15, 2024
+
+Disruptive and Unprofessional Behavior
+March 15, 2025
+
+Editor's Picks
+
+ 
+A health system that won't learn from its mistakes.
+September 21, 2022
+
+Communication disparities between nursing home team members.
+July 20, 2022
+
+Frequency and nature of communication and handoff failures in medical malpractice claims.
+April 6, 2022
+
+Associations between safety outcomes and communication practices among pediatric nurses in the United States.
+January 19, 2022
+
+View More
+
+Related WebM&M
+
+ 
+The Impact of Communication on Medication Errors
+March 15, 2021
+
+The Consequences of Miscommunication Regarding a Possible Artifact
+June 30, 2021
+
+Communication Error in a Closed ICU
+May 1, 2017
+
+Communication With Consultants
+June 1, 2016
+
+View More
+
+Related Resources
+
+Patient Safety Innovations
+
+Ambulatory Safety Nets to Reduce Missed and Delayed Diagnoses of Cancer
+
+July 31, 2023
+
+Improving safety and quality of care with enhanced teamwork through operating room briefings.
+
+October 1, 2014
+
+The creation and impact of a dedicated section on quality and patient safety in a clinical academic department.
+
+July 2, 2014
+
+Eliminating CAUTI: Interim Data Report: A National Patient Safety Imperative. 
+
+October 9, 2013
+
+Patterns of communication breakdowns resulting in injury to surgical patients. 
+
+August 26, 2011
+
+Assessing and improving safety climate in a large cohort of intensive care units. 
+
+May 11, 2011
+
+Assessing and improving safety culture throughout an academic medical centre: a prospective cohort study. 
+
+December 22, 2010
+
+Integrating CUSP and TRIP to improve patient safety. 
+
+November 24, 2010
+
+The Patient Safety Group. 
+
+August 9, 2006
+
+WebM&M Cases
+
+40 of K
+
+November 1, 2003
+
+View More
+
+See More About The Topic
+
+ 
+ Health Care Providers
+
+ Communication Improvement
+
+ Read Back Protocols
+
+ SBAR
+
+ Unit Based Safety Teams

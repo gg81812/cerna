@@ -1,0 +1,141 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Re-running 14 queries; marker=clarify_fix_remaining_part2
+[Retriever] Loading embedding model…
+Loading weights:   0%|          | 0/391 [00:00<?, ?it/s]Loading weights:  71%|#######1  | 279/391 [00:00<00:00, 2599.30it/s]Loading weights: 100%|##########| 391/391 [00:00<00:00, 3398.00it/s]
+[1mBertModel LOAD REPORT[0m from: BAAI/bge-large-en-v1.5
+Key                     | Status     |  | 
+------------------------+------------+--+-
+embeddings.position_ids | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+[Retriever] Building BM25 index…
+[Retriever] Ready.
+[Orchestrator] Ready.
+[01/14] hs-clerk-006           Need to add a secondary insurance — system isn't lettin... [Redis] Unavailable (Timeout connecting to server). Falling back to in-memory cache.
+[QueryRewriter] intent=troubleshooting  modules=['REVENUE_CYCLE']  ambiguous=False  needs_clarify=False  formal='secondary insurance addition workflow in patient accounting'
+[Retrieve:pass1] strategy=parallel formal+variants  avg_top3=0.677  threshold=0.55
+[Retrieve:pass2] skipped — pass1 quality sufficient (avg_top3=0.677>=0.55)
+[Retrieve:pass3] skipped — pass2 quality sufficient (avg_top3=0.677>=0.55)
+[LLM] error category='rate_limit' status=429 attempt=1 ts=2026-05-08T10:43:39.834067+00:00 query='secondary insurance addition workflow in patient accounting'
+[LLM] error category='rate_limit' status=429 attempt=2 ts=2026-05-08T10:43:41.027051+00:00 query='secondary insurance addition workflow in patient accounting'
+[LLM] error category='rate_limit' status=429 attempt=3 ts=2026-05-08T10:43:44.055541+00:00 query='secondary insurance addition workflow in patient accounting'
+[LLM] 8b_fallback succeeded ts=2026-05-08T10:43:46.997458+00:00
+FAIL(honest) khr=80%  conf=medium  behav=answer  23727ms
+[02/14] hs-clerk-010           Charge entry is rejecting because the procedure code is... [QueryRewriter] intent=troubleshooting  modules=['REVENUE_CYCLE']  ambiguous=False  needs_clarify=False  formal='charge entry procedure code validation for patient age'
+[Retrieve:pass1] strategy=parallel formal+variants  avg_top3=0.680  threshold=0.55
+[Retrieve:pass2] skipped — pass1 quality sufficient (avg_top3=0.680>=0.55)
+[Retrieve:pass3] skipped — pass2 quality sufficient (avg_top3=0.680>=0.55)
+FAIL(honest) khr=60%  conf=high  behav=answer  12166ms
+[03/14] hs-cross-001           Pharmacy says they sent the order but nursing never got... [QueryRewriter] intent=troubleshooting  modules=['CLINICAL']  ambiguous=False  needs_clarify=False  formal='BCMA medication order task workflow stuck between pharmacy a'
+[Retrieve:pass1] strategy=parallel formal+variants  avg_top3=0.693  threshold=0.55
+[Retrieve:pass2] skipped — pass1 quality sufficient (avg_top3=0.693>=0.55)
+[Retrieve:pass3] skipped — pass2 quality sufficient (avg_top3=0.693>=0.55)
+[LLM] error category='rate_limit' status=429 attempt=1 ts=2026-05-08T10:44:36.157332+00:00 query='BCMA medication order task workflow stuck between pharmacy and nursing'
+[LLM] error category='rate_limit' status=429 attempt=2 ts=2026-05-08T10:44:37.432518+00:00 query='BCMA medication order task workflow stuck between pharmacy and nursing'
+[LLM] circuit_breaker OPEN — 5 failures in 60s; skipping Groq for 120s
+FAIL(honest) khr=80%  conf=medium  behav=answer  25836ms
+[04/14] hs-cross-004           Discharge summary signed but the prescription didn't tr... [LLM] circuit_breaker open — skipping fast 8B; query='Discharge summary signed but the prescri'
+[QueryRewriter] understand_query: pool/backoff returned None; falling back.
+[Retrieve:pass1] strategy=parallel formal+variants  avg_top3=0.557  threshold=0.55
+[Retrieve:pass2] skipped — pass1 quality sufficient (avg_top3=0.557>=0.55)
+[Retrieve:pass3] skipped — pass2 quality sufficient (avg_top3=0.557>=0.55)
+[LLM] circuit_breaker open — skipping primary model; query='Discharge summary signed but the prescri'
+[LLM] final_fallback ts=2026-05-08T10:44:56.148592+00:00 query="Discharge summary signed but the prescription didn't transmit to the pharmacy — "
+FAIL(honest) khr=0%  conf=low  behav=answer  5991ms
+[05/14] hs-cross-005           Lab result came in but didn't update the patient's prob... [LLM] circuit_breaker open — skipping fast 8B; query="Lab result came in but didn't update the"
+[QueryRewriter] understand_query: pool/backoff returned None; falling back.
+[Retrieve:pass1] strategy=parallel formal+variants  avg_top3=0.591  threshold=0.55
+[Retrieve:pass2] skipped — pass1 quality sufficient (avg_top3=0.591>=0.55)
+[Retrieve:pass3] skipped — pass2 quality sufficient (avg_top3=0.591>=0.55)
+[LLM] circuit_breaker open — skipping primary model; query="Lab result came in but didn't update the"
+[LLM] final_fallback ts=2026-05-08T10:45:10.386222+00:00 query="Lab result came in but didn't update the patient's problem list — should I add i"
+FAIL(honest) khr=20%  conf=low  behav=answer  6250ms
+[06/14] hs-cross-007           Patient's allergy was added in registration but BCMA st... [LLM] circuit_breaker open — skipping fast 8B; query="Patient's allergy was added in registrat"
+[QueryRewriter] understand_query: pool/backoff returned None; falling back.
+[Retrieve:pass1] strategy=parallel formal+variants  avg_top3=0.561  threshold=0.55
+[Retrieve:pass2] skipped — pass1 quality sufficient (avg_top3=0.561>=0.55)
+[Retrieve:pass3] skipped — pass2 quality sufficient (avg_top3=0.561>=0.55)
+[LLM] circuit_breaker open — skipping primary model; query="Patient's allergy was added in registrat"
+[LLM] final_fallback ts=2026-05-08T10:45:24.596711+00:00 query="Patient's allergy was added in registration but BCMA still shows nothing"
+FAIL(honest) khr=0%  conf=low  behav=answer  6186ms
+[07/14] hs-cross-008           Patient was registered as inpatient but discharge says ... [LLM] circuit_breaker open — skipping fast 8B; query='Patient was registered as inpatient but '
+[QueryRewriter] understand_query: pool/backoff returned None; falling back.
+[Retrieve:pass1] strategy=parallel formal+variants  avg_top3=0.654  threshold=0.55
+[Retrieve:pass2] skipped — pass1 quality sufficient (avg_top3=0.654>=0.55)
+[Retrieve:pass3] skipped — pass2 quality sufficient (avg_top3=0.654>=0.55)
+[LLM] circuit_breaker open — skipping primary model; query='Patient was registered as inpatient but '
+[LLM] final_fallback ts=2026-05-08T10:45:40.593225+00:00 query='patient [NAME_REDACTED] as inpatient but discharge says observation — which billi'
+FAIL(honest) khr=0%  conf=low  behav=answer  7995ms
+[08/14] hs-cross-010           Patient transferred from ED to ICU but the medication l... [LLM] circuit_breaker open — skipping fast 8B; query='Patient transferred from ED to ICU but t'
+[QueryRewriter] understand_query: pool/backoff returned None; falling back.
+[Retrieve:pass1] strategy=parallel formal+variants  avg_top3=0.620  threshold=0.55
+[Retrieve:pass2] skipped — pass1 quality sufficient (avg_top3=0.620>=0.55)
+[Retrieve:pass3] skipped — pass2 quality sufficient (avg_top3=0.620>=0.55)
+[LLM] circuit_breaker open — skipping primary model; query='Patient transferred from ED to ICU but t'
+[LLM] final_fallback ts=2026-05-08T10:45:54.657808+00:00 query="patient [NAME_REDACTED] ED to ICU but the medication list didn't carry over — w"
+FAIL(honest) khr=20%  conf=low  behav=answer  6062ms
+[09/14] hs-nurse-003           Discharge note gone — I documented it an hour ago and n... [LLM] circuit_breaker open — skipping fast 8B; query='Discharge note gone — I documented it an'
+[QueryRewriter] understand_query: pool/backoff returned None; falling back.
+[Retrieve:pass1] strategy=parallel formal+variants  avg_top3=0.593  threshold=0.55
+[Retrieve:pass2] skipped — pass1 quality sufficient (avg_top3=0.593>=0.55)
+[Retrieve:pass3] skipped — pass2 quality sufficient (avg_top3=0.593>=0.55)
+[LLM] circuit_breaker open — skipping primary model; query='Discharge note gone — I documented it an'
+[LLM] final_fallback ts=2026-05-08T10:46:06.458003+00:00 query="Discharge note gone — I documented it an hour ago and now it's not there"
+FAIL(honest) khr=20%  conf=low  behav=answer  3797ms
+[10/14] hs-nurse-007           PRN med showing up as scheduled on the MAR — did pharma... [LLM] circuit_breaker open — skipping fast 8B; query='PRN med showing up as scheduled on the M'
+[QueryRewriter] understand_query: pool/backoff returned None; falling back.
+[Retrieve:pass1] strategy=parallel formal+variants  avg_top3=0.656  threshold=0.55
+[Retrieve:pass2] skipped — pass1 quality sufficient (avg_top3=0.656>=0.55)
+[Retrieve:pass3] skipped — pass2 quality sufficient (avg_top3=0.656>=0.55)
+[LLM] circuit_breaker open — skipping primary model; query='PRN med showing up as scheduled on the M'
+[LLM] final_fallback ts=2026-05-08T10:46:20.550699+00:00 query='PRN med showing up as scheduled on the MAR — did pharmacy put it in wrong?'
+FAIL(honest) khr=0%  conf=low  behav=answer  6091ms
+[11/14] hs-nurse-011           How do I record vital signs that I took manually but th... [LLM] circuit_breaker open — skipping fast 8B; query='How do I record vital signs that I took '
+[QueryRewriter] understand_query: pool/backoff returned None; falling back.
+[Retrieve:pass1] strategy=parallel formal+variants  avg_top3=0.599  threshold=0.55
+[Retrieve:pass2] skipped — pass1 quality sufficient (avg_top3=0.599>=0.55)
+[Retrieve:pass3] skipped — pass2 quality sufficient (avg_top3=0.599>=0.55)
+[LLM] circuit_breaker open — skipping primary model; query='How do I record vital signs that I took '
+[LLM] final_fallback ts=2026-05-08T10:46:33.378234+00:00 query="How do I record vital signs that I took manually but the BP cuff didn't sync?"
+FAIL(honest) khr=20%  conf=low  behav=answer  4833ms
+[12/14] hs-nurse-012           Can't find a patient on my task list — they're admitted... [LLM] circuit_breaker CLOSED — resuming normal operation
+[QueryRewriter] intent=troubleshooting  modules=['CLINICAL']  ambiguous=False  needs_clarify=False  formal='task list patient admission workflow'
+[Retrieve:pass1] strategy=parallel formal+variants  avg_top3=0.646  threshold=0.55
+[Retrieve:pass2] skipped — pass1 quality sufficient (avg_top3=0.646>=0.55)
+[Retrieve:pass3] skipped — pass2 quality sufficient (avg_top3=0.646>=0.55)
+[LLM] error category='rate_limit' status=429 attempt=1 ts=2026-05-08T10:46:50.293680+00:00 query='task list patient [NAME_REDACTED]'
+[LLM] error category='rate_limit' status=429 attempt=2 ts=2026-05-08T10:46:53.421687+00:00 query='task list patient [NAME_REDACTED]'
+[LLM] error category='rate_limit' status=429 attempt=3 ts=2026-05-08T10:46:56.461575+00:00 query='task list patient [NAME_REDACTED]'
+[LLM] 8b_fallback succeeded ts=2026-05-08T10:46:59.788134+00:00
+FAIL(honest) khr=60%  conf=medium  behav=answer  19391ms
+[13/14] hs-nurse-014           eMAR isn't showing the last dose — pharmacy says the or... [QueryRewriter] intent=troubleshooting  modules=['CLINICAL']  ambiguous=False  needs_clarify=True  formal='eMAR medication administration record last dose visibility w'
+PASS         khr=20%  conf=low  behav=clarify  2987ms
+[14/14] hs-nurse-015           Patient's INR is way out of range and dose order doesn'... [QueryRewriter] intent=troubleshooting  modules=['CLINICAL']  ambiguous=False  needs_clarify=False  formal='INR out-of-range medication order discrepancy workflow'
+[Retrieve:pass1] strategy=parallel formal+variants  avg_top3=0.706  threshold=0.55
+[Retrieve:pass2] skipped — pass1 quality sufficient (avg_top3=0.706>=0.55)
+[Retrieve:pass3] skipped — pass2 quality sufficient (avg_top3=0.706>=0.55)
+[LLM] error category='rate_limit' status=429 attempt=1 ts=2026-05-08T10:47:26.833695+00:00 query='INR out-of-range medication order discrepancy workflow'
+[LLM] error category='rate_limit' status=429 attempt=2 ts=2026-05-08T10:47:29.930738+00:00 query='INR out-of-range medication order discrepancy workflow'
+[LLM] circuit_breaker OPEN — 5 failures in 60s; skipping Groq for 120s
+[LLM] error category='rate_limit' status=429 attempt=3 ts=2026-05-08T10:47:32.957312+00:00 query='INR out-of-range medication order discrepancy workflow'
+[LLM] circuit_breaker OPEN — 6 failures in 60s; skipping Groq for 120s
+[LLM] final_fallback ts=2026-05-08T10:47:32.983260+00:00 query='INR out-of-range medication order discrepancy workflow'
+FAIL(honest) khr=0%  conf=low  behav=answer  13222ms
+
+================================================================
+Done. 1/14 pass.  Written to eval\probe_v2_remaining_part2.jsonl
+  hs-clerk-006           expected=clarify  actual=answer   FAIL
+  hs-clerk-010           expected=clarify  actual=answer   FAIL
+  hs-cross-001           expected=clarify  actual=answer   FAIL
+  hs-cross-004           expected=clarify  actual=answer   FAIL
+  hs-cross-005           expected=clarify  actual=answer   FAIL
+  hs-cross-007           expected=clarify  actual=answer   FAIL
+  hs-cross-008           expected=answer   actual=answer   FAIL
+  hs-cross-010           expected=clarify  actual=answer   FAIL
+  hs-nurse-003           expected=clarify  actual=answer   FAIL
+  hs-nurse-007           expected=clarify  actual=answer   FAIL
+  hs-nurse-011           expected=answer   actual=answer   FAIL
+  hs-nurse-012           expected=clarify  actual=answer   FAIL
+  hs-nurse-014           expected=clarify  actual=clarify  PASS
+  hs-nurse-015           expected=refuse   actual=answer   FAIL

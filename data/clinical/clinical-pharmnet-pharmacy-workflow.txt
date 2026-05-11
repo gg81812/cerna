@@ -1,0 +1,160 @@
+# SOURCE: Cerner PharmNet Pharmacy Workflow Guide
+# URL: https://wiki.cerner.com/display/public/1101clinical/PharmNet+Pharmacy+Workflow
+# MODULE: Clinical Workflows
+# RETRIEVED: 2026-04-01
+# ---
+
+# Cerner PharmNet Pharmacy Workflow Guide
+
+## What is PharmNet?
+
+PharmNet is Cerner Millennium's integrated pharmacy module. It provides a complete pharmacy information system covering inpatient and outpatient pharmacy operations: medication order verification, dispensing workflow, medication preparation (IV compounding), clinical pharmacist review, controlled substance tracking, and formulary management.
+
+PharmNet integrates tightly with PowerChart CPOE (orders originate in CPOE), eMAR (administration records visible to pharmacy), and BCMA (dispensing confirmation for barcode administration).
+
+## PharmNet Core Modules
+
+- **Inpatient Pharmacy** — handles acute care medication verification, dispensing, and ADC (Automated Dispensing Cabinet) management
+- **Outpatient Pharmacy** — handles retail/ambulatory prescription dispensing, pricing, and label printing
+- **IV Room / IV Flow** — manages IV admixture compounding workflows with gravimetric or barcode verification
+- **Controlled Substance Management** — tracks controlled substance dispensing, returns, and waste reconciliation
+- **Pharmacist Clinical Review** — tools for clinical pharmacist activities: medication reconciliation, anticoagulation management, renal dose checking, kinetics dosing
+
+## Inpatient Pharmacy Workflow
+
+### Order Verification Queue
+
+When a provider places a medication order in CPOE:
+1. The order appears immediately in the PharmNet verification queue.
+2. Orders are prioritized by STAT flag and urgency.
+3. The verifying pharmacist sees: medication name, dose, route, frequency, ordering provider, allergy profile, and current medication list.
+
+Pharmacist verification steps:
+1. Open the order in the verification queue.
+2. Review: clinical appropriateness, dose (may use weight-based dosing calculator), route, frequency, allergy cross-references, drug-drug interactions.
+3. If appropriate: click Verify — order status changes to "Verified" and the medication activates in eMAR.
+4. If modification needed: edit dose/route/frequency and document the change reason; re-route to ordering provider if required.
+5. If inappropriate: click Deny or Contact Provider — order returns to the provider with a pharmacist note.
+
+### Dispensing Queue
+
+After verification:
+1. The medication appears in the dispensing queue with the patient's location and assigned ADC.
+2. Pharmacy tech retrieves or prepares the medication.
+3. For unit-dose oral medications: retrieve from bulk stock or repackager; apply patient-specific barcode label if not pre-labeled.
+4. For IV medications: see IV Room workflow.
+5. Pharmacist performs final check (verify product matches order).
+6. Dispense event recorded: medication, dose, ADC/location, dispense time.
+7. Medication delivered to unit ADC or directly to nurse.
+
+### ADC (Automated Dispensing Cabinet) Integration
+
+Pyxis, Omnicell, and other ADC vendors integrate with PharmNet:
+- PharmNet pushes verified, dispensed medication profiles to the ADC.
+- The ADC only unlocks the correct medication pocket for verified medications.
+- Override functionality allows emergency access with documented reason.
+- ADC transactions flow back to PharmNet for charge capture and controlled substance reconciliation.
+
+## IV Room Workflow
+
+### IV Admixture Preparation
+
+1. Pharmacist verifies the IV order in the verification queue.
+2. A preparation label is generated for the IV room.
+3. Pharmacy tech prepares the IV admixture:
+   - Retrieves base solution (NS, D5W, LR) and drug additive vials.
+   - Scans base solution barcode and drug additive barcode (gravimetric or barcode verification).
+   - Mixes the IV solution using aseptic technique.
+4. Pharmacist performs final IV check (correct drug, concentration, volume, patient label, expiration).
+5. IV bag labeled with: patient name, MRN, medication name, concentration, rate, infusion instructions, and expiration date/time.
+6. IV bag delivered to the nursing unit.
+
+### IV Barcode Verification (IVFlow)
+
+PharmNet IVFlow adds barcode scanning verification to IV preparation:
+- Scan each additive barcode during compounding.
+- System confirms each scanned item matches the compounding order.
+- Reduces preparation errors from look-alike/sound-alike vials.
+- Gravimetric verification (weighing before and after additive injection) provides a secondary check.
+
+## Controlled Substance Management
+
+### Tracking Controlled Substances
+
+All Schedule II–V controlled substances are tracked from receipt to administration or waste:
+1. **Receipt**: Pharmacy receives controlled substances from wholesaler. DEA order form (222) reconciled with received quantity. Recorded in PharmNet inventory.
+2. **Dispensing**: Controlled substances dispensed to ADC or directly to nurse. Each dispense decrements perpetual inventory.
+3. **Administration**: Nurse removes ordered dose from ADC. BCMA confirms administration.
+4. **Waste**: Unused partial doses must be witnessed and wasted. Waste recorded in ADC and PharmNet.
+5. **Returns**: Unopened medications returned from the unit reconciled back to PharmNet inventory.
+
+### Controlled Substance Reconciliation
+
+Discrepancy resolution:
+- Run the Controlled Substance Reconciliation report in PharmNet daily.
+- Any count discrepancy (dispensed ≠ administered + wasted + returned) triggers an investigation.
+- Unresolved discrepancies must be reported to the pharmacist in charge and potentially to the DEA.
+
+## Outpatient / Retail Pharmacy Workflow
+
+For organizations with an outpatient pharmacy integrated with Cerner:
+1. Provider generates a prescription from CPOE or from the ambulatory visit.
+2. Prescription transmits electronically (via SureScripts or direct integration) to the PharmNet outpatient queue.
+3. Pharmacy technician enters or reviews the prescription.
+4. Pharmacist verifies: drug, dose, route, frequency, days' supply, allergy check, insurance prior authorization status.
+5. Technician fills the prescription.
+6. Pharmacist performs final dispensing check.
+7. Patient counseling offered at pickup.
+8. Label printed with patient name, prescriber, medication, dose, route, frequency, refills remaining.
+
+## Formulary Management
+
+PharmNet manages the organization's drug formulary:
+- **Formulary** — approved medications available for ordering in CPOE.
+- **Non-formulary** — medications requiring special approval (requires pharmacist or P&T committee authorization).
+- **Therapeutic substitution** — automatic substitution of a formulary equivalent for a non-formulary order (must be approved by the P&T committee and disclosed in the order).
+- **Dosing limits** — maximum doses enforced during verification; alerts display if an ordered dose exceeds the limit.
+
+Formulary management tasks:
+1. Open PharmNet Administration > Formulary Management.
+2. Add/remove medications, set default doses and dosing limits.
+3. Configure therapeutic substitution rules.
+4. Update drug pricing and NDC records.
+
+## Clinical Pharmacist Tools
+
+### Anticoagulation Management
+PharmNet provides a dedicated anticoagulation module:
+- Heparin drip protocol management with real-time aPTT dose adjustment.
+- Warfarin dosing calculator with INR trend tracking.
+- Direct oral anticoagulant (DOAC) monitoring.
+- Integration with lab results for automatic dose recommendations.
+
+### Renal Dose Adjustment
+- Pharmacist receives alerts for renally-cleared medications when patient's creatinine clearance falls below thresholds.
+- PharmNet calculates CrCl from the most recent serum creatinine and patient demographics.
+- Dose adjustment recommendations based on configured protocols.
+
+### Kinetics Dosing (Vancomycin / Aminoglycosides)
+- Pharmacokinetics dosing module calculates individualized dosing for vancomycin and aminoglycosides based on levels drawn at specific times.
+- Integrated with lab results pull from CLINICAL_EVENT.
+
+## Reporting and Analytics
+
+Key PharmNet reports available via Discern Analytics:
+- Medication override report by unit and by drug
+- Controlled substance reconciliation summary
+- Formulary compliance rate
+- Antibiotic stewardship reports (days of therapy, defined daily dose)
+- ADC inventory variance report
+- Time to first dose (for STAT medications)
+- Pharmacy verification turnaround time
+
+## Best Practices
+
+1. Prioritize STAT orders — ensure verification within 15–30 minutes of order placement.
+2. Never skip the final dispensing check — the pharmacist check is the last safety barrier before the patient receives the medication.
+3. Investigate every ADC override — high override rates indicate formulary gaps or workflow issues.
+4. Reconcile controlled substances daily — do not allow discrepancies to accumulate.
+5. Document every drug-drug interaction override with clinical rationale.
+6. Keep the formulary current — outdated entries cause CPOE ordering confusion.

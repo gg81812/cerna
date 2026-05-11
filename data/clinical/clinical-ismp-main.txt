@@ -1,0 +1,69 @@
+ISMP — Institute for Safe Medication Practices
+Source: https://home.ecri.org/pages/ismp (ISMP, now part of ECRI)
+Scraped: 2026-04-19
+
+==============================================================
+
+Organization Overview
+
+ISMP (Institute for Safe Medication Practices) is a nonprofit organization dedicated to preventing medication errors and adverse drug events. For over 30 years, the organization has served as "a global leader in patient safety" with research, education, and advocacy as core functions.
+
+ISMP is now part of ECRI, a nonprofit that applies scientific research to improve patient care.
+
+Mission Statement
+
+ISMP aims to create "A Safer World by Preventing Medication Errors" through collaborative relationships designed to protect millions of patients globally.
+
+Core Services
+
+Consulting Services:
+The organization offers customized analysis and roadmaps to reduce medication errors for healthcare practitioners and multi-site enterprises.
+
+Education Programs:
+ISMP provides innovative medication safety training for all staff involved in the medication use process, addressing rapidly changing healthcare challenges.
+
+Newsletters:
+The newsletters deliver guidance informed by thousands of error reports submitted through:
+- National Medication Errors Reporting Program (MERP)
+- National Vaccine Errors Reporting Program (VERP)
+
+Memberships:
+Programs deliver "actionable guidance and practical strategies" for professionals managing medication and vaccine safety risks.
+
+Error Reporting
+
+The organization maintains an error reporting system enabling healthcare providers to submit details about medication and vaccine errors, facilitating identification of causes and prevention strategies.
+
+ISMP Guidelines Most Relevant to Cerner Implementations
+
+High-Alert Medications:
+ISMP maintains the High-Alert Medications list — drugs that bear a heightened risk of causing significant patient harm when used in error. These include:
+- Anticoagulants (heparin, warfarin)
+- Insulin
+- Opioids
+- Concentrated electrolytes
+- Chemotherapy agents
+
+Cerner PharmNet and BCMA implement high-alert medication warnings through:
+- Hard stops requiring dual verification for high-alert drugs
+- Automated dispensing cabinet (ADC) configuration restrictions
+- BCMA scan confirmation requirements
+- CDS alerts for dosing thresholds
+
+ISMP Recommendations for CPOE Systems
+
+ISMP guidance directly shapes Cerner CPOE configuration:
+- Dose range checking: Configure min/max dose alerts in PharmNet
+- Duplicate order checking: Alert when same drug ordered twice
+- Allergy checking: Cross-reference ordered medication against documented allergies
+- Drug-drug interaction checking: Alert on clinically significant interactions
+- Weight-based dosing: Automatic calculation based on patient weight in kg
+- Renal dosing adjustment: Alert when creatinine clearance indicates dose reduction needed
+
+Medication Reconciliation
+
+ISMP emphasizes medication reconciliation at all care transitions. Cerner supports this through:
+- Admission medication history documentation
+- Home medication list management
+- Discharge medication reconciliation workflow
+- Best Practice Advisories (BPAs) for incomplete reconciliation

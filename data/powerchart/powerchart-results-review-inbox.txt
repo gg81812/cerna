@@ -1,0 +1,162 @@
+# SOURCE: Cerner PowerChart Results Review and InBasket Guide
+# URL: https://wiki.cerner.com/display/public/1101PowerChartAmbulatory/Results+Review+InBasket
+# MODULE: PowerChart
+# RETRIEVED: 2026-04-01
+# ---
+
+# Cerner PowerChart Results Review and InBasket Guide
+
+## Results Review in PowerChart
+
+### Accessing Results
+
+From a patient's chart in PowerChart:
+1. Click "Results" in the chart navigation bar.
+2. Results are organized by category:
+   - **Labs** — all laboratory results
+   - **Radiology** — imaging reports
+   - **Vital Signs** — documented vital signs
+   - **Documents** — transcribed reports and external documents
+   - **Other** — specialty results (cardiology, pulmonary, etc.)
+
+### Lab Results View
+
+The lab results section offers multiple views:
+
+**List View:**
+- Chronological list of all lab results
+- Each result shows: test name, result value, reference range, flag (Normal, Abnormal Low/High, Critical Low/High), collection date/time, result date/time, ordering provider
+
+**Flowsheet View:**
+- Time-based grid showing selected lab panels across multiple collection dates
+- Ideal for trending: BMP across 5 days, CBC trend during sepsis treatment
+- Columns = collection dates; Rows = individual lab tests
+
+**Graph View:**
+- Trend line chart for a single lab value over time
+- Useful for: trending creatinine during AKI recovery, INR during warfarin therapy, hemoglobin during GI bleed management
+
+### Critical Value Notification
+
+When a lab result is flagged as Critical:
+1. The lab system notifies the ordering provider via phone call (regulatory requirement).
+2. A critical result notification appears in the provider's InBasket.
+3. The result appears with a red "Critical" flag in the Results view.
+4. The provider must acknowledge the critical result — documenting that they were aware and what action was taken.
+
+Unacknowledged critical results generate repeat InBasket notifications and may escalate to the charge nurse or attending if the ordering provider is not reachable.
+
+### Radiology Results
+
+Radiology reports are transcribed by radiologists in the RIS (Radiology Information System) and transmitted to PowerChart via HL7 interface:
+- Report appears in the Results > Radiology section.
+- Report status: Preliminary (transcribed, not finalized) vs. Final (radiologist attested).
+- For critical imaging findings, the radiologist contacts the ordering provider directly (per Joint Commission requirements) AND files a critical result in the InBasket.
+
+### Vital Signs Flowsheet
+
+1. Navigate to Results > Vital Signs.
+2. View: Temperature, Heart Rate, Blood Pressure (systolic/diastolic), Respiratory Rate, SpO2, Weight.
+3. Select a date range to see the trend.
+4. Switch to Graph View to visualize trends.
+
+## The InBasket (Message Center)
+
+### What is the InBasket?
+
+The InBasket (Message Center) is PowerChart's integrated inbox for all clinical communication requiring provider action. It functions like a secure, role-aware email system connected to clinical workflows.
+
+Access:
+- Click the "Message Center" or "InBasket" icon in the PowerChart toolbar.
+- Or access from the PowerChart home screen (InBasket panel).
+
+### InBasket Folder Types
+
+**Results:**
+- Lab results routed to the ordering provider for review and signature.
+- Critical result notifications requiring immediate acknowledgment.
+- Radiology reports requiring provider acknowledgment.
+
+**Orders:**
+- Verbal/telephone order cosignature requests — unsigned verbal orders from nursing staff awaiting provider signature.
+- CPOE-related notifications (e.g., pharmacy-modified an order — requires provider awareness).
+
+**Documents:**
+- Notes awaiting cosignature (resident notes, student notes pending attending co-sign).
+- Notes signed by consulting providers that require the primary team's awareness.
+
+**Patient Messages:**
+- Messages from patients via MyChart (the patient portal).
+- Secure, asynchronous messaging allowing patients to ask non-urgent questions.
+
+**Prescription Refills (Ambulatory):**
+- Refill requests submitted by the patient's outpatient pharmacy via SureScripts.
+- Provider reviews and approves/denies electronically.
+
+**Administrative:**
+- System-generated administrative alerts.
+- Peer review requests.
+- Quality improvement notifications.
+
+### Processing InBasket Messages
+
+#### Reviewing and Acknowledging Lab Results
+
+1. Open the Results folder in the InBasket.
+2. Click on a pending result.
+3. Review the result value and clinical context.
+4. Select an action:
+   - **Sign** — provider acknowledges the result (appears in the patient's chart as reviewed).
+   - **Sign and Forward** — review and forward to a colleague (e.g., referring the result to a specialist).
+   - **Sign and Create Note** — review and immediately open a new note referencing the result.
+   - **Delegate** — route to another provider (use for results outside your scope or when covering for a colleague).
+5. Each acknowledged result is stamped with provider name and timestamp.
+
+#### Cosigning Verbal Orders
+
+1. Open the Orders folder.
+2. Click on the pending verbal order.
+3. Review the order details (medication, dose, route, frequency).
+4. If correct: click "Sign" to cosign.
+5. If incorrect: click "Modify" to correct before signing.
+
+#### Responding to Patient Messages (MyChart)
+
+1. Open the Patient Messages folder.
+2. Read the patient's message.
+3. Compose a reply in the secure messaging interface.
+4. Click "Send" — the reply is delivered to the patient's MyChart inbox.
+5. Clinical staff may be designated to triage patient messages and escalate to providers when clinical judgment is needed.
+
+### InBasket Management Best Practices
+
+**Pool / Shared InBaskets:**
+For practices and clinical services, shared InBaskets allow a pool of providers to manage messages collectively:
+- All providers in the pool see the same messages.
+- The first provider to act on a message removes it from others' queues.
+- Useful for on-call coverage and team-based care models.
+
+**Coverage / Proxy Settings:**
+When a provider is on vacation or unavailable:
+1. Open InBasket > Settings > Coverage.
+2. Set a proxy — InBasket messages are forwarded to the designated covering provider.
+3. Set an auto-reply notification for patient messages during the coverage period.
+
+### InBasket Overflow and Burnout
+
+InBasket volume is a significant contributor to physician burnout. Best practices for managing InBasket burden:
+
+1. **Delegate appropriately** — medical assistants and nurses can manage routine result notifications and patient messages under provider supervision.
+2. **Implement message triaging** — clinical staff screens messages and elevates only those requiring physician decision-making.
+3. **Set result routing rules** — configure result routing so routine normal results go to a pool rather than directly to the ordering provider.
+4. **Batch InBasket time** — schedule dedicated InBasket processing time rather than interrupting clinical workflow.
+5. **Monitor InBasket age** — generate reports showing average time to acknowledge results and messages; target <24 hours for routine results, <1 hour for critical.
+
+## Reporting
+
+Key Results and InBasket reports via Discern Analytics:
+- Unacknowledged critical results by provider
+- InBasket message age distribution
+- Average time to critical result acknowledgment
+- Verbal order cosignature compliance rate
+- Results InBasket volume by provider and message type

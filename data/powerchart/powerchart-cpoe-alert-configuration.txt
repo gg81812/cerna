@@ -1,0 +1,171 @@
+# PowerChart CPOE Alert Configuration — FYI Alerts, Hard Stops, and Order Checks
+# MODULE: PowerChart
+# SYNTHETIC KNOWLEDGE BASE — Cerna RAG System
+
+## Overview of CPOE Alerts in PowerChart
+
+PowerChart CPOE (Computerized Provider Order Entry) includes a robust **clinical decision support (CDS) alert system** that fires during order entry to prevent medication errors, flag safety concerns, and guide clinicians toward evidence-based practices. Alerts are collectively called **order checks** in Millennium terminology.
+
+The alert system is configured through **PowerChart Administration > CDS > Rule Administration** and **Order Check Configuration**. System administrators and clinical informaticists manage alert configuration, while clinical governance committees define when alerts should fire and at what severity level.
+
+## Types of CPOE Alerts
+
+### 1. FYI Alerts (Informational)
+- **Display**: Banner or soft pop-up notification in the order entry window
+- **Interrupt level**: Informational — does not block order signing
+- **User action required**: None — alert is presented but clinician can proceed
+- **Common uses**:
+  - "Patient is pregnant — confirm gestational age before ordering contrast"
+  - "Opioid duration exceeds standard protocol — consider dose reduction"
+  - "Patient is on fall precautions — confirm ambulation order is appropriate"
+  - Cost transparency alerts showing medication cost comparisons
+
+### 2. Warning Alerts
+- **Display**: Pop-up dialog requiring explicit acknowledgment
+- **Interrupt level**: Disruptive — clinician must click a button to acknowledge
+- **User action required**: Accept (override) or Cancel order
+- **Override logging**: Overrides are logged with timestamp and user credentials
+- **Common uses**:
+  - Allergy alerts for cross-reactive drug classes
+  - Drug-drug interactions requiring clinical consideration
+  - Dose range checks (above or below recommended dose)
+  - Duplicate order warnings (same medication class already ordered)
+
+### 3. Hard Stop Alerts
+- **Display**: Blocking dialog — the ORDER CANNOT BE SIGNED until the condition is resolved
+- **Interrupt level**: Mandatory — order signing is completely blocked
+- **User action required**: Address the underlying concern OR provide a documented override reason
+- **Common uses**:
+  - Documented allergy to the exact ordered medication
+  - Contraindicated medication in pregnancy (FDA Category X)
+  - Medications requiring mandatory renews (e.g., antibiotics after 72 hours)
+  - Protocol-required co-medications (heparin must be ordered with PF4 panel)
+  - Missing required clinical data before a specific order can proceed
+
+## Configuring Order Check Alerts
+
+### Step 1: Access CDS Administration
+1. Log into Cerner Solutions (administrative environment)
+2. Navigate to **CDS Administration > Order Check Configuration**
+3. Or from PowerChart: **Administration > Clinical Decision Support > Rule Administration**
+4. Select the appropriate domain (TRAIN during development)
+
+### Step 2: Configure Allergy Alerts
+
+**Exact Drug Allergy (Hard Stop)**:
+- System automatically checks the ordered medication against the patient's allergy list
+- Matches by drug name (e.g., "Penicillin" → hard stop for "Amoxicillin")
+- Configured in: **Order Check Administration > Allergy Checking > Allergy Override Options**
+
+**Cross-Sensitivity (Warning)**:
+- Drug class cross-reactivity (e.g., penicillin allergy → cephalosporin warning)
+- Drug class relationships defined in **Pharmacy Drug Knowledge Base (First Databank or Multum)**
+- Configure cross-reactivity severity in: **Order Check Administration > Drug-Allergy Cross-reactivity**
+- Options: Hard Stop, Warning, or Disabled for each drug-class pair
+
+### Step 3: Configure Drug-Drug Interaction (DDI) Alerts
+
+Drug-drug interaction checking is driven by the **pharmacy drug knowledge base** (First Databank or Multum, licensed separately):
+
+1. Navigate to **CDS Administration > Drug Interaction Checking**
+2. Set the **severity threshold** for alert display:
+   - Contraindicated (always alert)
+   - Major (alert with override option)
+   - Moderate (FYI or Warning — configurable)
+   - Minor (typically suppressed to reduce alert fatigue)
+3. Configure **alert display format**:
+   - Show interaction details with clinical reasoning
+   - Display alternative medications when available
+4. Configure **override reason categories**: required for Warning and Hard Stop overrides
+
+### Step 4: Configure Dose Range Checking
+
+1. Navigate to **Order Check Administration > Dose Range Checking**
+2. Enable dose checking for medication orders
+3. Set **dosing ranges** by patient population:
+   - Adult, Pediatric, Neonatal ranges (weight-based or age-based)
+   - Renal adjustment thresholds (CrCl-based dose limits)
+   - Hepatic adjustment parameters
+4. Define alert severity for out-of-range doses:
+   - Greater than 25% above maximum → Hard Stop
+   - Greater than 10% above maximum → Warning
+   - Below minimum therapeutic dose → FYI
+
+### Step 5: Configure Duplicate Order Checking
+
+1. Navigate to **CDS Administration > Duplicate Order Checking**
+2. Define **duplicate detection scope**:
+   - Same active ingredient
+   - Same drug class
+   - Same route and frequency
+3. Set **time window**: alert fires if same order exists within last X hours
+4. Configure severity: typically Warning for duplicates (allow clinician override)
+
+### Step 6: Configure Custom FYI Alerts
+
+For site-specific informational alerts not covered by pharmacy knowledge base:
+
+1. Navigate to **CDS Administration > Rule Administration**
+2. Click **New Rule**
+3. Define trigger: Order Placement (specific catalog entries or drug classes)
+4. Define criteria: patient demographic, encounter type, existing orders or results
+5. Set alert text and severity level (FYI, Warning, or Hard Stop)
+6. Enable override reason capture if needed
+
+**Example: Opioid Duration FYI Alert**:
+- Trigger: Any opioid medication ordered with duration > 5 days
+- Criteria: Outpatient encounter type
+- Alert text: "Outpatient opioid duration exceeds 5 days. CDC opioid guidelines recommend the minimum effective dose for the shortest necessary duration. Consider a 3-5 day supply with re-evaluation."
+- Severity: FYI (informational, no block)
+
+### Step 7: Configure Override Reason Categories
+
+For Warning and Hard Stop alerts, clinicians may need to provide an override reason:
+
+1. Navigate to **Order Check Administration > Override Reason Categories**
+2. Add reason categories appropriate to your alert type:
+   - "Clinically appropriate for this patient"
+   - "Patient has documented tolerance"
+   - "Benefit outweighs risk"
+   - "Alternative not available"
+   - "Ordering per specialist recommendation"
+3. Set whether free-text addition is required alongside the reason category
+4. These overrides are auditable in **CDS Override Reports** in Discern Analytics
+
+## Alert Fatigue Management
+
+Alert fatigue is the #1 clinical safety concern with CPOE CDS. When clinicians see too many non-actionable alerts, they begin clicking through all alerts without reading — including important ones.
+
+**Strategies to reduce alert fatigue:**
+
+1. **Suppress low-value alerts**: Disable "minor" drug interaction alerts that are rarely clinically significant
+2. **Raise thresholds for moderate interactions**: Convert moderate DDI alerts from Warning to FYI
+3. **Use context-aware suppression**: Do not alert for drug combinations that are appropriate for specific diagnoses or care settings
+4. **Measure override rates**: If a specific alert has >90% override rate, it is likely over-firing and should be adjusted or suppressed
+5. **Implement alert tiering**: Reserve Hard Stops for truly contraindicated scenarios; use FYI for educational information
+6. **Remove duplicate alerts**: Ensure one alert fires per clinical concern, not multiple alerts from overlapping rules
+
+**Monitoring Alert Performance:**
+- Regularly review **CDS Alert Override Reports** in Discern Analytics
+- Track: alert fire count, override rate, alert type, ordering provider, override reason distribution
+- CDS committee review quarterly with clinical leadership
+
+## Alert Configuration Best Practices
+
+1. **Test every new alert in TRAIN** before activating in PROD
+2. **Define governance process**: every new Hard Stop requires clinical governance committee approval
+3. **Document alert rationale**: maintain a CDS rule registry with evidence-based justification
+4. **Use graduated severity**: exhaust FYI and Warning before implementing Hard Stops
+5. **Set an alert owner**: assign each rule to a clinical team member responsible for maintenance
+6. **Review annually**: clinical guidelines change — alert content must be kept current
+7. **Include clinicians in design**: physicians and pharmacists should review alert text for accuracy and tone
+
+## Viewing Alert History and Audit Trail
+
+All alert fires, acknowledgments, and overrides are logged in the Millennium audit trail:
+
+- Access via: **Discern Analytics > CDS Audit Reports** or **Discern Explorer > Event Log**
+- Filter by: alert type, ordering provider, date range, specific rule
+- Use for: compliance reporting, alert fatigue analysis, HIPAA audit requests
+
+The audit log records: user who ordered, alert that fired, severity level, action taken (acknowledged/overridden/cancelled order), override reason if provided, and timestamp.

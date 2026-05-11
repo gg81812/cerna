@@ -1,0 +1,55 @@
+CDC Immunization Schedules for Healthcare Professionals
+Source: https://www.cdc.gov/vaccines/hcp/imz-schedules/index.html
+Scraped: 2026-04-19
+
+==============================================================
+
+Overview
+
+The CDC provides immunization schedule resources specifically designed for healthcare providers to guide vaccination recommendations across different age groups.
+
+Key Resources
+
+Child and Adolescent Immunization Schedule by Age
+- Last updated July 2, 2025
+- Purpose: "Guide health care providers in determining recommended vaccines for each age group"
+- Covers: Birth through 18 years
+- Approved by: Advisory Committee on Immunization Practices (ACIP), American Academy of Pediatrics (AAP), American Academy of Family Physicians (AAFP)
+
+Adult Immunization Schedule by Age
+- Last updated July 2, 2025
+- Purpose: Helps providers remain current on vaccination recommendations
+- Covers: 19 years and older
+- Approved by: ACIP, American College of Physicians (ACP), AAFP, American College of Obstetricians and Gynecologists (ACOG)
+
+Additional Vaccination Resources
+
+- Easy-to-read schedules for both children and adults
+- Adult vaccination information
+- Pregnancy and vaccination guidance
+- Vaccines for children
+- Travel vaccine information
+- Mpox vaccination resources
+
+Contact Information
+
+Providers can reach CDC at 800-232-4636 for additional immunization questions.
+
+Source: National Center for Immunization and Respiratory Diseases, Immunization Services Division
+
+Cerner Immunization Workflow Integration
+
+Cerner Millennium supports immunization management through:
+- PharmNet integration: vaccine ordering and administration recording
+- Immunization history: structured documentation in the patient chart
+- VIS distribution tracking: Vaccine Information Statement delivery documentation
+- Immunization forecasting: Due date calculation based on patient age and history
+- State IIS connectivity: HL7 2.5.1 VXU messages to state immunization registries
+- FHIR Immunization resource: R4-compliant immunization data exposure via Ignite APIs
+- eMAR integration: Vaccine administration documented in the electronic Medication Administration Record
+
+ICD-10 and CPT Coding for Immunizations
+
+- ICD-10-CM Z23: Encounter for immunization
+- CPT codes: Administration codes (90460, 90461, 90471–90474) plus product codes
+- Cerner charge capture automatically assigns administration CPT codes based on vaccine type and patient age

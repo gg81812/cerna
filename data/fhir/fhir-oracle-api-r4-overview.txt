@@ -1,0 +1,107 @@
+FHIR R4 (4.0.1) API Overview — Oracle Health Millennium Platform
+Source: https://docs.oracle.com/en/industries/health/millennium-platform-apis/mfrap/r4_overview.html
+Scraped: 2026-04-19
+
+==============================================================
+
+Schema and Communication
+
+- Protocol: All API access over HTTPS
+- Data Format: JSON only
+- Media Type: application/fhir+json (recommended via Accept header)
+- Timestamps: FHIR standard date/dateTime formats
+- Base URL: Varies by tenant/datasource
+
+Supported Resources
+
+The API supports the following resource types:
+- CapabilityStatement — read
+- Condition — read, search-type (by patient, subject, clinical-status, category)
+- Encounter — read, search-type (by _id, patient, subject, _count)
+- OperationDefinition — read
+- Patient — read, search-type (by _id, identifier, name, given, family, address-postalcode, birthdate, phone, email, gender, _count)
+- Procedure — read, search-type (by _id, patient, subject)
+- StructureDefinition — read
+
+Full R4 resource support includes:
+- AllergyIntolerance, Appointment, Binary, CarePlan, CareTeam
+- Condition, Coverage, Device, DiagnosticReport, DocumentReference
+- Encounter, Goal, Immunization, Location, Medication
+- MedicationAdministration, MedicationRequest, MedicationStatement
+- Observation, Organization, Patient, Practitioner, PractitionerRole
+- Procedure, QuestionnaireResponse, RelatedPerson, Schedule
+- ServiceRequest, Slot, Specimen
+
+HTTP Methods
+
+GET — Retrieve resources
+POST — Create resources
+PUT — Update resources
+
+Method Override: If PUT/PATCH unavailable, use POST with:
+- _method query parameter: ?_method=patch
+- X-HTTP-Method-Override header
+
+Authorization (OAuth 2.0 with SMART)
+
+Scope Categories:
+
+General Scopes: launch, profile, fhirUser, openid, online_access, offline_access
+
+Patient Scopes: patient/[Resource].[crud operations]
+Examples: patient/Condition.read, patient/Medication.write, patient/Observation.crus
+
+System Scopes: system/[Resource].[crud operations]
+Examples: system/Patient.read, system/Encounter.write, system/Practitioner.crs
+
+User Scopes: user/[Resource].[crud operations]
+Examples: user/Condition.read, user/DiagnosticReport.write
+
+CRUD notation: c=create, r=read, u=update, d=delete, s=search
+
+Error Handling
+
+Client Errors:
+- 400: Missing required query parameter
+- 401: Invalid/missing credentials (secure endpoint)
+- 403: Unknown instance or unauthorized access
+- 404: Resource not found
+- 406: Non-JSON media type requested
+- 409: Out-of-date version on update
+- 422: Invalid JSON per business rules
+- 500: Missing required field (returns OperationOutcome)
+
+Required Field Handling:
+- HL7 FHIR specification: Missing required fields return 500 with OperationOutcome
+- HL7 Profile requirements (Argonaut, US Core): DataAbsentReason extension
+- Entered-in-error status (patient access): DataAbsentReason with valueCode "masked"
+
+Data Filtering:
+- Patient persona access: Some data filtered vs. system/provider access
+- Entered-in-error resources: Fields filtered or masked
+- Sensitive information: Non-instructional notes filtered
+- Proxy users: Regulatory restrictions on adolescent records apply
+
+Pagination
+
+Results with multiple pages include Bundle links:
+- self: current page URL
+- next: next page URL
+- previous: prior page URL
+
+Important: Follow provided Link URLs; do not construct custom URLs.
+
+Developers must filter by resource ID and return only latest version (duplicates may appear due to concurrent updates).
+
+CORS Support
+
+API supports Cross Origin Resource Sharing for AJAX requests from any origin.
+
+Headers:
+Access-Control-Allow-Methods: DELETE, GET, POST, PUT, PATCH, OPTIONS, HEAD
+Access-Control-Allow-Origin: *
+
+Example Metadata Request
+
+curl -i -H "Accept: application/fhir+json" \
+  https://fhir-open.cerner.com/r4/ec2458f2-1e24-41c8-b71b-0e701af7583d/metadata

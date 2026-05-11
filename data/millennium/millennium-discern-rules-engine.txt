@@ -1,0 +1,192 @@
+# Cerner Millennium Discern Rules Engine — Clinical Alerts and Event-Driven Rules
+# MODULE: Millennium
+# SYNTHETIC KNOWLEDGE BASE — Cerna RAG System
+
+## What Is the Discern Rules Engine?
+
+The Discern Rules Engine (DRE) is Cerner Millennium's event-driven automation and clinical alert firing platform. It monitors clinical events in real time — such as orders being placed, results being verified, or patients being admitted — and fires automated actions such as clinical alerts, task generation, documentation reminders, and interface messages.
+
+Discern rules are distinct from clinical decision support (CDS) order checks in PowerChart. DRE rules operate at the database event level and can fire alerts across all Millennium applications, not just during order entry. The engine is configured using **Discern Rule Builder** (accessible via Cerner Solutions or directly through Discern Explorer).
+
+## Discern Rule Architecture
+
+A Discern rule consists of:
+
+### 1. Trigger (Event)
+The database event that causes the rule to evaluate. Common triggers:
+- **ORDER_PLACE** — a new order is placed in CPOE
+- **ORDER_COMPLETE** — an order is completed/resulted
+- **RESULT_VERIFY** — a lab or clinical result is verified
+- **ENCOUNTER_REGISTER** — a new encounter is registered
+- **TASK_CREATE** — a clinical task is created
+- **ALLERGY_ADD** — a new allergy is documented
+- **ADMIN_DOSE** — a medication dose is administered via eMAR/BCMA
+
+### 2. Criteria (Condition)
+Logic that must be true for the alert to fire. Criteria can include:
+- Patient demographics (age, sex, weight)
+- Encounter type (inpatient, outpatient, emergency)
+- Active orders or medications
+- Lab result values (above/below thresholds)
+- Medication class or route
+- Location (unit, bed, building)
+- Diagnosis or problem list entries
+
+### 3. Action
+What happens when criteria are met:
+- **Clinical Alert** — displays a message in PowerChart/FirstNet to the clinician
+- **Task Generation** — creates a task for nursing or pharmacy
+- **CCL Script Execution** — runs a custom CCL program for complex logic
+- **Interface Message** — sends an HL7 or custom message to an external system
+- **Order Entry** — auto-creates a follow-up order or recommendation
+- **Documentation Requirement** — flags a documentation task
+
+## Implementing a Custom Discern Rule
+
+### Step 1: Access Discern Rule Builder
+1. Open Cerner Solutions > **Discern Rule Builder**
+2. Or navigate from Discern Explorer > Rule Management
+3. Select the environment (TRAIN first, then PROD)
+
+### Step 2: Define the Rule Header
+- **Rule Name**: unique identifier (use naming convention: SITE_RULETYPE_DESCRIPTION)
+- **Rule Type**: select from Clinical Alert, Task, CCL Execution, etc.
+- **Status**: Draft during build; Activate only after testing
+
+### Step 3: Configure the Trigger Event
+Select the Millennium event that fires the rule:
+```
+Trigger: RESULT_VERIFY
+Description: Fires when any lab result is verified in the system
+```
+
+For order-based rules, use ORDER_PLACE with order catalog filters to narrow scope.
+
+### Step 4: Build Criteria Using Discern CCL Logic
+Criteria are written in CCL-like expressions within the Rule Builder interface. Example — firing an alert for critical potassium values:
+
+```ccl
+/* Trigger: RESULT_VERIFY */
+/* Fire when verified potassium result < 3.0 mEq/L */
+
+if (event_cd = uar_get_code_by("MEANING", 72, "LAB")
+    and event_reltn_cd = uar_get_code_by("MEANING", 24, "POTASSIUM")
+    and result_val < 3.0
+    and result_status_cd = uar_get_code_by("MEANING", 8, "VERIFIED"))
+  /* fire alert */
+endif
+```
+
+In the Rule Builder GUI, criteria are constructed using dropdown selectors and value comparisons — direct CCL syntax is used only in advanced/custom rule implementations.
+
+### Step 5: Define the Alert Action
+For a clinical alert:
+- **Alert Title**: "Critical Potassium — Review Required"
+- **Alert Body**: "Patient potassium is critically low. Consider KCl replacement protocol."
+- **Target Role**: attending physician, primary nurse, or specific provider position
+- **Severity**: FYI (informational), Warning (can override), or Hard Stop (must acknowledge)
+- **Display Window**: PowerChart pop-up, Task in InBasket, or both
+
+### Step 6: Test in Training Environment
+1. Simulate the trigger event in the TRAIN domain
+2. Verify the rule fires with appropriate timing
+3. Confirm the alert text and target recipient
+4. Check that the rule does NOT fire for cases outside the criteria
+
+### Step 7: Activate and Monitor
+1. Change rule status to **Active**
+2. In PROD, monitor using Discern Explorer > Rule Audit Trail
+3. Review alert fire rates in the first 2 weeks; tune criteria if alert fatigue occurs
+
+## CCL Execution Rules
+
+For complex logic, Discern rules can invoke a custom CCL script:
+
+```ccl
+/* CCL script invoked by Discern rule on ORDER_PLACE */
+PROGRAM custom_sepsis_protocol_check
+
+  declare order_id   = f8 with noconstant(0.0)
+  declare person_id  = f8 with noconstant(0.0)
+  declare encntr_id  = f8 with noconstant(0.0)
+
+  /* Parameters passed by Discern engine */
+  set order_id  = cnvtreal($order_id)
+  set person_id = cnvtreal($person_id)
+  set encntr_id = cnvtreal($encntr_id)
+
+  /* Check for sepsis indicators: lactate order + antibiotics */
+  declare lact_cnt  = i4 with noconstant(0)
+  declare abx_cnt   = i4 with noconstant(0)
+
+  select into "nl:"
+  from orders o
+  where o.encntr_id = encntr_id
+    and o.catalog_type_cd = uar_get_code_by("MEANING", 4000070, "LAB")
+    and o.active_ind = 1
+  detail
+    if (o.catalog_cd = uar_get_code_by("MEANING", 200000, "LACTATE"))
+      lact_cnt = lact_cnt + 1
+    endif
+  with nocounter
+
+  /* If sepsis bundle criteria met, fire task */
+  if (lact_cnt > 0 and abx_cnt > 0)
+    /* Create sepsis bundle completion task */
+    call create_task_for_sepsis(encntr_id, person_id)
+  endif
+
+END
+PROGRAM
+```
+
+## Rule Types and Use Cases
+
+| Rule Type | Common Use Case |
+|-----------|----------------|
+| Clinical Alert | Critical lab value notification, drug-allergy duplicate alert |
+| Task Generation | Sepsis bundle task on qualifying orders, fall risk reassessment |
+| CCL Execution | Complex multi-condition workflows, custom logic not in UI |
+| Interface Message | ADT event notification to downstream systems |
+| Order Entry | Auto-order follow-up labs when primary result is abnormal |
+| Documentation | Flag missing nursing assessment when patient meets criteria |
+
+## Event Monitoring and Alerting Best Practices
+
+1. **Test thoroughly in TRAIN** before activating in PROD — Discern rules can generate thousands of spurious alerts if misconfigured
+2. **Use MEANING-based code value lookups** in CCL criteria, not hard-coded numeric CVs
+3. **Set appropriate rule scope** — use encounter type, location, or care setting filters to limit firing population
+4. **Define an alert owner** — assign rules to a Cerner build team member responsible for monitoring and updating
+5. **Review audit logs regularly** — Discern Explorer > Rule Execution History shows all fires and failures
+6. **Implement suppression logic** — add criteria to prevent the same alert from firing multiple times per encounter
+7. **Document rule intent** — maintain a rule registry in your build tracker with trigger logic, target audience, and expected fire rate
+
+## Discern Rule Administration
+
+Access through: **Cerner Solutions > Discern Explorer > Rule Administration**
+
+Key administrative functions:
+- View all active/inactive rules by domain
+- Review execution history and error logs
+- Modify rule criteria or action without deactivating (changes take effect on next trigger event)
+- Clone an existing rule as a starting template
+- Deactivate rules causing alert fatigue
+- View rule performance metrics (fire count, override rate)
+
+## Common Discern Rule Errors
+
+**Error: Rule not firing after activation**
+- Confirm trigger event matches actual database activity
+- Check rule status is "Active" (not "Draft" or "Suspended")
+- Verify criteria logic — a single false condition prevents firing
+- Check Discern engine logs for evaluation errors
+
+**Error: Rule firing too frequently (alert fatigue)**
+- Add suppression criteria (e.g., "do not fire if alert already fired in last 24 hours for this encounter")
+- Narrow location or population filter
+- Consider converting FYI alert to InBasket task instead of pop-up
+
+**Error: CCL execution failure in rule**
+- Check CCL script for syntax errors using CCL session
+- Verify all referenced code values are active
+- Review CCL execution log in Discern Explorer for specific error line

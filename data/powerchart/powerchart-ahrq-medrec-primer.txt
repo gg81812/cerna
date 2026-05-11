@@ -1,0 +1,259 @@
+# SOURCE: AHRQ PSNet Primer — Medication Reconciliation
+# URL: https://psnet.ahrq.gov/primer/medication-reconciliation
+# MODULE: PowerChart
+# RETRIEVED: 2026-05-07
+# ---
+
+Medication Reconciliation
+
+Citation Text:
+
+Medication Reconciliation. PSNet [internet]. Rockville (MD): Agency for Healthcare Research and Quality, US Department of Health and Human Services. 2019.
+
+Copy Citation
+
+Format:
+
+Google Scholar
+BibTeX
+EndNote X3 XML
+EndNote 7 XML
+Endnote tagged
+PubMedId
+RIS
+
+Download Citation
+
+Save
+
+ 
+Save to your library
+
+Print
+
+Download PDF
+
+Share
+
+Facebook
+
+Twitter
+
+Linkedin
+
+Copy URL
+
+ Cite
+ 
+
+ Citation
+
+Citation Text:
+
+Medication Reconciliation. PSNet [internet]. Rockville (MD): Agency for Healthcare Research and Quality, US Department of Health and Human Services. 2019.
+
+Copy Citation
+
+Format:
+
+Google Scholar
+BibTeX
+EndNote X3 XML
+EndNote 7 XML
+Endnote tagged
+PubMedId
+RIS
+
+Download Citation
+
+UC Davis PSNet Editorial Team | December 15, 2024
+
+PSNet primers are regularly reviewed and updated by the UC Davis PSNet Editorial Team to ensure that they reflect current research and practice in the patient safety field. Last reviewed in 2024.
+Background
+Patients often 
+receive new medications or have changes made to their existing medications at times of transitions in care—upon hospital admission, transfer from one unit to another during hospitalization, or discharge from the hospital to home or another facility. Although most of these changes are intentional, unintended changes occur frequently for a variety of reasons. For example, hospital-based clinicians might not be able to easily access patients' complete pre-admission medication lists or may be unaware of recent medication changes. As a result, the new medication regimen prescribed at the time of discharge may inadvertently omit needed medications, unnecessarily duplicate existing therapies, or contain incorrect dosages. These discrepancies place patients at risk for 
+adverse drug events
+ (ADEs), which have been shown to be one of the most common types of 
+adverse events after hospital discharge
+. Medication reconciliation refers to the process of avoiding such inadvertent inconsistencies across transitions in care by reviewing the patient's complete medication regimen at the time of admission, transfer, and discharge and comparing it with the regimen being considered for the new setting of care.
+Accomplishing Medication Reconciliation
+The evidence supporting 
+patient benefits
+ from reconciling medications is mixed and the most effective and generalizable strategies remain unclear. A 2022 multi-pronged 
+transitional
+ pharmaceutical care program which included medication reconciliation did not decrease the proportion of patients with ADE after hospital discharge. A 2016 
+systematic review
+ found evidence that pharmacist-led processes could prevent medication discrepancies and potential ADEs at hospital admission, in-hospital transitions of care (such as transfer into or out of the intensive care unit), and at hospital discharge. A 2013 systematic review published as part of the AHRQ 
+Making Health Care Safer II
+ report also found that pharmacist engagement in medication reconciliation prevented discrepancies and potential ADEs after discharge. However, both the actual clinical effect of medication discrepancies after discharge appears to be small, and therefore, medication reconciliation alone does not reduce readmissions or other adverse events after discharge.
+Information technology solutions are being widely studied, but their effect on preventing medication discrepancies and improving clinical outcomes is similarly unclear. The same 2016 systematic review found that electronic tools often lacked the functionality to accurately reconcile medications, perhaps explaining why medication discrepancies persist even in organizations with fully integrated electronic health records (EHR). Several studies have also investigated the role of enhanced 
+patient engagement
+ in medication reconciliation in the outpatient setting, the 
+emergency department
+, and 
+after hospital discharge
+. These efforts are promising but also lack evidence regarding the impact on medication error rates.
+Medication reconciliation has therefore become an example of a safety intervention that has been effective in research settings but has been difficult to implement successfully in general practice. A 2016 
+commentary
+ identified the major reasons for difficulty achieving safety improvements via medication reconciliation. They include the resource intensive nature of interventions such as clinical pharmacists, which disincentivizes organizations from investing in medication reconciliation; the alterations to clinical workflow that result from interventions, which creates inefficiencies and confusion regarding the best possible medication history; and conflict between medication reconciliation and other system quality improvement priorities, such as patient flow improvement. The commentary provides recommendations for organizations, clinicians, and researchers on how to better implement and evaluate medication reconciliation interventions.
+Current Context
+Medication reconciliation was named as 2005 National Patient Safety Goal #8 by the Joint Commission. Since July 2011, medication reconciliation has been incorporated into 
+National Patient Safety Goal
+ #3, "Improving the safety of using medications." This 
+National Patient Safety Goal
+ requires that organizations “obtain information on the medications the patient is currently taking when they are admitted to the hospital or is seen in an outpatient setting" and "compare the medication information the patient brought to the hospital with the medications ordered for the patient by the hospital in order to identify and resolve discrepancies."
+Most medication reconciliation interventions have focused on attempting to prevent medication errors at hospital admission, discharge, or in-patient transitions of care. However, research into other settings of care is increasing. Pharmacist-led interventions are being studied in both 
+long-term care
+ and 
+outpatient
+ settings. 
+Given the considerable amount of time and resources required for medication reconciliation, methods to improve the efficiency and effectiveness of medication reconciliation are being studied. Knowing which patient populations- such as children, older adults, and those with 
+polypharmacy
+- are at higher risk of medication errors and adverse drug events enables clinicians to target patients most likely to benefit. Patients taking 
+high-risk medications
+ such as insulin or anticoagulants may also benefit. Another strategy is to use trained 
+pharmacy technicians
+ in place of pharmacists to decrease 
+costs
+.
+
+This project was funded under contract number 75Q80119C00004 from the Agency for Healthcare Research and Quality (AHRQ), U.S. Department of Health and Human Services. The authors are solely responsible for this report’s contents, findings, and conclusions, which do not necessarily represent the views of AHRQ. Readers should not interpret any statement in this report as an official position of AHRQ or of the U.S. Department of Health and Human Services. None of the authors has any affiliation or financial involvement that conflicts with the material presented in this report. 
+View AHRQ Disclaimers
+
+Save
+
+ 
+Save to your library
+
+Print
+
+Download PDF
+
+Share
+
+Facebook
+
+Twitter
+
+Linkedin
+
+Copy URL
+
+ Cite
+ 
+
+ Citation
+
+Citation Text:
+
+Medication Reconciliation. PSNet [internet]. Rockville (MD): Agency for Healthcare Research and Quality, US Department of Health and Human Services. 2019.
+
+Copy Citation
+
+Format:
+
+Google Scholar
+BibTeX
+EndNote X3 XML
+EndNote 7 XML
+Endnote tagged
+PubMedId
+RIS
+
+Download Citation
+
+Sections
+
+Background
+
+Current Context
+
+Related Patient Safety Primers
+
+ 
+Computerized Provider Order Entry
+March 15, 2025
+
+Readmissions and Adverse Events After Discharge
+June 15, 2024
+
+Pharmacist's Role in Medication Safety
+December 15, 2024
+
+Editor's Picks
+
+ 
+Electronic medication reconciliation tools aimed at healthcare professionals to support medication reconciliation: a systematic review.
+February 28, 2024
+
+Medication reconciliation at hospital discharge: a qualitative exploration of acute care nurses' perceptions of their roles and responsibilities.
+March 23, 2022
+
+Differences in medication reconciliation interventions between six hospitals: a mixed method study.
+June 29, 2022
+
+Patient harm resulting from medication reconciliation process failures: a study of serious events reported by Pennsylvania hospitals.
+March 24, 2021
+
+View More
+
+Related Resources
+
+Components of pharmacist-led medication reviews and their relationship to outcomes: a systematic review and narrative synthesis.
+
+September 11, 2024
+
+Impact of pharmacist-led discharge medication reconciliation on error and patient harm prevention at a large academic medical center.
+
+July 17, 2024
+
+Patient Safety Primers
+
+Inpatient Transitions of Care: Challenges and Safety Practices
+
+March 27, 2024
+
+Electronic medication reconciliation tools aimed at healthcare professionals to support medication reconciliation: a systematic review.
+
+February 28, 2024
+
+Pharmacy-led medication reconciliation is best practice.
+
+October 11, 2023
+
+A virtual breakthrough series collaborative to support deprescribing interventions across Veterans Affairs healthcare settings.
+
+October 4, 2023
+
+Impact of pharmacist-led admission medication reconciliation on patient outcomes in a large health system.
+
+September 20, 2023
+
+Handling polypharmacy--a qualitative study using focus group interviews with older patients, their relatives, and healthcare professionals.
+
+September 13, 2023
+
+Patient Safety Primers
+
+Deprescribing as a Patient Safety Strategy
+
+October 27, 2021
+
+Patient harm resulting from medication reconciliation process failures: a study of serious events reported by Pennsylvania hospitals.
+
+March 24, 2021
+
+View More
+
+See More About The Topic
+
+ 
+ Medication Reconciliation
+
+ Hospitals
+
+ Medication Errors/Preventable Adverse Drug Events
+
+ Ordering/Prescribing Errors
+
+ Medication Reconciliation

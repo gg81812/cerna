@@ -1,0 +1,51 @@
+# PowerChart AI Integration — Overview of AI Capabilities in Cerner PowerChart
+# MODULE: PowerChart
+# SYNTHETIC KNOWLEDGE BASE — Cerna RAG System
+
+## PowerChart AI Capabilities Overview
+
+Oracle Health has embedded artificial intelligence and machine learning capabilities throughout PowerChart to assist clinicians with documentation, ordering, and clinical decision support. The main AI capabilities in PowerChart include:
+
+1. **Predictive Ordering** — ML-based order suggestions surfaced during CPOE order entry
+2. **Ambient Clinical Intelligence (ACI)** — AI scribe that converts clinician-patient conversations into structured PowerNote documentation
+3. **AI-Powered Clinical Decision Support** — ML models for sepsis prediction, readmission risk, and deterioration index
+
+## Integration Architecture
+
+PowerChart AI features are built on Oracle Cloud Infrastructure (OCI) AI Services and integrate with Cerner Millennium via secure API connections. The AI models run in Oracle Cloud and receive de-identified or appropriately scoped clinical data from the Millennium instance.
+
+### AI Services Used
+- OCI Language Services: natural language processing for ambient documentation
+- Oracle AutoML: custom model training for predictive ordering using site-specific data
+- OCI Streaming: real-time event processing for deterioration index monitoring
+
+## AI Documentation Assistant
+
+The AI Documentation Assistant (ambient clinical intelligence, AI scribe) in PowerChart helps providers write clinical notes faster:
+- Activated via a microphone or AI Assist button within PowerNote
+- Captures spoken dictation or ambient conversation during patient encounters
+- Generates structured note sections: HPI, ROS, Assessment, Plan
+- Provider reviews and approves AI-drafted content before signing
+- Requires a separate Oracle Health AI subscription and hardware setup
+
+## Predictive Order Suggestions in CPOE
+
+When a provider opens the CPOE order entry window, PowerChart AI displays a panel showing the top-predicted orders based on:
+- Current patient diagnoses and problem list
+- Age, weight, and clinical parameters
+- Provider's historical ordering patterns and machine learning analysis
+- Evidence-based order set recommendations
+
+Providers can click on suggested orders to add them to the order list, or ignore them and continue with manual order entry. All suggested orders go through standard CDS checks (allergy, interaction, dose range) before signing.
+
+## Configuration Requirements
+
+To enable PowerChart AI features in your organization:
+1. Execute Oracle Health AI services contract addendum
+2. Confirm OCI network connectivity from your Millennium instance
+3. Enable feature flags in PowerChart Administration > AI Settings
+4. Configure data sharing scope and de-identification parameters
+5. Complete clinical governance review and approval for each AI feature
+6. Train clinicians on AI feature use and appropriate oversight
+
+Contact your Oracle Health Client Success Manager to begin the AI enablement process.

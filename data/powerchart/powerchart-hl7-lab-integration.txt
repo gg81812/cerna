@@ -1,0 +1,168 @@
+# PowerChart Integration with External Lab Systems via HL7 Interfaces
+# MODULE: PowerChart
+# SYNTHETIC KNOWLEDGE BASE — Cerna RAG System
+
+## Overview
+
+PowerChart integrates with external laboratory systems (both internal hospital labs and reference/send-out labs) through HL7 v2 messaging interfaces. These interfaces enable bidirectional communication: lab orders flow from PowerChart CPOE to the lab information system (LIS), and results flow back from the LIS into the patient's PowerChart result review and clinical event repository.
+
+Cerner uses **Mirth Connect** (now NextGen Connect) as its primary HL7 integration engine, along with proprietary Cerner integration pathways, to route HL7 messages between PowerChart and connected laboratory systems.
+
+## HL7 Message Types in Lab Integration
+
+### Outbound Messages (PowerChart -> Lab)
+| Message Type | Trigger | Content |
+|-------------|---------|---------|
+| ORM^O01 | Lab order placed in CPOE | Order details, patient demographics, ordering provider, collection instructions |
+| ORM^O01 (cancel) | Lab order cancelled in PowerChart | Original order reference, cancellation reason |
+| ADT^A08 | Patient demographic update | Updated name, DOB, MRN, address for patient matching |
+
+### Inbound Messages (Lab -> PowerChart)
+| Message Type | Trigger | Content |
+|-------------|---------|---------|
+| ORR^O02 | Lab acknowledges order receipt | Order ID confirmation, accession number |
+| ORL^O22 | Lab specimen collected | Specimen collection time, collection site, collector ID |
+| ORU^R01 | Lab result posted | Result values, reference ranges, abnormal flags, result status |
+| ORU^R01 (final) | Final result posted | Finalized result values — overwrites preliminary |
+| ORU^R01 (corrected) | Lab correction issued | Corrected values with correction timestamp and reason |
+
+## Lab Order Flow via HL7
+
+### Order Placement Workflow
+1. Clinician places a lab order in PowerChart CPOE
+2. PowerChart generates an **ORM^O01** HL7 message
+3. The Cerner integration engine (Mirth Connect or CareAware) routes the ORM to the appropriate lab LIS
+4. The LIS acknowledges receipt with an **ORR^O02** ACK message
+5. The lab processes the order, assigns an accession number, and collects the specimen
+6. Collection confirmation (ORL) updates the order status in PowerChart to "Collected"
+
+### Result Return Workflow
+1. Lab analyzer completes testing and posts result to LIS
+2. LIS generates an **ORU^R01** result message
+3. ORU is routed back to Cerner via the HL7 integration engine
+4. PowerChart receives the ORU and posts the result to:
+   - The patient's **Clinical Event** record (stored in CLINICAL_EVENT table)
+   - The **Results Activity** in PowerChart chart (visible in Lab Results section)
+   - The **InBasket** message for the ordering provider (if flagged as abnormal or critical)
+5. Abnormal flags (H/L/C) trigger visual alerts in the chart and may fire clinical decision support rules
+
+### Critical Value Handling
+When a critical result is posted (ORU with abnormal flag = "C" for Critical):
+1. PowerChart auto-routes an **InBasket critical value notification** to the ordering provider
+2. In many Cerner configurations, a **Discern Rules** alert also fires to nursing
+3. Some organizations integrate automated phone call (CallTracker or similar) for critical result notification
+4. Critical value acknowledgment must be documented per Joint Commission standards
+
+## HL7 Interface Architecture
+
+### Mirth Connect (NextGen Connect) Integration Engine
+Cerner environments typically use Mirth Connect as the HL7 engine for external lab interfaces:
+
+**Mirth Channel Structure**:
+- **Source Connector**: listens on a TCP/MLLP port for incoming HL7 messages
+- **Destination Connector**: routes processed messages to the target system
+- **Transformer**: JavaScript/Rhino-based logic to map fields between source and target formats
+
+Example Mirth channel for lab result inbound:
+```
+Source: TCP Listener (MLLP port 6660) <- Lab LIS
+Transformer:
+  - Map OBX.3 (LOINC code) to Cerner event_cd
+  - Map OBX.5 (result value) to Cerner result_val
+  - Map OBX.6 (units) to Cerner result_units
+  - Apply site-specific patient matching logic
+Destination: Cerner HL7 Inbound Listener (port 6661)
+```
+
+### CareAware (Cerner's Native Integration Platform)
+For Cerner-to-Cerner integrations or simpler lab connections, **CareAware** provides:
+- Pre-built Millennium lab order and result message handlers
+- Automatic patient and order matching using Cerner's MRN and order ID
+- Built-in ADT^A08 demographic update processing
+- Interface monitoring dashboards within the Cerner administrative tools
+
+## Configuring Lab Interfaces in PowerChart
+
+### Step 1: Define the Lab Interface in Cerner Solutions
+1. Navigate to **Cerner Solutions > Interface Administration**
+2. Create a new **Lab Interface Record**:
+   - Interface Name (e.g., "MAIN_LAB_LIS", "REFERENCE_LAB")
+   - Sending Application (MSH.3) — as defined by the lab LIS
+   - Receiving Application (MSH.5) — Cerner's application identifier
+   - Lab Facility Code
+   - Result source type (internal lab vs. reference/send-out)
+3. Define **Contributor System** in Millennium (code set 261) for this lab interface
+
+### Step 2: Configure Order Routing Rules
+1. Navigate to **Interface Administration > Order Routing Configuration**
+2. Define routing rules that determine which lab LIS receives which order types:
+   - "All microbiology orders route to MICRO_LIS"
+   - "All pathology orders route to PATH_LIS"
+   - "All CBC, CMP, lipid panels route to MAIN_LAB_LIS"
+   - "Out-of-scope orders route to REFERENCE_LAB"
+3. Configure routing by order catalog, lab section, or collection site
+
+### Step 3: Map LOINC Codes to Cerner Event Codes
+Laboratory results arrive with LOINC codes (OBX.3). Cerner must map these to internal Millennium clinical event codes:
+1. Navigate to **Interface Administration > Event Code Mapping**
+2. For each lab test:
+   - External code: LOINC code (e.g., "2823-3" for potassium)
+   - Internal event code: Cerner clinical_event code for potassium
+3. Map reference ranges and units of measure
+4. Configure abnormal flag mapping (H/L/C from HL7 -> Cerner abnormal flags)
+
+### Step 4: Configure Result Routing and Notification
+1. Define which result types go to which clinical areas (e.g., blood gas results also route to respiratory therapy)
+2. Configure **critical value thresholds** for automatic InBasket notification
+3. Set up **auto-acknowledge** rules for routine results if applicable
+
+### Step 5: Test the Interface
+1. In TRAIN domain, configure test LIS connection (or use HL7 message simulator)
+2. Send test ORM messages and verify they arrive at the lab system correctly
+3. Send test ORU messages and verify results appear in PowerChart
+4. Test critical value routing and InBasket notification
+5. Test order cancel processing
+6. Test patient demographic update (ADT^A08) processing
+
+## Common Lab Interface Issues and Troubleshooting
+
+### Problem: Results Not Appearing in PowerChart
+- Check Mirth Connect channel status — is the source connector active?
+- Review Mirth message logs for processing errors in the transformer
+- Verify LOINC-to-event-code mapping is complete for the failing test
+- Check if the Contributor System is properly configured for this lab
+- Review Cerner HL7 inbound engine logs (Discern Explorer > Interface Logs)
+
+### Problem: Results Posting to Wrong Patient
+- Patient matching logic error — verify MRN matching in Mirth transformer
+- Check if the lab is sending a different MRN format than Cerner's stored format
+- Look for ADT processing issues — Cerner may have a demographic update that changed the MRN
+- Engage Cerner TAM for identity matching audit
+
+### Problem: Duplicate Results
+- Duplicate ORU messages being sent by lab (check lab retransmission settings)
+- Mirth channel retry logic is re-sending messages after timeout
+- Check Mirth duplicate detection rules (de-duplication by message control ID)
+
+### Problem: Order Not Routing to Lab
+- Verify order routing rules in Interface Administration
+- Check if the order catalog entry has the correct lab interface assignment
+- Review ORM outbound message logs in Mirth for the order
+
+## Reference Lab (Send-Out) Integration
+
+For reference/send-out labs (e.g., Quest, LabCorp):
+- PowerChart generates ORM when the order is placed with "send-out" routing flag
+- Mirth formats and transmits to the reference lab's HL7 endpoint or file drop
+- Results arrive via ORU (electronic) or are manually entered if the lab does not support HL7 return
+- Collection tracking: reference lab requisition number must be stored in PowerChart order comments for manual tracking
+
+## HL7 Lab Integration Best Practices
+
+1. **Test every LOINC code mapping** before go-live — unmapped codes cause results to drop silently
+2. **Implement duplicate ORU detection** in Mirth to prevent result doubling
+3. **Define escalation for critical values**: hardcode critical value thresholds and test them specifically
+4. **Monitor interface throughput daily**: set up Mirth dashboard alerts for channel failures
+5. **Document all interface configurations**: maintain an interface spec document for each lab connection
+6. **Plan for LIS downtime**: configure downtime order tracking (paper requisition + manual result entry)
+7. **Test patient matching edge cases**: patients with common names, name changes, or MRN merges

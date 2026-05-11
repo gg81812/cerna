@@ -1,0 +1,179 @@
+# SOURCE: Cerner CCL Programmer Reference Guide
+# URL: https://wiki.cerner.com/display/public/1101discernHP/CCL+Programmer+Guide
+# MODULE: Millennium Platform
+# RETRIEVED: 2026-04-01
+# ---
+
+# Cerner Command Language (CCL) Programmer Reference
+
+## What is CCL?
+
+Cerner Command Language (CCL) is a proprietary, SQL-like scripting language used within the Cerner Millennium platform to create reports, extract clinical and financial data, build batch jobs, and support application logic. CCL scripts run natively inside the Millennium backend and have direct access to the Millennium Oracle database schema. CCL is also known as Discern Explorer in Cerner documentation.
+
+## Script Structure
+
+A CCL program consists of:
+
+1. PROGRAM / END block — wraps the entire script
+2. DECLARE section — declares variables and record structures
+3. SELECT / FROM / WHERE / ORDER BY — queries Millennium database tables
+4. WITH report attribute clauses — controls output formatting
+5. Subroutine definitions — reusable code blocks
+
+Example skeleton:
+
+    PROGRAM PATIENT_DEMOGRAPHICS
+      DECLARE patient_id = f8 WITH NOCONSTANT, PROTECT
+      SELECT p.name_full_formatted, e.encntr_id
+      FROM PERSON p, ENCOUNTER e
+      WHERE p.person_id = e.person_id
+        AND e.active_ind = 1
+      WITH SEPARATOR = "^", FORMAT
+    END GO
+
+## Data Types
+
+- f8 — Floating point / numeric (used for most Millennium IDs)
+- i4 — 32-bit integer
+- i2 — 16-bit integer
+- c<n> — Fixed-length character string (e.g., c40)
+- vc — Variable-length character string
+- dq8 — Date/time stored as 8-byte UTC value
+
+Most Millennium primary keys (person_id, encntr_id, order_id) are f8.
+
+## Key Database Tables
+
+### Person and Encounter
+- PERSON — patient demographics (person_id, name_full_formatted, birth_dt_tm, sex_cd)
+- ENCOUNTER — visit record (encntr_id, person_id, encntr_type_cd, reg_dt_tm, disch_dt_tm)
+- ENCNTR_ALIAS — MRN, FIN, and other patient/visit identifiers
+
+### Orders and Results
+- ORDERS — all orders (lab, medication, radiology)
+- CLINICAL_EVENT — clinical results (labs, vitals, documentation)
+- CE_DATE_RESULT, CE_STRING_RESULT, CE_CODED_RESULT — result value tables by type
+
+### Code Values
+- CODE_VALUE — central lookup for all coded data (sex_cd, encntr_type_cd, order_status_cd)
+Always join CODE_VALUE with code_set = <set_number> AND active_ind = 1.
+
+### Medication
+- MED_ADMIN_EVENT — medication administration records (eMAR)
+- PHARMACY_DISPENSE — dispensing records from pharmacy
+- ORDER_INGREDIENT — medication ingredients
+
+## SELECT Statement Syntax
+
+    SELECT alias1.col1, alias2.col2
+    FROM TABLE1 alias1, TABLE2 alias2
+    PLAN alias1
+      WHERE alias1.active_ind = 1
+    JOIN alias2
+      WHERE alias2.person_id = alias1.person_id
+    ORDER BY alias1.col1
+    WITH SEPARATOR = "^", FORMAT, MAXREC = 10000
+
+- PLAN — driving table with WHERE filter
+- JOIN — subsequent tables joined to PLAN
+- MAXREC — row limit; always set in production
+
+## Variables and DECLARE
+
+    DECLARE my_var   = f8  WITH NOCONSTANT, PROTECT
+    DECLARE my_str   = vc  WITH NOCONSTANT, PROTECT
+    DECLARE start_dt = dq8 WITH NOCONSTANT, PROTECT
+
+## Control Flow
+
+    IF (my_var > 0)
+      ; positive branch
+    ELSEIF (my_var = 0)
+      ; zero
+    ELSE
+      ; negative
+    ENDIF
+
+    FOR (i = 1 TO 10)
+      ; loop body
+    ENDFOR
+
+    WHILE (condition)
+      ; loop body
+    ENDWHILE
+
+## Subroutines
+
+    SUBROUTINE GET_AGE(person_id = f8)
+      DECLARE age = i4 WITH NOCONSTANT, PROTECT
+      RETURN(age)
+    END
+
+    SET result = GET_AGE(12345.00)
+
+## Record Structures
+
+    RECORD patient_rec (
+      1 cnt = i4
+      1 list[*]
+        2 person_id = f8
+        2 name = vc
+        2 mrn = c20
+    )
+
+    SET stat = alterlist(patient_rec->list, patient_rec->cnt + 1)
+    SET patient_rec->list[patient_rec->cnt].person_id = 12345.00
+
+## Date/Time Functions
+
+- cnvtdate(dq8) — Convert dq8 to "MM/DD/YYYY" string
+- cnvtdatetime(dq8) — Convert to "MM/DD/YYYY HH:MM:SS" string
+- sysdate — Current system date/time as dq8
+- datetimediff(dt1, dt2, unit) — Difference between two dq8 values
+
+All Millennium dates are stored as dq8 UTC. Convert to local time before displaying to users.
+
+## Common CCL Patterns
+
+### Patient Lookup by MRN
+
+    SELECT e.person_id
+    FROM ENCNTR_ALIAS ea, ENCOUNTER e
+    PLAN ea
+      WHERE ea.alias_type_mean = "MRN"
+        AND ea.alias = "12345"
+        AND ea.active_ind = 1
+    JOIN e
+      WHERE e.encntr_id = ea.encntr_id
+        AND e.active_ind = 1
+
+### Decode Code Value to Display Text
+
+    SELECT cv.display
+    FROM CODE_VALUE cv
+    WHERE cv.code_value = my_code_value
+      AND cv.active_ind = 1
+
+## Running CCL Scripts
+
+### From Discern Explorer (GUI)
+1. Open Discern Explorer from the Cerner toolbar.
+2. File > Open > select your .prg file.
+3. Press F5 or click Run.
+4. View results in the output pane.
+
+### Compiling
+
+    COMPILE "myscript" INTO $CCL_DIR "path/myscript"
+
+Changes do not take effect until compiled.
+
+## Best Practices
+
+1. Filter by active_ind = 1 — Millennium uses soft deletes on most tables.
+2. Always set MAXREC to prevent runaway queries in production.
+3. Filter CODE_VALUE by code_set to avoid cross-set matches.
+4. Use f8 for all Millennium entity IDs.
+5. Use CNVTUPPER() for case-insensitive string comparisons.
+6. Never use SELECT * — name columns explicitly.
+7. Test all scripts in the Training (MTrain) domain before deploying to Production.

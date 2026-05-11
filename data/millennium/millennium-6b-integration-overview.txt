@@ -1,0 +1,78 @@
+Oracle Health Cerner Integration — 6B Implementation Guide
+Source: https://6b.health/services/interoperability-and-integration/secondary-care-epr-integration/oracle-health-cerner-integration/
+and https://6b.health/insight/publishing-your-integration-to-the-oracle-health-cerner-millennium-marketplace/
+Scraped: 2026-04-19
+
+==============================================================
+
+Core Overview
+
+6B provides integration services for Oracle Health EHR (Cerner Millennium) using standards-based approaches. The company assists NHS Trusts, ICBs, and digital health vendors in connecting third-party solutions to Oracle's platform.
+
+Oracle Health (Cerner Millennium) is the most widely adopted electronic patient record system across NHS Trusts in England, with 35 NHS Trusts having implemented this platform.
+
+Key Integration Technologies
+
+- HL7 FHIR R4 and UK Core standards
+- SMART on FHIR for app launches within PowerChart and FirstNet
+- Cerner mPages for embedded UI components using CCL (Cerner Command Language)
+- Proprietary APIs including HealtheIntent and CareAware
+- OAuth2/OpenID Connect authentication
+
+Implementation Approach
+
+Discovery phase: Align solution goals with available Oracle pathways
+Design and development: Use appropriate standards and frameworks
+Oracle registration support: Code Console enrollment at https://code-console.cerner.com/
+Testing and validation: Across test and live Millennium domains
+Marketplace preparation: Oracle Validated Integration status
+
+Timeline Expectations
+
+- Simple SMART on FHIR integrations: approximately 6–10 weeks
+- Complex workflows (clinical UI embedding, multiple modules): several months
+- Publishing timeline: several weeks to a few months (delays often in security review and documentation)
+- Overall integration and marketplace listing: dependent on use case complexity
+
+Compliance and Security Requirements
+
+- ISO 27001 standards
+- Clinical governance frameworks including DCB0129 and DCB0160 for safety assessments
+- UK GDPR compliance
+- NHS DSP Toolkit alignment
+- Role-based access controls and encryption protocols
+
+Suppliers remain responsible for: application support, security patching, clinical safety maintenance, and documentation updates.
+
+Oracle Health Marketplace Publishing Process
+
+1. Establish Oracle account and register with Oracle Partner Network
+2. Design and develop integration using one of the four primary methods:
+   - HL7 v2 messaging (real-time clinical workflows)
+   - HL7 FHIR APIs (standards-based data exchange)
+   - SMART on FHIR apps (embedded clinical interfaces)
+   - Oracle Integration Cloud (event-driven multi-system connections)
+3. Publisher registration on Oracle Marketplace
+4. Security and clinical safety review (DCB0129/DCB0160)
+5. Marketplace listing creation
+6. Optional: Oracle Validated Integration status
+
+Commercial Flexibility
+
+Early-stage products can pursue free or bring-your-own-license listings without becoming Oracle Suppliers, reducing initial commercial friction while building market validation.
+
+Millennium Architecture Overview
+
+Cerner Millennium (Oracle Health EHR) is an enterprise-class EHR platform with the following key modules:
+- PowerChart: Physician and nursing clinical documentation and CPOE
+- FirstNet: Emergency department tracking and clinical documentation
+- PharmNet: Pharmacy management and medication verification
+- SurgiNet: Perioperative (OR) management
+- PathNet: Laboratory results management
+- RadNet: Radiology workflow
+- Revenue Cycle: Registration, charge capture, billing, claims
+- CareAware: Medical device integration platform
+- HealtheIntent: Population health and analytics platform
+- HealtheLife: Patient-facing portal
+
+The platform serves 27,000+ clients worldwide across 35+ countries.

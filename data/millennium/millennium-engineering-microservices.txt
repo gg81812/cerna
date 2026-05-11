@@ -1,0 +1,47 @@
+# SOURCE: Cerner Engineering — Microservices Architecture Patterns
+# URL: https://web.archive.org/web/2023/https://engineering.cerner.com/blog/microservices-the-easy-way-is-the-wrong-way/
+# MODULE: Millennium Platform
+# RETRIEVED: 2026-05-07
+# ---
+
+November 4, 2022
+
+185 words
+
+1 min read
+
+Microservices - The Easy Way is the Wrong Way
+
+ By:  
+
+Caitie Tillo
+
+We had the great opportunity of inviting Sean Whitesell to join us for a virtual Tech Talk in August to share his knowledge on Microservices. Sean is based out of Tulsa, Oklahoma and is a Senior Cloud Architect, ASP Insider, and a Microsoft MVP. For the past nine years, Sean has served as the leader of the Tulsa.NET User Group. Last January, he also published his own book, 
+Pro Microservices in .NET 6
+With Examples Using ASP.NET Core 6, MassTransit, and Kubernetes
+, alongside two other Microsoft MVPs.
+
+Sean shares his expertise in this session by demonstrating how a microservice architecture requires far more thought than one might assume. Throughout his presentation, Sean explores the benefits and drawbacks of creating microservices, and why it makes sense to establish them. The presentation goes into when and how to get started creating microservices through a high-level decompensation example and discussing domain driven design. There is a lot to consider as a team before creating a microservice, but Sean puts it best by saying “Microservices are hard, but so is good programming.” We hope you enjoy this Tech Talk!
+
+tech talks
+ 
+
+Rock Solid Components with Typescript and GraphQL
+
+August 22, 2022
+
+ In June, we had the pleasure of having Mat Warger join us in our Tech Talk series at Oracle Cerner. Mat is a senior software developer based in Kansas City. He enjoys learning new concepts and has leveraged this curiosity in positions ranging from startups to the enterprise over the past decade. He is a co-organizer of the JavaScript KC meetup group and organizer of GraphQL KC meetup group. He can be found chasing the latest and (sometimes) greatest in a wide range of languages and platforms, including React, TypeScript, GraphQL, and the cloud.
+ 
+
+Information Flow Cultures with Dr. Ron Westrum
+
+April 1, 2022
+
+ Last month, we had the pleasure of having Dr. Ron Westrum join us in our Tech Talk series at Cerner. Dr. Westrum is an Emeritus Professor of Sociology at Eastern Michigan University and author of the Westrum organizational typology model. In his talk, he discusses how an information flow culture reflects how managers shape values and behavior. The first part of this talk will discuss information flow in organizations, as well as provide a case study on Boeing.
+ 
+
+DevCon 2016 Word Cloud
+
+September 28, 2016
+
+ Every year we hold an internal developers conference called DevCon. This year we had 295 submissions for talks, ranging from a deep technical dive into the inner workings of Kafka to a reflection on the power of office pranks.‌ I wondered what, if anything, do these submissions have in common? Are there any common themes/topics being discussed? To find out I decided to visualize the talk submissions in a word cloud to create an easily understandable (and hopefully aesthetically pleasing) view of what topics were most common.

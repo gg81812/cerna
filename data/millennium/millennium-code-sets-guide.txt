@@ -1,0 +1,162 @@
+# Cerner Millennium Code Sets and Code Values — Administrator Reference
+# MODULE: Millennium
+# SYNTHETIC KNOWLEDGE BASE — Cerna RAG System
+
+## What Are Code Sets in Cerner Millennium?
+
+Code sets are Cerner Millennium's foundational data standardization mechanism. A code set is a controlled vocabulary table that stores all valid values for a specific clinical or administrative concept. Every coded field in Millennium (medication routes, allergy severity, order statuses, encounter types, gender, location types, and hundreds more) draws its values from a designated code set.
+
+Code sets prevent free-text entry for structured data and ensure consistent terminology across the Millennium platform. The CODE_VALUE table in the Millennium database stores all code values, and the CODE_SET table stores the set definitions. Every code value has a numeric identifier (CV), a display string, a description, and a meaning string.
+
+## Code Set Architecture
+
+### CODE_SET Table
+The CODE_SET table defines each vocabulary group:
+- **code_set**: numeric identifier (e.g., 6 = ENCOUNTER_TYPE, 71 = SEX, 4000070 = ORDER_STATUS)
+- **display**: the human-readable name of the code set
+- **description**: purpose of the code set
+- **definition**: standardization scope (site-specific, domain-wide, or Cerner-defined)
+
+### CODE_VALUE Table
+The CODE_VALUE table stores individual values:
+- **code_value**: unique numeric identifier for this value (used as FK in clinical tables)
+- **code_set**: parent code set number
+- **display**: short display string shown in the UI
+- **display_key**: uppercase, special-char-stripped version of display for search
+- **description**: longer description
+- **meaning**: internal mnemonic (e.g., "INPATIENT", "FEMALE", "ORDERED") — used in CCL logic
+- **cdf_meaning**: CDF (Cerner-defined) meaning for standard values
+- **active_ind**: 1=active, 0=inactive
+- **active_status_cd**: indicates if the value is active (using another code set)
+- **begin_effective_dt_tm** / **end_effective_dt_tm**: validity date range
+
+### CV Variables in CCL
+In CCL scripts, code values are stored in f8 (floating-point numeric) variables. Always use the cv-constant pattern for clarity:
+
+```ccl
+declare cv_inpatient = f8 with noconstant(uar_get_code_by("MEANING", 69, "INPATIENT"))
+declare cv_ordered   = f8 with noconstant(uar_get_code_by("MEANING", 6004, "ORDERED"))
+```
+
+## Key CCL Functions for Code Sets
+
+### uar_get_code_by()
+Retrieves a code value numeric ID by looking up within a code set:
+```ccl
+uar_get_code_by(search_type, code_set, search_value)
+```
+- search_type options: "MEANING" | "DISPLAY" | "DISPLAYKEY" | "DESCRIPTION"
+- Returns f8 code_value; returns 0.0 if not found
+
+### uar_get_code_display()
+Returns the display string for a numeric code value:
+```ccl
+uar_get_code_display(code_value)
+```
+
+### uar_get_meaning_by_codeset()
+Returns the meaning string for a code value within its code set.
+
+## Most Commonly Used Millennium Code Sets
+
+| Code Set # | Name | Example Values |
+|------------|------|----------------|
+| 6 | ENCNTR_TYPE | INPATIENT, OUTPATIENT, EMERGENCY |
+| 69 | MED_SERVICE | MEDICAL, SURGICAL, PEDIATRICS |
+| 71 | SEX | FEMALE, MALE, UNKNOWN |
+| 261 | CONTRIBUTOR_SYSTEM | various interface systems |
+| 319 | NOMENCLATURE_TYPE | SNOMED, LOINC, ICD9, ICD10 |
+| 6000 | ORDER_ACTION | ORDER, ACTIVATE, CANCEL, COMPLETE |
+| 6004 | ORDER_STATUS | ORDERED, COMPLETED, CANCELED, PENDING |
+| 200 | ALLERGY_TYPE | DRUG, FOOD, ENVIRONMENTAL |
+| 120 | ALLERGY_SEVERITY | MILD, MODERATE, SEVERE |
+| 4000070 | ORD_CATALOG_TYPE | PHARMACY, LABORATORY, IMAGING |
+| 54411 | TASK_TYPE | clinical task categorization |
+| 48 | LOCATION_TYPE | UNIT, BED, BUILDING, CAMPUS |
+
+## Code Set Customization
+
+### Site-Defined vs. Cerner-Defined Code Sets
+- **Cerner-defined code sets** (CDF): values are pre-populated by Cerner. Clients should NOT modify these. Meanings are used in application code.
+- **Site-defined code sets**: clients can add, modify, or inactivate values. Examples include department lists, provider specialties, custom result types.
+
+### Adding a New Code Value
+1. Navigate to **Reference Data Maintenance** (RDM) in Cerner solutions or use **Cerner Build** tools
+2. Open the relevant code set
+3. Click **Add Code Value**
+4. Enter display name, description, and meaning (if applicable)
+5. Set effective date range
+6. Activate and save
+7. Run `dcp_code_value_r` or the appropriate build report to verify
+
+### Inactivating a Code Value
+Inactivate, do not delete. Deletion can break historical records that reference the code value. Set `active_ind=0` and set `end_effective_dt_tm` to today's date.
+
+## Nomenclature and Clinical Coding
+
+Millennium uses a **NOMENCLATURE** table separate from CODE_VALUE for clinical coding systems (ICD-10, SNOMED CT, LOINC, CPT). Nomenclature entries link to:
+- `source_string`: the code value (e.g., "E11.9" for Type 2 Diabetes)
+- `short_string`: abbreviated label
+- `long_string`: full description
+- `source_vocabulary_cd`: code value pointing to which coding system
+
+In CCL, query nomenclature for problem list lookups:
+```ccl
+select n.source_string, n.long_string
+from nomenclature n
+where n.source_vocabulary_cd = uar_get_code_by("MEANING", 400, "ICD10")
+and n.source_string = "E11.9"
+```
+
+## Code Sets in CCL Reports
+
+### Pattern: Filtering by Encounter Type
+```ccl
+select e.encntr_id, e.person_id, e.encntr_type_cd
+from encounter e
+where e.encntr_type_cd = uar_get_code_by("MEANING", 69, "INPATIENT")
+and e.active_ind = 1
+```
+
+### Pattern: Displaying Code Values in Output
+```ccl
+select e.encntr_id,
+       uar_get_code_display(e.encntr_type_cd) as encounter_type,
+       uar_get_code_display(e.med_service_cd) as service
+from encounter e
+```
+
+### Pattern: IN-list with Multiple Code Values
+```ccl
+declare cv_ip    = f8 with noconstant(uar_get_code_by("MEANING", 69, "INPATIENT"))
+declare cv_op    = f8 with noconstant(uar_get_code_by("MEANING", 69, "OUTPATIENT"))
+declare cv_ed    = f8 with noconstant(uar_get_code_by("MEANING", 69, "EMERGENCY"))
+
+select e.encntr_id
+from encounter e
+where e.encntr_type_cd in (cv_ip, cv_op, cv_ed)
+```
+
+## Troubleshooting Code Set Issues
+
+**Problem**: Code value lookup returns 0.0
+- Verify the meaning string is exact (case-sensitive in some environments)
+- Check active_ind and date range
+- Confirm the correct code set number is being used
+
+**Problem**: New code value not appearing in UI dropdowns
+- May require cache refresh — run CCL cache rebuild or restart domain node
+- Confirm proper code_set was used
+- Check if UI field is filtered to only active values
+
+**Problem**: Historical data shows wrong display name after code value update
+- Code values store the cv numeric ID, not the text. Re-displaying historical data always re-resolves from current CODE_VALUE table — so display text changes apply historically too.
+
+## Code Set Best Practices
+
+1. Never delete code values — always inactivate with an end date
+2. Use MEANING lookups in CCL, not DISPLAY (display can change; meaning is stable)
+3. Document all site-defined code additions in your build tracker
+4. Use consistent naming conventions for custom code values (prefix with site abbreviation)
+5. Validate code set usage before upgrading Millennium versions — Cerner may introduce new CDF meanings
+6. Test CCL scripts after adding new code values to confirm they appear in queries

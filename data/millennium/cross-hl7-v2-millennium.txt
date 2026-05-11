@@ -1,0 +1,642 @@
+# SOURCE: HL7 v2 Messaging — Cerner Millennium Integration
+# URL: https://www.hl7.org/implement/standards/product_brief.cfm?product_id=185
+# MODULE: Cross-Module
+# RETRIEVED: 2026-05-07
+# ---
+
+HL7 Standards Product Brief - HL7 Version 2 Product Suite | HL7 International
+
+ 
+ 
+
+×
+
+ 
+ To enhance security, Multi-Factor Authentication (MFA) is mandatory for all HL7 users.
+
+More information
+
+Home
+ > 
+Standards
+ > Product Brief 
+
+Section 1: Primary Standards
+Section 1d: Version 2 (V2)
+Section 2: Clinical and Administrative Domains
+
+HL7 Version 2 Product Suite
+
+DESCRIPTION
+
+
+ Become an HL7 V2 certified control specialist today!
+
+Get certified in HL7 Version 2
+ and show the world you have standards!
+
+
+ After you've completed your certification, don't forget to download your digital badge at 
+ badgelist.com/HL7
+. 
+
+
+ HL7’s Version 2.x (V2) messaging standard is the workhorse of electronic data exchange in the clinical domain and arguably the most widely implemented standard for healthcare in the world. This messaging standard allows the exchange of clinical data between systems. It is designed to support a central patient care system as well as a more distributed environment where data resides in departmental systems.
+
+
+ Additional information on the V2 SOGI Data Exchange Profile at 
+http://www.hl7.org/permalink/?SOGIGuidance
+.
+
+TARGETS
+
+
+ Healthcare IT Vendors
+
+
+ Healthcare Providers
+
+BENEFITS
+
+
+ Supports the majority of the common interfaces used in the healthcare industry globally
+
+
+ Provides a framework for negotiations of what is not in the standard
+
+
+ Reduces implementation costs
+
+
+ Generally backward compatible
+
+IMPLEMENTATIONS/CASE STUDIES
+
+
+ 95% of US healthcare organizations use HL7 V2.x
+
+
+ More than 35 countries have HL7 V2.x implementations
+
+DEVELOPMENT BACKGROUND
+
+
+ As one of the most widely implemented standards for healthcare information in the world, the Version 2 Messaging Standard was first released in October 1987 as an Application Protocol for Electronic Data Exchange in Healthcare Environments. Version 2.7, representing the latest update to the Version 2 Standard, was published in 2011.
+
+
+  
+
+
+ Due to its widespread use, Version 2 will continue to play an integral part in healthcare messaging, even with the HL7 Version 3 Normative Edition. HL7 is committed to supporting and extending Version 2 in parallel with Version 3, providing continuity for current installations.
+
+RELATED DOCUMENTS
+
+HL7 Version 2 Product Suite
+
+German Message Profiles for HL7 Version 2.5 (in German)
+
+(View Brief)
+
+(Download)
+
+(4.46 MB)
+
+HL7 Messaging Standard Version 2.2
+
+(View Brief)
+
+(Download)
+
+(2.70 MB)
+
+HL7 Messaging Standard Version 2.3
+
+(View Brief)
+
+(Download)
+
+(4.05 MB)
+
+HL7 Messaging Standard Version 2.3.1
+
+(View Brief)
+
+(Download)
+
+(6.26 MB)
+
+HL7 Messaging Standard Version 2.4
+
+(View Brief)
+
+(Download)
+
+(6.58 MB)
+
+HL7 Messaging Standard Version 2.5
+
+(View Brief)
+
+(Download)
+
+(11.31 MB)
+
+HL7 Messaging Standard Version 2.5.1
+
+(View Brief)
+
+(Download)
+
+(11.02 MB)
+
+HL7 Messaging Standard Version 2.6
+
+(View Brief)
+
+(Download)
+
+(13.69 MB)
+
+HL7 Messaging Standard Version 2.7
+
+(View Brief)
+
+(Download)
+
+(32.89 MB)
+
+HL7 Messaging Standard Version 2.7.1
+
+(View Brief)
+
+(Download)
+
+(39.32 MB)
+
+HL7 Messaging Standard Version 2.8
+
+(View Brief)
+
+(Download)
+
+(29.07 MB)
+
+HL7 Messaging Standard Version 2.8.1
+
+(View Brief)
+
+(Download)
+
+(28.73 MB)
+
+HL7 Messaging Standard Version 2.8.2
+
+(View Brief)
+
+(Download)
+
+(45.16 MB)
+
+HL7 Messaging Standard Version 2.9
+
+(View Brief)
+
+(Download)
+
+(59.19 MB)
+
+HL7 Messaging Standard Version 2.9.1 - An Application Protocol for Electronic Data Exchange in Healthcare Environments
+
+(View Brief)
+
+(Download)
+
+(47.27 MB)
+
+HL7 V2 Implementation Guide Quality Criteria, Release 1
+
+(View Brief)
+
+(Download)
+
+(324 KB)
+
+HL7 V2.2 Implementation Guide
+
+(View Brief)
+
+(Download)
+
+(342 KB)
+
+HL7 V2.3 Implementation Guide
+
+(View Brief)
+
+(Download)
+
+(675 KB)
+
+HL7 V2.3.1 Implementation Guide
+
+(View Brief)
+
+(Download)
+
+(767 KB)
+
+HL7 Version 2 Conformance Methodology Release 1
+
+(View Brief)
+
+(Download)
+
+(6.23 MB)
+
+HL7 Version 2 Implementation Guide: Clinical Genomics; fully LOINC-Qualified Cytogenetic Model, Release 1 - US Realm
+
+(View Brief)
+
+(Download)
+
+(455 KB)
+
+HL7 Version 2 Implementation Guide: Clinical Genomics; Fully LOINC-Qualified Genetic Variation Model (US Realm)
+
+(View Brief)
+
+(Download)
+
+(450 KB)
+
+HL7 Version 2 Implementation Guide: Diagnostic Audiology Results, Release 1 - US Realm
+
+(View Brief)
+
+HL7 Version 2 Implementation Guide: Laboratory Test Compendium Framework, Release 1
+
+(View Brief)
+
+(Download)
+
+(852 KB)
+
+HL7 Version 2 Implementation Guide: Laboratory Value Set Companion Guide, Release 2 - US Realm
+
+(View Brief)
+
+(Download)
+
+(2.81 MB)
+
+HL7 Version 2.3.1 Messaging Addenda
+
+(View Brief)
+
+(Download)
+
+(12 KB)
+
+HL7 Version 2.3.1 Messaging Schemas
+
+(View Brief)
+
+(Download)
+
+(241 KB)
+
+HL7 Version 2.3.1 Specification Errata
+
+(View Brief)
+
+(Download)
+
+(13 KB)
+
+HL7 Version 2.4 Messaging Addenda
+
+(View Brief)
+
+HL7 Version 2.4 Messaging Schemas
+
+(View Brief)
+
+(Download)
+
+(278 KB)
+
+HL7 Version 2.4 Specification Errata
+
+(View Brief)
+
+(Download)
+
+(15 KB)
+
+HL7 Version 2.4 Specification Technical Correction: P03 and P11 Trigger Events
+
+(View Brief)
+
+(Download)
+
+(154 KB)
+
+HL7 Version 2.4 Specification Technical Correction: P03 Updates
+
+(View Brief)
+
+(Download)
+
+(416 KB)
+
+HL7 Version 2.5 Messaging Schemas
+
+(View Brief)
+
+(Download)
+
+(328 KB)
+
+HL7 Version 2.5.1 Implementation Guide: Electronic Laboratory Reporting to Public Health, Release 1 (US Realm)
+
+(View Brief)
+
+(Download)
+
+(2.71 MB)
+
+HL7 Version 2.5.1 Implementation Guide: Electronic Laboratory Reporting to Public Health, Release 2 (US Realm)
+
+(View Brief)
+
+(Download)
+
+(2.01 MB)
+
+HL7 Version 2.5.1 Implementation Guide: Height and Weight Report, Release 1 (US Realm) [HL7 Version 2.5.1: ORU^R01]
+
+(View Brief)
+
+(Download)
+
+(785 KB)
+
+HL7 Version 2.5.1 Implementation Guide: Laboratory Orders from EHR (LOI) Edition 5 - US Realm
+
+(View Brief)
+
+HL7 Version 2.5.1 Implementation Guide: Laboratory Results Interface (LRI), Edition 5 - US Realm
+
+(View Brief)
+
+HL7 Version 2.5.1 Implementation Guide: Orders and Observations; Ambulatory Lab Result (ELINCS), Release 1
+
+(View Brief)
+
+(Download)
+
+(2.06 MB)
+
+HL7 Version 2.5.1 Implementation Guide: Orders and Observations; Interoperable Laboratory Result Reporting to EHR, Release 1
+
+(View Brief)
+
+(Download)
+
+(1.07 MB)
+
+HL7 Version 2.5.1 Implementation Guide: S&I Framework Laboratory Test Compendium Framework (eDOS), Release 2 - US Realm
+
+(View Brief)
+
+HL7 Version 2.5.1 Implementation Guide: Syndromic Surveillance, Release 1 - US Realm
+
+(View Brief)
+
+HL7 Version 2.5.1 Messaging Schemas
+
+(View Brief)
+
+(Download)
+
+(328 KB)
+
+HL7 Version 2.6 Implementation Guide: Blood Bank Donation Services (US Realm), Release 1
+
+(View Brief)
+
+(Download)
+
+(1.47 MB)
+
+HL7 Version 2.6 Implementation Guide: Early Hearing Detection and Intervention (EHDI) Results Release 1
+
+(View Brief)
+
+(Download)
+
+(799 KB)
+
+HL7 Version 2.6 Implementation Guide: Newborn Screening for Critical Congenital Heart Defects (CCHD), Release 1
+
+(View Brief)
+
+(Download)
+
+(883 KB)
+
+HL7 Version 2.6 Implementation Guide: Vital Records Birth and Fetal Death Reporting, Release 1 STU Release 2 - US Realm
+
+(View Brief)
+
+HL7 Version 2.6 Implementation Guide: Vital Records Death Reporting, Release 1 STU 2 - US Realm
+
+(View Brief)
+
+HL7 Version 2.6 Messaging Schemas
+
+(View Brief)
+
+(Download)
+
+(372 KB)
+
+HL7 Version 2.7 Messaging Schemas
+
+(View Brief)
+
+(Download)
+
+(362 KB)
+
+HL7 Version 2.7.1 Messaging Schemas
+
+(View Brief)
+
+(Download)
+
+(359 KB)
+
+HL7 Version 2.8 Messaging Schemas
+
+(View Brief)
+
+(Download)
+
+(377 KB)
+
+HL7 Version 2.8.1 Messaging Errata
+
+(View Brief)
+
+(Download)
+
+(4.39 MB)
+
+HL7 Version 2.8.1 Messaging Schemas
+
+(View Brief)
+
+(Download)
+
+(378 KB)
+
+HL7 Version 2.8.2 Implementation Guide: Immunization Messaging, Release 1 - US Realm
+
+(View Brief)
+
+HL7 Version 2.8.2 Messaging Schemas
+
+(View Brief)
+
+(Download)
+
+(386 KB)
+
+HL7 Version 2.9 Messaging Schemas
+
+(View Brief)
+
+(Download)
+
+(401 KB)
+
+HL7 Version 2.x Message Profiling Specification
+
+(View Brief)
+
+(Download)
+
+(264 KB)
+
+HL7 Version 2.x Messaging Schemas
+
+(View Brief)
+
+HL7 Version 2.x XML Example Messages
+
+(View Brief)
+
+(Download)
+
+(142 KB)
+
+HL7-NCPDP Electronic Prescribing Coordination Mapping Document, Release 1
+
+(View Brief)
+
+(Download)
+
+(1.91 MB)
+
+Secure HL7 Transactions using Internet mail, Rev 1.7
+
+(View Brief)
+
+(Download)
+
+(214 KB)
+
+Standard Guide for Implementing HL7 EDIT Communication Security
+
+(View Brief)
+
+(Download)
+
+(208 KB)
+
+V2.2 Implementation Support Guide
+
+(View Brief)
+
+(Download)
+
+(342 KB)
+
+V2.3 Implementation Support Guide
+
+(View Brief)
+
+(Download)
+
+(675 KB)
+
+V251 Implementation Guide: Electronic Laboratory Reporting to Public Health (US Realm), Release 1 Errata
+
+(View Brief)
+
+(Download)
+
+(179 KB)
+
+Version 2 v2.xml XML Schemas for HL7 Version 2.5 and earlier
+
+(View Brief)
+
+(Download)
+
+(1.58 MB)
+
+Version 2.x Common Audit Message
+
+(View Brief)
+
+(Download)
+
+(250 KB)
+
+XML Encoding Rules for Version 2 Messages, Release 2 (HL7 Version 2: XML Encoding Syntax, Release 2)
+
+(View Brief)
+
+(Download)
+
+(797 KB)
+
+XML Encoding Rules  (HL7 Version 2: XML Encoding Syntax, Release 1)
+
+(View Brief)
+
+(Download)
+
+(526 KB)
+
+BALLOT TYPE
+
+Informative
+
+Normative
+
+STATUS DATE
+
+FAMILY
+
+V2
+
+CURRENT STATE
+
+Stable
+
+REALM
+
+Universal

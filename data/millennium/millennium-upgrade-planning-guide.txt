@@ -1,0 +1,163 @@
+# SOURCE: Cerner Millennium Upgrade Planning Guide
+# URL: https://wiki.cerner.com/display/public/MillenniumRelease/Upgrade+Planning+Guide
+# MODULE: Millennium Platform
+# RETRIEVED: 2026-04-01
+# ---
+
+# Cerner Millennium Upgrade Planning Guide
+
+## Overview
+
+Upgrading a Cerner Millennium environment is a complex, multi-phase project that requires careful coordination between IT, clinical informatics, end-user training, and Oracle Health support teams. This guide covers the key phases, tasks, and best practices for planning and executing a successful Millennium upgrade.
+
+Oracle Health releases major updates twice per year (H1 spring and H2 fall). Most organizations adopt each major release within 6–18 months of availability. Skipping major releases is discouraged as it increases upgrade complexity.
+
+## Upgrade Phases
+
+### Phase 1: Pre-Upgrade Planning (8–12 weeks before CERT install)
+
+1. Download and review release notes from the Oracle Health Solution Portal.
+2. Identify new features and functionality that require build or training changes.
+3. Identify deprecated features that require migration before the upgrade.
+4. Inventory all custom CCL scripts and MPages components.
+5. Identify all third-party integrations and confirm vendor certification for the new version.
+6. Assess interface engine (CIE or CMOE) compatibility with the new release.
+7. Confirm the upgrade package is available from Oracle Health.
+8. Schedule the CERT upgrade maintenance window with all stakeholders.
+9. Ensure Production database backup is current.
+10. Notify end-user training leads of expected workflow changes.
+
+### Phase 2: CERT Domain Upgrade and Testing (4–8 weeks)
+
+#### Technical Install
+1. Oracle Health performs or supports the technical install in the CERT domain.
+2. Verify domain starts successfully after install (check node status in OTC).
+3. Re-compile all custom CCL scripts — schema changes may require recompile.
+4. Verify all MPages load correctly in the new WebView2 engine.
+5. Check interface connectivity — confirm all HL7 and FHIR interface connections are active.
+6. Run the post-install validation scripts provided by Oracle Health.
+
+#### Regression Testing
+Work with clinical informatics and super-users to test:
+- Core clinical workflows: patient admission, CPOE order entry, medication administration, nursing documentation, discharge.
+- Custom MPages — verify each registers, loads, and displays data correctly.
+- Critical CCL reports — run top reports in CERT and compare output to Production baseline.
+- Interface feeds — verify inbound ADT, lab results, and radiology reports are flowing correctly.
+- Revenue cycle workflows — charge capture, claims generation, coding functions.
+- Identity / SSO — verify login and position assignment work correctly after upgrade.
+
+#### Performance Testing
+- Run load simulation against CERT if the production environment is high-volume.
+- Verify Tuxedo queue depths and node response times under simulated load.
+- Identify any slow CCL queries introduced by schema changes (missing index after table modification).
+
+### Phase 3: End-User Training (concurrent with CERT testing)
+
+1. Develop training materials covering new features and workflow changes.
+2. Update tip sheets and quick reference guides.
+3. Schedule training sessions for all affected user groups.
+4. Record e-learning modules for self-paced training (for large organizations).
+5. Run a "train the trainer" session with super-users who will support colleagues post-go-live.
+
+### Phase 4: Production Upgrade
+
+#### Go/No-Go Decision
+Conduct a go/no-go meeting with:
+- IT leadership
+- Clinical informatics and CMIO/CNO representatives
+- Interface team
+- Oracle Health support engineer
+- Help desk team lead
+
+Review: open critical defects, outstanding test failures, interface status, training completion percentage.
+
+#### Production Maintenance Window
+1. Notify all stakeholders of the maintenance window (typically 4–8 hours, overnight).
+2. Disable non-critical interfaces before the upgrade begins.
+3. Oracle Health performs or supports the technical upgrade.
+4. After install, execute the post-install validation checklist.
+5. Re-enable interfaces and verify connectivity.
+6. Conduct smoke testing with super-users before opening access to all staff.
+7. Confirm domain health in OTC — all nodes green.
+
+#### Post-Production Support
+- Maintain extended help desk coverage for 48–72 hours post-upgrade.
+- Super-users deployed on all units/shifts during first 24 hours.
+- Monitor OTC queue depths and error logs hourly for the first 4 hours.
+- Oracle Health on-call support available throughout go-live window.
+
+## Custom CCL Script Considerations
+
+After every major upgrade:
+1. Identify scripts that reference newly changed tables or columns.
+2. Re-compile all scripts even if no changes appear necessary — the compiler may optimize for new indexes.
+3. Run each critical report against CERT data and verify output matches pre-upgrade baseline.
+4. Check for deprecated schema elements warned about in the release notes.
+5. Update scripts that reference deprecated tables/columns before Production go-live.
+
+## MPages Migration Considerations
+
+With the deprecation of Internet Explorer and the legacy DEO (Discern Explorer Objects) architecture:
+
+1. Inventory all existing MPages and classify by rendering engine (IE/DEO vs. MCS/FHIR).
+2. DEO-based MPages must be rewritten using MCS or FHIR before the DEO end-of-life date.
+3. Test all MPages in the new Edge WebView2 rendering environment — some CSS and JavaScript behavior differs from IE.
+4. Update any hardcoded browser-specific code (IE-specific DOM APIs, ActiveX calls).
+5. Validate MPage data loads correctly against the new Millennium schema after upgrade.
+
+## Interface Upgrade Tasks
+
+For each active interface (HL7 v2 and FHIR):
+1. Verify the interface engine vendor has released a certified adapter for the new Millennium version.
+2. Update adapter configuration in CIE if schema or message format changes were introduced.
+3. Run interface test transactions in CERT before Production.
+4. Validate inbound messages (ADT, lab, radiology) parse correctly.
+5. Validate outbound messages (orders, results, documents) are generated with the correct format.
+
+## Rollback Plan
+
+Have a rollback plan documented and ready before every Production upgrade:
+1. Oracle database rollback — Oracle RMAN restore from pre-upgrade backup (typically 2–4 hours).
+2. Application rollback — restore the previous Millennium application install files from backup.
+3. Trigger criteria — define specific conditions that would trigger a rollback decision (e.g., critical clinical system failure, data integrity issue detected, >30% of interfaces down after 2 hours).
+4. Rollback decision authority — identify who has authority to call a rollback (typically CIO + CMIO).
+
+## Communication Plan
+
+### Pre-Upgrade Communications
+- 4 weeks before: Announce upgrade date and maintenance window to all clinical staff.
+- 2 weeks before: Send detailed notification of new features and workflow changes.
+- 1 week before: Reminder with support contacts and training resources.
+- Day before: Final reminder with go-live time and help desk contact.
+
+### During the Upgrade
+- Real-time status updates via email/Teams/Slack to stakeholders.
+- Estimated time to completion updated every 30 minutes.
+
+### Post-Upgrade
+- "Upgrade complete" notification with validation status.
+- Link to release highlights and training resources.
+- Help desk contact information.
+
+## Timeline Summary
+
+| Week | Activity |
+|------|----------|
+| -10  | Release notes review, inventory custom components |
+| -8   | Third-party vendor certification confirmed |
+| -6   | CERT upgrade scheduled, training plan finalized |
+| -4   | CERT upgrade complete, regression testing begins |
+| -2   | End-user training sessions conducted |
+| -1   | Go/no-go meeting, Production maintenance window scheduled |
+| 0    | Production upgrade executed |
+| +1   | Post-go-live extended support period ends |
+
+## Best Practices
+
+1. Never upgrade Production without first completing regression testing in CERT.
+2. Always have a tested rollback plan before the Production maintenance window.
+3. Compile all custom CCL scripts after every major upgrade — do not skip this step.
+4. Keep a version-controlled archive of all custom CCL scripts and MPage files before upgrading.
+5. Do not skip minor releases if you are more than one major version behind — the gap compounds complexity.
+6. Engage Oracle Health's Deployment Consulting team for large or complex upgrades.
+7. Plan for 20% buffer time in every upgrade phase — unexpected issues are normal.

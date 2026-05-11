@@ -1,0 +1,413 @@
+# SOURCE: Clinical Decision Support System — Wikipedia
+# URL: https://en.wikipedia.org/wiki/Clinical_decision_support_system
+# MODULE: PowerChart
+# RETRIEVED: 2026-05-07
+# ---
+
+Health information technology
+
+This article has multiple issues.
+ Please help 
+improve it
+ or discuss these issues on the 
+talk page
+. 
+(
+Learn how and when to remove these messages
+)
+
+This article 
+contains 
+promotional content
+.
+ Please help 
+improve it
+ by removing 
+promotional language
+ and inappropriate 
+external links
+, and by adding encyclopedic text written from a 
+neutral point of view
+.
+See our 
+advice if the article is about you
+ and read our 
+scam warning
+ in case someone asks for money to edit this article.
+ 
+(
+January 2020
+)
+ (
+Learn how and when to remove this message
+)
+
+This article needs to be 
+updated
+.
+ Please help update this article to reflect recent events or newly available information.
+ 
+(
+January 2020
+)
+
+ (
+Learn how and when to remove this message
+)
+
+A 
+clinical decision support system
+ (
+CDSS
+) is a form of 
+health information technology
+ that provides clinicians, staff, patients, or other individuals with knowledge and person-specific information to enhance decision-making in clinical workflows. CDSS tools include alerts and reminders, clinical guidelines, condition-specific order sets, patient data summaries, diagnostic support, and context-aware reference information. They often leverage artificial intelligence to analyze clinical data and help improve care quality and safety. CDSSs constitute a major topic in 
+artificial intelligence in medicine
+.
+
+Characteristics
+
+A clinical decision support system is an active knowledge system that uses variables of patient data to produce advice regarding health care. This implies that a CDSS is simply a 
+decision support system
+ focused on using 
+knowledge management
+.
+
+Purpose
+
+The main purpose of modern CDSS is to assist clinicians at the point of care.
+ This means that clinicians interact with a CDSS to help to analyze and reach a 
+diagnosis
+ based on patient data for different diseases.
+
+In the early days, CDSSs were conceived to make decisions for the clinician in a literal manner. The clinician would input the information and wait for the CDSS to output the "right" choice, and the clinician would simply act on that output. However, the modern methodology of using CDSSs to assist means that the clinician interacts with the CDSS, utilizing both their knowledge and the CDSS's, better to analyse the patient's data than either human or CDSS could make on their own. Typically, a CDSS makes suggestions for the clinician to review, and the clinician is expected to pick out useful information from the presented results and discount erroneous CDSS suggestions.
+
+The two main types of CDSS are knowledge-based and non-knowledge-based:
+
+An example of how a clinician might use a clinical decision support system is a diagnosis decision support system (DDSS). DDSS requests some of the patients' data and, in response, proposes a set of appropriate diagnoses. The physician then takes the output of the DDSS and determines which diagnoses might be relevant and which are not,
+ and, if necessary, orders further tests to narrow down the diagnosis.
+
+Another example of a CDSS would be a 
+case-based reasoning
+ (CBR) system.
+ A CBR system might use previous case data to help determine the appropriate amount of beams and the optimal beam angles for use in 
+radiotherapy
+ for brain cancer patients; medical physicists and oncologists would then review the recommended treatment plan to determine its viability.
+
+Another important classification of a CDSS is based on the timing of its use. Physicians use these systems at the point of care to help them as they are dealing with a patient, with the timing of use being either pre-diagnosis, during diagnosis, or post-diagnosis.
+ Pre-diagnosis CDSS systems help the physician prepare the diagnoses. CDSSs help review and filter the physician's preliminary diagnostic choices to improve outcomes. Post-diagnosis CDSS systems are used to mine data to derive connections between patients and their past medical history and 
+clinical research
+ to 
+predict future events
+.
+ As of 2012, it has been claimed that decision support will begin to replace clinicians in common tasks in the future.
+
+Another approach, used by the 
+National Health Service
+ in England, is to use a CDSS to 
+triage
+ medical conditions out of hours by suggesting a suitable next step to the patient (e.g. call an 
+ambulance
+, or see a 
+general practitioner
+ on the next working day). The suggestion, which may be disregarded by either the patient or the phone operative if common sense or caution suggests otherwise, is based on the known information and an implicit conclusion about what the 
+worst-case
+ diagnosis is likely to be; it is not always revealed to the patient because it might well be incorrect and is not based on a medically-trained person's opinion - it is only used for initial triage purposes.
+[
+citation needed
+]
+
+Knowledge-based
+
+Most CDSSs consist of three parts: the knowledge base, an 
+inference engine
+, and a mechanism to communicate.
+ The knowledge base contains the rules and associations of compiled data which most often take the form of IF-THEN rules. If this was a system for determining 
+drug interactions
+, then a rule might be that IF drug X is taken AND drug Y is taken THEN alert the user. Using another interface, an advanced user could edit the knowledge base to keep it up to date with new drugs. The inference engine combines the rules from the knowledge base with the patient's data. The communication mechanism allows the system to show the results to the user as well as have input into the system.
+
+An expression language such as 
+GELLO
+[
+clarification needed
+]
+ or CQL (Clinical Quality Language) is needed for expressing knowledge artefacts in a computable manner. For example: if a patient has diabetes mellitus, and if the last haemoglobin A1c test result was less than 7%, recommend re-testing if it has been over six months, but if the last test result was greater than or equal to 7%, then recommend re-testing if it has been over three months.
+
+The current focus of the HL7 CDS WG is to build on the Clinical Quality Language (CQL).
+ The U.S. Centers for Medicare & Medicaid Services (CMS) has announced that it plans to use CQL for the specification of Electronic Clinical Quality Measures (eCQMs).
+
+Non-knowledge-based
+
+CDSSs which do not use a knowledge base use a form of 
+artificial intelligence
+ called 
+machine learning
+,
+ which allow computers to learn from past experiences and/or find patterns in clinical data. This eliminates the need for writing rules and expert input. However, since systems based on machine learning cannot 
+explain
+ the reasons for their conclusions, most clinicians do not use them directly for diagnoses, reliability and accountability reasons.
+ Nevertheless, they can be useful as post-diagnostic systems, for suggesting patterns for clinicians to look into in more depth.
+
+As of 2012, three types of non-knowledge-based systems are 
+support-vector machines
+, 
+artificial neural networks
+ and 
+genetic algorithms
+.
+
+Artificial neural networks use nodes and weighted connections between them to analyse the patterns found in patient data to derive associations between symptoms and a diagnosis.
+
+Genetic algorithms are based on simplified evolutionary processes using directed selection to achieve optimal CDSS results. The selection algorithms evaluate components of random sets of solutions to a problem. The solutions that come out on top are then recombined and mutated and run through the process again. This happens over and over until the proper solution is discovered. They are functionally similar to neural networks in that they are also "black boxes" that attempt to derive knowledge from patient data.
+
+Non-knowledge-based networks often focus on a narrow list of symptoms, such as symptoms for a single disease, as opposed to the knowledge-based approach, which covers the diagnosis of many diseases.
+
+An example of a non-knowledge-based CDSS is a web server developed using a support vector machine for the prediction of 
+gestational diabetes
+ in Ireland.
+
+Regulations
+
+This section 
+does not 
+cite
+ any 
+sources
+.
+ Please help 
+improve this section
+ by 
+adding citations to reliable sources
+. Unsourced material may be challenged and 
+removed
+.
+ 
+(
+January 2020
+)
+ (
+Learn how and when to remove this message
+)
+
+History, United States
+
+The IOM had published a report in 1999, 
+To Err is Human
+, which focused on the 
+patient safety
+ crisis in the United States, pointing to the incredibly high number of deaths. This statistic attracted great attention to the quality of patient care.
+ The 
+Institute of Medicine
+ (IOM) promoted the usage of health information technology, including clinical decision support systems, to advance the quality of patient care.
+
+With the enactment of the 
+American Recovery and Reinvestment Act of 2009
+ (ARRA), there was a push for widespread adoption of 
+health information technology
+ through the Health Information Technology for Economic and Clinical Health Act (HITECH). Through these initiatives, more hospitals and clinics were integrating 
+electronic medical records
+ (EMRs) and 
+computerized physician order entry
+ (CPOE) within their health information processing and storage. 
+Despite the absence of laws, the CDSS vendors would almost certainly be viewed as having a legal duty of care to both the patients who may adversely be affected due to CDSS usage and the clinicians who may use the technology for patient care.
+[
+citation needed
+]
+[
+clarification needed
+]
+ However, duties of care legal regulations are not explicitly defined yet.
+With the enactment of the HITECH Act included in the ARRA, encouraging the adoption of health IT, more detailed case laws for CDSS and EMRs were still
+[
+when?
+]
+ being defined by the Office of National Coordinator for Health Information Technology (ONC) and approved by 
+Department of Health and Human Services
+ (HHS). A definition of "Meaningful use" has yet to be published.
+[
+clarification needed
+]
+
+Effectiveness
+
+The evidence of the effectiveness of CDSS is mixed. There are certain diseases which benefit more from CDSS than other disease entities. A 2018 systematic review identified six medical conditions in which CDSS improved patient outcomes in hospital settings, including blood glucose management, blood transfusion management, physiologic deterioration prevention, pressure ulcer prevention, 
+acute kidney injury
+ prevention, and venous thromboembolism prophylaxis.
+
+A 2014 systematic review did not find a benefit in terms of risk of death when the CDSS was combined with the 
+electronic health record
+.
+ There may be some benefits, however, in terms of other outcomes.
+
+A 2005 
+systematic review
+ had concluded that CDSSs improved practitioner performance in 64% of the studies and patient outcomes in 13% of the studies. CDSSs features associated with improved practitioner performance included automatic electronic prompts rather than requiring user activation of the system.
+
+A 2005 systematic review found "Decision support systems significantly improved clinical practice in 68% of trials."' The CDSS features associated with success included integration into the clinical workflow rather than as a separate log-in or screen, electronic rather than paper-based templates, providing decision support at the time and location of care rather than prior, and providing care recommendations.
+
+However, later systematic reviews were less optimistic about the effects of CDS, with one from 2011 stating "There is a large gap between the postulated and empirically demonstrated benefits of [CDSS and other] eHealth technologies
+ 
+... their cost-effectiveness has yet to be demonstrated".
+
+A five-year evaluation of the effectiveness of a CDSS in implementing rational treatment of bacterial infections for 
+antimicrobial stewardship
+ was published in 2014; according to the authors, it was the first long-term study of a CDSS.
+
+Challenges to adoption
+
+Clinical challenges
+
+Much effort has been put forth by many medical institutions and software companies to produce viable CDSSs to support all aspects of clinical tasks. However, with the complexity of clinical workflows and the demands on staff time high, care must be taken by the institution deploying the support system to ensure that the system becomes an integral part of the clinical workflow. Some CDSSs have met with varying amounts of success, while others have suffered from common problems preventing or reducing successful adoption and acceptance.
+
+Two sectors of the healthcare domain in which CDSSs have had a large impact are the pharmacy and billing sectors. Commonly used pharmacy and prescription-ordering systems now perform batch-based checking orders for negative drug interactions and report warnings to the ordering professional. Another sector of success for CDSS is in billing and claims filing. Since many hospitals rely on 
+Medicare
+ reimbursements to stay in operation, systems have been created to help examine both a proposed treatment plan and the current rules of Medicare to suggest a plan that attempts to address both the care of the patient and the financial needs of the institution.
+[
+citation needed
+]
+
+Other CDSSs that are aimed at diagnostic tasks have found success but are often very limited in deployment and scope. The Leeds 
+Abdominal Pain
+ System went operational in 1971 for the 
+University of Leeds
+ hospital. It was reported to have produced a correct diagnosis in 91.8% of cases, compared to the clinicians' success rate of 79.6%.
+
+Despite the wide range of efforts by institutions to produce and use these systems, widespread adoption and acceptance have still not yet been achieved for most offerings. One large roadblock to acceptance has historically been workflow integration. A tendency to focus only on the functional decision-making core of the CDSS existed, causing a deficiency in planning how the clinician will use the product in situ. CDSSs were stand-alone applications, requiring the clinician to cease working on their current system, switch to the CDSS, input the necessary data (even if it had already been inputted into another system), and examine the results produced. The additional steps break the flow from the clinician's perspective and cost precious time.
+[
+citation needed
+]
+
+Technical challenges and barriers to implementation
+
+Clinical decision support systems face steep technical challenges in several areas. Biological systems are profoundly complicated, and a clinical decision may utilise an enormous range of potentially relevant data. For example, an electronic 
+evidence-based medicine
+ system may potentially consider a patient's symptoms, medical history, 
+family history
+ and 
+genetics
+, as well as historical and geographical trends of disease occurrence, and published clinical data on therapeutic effectiveness when recommending a patient's course of treatment.
+
+Clinically, a large deterrent to CDSS acceptance is workflow integration.
+
+While it has been shown that clinicians require explanations of Machine Learning-Based CDSS, in order to able to understand and trust their suggestions,
+ there is an overall distinct lack of application of 
+explainable Artificial Intelligence
+ in the context of CDSS,
+ thus adding another barrier to the adoption of these systems.
+
+Another source of contention with many medical support systems is that they produce a massive number of alerts. When systems produce a high volume of warnings (especially those that do not require escalation), besides the annoyance, clinicians may pay less attention to warnings, causing potentially critical alerts to be missed. This phenomenon is called alert fatigue.
+
+Maintenance
+
+One of the core challenges facing CDSS is difficulty in incorporating the extensive quantity of clinical research being published on an ongoing basis. In a given year, tens of thousands of clinical trials are published.
+ Currently, each one of these studies must be manually read, evaluated for scientific legitimacy, and incorporated into the CDSS in an accurate way. In 2004, it was stated that the process of gathering clinical data and medical knowledge and putting them into a form that computers can manipulate to assist in clinical decision-support is "still in its infancy".
+
+Nevertheless, it is more feasible for a business to do this centrally, even if incompletely, than for each doctor to try to keep up with all the research being published.
+[
+citation needed
+]
+
+In addition to being laborious, integration of new data can sometimes be difficult to quantify or incorporate into the existing decision support schema, particularly in instances where different clinical papers may appear conflicting. Properly resolving these sorts of discrepancies is often the subject of clinical papers itself (see 
+meta-analysis
+), which often take months to complete.
+[
+citation needed
+]
+
+Evaluation
+
+In order for a CDSS to offer value, it must demonstrably improve clinical workflow or outcome. Evaluation of CDSS quantifies its value to improve a system's quality and measure its effectiveness. Because different CDSSs serve different purposes, no generic metric applies to all such systems; however, attributes such as consistency (with and with experts) often apply across a wide spectrum of systems.
+
+The evaluation benchmark for a CDSS depends on the system's goal: for example, a diagnostic decision support system may be rated based upon the consistency and accuracy of its classification of disease (as compared to physicians or other decision support systems). An evidence-based medicine system might be rated based upon a high incidence of patient improvement or higher financial reimbursement for care providers.
+[
+citation needed
+]
+
+Combining with electronic health records
+
+Implementing EHRs was an inevitable challenge. This challenge is because it is a relatively uncharted area, and there are many issues and complications during the implementation phase of an EHR. This can be seen in the numerous studies that have been undertaken.
+[
+citation needed
+]
+ However, challenges in implementing electronic health records (EHRs) have received some attention. Still, less is known about transitioning from 
+legacy
+ EHRs to newer systems.
+
+EHRs are a way to capture and utilise real-time data to provide high-quality patient care, ensuring efficiency and effective use of time and resources. Incorporating EHR and CDSS together into the process of medicine has the potential to change the way medicine has been taught and practiced.
+ It has been said that "the highest level of EHR is a CDSS".
+
+Since "clinical decision support systems (CDSS) are computer systems designed to impact clinician decision making about individual patients at the point in time that these decisions are made",
+ it is clear that it would be beneficial to have a fully integrated CDSS and EHR.
+
+Even though the benefits can be seen, fully implementing a CDSS integrated with an EHR has historically required significant planning by the healthcare facility/organisation for the CDSS to be successful and effective. 
+The success and effectiveness can be measured by the increased patient care being delivered and reduced 
+adverse events
+ occurring. In addition, there would be a saving of time and resources and benefits in terms of autonomy and financial benefits to the healthcare facility/organisation.
+
+Status in Australia
+
+As of July 2015, the planned transition to EHRs in Australia is facing difficulties. Most healthcare facilities are still running completely paper-based systems; some are in a transition phase of scanned EHRs or moving towards such a transition phase.
+
+Victoria has attempted to implement EHR across the state with its HealthSMART program, but it has cancelled the project due to unexpectedly high costs.
+
+South Australia (SA) however is slightly more successful than Victoria in the implementation of an EHR. This may be because all public healthcare organisations in SA are centrally run.
+
+SA is in the process of implementing "Enterprise 
+patient administration system
+ (EPAS)". This system is the foundation for all public hospitals and health care sites for an EHR within SA, and it was expected that by the end of 2014, all facilities in SA will be connected to it. This would allow for successful integration of CDSS into SA and increase the benefits of the EHR.
+
+By July 2015 it was reported that only 3 out of 75 health care facilities implemented EPAS.
+
+With the largest health system in the country and a federated rather than a centrally administered model, New South Wales is making consistent progress towards statewide implementation of EHRs. The current iteration of the state's technology, eMR2, includes CDSS features such as a sepsis pathway for identifying at-risk patients based upon data input to the electronic record. As of June 2016, 93 of 194 sites in-scope for the initial roll-out had implemented eMR2.
+
+Status in Finland
+
+The EBMEDS Clinical Decision Support service provided by Duodecim Medical Publications Ltd is used by more than 60% of Finnish public health care doctors.
+
+Research
+
+Prescription errors
+
+A study in the UK tested the Salford Medication Safety Dashboard (SMASH), a web-based CDSS application to help GPs and pharmacists find people in their electronic health records who might face safety hazards due to prescription errors. The dashboard was successfully used in identifying and helping patients with already registered unsafe prescriptions and later it helped monitoring new cases as they appeared.
+
+See also
+
+Gello Expression Language
+
+International Health Terminology Standards Development Organisation
+
+Medical algorithm
+
+Medical informatics
+
+Personal Health Information Protection Act
+ (a law in force in Ontario)
+
+Treatment decision support
+ (decision support tools for patients)
+
+Artificial intelligence in healthcare
+
+References
+
+External links
+
+Duodecim EBMEDS Clinical Decision Support
+
+Decision support chapter from Coiera's Guide to Health Informatics
+
+OpenClinical
+ 
+Archived
+ 2 February 2020 at the 
+Wayback Machine
+ maintains an extensive archive of Artificial Intelligence systems in routine clinical use.
+
+Robert Trowbridge/ Scott Weingarten. 
+Chapter 53. Clinical Decision Support Systems
+
+Stanford CDSS
+
+Retrieved from "
+https://en.wikipedia.org/w/index.php?title=Clinical_decision_support_system&oldid=1352701622
+"

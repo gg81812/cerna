@@ -1,0 +1,115 @@
+# SOURCE: Cerner Revenue Cycle Management — Overview and Module Map
+# URL: https://www.oracle.com/health/revenue-cycle-management/
+# MODULE: Revenue Cycle
+# RETRIEVED: 2026-04-01
+# ---
+
+# Cerner Revenue Cycle Management — Overview and Module Map
+
+## What is Cerner Revenue Cycle Management?
+
+Cerner Revenue Cycle Management (RCM) is an integrated suite of applications within Cerner Millennium that manages the financial lifecycle of patient care — from pre-registration and insurance verification through clinical documentation, charge capture, coding, claims submission, and collections. Cerner's RCM philosophy is called CDRC — Clinically Driven Revenue Cycle — which connects clinical care delivery to financial outcomes, reducing manual processes and improving accuracy.
+
+Cerner RCM is branded under the Oracle Health RevElate product suite in recent product naming.
+
+## The Revenue Cycle Lifecycle
+
+The revenue cycle follows the patient's journey from appointment scheduling through final payment:
+
+1. **Pre-Registration** — demographic and insurance information collected before the patient arrives
+2. **Registration / Patient Access** — full registration, insurance eligibility verification, financial counseling at point of service
+3. **Clinical Encounter** — services delivered and documented (orders, procedures, diagnoses)
+4. **Charge Capture** — billable services converted to charges based on clinical events
+5. **Clinical Documentation Improvement (CDI)** — concurrent query of providers to improve diagnosis specificity and DRG accuracy
+6. **Coding (HIM)** — coders assign ICD-10-CM diagnosis codes and CPT/ICD-10-PCS procedure codes
+7. **Charge Review** — charges audited for accuracy before claim submission
+8. **Claims Submission** — clean claims submitted to payers (Medicare, Medicaid, commercial insurers)
+9. **Remittance / Payment Posting** — payer payments posted against account balances
+10. **Denial Management** — denied claims analyzed and appealed
+11. **Patient Billing** — patient statements generated and payment plans offered
+12. **Collections** — outstanding balances pursued through payment plans, financial assistance programs, or collection agencies
+
+## Cerner RCM Module Map
+
+### Patient Access Modules
+
+**Scheduling** — Appointment scheduling for outpatient and procedure-based visits.
+
+**Registration (ADT)** — Patient registration and encounter creation; insurance and demographic data capture.
+
+**Insurance Eligibility Verification** — Real-time insurance eligibility checks via clearinghouse integration (payer portals or 270/271 HL7 transactions).
+
+**Financial Counseling** — Pre-service cost estimation, financial assistance screening (charity care eligibility), payment plan setup.
+
+**Prior Authorization Management** — Tracking pre-authorization requirements by payer and procedure; documenting authorization numbers on encounters.
+
+### Clinical Documentation and Charge Capture Modules
+
+**CPOE (Computerized Provider Order Entry)** — Orders drive charge triggers automatically (procedure-based charging).
+
+**Charge Services** — Converts clinical events (orders, procedures, services) into billable charge lines. Rule-based charge triggers reduce manual charge entry.
+
+**Charge Review** — Workflow tool for charge review specialists to audit charge lines for completeness and accuracy before claim generation.
+
+**Clinical Documentation Improvement (CDI)** — Concurrent review of documentation by CDI specialists; query workflow for physicians to clarify diagnosis specificity.
+
+### Coding and Health Information Management (HIM)
+
+**Enterprise Coding (HIM)** — Coding workstation where medical coders assign ICD-10-CM, CPT, and ICD-10-PCS codes to the medical record.
+
+**Computer-Assisted Coding (CAC)** — AI/NLP technology that suggests ICD-10 and CPT codes based on clinical documentation, reducing coding time.
+
+**DRG Management** — Tools for reviewing MS-DRG assignments for inpatient cases; optimizes reimbursement within documentation accuracy constraints.
+
+### Claims and Billing Modules
+
+**Claims Management** — Electronic claims generation (837P/837I transactions), scrubbing, submission to clearinghouse, and payer tracking.
+
+**Remittance Management** — 835 electronic remittance advice (ERA) processing; automatic payment posting.
+
+**Denial Management** — Denial tracking, root cause analysis, and appeal workflow management.
+
+**Patient Accounting** — Inpatient and outpatient account management; patient statement generation; payment posting.
+
+**Patient Billing / Estimates** — Self-pay billing, patient-friendly statements, online payment portal.
+
+**Collections** — Bad debt management; integration with collection agency workflows.
+
+### Analytics and Reporting
+
+**HealtheAnalytics / RevElate** — Population-level financial analytics: AR aging, denial rates, days to payment, collection rates by payer, charge capture efficiency.
+
+**Charge Audit Reports** — Identify missing charges, charge lag, and outlier charges.
+
+**Quality and Compliance Reports** — Documentation completeness rates, CDI query response rates, coding accuracy.
+
+## CDRC — Clinically Driven Revenue Cycle
+
+CDRC is Cerner's philosophy that integrates clinical care with financial outcomes. Key principles:
+
+1. **Clinical Event = Financial Event** — Every clinical action (order placed, service rendered, diagnosis documented) automatically triggers the appropriate financial event. Reduces manual charge entry and human error.
+
+2. **Documentation Drives Revenue** — The specificity and completeness of clinical documentation directly determines DRG assignment and reimbursement. CDI ensures documentation meets this standard.
+
+3. **Physician Engagement** — Physicians are engaged at the point of care (via CDI queries and CDS alerts) rather than after-the-fact, when documentation is harder to amend.
+
+4. **Analytics-Driven Improvement** — HealtheAnalytics/RevElate dashboards surface revenue integrity opportunities, denial trends, and documentation gaps in real time.
+
+## Integration Between Clinical and Revenue Cycle Systems
+
+Cerner RCM is tightly integrated with the clinical Millennium applications:
+- CPOE orders → Charge Capture (automatic charge trigger)
+- Discharge diagnosis → CDI and Coding workflow initiation
+- Documentation completion → HIM queue activation
+- Payer contract terms → Real-time charge scrubbing rules
+- Prior authorization number → Claims attachment
+
+This integration is what differentiates Cerner RCM from standalone billing systems — the financial data is generated directly from clinical events, not re-keyed by billing staff.
+
+## Best Practices
+
+1. Configure automatic charge triggers for high-volume procedures to reduce manual charge entry lag.
+2. Implement concurrent CDI review — CDI queries issued after discharge have lower physician response rates and lower documentation improvement rates.
+3. Establish daily charge review workflow — charge lag (delay between service and charge submission) directly increases AR days.
+4. Monitor denial rates weekly — early identification of systemic denial trends allows faster root cause resolution.
+5. Measure and publish documentation specificity rates — physician engagement with CDI improves when they see their impact on DRG assignment.

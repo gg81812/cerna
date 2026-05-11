@@ -1,0 +1,141 @@
+# SOURCE: Cerner CDI (Clinical Documentation Improvement) Integration Guide
+# URL: https://wiki.cerner.com/display/public/1101rcm/CDI+Integration+Guide
+# MODULE: Revenue Cycle
+# RETRIEVED: 2026-04-01
+# ---
+
+# Cerner CDI (Clinical Documentation Improvement) Integration Guide
+
+## What is CDI?
+
+Clinical Documentation Improvement (CDI) is a program that ensures the clinical documentation in a patient's medical record accurately and completely reflects the clinical complexity and severity of illness for each patient. CDI specialists (typically nurses or allied health professionals with coding knowledge) concurrently review inpatient records and query physicians to clarify ambiguous, incomplete, or missing diagnoses and procedures.
+
+Accurate clinical documentation directly impacts:
+- DRG assignment and reimbursement (more specific documentation = appropriate DRG = appropriate payment)
+- Quality metrics and risk-adjusted outcome reporting (e.g., mortality rates, complication rates)
+- Patient safety indicators (PSI) and hospital-acquired condition (HAC) reporting
+- Population health analytics
+
+In Cerner Millennium, CDI is supported through tools in the Revenue Cycle suite and integrates with PowerChart clinical documentation.
+
+## CDI Workflow in Cerner
+
+### CDI Worklist
+
+CDI specialists access their review worklist from the CDI module:
+1. Open Revenue Cycle > CDI > CDI Worklist.
+2. Accounts eligible for CDI review appear — typically all inpatient accounts from Day 1 of admission.
+3. Accounts are prioritized by: LOS (longer stays first), DRG opportunity size, high-risk diagnosis categories.
+
+### CDI Record Review
+
+For each account:
+1. CDI specialist opens the account in the CDI workstation (split-screen: clinical documentation + CDI tools).
+2. Reviews:
+   - Admitting diagnosis vs. current clinical picture
+   - Provider notes, consult notes, and nursing documentation
+   - Lab results, imaging findings, and procedure reports
+   - Current MS-DRG assignment based on current documentation
+3. Identifies documentation opportunities (where greater specificity would change or improve the DRG assignment or quality reporting).
+
+### Types of Documentation Opportunities
+
+**Diagnosis Specificity:**
+- Documented: "Pneumonia" → Query: "What organism? Community-acquired vs. hospital-acquired?"
+- Documented: "AKI" → Query: "What stage? (Stage 1, 2, or 3 per KDIGO)"
+- Documented: "CHF" → Query: "Systolic vs. diastolic? Acute vs. chronic? HFrEF vs. HFpEF?"
+- Documented: "Altered mental status" → Query: "Acute encephalopathy? Delirium? Septic encephalopathy?"
+
+**Sepsis:**
+- Documented: "Infection" + signs of organ dysfunction → Query: "Does this meet sepsis criteria? Is there septic shock?"
+
+**Malnutrition:**
+- Documented: "Poor oral intake" + albumin < 3.5 → Query: "Does this patient have protein-calorie malnutrition? What severity?"
+
+**Complications vs. Comorbidities:**
+- Identify conditions present on admission (comorbidities) vs. complications arising during the stay.
+- Complications that meet CC/MCC criteria significantly impact DRG.
+
+### CDI Query Process
+
+When a documentation opportunity is identified:
+1. CDI specialist creates a query in the CDI module.
+2. The query is linked to the patient's account and the specific clinical event supporting the query.
+3. Query types:
+   - **Multiple choice query** — presents 2–4 clinically defensible options (including "Unable to determine" and "Clinically undetermined" as required by AHIMA/ACDIS standards).
+   - **Open-ended query** — asks the physician to clarify or confirm a clinical condition without suggesting a specific answer.
+   - **Written query** — fax or paper query for providers not accessible via Cerner.
+4. The query routes to the ordering/attending physician's InBasket in PowerChart as a "CDI Query" InBasket message type.
+
+### Physician Query Response Workflow
+
+1. Physician opens InBasket > CDI Queries folder.
+2. Reads the clinical question and supporting documentation.
+3. Selects a response option or types a free-text response.
+4. Signs the response — the response is documented in the medical record.
+5. CDI specialist receives a notification that the query was answered.
+
+### Post-Query DRG Impact
+
+After the physician responds:
+1. CDI specialist reviews the response.
+2. If the response changes the documentation:
+   - CDI workstation recalculates the expected MS-DRG.
+   - CDI specialist records the DRG impact (pre-query DRG vs. post-query DRG).
+   - The response is flagged for the coding team.
+3. Coding team picks up the updated documentation and assigns the appropriate codes at discharge coding.
+
+## CDI and PowerChart Integration
+
+### CDI Query in PowerChart
+
+When a physician receives a CDI query in their InBasket:
+1. The InBasket message contains: the clinical question, relevant supporting documentation (specific lab values, imaging findings, or note excerpts cited by the CDI specialist), and response options.
+2. The physician's response is automatically appended to the appropriate clinical note as a physician attestation addendum.
+3. The CDI specialist sees the response in the CDI workstation in real time.
+
+### CDI Alerts in CPOE
+
+Cerner can be configured to fire CDS alerts at order entry when clinical data suggests a documentation opportunity:
+- Elevated lactate ordered → alert: "Consider documenting septic shock if clinical criteria are met."
+- Creatinine rising >0.3mg/dL → alert: "Consider documenting acute kidney injury (AKI) stage."
+
+These alerts proactively capture documentation at the point of care rather than requiring a retrospective query.
+
+### CDI MPage
+
+A CDI-specific MPage is available in PowerChart for CDI specialists to review patient status:
+- Current working DRG and expected final DRG
+- Open queries and response status
+- LOS vs. geometric mean LOS for the current DRG
+- Active diagnoses and procedures
+- Suggested documentation opportunities (from CAC/CDI analysis engine)
+
+## CDI Metrics and Reporting
+
+### Key CDI Performance Indicators
+
+- **Query Rate** — queries issued per 1,000 inpatient discharges
+- **Query Response Rate** — % of queries answered by physicians (target: >90%)
+- **Query Agreement Rate** — % of queries where the physician affirmed the suggested diagnosis
+- **Case Mix Index (CMI) Impact** — change in CMI attributable to CDI program
+- **DRG Shift Rate** — % of coded DRGs that changed after CDI query
+- **Concurrent Review Rate** — % of inpatient days reviewed by CDI within 24 hours of admission
+
+### CDI Dashboard in HealtheAnalytics
+
+HealtheAnalytics / RevElate provides CDI leadership with:
+- CMI trend by month (with and without CDI attribution)
+- Query volume and response rate by physician/service
+- DRG opportunity analysis (theoretical DRG vs. actual DRG)
+- Top missed documentation opportunities by diagnosis category
+
+## Best Practices
+
+1. Initiate CDI review within 24 hours of admission — early queries have higher response rates and longer documentation improvement windows.
+2. Use multiple-choice queries for all concurrent CDI queries — AHIMA/ACDIS compliance guidelines prohibit leading queries.
+3. Cite specific clinical evidence in every query — vague queries without supporting evidence have low physician acceptance.
+4. Focus CDI resources on high-opportunity DRG groups: sepsis, pneumonia, malnutrition, CHF, AKI, respiratory failure.
+5. Partner CDI with physician education — providers who understand DRG impact document more specifically.
+6. Track and share query agreement rates by physician — outliers may need additional education or workflow support.
+7. Integrate CDI query alerts into CPOE — proactive documentation at the point of care is more efficient than retrospective queries.

@@ -1,0 +1,74 @@
+Oracle Health Millennium Platform APIs — Get Started Guide
+Source: https://docs.oracle.com/en/industries/health/millennium-platform-apis/index.html
+Scraped: 2026-04-19
+
+==============================================================
+
+Overview
+
+Oracle Health Millennium Platform provides APIs across Oracle Health products built on the Millennium platform. These APIs allow you to use the HL7 FHIR standard in your SMART application.
+
+Important Notice: Oracle no longer supports DSTU 2 FHIR APIs. Update applications to use R4 as soon as possible to prevent service interruptions.
+
+Getting Started Resources
+
+Introduction to HL7 FHIR:
+- Introducing HL7 FHIR
+- Version history of HL7 FHIR
+- R4 versions of HL7 FHIR standard
+- DSTU 2 versions of HL7 FHIR standard
+- U.S. Core Data for Interoperability
+
+Libraries Available:
+- Open Source FHIR Client
+- Open Sandbox and Secure Sandbox (R4 and DSTU 2)
+- FHIR R4 Public Endpoints for Patients
+- FHIR R4 Public Endpoints for Providers
+
+API Categories
+
+1. Electronic Health Record (EHR) APIs
+- Overview and all REST endpoints available
+
+2. FHIR R4 APIs
+- Overview
+- Bulk data access capabilities
+- All REST endpoints
+
+3. FHIR R4 Bulk Data Access APIs
+- Dedicated bulk data access functionality
+
+4. FHIR DSTU 2 APIs (Deprecated)
+- Overview and REST endpoints
+- Not recommended for new implementations
+
+Key Features and Authentication
+
+SMART Applications:
+- SMART application development
+- Tutorial on SMART on FHIR
+- Specification to build and test SMART on FHIR applications
+- SMART Application Provisioning
+
+Authorization Framework:
+- Application registration prerequisites
+- Application registration process
+- FHIR service authorization specification 1.0
+- TLS and Oracle Health FHIR API guidance
+- HL7 SMART App Launch Active User Presence extension
+- Authorization Framework FAQ
+
+Multi-Tenant Support:
+- Multi-Tenant Domains documentation
+
+Support Resources:
+- Oracle Health Developer Forums
+- Frequently Asked Questions (FAQ)
+
+Key URLs:
+- Sandbox FHIR: https://fhir-ehr.sandboxcerner.com/r4/<tenant-id>/
+- Production FHIR: https://fhir-ehr.cerner.com/r4/<tenant-id>/
+- Sandbox EHR API: https://api.sandboxcernermillennium.com/<tenant-id>/
+- Production EHR API: https://api.cernermillennium.com/<tenant-id>/
+- Developer console: https://code-console.cerner.com/
+- Developer forums: https://forums.oracle.com/ords/apexds/domain/open-developer-experience

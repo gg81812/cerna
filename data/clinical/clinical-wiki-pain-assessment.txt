@@ -1,0 +1,254 @@
+# SOURCE: Pain Scale — Wikipedia
+# URL: https://en.wikipedia.org/wiki/Pain_scale
+# MODULE: Clinical Workflows
+# RETRIEVED: 2026-05-07
+# ---
+
+Measure of intensity of pain
+
+A Chinese pain scale diagram, rating pain on a scale of 1 to 10
+
+A 
+pain scale
+ measures a 
+patient
+'s 
+pain
+ intensity or other features. Pain scales are a common communication tool in medical contexts, and are used in a variety of medical settings. Pain scales are a necessity to assist with better assessment of pain and patient screening. Pain measurements help determine the severity, type, and duration of the pain, and are used to make an accurate diagnosis, determine a treatment plan, and evaluate the effectiveness of treatment.
+[
+medical citation needed
+]
+ Pain scales are based on trust, cartoons (behavioral), or imaginary data, and are available for neonates, infants, children, adolescents, adults, seniors, and persons whose communication is impaired. Pain assessments are often regarded as "the 5th 
+vital sign
+".
+
+A patient's self-reported pain is so critical in the pain assessment method that it has been described as the "most valid measure" of pain.
+ The focus on patient report of pain is an essential aspect of any pain scale, but there are additional features that should be included in a pain scale. In addition to focusing on the patient's perspective, a pain scale should also be free of bias, accurate and reliable, able to differentiate between pain and other undesired emotions, absolute not relative, and able to act as a predictor or screening tool.
+
+Pain
+
+Pain is a complex experience with both sensory and emotional elements that typically indicates a potential issue in the 
+nervous system
+. It alerts organisms to potential injuries and medical conditions requiring medical assistance. The sensation of pain is an unpleasant or discomforting feeling that can manifest as sensations such as pricking, tingling, burning, stinging, shooting, aching, or electric. Pain can vary in intensity, from very mild to very severe; duration, short-lived to chronic; and location, one localized area or all over the body.
+
+There are three different types of pain based on the duration of the sensations: acute, episodic, and chronic. The most common are acute and chronic. Acute pain occurs suddenly, is sharp, and goes away once the issue is treated. Acute pain is caused by things like broken bones, childbirth, strained muscles, or burns.
+ Episodic pain occurs irregularly from time to time. Underlying medical conditions may cause it or can come out of nowhere.
+ Chronic pain is pain that is consistent for at least 3 months. Acute pain can become chronic; however, there usually is no known cause for chronic pain. Chronic pain can have adverse effects on relationships, daily living, work, extracurricular activities, etc.
+
+The experience of pain is unique for an individual, for all people feel pain differently. As a result of this, self-reporting is the best and most common practice for describing pain to medical personnel.
+
+History
+
+The practice of measuring pain has been a topic in research since the late 1800s. There were many methods used for assessing the intensity of pain, in humans as well as animals, using electrical, mechanical, and heat stimuli. Over time these methods have evolved; however, there were limitations to these historical methods. The limitations were in addressing the dimensions of pain duration, modality, locus, and response type. The main focus at the time was on acute pain rather than chronic pain. Researchers and clinicians are more interested in information on chronic pain due to its longevity. The locus of pain also differs between clinical and experimental settings; clinical pain is usually deeper while experimental pain is superficial. Furthermore, the response type to pain can contribute to further challenges for interpretation in both preclinical and clinical research.
+
+The Dolorimeter, created in 1940 at Cornell University, was one of the first methods used to gather information on pain threshold and tolerance. The instrument applied steady pressure, heat, or electrical stimuli to measure sensations of pain. Beecher was one of the first to suggest something other than the dolorimeter; he suggested that clinical pain be measured by its relief using subjective ratings. Numerical rating scales (NRS), verbal rating scales (VRS), and visual analog scales (VAS) on a 10-cm continuum are the scales used to attain these ratings. Melzack and Torgerson developed the McGill Pain Questionnaire which rates pain quantitatively by sensory, evaluative, and affective descriptors. These are things like burning, shooting, and agonizing.
+
+There have been many methods developed that use observational techniques where pain is evaluated by others. Such a method, for example, is the FLACC scale. It is for young children who are too young to be able to tell anyone how they feel. It measures facial expressions, leg position, activity, crying, and concealability on a 0–2 scale.
+
+Pain assessment
+
+There are many different instruments used to assess both the intensity of pain and the effect of pain. A few are listed below:
+
+Numeric rating scale
+
+The Numeric Rating Scale (NRS-11) is an 11-point scale for patient self-reporting of pain. It is based solely on the ability to perform 
+activities of daily living
+ (ADLs) and is used for adults and children 10
+ 
+years old or older.
+
+Rating
+
+Pain Level
+
+0
+
+No Pain
+
+1–3
+
+Mild Pain (nagging, annoying, interfering little with ADLs)
+
+4–6
+
+Moderate Pain (interferes significantly with ADLs)
+
+7–10
+
+Severe Pain (disabling; unable to perform ADLs)
+
+Pain interferes with a person's ability to perform ADLs. Pain also interferes with a person's ability to concentrate and to think. A sufficiently strong pain can be disabling to a person's concentration and coherent thought, even if it is not strong enough to prevent that person's performance of ADLs. However, there is no system available for measuring effect on concentration and thought.
+
+Verbal rating scale
+
+The verbal rating scale (VRS) is a pain measurement tool that uses adjectives to express various levels of pain. The scale is rated similarly, from no pain at all to the most extreme pain ever felt. In clinical trials there is usually a four- to six-point VRS. There are a few limitations to this scale. Some people might find it hard to accurately express their pain with the limited number of options to choose from. Interpretation of the options is also a potential issue, as people could interpret them all differently.
+
+Visual analog scale
+
+The visual analog scale is a visual scale that has two endpoints: "no pain" and "pain is as bad as it could be". When it was first created people had to physically write their answers on the scale. There are mechanical ones now to make scoring easier.
+
+Examples of pain scales
+
+Self-report
+
+Observational
+
+Physiological
+
+Infant
+
+—
+
+Premature Infant Pain Profile; Neonatal/Infant Pain Scale
+
+—
+
+Child
+
+Faces Pain Scale
+ – Revised;
+ Wong-Baker FACES Pain Rating Scale; Coloured Analogue Scale
+
+FLACC
+ (Face Legs Arms Cry Consolability Scale); CHEOPS (Children's Hospital of Eastern Ontario Pain Scale)
+
+Comfort; Wharton PAIN Scale
+
+Adult
+
+Visual Analog Scale (VAS); Verbal Numerical Rating Scale (VNRS); Verbal Descriptor Scale (VDS); Brief Pain Inventory
+
+Wharton Impairment and Pain Scale
+
+Wharton PAIN Scale
+
+Partial list of pain measurement scales
+
+Alder Hey Triage Pain Score
+
+Behavioral Pain Scale (BPS)
+
+Brief Pain Inventory
+ (BPI)
+
+Checklist of Nonverbal Pain Indicators (CNPI)
+
+Clinical Global Impression
+ (CGI)
+
+COMFORT scale
+
+Color Scale for Pain
+
+Critical-Care Pain Observation Tool (CPOT)
+
+Dallas Pain Questionnaire
+
+Descriptor differential scale (DDS)
+
+Dolorimeter
+ Pain Index (DPI)
+
+Edmonton Symptom Assessment System
+
+Face Legs Activity Cry Consolability scale
+
+Faces Pain Scale – Revised (FPS-R)
+
+Global Pain Scale
+
+Lequesne algofunctional index: a composite measure of pain and disability, with separate self-report questionnaires for hip and knee OA (osteoarthritis):
+
+Original index (1987)
+
+1991 revision
+
+1997 revision
+
+Mankoski Pain Scale
+
+McGill Pain Questionnaire
+ (MPQ)
+
+Multiple Pain Rating Scales
+
+Neck Pain and Disability Scale –NPAD
+
+Numerical 11 point box (BS-11)
+
+Numeric Rating Scale (NRS-11)
+
+Oswestry Disability Index
+
+Palliative Care Outcome Scale (PCOS)
+
+Roland-Morris Back Pain Questionnaire
+
+Support Team Assessment Schedule (STAS)
+
+Wharton Pain and Impairment Numeric Scale (Wharton PAIN Scale)
+
+Wong-Baker FACES Pain Rating Scale
+
+Visual analog scale
+ (VAS)
+
+Specialized tests
+
+Abbey pain scale for people with end-stage dementia
+
+AUSCAN: Disease-Specific, to assess hand osteoarthritis outcomes.
+
+Colorado Behavioral Numerical Pain Scale (for sedated patients)
+
+CPOT For those who can't self report
+
+Osteoarthritis Research Society International-Outcome Measures in Rheumatoid Arthritis Clinical Trials (OARSI-OMERACT) Initiative, New OA Pain Measure: Disease-Specific, Osteoarthritis Pain
+
+Oucher Scale for Pediatrics
+
+Pain Assessment in Advanced Dementia (PAINAD)
+
+Pediatric Pain Questionnaire (PPQ)
+ for measuring pain in children
+
+Premature Infant Pain Profile (PIPP)
+ for measuring pain in 
+premature infants
+
+Schmidt Sting Pain Index
+ and 
+Starr sting pain scale
+ both for insect stings
+
+WOMAC : Disease-Specific, to assess knee osteoarthritis outcomes.
+
+In endometriosis
+
+The most common pain scale for quantification of 
+endometriosis
+-related pain is the 
+visual analogue scale
+ (VAS). A review came to the conclusion that VAS and numerical rating scale (NRS) were the best adapted pain scales for pain measurement in endometriosis. For research purposes, and for more detailed pain measurement in clinical practice, the review suggested use of VAS or NRS for each type of typical pain related to endometriosis (
+dysmenorrhea
+, deep 
+dyspareunia
+ and non-menstrual 
+chronic pelvic pain
+), combined with the 
+clinical global impression
+ (CGI) and a 
+quality of life
+ scale.
+
+See also
+
+SOCRATES (pain assessment)
+
+Pain management in children
+
+Notes
+
+Retrieved from "
+https://en.wikipedia.org/w/index.php?title=Pain_scale&oldid=1304563757
+"

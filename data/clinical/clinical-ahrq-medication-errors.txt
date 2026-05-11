@@ -1,0 +1,388 @@
+# SOURCE: AHRQ PSNet Primer — Medication Errors and ADEs
+# URL: https://psnet.ahrq.gov/primer/medication-errors-and-adverse-drug-events
+# MODULE: Clinical Workflows
+# RETRIEVED: 2026-05-07
+# ---
+
+Medication Errors and Adverse Drug Events
+
+Citation Text:
+
+Medication Errors and Adverse Drug Events. PSNet [internet]. Rockville (MD): Agency for Healthcare Research and Quality, US Department of Health and Human Services. 2019.
+
+Copy Citation
+
+Format:
+
+Google Scholar
+BibTeX
+EndNote X3 XML
+EndNote 7 XML
+Endnote tagged
+PubMedId
+RIS
+
+Download Citation
+
+Save
+
+ 
+Save to your library
+
+Print
+
+Download PDF
+
+Share
+
+Facebook
+
+Twitter
+
+Linkedin
+
+Copy URL
+
+ Cite
+ 
+
+ Citation
+
+Citation Text:
+
+Medication Errors and Adverse Drug Events. PSNet [internet]. Rockville (MD): Agency for Healthcare Research and Quality, US Department of Health and Human Services. 2019.
+
+Copy Citation
+
+Format:
+
+Google Scholar
+BibTeX
+EndNote X3 XML
+EndNote 7 XML
+Endnote tagged
+PubMedId
+RIS
+
+Download Citation
+
+UC Davis PSNet Editorial Team | December 15, 2024
+
+PSNet primers are regularly reviewed and updated by the UC Davis PSNet Editorial Team to ensure that they reflect current research and practice in the patient safety field. Last reviewed in 2024.
+Background and Definitions
+Advances in 
+clinical therapeutics have resulted in major improvements in health for patients with many diseases, but these benefits have also been accompanied by increased risks. A 
+medication error
+ is an error (of commission or omission) at any step along the pathway that begins when a clinician prescribes a medication and ends when the patient actually receives the medication. An 
+adverse drug event
+ (ADE) is defined as harm experienced by a patient as a result of exposure to a medication. As with the more general term 
+adverse event
+, the occurrence of an ADE does not necessarily indicate an error or poor quality care.
+Preventable ADE 
+ result from a medication error that reaches the patient and causes any degree of harm. It is generally estimated that about half of ADEs are preventable. 
+Potential ADE
+ 
+ 
+are medication errors that do not cause any harm—either because they are intercepted before reaching the patient or because of luck. 
+A
+meliorable ADE 
+are events
+ 
+in which the patient experienced harm from a medication that, while not completely preventable, could have been mitigated. 
+Adverse drug reactions
+ or 
+nonpreventable ADE.
+ A certain percentage of patients will experience ADEs even when medications are prescribed and administered appropriately.
+For example, the intravenous anticoagulant heparin is considered one of the 
+highest-risk medications
+ used in the inpatient setting. Safe use of heparin requires weight-based dosing and frequent monitoring of tests of the blood's clotting ability to avoid either bleeding complications (if the dose is too high) or clotting risks (if the dose is inadequate). If a clinician prescribes an incorrect dose of heparin, that would be considered a medication error (even if a pharmacist detected the mistake before the dose was dispensed). If the incorrect dose was dispensed and administered but the patient experienced no clinical consequences, that would be a potential ADE. If an excessively large dose was administered, the overdose was detected by abnormal lab results, but the patient experienced a bleeding complication due to clinicians failing to respond appropriately, that would be considered an ameliorable ADE (that is, earlier detection could have reduced the level of harm the patient experienced).
+Adverse drugs events are one of the most common preventable adverse events in all settings of care, mostly because of the widespread use of prescription and nonprescription medications. Clinicians have access to an armamentarium of more than 10,000 prescription medications, and nearly one-third of adults in the United States take 
+5 or more medications
+. Each year, ADEs account for nearly 700,000 
+emergency department visits
+ and 100,000 
+hospitalizations
+. 
+Ambulatory patients
+ may experience ADEs at even higher rates, as illustrated by the dramatic increase in deaths due to 
+opioid medications
+, which has largely taken place outside the hospital. Transitions in care are also a 
+well-documented
+ source of preventable harm related to medications.
+Risk Factors for Adverse Drug Events
+There are patient-specific, drug-specific, and clinician-specific risk factors for ADEs. 
+Polypharmacy
+—taking more medications than clinically necessary—is likely the strongest risk factor for ADEs. Older adults, who take more medications and are more vulnerable to specific medication adverse effects than younger patients, are particularly vulnerable to ADEs. 
+Pediatric patients
+ are also at heightened risk, especially when hospitalized, since many medications for children must be dosed according to their weight. Other well-documented patient-specific risk factors include limited 
+health literacy
+ and numeracy (the ability to use arithmetic operations for daily tasks). It is important to note that in 
+ambulatory care
+, patient-level risk factors are probably an underrecognized source of ADEs. Studies have shown that both 
+caregivers
+ (including 
+parents of sick children
+) and patients themselves commit medication administration errors at surprisingly high rates.
+The Institute for Safe Medication Practices maintains a 
+list
+ of high-alert medications in acute care settings—medications that can cause significant patient harm if used in error. These include medications that have dangerous adverse effects, but also include 
+look-alike and sound-alike 
+medications: those that have similar names and physical appearance but completely different pharmaceutical properties. The 
+Beers criteria
+, which define certain classes of medications as potentially inappropriate for geriatric patients, have traditionally been used to assess medication safety. However, the newer STOPP (Screening Tool of Older Person's inappropriate Prescriptions) and START (Screening Tool to Alert to Right Treatment) have been 
+shown
+ to more accurately predict ADEs than the Beers criteria and are therefore likely a better measure of prescribing safety in elderly patients.
+Though there are specific types of medications for which the harm generally outweighs the benefits, such as benzodiazepine sedatives in older adults, it is now clear that most ADEs are caused by 
+commonly
+ used medications that have risks, but offer significant benefits if used properly. These 
+medications
+ include 
+antidiabetic agents (e.g., insulin), oral anticoagulants (e.g., warfarin), antiplatelet agents (such as aspirin and clopidogrel), and opioid pain medications. Focusing on improving prescribing safety for these useful but higher-risk medications may reduce the burden of ADEs in elderly patients more than focusing on use of potentially inappropriate classes of medications.
+Prevention of Adverse Drug Events
+The pathway connecting a clinician's decision to prescribe a medication and the patient actually receiving the medication consists of several steps:
+Ordering: the clinician must select the appropriate medication and the dose, frequency, and duration.
+Transcribing: in a paper-based system, an intermediary (a clerk in the hospital setting, or a pharmacist or pharmacy technician in the outpatient setting) must read and interpret the prescription correctly.
+Dispensing: the pharmacist must check for drug–drug interactions and allergies, then release the appropriate quantity of the medication in the correct form.
+Administration: the correct medication must be supplied to the correct patient at the correct time. In hospitals or long-term care settings, this is generally the responsibility of nurses or other trained staff; 
+in 
+ambulatory
+ care the responsibility falls to patients or caregivers.
+The widespread use of electronic health records has helped avert errors at the ordering and transcribing stages, but these errors still persist, and studies have found a high rate of medication administration errors in both the 
+inpatient
+ and 
+outpatient 
+settings.
+.
+Preventing medication errors requires specific steps to ensure safety at each stage of the pathway (Table).
+Table. Strategies to Prevent Adverse Drug Events
+Stage
+Safety Strategy
+Prescribing
+ 
+Avoid unnecessary medications by adhering to 
+conservative prescribing
+ principles
+Computerized provider order entry
+, especially when paired with 
+clinical decision support systems
+Medication reconciliation
+ at times of transitions in care
+Transcribing
+ 
+Computerized provider order entry
+ to eliminate handwriting errors 
+Dispensing
+ 
+ 
+Clinical pharmacists
+ to oversee medication dispensing process
+Use of "
+tall man
+" lettering and other strategies to minimize confusion between look-alike, sound-alike medications
+Automated dispensing cabinets
+ for high-risk medications
+Administration
+ 
+ 
+ 
+ 
+ 
+Adherence to the "Five Rights" of medication safety (administering the Right Medication, in the Right Dose, at the Right Time, by the Right Route, to the Right Patient)
+Barcode medication administration
+ to ensure medications are given to the correct patient
+Minimize interruptions
+ to allow nurses to administer medications safely
+Smart infusion pumps 
+for intravenous infusions
+Multicompartment medication devices
+ for patients taking multiple medications in ambulatory or long-term care settings
+Patient education
+ and revised 
+medication labels
+ to improve patient comprehension of administration instructions
+Although each of the strategies enumerated in the Table can prevent ADEs when used individually and correctly, improving medication safety cannot be divorced from the overall goal of reducing preventable harm from all causes. Analysis of 
+serious medication errors
+ invariably reveals underlying 
+system flaws
+—such as 
+human factors engineering
+ issues and impaired 
+safety culture
+—that allowed individual prescribing or administration errors to reach the patient and cause serious harm. Integration of information technology solutions (including computerized provider order entry and barcode medication administration) into "
+closed-loop
+" medication systems holds great promise for improving medication safety in hospitals, but the potential for error will remain unless these systems are carefully implemented and these larger issues are addressed.
+Current Context
+Preventing ADEs is a major priority for health systems. The Joint Commission has named improving medication safety as a 
+National Patient Safety Goal
+ for both hospitals and ambulatory clinics, and the 
+Partnership for Patients
+ included ADE prevention as one of its key goals for improving patient safety. The opioid epidemic has spurred the development of multiple initiatives to reduce inappropriate opioid prescribing, including enhanced prescription drug monitoring programs and updated 
+prescribing guidelines
+ for clinicians, as well as 
+initiatives
+ to mitigate risks associated with opioid use. These programs are summarized in a 2016 
+Annual Perspective
+ and a 2017 
+PSNet perspective
+. The Office of Disease Prevention and Health Promotion issued the 
+National Action Plan for Adverse Drug Event Prevention
+ in 2014, which identified ways to align the efforts of federal health agencies to reduce patient harms from specific medications, including opioids. And in 2017, the World Health Organization launched its 
+Medication Without Harm program
+ as part of its Global Patient Safety Challenges initiative.
+
+This project was funded under contract number 75Q80119C00004 from the Agency for Healthcare Research and Quality (AHRQ), U.S. Department of Health and Human Services. The authors are solely responsible for this report’s contents, findings, and conclusions, which do not necessarily represent the views of AHRQ. Readers should not interpret any statement in this report as an official position of AHRQ or of the U.S. Department of Health and Human Services. None of the authors has any affiliation or financial involvement that conflicts with the material presented in this report. 
+View AHRQ Disclaimers
+
+Save
+
+ 
+Save to your library
+
+Print
+
+Download PDF
+
+Share
+
+Facebook
+
+Twitter
+
+Linkedin
+
+Copy URL
+
+ Cite
+ 
+
+ Citation
+
+Citation Text:
+
+Medication Errors and Adverse Drug Events. PSNet [internet]. Rockville (MD): Agency for Healthcare Research and Quality, US Department of Health and Human Services. 2019.
+
+Copy Citation
+
+Format:
+
+Google Scholar
+BibTeX
+EndNote X3 XML
+EndNote 7 XML
+Endnote tagged
+PubMedId
+RIS
+
+Download Citation
+
+Sections
+
+Background and Definitions
+
+Current Context
+
+Related Patient Safety Primers
+
+ 
+Medication Reconciliation
+December 15, 2024
+
+Computerized Provider Order Entry
+March 15, 2025
+
+Editor's Picks
+
+ 
+ISMP List of Error-Prone Abbreviations, Symbols, and Dose Designations.
+April 17, 2024
+
+Prevention of adverse drug events in hospitals.
+March 21, 2024
+
+Global Burden of Preventable Medication-related Harm in Health Care: A Systematic Review.
+March 20, 2024
+
+Targeted Medication Safety Best Practices for Hospitals.
+February 22, 2024
+
+View More
+
+Related WebM&M
+
+ 
+The Impact of Communication on Medication Errors
+March 15, 2021
+
+Bad Writing, Wrong Medication
+April 1, 2010
+
+Related Resources
+
+Patient Safety Primers
+
+Pharmacist's Role in Medication Safety
+
+December 15, 2024
+
+Patient Safety Primers
+
+Adverse Events, Near Misses, and Errors
+
+December 15, 2024
+
+Patient Safety Primers
+
+Medication Reconciliation
+
+December 15, 2024
+
+Understanding risk factors for complaints against pharmacists: a content analysis.
+
+June 19, 2024
+
+Patient Safety Primers
+
+Patient Safety 101
+
+June 15, 2024
+
+Patient Safety Primers
+
+Inpatient Transitions of Care: Challenges and Safety Practices
+
+March 27, 2024
+
+Patient Safety Primers
+
+Post-Acute Transitional Services: Safety in Home-Based Care Programs
+
+April 27, 2022
+
+Patient Safety Primers
+
+Deprescribing as a Patient Safety Strategy
+
+October 27, 2021
+
+Patient Safety Primers
+
+Nursing and Patient Safety
+
+April 21, 2021
+
+Patient Safety Primers
+
+Medication Administration Errors
+
+March 12, 2021
+
+View More
+
+See More About The Topic
+
+ 
+ Adverse Drug Event (ADE)
+
+ Medication Errors/Preventable Adverse Drug Events
+
+ Look-Alike, Sound-Alike Drugs

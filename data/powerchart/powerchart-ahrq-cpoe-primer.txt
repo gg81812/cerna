@@ -1,0 +1,315 @@
+# SOURCE: AHRQ PSNet Primer — Computerized Provider Order Entry
+# URL: https://psnet.ahrq.gov/primer/computerized-provider-order-entry
+# MODULE: PowerChart
+# RETRIEVED: 2026-05-07
+# ---
+
+Computerized Provider Order Entry
+
+Citation Text:
+
+Computerized Provider Order Entry. PSNet [internet]. Rockville (MD): Agency for Healthcare Research and Quality, US Department of Health and Human Services. 2019.
+
+Copy Citation
+
+Format:
+
+Google Scholar
+BibTeX
+EndNote X3 XML
+EndNote 7 XML
+Endnote tagged
+PubMedId
+RIS
+
+Download Citation
+
+Save
+
+ 
+Save to your library
+
+Print
+
+Download PDF
+
+Share
+
+Facebook
+
+Twitter
+
+Linkedin
+
+Copy URL
+
+ Cite
+ 
+
+ Citation
+
+Citation Text:
+
+Computerized Provider Order Entry. PSNet [internet]. Rockville (MD): Agency for Healthcare Research and Quality, US Department of Health and Human Services. 2019.
+
+Copy Citation
+
+Format:
+
+Google Scholar
+BibTeX
+EndNote X3 XML
+EndNote 7 XML
+Endnote tagged
+PubMedId
+RIS
+
+Download Citation
+
+UC Davis PSNet Editorial Team | March 15, 2025
+
+PSNet primers are regularly reviewed and updated by the UC Davis PSNet Editorial Team to ensure that they reflect current research and practice in the patient safety field. Last reviewed in 2025.
+Background
+The 
+digital transformation of medicine
+ is perhaps best exemplified by computerized provider order entry (CPOE), which refers to any system in which clinicians directly place orders electronically, with the orders transmitted directly to the recipient.  Spurred by the 2009 federal HITECH Act and the accompanying Meaningful Use program, now known as the 
+Promoting Interoperability Program
+, CPOE usage rapidly increased in inpatient and outpatient settings. 
+Most hospitals
+ and outpatient practices now use some form of CPOE. CPOE systems were originally developed to improve the safety of medication orders, but modern systems now allow electronic ordering of tests, procedures, and consultations as well. The widespread implementation of CPOE into electronic health systems (EHR) has benefited clinicians and patients, but it also vividly illustrates the risks and unintended consequences of digitizing a fundamental health care process.
+The process of prescribing and administering a medication involves several steps, each of which has vulnerabilities that are addressed—to greater or lesser degrees—by CPOE:
+Ordering
+: the clinician must select the appropriate medication and the dose and frequency at which it is to be administered.
+Transcribing
+: if handwritten, the prescription must be read and understood by the recipient (usually a pharmacy technician or pharmacist).
+Dispensing
+: the pharmacist must check for drug–drug interactions and allergies, then release the appropriate quantity of the medication in the correct form.
+Administration
+: the medication must be received by the correct person and supplied to the correct patient at the right time in the right dosage. In hospitalized patients, nurses are generally responsible for this step, but in the outpatient setting, this step is the patient's or caregiver's responsibility.
+A 
+classic study
+ of inpatient medication errors found that approximately 90% occurred at either the ordering or transcribing stage. These errors had a variety of causes, including poor handwriting, ambiguous abbreviations, or simple lack of knowledge on the part of the ordering clinician. A CPOE system can prevent errors at the ordering and transcribing stages by (at a minimum) ensuring standardized, legible, and complete orders.
+CPOE systems are generally paired with some form of 
+clinical decision support system
+ (CDSS), which can help prevent errors at the medication ordering and dispensing stages and can improve safety of other types of orders as well. A typical CDSS suggests default values for drug doses, routes of administration, and frequency and may offer more sophisticated drug safety features, such as checking for drug allergies or drug–drug or even drug–laboratory (e.g., warning a clinician before ordering a nephrotoxic medication in a patient with elevated creatinine) interactions. The most sophisticated CDSSs prevent not only errors of commission (e.g., ordering a drug in excessive doses or a drug to which the patient has a known allergy), but also of omission (e.g., failing to order prophylaxis against deep venous thrombosis in a patient who underwent joint replacement surgery). CDSSs are also increasingly being deployed to address 
+overuse
+—for example, a 
+systematic review
+ of CPOE for radiologic studies found that CDSS can improve adherence to guidelines for diagnostic imaging and reduce overall test usage.
+Evidence of Effectiveness
+CPOE offers numerous advantages over traditional paper-based order-writing systems. Examples of these advantages include: averting problems with handwriting, similar drug names, drug interactions, and specification errors; integration with electronic medical records, clinical decision support systems, and adverse drug event reporting systems; faster transmission to the laboratory, pharmacy, or radiology department; ability to recommend alternative tests or treatments that may be safer or lower cost; and potential economic savings. Supported by 
+early evidence
+, the proposed benefits of CPOE served as a core part of the argument for federal funding to support the widespread implementation of CPOE.
+These proposed benefits have been borne out to some extent, principally with regard to improving medication safety. Specifically, CPOE appears to be effective at preventing medication prescribing errors. A 
+2013 meta-analysis
+ found that the likelihood of a prescribing error was reduced by 48% when using CPOE compared with paper-based orders, which translates into more than 17 million medication errors prevented yearly in United States hospitals. Studies of e-prescribing systems—CPOE systems used primarily in outpatient practices that allow direct transmittal of prescriptions to pharmacies—have also found 
+similar effectiveness
+ at preventing outpatient prescribing errors.
+The effect of CPOE on clinical adverse drug event rates is less clear. 
+Other reviews
+ have found that CPOE does not reliably prevent patient harm, and high rates of adverse drug events persist in some hospitals with entirely computerized order entry systems. One interpretation of these results is that clinical decision support is the key intervention in reducing errors, and that, in the absence of CDSS, CPOE may prevent mostly clinically inconsequential errors. However, 
+usability testing
+ has demonstrated that CPOE systems with clinical decision support still allow unsafe orders to be entered and processed, and that clinicians can bypass safety steps with little difficulty. Another interpretation is that a significant proportion of medication errors occur at the dispensing and administration stages, and CPOE may not prevent these errors. Promising error reduction strategies in the setting of dispensing and administration include involving unit-based pharmacists and using 
+barcode medication administration systems
+. Yet even as CPOE improves some aspects of patient safety, there is growing recognition that it can also lead to new safety concerns—particularly if the system is poorly designed.
+New Safety Concerns: Implementation Issues and Workflow Impact of CPOE
+The implementation of CPOE has proven to be a complex process, and early users experienced high-profile failures or safety hazards that in some cases led to 
+abandonment
+ of the system. A great deal of research has characterized the types of 
+unintended consequences
+ and disruptions to clinician workflow that result from CPOE implementation. With 
+data
+ from institutions with several years' experience with CPOE, these studies provide important lessons for organizations implementing not only CPOE but also a variety of technologies as part of the growing digital transformation of medicine.
+Unintended consequences of CPOE
+Various unintended consequences of CPOE implementation have been characterized (Table). One 
+study
+ conducted after implementation of a commercial CPOE system found that the system required clinicians to perform many new tasks, increasing cognitive load and decreasing efficiency, and therefore raising the potential for error. In that study, although overall prescribing errors decreased, problems related to the CPOE system itself accounted for almost half of prescribing errors after implementation. Other 
+studies
+ have shown that users often use workarounds to bypass safety features. In many cases, these workarounds represent reasonable adaptations due to problems with the design and 
+usability 
+of CPOE systems. As detailed in a 2015 Food and Drug Administration white paper (summarized 
+here
+), current CPOE systems have fundamental problems such as confusing displays, use of nonstandard terminology, and lack of standards for alerts and warnings. The authors call for integration of 
+human factors engineering
+ principles, including real-world usability and vulnerability testing, to achieve the safety potential of CPOE.
+Types of Unintended Consequences of Computerized Provider Order Entry Systems
+More or new work for clinicians
+Unfavorable workflow issues
+Never-ending system demands
+Problems related to persistence of paper orders
+Unfavorable changes in communication patterns and practices
+Negative feelings toward the new technology
+Generation of new types of errors
+Unexpected changes in an institution's power structure, organizational culture, or professional roles
+Overdependence on the technology
+(Reprinted with permission from Elsevier. In: Campbell EM, Sittig DF, Ash JS, Guappone KP, Dykstra RH. Types of unintended consequences related to computerized provider order entry. 
+J Am Med Inform Assoc
+. 2006;13:547-556. [
+Free full text
+])
+The integration of clinical decision support into CPOE systems also requires careful planning. Decision support alerts can prevent harmful drug–drug interactions and promote use of evidence-based tests and treatments. However, excessive and nonspecific warnings can lead to alert fatigue—whereby users ignore even critical warnings. Alert fatigue is now a recognized safety threat in itself and is discussed in detail in a related 
+Patient Safety Primer
+. Alert fatigue likely explains why CDSSs appear to result in only modest improvements in adherence to recommended care and may fail to prevent errors. 
+Recent research
+ has focused on tailoring alerts to maximize safety while avoiding alert fatigue, but the informatics field has not yet developed standard approaches to achieve this balance.
+As institutions gain more experience with CPOE implementation, greater awareness of these issues may help avert problems associated with the new technology. Careful planning of the implementation process to minimize workflow disruptions and maximize the system's ease of use 
+has been shown
+ to avert adverse events relating to CPOE. Effective CPOE implementation 
+requires
+ considerable investment of time and resources as well as commitment from both CPOE vendors and organizational leadership to ensuring safe integration of the technology with existing workflows.
+Current Context
+CPOE is recommended by the National Quality Forum as one of the 30 "Safe Practices for Better Healthcare" and by the Leapfrog Group as one of first three recommended "leaps" for improving patient safety. The pace of CPOE adoption in both hospitals and clinics rapidly increased after passage of the HITECH Act in 2009. 
+Recent data
+ indicates that 84% of federal acute care hospitals had implemented CPOE by the end of 2015, although only 40% had implemented a system that included integrated CDSS. Adoption in the outpatient setting is also rapidly increasing, and as of the 
+end of 2015
+, more than half of office practices had adopted electronic prescribing (the major form of CPOE in the outpatient setting).
+
+This project was funded under contract number 75Q80119C00004 from the Agency for Healthcare Research and Quality (AHRQ), U.S. Department of Health and Human Services. The authors are solely responsible for this report’s contents, findings, and conclusions, which do not necessarily represent the views of AHRQ. Readers should not interpret any statement in this report as an official position of AHRQ or of the U.S. Department of Health and Human Services. None of the authors has any affiliation or financial involvement that conflicts with the material presented in this report. 
+View AHRQ Disclaimers
+
+Save
+
+ 
+Save to your library
+
+Print
+
+Download PDF
+
+Share
+
+Facebook
+
+Twitter
+
+Linkedin
+
+Copy URL
+
+ Cite
+ 
+
+ Citation
+
+Citation Text:
+
+Computerized Provider Order Entry. PSNet [internet]. Rockville (MD): Agency for Healthcare Research and Quality, US Department of Health and Human Services. 2019.
+
+Copy Citation
+
+Format:
+
+Google Scholar
+BibTeX
+EndNote X3 XML
+EndNote 7 XML
+Endnote tagged
+PubMedId
+RIS
+
+Download Citation
+
+Sections
+
+Background
+
+Current Context
+
+Related Patient Safety Primers
+
+ 
+Clinical Decision Support Systems
+March 15, 2025
+
+Editor's Picks
+
+ 
+The effectiveness of interruptive prescribing alerts in ambulatory CPOE to change prescriber behaviour and improve safety.
+May 5, 2021
+
+Safe Practices to Reduce CPOE Alert Fatigue through Monitoring, Analysis, and Optimization.
+March 10, 2021
+
+How effective are electronic medication systems in reducing medication error rates and associated harm among hospital inpatients? A systematic review and meta-analysis.
+December 2, 2020
+
+Effects of CPOE-based medication ordering on outcomes: an overview of systematic reviews.
+July 8, 2020
+
+View More
+
+Related WebM&M
+
+ 
+The Lost Start Date: an Unknown Risk of E-prescribing
+October 30, 2019
+
+Unintended Consequences of CPOE
+October 1, 2016
+
+Related Resources
+
+Annual Perspective
+
+Pharmacist Role in Patient Safety
+
+February 21, 2020
+
+ISMP medication error report analysis.
+
+June 16, 2019
+
+ISMP medication error report analysis.
+
+June 16, 2019
+
+ISMP medication error report analysis.
+
+June 16, 2019
+
+ISMP medication error report analysis.
+
+June 16, 2019
+
+ISMP medication error report analysis.
+
+June 16, 2019
+
+Ambulatory prescribing errors among community-based providers in two states.
+
+March 4, 2015
+
+WebM&M Cases
+
+Bad Writing, Wrong Medication
+
+April 1, 2010
+
+WebM&M Cases
+
+Dangerous Dapsone
+
+June 1, 2004
+
+WebM&M Cases
+
+The 2-Week Itch
+
+April 1, 2003
+
+View More
+
+See More About The Topic
+
+ 
+ Hospitals
+
+ Ambulatory Clinic or Office
+
+ Outpatient Pharmacy
+
+ Ordering/Prescribing Errors
+
+ Transcription Errors
+
+View More

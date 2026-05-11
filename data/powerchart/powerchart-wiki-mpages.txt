@@ -1,0 +1,217 @@
+# SOURCE: Cerner — Wikipedia (PowerChart and MPages context)
+# URL: https://en.wikipedia.org/wiki/Cerner
+# MODULE: PowerChart
+# RETRIEVED: 2026-05-07
+# ---
+
+American healthcare company
+
+Oracle Health
+, formerly known as 
+Cerner Corporation
+ before it was acquired by 
+Oracle
+, is an American multinational provider of 
+health information technology
+ (HIT) platforms and services. It is headquartered in 
+North Kansas City, Missouri
+, United States.
+ The company is a leading 
+electronic health record
+ (EHR) provider, with over 9.5 million customers.
+
+History
+
+Then Cerner, Oracle Health; was founded in 1979 by 
+Neal Patterson
+, Paul Gorup, and Cliff Illig, who were colleagues at 
+Arthur Andersen
+. Its original name was PGI & Associates but was renamed Cerner in 1984 when it rolled out its first system, PathNet.
+ The name "Cerner" comes from the Latin word "cernere," which means "to separate" or "to discern". The name reflects the founders' vision of using software to help healthcare organizations make informed decisions and distinguish critical information.
+
+It went public in 1986.
+ The company's client base grew steadily in the late 1980s, reaching 70 sites in 1987, 120 sites in 1988, 170 sites in 1989, and reaching 250 sites in 1990. Installations were primarily of PathNet systems.
+
+During this time, the company was developing components of a Health Network Architecture (HNA), an integrated IT system designed to automate health care processes. Clients could purchase individual components or the whole system at one time. By 1994, more than 30 clients had purchased the full HNA system, while 100 clients had purchased multiple components of the system.
+
+In 1997, the company introduced Cerner Millennium, an upgrade to its HNA system which incorporated all of the company's software offerings into one unified architecture. The introduction of Millennium contributed to significant growth for the company, with revenue increasing to $1.1 billion in 2005
+ from $245.1 million in 1997.
+
+IMC Health Care, Inc. was acquired in early 2010 to continue expanding its wellness services to outside commercial employers, pharmacies, and wellness programs.
+
+In July 2010, president Trace Devanny left the company
+ and was succeeded by founder Neal Patterson, who also served concurrently as chairman and chief executive officer.
+ In September 2013, Zane Burke was named president, assuming the title from Patterson.
+
+On August 5, 2014, the company announced its intent to purchase Siemens Health Services, the health information technology business of Germany's 
+Siemens AG
+, for $1.3 billion.
+ The acquisition was completed on February 2, 2015.
+
+That July, Leidos Partnership for Defense Health, which included Cerner, 
+Accenture
+, and 
+Leidos
+, was awarded a 10-year, $4.3 billion contract to overhaul and manage the electronic health records for the Department of Defense.
+
+CEO and co-founder 
+Neal Patterson
+ died on July 9, 2017.
+ The following January, Brent Shafer was named Chairman and CEO. His tenure began February 2018.
+
+In September 2019, 255 employees were laid off as part of an ongoing cost-cutting effort and reorganization.
+ Additional layoffs continued in February 2020 following the sale of the company's healthcare IT business in Germany and Spain to German company CompuGroup Medical SE for 
+€255 million
+.
+ The same year, three new C-suite executives were hired, including Jerome Labat as chief technology officer (CTO), Darrell Johnson as chief marketing officer (CMO) and William Mintz as chief strategy officer (CSO).
+
+Dr. David Feinberg, vice-president and head of 
+Google Health
+, assumed the role of President and CEO on October 1, 2021.
+
+On December 20, 2021, 
+Oracle Corporation
+ announced an agreement to buy Cerner for approximately $28.3 billion.
+ The deal closed in June 2022, with the company rebranding to Oracle Health.
+
+In June 2024, Oracle Health released an AI-powered clinical agent. The product allowed users to perform conversation-based note generation and introduced the Oracle Clinical Digital Assistant for rapid data access.
+
+Products
+
+Oracle Health's primary product is the Cerner Millennium platform, an 
+electronic health record
+ (EHR) system.
+ In August 2025, the company expanded their EHR offering to include AI-powered software.
+
+Controversy
+
+In 2001, a memo authored by CEO Patterson and sent to about 400 managers was leaked online. The memo was meant to motivate the managers to get more productivity out of employees and promised layoffs, a hiring freeze, closing of an "Associate Center," and the implementation of a punch-card system if Patterson did not see evidence of changes. Patterson's metric was the fullness of the company's Kansas City office lot at the hours of 8 a.m. and 5 p.m. Following the memo's leak, company stock price fell 22% over three days.
+
+In 2005, Cerner and other companies paid for a report by the 
+RAND Corporation
+ which predicted great efficiencies from 
+electronic health records
+, including savings of $81 billion a year or more, which RAND now says is overstated. This report helped drive growth in the electronic health record and billions of dollars in federal incentives to hospitals and doctors. Cerner's revenue tripled from $1 billion in 2005 to a projected $3 billion in 2013. The 
+Congressional Budget Office
+ criticized the study for overstating potential savings. A 2013 reassessment of the 2005 report by the RAND Corporation said that the conversion had failed to produce savings and had mixed results in efficiency and patient care.
+
+Australia
+
+Cerner Millennium product, including the FirstNet, SurgiNet/SurgiNet Anaesthesia and RadNet platforms, form the Integrated Electronic Medical Record (ieMR) system in the state of 
+Queensland
+, Australia. The implementation of Cerner Millenium drew criticism due to it costing over 
+A$1.45 billion
+ taking more than 10 years to complete, and hospitals experiencing implementation issues.
+
+In 2018, Queensland Health through its digital health solutions agency, eHealth Queensland, began a restricted tender process to purchase a Patient Administration System (PAS) solution, to replace the aging iSoft PAS first introduced in the early 1990s.
+ The procurement process was successful with the Cerner PAS solution being chosen. In early 2019, allegations arose surrounding an undeclared relationship and conflict of interest between Richard Ashby, chief information officer of eHealth Queensland, and a Cerner employee. The allegations resulted in the resignation of Ashby, the matter being referred to the Queensland Crime and Corruption Commission for investigation, and the collapse of the PAS replacement project.
+ The commission subsequently found insufficient evidence to prosecute Ashby for corrupt conduct.
+
+Canada
+
+In 2016, the 
+emergency department
+ of Nanaimo Regional General Hospital in 
+Nanaimo
+, 
+British Columbia
+ began using the system. The implementation, which cost $230 million,
+ was met with widespread criticism among staff, who called it a "huge failure" due to an increase in software errors resulting in reduced efficiency of the department.
+ An investigation by British Columbia's Health Ministry indicated that the project was not correctly planned or implemented and that organizational dysfunction at the facility contributed to the failure.
+
+United Kingdom
+
+In 2014, a 
+coroner
+ ruled that a three-year-old heart patient died as a result of a delay to his treatment at 
+Bristol Royal Hospital for Children
+. The coroner ruled that the hospital's outpatient booking system was responsible for the child not being seen or receiving treatment.
+ The Royal United Hospital had recently installed the Cerner Millennium system. However appointments for the hospital's legacy booking system were not migrated to the new system.
+
+United States
+
+A 2009 study conducted by the 
+UPMC Children's Hospital of Pittsburgh
+ and published in the journal 
+Pediatrics
+ showed that mortality rates for patients brought in by emergency transport more than doubled followed the installation of Cerner's computerized health system.
+ However, the study concluded that "institutions should continue to evaluate mortality effects, in addition to medication error rates, for children who are dependent on time-sensitive therapies."
+
+Girard Medical Center in 
+Crawford County
+, Kansas, hired Cerner in 2010 to install an electronic records system. According to a lawsuit Girard filed against Cerner, the company received $1.3 million from the county but failed to get the system running in time to qualify for federal incentive payments, and in September 2011 notified the hospital that it was abandoning the project. Cerner and executives at Girard agreed that Girard did not have adequate staff to manage the acquisition and implementation of the system.
+ The outcome was kept confidential due to the contract provisions.
+
+In 2012, 
+Trinity Health
+, a large hospital in 
+North Dakota
+, sued Cerner, claiming that Cerner's patient accounting software didn't work correctly. The parties settled for $106M in 2014.
+
+A 2014 
+California
+ grand jury found that Cerner knew the 
+Ventura County
+ healthcare agency was unprepared to complete a $32 million installation. Later that year, problems during a $31 million Cerner implementation at the 
+Athens Regional Health System
+ in 
+Georgia
+ led to resignations by the CEO and the CIO of ARHS.
+
+In February 2025, Oracle Health experienced a data breach that affected patient information found in electronic health records. The breach resulted from a third-party cyberattack that hacked into former Cerner company servers in late January. Upon discovery, the company notified customers of the incident, which was subsequently investigated by the Federal Bureau of Investigation, noting that the hacker pursued a ransom payment for the data.
+
+Sweden
+
+Following the US CLOUD Act, Swedish medical companies were concerned about the privacy of patient data stored by US data centers. As a result, Swedish patient data managed by Cerner was instead stored in Swedish facilities.
+
+In 2022, the director of the Västra Götaland region sent a letter to Cerner claiming a breach of contract for deployment of the Millennium system. The letter alleged that there were numerous issues with the system that Cerner had declined to address. At the same time, the deployment of Millenium in the Skåne region was delayed.
+
+In November 2024 the Millenium system began being implemented at some of the Västra Götaland healthcare facilities. The implementation suffered several issues, including serious problems with transcription which resulted in patient risk. As a result, implementation was permanently halted.
+
+Skåne Region chose Millennium in 2016, and have done adjustments and changes in the system for ten years, without go-live. Skåne Region postponed yet another time the start of Millennium Jan 21 2026. The reason being "the system is not usable" and "not creating efficiency".
+
+Locations
+
+Oracle Health world headquarters campus is at 2800 Rockcreek Parkway, North Kansas City, Missouri.
+ It acquired additional space in 
+Kansas City, Missouri
+ in 2005
+ and in 2006 it acquired another location in Kansas City.
+ In 2013, the company announced plans to redevelop 236 acres in south Kansas City, Missouri into an office park. The site was previously occupied by 
+Bannister Mall
+, which was demolished in 2009.
+ Construction broke ground on the new campus on November 11, 2014.
+
+In 2024, Oracle Chairman, Larry Ellison, announced that the company planned to move its global headquarters to Nashville, Tennessee.
+
+Oracle Health has offices in about 25 countries worldwide.
+
+Since 2006 Cerner has also occupied space in the former 
+Marion Laboratories
+ in Kansas City, MO
+
+Ground floor of Cerner Innovations Campus in Kansas City, MO
+
+Cerner Health Services building in Malvern, PA
+
+References
+
+External links
+
+Wikimedia Commons has media related to 
+Cerner Corporation
+.
+
+Companies portal
+
+Official website - Oracle Cerner
+
+Official website - Oracle Health
+
+Historical business data for Cerner Corporation:
+
+SEC filings
+
+Retrieved from "
+https://en.wikipedia.org/w/index.php?title=Oracle_Health&oldid=1337159196
+"

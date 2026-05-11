@@ -1,0 +1,78 @@
+ANA Nursing Position Statements — Official Policy Positions
+Source: https://www.nursingworld.org/practice-policy/nursing-excellence/official-position-statements/
+Scraped: 2026-04-19
+
+==============================================================
+
+Overview
+
+The American Nurses Association (ANA) develops position statements addressing nursing practice, health policy, and healthcare-related social concerns. The organization follows a formal process: appointing Professional Issues Panels to research topics, posting drafts for public comment, and securing Board of Directors approval.
+
+Development Process
+
+The ANA's methodology:
+1. ANA Board of Directors approves a relevant topic
+2. ANA Professional Issues Panel is appointed to research and draft a position
+3. Draft is posted for public review and comment
+4. Board of Directors approves final statement
+
+Major Position Statement Categories
+
+Ethics and Human Rights (Most Recent: 2025):
+- Nursing advocacy for LGBTQ+ populations
+- Dismantling oppressive systems in healthcare settings
+- Capital punishment participation
+- End-of-life care
+- Privacy and confidentiality (revised)
+
+Nursing Practice:
+- Competency standards
+- Care coordination
+- Delegation of nursing tasks
+- Electronic health records
+- Immunizations
+- Workplace violence prevention
+
+Patient Safety:
+- Nurse fatigue
+- Professional competency
+- Patient assignment rights
+- Health information technology interoperability
+
+Social and Health Causes:
+- Obesity care
+- Climate change
+- Tobacco cessation
+- Pharmaceutical waste
+- Sexual and reproductive health
+
+Workplace Advocacy:
+- Disaster preparedness
+- Mental health promotion
+- Just culture principles
+- Fatigue management
+
+Notable Recent Approvals (2021–2025)
+
+- Artificial intelligence ethical use in nursing
+- Cannabinoid therapeutics in nursing practice
+- Restraint practices
+- Institutional racism within nursing
+
+ANA Informatics Nursing Standards
+
+The ANA publishes Nursing Informatics: Scope and Standards of Practice, which establishes:
+- Competencies for informatics nurse specialists
+- Data, information, knowledge, and wisdom framework (DIKW)
+- Requirements for EHR system engagement
+- Expectations for clinical decision support participation
+- Standards for workflow analysis and redesign
+
+Relevance to Cerner Implementations
+
+Nursing informatics standards directly impact Cerner configuration:
+- Documentation requirements drive PowerChart flowsheet and form design
+- Nursing care plan standards inform CareCompass and ClinicalWorks configuration
+- Delegation policies drive Cerner task list and escalation configuration
+- Fatigue management informs shift duration display in scheduling modules
+- BCMA (Barcode Medication Administration) workflows must align with safe medication administration standards

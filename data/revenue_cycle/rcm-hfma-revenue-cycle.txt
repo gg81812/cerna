@@ -1,0 +1,68 @@
+Healthcare Revenue Cycle Management — HFMA Overview
+Source: https://www.hfma.org/revenue-cycle-management/
+Scraped: 2026-04-19
+
+==============================================================
+
+Definition
+
+Revenue cycle management (RCM) is "the process used by healthcare systems to track the revenue from patients, from their initial appointment or encounter with the healthcare system to their final payment of balance."
+
+Core Components
+
+Patient Registration to Reimbursement:
+RCM encompasses all activities leading to payment for services, including patient registration, benefits verification, care delivery, claim submission, and reimbursement processes involving communication with patients, insurers, Medicare, and Medicaid.
+
+Three-Part Patient-Centric Roadmap
+
+Engaged Consumer Phase:
+- Scheduling, pre-registration, insurance verification
+- Authorization, price estimation, financial counseling, cashiering
+
+Engaged Patient Phase:
+- Patient arrival, validation, financial clearance
+- Care delivery, clinical documentation, case management
+
+Satisfied Customer Phase:
+- Collection services, self-pay collection
+- Customer service, denial processing, claim processing
+
+Key RCM Focus Areas
+
+Price Transparency:
+Helping patients understand care costs, insurance coverage amounts, and their individual financial responsibility.
+
+Equitable Access Support:
+Staff assist with financial assistance applications and establish personalized payment arrangements.
+
+Charge Capture:
+Accurate documentation of all care provided is essential — "unless charge capture is performed correctly, the hospital or healthcare facility will not be paid."
+
+Claims Processing and Denials Management:
+Complex work requiring attention to detail and data integrity to prevent claim denials and ensure timely payment.
+
+Medical Account Resolution:
+Specialists engage patients respectfully while identifying coverage sources, financial assistance opportunities, and structuring feasible payment plans.
+
+Industry Resources and Certifications
+
+- Certified Revenue Cycle Representative (CRCR) certification program
+- MAP Keys — industry-standard performance metrics for benchmarking
+- MAP Award — recognizes revenue cycle excellence across five organization categories
+- Annual Revenue Cycle Conference for strategy sharing
+- Revenue Cycle Forum community for VPs, directors, and staff collaboration
+
+Strategic Importance
+
+The revenue cycle represents "the first touchpoint patients have with a health system and the last encounter patients will remember," directly influencing whether patients return for care or select alternative providers.
+
+Cerner Revenue Cycle Integration
+
+Cerner's Revenue Cycle suite integrates with the Millennium clinical platform to:
+- Automate charge capture from clinical documentation
+- Connect scheduling, registration, and billing workflows
+- Submit electronic claims (837P, 837I) via clearinghouses
+- Manage denial workflows with work queues
+- Support contract management and expected reimbursement
+- Provide real-time eligibility verification (270/271 transactions)
+- Generate remittance advice processing (835 transactions)

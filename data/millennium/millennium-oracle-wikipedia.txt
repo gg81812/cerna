@@ -1,0 +1,74 @@
+Oracle Health (formerly Cerner Corporation) — Overview
+Source: https://en.wikipedia.org/wiki/Oracle_Cerner
+Scraped: 2026-04-19
+
+==============================================================
+
+Company Overview
+
+Oracle Health, formerly known as Cerner Corporation, is an American health information technology provider headquartered in North Kansas City, Missouri. The company was acquired by Oracle Corporation in June 2022 for approximately $28.3 billion and now operates as a subsidiary.
+
+History and Development
+
+Founded in 1979 by Neal Patterson, Paul Gorup, and Cliff Illig, the company began as "PGI & Associates" before adopting the Cerner name in 1984. The name derives from Latin, meaning "to separate" or "to discern." The company went public in 1986.
+
+Significant growth occurred following the introduction of Cerner Millennium in 1997, an integrated platform that consolidated the company's software offerings. Cerner Millennium became the flagship EHR platform adopted by thousands of hospitals worldwide.
+
+Key Acquisitions and Contracts:
+- Acquired IMC Health Care in 2010
+- Acquired Siemens Health Services for $1.3 billion in 2015
+- Secured a $4.3 billion Department of Defense contract in 2015 (MHS GENESIS)
+- Acquired by Oracle Corporation in June 2022 for ~$28.3 billion
+
+Core Products
+
+Oracle Health's primary product is the Cerner Millennium platform — an electronic health record (EHR) system that serves as a comprehensive clinical and administrative platform.
+
+Key Millennium modules include:
+- PowerChart: Physician and clinician documentation
+- FirstNet: Emergency department information system
+- PharmNet: Pharmacy management
+- SurgiNet: Perioperative management
+- Revenue Cycle: Charge capture, billing, claims
+- ClinicalWorks: Lab and results management
+
+As of the Oracle acquisition, the company serves over 9.5 million customers globally.
+
+Platform Scale
+
+- 27,000+ clients worldwide
+- Deployed in 35+ countries
+- Processes billions of clinical transactions annually
+- Powers military health systems (US DoD MHS GENESIS), VA systems, and commercial health systems
+
+Oracle Integration Strategy
+
+Following the 2022 acquisition, Oracle announced plans to:
+- Migrate Millennium to Oracle Cloud Infrastructure (OCI)
+- Add AI and machine learning capabilities powered by Oracle AI
+- Integrate with Oracle ERP and supply chain systems
+- Expand global reach via Oracle's existing enterprise customer base
+
+In August 2025, Oracle Health expanded offerings to include AI-powered software capabilities.
+
+Notable Controversies and Implementation Challenges
+
+The company has faced significant implementation challenges:
+
+Australia: Queensland's ieMR implementation exceeded A$1.45 billion and took over a decade. Multiple hospitals experienced workflow disruptions and go-live complications.
+
+Canada: A $230 million Nanaimo hospital system was called a "huge failure" with prolonged workflow issues post-go-live.
+
+United States: Multiple lawsuits resulted from failed implementations, including a $106 million settlement with Trinity Health in 2014.
+
+Security: In February 2025, Oracle Health experienced a significant data breach affecting patient information. Hackers pursued ransom payment for the data, and the company notified affected healthcare customers following FBI investigation.
+
+US Department of Veterans Affairs: Oracle Health won a contract to modernize the VA's EHR system. Implementation faced significant congressional scrutiny due to patient safety incidents at pilot sites.
+
+FHIR and Interoperability
+
+Oracle Health / Cerner was an early adopter of FHIR standards:
+- Launched Cerner Ignite APIs (FHIR R4) for app development
+- Participated in the Argonaut Project (FHIR implementation acceleration)
+- Supports SMART on FHIR for third-party application integration
+- CMS Interoperability Rule compliance for patient access APIs

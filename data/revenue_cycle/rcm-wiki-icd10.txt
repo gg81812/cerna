@@ -1,0 +1,401 @@
+# SOURCE: ICD-10 — Wikipedia
+# URL: https://en.wikipedia.org/wiki/ICD-10
+# MODULE: Revenue Cycle
+# RETRIEVED: 2026-05-07
+# ---
+
+Medical classification created by the World Health Organisation (WHO)
+
+ICD-10
+ is the 10th revision of the 
+International Classification of Diseases
+ (ICD), a 
+medical classification
+ list by the 
+World Health Organization
+ (WHO). It contains codes for diseases, signs and symptoms, abnormal findings, complaints, social circumstances, and external causes of injury or diseases.
+ Work on ICD-10 began in 1983,
+ was endorsed by the Forty-third 
+World Health Assembly
+ in 1990, and came into effect in member states on January 1, 1993.
+ ICD-10 was replaced by 
+ICD-11
+ on January 1, 2022.
+
+While WHO manages and publishes the base version of the ICD, several member states have modified it to better suit their needs. In the base classification, the code set allows for more than 14,000 different codes
+ and permits the tracking of many new 
+diagnoses
+ compared to the preceding 
+ICD-9
+. Through the use of optional sub-classifications, ICD-10 allows for specificity regarding the cause, manifestation, location, severity, and type of injury or disease.
+ The adapted versions may differ in a number of ways; some national editions have expanded the code set even further, with some going so far as to add 
+procedure codes
+. 
+ICD-10-CM
+, for example, has over 70,000 codes.
+
+The WHO provides detailed information about the ICD via its website – including an ICD-10 online browser
+ and ICD training materials.
+ The online training includes a support forum, a self-learning tool
+ and user guide.
+
+Chapters
+
+The following table lists the chapter number (using 
+Roman numerals
+), the code range of each chapter, and the chapter's title from the international version of the ICD-10.
+
+ICD-10 chapters
+
+Chapter
+
+Block
+
+Title
+
+I
+
+A00–B99
+
+Certain infectious and parasitic diseases
+
+II
+
+C00–D48
+
+Neoplasms
+
+III
+
+D50–D89
+
+Diseases of the blood and blood-forming organs and certain disorders involving the immune mechanism
+
+IV
+
+E00–E90
+
+Endocrine, nutritional and metabolic diseases
+
+V
+
+F00–F99
+
+Mental and behavioural disorders
+
+VI
+
+G00–G99
+
+Diseases of the nervous system
+
+VII
+
+H00–H59
+
+Diseases of the eye and adnexa
+
+VIII
+
+H60–H95
+
+Diseases of the ear and mastoid process
+
+IX
+
+I00–I99
+
+Diseases of the circulatory system
+
+X
+
+J00–J99
+
+Diseases of the respiratory system
+
+XI
+
+K00–K93
+
+Diseases of the digestive system
+
+XII
+
+L00–L99
+
+Diseases of the skin and subcutaneous tissue
+
+XIII
+
+M00–M99
+
+Diseases of the musculoskeletal system and connective tissue
+
+XIV
+
+N00–N99
+
+Diseases of the genitourinary system
+
+XV
+
+O00–O99
+
+Pregnancy, childbirth and the puerperium
+
+XVI
+
+P00–P96
+
+Certain conditions originating in the perinatal period
+
+XVII
+
+Q00–Q99
+
+Congenital malformations, deformations and chromosomal abnormalities
+
+XVIII
+
+R00–R99
+
+Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified
+
+XIX
+
+S00–T98
+
+Injury, poisoning and certain other consequences of external causes
+
+XX
+
+V01–Y98
+
+External causes of morbidity and mortality
+
+XXI
+
+Z00–Z99
+
+Factors influencing health status and contact with health services
+
+XXII
+
+U00–U99
+
+Codes for special purposes
+
+National adoptions
+
+Approximately 27
+ countries use ICD-10 for reimbursement and resource allocation in their health system, and some have made modifications to ICD to better accommodate its utility. The unchanged international version of ICD-10 is used in 117 countries for performing cause of death reporting and statistics.
+
+The national versions may differ from the base classification in the level of detail, incomplete adoption of a category,
+ or the addition of 
+procedure codes
+.
+
+Australia
+
+Introduced in 1998, ICD-10 Australian Modification (ICD-10-AM) was developed by the National Centre for Classification in Health at the 
+University of Sydney
+.
+ It is currently maintained by the Australian Consortium for Classification Development.
+
+ICD-10-AM has also been adopted by 
+New Zealand
+,
+ 
+Ireland
+,
+ 
+Saudi Arabia
+ and several other countries.
+
+Brazil
+
+Brazil
+ introduced ICD-10 in 1996.
+
+The provisional translation of the ICD-10 for Brazilian Portuguese was started around 1986. Brazil was designated the Field Trial Coordinating Centre for field testing of the list's Chapter V, and the translation was then updated and modified by several contributors across the country. One of the final versions was proofread by J. Leme Lopes, and the final translation was created directly from the English-language version in 1992.
+
+Canada
+
+Canada
+ began using ICD-10 for mortality reporting in 2000.
+ A six-year, phased implementation of ICD-10-CA for morbidity reporting began in 2001.
+ It was staggered across Canada's ten provinces, with 
+Quebec
+ the last to make the switch.
+
+ICD-10-CA is available in both English- and French-language versions.
+
+China
+
+China
+ adopted ICD-10 in 2002.
+
+Czech Republic
+
+The 
+Czech Republic
+ adopted ICD-10 in 1994, one year after its official release by WHO.
+ Revisions to the international edition are adopted continuously.
+ The official Czech translation of ICD-10 2016 10th Revision was published in 2018.
+
+Denmark
+
+ICD-10 was first introduced into the psychiatric health service system on January 1, 1994.
+
+Estonia
+
+Estonia
+ adopted ICD-10 from January 1, 1997, via a ministerial degree.
+ However, chapter V "Mental and behavioural disorders" had already been in use from January 1, 1994, also via a ministerial degree.
+
+France
+
+France
+ introduced a clinical addendum to ICD-10 in 1997.
+ See also website of the ATIH.
+
+Germany
+
+Germany
+'s ICD-10 German Modification (ICD-10-GM) is based on ICD-10-AM.
+ ICD-10-GM was developed between 2003 and 2004, by the 
+German Institute for Medical Documentation and Information
+ (DIMDI). Since the dissolution of the DIMDI in 2020, the 
+Federal Institute for Drugs and Medical Devices
+ (BfArM) has been responsible for maintaining the ICD-10-GM.
+
+Greece
+
+Greece
+ introduced ICD-10 on December 23, 2023. The Greek DRG (Gr-DRG) system is based on the Greek modification of the International Statistical Classification of Diseases and Related Health Problems, based on the 2013 German Amendment of ICD-10 (ICD-10-GM), and a systematic catalog of codes of medical procedures called Greek Medical Procedure Classification (GMPC), based on corresponding international procedural classification.
+
+Hungary
+
+Hungary
+ introduced the use of ICD-10 from January 1, 1996, via a ministerial decree.
+
+Korea
+
+A Korean modification has existed since 2008.
+
+Netherlands
+
+The Dutch translation of ICD-10 is ICD10-nl, which was created by the WHO-FIC Network in 1994.
+ There is an online dictionary.
+
+Russia
+
+The 
+Ministry of Healthcare of the Russian Federation
+ ordered in 1997 to transfer all health organizations to ICD-10.
+
+South Africa
+
+ICD-10 was implemented in July 2005 under the auspice of the National ICD-10 Implementation Task Team which is a joint task team between the National Department of Health and the Council for Medical Schemes.
+
+Sweden
+
+The current Swedish translation of ICD-10 was created in 1997.
+
+Switzerland
+
+In Switzerland, the German Modification (ICD-10-GM) is used for coding diagnoses. The Federal Statistical Office (FSO) of Switzerland publishes the ICD-10-GM in French and Italian every two years.
+
+Thailand
+
+The ICD-10-TM (Thai Modification) is a 
+Thai language
+ version based on the 2016 ICD-10.
+ An unusual feature of the index of ICD-10-TM is that it is bilingual, containing both Thai and English trails.
+
+United Kingdom
+
+ICD-10 was first mandated for use in the UK in 1995.
+ In 2010 the UK Government made a commitment to update the UK version of ICD-10 every three years.
+ On April 1, 2016, following a year's delay,
+ ICD-10 5th Edition
+ replaced the 4th Edition as the mandated diagnostic classification within the UK,
+ and remains the current version for use within the UK.
+
+United States
+
+For disease reporting, the US utilizes its own national variant of ICD-10 called the ICD-10 Clinical Modification (ICD-10-CM).
+ A 
+procedural classification
+ called 
+ICD-10 Procedure Coding System
+ (ICD-10-PCS)
+ has also been developed for capturing inpatient procedures.
+ The ICD-10-CM and ICD-10-PCS were developed by the 
+Centers for Medicare and Medicaid Services
+ (CMS) and the 
+National Center for Health Statistics
+ (NCHS).
+ There are over 70,000 ICD-10-PCS procedure codes and over 69,000 ICD-10-CM diagnosis codes, compared to about 3,800 procedure codes and roughly 14,000 diagnosis codes found in the previous ICD-9-CM.
+
+There was much controversy when the transition from the ICD-9-CM to the ICD-10-CM was first announced in the US. Many providers were concerned about the vast number of codes being added, the complexity of the new coding system, and the costs associated with the transition.
+ The 
+Centers for Medicare and Medicaid Services
+ (CMS) weighed these concerns against the benefits of having more accurate data collection, clearer documentation of diagnoses and procedures, and more accurate claims processing.
+ CMS decided the financial and public health cost associated with continuing to use the ICD-9-CM was too high and mandated the switch to ICD-10-CM.
+
+The deadline for the United States to begin using ICD-10-CM for diagnosis coding and Procedure Coding System 
+ICD-10-PCS
+ for inpatient hospital procedure coding was set at October 1, 2015,
+ a year later than the previous 2014 deadline.
+ Before the 2014 deadline, the previous deadline had been a year before that on October 1, 2013.
+ All 
+HIPAA
+ "covered entities" were required to make the change; a pre-requisite to ICD-10-CM is the adoption of 
+EDI
+ Version 5010 by January 1, 2012.
+[
+citation needed
+]
+ Enforcement of 5010 transition by the 
+Centers for Medicare & Medicaid Services
+ (CMS), however, was postponed by CMS until March 31, 2012, with the federal agency citing numerous factors, including slow software upgrades.
+ The implementation of ICD-10-CM has been subject to previous delays. In January 2009, the date was pushed back to October 1, 2013, rather than an earlier proposal of October 1, 2011.
+
+Two common complaints in the United States about the ICD-10-CM are 1) the long list of potentially relevant codes for a given condition (such as 
+rheumatoid arthritis
+) which can be confusing and reduce efficiency and 2) the assigned codes for seldom seen conditions (e.g. W55.22XA: Struck by cow, initial encounter; and V91.07XA: Burn due to water-skis on fire, initial encounter).
+
+Criticism
+
+The expansion of healthcare delivery systems and changes in global health trends prompted a need for codes with improved clinical accuracy and specificity.
+ The alphanumeric coding in ICD-10 is an improvement from ICD-9 which had a limited number of codes and a restrictive structure.
+ Early concerns in the implementation of ICD-10 included the cost and the availability of resources for training healthcare workers and professional coders.
+
+See also
+
+Diagnostic and Statistical Manual of Mental Disorders
+, used in 
+psychiatry
+
+DSM-5-TR
+, effective since 2022
+
+Notes
+
+References
+
+External links
+
+Official website
+ 
+
+ICD-10 online browser
+ (WHO)
+
+ICD-10 online training direct access
+ (WHO)
+
+Retrieved from "
+https://en.wikipedia.org/w/index.php?title=ICD-10&oldid=1352004891
+"

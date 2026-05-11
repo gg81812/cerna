@@ -1,0 +1,168 @@
+# SOURCE: Cerner Patient Access Guide
+# URL: https://wiki.cerner.com/display/public/1101rcm/Patient+Access+Guide
+# MODULE: Revenue Cycle
+# RETRIEVED: 2026-04-01
+# ---
+
+# Cerner Patient Access Guide
+
+## What is Patient Access?
+
+Patient Access (also called Registration or Admissions in some organizations) is the front-end component of the revenue cycle responsible for capturing accurate patient demographics, insurance information, and financial data at the point of care initiation. In Cerner Millennium, Patient Access functions are performed using the Registration module (the ADT — Admissions, Discharge, Transfer — system) and integrated tools for insurance verification, prior authorization, and financial counseling.
+
+Accurate Patient Access is the foundation of the revenue cycle — errors at registration propagate through the entire claim lifecycle and are a leading cause of claim denials.
+
+## Patient Registration Workflow
+
+### Pre-Registration
+
+For scheduled appointments and elective admissions, pre-registration is completed before the patient arrives:
+
+1. **Demographic Collection** — contact the patient in advance to verify/update:
+   - Legal name (must match insurance card exactly)
+   - Date of birth, Social Security Number
+   - Address, phone, email
+   - Emergency contact
+
+2. **Insurance Verification** — verify the patient's insurance coverage:
+   - Contact insurance company or use real-time 270/271 EDI eligibility verification
+   - Confirm: plan name and ID, subscriber ID, group number, policy effective and termination dates
+   - Confirm: covered services, deductible amounts, co-pay, co-insurance, out-of-pocket maximum
+   - Identify if prior authorization is required for the planned service
+
+3. **Prior Authorization** — for services requiring authorization:
+   - Submit prior authorization request to the payer via portal, phone, or 278 EDI transaction
+   - Document the authorization number on the account in Cerner
+   - Confirm the authorized services match what is planned
+
+4. **Financial Counseling** — estimate patient financial responsibility:
+   - Use the Cerner Patient Estimate tool (or RevElate Price Transparency) to calculate estimated out-of-pocket cost
+   - Discuss payment options, financial assistance programs, and payment plans
+   - Collect co-pay or estimated patient portion in advance when possible
+
+### Point-of-Service Registration
+
+When the patient arrives:
+
+1. **Identity Verification** — verify patient identity with two identifiers (name + DOB, or name + MRN).
+2. **Demographics Update** — confirm or update all demographic fields in the Registration module.
+3. **Insurance Capture** — scan or manually enter current insurance card information.
+4. **Consent and Forms** — obtain signed consents (Conditions of Admission, HIPAA Notice of Privacy Practices, financial responsibility agreement).
+5. **Advance Directives** — document and scan any advance directives (DNR, healthcare proxy).
+6. **Co-pay Collection** — collect co-pay at point of service if not pre-collected.
+7. **Wristband Printing** — print patient identification wristband for inpatient or procedure patients.
+8. **Encounter Creation** — the registration creates the encounter record in Millennium (A01 ADT message for admission, A04 for registration).
+
+### Emergency Department Registration
+
+ED registration may be expedited in emergencies:
+1. **Quick Registration** — capture minimum data (name, DOB) to initiate the encounter and trigger care.
+2. **Full Registration** — complete demographic and insurance capture while the patient is stabilized.
+3. **Unidentified Patients** — use a temporary name (e.g., "John Doe") and identifier until identity is established.
+4. **Retroactive Insurance Verification** — insurance may be verified after clinical stabilization.
+
+## Cerner Registration Module
+
+### Accessing the Registration Module
+
+1. Open the ADT/Registration application from the Cerner toolbar.
+2. The main screen shows: the facility's current census, pending admissions, and scheduled registrations for the day.
+
+### Creating a New Patient Registration
+
+1. Click "New Registration" or "Register Patient."
+2. Search for an existing person record by: Name + DOB, MRN, or SSN. Always check for an existing record before creating a new one — duplicate records are a major data quality issue.
+3. If no existing record found: click "New Person" and enter demographics.
+4. Select or create the appropriate encounter type (Inpatient, Outpatient, Emergency, Ambulatory Surgery).
+5. Enter insurance information:
+   - Plan name, subscriber ID, group number
+   - Subscriber relationship to patient (self, spouse, child)
+   - Secondary and tertiary insurance if applicable
+6. Enter admitting diagnosis (ICD-10-CM code or description).
+7. Assign bed (for inpatient): unit, room, bed.
+8. Print wristband.
+9. Save registration — encounter record created.
+
+### Admissions, Transfers, and Discharges (ADT Events)
+
+The ADT system generates HL7 ADT messages for downstream systems:
+- **A01** — Admit / Visit notification (inpatient admission)
+- **A02** — Transfer a patient (room change, unit transfer)
+- **A03** — Discharge / End visit
+- **A04** — Register a patient (outpatient encounter)
+- **A08** — Update patient information
+
+These messages notify: pharmacy, lab, radiology, BCMA, billing, and all integrated external systems.
+
+## Insurance Eligibility Verification
+
+### Real-Time 270/271 Verification
+
+Cerner integrates with clearinghouses (Change Healthcare, Availity, Waystar) to verify insurance eligibility in real time:
+1. Enter the patient's insurance information in the Registration module.
+2. Click "Verify Eligibility" — the system sends a 270 transaction to the clearinghouse.
+3. The clearinghouse queries the payer and returns a 271 response within seconds.
+4. The response is displayed: active coverage confirmed, deductible remaining, co-pay amounts.
+5. The verification result is stored on the account for audit purposes.
+
+### Manual Verification
+
+If real-time verification is unavailable:
+1. Call the payer's provider services line using the phone number on the back of the insurance card.
+2. Verify: patient name, DOB, subscriber ID, plan effective dates, covered services, deductible, co-pay.
+3. Document the verification: payer representative name, date/time, reference number.
+4. Enter findings in the Insurance Verification Notes field on the account.
+
+## Prior Authorization Management
+
+### Identifying Authorization Requirements
+
+1. Use the Cerner Prior Authorization module or the clearinghouse's authorization database to identify if the planned service requires pre-authorization.
+2. Check payer-specific authorization requirement lists (available in the payer's provider portal).
+3. Common services requiring authorization: elective surgeries, advanced imaging (MRI, CT, PET), specialist consultations (some payers), inpatient admissions.
+
+### Submitting a Prior Authorization
+
+1. Navigate to Prior Authorization Management in the Revenue Cycle suite.
+2. Create a new authorization request.
+3. Complete required fields: payer, patient, service date, CPT code(s), ICD-10 diagnosis codes, facility, provider NPI.
+4. Attach clinical documentation if required (e.g., office notes supporting medical necessity for advanced imaging).
+5. Submit electronically via 278 EDI transaction or via the payer's portal.
+6. Document the payer's authorization number and authorized date range on the account in Cerner.
+
+### Authorization Tracking
+
+The Prior Authorization module tracks:
+- Pending authorizations (awaiting payer response)
+- Approved authorizations with authorization number and approved services
+- Denied authorizations (requiring appeal or alternative)
+- Expiring authorizations (alert when an authorization is about to expire before the service date)
+
+## Financial Counseling
+
+### Patient Financial Responsibility Estimation
+
+1. Calculate the patient's estimated out-of-pocket cost based on:
+   - Insurance plan details (deductible, co-insurance, co-pay)
+   - Procedure CPT code and facility charge
+   - Year-to-date deductible amounts (from 271 response if available)
+2. Present the estimate to the patient using the Cerner Patient Estimate module (or printed estimate).
+
+### Financial Assistance (Charity Care)
+
+1. Screen patients for financial assistance eligibility using:
+   - Federal poverty level (FPL) compared to household income
+   - Uninsured or underinsured status
+   - Catastrophic medical expenses
+2. Provide the financial assistance application.
+3. Document financial assistance approval level in the account.
+4. Apply the appropriate financial assistance discount adjustment at billing.
+
+## Best Practices
+
+1. Always search for an existing person record before creating a new registration — duplicate MRN records are costly to merge and cause patient safety risks.
+2. Verify insurance eligibility for every encounter — never assume coverage is active.
+3. Collect co-pays at point of service — collection rates drop dramatically once the patient leaves.
+4. Enter the prior authorization number on the account before the service date — missing authorization numbers are the leading cause of clinical denial.
+5. Update demographics at every encounter — patients' insurance, address, and phone numbers change frequently.
+6. Train registration staff to recognize insurance card red flags: expired dates, secondary insurance without primary, COBRA plans that may be lapsing.

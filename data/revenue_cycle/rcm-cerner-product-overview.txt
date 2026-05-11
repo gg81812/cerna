@@ -1,0 +1,541 @@
+# SOURCE: Cerner Revenue Cycle Management — Product Overview and CDRC Philosophy
+# URL: https://www.cerner.com/en/solutions/revenue-cycle-management
+# MODULE: Revenue Cycle
+# RETRIEVED: 2026-04-16
+# ---
+
+
+<!DOCTYPE html>
+<html class="normal" lang="en">
+<head>
+
+	<meta name="VIcurrentDateTime" content="638448316246804782" />
+
+        <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="shortcut icon" href="/-/media/oc-logos-and-assets/favicon.ico?vs=1&amp;hash=A517CB3B14CBB75240EA89BFF5A33246" type="image/x-icon" />
+        <title>404 | Cerner</title>
+        <meta name="description" content="The page you selected may be broken or may have been removed. Please try searching again to find a specific topic or return to the homepage." />
+    <meta property="og:url" content="https://www.cerner.com/404" />
+    <meta property="og:title" content="404 | Cerner" />
+    <meta property="og:description" content="The page you selected may be broken or may have been removed. Please try searching again to find a specific topic or return to the homepage." />
+        <meta property="og:image" content="/-/media/cerner-media-united-states/brand/cerner-fi-default.jpg?vs=2" />
+    <meta property="og:type" content="website" />
+        <link rel="stylesheet" type="text/css" href="https://cloud.typography.com/6372176/7856172/css/fonts.css" />
+<link href="/assets/toolkit/styles/toolkit.css?v=fApPm0yHwtoxPOUqs58B0hA3BAwcSgxbDxlXmL8JMg41" rel="stylesheet"/>
+        <link rel="stylesheet" type="text/css" href="/-/media/resources/css/styleststcss7.css?vs=80&amp;hash=D5751417FC7221E26D8015663DDB37FF" />
+    <script type="text/javascript">
+        // For api pathing
+        location.siteConfig = { VirtualFolder: '/' }
+    </script>
+    <script>
+        (function(w, d, s, l, i) {
+            w[l] = w[l] || [];
+            w[l].push({
+                'gtm.start':
+                    new Date().getTime(),
+                event: 'gtm.js'
+            });
+            var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s),
+                dl = l != 'dataLayer' ? '&l=' + l : '';
+            j.async = true;
+            j.src =
+                '//www.googletagmanager.com/gtm.js?id=' + i + dl;
+            f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-NRXSZ7');
+    </script>
+    <script>
+        //pushing meta data properties to dataLayer for custom dimensions #CTSSOL-61791
+        window.dataLayer = window.dataLayer || [];
+
+        if (!true) {
+            window.dataLayer.push({'authors': ''});
+        }
+        if (!false) {
+            window.dataLayer.push({'title': '404 | Cerner' });
+        }
+        if (!false) {
+            window.dataLayer.push({'description': 'The page you selected may be broken or may have been removed. Please try searching again to find a specific topic or return to the homepage.'});
+        }
+        if (!true) {
+            window.dataLayer.push({'tag': ''});
+        }
+        if (!true) {
+            window.dataLayer.push({'keywords': ''});
+        }
+        if (!true) {
+            window.dataLayer.push({ 'category': '' });
+        }
+        if (!true) {
+            window.dataLayer.push({ 'goals': '' });
+        }
+        if (!false) {
+            window.dataLayer.push({ 'country': 'N/A' });
+        }
+        if (!false) {
+            window.dataLayer.push({ 'state': 'N/A' });
+        }
+        if (!false) {
+            window.dataLayer.push({ 'sitecoreId': 'e1bfc17c819d47c7a78b1f102f0a2b16' });
+        }
+        if (!false) {
+            window.dataLayer.push({ 'isInternal': 'False' });
+        }
+    </script>
+    <script>
+        window.addEventListener("message", function (messageEvent) {
+            receiveMessage(messageEvent);
+        });
+
+        function receiveMessage(messageEvent) {
+            if (messageEvent.data && (messageEvent.origin === 'https://go.pardot.com' || messageEvent.origin === 'https://go.cerner.com')) {
+                // Pardot iframe forms
+                if (messageEvent.data.messageType === "resize") {
+                    // Find the iframe that sent the message and resize it based on the given height
+                    if (messageEvent.data.height) {
+                        $("iframe").each(function () {
+                            if (this.contentWindow === messageEvent.source) {
+                                $(this).height(messageEvent.data.height + "px");
+                            }
+                        });
+                    }
+                }
+                else if (messageEvent.data.messageType === "submit") {
+                    var formName = messageEvent.data.formName ? messageEvent.data.formName : "";
+                    window.dataLayer.push({
+                        "event": "Form Submission",
+                        "eventAction": "Submit",
+                        "eventLabel": formName,
+                        "gtm.formId": formName
+                    });
+                }
+                else if (messageEvent.data.messageType === "getLocation") {
+                    // Send the location to the iframe that sent the message
+                    var locationProperties = JSON.parse(JSON.stringify(window.location));    // Removes functions so the location can be cloned
+                    messageEvent.source.postMessage(locationProperties, messageEvent.origin)
+                }
+            }
+        }
+    </script>
+
+
+</head>
+<body class="page-id-603bb45f-7426-40dc-bb2f-3dd13750c094">
+            <!-- Google Tag Manager (noscript) -->
+        <noscript>
+            <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NRXSZ7" title="Google Tag Manager NoScript"
+                    height="0" width="0" style="display: none; visibility: hidden"></iframe>
+        </noscript>
+        <!-- End Google Tag Manager (noscript) -->
+
+
+<div class="text-center">
+    <a href="#main" class="navy-blue sr-only sr-only-focusable" tabindex="0">Skip to main content</a>
+</div>
+<div class="text-center">
+    <a href="#footer" class="navy-blue sr-only sr-only-focusable" tabindex="0">Skip to footer</a>
+</div>
+
+    <header class="main-header">
+            <div class="main-header-controls none" data-toggle="header-sticky-nav">
+        <div class="container-max-width">
+            <div class="row">
+                <div class="col-lg-2 col-lg-offset-1 col-md-2 col-sm-6 col-xs-6">
+                    <div class="main-header-logo-bg"></div>
+                    <div class="main-header-logo">
+                        <a href="/" class="inline-block" tabindex="0">
+<img src="/-/media/oc-logos-and-assets/oc_logo.png?vs=1&amp;h=196&amp;w=965&amp;la=en&amp;hash=714DC65ADE6D2CF6AA457B8042FEECCE" alt="OC_logo" />                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-1 col-sm-6 col-xs-6 col-lg-push-6 col-md-push-9 ">
+                    <div class="main-header-menu-btn">
+                        <button id="mega-nav-toggle" type="button" alt="menu" title="menu" class="btn-hamburger" data-toggle="mega-nav" tabindex="0" aria-label="Toggle navigation">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </button>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-8 col-md-offset-1 col-sm-12 col-xs-12 col-lg-pull-2 col-md-pull-1">
+                    <div class="main-header-search">
+                        <div class="row">
+                            <div class="col-lg-8 col-md-8 col-sm-12">
+                                <div class="typeahead">
+                                    <form action="https://www.cerner.com/search" method="GET">
+                                        <input class="typeahead-input" type="search" name="query" aria-label="Search" placeholder="Search" autocomplete="off" id="txt">
+                                        <button class="typeahead-button" type="submit" aria-label="Search">
+                                            <span class="glyphicon glyphicon-search"></span>
+                                        </button>
+                                        <ul class="typeahead-results"></ul>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-4 hidden-xs hidden-sm">
+                                <div class="m-xs-t-xs m-xs-r--xl main-header-links">
+<a class="caret-link-small navy-blue m-xs-x-s" href="https://community.cerner.com/" target="" title="">uCern</a>                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <nav class="mega-nav">
+        <div class="mega-nav-inner">
+            <div class="container-fluid">
+                <div class="row">
+                    <ul class="mega-nav-categories">
+                        <li class="mega-nav-category col-lg-6 col-md-6 col-sm-12 col-xs-12">
+
+    <div class="mega-nav-block panel-left">
+        <span class="mega-nav-heading" data-toggle="mega-nav-category">Your Role</span>
+        <ul class="mega-nav-sub-categories">
+                <li class="mega-nav-sub-category indicator" data-label="Providers" >
+                    <a class="mega-nav-heading" data-toggle="mega-nav-sub-category" href="#"> Providers</a>
+                    <ul class="mega-nav-links bg-navy-blue">
+                            <li class="mega-nav-link" data-label="Ambulatory" data-category="Navigation">
+                                <a href="https://www.oracle.com/health/providers/ambulatory-ehr/" target="" title="">Ambulatory</a>
+                            </li>
+                            <li class="mega-nav-link" data-label="Ambulatory Surgery Centers" data-category="Navigation">
+                                <a href="https://www.oracle.com/health/providers/ambulatory-surgery-center/" target="" title="">Ambulatory Surgery Centers</a>
+                            </li>
+                            <li class="mega-nav-link" data-label="CommunityWorks" data-category="Navigation">
+                                <a href="https://www.oracle.com/health/providers/community-hospitals/" target="" title="">CommunityWorks</a>
+                            </li>
+                            <li class="mega-nav-link" data-label="Health Systems" data-category="Navigation">
+                                <a href="https://www.oracle.com/health/providers/health-systems/" target="" title="">Health Systems</a>
+                            </li>
+
+
+                        <li class="mega-nav-view-all">
+                            <div class="row">
+                                <div class="col-lg-12 col-md-12 col-sm-6 col-sm-offset-3 col-md-12 col-md-offset-0" data-label="Providers" data-category="Navigation">
+                                    <a class="btn btn-secondary btn-block btn-sm" href="https://www.oracle.com/health/providers/" target="" title="">Explore Providers</a>
+
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+                <li class="mega-nav-sub-category indicator" data-label="Payers" >
+                    <a class="mega-nav-heading" data-toggle="mega-nav-sub-category" href="#"> Payers</a>
+                    <ul class="mega-nav-links bg-navy-blue">
+
+
+                        <li class="mega-nav-view-all">
+                            <div class="row">
+                                <div class="col-lg-12 col-md-12 col-sm-6 col-sm-offset-3 col-md-12 col-md-offset-0" data-label="Payers" data-category="Navigation">
+                                    <a class="btn btn-secondary btn-block btn-sm" href="https://www.oracle.com/financial-services/insurance/healthcare-payers/" target="" title="">Explore Payers</a>
+
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+                <li class="mega-nav-sub-category indicator" data-label="Enterprise Management" >
+                    <a class="mega-nav-heading" data-toggle="mega-nav-sub-category" href="#"> Enterprise Management</a>
+                    <ul class="mega-nav-links bg-navy-blue">
+                            <li class="mega-nav-link" data-label="Financial management for healthcare" data-category="Navigation">
+                                <a href="https://www.oracle.com/health/erp/" target="" title="">Financial management for healthcare</a>
+                            </li>
+                            <li class="mega-nav-link" data-label="Human capital management for healthcare" data-category="Navigation">
+                                <a href="https://www.oracle.com/health/hcm/" target="" title="">Human capital management for healthcare</a>
+                            </li>
+                            <li class="mega-nav-link" data-label="Cloud infrastructure for healthcare" data-category="Navigation">
+                                <a href="https://www.oracle.com/health/cloud/" target="" title="">Cloud infrastructure for healthcare</a>
+                            </li>
+
+
+                        <li class="mega-nav-view-all">
+                            <div class="row">
+                                <div class="col-lg-12 col-md-12 col-sm-6 col-sm-offset-3 col-md-12 col-md-offset-0" data-label="Enterprise Management" data-category="Navigation">
+                                    <a class="btn btn-secondary btn-block btn-sm" href="https://www.oracle.com/health" target="" title="">Explore Enterprise Management</a>
+
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+                <li class="mega-nav-sub-category indicator" data-label="Government" >
+                    <a class="mega-nav-heading" data-toggle="mega-nav-sub-category" href="#"> Government</a>
+                    <ul class="mega-nav-links bg-navy-blue">
+                            <li class="mega-nav-link" data-label="Cerner Federal Solutions LLC (d/b/a AbleVets)" data-category="Navigation">
+
+                            </li>
+                            <li class="mega-nav-link" data-label="Analytics" data-category="Navigation">
+
+                            </li>
+                            <li class="mega-nav-link" data-label="Federal Government" data-category="Navigation">
+
+                            </li>
+                            <li class="mega-nav-link" data-label="Health Plan" data-category="Navigation">
+
+                            </li>
+                            <li class="mega-nav-link" data-label="Hosting &amp;amp; Monitoring" data-category="Navigation">
+
+                            </li>
+                            <li class="mega-nav-link" data-label="Open &amp;amp; Interoperable" data-category="Navigation">
+
+                            </li>
+                            <li class="mega-nav-link" data-label="State &amp;amp; Local Government" data-category="Navigation">
+
+                            </li>
+                            <li class="mega-nav-link" data-label="Patient Engagement" data-category="Navigation">
+
+                            </li>
+                            <li class="mega-nav-link" data-label="Population Health Management" data-category="Navigation">
+
+                            </li>
+
+
+                        <li class="mega-nav-view-all">
+                            <div class="row">
+                                <div class="col-lg-12 col-md-12 col-sm-6 col-sm-offset-3 col-md-12 col-md-offset-0" data-label="Government" data-category="Navigation">
+
+
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+                <li class="mega-nav-sub-category indicator" data-label="Life Sciences (Cerner Enviza)" >
+                    <a class="mega-nav-heading" data-toggle="mega-nav-sub-category" href="#"> Life Sciences (Cerner Enviza)</a>
+                    <ul class="mega-nav-links bg-navy-blue">
+                            <li class="mega-nav-link" data-label="Cerner Enviza" data-category="Navigation">
+                                <a href="https://www.cernerenviza.com/" target="_parent" title="">Cerner Enviza</a>
+                            </li>
+
+
+                        <li class="mega-nav-view-all">
+                            <div class="row">
+                                <div class="col-lg-12 col-md-12 col-sm-6 col-sm-offset-3 col-md-12 col-md-offset-0" data-label="Life Sciences (Cerner Enviza)" data-category="Navigation">
+                                    <a class="btn btn-secondary btn-block btn-sm" href="https://www.cernerenviza.com/" target="" title="">Explore Life Sciences (Cerner Enviza)</a>
+
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+        </ul>
+    </div>
+
+                        </li>
+                        <li class="mega-nav-category col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                <div class="mega-nav-block panel-right">
+        <span class="mega-nav-heading" data-toggle="mega-nav-category">Our Offerings</span>
+        <ul class="mega-nav-sub-categories">
+                    <li class="mega-nav-sub-category indicator" data-label="Clinical Applications">
+                        <a class="mega-nav-heading" data-toggle="mega-nav-sub-category" href="#">Clinical Applications</a>
+                        <ul class="mega-nav-links bg-navy-blue">
+                                <li class="mega-nav-link" data-label="Clinical Suite" data-category="Navigation">
+                                    <a href="https://www.oracle.com/health/clinical-suite/" target="" title="">Clinical Suite</a>
+                                </li>
+                                <li class="mega-nav-link" data-label="Continuum of Care" data-category="Navigation">
+                                    <a href="https://www.oracle.com/health/continuum-care/" target="" title="">Continuum of Care</a>
+                                </li>
+                                <li class="mega-nav-link" data-label="Service Lines and Departments" data-category="Navigation">
+                                    <a href="https://www.oracle.com/health/service-lines-departments/" target="" title="">Service Lines and Departments</a>
+                                </li>
+
+
+
+                            <li class="mega-nav-view-all">
+                                <div class="row">
+                                    <div class="col-lg-12 col-md-12 col-sm-6 col-sm-offset-3 col-md-12 col-md-offset-0"  data-label="Clinical Applications" data-category="Navigation">
+                                        <a class="btn btn-secondary btn-block btn-sm" href="https://www.oracle.com/health/clinical-applications/" target="" title="">Explore Clinical Applications</a>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="mega-nav-sub-category indicator" data-label="Clinical and Financial Operations">
+                        <a class="mega-nav-heading" data-toggle="mega-nav-sub-category" href="#">Clinical and Financial Operations</a>
+                        <ul class="mega-nav-links bg-navy-blue">
+                                <li class="mega-nav-link" data-label="Clinical Operations" data-category="Navigation">
+                                    <a href="https://www.oracle.com/health/clinical-operations/" target="" title="">Clinical Operations</a>
+                                </li>
+                                <li class="mega-nav-link" data-label="Revenue Cycle Management" data-category="Navigation">
+                                    <a href="https://www.oracle.com/health/revenue-cycle/" target="" title="">Revenue Cycle Management</a>
+                                </li>
+                                <li class="mega-nav-link" data-label="Reporting and Analytics" data-category="Navigation">
+                                    <a href="https://www.oracle.com/health/reporting-analytics/" target="" title="">Reporting and Analytics</a>
+                                </li>
+
+
+
+                            <li class="mega-nav-view-all">
+                                <div class="row">
+                                    <div class="col-lg-12 col-md-12 col-sm-6 col-sm-offset-3 col-md-12 col-md-offset-0"  data-label="Clinical and Financial Operations" data-category="Navigation">
+                                        <a class="btn btn-secondary btn-block btn-sm" href="https://www.oracle.com/health/clinical-financial-operations/" target="" title="">Explore Clinical and Financial Operations</a>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="mega-nav-sub-category indicator" data-label="Population Health Management">
+                        <a class="mega-nav-heading" data-toggle="mega-nav-sub-category" href="#">Population Health Management</a>
+                        <ul class="mega-nav-links bg-navy-blue">
+
+
+
+                            <li class="mega-nav-view-all">
+                                <div class="row">
+                                    <div class="col-lg-12 col-md-12 col-sm-6 col-sm-offset-3 col-md-12 col-md-offset-0"  data-label="Population Health Management" data-category="Navigation">
+                                        <a class="btn btn-secondary btn-block btn-sm" href="https://www.oracle.com/health/population-health/" target="" title="">Explore Population Health Management</a>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="mega-nav-sub-category indicator" data-label="Consumer Experience">
+                        <a class="mega-nav-heading" data-toggle="mega-nav-sub-category" href="#">Consumer Experience</a>
+                        <ul class="mega-nav-links bg-navy-blue">
+
+
+
+                            <li class="mega-nav-view-all">
+                                <div class="row">
+                                    <div class="col-lg-12 col-md-12 col-sm-6 col-sm-offset-3 col-md-12 col-md-offset-0"  data-label="Consumer Experience" data-category="Navigation">
+                                        <a class="btn btn-secondary btn-block btn-sm" href="https://www.oracle.com/health/consumer-experience/" target="" title="">Explore Consumer Experience</a>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="mega-nav-sub-category indicator" data-label="Clinical Services and Support">
+                        <a class="mega-nav-heading" data-toggle="mega-nav-sub-category" href="#">Clinical Services and Support</a>
+                        <ul class="mega-nav-links bg-navy-blue">
+                                <li class="mega-nav-link" data-label="Clinical Security" data-category="Navigation">
+                                    <a href="https://www.oracle.com/health/security/" target="" title="">Clinical Security</a>
+                                </li>
+                                <li class="mega-nav-link" data-label="Services" data-category="Navigation">
+                                    <a href="https://www.oracle.com/health/services/" target="" title="">Services</a>
+                                </li>
+                                <li class="mega-nav-link" data-label="Regulatory" data-category="Navigation">
+                                    <a href="https://www.oracle.com/health/regulatory/" target="" title="">Regulatory</a>
+                                </li>
+
+
+
+                            <li class="mega-nav-view-all">
+                                <div class="row">
+                                    <div class="col-lg-12 col-md-12 col-sm-6 col-sm-offset-3 col-md-12 col-md-offset-0"  data-label="Clinical Services and Support" data-category="Navigation">
+                                        <a class="btn btn-secondary btn-block btn-sm" href="https://www.oracle.com/health/clinical-services-support/" target="" title="">Explore Clinical Services and Support</a>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+        </ul>
+    </div>
+
+                        </li>
+                        <li class="mega-nav-category footer col-lg-12 col-sm-12 col-xs-12">
+                                <div class="mega-nav-block ">
+        <span class="mega-nav-heading" data-toggle="mega-nav-category">About Cerner</span>
+        <ul class="mega-nav-sub-categories">
+                <li class="mega-nav-sub-category indicator">
+                    <a class="mega-nav-heading caret-link-small" href="https://www.cerner.com/about" target="" title="About Us">About Us</a>
+                </li>
+                <li class="mega-nav-sub-category indicator">
+                    <a class="mega-nav-heading caret-link-small" href="https://www.cerner.com/perspectives" target="" title="">Perspectives</a>
+                </li>
+                <li class="mega-nav-sub-category indicator">
+                    <a class="mega-nav-heading caret-link-small" href="https://careers.cerner.com/" target="" title="">Careers</a>
+                </li>
+                <li class="mega-nav-sub-category indicator">
+                    <a class="mega-nav-heading caret-link-small" href="https://investors.cerner.com/" target="_blank" title="">Investor Relations</a>
+                </li>
+                <li class="mega-nav-sub-category indicator">
+                    <a class="mega-nav-heading caret-link-small" href="https://www.cerner.com/newsroom" target="" title="">Newsroom</a>
+                </li>
+                <li class="mega-nav-sub-category indicator">
+                    <a class="mega-nav-heading caret-link-small" href="https://www.cerner.com/client-achievements" target="" title="Client Achievements">Client Achievements</a>
+                </li>
+                <li class="mega-nav-sub-category indicator">
+                    <a class="mega-nav-heading caret-link-small" href="https://www.cerner.com/contact" target="" title="">Contact Us</a>
+                </li>
+        </ul>
+    </div>
+
+                        </li>
+                        <li class="mega-nav-category col-xs-12 hidden-md hidden-lg">
+                            <div class="mega-nav-block ">
+<a class="mega-nav-heading" href="https://community.cerner.com/" target="" title="">uCern</a>                            </div>
+                        </li>
+                    </ul>
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+    </header>
+
+
+
+    <div id="main" class="bg-white">
+        <div class="openHTML "><div class="container" style="margin-top: 100px; margin-bottom: 100px;">
+  <div class="col-md-4 col-md-offset-2" style="text-align: center;">
+    <img height="275" alt="404 Page not found" src="/-/media/cerner-media-united-states/icons/page-not-found.png?vs=1&amp;hash=9DE2126645947C7C72D10D3F322F9BDE">
+  </div>
+  <div class="col-md-4" style="padding-top: 20px;">
+    <h2 class="light-heading-large">Page not found</h2>
+    <p class="body-text-large">The page you selected may be broken or may have been removed. Please try the search box above to find a specific topic or return to the homepage.</p>
+    <a class="btn btn-default" href="https://www.oracle.com/health/">Return to Oracle Health</a></div>
+</div>
+</div>
+
+
+    </div>
+    <div class="modal fade videoModal" tabindex="-1" role="dialog" data-name="modal-video" id="modal-video">
+    <div class="modal-dialog" role="document">
+    </div>
+</div>
+    <div class="modal fade imageModalStyle" id="imageModal" data-name="modal-image" role="dialog">
+    <div class="modal-dialog" role="document">
+
+
+        <div class="modal-content">
+            <div class="modal-body thumbnail-wrapper thumbnail-compress">
+                <img id="modalImage" class="modal-content">
+            </div>
+        </div>
+    </div>
+</div>
+        <footer id="footer" class="bg-navy-blue p-xs-t-l p-xs-b-xl p-md-t-xl p-md-b-xxl">
+        <div class="container-max-width">
+            <div class="row">
+
+            </div>
+    <div class="col-sm-offset-6 col-md-3 col-md-offset-8 col-lg-4 col-lg-offset-8">
+        <section aria-label="Copyright" class="p-xs-l-xs">
+            <p class="white">
+                <small>
+                    <div class="white" id="teconsent"></div>
+<br />
+<p style="color:white;font-size:13px;">&copy; 2024, Oracle</p>
+                </small>
+            </p>
+        </section>
+    </div>
+        </div>
+    </footer>
+
+
+
+
+<script type="text/javascript">
+    var token = '62XpMStCxMuScF4yi_Ez3cQnmAAbo06pM8jcusNTMJqZon855PfBWtlRzPHGk9RCzGDCdw7uiQSmNyjW59_s6h3gB91fIg_jNOToG6NT8OU1:NB_tYW1VXosJ-T4ZbwYANHPOTjrnuBaAbzK8RP-TALVzDM8i0h0dY3zJ_s5zn1MRYb1VwTsunLZNYKen3NAiygVkI7SOXketuxb5SUndcxk1';
+</script>
+
+<script src="/assets/toolkit/script.js?v=6FU_Ge6xyv_rROIQBCnxQ2lQ1JvY7r60Tobcfoa_So01"></script>
+
+
+</body>
+</html>

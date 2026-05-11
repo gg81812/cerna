@@ -1,0 +1,81 @@
+US Core Implementation Guide v8.0.1 (STU 8)
+Source: https://www.hl7.org/fhir/us/core/
+Scraped: 2026-04-19
+
+==============================================================
+
+Overview
+
+The US Core Implementation Guide (v8.0.1, STU 8) is built on FHIR R4 and establishes minimum constraints for US Realm healthcare data exchange. It serves as the foundation for FHIR implementations across the United States.
+
+Key Introduction Points
+
+The guide reflects updates to U.S. Core Data for Interoperability (USCDI) requirements and community feedback. It defines "the minimum constraints on the FHIR resources to create the US Core Profiles," identifying required elements, extensions, vocabularies, and value sets.
+
+Two implementation approaches are supported:
+1. Profile-only support for representing clinical information
+2. Combined profile and RESTful interaction support
+
+Main Content Sections
+
+Conformance Requirements:
+- General requirements common to all actors
+- Must Support element definitions
+- SMART on FHIR obligations and capabilities
+
+Guidance Topics:
+- USCDI mappings
+- Clinical notes interactions
+- Medication list access
+- Provenance documentation
+- Screening and assessment representations
+- Version transition documentation
+
+FHIR Artifacts:
+- Profiles and extensions library
+- Search parameters and operations
+- Terminology and value sets
+- Capability statements for servers and clients
+
+US Core Actors
+
+US Core Requestor (Client): Applications initiating data access requests for patient information
+
+US Core Responder (Server): Systems responding to requests, including EHRs, HIEs, and care coordination platforms
+
+Profile Categories
+
+The guide defines approximately 50+ profiles organized by FHIR resource types including:
+
+- Patient & Demographics: Patient, Practitioner, Organization, Location
+- Clinical Observations: Vital signs, laboratory results, screening assessments
+- Medications: MedicationRequest, MedicationDispense, Medication
+- Conditions & Care: CarePlan, CareTeam, Condition, Encounter
+- Documents: DocumentReference, DiagnosticReport
+- Administrative: Coverage, Device, Procedure, ServiceRequest
+
+Maturity Framework
+
+Profiles receive FHIR Maturity Level (FMM) ratings:
+- FMM 3: Profiles tied to USCDI data classes and subject to certification testing
+- FMM 2: USCDI-related but not yet regulated or certified
+- FMM 3 (Community): All other artifacts approved through community review
+
+Implementation Expectations
+
+Systems claiming conformance must formally define capabilities through CapabilityStatements. Each profile includes a "Quick Start" section documenting required FHIR RESTful search and read operations for accessing patient data.
+
+Must Support Definition
+
+Must Support elements require that:
+- Servers must populate the element if available
+- Clients must be able to process the element without error
+- Missing data is communicated via the Data Absent Reason extension
+
+Cerner Implementation Notes
+
+Cerner/Oracle Health implements US Core profiles through the Ignite FHIR API. Cerner's implementation notes identify which profile elements are supported and how they map to Millennium data elements. Implementers should review Cerner's conformance documentation when integrating with Cerner-hosted EHR systems.
+
+Related Standards
+
+The guide evolved from earlier ONC Data Access Framework and Argonaut initiatives, supporting ASTP certification testing and regulatory compliance for health information technology systems.

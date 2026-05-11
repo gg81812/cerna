@@ -1,0 +1,890 @@
+# SOURCE: Oracle Health MPages — Overview and Development Guide
+# URL: https://ehrenhancify.com/oracle-health-mpages/
+# MODULE: Millennium Platform
+# RETRIEVED: 2026-04-16
+# ---
+
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Everything you need to know about Oracle Health MPages &#8211; EHR Enhancify</title>
+<meta name='robots' content='max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
+<link rel="canonical" href="https://ehrenhancify.com/oracle-health-mpages/">
+<meta name="description" content="One of the most impressive features of Millennium is Oracle Health MPages. Read about what they are and how they work.">
+<meta property="og:title" content="Everything you need to know about Oracle Health MPages &#8211; EHR Enhancify">
+<meta property="og:type" content="article">
+<meta property="og:image" content="https://ehrenhancify.com/wp-content/uploads/2023/12/Oracle-Health-MPages.png">
+<meta property="og:image:width" content="2240">
+<meta property="og:image:height" content="1260">
+<meta property="og:image:alt" content="Oracle Health MPages">
+<meta property="og:description" content="One of the most impressive features of Millennium is Oracle Health MPages. Read about what they are and how they work.">
+<meta property="og:url" content="https://ehrenhancify.com/oracle-health-mpages/">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="EHR Enhancify">
+<meta property="article:published_time" content="2023-12-14T10:34:11+00:00">
+<meta property="article:modified_time" content="2025-05-22T11:05:40+00:00">
+<meta property="og:updated_time" content="2025-05-22T11:05:40+00:00">
+<meta property="article:section" content="Customization">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://ehrenhancify.com/wp-content/uploads/2023/12/Oracle-Health-MPages.png">
+<link rel='dns-prefetch' href='//js.hs-scripts.com' />
+<link rel='dns-prefetch' href='//cdn.jsdelivr.net' />
+<link rel="alternate" type="application/rss+xml" title="EHR Enhancify &raquo; Feed" href="https://ehrenhancify.com/feed/" />
+<link rel="alternate" type="application/rss+xml" title="EHR Enhancify &raquo; Comments Feed" href="https://ehrenhancify.com/comments/feed/" />
+<style id='wp-img-auto-sizes-contain-inline-css'>
+img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
+/*# sourceURL=wp-img-auto-sizes-contain-inline-css */
+</style>
+<link rel='stylesheet' id='argpd-cookies-eu-banner-css' href='https://ehrenhancify.com/wp-content/plugins/adapta-rgpd/assets/css/cookies-banner-modern-light.css?ver=1.3.9' media='all' />
+<style id='classic-theme-styles-inline-css'>
+/*! This file is auto-generated */
+.wp-block-button__link{color:#fff;background-color:#32373c;border-radius:9999px;box-shadow:none;text-decoration:none;padding:calc(.667em + 2px) calc(1.333em + 2px);font-size:1.125em}.wp-block-file__button{background:#32373c;color:#fff;text-decoration:none}
+/*# sourceURL=/wp-includes/css/classic-themes.min.css */
+</style>
+<style id='global-styles-inline-css'>
+:root{--wp--preset--aspect-ratio--square: 1;--wp--preset--aspect-ratio--4-3: 4/3;--wp--preset--aspect-ratio--3-4: 3/4;--wp--preset--aspect-ratio--3-2: 3/2;--wp--preset--aspect-ratio--2-3: 2/3;--wp--preset--aspect-ratio--16-9: 16/9;--wp--preset--aspect-ratio--9-16: 9/16;--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgb(6,147,227) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgb(252,185,0) 0%,rgb(255,105,0) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgb(255,105,0) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgb(255, 255, 255), 6px 6px rgb(0, 0, 0);--wp--preset--shadow--crisp: 6px 6px 0px rgb(0, 0, 0);}:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}body .is-layout-flex{display: flex;}.is-layout-flex{flex-wrap: wrap;align-items: center;}.is-layout-flex > :is(*, div){margin: 0;}body .is-layout-grid{display: grid;}.is-layout-grid > :is(*, div){margin: 0;}:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+/*# sourceURL=global-styles-inline-css */
+</style>
+
+<link rel='stylesheet' id='bricks-frontend-css' href='https://ehrenhancify.com/wp-content/themes/bricks/assets/css/frontend-light-layer.min.css?ver=1775737406' media='all' />
+<style id='bricks-frontend-inline-css'>
+body .tox.tox-silver-sink.tox-tinymce-aux, body .tox.tox-tinymce-aux, body .tox-shadowhost { z-index: 10001; }
+@font-face{font-family:"Plus Jakarta";font-weight:300;font-display:swap;src:url(https://ehrenhancify.com/wp-content/uploads/2025/05/plus-jakarta-sans-v8-latin-300.woff2) format("woff2");}@font-face{font-family:"Plus Jakarta";font-weight:400;font-display:swap;src:url(https://ehrenhancify.com/wp-content/uploads/2025/05/plus-jakarta-sans-v8-latin-regular.woff2) format("woff2");}@font-face{font-family:"Plus Jakarta";font-weight:500;font-display:swap;src:url(https://ehrenhancify.com/wp-content/uploads/2025/05/plus-jakarta-sans-v8-latin-500.woff2) format("woff2");}@font-face{font-family:"Plus Jakarta";font-weight:600;font-display:swap;src:url(https://ehrenhancify.com/wp-content/uploads/2025/05/plus-jakarta-sans-v8-latin-600.woff2) format("woff2");}@font-face{font-family:"Plus Jakarta";font-weight:700;font-display:swap;src:url(https://ehrenhancify.com/wp-content/uploads/2025/05/plus-jakarta-sans-v8-latin-700.woff2) format("woff2");}
+
+/*# sourceURL=bricks-frontend-inline-css */
+</style>
+<link rel='stylesheet' id='bricks-color-palettes-css' href='https://ehrenhancify.com/wp-content/uploads/bricks/css/color-palettes.min.css?ver=1775737525' media='all' />
+<link rel='stylesheet' id='bricks-theme-style-branding_style-css' href='https://ehrenhancify.com/wp-content/uploads/bricks/css/theme-style-branding_style.min.css?ver=1775737525' media='all' />
+<link rel='stylesheet' id='bricks-post-19-css' href='https://ehrenhancify.com/wp-content/uploads/bricks/css/post-19.min.css?ver=1775737525' media='all' />
+<link rel='stylesheet' id='bricks-post-3352-css' href='https://ehrenhancify.com/wp-content/uploads/bricks/css/post-3352.min.css?ver=1775737525' media='all' />
+<link rel='stylesheet' id='bricks-post-2829-css' href='https://ehrenhancify.com/wp-content/uploads/bricks/css/post-2829.min.css?ver=1775737525' media='all' />
+<link rel='stylesheet' id='bricks-post-26-css' href='https://ehrenhancify.com/wp-content/uploads/bricks/css/post-26.min.css?ver=1775737525' media='all' />
+<style id='bricks-frontend-inline-inline-css'>
+.sec-nav {padding-top: 10px; padding-bottom: 10px; background-color: var(--bricks-color-b2be49)}.fit-content {width: fit-content}.logo:hover {transform: scaleX(1.02) scaleY(1.02)}.logo {transition: 0.4s ease}.logo .bricks-site-logo {width: 170px}@media (max-width: 478px) {.logo .bricks-site-logo {width: 140px}}.gap-20 {column-gap: 20px; row-gap: 20px}.btn-dash {flex-direction: row; justify-content: center; align-items: center; width: fit-content; column-gap: 5px; row-gap: 5px}.tx-hover:hover {color: var(--bricks-color-116ea0)}.tx-hover {transition: 0.1s ease}.nav .bricks-nav-menu > li > a {font-size: 15px; font-weight: 600; padding-bottom: 0}.nav .bricks-nav-menu > li > .brx-submenu-toggle > * {font-size: 15px; font-weight: 600; padding-bottom: 0}.nav .bricks-nav-menu > li:hover > a {color: var(--bricks-color-116ea0)}.nav .bricks-nav-menu > li:hover > .brx-submenu-toggle > * {color: var(--bricks-color-116ea0)}.nav .bricks-nav-menu {gap: 20px}.nav .bricks-mobile-menu-toggle {color: var(--bricks-color-116ea0)}.nav .bricks-nav-menu .current-menu-item > a {color: var(--bricks-color-116ea0)}.nav .bricks-nav-menu .current-menu-item > .brx-submenu-toggle > * {color: var(--bricks-color-116ea0)}.nav .bricks-nav-menu > .current-menu-parent > a {color: var(--bricks-color-116ea0)}.nav .bricks-nav-menu > .current-menu-parent > .brx-submenu-toggle > * {color: var(--bricks-color-116ea0)}.nav .bricks-nav-menu > .current-menu-ancestor > a {color: var(--bricks-color-116ea0)}.nav .bricks-nav-menu > .current-menu-ancestor > .brx-submenu-toggle > * {color: var(--bricks-color-116ea0)}.nav.show-mobile-menu .bricks-mobile-menu-toggle {color: var(--bricks-color-116ea0) !important}.nav .bricks-nav-menu .sub-menu {background-color: var(--bricks-color-b2be49); border-radius: 12px; box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.05)}.nav .bricks-nav-menu > li.open > .sub-menu {transform: translateY(10px)}.nav .bricks-nav-menu > li.open > .brx-megamenu {transform: translateY(10px)}.nav .bricks-nav-menu .sub-menu > li > a {color: var(--bricks-color-2565f6); font-size: 14px; font-weight: 600; line-height: 3.2}.nav .bricks-nav-menu .sub-menu > li > .brx-submenu-toggle > * {color: var(--bricks-color-2565f6); font-size: 14px; font-weight: 600; line-height: 3.2}.nav .bricks-nav-menu .sub-menu .menu-item:hover {background-color: var(--bricks-color-116ea0)}.nav .bricks-nav-menu .sub-menu > li:hover > a {color: var(--bricks-color-b2be49)}.nav .bricks-nav-menu .sub-menu > li:hover > .brx-submenu-toggle > * {color: var(--bricks-color-b2be49)}.nav .bricks-nav-menu .sub-menu > .current-menu-item > a {color: var(--bricks-color-116ea0)}.nav .bricks-nav-menu .sub-menu > .current-menu-item > .brx-submenu-toggle > * {color: var(--bricks-color-116ea0)}.nav .bricks-nav-menu .sub-menu > .current-menu-ancestor > a {color: var(--bricks-color-116ea0)}.nav .bricks-nav-menu .sub-menu > .current-menu-ancestor > .brx-submenu-toggle > * {color: var(--bricks-color-116ea0)}.nav .bricks-nav-menu .sub-menu > li {border-radius: 6px}.nav .bricks-mobile-menu > li > a {color: var(--bricks-color-b2be49); font-size: 22px; font-weight: 500; padding-right: 5px; padding-left: 5px}.nav .bricks-mobile-menu > li > .brx-submenu-toggle > * {color: var(--bricks-color-b2be49); font-size: 22px; font-weight: 500; padding-right: 5px; padding-left: 5px}.nav .bricks-mobile-menu [aria-current="page"] {color: var(--bricks-color-116ea0)}.nav .bricks-mobile-menu [aria-current="page"] + button {color: var(--bricks-color-116ea0)}.nav .bricks-mobile-menu > .current-menu-item > a {color: var(--bricks-color-116ea0)}.nav .bricks-mobile-menu > .current-menu-parent > a {color: var(--bricks-color-116ea0)}.nav .bricks-mobile-menu > .current-menu-item > .brx-submenu-toggle > * {color: var(--bricks-color-116ea0)}.nav .bricks-mobile-menu > .current-menu-parent > .brx-submenu-toggle > * {color: var(--bricks-color-116ea0)}.nav .bricks-mobile-menu .sub-menu > li > a {color: #b4bfd5; font-size: 16px; line-height: 2; font-weight: 500}.nav .bricks-mobile-menu .sub-menu > li > .brx-submenu-toggle > * {color: #b4bfd5; font-size: 16px; line-height: 2; font-weight: 500}.nav .bricks-mobile-menu .sub-menu > .current-menu-item > a {color: var(--bricks-color-116ea0)}.nav .bricks-mobile-menu .sub-menu > .current-menu-item > .brx-submenu-toggle > * {color: var(--bricks-color-116ea0)}.nav .bricks-mobile-menu-wrapper:before {background-color: var(--bricks-color-2565f6)}.nav .bricks-nav-menu .sub-menu .brx-submenu-toggle svg {height: 22px; width: 22px}.nav .bricks-nav-menu .sub-menu .brx-submenu-toggle i {font-size: 22px}.nav .bricks-nav-menu .sub-menu .brx-submenu-toggle button {margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; padding-top: 0; padding-right: 20px; padding-bottom: 0; padding-left: 0}.nav .bricks-mobile-menu-wrapper {width: 100%; align-items: center; text-align: center; justify-content: center}.nav .bricks-mobile-menu-wrapper .brx-submenu-toggle {justify-content: center}.nav .bricks-mobile-menu-wrapper a {width: auto}.nav .bricks-mobile-menu .menu-item-has-children .brx-submenu-toggle button {margin-left: 0}.nav .bricks-mobile-menu .sub-menu > .menu-item > a {padding-bottom: 10px}.nav .bricks-mobile-menu .sub-menu > .menu-item > .brx-submenu-toggle > * {padding-bottom: 10px}.gap-40 {row-gap: 40px; column-gap: 40px}.pad-top-entrada {padding-top: 80px}.flex-c-a {align-items: center}.max-w {max-width: 1100px}.tx-semibold {font-weight: 500}.tx-14 {font-size: 14px}.etiqueta-blog {font-size: 10px; text-align: center; font-weight: 500; text-transform: uppercase; letter-spacing: 0.4px; padding-top: 8px; padding-right: 14px; padding-bottom: 8px; padding-left: 14px; border: 1px solid #2e2e2e; border-radius: 20px; background-color: #1a1a1a; width: fit-content}.tx-w {color: var(--bricks-color-b2be49)}.hero-2 {font-size: 52px; font-weight: 600; letter-spacing: -0.02em; line-height: 1.2}@media (max-width: 991px) {.hero-2 {font-size: 62px}}@media (max-width: 767px) {.hero-2 {font-size: 54px}}@media (max-width: 478px) {.hero-2 {font-size: 42px}}.tx-c {text-align: center}.max-w-1440 {max-width: 1440px}.rounded-16 {border-radius: 12px}@media (max-width: 991px) {.rounded-16 {border-radius: 14px}}.flex-row {flex-direction: row}@media (max-width: 991px) {.flex-row {flex-direction: column}}.relative {position: relative}.box-slide {background-color: var(--bricks-color-0c3029); transition: 0.4s ease; padding-top: 30px; padding-right: 30px; padding-bottom: 30px; padding-left: 30px; justify-content: space-between}@media (max-width: 767px) {.box-slide {flex-wrap: nowrap}}.rounded-22 {border-radius: 22px}.gap-10 {column-gap: 10px; row-gap: 10px}.sticky-80 {position: sticky; top: 100px; width: 300px}@media (max-width: 478px) {.sticky-80 {top: 80px; position: sticky; z-index: 1}}.tx-18 {font-size: 18px}@media (max-width: 767px) {.tx-18 {font-size: 16px}}.tx-bold {font-weight: 700}.table-content {width: 100%}.table-content .toc-list-item {padding-top: 10px; padding-bottom: 8px}.table-content .toc-link::before {border-bottom: 1px solid #2e2e2e}.table-content .toc-link {font-weight: 500; color: var(--bricks-color-2565f6)}.table-content .toc-link:hover {color: var(--bricks-color-amathp)}.table-content .toc-link.is-active-link {color: var(--bricks-color-amathp)}.table-content .toc-list {font-size: 14px; text-transform: capitalize}.hidden {overflow: hidden}.pad-t-0 {padding-top: 0}.flex-c {align-items: center}.tx-h3 {font-size: 42px; line-height: 1.2}@media (max-width: 767px) {.tx-h3 {font-size: 32px}}@media (max-width: 478px) {.tx-h3 {font-size: 28px}}.post-blog {padding-top: 20px; padding-right: 20px; padding-bottom: 25px; padding-left: 20px; border-radius: 24px; justify-content: flex-end; overflow: hidden; transition: all 0.2s ease; aspect-ratio: 9/10}.tx-blog {pointer-events: none; z-index: 5}.date {font-size: 12px; font-weight: 600; color: var(--bricks-color-116ea0); text-transform: uppercase}.mar-b-10 {margin-bottom: 10px}.tx-h6 {font-size: 22px; line-height: 1.25}.div-gradient {width: 100%; position: absolute; left: 0px; z-index: 2; background-image: linear-gradient(rgba(68, 209, 202, 0) 30%, #44d1ca); bottom: 0px; height: 100%; transition: 0.3s ease; opacity: 0}.div-gradient:hover {opacity: 1}.img-featured {position: absolute; top: 0px; left: 0px; width: 100%; height: 100%; z-index: 1}.img-featured:not(.tag), .img-featured img {object-fit: cover}:where(.img-featured > *:not(figcaption)) {position: relative}.img-featured::before {background-image: linear-gradient(rgba(27, 29, 57, 0) 40%, #1b1d39 80%); position: absolute; content: ""; top: 0; right: 0; bottom: 0; left: 0; pointer-events: none}.bg-dark {background-color: var(--bricks-color-2565f6)}.grid-4-footer {display: grid; align-items: initial; grid-template-columns: 1fr 1fr 1fr 1fr ; grid-gap: 40px}@media (max-width: 991px) {.grid-4-footer {grid-gap: 20px}}@media (max-width: 767px) {.grid-4-footer {grid-template-columns: 1fr 1fr }}@media (max-width: 478px) {.grid-4-footer {grid-template-columns: 1fr; grid-gap: 40px}}.tx-l {color: var(--bricks-color-b2be49)}.menu-footer .bricks-nav-menu > li {margin-left: 0}.menu-footer .bricks-nav-menu > li > a {font-size: 16px; color: var(--bricks-color-b2be49); padding-bottom: 5px}.menu-footer .bricks-nav-menu > li > .brx-submenu-toggle > * {font-size: 16px; color: var(--bricks-color-b2be49); padding-bottom: 5px}.menu-footer .bricks-nav-menu > li:hover > a {color: var(--bricks-color-116ea0)}.menu-footer .bricks-nav-menu > li:hover > .brx-submenu-toggle > * {color: var(--bricks-color-116ea0)}.menu-footer .bricks-nav-menu {flex-direction: column}.icon-footer {background-color: var(--bricks-color-b2be49); padding-top: 8px; padding-right: 8px; padding-bottom: 8px; padding-left: 8px; border-radius: 10px; justify-content: center; align-items: center; transition: 0.2s ease; width: 40px; height: 40px}.icon-footer:hover {background-color: #0050c7}
+/*# sourceURL=bricks-frontend-inline-inline-css */
+</style>
+<script src="https://ehrenhancify.com/wp-includes/js/jquery/jquery.min.js?ver=3.7.1" id="jquery-core-js"></script>
+<script src="https://ehrenhancify.com/wp-content/plugins/adapta-rgpd/assets/js/cookies-eu-banner.js?ver=1.3.9" id="argpd-cookies-eu-banner-js"></script>
+<script id="bricks-dl-mode-js-after">
+(function() {
+				let savedTheme = localStorage.getItem("brx_mode");
+				let defaultMode = "light";
+				let currentTheme = savedTheme || defaultMode;
+
+				if (currentTheme === "auto") {
+					let prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)").matches;
+						document.documentElement.dataset.brxTheme = prefersDarkScheme ? "dark" : "light";
+				} else {
+					document.documentElement.dataset.brxTheme = currentTheme;
+				}
+		})();
+//# sourceURL=bricks-dl-mode-js-after
+</script>
+<link rel="https://api.w.org/" href="https://ehrenhancify.com/wp-json/" /><link rel="alternate" title="JSON" type="application/json" href="https://ehrenhancify.com/wp-json/wp/v2/posts/1485" /><style>
+/* General Styles for Specific Posts */
+.post-3403, .post-3404, .post-3405, .post-3406 {
+  padding: 200px 100px;
+}
+.post-3403 h2, .post-3404 h2, .post-3405 h2, .post-3406 h2 {
+  font-size: 28px;
+  font-weight: 600;
+  padding: 20px 0;
+}
+/* Responsive Styles */
+@media (max-width: 767px) {
+  .post-3403, .post-3404, .post-3405, .post-3406 {
+    padding: 100px 20px;
+  }
+  #cookies-eu-banner {
+    padding: 10px !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    width: 100% !important;
+    border-radius: 12px 12px 0 0 !important;
+    font-size: 13px !important;
+  }
+}
+/* Cookie Banner Styles */
+#cookies-eu-banner {
+  background-color: #1a1a1a;
+  color: #fff;
+  padding: 20px;
+  right: 20px;
+  bottom: 20px;
+  width: 500px;
+  border-radius: 20px;
+  border: none;
+  opacity: 0;
+  animation: fadeInUp 1s forwards;
+  animation-delay: 2000ms;
+}
+#cookies-eu-label {
+  font-size: 13px;
+  line-height: 18px;
+}
+#cookies-eu-label a {
+  color: var(--bricks-color-116ea0);
+  font-weight: 500;
+}
+#cookies-eu-label a:hover {
+  color: black;
+}
+#cookies-eu-banner #cookies-eu-accept {
+  background-color: #0080ff;
+  color: white;
+  border: none;
+  font-size: 14px;
+  font-weight: 400;
+  text-transform: capitalize;
+  letter-spacing: 0;
+  padding: 12px 16px;
+  margin: 10px;
+  cursor: pointer;
+  border-radius: 100px;
+}
+#cookies-eu-banner #cookies-eu-reject {
+  background-color: transparent;
+  color: #fff;
+  border: solid 1px #0080ff;
+  font-size: 14px;
+  font-weight: 400;
+  text-transform: capitalize;
+  letter-spacing: 0;
+  padding: 12px 16px;
+  margin: 10px;
+  cursor: pointer;
+  border-radius: 100px;
+}
+#cookies-eu-buttons {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+}
+#cookies-eu-settings {
+  background-color: transparent;
+  font-size: 14px;
+  font-weight: 400;
+  color: #fff;
+  cursor: pointer;
+  padding: 6px;
+  border: none;
+  letter-spacing: 0;
+  text-transform: capitalize;
+  border-radius: 100px;
+}
+#cookies-eu-settings:hover {
+  color: #0080ff;
+}
+#cookies-eu-banner #cookies-eu-accept:hover {
+  background-color: #fff;
+  color: #000;
+}
+#cookies-eu-banner #cookies-eu-reject:hover {
+  background-color: #000;
+  color: #fff;
+  border: solid 1px #000;
+}
+/* Animation for Cookie Banner */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+</style>
+
+<link rel='stylesheet' id='153-css' href='//ehrenhancify.com/wp-content/uploads/code-snippets/153.css?v=63' media='all' />
+			<!-- DO NOT COPY THIS SNIPPET! Start of Page Analytics Tracking for HubSpot WordPress plugin v11.3.45-->
+			<script class="hsq-set-content-id" data-content-id="blog-post">
+				var _hsq = _hsq || [];
+				_hsq.push(["setContentType", "blog-post"]);
+			</script>
+			<!-- DO NOT COPY THIS SNIPPET! End of Page Analytics Tracking for HubSpot WordPress plugin -->
+			<link rel="icon" href="https://ehrenhancify.com/wp-content/uploads/2024/11/enhancify-favicon-150x150.png" sizes="32x32" />
+<link rel="icon" href="https://ehrenhancify.com/wp-content/uploads/2024/11/enhancify-favicon-300x300.png" sizes="192x192" />
+<link rel="apple-touch-icon" href="https://ehrenhancify.com/wp-content/uploads/2024/11/enhancify-favicon-300x300.png" />
+<meta name="msapplication-TileImage" content="https://ehrenhancify.com/wp-content/uploads/2024/11/enhancify-favicon-300x300.png" />
+<link rel='stylesheet' id='wp-block-library-css' href='https://ehrenhancify.com/wp-includes/css/dist/block-library/style.min.css?ver=6.9.4' media='all' />
+<style id='wp-block-library-inline-css'>
+:where(figure) { margin: 0; }
+/*wp_block_styles_on_demand_placeholder:69e11e91bdc17*/
+/*# sourceURL=wp-block-library-inline-css */
+</style>
+
+</head>
+
+<body  class="wp-singular post-template-default single single-post postid-1485 single-format-standard wp-theme-bricks brx-body bricks-is-frontend wp-embed-responsive jet-engine-optimized-dom"><header id="brx-header" class="brx-sticky on-scroll"><section class="brxe-section sec-nav"><div id="brxe-fmmfmg" class="brxe-container"><div class="brxe-block fit-content"><a class="brxe-logo logo" href="https://ehrenhancify.com"><img src="https://ehrenhancify.com/wp-content/uploads/2024/11/enhancify-logo.svg" class="bricks-site-logo css-filter" alt="EHR Enhancify" data-bricks-logo="https://ehrenhancify.com/wp-content/uploads/2024/11/enhancify-logo.svg" loading="eager" decoding="async" /></a></div><div id="brxe-elgeyk" class="brxe-block gap-20 fit-content"><a href="https://ehrenhancify.com/access/" class="brxe-block btn-dash"><svg class="brxe-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="#000000" fill="none">
+    <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M7.5 17C9.8317 14.5578 14.1432 14.4428 16.5 17M14.4951 9.5C14.4951 10.8807 13.3742 12 11.9915 12C10.6089 12 9.48797 10.8807 9.48797 9.5C9.48797 8.11929 10.6089 7 11.9915 7C13.3742 7 14.4951 8.11929 14.4951 9.5Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+</svg></a><div id="brxe-iihpkp" data-script-id="iihpkp" class="brxe-nav-menu nav"><nav class="bricks-nav-menu-wrapper tablet_portrait"><ul id="menu-menu-navigation" class="bricks-nav-menu"><li id="menu-item-3797" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-3797 bricks-menu-item"><div class="brx-submenu-toggle icon-right"><a href="#" data-brx-anchor="true">Services</a><button aria-expanded="false" aria-label="Services Sub menu"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 12" fill="none" class="menu-item-icon"><path d="M1.50002 4L6.00002 8L10.5 4" stroke-width="1.5" stroke="currentcolor"></path></svg></button></div>
+<ul class="sub-menu">
+	<li id="menu-item-3803" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3803 bricks-menu-item"><a href="https://ehrenhancify.com/services/">How We Can Help</a></li>
+	<li id="menu-item-3799" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3799 bricks-menu-item"><a href="https://ehrenhancify.com/custom-mpage/">Custom MPage</a></li>
+	<li id="menu-item-3871" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3871 bricks-menu-item"><a href="https://ehrenhancify.com/ehr-implementation-checklist-form/">Implementation checklist</a></li>
+	<li id="menu-item-3872" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3872 bricks-menu-item"><a href="https://ehrenhancify.com/customization-checklist/">Customization checklist</a></li>
+	<li id="menu-item-3906" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3906 bricks-menu-item"><a href="https://ehrenhancify.com/configuration-hub-dashboard/">Configuration Hub</a></li>
+</ul>
+</li>
+<li id="menu-item-3798" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-3798 bricks-menu-item"><div class="brx-submenu-toggle icon-right"><a href="#" data-brx-anchor="true">Company</a><button aria-expanded="false" aria-label="Company Sub menu"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 12" fill="none" class="menu-item-icon"><path d="M1.50002 4L6.00002 8L10.5 4" stroke-width="1.5" stroke="currentcolor"></path></svg></button></div>
+<ul class="sub-menu">
+	<li id="menu-item-3802" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3802 bricks-menu-item"><a href="https://ehrenhancify.com/about/">About Us</a></li>
+	<li id="menu-item-3804" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3804 bricks-menu-item"><a href="https://ehrenhancify.com/blog/">Information Hub</a></li>
+	<li id="menu-item-3801" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3801 bricks-menu-item"><a href="https://ehrenhancify.com/work-with-us/">Work With Us</a></li>
+</ul>
+</li>
+<li id="menu-item-3808" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-3808 bricks-menu-item"><div class="brx-submenu-toggle icon-right"><a href="#" data-brx-anchor="true">Support</a><button aria-expanded="false" aria-label="Support Sub menu"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 12" fill="none" class="menu-item-icon"><path d="M1.50002 4L6.00002 8L10.5 4" stroke-width="1.5" stroke="currentcolor"></path></svg></button></div>
+<ul class="sub-menu">
+	<li id="menu-item-3800" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3800 bricks-menu-item"><a href="https://ehrenhancify.com/contact-us/">Contact Us</a></li>
+</ul>
+</li>
+</ul></nav>			<button class="bricks-mobile-menu-toggle" aria-haspopup="true" aria-label="Open mobile menu" aria-expanded="false">
+				<span class="bar-top"></span>
+				<span class="bar-center"></span>
+				<span class="bar-bottom"></span>
+			</button>
+			<nav class="bricks-mobile-menu-wrapper right"><ul id="menu-menu-navigation-1" class="bricks-mobile-menu"><li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-3797 bricks-menu-item"><div class="brx-submenu-toggle icon-right"><a href="#" data-brx-anchor="true">Services</a><button aria-expanded="false" aria-label="Services Sub menu"><svg aria-hidden="true" class="stroke open" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="#000000" fill="none"><path d="M5.99977 9.00005L11.9998 15L17.9998 9" stroke="#000000" stroke-width="1.5" stroke-miterlimit="16"></path></svg></button></div>
+<ul class="sub-menu">
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3803 bricks-menu-item"><a href="https://ehrenhancify.com/services/">How We Can Help</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3799 bricks-menu-item"><a href="https://ehrenhancify.com/custom-mpage/">Custom MPage</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3871 bricks-menu-item"><a href="https://ehrenhancify.com/ehr-implementation-checklist-form/">Implementation checklist</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3872 bricks-menu-item"><a href="https://ehrenhancify.com/customization-checklist/">Customization checklist</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3906 bricks-menu-item"><a href="https://ehrenhancify.com/configuration-hub-dashboard/">Configuration Hub</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-3798 bricks-menu-item"><div class="brx-submenu-toggle icon-right"><a href="#" data-brx-anchor="true">Company</a><button aria-expanded="false" aria-label="Company Sub menu"><svg aria-hidden="true" class="stroke open" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="#000000" fill="none"><path d="M5.99977 9.00005L11.9998 15L17.9998 9" stroke="#000000" stroke-width="1.5" stroke-miterlimit="16"></path></svg></button></div>
+<ul class="sub-menu">
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3802 bricks-menu-item"><a href="https://ehrenhancify.com/about/">About Us</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3804 bricks-menu-item"><a href="https://ehrenhancify.com/blog/">Information Hub</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3801 bricks-menu-item"><a href="https://ehrenhancify.com/work-with-us/">Work With Us</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-3808 bricks-menu-item"><div class="brx-submenu-toggle icon-right"><a href="#" data-brx-anchor="true">Support</a><button aria-expanded="false" aria-label="Support Sub menu"><svg aria-hidden="true" class="stroke open" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="#000000" fill="none"><path d="M5.99977 9.00005L11.9998 15L17.9998 9" stroke="#000000" stroke-width="1.5" stroke-miterlimit="16"></path></svg></button></div>
+<ul class="sub-menu">
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3800 bricks-menu-item"><a href="https://ehrenhancify.com/contact-us/">Contact Us</a></li>
+</ul>
+</li>
+</ul></nav><div class="bricks-mobile-menu-overlay"></div></div><a id="brxe-vrgimg" class="brxe-button bricks-button sm bricks-background-primary" href="https://ehrenhancify.com/contact-us/">Contact Us</a></div></div></section></header><main id="brx-content"><section class="brxe-section gap-40 pad-top-entrada"><progress id="brxe-rvsyov" data-script-id="rvsyov" class="brxe-post-reading-progress-bar" data-pos="top" value="0" max="100"></progress><div class="brxe-container gap-40 flex-c-a"><div class="brxe-block gap-20 flex-c-a max-w"><div id="brxe-ec172d" class="brxe-post-meta tx-semibold tx-14 fade-0 etiqueta-blog tx-w post-meta"><span class="item">Etienne Boshoff</span><span class="separator">|</span><span class="item">December 14, 2023</span><span class="separator">|</span><span class="item"><a href="https://ehrenhancify.com/category/customization/">Customization</a>, <a href="https://ehrenhancify.com/category/ehr-insight/">EHR insight</a></span></div><h1 id="brxe-ed665d" class="brxe-post-title hero-2 tx-c fade-200">Everything you need to know about Oracle Health MPages</h1></div><div class="brxe-block max-w-1440 fade-400"><img width="2240" height="1260" src="https://ehrenhancify.com/wp-content/uploads/2023/12/Oracle-Health-MPages.png" class="brxe-image rounded-16 css-filter size-full" alt="Oracle Health MPages" id="brxe-ddadab" decoding="async" fetchpriority="high" srcset="https://ehrenhancify.com/wp-content/uploads/2023/12/Oracle-Health-MPages.png 2240w, https://ehrenhancify.com/wp-content/uploads/2023/12/Oracle-Health-MPages-300x169.png 300w, https://ehrenhancify.com/wp-content/uploads/2023/12/Oracle-Health-MPages-1024x576.png 1024w, https://ehrenhancify.com/wp-content/uploads/2023/12/Oracle-Health-MPages-768x432.png 768w, https://ehrenhancify.com/wp-content/uploads/2023/12/Oracle-Health-MPages-1536x864.png 1536w, https://ehrenhancify.com/wp-content/uploads/2023/12/Oracle-Health-MPages-2048x1152.png 2048w" sizes="(max-width: 2240px) 100vw, 2240px" loading="eager" /></div></div><div id="brxe-sdwqvy" class="brxe-container gap-40 flex-c-a flex-row"><div class="brxe-block relative fit-content"><div id="brxe-aqlxns" class="brxe-block box-slide reveal rounded-22 gap-10 sticky-80"><h6 class="brxe-heading tx-18 tx-bold">Table of contents</h6><nav id="brxe-yltqvv" data-script-id="yltqvv" class="brxe-post-toc table-content" data-heading-selectors="h2" aria-label="Table of contents"></nav></div></div><div class="brxe-block"><div id="brxe-fqqywp" class="brxe-post-content reveal"><p>The healthcare industry has seen some impressive technological advancements in recent decades. And you know what? Cerner Corporation, a provider of healthcare information technology solutions (and now Oracle Health), has played a big role in driving this progress. It has developed a top-notch <a href="https://ehrenhancify.com/2023/11/09/cerner-emr-everything-you-need-to-know/">EHR</a> system called Millennium.</p>
+<p>One of the most impressive features of Millennium is its MPages. In this article, we&#8217;ll explore what they are, dig into their purpose, and see how they&#8217;re making a real impact on healthcare. So, let&#8217;s get started.</p>
+<h2>What are MPages in Oracle Health?</h2>
+<p>MPages in Cerner (or Oracle Health) are specialized components that give you a comprehensive and up-to-the-minute view of patient information from different parts of the Oracle Health Millennium database. With MPages, you can create personalized views in PowerChart that wouldn&#8217;t be possible otherwise.</p>
+<p>These are really important because they address the unique challenges that Oracle Health customers face: challenges which can&#8217;t be solved with a one-size-fits-all solution.</p>
+<p>Standard MPages show clinical information by combining components from a standard library. But you can also create custom MPages for individual or multiple patient views. This gives you a lot of flexibility to configure things the way you want.</p>
+<p>We&#8217;ll delve into this later.  Can’t wait? Trial our <a href="https://ehrenhancify.com/custommpage/">custom MPage Diabetes Predictor</a>.</p>
+<h2>What are MPages’ purpose?</h2>
+<p>MPages improve the workflow and efficiency of healthcare professionals, allowing them to focus more on patient care.</p>
+<p>They can serve various purposes and some examples of commonly used MPages include:</p>
+<ul>
+<li>Summaries</li>
+</ul>
+<p>Provide a comprehensive overview of a patient&#8217;s medical history, allowing clinicians to quickly review all relevant information.</p>
+<ul>
+<li>Orders</li>
+</ul>
+<p>Simplify the ordering process for tests, medications, and other interventions.</p>
+<ul>
+<li>Results</li>
+</ul>
+<p>Display the outcomes of lab tests, imaging studies, and other diagnostic procedures.</p>
+<ul>
+<li>Workflows</li>
+</ul>
+<p>Streamline clinical workflows and automate repetitive tasks, such as documentation and coordination of care.</p>
+<p>The beauty of MPages is that these elements can be combined into different views, and the clinician is also guided through a process of viewing and charting based on the layout of the components.</p>
+<p>Users can create as many as MPages as they need by combining components. So one can’t really put a number on the number of MPages which exist&#8230;the possibilities are endless.</p>
+<h2>What are the benefits of using MPages?</h2>
+<p>Several advantages come with using Oracle Health MPages:</p>
+<h3>Contextualization</h3>
+<p>MPages are a revolutionary tool that greatly simplify the clinician&#8217;s workflow. By consolidating relevant information into a single view, clinicians can quickly access the information they need without the hassle of navigating through multiple components or clicking around aimlessly. This streamlined approach saves valuable time and ensures that clinicians have the necessary context at their fingertips to make informed decisions.</p>
+<h3>Efficiency</h3>
+<p>Because MPages are designed to streamline workflows, healthcare professionals can accomplish tasks more efficiently than before. This increased productivity can lead to better patient outcomes and potentially save costs within healthcare organizations.</p>
+<h3>Information Consolidation</h3>
+<p>With its powerful functionality and seamless integration with various data sources within the Oracle Health Millennium system, MPages offer a robust solution for consolidating and presenting comprehensive information. By efficiently pulling data from multiple sources, MPages provide users with a holistic view, enabling them to make informed decisions and take necessary actions with ease.</p>
+<h3>Integration and collaboration</h3>
+<p>By providing healthcare professionals with easy access to reliable and up-to-date patient information, MPages can enhance communication among care teams, improving coordination and reducing the risk of errors.</p>
+<p>MPages seamlessly integrate with the Oracle Health Millennium platform, enabling the smooth exchange and consolidation of critical information from various sources within the healthcare system. This integration ensures efficient data sharing between different departments, such as clinical, administrative, and financial, resulting in improved coordination, streamlined workflows, and enhanced patient care. With MPages, healthcare providers can access comprehensive and up-to-date information, enabling them to make well-informed decisions and deliver high-quality care.</p>
+<h2>What are the problems with using MPages?</h2>
+<p>There are a few disadvantages to consider:</p>
+<h3>Cost</h3>
+<p>Implementing and maintaining a complex system like Oracle Health Millennium, including its MPages, can be expensive for healthcare organizations without proper <a href="https://ehrenhancify.com/services/">EHR support</a>. The long-term value and return on investment depend on how effectively the system integrates into existing workflows and its ability to improve overall efficiency and patient outcomes.</p>
+<p>For more information on how you can source cost-effective support for this, <a href="https://ehrenhancify.com/contact-us/">contact EHR Enhancify</a>. We’re an Oracle Health EHR specialist and can work as an extension of your IT team either on a retainer or on a project by project basis.</p>
+<h3>Learning curve</h3>
+<p>As with any new technology, there is a learning curve associated with adopting MPages. They are also not so easy to set up or maintain and healthcare professionals may need time and training to become proficient with the system, especially given the wide range of available MPages and customization options. This learning curve could potentially result in a temporary decrease in productivity and efficiency before users become comfortable with the system. Read more about our <a href="https://ehrenhancify.com/services/">onboarding support</a>.</p>
+<h3>Compatibility</h3>
+<p>While MPages are designed specifically for the Oracle Health Millennium platform, compatibility issues may still arise when integrating with third-party systems or data sources. In such cases, additional customization or development may be required to ensure proper integration and functionality.</p>
+<h3>Maintenance</h3>
+<p>As with any complex system, regular maintenance and updates are required to ensure optimal functionality and performance. This can be a significant burden for healthcare organizations, who may need to dedicate resources specifically for maintaining MPages.</p>
+<p>Learn how an <a href="https://ehrenhancify.com/2023/11/14/the-hidden-value-of-hiring-an-emr-consultant/">EHR consultant</a> can maintain your MPages as part of a wider Oracle Health EHR care package.</p>
+<h2>How to use MPages</h2>
+<p>To get started with MPages, healthcare professionals first select an MPage that aligns with their specific tasks. Once chosen, users can easily review and make any necessary modifications to patient information.</p>
+<p><img decoding="async" src="https://ehrenhancify.com/wp-content/uploads/2023/10/Screenshot-Custom-MPage.png" sizes="(max-width: 796px) 100vw, 796px" srcset="https://ehrenhancify.com/wp-content/uploads/2023/10/Screenshot-Custom-MPage.png 796w, https://ehrenhancify.com/wp-content/uploads/2023/10/Screenshot-Custom-MPage-200x144.png 200w" alt="" width="796" height="575" /></p>
+<p>The great thing about MPages is that they are highly customizable, allowing healthcare organizations to pick and choose which ones to implement and tailor them to fit their workflows. They can also create their own MPages using the MPage editor (Bedrock), which offers capabilities for easy customization.</p>
+<h2>Creating custom MPages</h2>
+<p>Developing a custom MPage can be really beneficial for organizations with unique workflows or when they need extra information beyond the standard components.</p>
+<p>To create a custom MPage or component, you&#8217;ll need to have a good grasp of HTML, JavaScript, and CCL. But don&#8217;t worry, with the help of experienced <a href="https://ehrenhancify.com/custommpage/">MPage developers</a>, healthcare organizations can design user-friendly custom MPages that boost efficiency and improve patient care quality.</p>
+<p>Let’s look at how a custom MPage might be used.</p>
+<p>A common reason for having a custom MPage is to display a patient list with details that were gathered through a very customized workflow.</p>
+<p>For instance, the Rehabilitation department may require a patient list that presents their appointments, allowing physicians to effortlessly identify patients nearing the end of their treatment who require an evaluation visit to be scheduled. The list can include relevant data to provide a clear overview of each patient&#8217;s situation. Moreover, it can be utilized to identify patients who do not consistently attend their appointments. By having this readily accessible information, clinicians can effectively manage their workload and prioritize patient care.</p>
+<p>So, custom MPages enable healthcare professionals to design tailored views that align with their specific needs and workflows. This flexibility makes MPages a powerful tool for improving efficiency and enhancing patient care.</p>
+<p>Want to see a customized MPage in action? We’ve created a Diabetes predictor which you can try <a href="https://ehrenhancify.com/custommpage/">here</a>.</p>
+<h2>Conclusion</h2>
+<p>MPages are an integral part of Oracle Health Millennium, providing customizable solutions to streamline clinical workflows and improve patient outcomes. With its ability to display relevant information in a single view, MPages can help healthcare professionals save time and make more informed decisions.</p>
+<p>While there are some challenges associated with implementing and using MPages, the benefits far outweigh any potential drawbacks. Plus the challenges can be overcome by hiring an <a href="https://ehrenhancify.com/">EHR consultant</a>!</p>
+<p>As healthcare organizations continue to prioritize efficiency and quality of care, MPages will play a crucial role in driving innovation and improving patient outcomes. So, it is no wonder that MPages are becoming increasingly popular in the healthcare industry, as they offer a powerful solution for managing and organizing information within complex clinical environments. With their ability to enhance collaboration and adaptability, we can expect to see continued advancements in MPages technology in the future.</p>
+</div><a class="brxe-button bricks-button md bricks-background-primary" href="https://ehrenhancify.com/contact-us/">get started with EHR Enhancify</a></div></div></section><section class="brxe-section hidden pad-t-0"><div class="brxe-container flex-c gap-40 reveal-200"><h2 id="brxe-phsnga" class="brxe-heading tx-c tx-h3 bricks-color-primary">Related Post</h2><div id="brxe-wqzklf" class="brxe-block brx-grid"><div class="brxe-abgagy brxe-block" data-brx-loop-start="abgagy"><a href="https://ehrenhancify.com/optimize-your-clinical-efficiency/" class="brxe-sgqjxa brxe-block post-blog relative"><div class="brxe-honsuy brxe-block tx-blog"><div class="brxe-xgfalx brxe-text-basic date mar-b-10">May 28, 2025</div><h4 class="brxe-qpwkaa brxe-post-title tx-h6 tx-w">Optimize your clinical efficiency with workflow assessments: the key to smarter EHR use</h4><div class="brxe-xpvxwz brxe-text-basic tx-w">Discover how workflow assessments can boost...</div></div><div class="brxe-omedpd brxe-block div-gradient"></div><figure class="brxe-xmlnst brxe-image img-featured tag"><img width="640" height="360" src="https://ehrenhancify.com/wp-content/uploads/2025/05/optimise-workflow-efficiency.webp" class="css-filter size-full" alt="Optimise workflow efficiency" decoding="async" srcset="https://ehrenhancify.com/wp-content/uploads/2025/05/optimise-workflow-efficiency.webp 640w, https://ehrenhancify.com/wp-content/uploads/2025/05/optimise-workflow-efficiency-300x169.webp 300w" sizes="(max-width: 640px) 100vw, 640px" loading="eager" /></figure></a></div><div class="brxe-abgagy brxe-block"><a href="https://ehrenhancify.com/clinician-ehr-training-and-onboarding/" class="brxe-sgqjxa brxe-block post-blog relative"><div class="brxe-honsuy brxe-block tx-blog"><div class="brxe-xgfalx brxe-text-basic date mar-b-10">May 22, 2025</div><h4 class="brxe-qpwkaa brxe-post-title tx-h6 tx-w">Empowering clinicians with effective EHR training and onboarding strategies</h4><div class="brxe-xpvxwz brxe-text-basic tx-w">Learn how to boost clinician confidence...</div></div><div class="brxe-omedpd brxe-block div-gradient"></div><figure class="brxe-xmlnst brxe-image img-featured tag"><img width="640" height="360" src="https://ehrenhancify.com/wp-content/uploads/2025/05/clinician-ehr-training-and-onboarding.webp" class="css-filter size-full" alt="Clinician ehr training and onboarding" decoding="async" srcset="https://ehrenhancify.com/wp-content/uploads/2025/05/clinician-ehr-training-and-onboarding.webp 640w, https://ehrenhancify.com/wp-content/uploads/2025/05/clinician-ehr-training-and-onboarding-300x169.webp 300w" sizes="(max-width: 640px) 100vw, 640px" loading="eager" /></figure></a></div><div class="brxe-abgagy brxe-block"><a href="https://ehrenhancify.com/ehr-system-myths/" class="brxe-sgqjxa brxe-block post-blog relative"><div class="brxe-honsuy brxe-block tx-blog"><div class="brxe-xgfalx brxe-text-basic date mar-b-10">May 14, 2025</div><h4 class="brxe-qpwkaa brxe-post-title tx-h6 tx-w">5 myths about EHR systems that could be hurting your practice</h4><div class="brxe-xpvxwz brxe-text-basic tx-w">Uncover the truth about EHR systems....</div></div><div class="brxe-omedpd brxe-block div-gradient"></div><figure class="brxe-xmlnst brxe-image img-featured tag"><img width="660" height="371" src="https://ehrenhancify.com/wp-content/uploads/2025/05/ehr-system-myths.webp" class="css-filter size-full" alt="Ehr system myths" decoding="async" srcset="https://ehrenhancify.com/wp-content/uploads/2025/05/ehr-system-myths.webp 660w, https://ehrenhancify.com/wp-content/uploads/2025/05/ehr-system-myths-300x169.webp 300w" sizes="(max-width: 660px) 100vw, 660px" loading="eager" /></figure></a></div><div class="brx-query-trail" data-query-element-id="abgagy" data-query-vars="{&quot;post_type&quot;:[&quot;post&quot;],&quot;posts_per_page&quot;:3,&quot;orderby&quot;:&quot;date&quot;,&quot;post_status&quot;:&quot;publish&quot;,&quot;paged&quot;:1,&quot;post__not_in&quot;:[1485],&quot;tax_query&quot;:[{&quot;taxonomy&quot;:&quot;category&quot;,&quot;field&quot;:&quot;name&quot;,&quot;terms&quot;:[&quot;Customization&quot;,&quot;EHR insight&quot;]}]}" data-page="1" data-max-pages="13" data-start="1" data-end="3"></div></div></div></section></main><footer id="brx-footer"><section id="brxe-vllgmt" class="brxe-section hidden"><div id="brxe-azsanw" class="brxe-container gap-20"><h3 id="brxe-adlqok" class="brxe-heading tx-14 tx-c">DIGITAL KIT PROGRAM FUNDED BY THE NEXT GENERATION FUNDS OF THE RECOVERY AND RESILENCE FACILITY</h3><div id="brxe-xtmpvu" class="brxe-block brx-grid"><img width="1024" height="250" src="https://ehrenhancify.com/wp-content/uploads/2024/11/Recurso-2@4x-1024x250.webp" class="brxe-image css-filter size-large" alt="Recurso 2@4x" decoding="async" srcset="https://ehrenhancify.com/wp-content/uploads/2024/11/Recurso-2@4x-1024x250.webp 1024w, https://ehrenhancify.com/wp-content/uploads/2024/11/Recurso-2@4x-300x73.webp 300w, https://ehrenhancify.com/wp-content/uploads/2024/11/Recurso-2@4x-768x188.webp 768w, https://ehrenhancify.com/wp-content/uploads/2024/11/Recurso-2@4x-1536x375.webp 1536w, https://ehrenhancify.com/wp-content/uploads/2024/11/Recurso-2@4x.webp 1871w" sizes="(max-width: 1024px) 100vw, 1024px" loading="eager" /><img width="1024" height="250" src="https://ehrenhancify.com/wp-content/uploads/2024/11/Recurso-5@4x-1024x250.webp" class="brxe-image css-filter size-large" alt="Recurso 5@4x" decoding="async" srcset="https://ehrenhancify.com/wp-content/uploads/2024/11/Recurso-5@4x-1024x250.webp 1024w, https://ehrenhancify.com/wp-content/uploads/2024/11/Recurso-5@4x-300x73.webp 300w, https://ehrenhancify.com/wp-content/uploads/2024/11/Recurso-5@4x-768x188.webp 768w, https://ehrenhancify.com/wp-content/uploads/2024/11/Recurso-5@4x-1536x375.webp 1536w, https://ehrenhancify.com/wp-content/uploads/2024/11/Recurso-5@4x.webp 1871w" sizes="(max-width: 1024px) 100vw, 1024px" loading="eager" /><img width="1024" height="250" src="https://ehrenhancify.com/wp-content/uploads/2024/11/Recurso-4@4x-1024x250.webp" class="brxe-image css-filter size-large" alt="Recurso 4@4x" decoding="async" srcset="https://ehrenhancify.com/wp-content/uploads/2024/11/Recurso-4@4x-1024x250.webp 1024w, https://ehrenhancify.com/wp-content/uploads/2024/11/Recurso-4@4x-300x73.webp 300w, https://ehrenhancify.com/wp-content/uploads/2024/11/Recurso-4@4x-768x188.webp 768w, https://ehrenhancify.com/wp-content/uploads/2024/11/Recurso-4@4x-1536x375.webp 1536w, https://ehrenhancify.com/wp-content/uploads/2024/11/Recurso-4@4x.webp 1871w" sizes="(max-width: 1024px) 100vw, 1024px" loading="eager" /><img width="1024" height="251" src="https://ehrenhancify.com/wp-content/uploads/2024/11/Recurso-3@4x-1024x251.webp" class="brxe-image css-filter size-large" alt="Recurso 3@4x" decoding="async" srcset="https://ehrenhancify.com/wp-content/uploads/2024/11/Recurso-3@4x-1024x251.webp 1024w, https://ehrenhancify.com/wp-content/uploads/2024/11/Recurso-3@4x-300x73.webp 300w, https://ehrenhancify.com/wp-content/uploads/2024/11/Recurso-3@4x-768x188.webp 768w, https://ehrenhancify.com/wp-content/uploads/2024/11/Recurso-3@4x-1536x376.webp 1536w, https://ehrenhancify.com/wp-content/uploads/2024/11/Recurso-3@4x.webp 1871w" sizes="(max-width: 1024px) 100vw, 1024px" loading="eager" /><img width="1024" height="251" src="https://ehrenhancify.com/wp-content/uploads/2024/11/Recurso-1@4x-1024x251.webp" class="brxe-image css-filter size-large" alt="Recurso 1@4x" decoding="async" srcset="https://ehrenhancify.com/wp-content/uploads/2024/11/Recurso-1@4x-1024x251.webp 1024w, https://ehrenhancify.com/wp-content/uploads/2024/11/Recurso-1@4x-300x73.webp 300w, https://ehrenhancify.com/wp-content/uploads/2024/11/Recurso-1@4x-768x188.webp 768w, https://ehrenhancify.com/wp-content/uploads/2024/11/Recurso-1@4x-1536x376.webp 1536w, https://ehrenhancify.com/wp-content/uploads/2024/11/Recurso-1@4x.webp 1871w" sizes="(max-width: 1024px) 100vw, 1024px" loading="eager" /></div></div></section><section class="brxe-section hidden bg-dark gap-40"><div class="brxe-container grid-4-footer"><div class="brxe-block gap-20"><img src="https://ehrenhancify.com/wp-content/uploads/2024/11/Group-3.svg" class="brxe-image css-filter size-full" alt="Group" id="brxe-xylowy" decoding="async" loading="eager" /><div class="brxe-text-basic tx-w tx-14">Technology created for every healthcare provider, but re- engineered for you.</div></div><div class="brxe-block gap-10"><h3 class="brxe-heading tx-bold tx-l tx-18">Navigation</h3><div id="brxe-jmtmwt" data-script-id="jmtmwt" class="brxe-nav-menu menu-footer"><nav class="bricks-nav-menu-wrapper never"><ul id="menu-menu" class="bricks-nav-menu"><li id="menu-item-3270" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3270 bricks-menu-item"><a href="https://ehrenhancify.com/services/">How We Can Help</a></li>
+<li id="menu-item-3269" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3269 bricks-menu-item"><a href="https://ehrenhancify.com/about/">About Us</a></li>
+<li id="menu-item-3258" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3258 bricks-menu-item"><a href="https://ehrenhancify.com/blog/">Information Hub</a></li>
+<li id="menu-item-3473" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3473 bricks-menu-item"><a href="https://ehrenhancify.com/custom-mpage/">Custom MPage</a></li>
+<li id="menu-item-3268" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3268 bricks-menu-item"><a href="https://ehrenhancify.com/work-with-us/">Work With Us</a></li>
+<li id="menu-item-3267" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3267 bricks-menu-item"><a href="https://ehrenhancify.com/contact-us/">Contact Us</a></li>
+</ul></nav></div></div><div class="brxe-block gap-10"><h3 class="brxe-heading tx-bold tx-l tx-18">Legal</h3><div id="brxe-klboaz" data-script-id="klboaz" class="brxe-nav-menu menu-footer"><nav class="bricks-nav-menu-wrapper never"><ul id="menu-legal" class="bricks-nav-menu"><li id="menu-item-3408" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3408 bricks-menu-item"><a href="https://ehrenhancify.com/customize-cookies/">Customize Cookies</a></li>
+<li id="menu-item-3409" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3409 bricks-menu-item"><a href="https://ehrenhancify.com/cookie-policy/">Cookie Policy</a></li>
+<li id="menu-item-3410" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3410 bricks-menu-item"><a href="https://ehrenhancify.com/privacy-policy/">Privacy Policy</a></li>
+<li id="menu-item-3411" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3411 bricks-menu-item"><a href="https://ehrenhancify.com/legal-notice/">Legal Notice</a></li>
+</ul></nav></div></div><div class="brxe-block gap-10"><h3 class="brxe-heading tx-bold tx-l tx-18">Follow us</h3><div class="brxe-block gap-10 flex-row"><a href="https://api.whatsapp.com/send/?phone=34673779508&#038;text&#038;type=phone_number&#038;app_absent=0" target="_blank" class="brxe-block icon-footer"><svg class="brxe-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="#000000" fill="none">
+    <path d="M6.5 9.5H2V22H6.5V9.5Z" fill="currentColor" />
+    <path d="M6.5 4.25C6.5 5.49264 5.49264 6.5 4.25 6.5C3.00736 6.5 2 5.49264 2 4.25C2 3.00736 3.00736 2 4.25 2C5.49264 2 6.5 3.00736 6.5 4.25Z" fill="currentColor" />
+    <path d="M14.0001 9.5H9.5V22H14.0001V15.7502C14.0001 14.7837 14.7835 14.0002 15.75 14.0002C16.7165 14.0002 17.5 14.7837 17.5 15.7502V22H21.9987L22.0001 14.0002C22.0001 11.515 19.6364 9.50024 17.2968 9.50024C15.9649 9.50024 14.7767 10.1531 14.0001 11.174V9.5Z" fill="currentColor" />
+</svg></a></div></div></div></section><section id="brxe-alsgox" class="brxe-section hidden"><div id="brxe-chcxpx" class="brxe-container"><div id="brxe-wbukvr" class="brxe-block"><div id="brxe-buvvgm" data-script-id="buvvgm" class="brxe-code tx-14 tx-l tx-bold">2026</div><h3 class="brxe-heading tx-14 tx-l">© EHR Enhancify. All rights reserved.</h3></div><div id="brxe-rwhcol" class="brxe-block"><a class="brxe-text-link tx-14 tx-hover tx-l tx-bold" href="https://ancoradual.com" target="_blank">Desarrollado por Ancora Dual</a></div></div></section></footer><script type="speculationrules">
+{"prefetch":[{"source":"document","where":{"and":[{"href_matches":"/*"},{"not":{"href_matches":["/wp-*.php","/wp-admin/*","/wp-content/uploads/*","/wp-content/*","/wp-content/plugins/*","/wp-content/themes/bricks/*","/*\\?(.+)"]}},{"not":{"selector_matches":"a[rel~=\"nofollow\"]"}},{"not":{"selector_matches":".no-prefetch, .no-prefetch a"}}]},"eagerness":"conservative"}]}
+</script>
+        <script id="independent-analytics-script"   >
+            // Do not change this comment line otherwise Speed Optimizer won't be able to detect this script
+
+            (function () {
+                function sendRequest(url, body) {
+                    if(!window.fetch) {
+                        const xhr = new XMLHttpRequest();
+                        xhr.open("POST", url, true);
+                        xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+                        xhr.send(JSON.stringify(body))
+                        return
+                    }
+
+                    const request = fetch(url, {
+                        method: 'POST',
+                        body: JSON.stringify(body),
+                        keepalive: true,
+                        headers: {
+                            'Content-Type': 'application/json;charset=UTF-8'
+                        }
+                    });
+                }
+                const calculateParentDistance = (child, parent) => {
+                    let count = 0;
+                    let currentElement = child;
+
+                    // Traverse up the DOM tree until we reach parent or the top of the DOM
+                    while (currentElement && currentElement !== parent) {
+                        currentElement = currentElement.parentNode;
+                        count++;
+                    }
+
+                    // If parent was not found in the hierarchy, return -1
+                    if (!currentElement) {
+                        return -1; // Indicates parent is not an ancestor of element
+                    }
+
+                    return count; // Number of layers between element and parent
+                }
+                const isMatchingClass = (linkRule, href, classes, ids) => {
+                    return classes.includes(linkRule.value)
+                }
+                const isMatchingId = (linkRule, href, classes, ids) => {
+                    return ids.includes(linkRule.value)
+                }
+                const isMatchingDomain = (linkRule, href, classes, ids) => {
+                    if(!URL.canParse(href)) {
+                        return false
+                    }
+
+                    const url = new URL(href)
+                    const host = url.host
+                    const hostsToMatch = [host]
+
+                    if(host.startsWith('www.')) {
+                        hostsToMatch.push(host.substring(4))
+                    } else {
+                        hostsToMatch.push('www.' + host)
+                    }
+
+                    return hostsToMatch.includes(linkRule.value)
+                }
+                const isMatchingExtension = (linkRule, href, classes, ids) => {
+                    if(!URL.canParse(href)) {
+                        return false
+                    }
+
+                    const url = new URL(href)
+
+                    return url.pathname.endsWith('.' + linkRule.value)
+                }
+                const isMatchingSubdirectory = (linkRule, href, classes, ids) => {
+                    if(!URL.canParse(href)) {
+                        return false
+                    }
+
+                    const url = new URL(href)
+
+                    return url.pathname.startsWith('/' + linkRule.value + '/')
+                }
+                const isMatchingProtocol = (linkRule, href, classes, ids) => {
+                    if(!URL.canParse(href)) {
+                        return false
+                    }
+
+                    const url = new URL(href)
+
+                    return url.protocol === linkRule.value + ':'
+                }
+                const isMatchingExternal = (linkRule, href, classes, ids) => {
+                    if(!URL.canParse(href) || !URL.canParse(document.location.href)) {
+                        return false
+                    }
+
+                    const matchingProtocols = ['http:', 'https:']
+                    const siteUrl = new URL(document.location.href)
+                    const linkUrl = new URL(href)
+
+                    // Links to subdomains will appear to be external matches according to JavaScript,
+                    // but the PHP rules will filter those events out.
+                    return matchingProtocols.includes(linkUrl.protocol) && siteUrl.host !== linkUrl.host
+                }
+                const isMatch = (linkRule, href, classes, ids) => {
+                    switch (linkRule.type) {
+                        case 'class':
+                            return isMatchingClass(linkRule, href, classes, ids)
+                        case 'id':
+                            return isMatchingId(linkRule, href, classes, ids)
+                        case 'domain':
+                            return isMatchingDomain(linkRule, href, classes, ids)
+                        case 'extension':
+                            return isMatchingExtension(linkRule, href, classes, ids)
+                        case 'subdirectory':
+                            return isMatchingSubdirectory(linkRule, href, classes, ids)
+                        case 'protocol':
+                            return isMatchingProtocol(linkRule, href, classes, ids)
+                        case 'external':
+                            return isMatchingExternal(linkRule, href, classes, ids)
+                        default:
+                            return false;
+                    }
+                }
+                const track = (element) => {
+                    const href = element.href ?? null
+                    const classes = Array.from(element.classList)
+                    const ids = [element.id]
+                    const linkRules = [{"type":"extension","value":"pdf"},{"type":"extension","value":"zip"},{"type":"protocol","value":"mailto"},{"type":"protocol","value":"tel"}]
+                    if(linkRules.length === 0) {
+                        return
+                    }
+
+                    // For link rules that target an id, we need to allow that id to appear
+                    // in any ancestor up to the 7th ancestor. This loop looks for those matches
+                    // and counts them.
+                    linkRules.forEach((linkRule) => {
+                        if(linkRule.type !== 'id') {
+                            return;
+                        }
+
+                        const matchingAncestor = element.closest('#' + linkRule.value)
+
+                        if(!matchingAncestor || matchingAncestor.matches('html, body')) {
+                            return;
+                        }
+
+                        const depth = calculateParentDistance(element, matchingAncestor)
+
+                        if(depth < 7) {
+                            ids.push(linkRule.value)
+                        }
+                    });
+
+                    // For link rules that target a class, we need to allow that class to appear
+                    // in any ancestor up to the 7th ancestor. This loop looks for those matches
+                    // and counts them.
+                    linkRules.forEach((linkRule) => {
+                        if(linkRule.type !== 'class') {
+                            return;
+                        }
+
+                        const matchingAncestor = element.closest('.' + linkRule.value)
+
+                        if(!matchingAncestor || matchingAncestor.matches('html, body')) {
+                            return;
+                        }
+
+                        const depth = calculateParentDistance(element, matchingAncestor)
+
+                        if(depth < 7) {
+                            classes.push(linkRule.value)
+                        }
+                    });
+
+                    const hasMatch = linkRules.some((linkRule) => {
+                        return isMatch(linkRule, href, classes, ids)
+                    })
+
+                    if(!hasMatch) {
+                        return
+                    }
+
+                    const url = "https://ehrenhancify.com/wp-content/plugins/independent-analytics/iawp-click-endpoint.php";
+                    const body = {
+                        href: href,
+                        classes: classes.join(' '),
+                        ids: ids.join(' '),
+                        ...{"payload":{"resource":"singular","singular_id":1485,"page":1},"signature":"d5e77d35b11d935bd7bd4086eb83d7d0"}                    };
+
+                    sendRequest(url, body)
+                }
+                let hasSearched = false;
+                function search() {
+                    if(hasSearched) {
+                        return;
+                    }
+                    hasSearched = true;
+
+                    if (document.hasOwnProperty("visibilityState") && document.visibilityState === "prerender") {
+                        return;
+                    }
+
+                                            if (navigator.webdriver || /bot|crawler|spider|crawling|semrushbot|chrome-lighthouse/i.test(navigator.userAgent)) {
+                            return;
+                        }
+                    
+                    let referrer_url = null;
+
+                    if (typeof document.referrer === 'string' && document.referrer.length > 0) {
+                        referrer_url = document.referrer;
+                    }
+
+                    const params = location.search.slice(1).split('&').reduce((acc, s) => {
+                        const [k, v] = s.split('=');
+                        return Object.assign(acc, {[k]: v});
+                    }, {});
+
+                    const url = "https://ehrenhancify.com/wp-json/iawp/search";
+                    const body = {
+                        referrer_url,
+                        utm_source: params.utm_source,
+                        utm_medium: params.utm_medium,
+                        utm_campaign: params.utm_campaign,
+                        utm_term: params.utm_term,
+                        utm_content: params.utm_content,
+                        gclid: params.gclid,
+                        ...{"payload":{"resource":"singular","singular_id":1485,"page":1},"signature":"d5e77d35b11d935bd7bd4086eb83d7d0"}                    };
+
+                    sendRequest(url, body)
+                }
+                document.addEventListener('mousedown', function (event) {
+                                        if (navigator.webdriver || /bot|crawler|spider|crawling|semrushbot|chrome-lighthouse/i.test(navigator.userAgent)) {
+                        return;
+                    }
+                    
+                    const element = event.target.closest('a')
+
+                    if(!element) {
+                        return
+                    }
+
+                    const isPro = false
+                    if(!isPro) {
+                        return
+                    }
+
+                    // Don't track left clicks with this event. The click event is used for that.
+                    if(event.button === 0) {
+                        return
+                    }
+
+                    track(element)
+                })
+                document.addEventListener('click', function (event) {
+                                        if (navigator.webdriver || /bot|crawler|spider|crawling|semrushbot|chrome-lighthouse/i.test(navigator.userAgent)) {
+                        return;
+                    }
+                    
+                    const element = event.target.closest('a, button, input[type="submit"], input[type="button"]')
+
+                    if(!element) {
+                        return
+                    }
+
+                    const isPro = false
+                    if(!isPro) {
+                        return
+                    }
+
+                    track(element)
+                })
+                document.addEventListener('play', function (event) {
+                                        if (navigator.webdriver || /bot|crawler|spider|crawling|semrushbot|chrome-lighthouse/i.test(navigator.userAgent)) {
+                        return;
+                    }
+                    
+                    const element = event.target.closest('audio, video')
+
+                    if(!element) {
+                        return
+                    }
+
+                    const isPro = false
+                    if(!isPro) {
+                        return
+                    }
+
+                    track(element)
+                }, true)
+                document.addEventListener("DOMContentLoaded", function (e) {
+                    search();
+                });
+                document.addEventListener("iawpSearch", function (e) {
+                    search();
+                });
+            })();
+        </script>
+        
+<div id="cookies-eu-wrapper">
+    <div 
+      id="cookies-eu-banner"       
+      data-wait-remove="250"
+      >      
+      <div id="cookies-eu-label">
+
+        This site uses cookies to function and analyze usage. By accepting, you consent to their use and data processing.
+          &nbsp;&nbsp;
+          <a id="cookies-eu-more" rel="nofollow" href="https://ehrenhancify.com/cookie-policy/">Know More</a>
+      </div>
+
+      <div id="cookies-eu-buttons">
+        <form action="https://ehrenhancify.com/customize-cookies/">
+          <button id="cookies-eu-settings" class="cookies-eu-settings">Know More</button>
+        </form>
+        <button id="cookies-eu-reject" class="cookies-eu-reject">Reject</button>
+        <button id="cookies-eu-accept" class="cookies-eu-accept">Accept</button></div>
+    </div>
+</div>
+
+<div id="cookies-eu-banner-closed">
+  <span>Privacidad</span>
+</div>
+<script type="application/ld+json" id="slim-seo-schema">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://ehrenhancify.com/#website","url":"https://ehrenhancify.com/","name":"EHR Enhancify","description":"Help you seamlessly manage your Cerner Millennium EHR and adapt it to your changing organizational requirements.","inLanguage":"en-US","potentialAction":{"@id":"https://ehrenhancify.com/#searchaction"},"publisher":{"@id":"https://ehrenhancify.com/#organization"}},{"@type":"SearchAction","@id":"https://ehrenhancify.com/#searchaction","target":"https://ehrenhancify.com/?s={search_term_string}","query-input":"required name=search_term_string"},{"@type":"BreadcrumbList","name":"Breadcrumbs","@id":"https://ehrenhancify.com/oracle-health-mpages/#breadcrumblist","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://ehrenhancify.com/"},{"@type":"ListItem","position":2,"name":"Customization","item":"https://ehrenhancify.com/category/customization/"},{"@type":"ListItem","position":3,"name":"Everything you need to know about Oracle Health MPages"}]},{"@type":"WebPage","@id":"https://ehrenhancify.com/oracle-health-mpages/#webpage","url":"https://ehrenhancify.com/oracle-health-mpages/","inLanguage":"en-US","name":"Everything you need to know about Oracle Health MPages – EHR Enhancify","description":"One of the most impressive features of Millennium is Oracle Health MPages. Read about what they are and how they work.","datePublished":"2023-12-14T10:34:11+00:00","dateModified":"2025-05-22T11:05:40+00:00","isPartOf":{"@id":"https://ehrenhancify.com/#website"},"breadcrumb":{"@id":"https://ehrenhancify.com/oracle-health-mpages/#breadcrumblist"},"potentialAction":{"@id":"https://ehrenhancify.com/oracle-health-mpages/#readaction"},"primaryImageOfPage":{"@id":"https://ehrenhancify.com/oracle-health-mpages/#thumbnail"},"image":{"@id":"https://ehrenhancify.com/oracle-health-mpages/#thumbnail"}},{"@type":"ReadAction","@id":"https://ehrenhancify.com/oracle-health-mpages/#readaction","target":"https://ehrenhancify.com/oracle-health-mpages/"},{"@type":"Organization","@id":"https://ehrenhancify.com/#organization","url":"https://ehrenhancify.com/","name":"EHR Enhancify"},{"@type":"ImageObject","@id":"https://ehrenhancify.com/oracle-health-mpages/#thumbnail","url":"https://ehrenhancify.com/wp-content/uploads/2023/12/Oracle-Health-MPages.png","contentUrl":"https://ehrenhancify.com/wp-content/uploads/2023/12/Oracle-Health-MPages.png","width":2240,"height":1260},{"@type":"Article","@id":"https://ehrenhancify.com/oracle-health-mpages/#article","url":"https://ehrenhancify.com/oracle-health-mpages/","headline":"Everything you need to know about Oracle Health MPages","datePublished":"2023-12-14T10:34:11+00:00","dateModified":"2025-05-22T11:05:40+00:00","wordCount":1383,"articleSection":["Customization","EHR insight"],"isPartOf":{"@id":"https://ehrenhancify.com/oracle-health-mpages/#webpage"},"mainEntityOfPage":{"@id":"https://ehrenhancify.com/oracle-health-mpages/#webpage"},"image":{"@id":"https://ehrenhancify.com/oracle-health-mpages/#thumbnail"},"publisher":{"@id":"https://ehrenhancify.com/#organization"},"author":{"@id":"https://ehrenhancify.com/#/schema/person/34bdd7541dbe85d95d3094e0e2015f1b"}},{"@type":"Person","@id":"https://ehrenhancify.com/#/schema/person/34bdd7541dbe85d95d3094e0e2015f1b","name":"Etienne Boshoff","givenName":"Etienne","familyName":"Boshoff","image":"https://secure.gravatar.com/avatar/b744f0e27d6c48408a880a803d262de833d1c571a57cadf196b13c170bb1062a?s=96&d=mm&r=g"}]}</script><script src="https://ehrenhancify.com/wp-includes/js/imagesloaded.min.js?ver=5.0.0" id="imagesloaded-js"></script>
+<script src="https://ehrenhancify.com/wp-includes/js/masonry.min.js?ver=4.2.2" id="masonry-js"></script>
+<script src="https://ehrenhancify.com/wp-content/plugins/betterdocs/assets/blocks/categorygrid/frontend.js?ver=9a7c53e94a90401f1886" id="betterdocs-categorygrid-js"></script>
+<script id="leadin-script-loader-js-js-extra">
+var leadin_wordpress = {"userRole":"visitor","pageType":"post","leadinPluginVersion":"11.3.45"};
+//# sourceURL=leadin-script-loader-js-js-extra
+</script>
+<script src="https://js.hs-scripts.com/44086966.js?integration=WordPress&amp;ver=11.3.45" id="leadin-script-loader-js-js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js" id="gsap-js-js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js" id="gsap-scrolltrigger-js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollSmoother.min.js" id="gsap-scrollsmoother-js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/SplitText.min.js" id="gsap-splittext-js"></script>
+<script id="bricks-scripts-js-extra">
+var bricksData = {"debug":"","locale":"en_US","ajaxUrl":"https://ehrenhancify.com/wp-admin/admin-ajax.php","restApiUrl":"https://ehrenhancify.com/wp-json/bricks/v1/","nonce":"37b48635c9","formNonce":"afbc52b476","wpRestNonce":"5a74444981","postId":"1485","recaptchaIds":[],"animatedTypingInstances":[],"videoInstances":[],"splideInstances":[],"tocbotInstances":[],"swiperInstances":[],"queryLoopInstances":[],"interactions":[],"filterInstances":[],"isotopeInstances":[],"activeFiltersCountInstances":[],"googleMapInstances":[],"leafletMapInstances":[],"choicesInstances":[],"facebookAppId":"","headerPosition":"top","offsetLazyLoad":"300","baseUrl":"https://ehrenhancify.com/oracle-health-mpages/","useQueryFilter":"","pageFilters":[],"language":"","wpmlUrlFormat":"","multilangPlugin":"","i18n":{"closeMobileMenu":"Close mobile menu","firstSlide":"Go to first slide","hidePassword":"Hide password","lastSlide":"Go to last slide","locationContent":"Location content","locationSubtitle":"Location subtitle","locationTitle":"Location title","nextSlide":"Next slide","noLocationsFound":"No locations found","openAccordion":"Open accordion","openMobileMenu":"Open mobile menu","pause":"Pause autoplay","play":"Start autoplay","prevSlide":"Previous slide","remove":"Remove","showPassword":"Show password","slideX":"Go to slide %s","splide":{"carousel":"carousel","select":"Select a slide to show","slide":"slide","slideLabel":"%1$s of %2$s"},"swiper":{"paginationBulletMessage":"Go to slide {{index}}","slideLabelMessage":"{{index}} / {{slidesLength}}"}},"selectedFilters":[],"filterNiceNames":[],"bricksGoogleMarkerScript":"https://ehrenhancify.com/wp-content/themes/bricks/assets/js/libs/bricks-google-marker.min.js?v=2.3.2","infoboxScript":"https://ehrenhancify.com/wp-content/themes/bricks/assets/js/libs/infobox.min.js?v=2.3.2","markerClustererScript":"https://ehrenhancify.com/wp-content/themes/bricks/assets/js/libs/markerclusterer.min.js?v=2.3.2","mainQueryId":"","activeSearchTemplate":"0","defaultMode":"light"};
+//# sourceURL=bricks-scripts-js-extra
+</script>
+<script src="https://ehrenhancify.com/wp-content/themes/bricks/assets/js/bricks.min.js?ver=1775737406" id="bricks-scripts-js"></script>
+<script src="https://ehrenhancify.com/wp-content/themes/bricks/assets/js/libs/tocbot.min.js?ver=4.21.0" id="bricks-tocbot-js"></script>
+
+<script src='//ehrenhancify.com/wp-content/uploads/code-snippets/3745.js?v=5536'></script>
+
+<link rel='stylesheet' id='3741-css' href='//ehrenhancify.com/wp-content/uploads/code-snippets/3741.css?v=1238' media='all' />
+
+<script type="text/javascript">
+jQuery(function ($) {
+    'use strict';
+
+    window.Adapta_RGPD = window.Adapta_RGPD || {};
+
+    Adapta_RGPD.getCookie= function(name) {
+        var v = document.cookie.match('(^|;) ?' + name + '=([^;]*)(;|$)');
+        return v ? v[2] : null;
+    }
+
+    Adapta_RGPD.setCookie= function (name, value) {
+      var date = new Date();
+      date.setTime(date.getTime() + this.cookieTimeout);
+      
+      document.cookie = name + '=' + value + ';expires=' + date.toUTCString() + ';path=/';
+    };
+
+    Adapta_RGPD.deleteCookie = function (name) {
+        var hostname = document.location.hostname.replace(/^www\./, '');
+        var nacked = hostname.replace(/^[^.]+\./g, "");
+        var commonSuffix = '; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/';
+
+        // remove cookies that match name
+        document.cookie = name + '=; domain=.' + hostname + commonSuffix;
+        document.cookie = name + '=; domain=.' + nacked + commonSuffix;
+        document.cookie = name + '=' + commonSuffix;
+
+        // search and remove all cookies starts with name
+        document.cookie.split(';')
+        .filter(function(el) {
+            return el.trim().indexOf(name) === 0;
+        })
+        .forEach(function(el) {
+            var [k,v] = el.split('=');
+            document.cookie = k + '=; domain=.' + hostname + commonSuffix;
+            document.cookie = k + '=; domain=.' + nacked + commonSuffix;            
+            document.cookie = k + '=' + commonSuffix;
+        })
+    };
+
+    Adapta_RGPD.onlyUnique= function(value, index, self) {
+      return self.indexOf(value) === index;
+    };
+
+    Adapta_RGPD.removeItemOnce = function(arr, value) {
+      var index = arr.indexOf(value);
+      if (index > -1) {
+        arr.splice(index, 1);
+      }
+      return arr;
+    };
+
+    // load events.
+    Adapta_RGPD.loadEvents= function(){
+        $("[id^='custom-cookies-accept']").click(function(){
+            var consents= new Array();  
+            var value= Adapta_RGPD.getCookie('hasConsents');
+            if ( null != value && value.length) {
+                consents = value.split("+")
+            }
+            
+            var consent = this.dataset.consent;
+            consents.push(consent)
+            
+            var unique= consents.filter(Adapta_RGPD.onlyUnique);
+            Adapta_RGPD.setCookie('hasConsents', unique.join('+'));
+            Adapta_RGPD.setCookie('hasConsent', true);
+        });
+
+        $("[id^='custom-cookies-reject'],#custom-cookies-eu-reject,#cookies-eu-reject").click(function(){
+            const trackingCookiesNames = ['__utma', '__utmb', '__utmc', '__utmt', '__utmv', '__utmz', '_ga', '_gat', '_gid', '_fbp'];   
+            var value= Adapta_RGPD.getCookie('hasConsents');
+            if ( null == value ) {
+                return
+            }
+
+            // consent is the consent to remove. Ej ANLT
+            var consent = ('undefined' !== typeof this.dataset && this.dataset.hasOwnProperty('consent'))?this.dataset.consent:null;
+            if (consent != null) {              
+                var consents = value.split("+")         
+                consents=Adapta_RGPD.removeItemOnce(consents, consent)
+                Adapta_RGPD.setCookie('hasConsents', consents.join('+'));
+            }
+            
+            if ( 'ANLTCS' == consent || null == consent ) {
+                trackingCookiesNames.map(Adapta_RGPD.deleteCookie);
+            }
+
+            // update api consent
+            var consentUUIDCookie = Adapta_RGPD.getCookie('argpd_consentUUID');
+            if ( null == consentUUIDCookie || consentUUIDCookie.length == 0) {
+                return;
+            }
+        
+            var ajaxurl = 'https://ehrenhancify.com/wp-admin/admin-ajax.php';
+            var data = {
+                action: 'cookie_consent',
+                security: '0a56532279',
+                uri: window.location.href,
+                'update': 1,
+                'statement': $("#cookies-eu-label").text(),
+                'purpose-necessary': 1,
+                'purpose-non-necessary': 0,
+                'purpose-analytics': 0,
+                'purpose-marketing': 0,
+                'purpose-advertisement': 0,
+            };              
+            $.post( ajaxurl, data, function(response) {                 
+                
+                if ( undefined !== response.success && false === response.success ) {                       
+                    return;
+                }       
+            });
+        });
+
+        // reject all event
+        $("#cookies-eu-banner-closed, .cookies-eu-banner-closed" ).click(function(){
+            var date = new Date();
+            date.setTime(date.getTime() + 33696000000);
+            document.cookie = 'hasConsent' + '=' + 'configure' + ';expires=' + date.toUTCString() + ';path=/';
+            window.location.reload();
+        });
+
+         
+
+        // toggle first layer privacy
+            }
+
+    // init 
+    Adapta_RGPD.init = function(){
+        jQuery(document).ready(function($) {
+            // Prevent for search engine execute ajax function.
+            var bots = /bot|crawler|spider|crawling/i;
+            var isBot = bots.test(navigator.userAgent);
+            if ( isBot ) {
+                return;
+            }
+
+            // event if cookies-reload option
+            
+            // code to launch when user accepts cookies
+            new CookiesEuBanner(function (update=false) {
+                var ajaxurl = 'https://ehrenhancify.com/wp-admin/admin-ajax.php';
+                var data = {
+                    action: 'cookie_consent',
+                    security: '0a56532279',
+                    uri: window.location.href,
+                    'update': (update == true)?1:0,
+                    'statement': $("#cookies-eu-label").text(),
+                    'purpose-necessary': 1,
+                    'purpose-non-necessary': 0,
+                    'purpose-analytics': '0',
+                    'purpose-marketing': '0',
+                    'purpose-advertisement': '0',
+                };              
+                $.post( ajaxurl, data, function(response) {
+                    
+                    if ( undefined !== response.success && false === response.success ) {                       
+                        return;
+                    }       
+
+                    var data = jQuery.parseJSON(response);
+                    if (data == null) {
+                        return
+                    }
+
+                    // set cookie argpd_consentUUID
+                    if (data.hasOwnProperty('uuid')) {
+                        Adapta_RGPD.setCookie('argpd_consentUUID', data['uuid']);
+                    }
+
+                    // append scripts
+                    if (data.hasOwnProperty('scripts-reject')) {
+                        var scripts = data['scripts-reject'].split(",");
+                        scripts.forEach(function(src){
+                            var script = document.createElement( 'script' );
+                            script.setAttribute( "src", src );
+                            document.getElementsByTagName( "head" )[0].appendChild( script );
+                        });             
+                    }
+                });             
+            }, true);
+
+            Adapta_RGPD.loadEvents();
+        });
+    }
+    Adapta_RGPD.init();
+});
+</script>
+        </body></html>

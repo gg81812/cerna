@@ -1,0 +1,144 @@
+SMART Application Overview — Oracle Health Developer's Guide
+Source: https://docs.oracle.com/en/industries/health/millennium-platform-apis/smart-developer-overview/
+Document ID: G37938-01 | July 2025
+Scraped: 2026-04-19
+
+==============================================================
+
+What is SMART?
+
+SMART (Substitutable Medical Apps and Reusable Technology) platform defines a specification for an EHR to safely and securely open other applications with context. SMART applications are commonly web applications or native mobile applications that use HL7 FHIR standard to read and write data from the EHR.
+
+Oracle Health can embed SMART applications in the EHR and supports FHIR access through mobile SMART applications.
+
+SaaS Model
+
+Oracle Health expects most SMART applications to be provided using a SaaS (software as a service) model, where the SMART developer or provider hosts the application. Customers do not need to install any code or package to implement a particular SMART application.
+
+Authorization Model (Three-Level)
+
+1. Oracle Health must validate and register every SMART application, validating the use of FHIR resources and operations (READ and WRITE)
+2. Each customer decides whether to allow a SMART application to run on a domain-by-domain basis
+3. Each customer decides which users and roles can access the SMART application
+
+Access Points
+
+Providers can access SMART applications from:
+- PowerChart table of contents and Organizer view
+- MPages component embedded in PowerChart
+
+Consumers can access SMART applications from:
+- Oracle Health Patient Portal (HealtheLife) to view patient information
+- Stand-alone patient-facing SMART applications
+
+Data Sources Available to SMART Apps
+
+SMART applications can use Oracle Health's FHIR standard server plus:
+- Third-party data sources
+- Private and proprietary data the application maintains
+- Oracle Health proprietary means: MillenniumObjects, CareAware services, Discern Explorer scripts
+
+Note: Using proprietary APIs limits interoperability but is an option.
+
+SMART Without FHIR
+
+The SMART specification requires a FHIR server to exist but FHIR does not need to be used by the SMART application. Apps not using FHIR must include at least one scope: launch, launch/patient, openid fhirUser, or openid profile.
+
+Technical Requirements
+
+Screen Resolution: Design applications to be responsive and adjust to available screen sizes.
+
+Browser Requirements:
+- Microsoft Edge (WebView2): Recommended
+- Internet Explorer (IWebBrowser2 C++ interface): Supported
+- MPages 9.0+: Must function correctly with Edge
+- IE10 minimum supported version
+
+Single Sign On (SSO): Designed to provide SSO when opened from PowerChart. Applications should use the same embedded browser for authorization when embedded in PowerChart.
+
+Embedded Browser Limitations:
+- No shared cookies between embedded browser and newly opened browser windows
+- HTML5 sessionStorage may not be isolated per instances of embedded browser in some PowerChart releases
+- Recommendation: Perform all navigation and redirects in embedded browser without opening new windows
+
+HTML Requirements:
+- Include HTML5 DOCTYPE declaration as first line
+- Include X-UA-Compatible meta tag as first element in <head> section
+
+SMART Apps in MPages
+
+SMART applications can be embedded in MPages Workflow or Summary views. Include the Cerner SMART Embeddable Library for secure iframe embedding.
+
+Cookie Requirements:
+- IE: Set P3P header or meta tag
+- Edge: Set-Cookie response header must contain SameSite=None; Secure attributes
+
+Microsoft Edge Support
+
+Edge (Chromium-based) generates faster, uses less CPU and memory compared to IE. Configure SMART applications to load using Edge where available.
+
+For compatibility with older PowerChart environments, ensure embedded SMART apps work correctly in both IE and Edge browsers.
+
+Design Considerations for Patient Safety
+
+When multiple patient charts are open in PowerChart:
+1. Design to avoid changing active region without direct user interaction
+2. Maintain proper patient context at all times
+3. Test in workflows where multiple charts are open simultaneously
+4. Each chart must be clearly identified and distinguishable
+5. Do not allow switching between charts without deliberate user action
+
+Session Bleed Issue
+
+When running a SMART application in multiple open charts, the app may share patient context and display the same patient's data in two separate charts.
+
+To avoid this issue:
+- Review HTML5 Session Storage section
+- If using fhir-client.js library, upgrade to minimum version v0.1.10
+- Include additional code to fix the session bleed issue
+
+Testing Process
+
+code Console: Select any patient from sandbox list to begin testing. Test from new web browser.
+
+PowerChart Testing:
+- Contact Code.cerner.com/submit for access
+- Must be member of Oracle Health Developer Program
+- App must use HTTPS with valid SSL certificate (Qualys SSL Labs A grade)
+- App URL must be publicly accessible
+- App must be on standard HTTPS port 443
+
+Oracle Health Patient Portal:
+Direct-to-consumer applications can be opened from Oracle Health Patient Portal (HealtheLife).
+
+Single Patient vs Multi-Patient Views
+
+Organizer Views (Multi-Patient):
+- MPages worklist framework for multi-patient views
+- Assists clinicians in organizing and prioritizing work
+- Provides key information about patient populations
+
+Patient Chart View (Single Patient):
+- Displays information for one patient at a time
+- Multiple charts can be open simultaneously
+- Table of Contents (TOC) on left + Workspace on right
+
+Application Design Recommendations:
+- If managing a population: optimize for organizer view
+- If single-patient context: users should NOT have access to other patients' data
+- Remove patient search functionality from single-patient apps before validation
+
+Security Review Requirements
+
+Oracle Health performs a security review including:
+- Threat model of application architecture
+- Static analysis, dynamic analysis, dependency vulnerability check, OS security scan
+- Secure TLS standards and web standards reports
+- Patching policies and privacy policies
+
+Rate Limits
+
+Rate limits enforced per customer agreement. Exceeding limits returns HTTP 429. Implement exponential backoff:
+- Retry after 1 second
+- Double delay each subsequent retry
+- Maximum 3 retries

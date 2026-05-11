@@ -1,0 +1,141 @@
+FHIR FAQs and Common Issues — Oracle Health Millennium Platform
+Source: https://docs.oracle.com/en/industries/health/millennium-platform-apis/fhir-faqs-common-issues/
+Scraped: 2026-04-19
+
+==============================================================
+
+General FAQs
+
+Q: What is the Oracle Health roadmap for FHIR standard implementation?
+A: Both retired May2015 and DSTU 2 Final versions are available in production. The roadmap includes providing feedback to FHIR drafts and updating to the latest release. Priorities determined by: resource maturity and stability, business partner needs, and external forces such as Promoting Interoperability. The Oracle Health Developer Program offers opportunities to create business partnerships and guide the roadmap.
+
+Q: What is the Oracle Health Millennium Web Services toolkit?
+A: Millennium Web Services is an API exposing Millennium Platform business and application logic through person-centric web interfaces. Includes web services for clinical services: patient demographics, clinical results, clinical documentation, reporting, and scheduling. Services exposed using SOAP, REST, and HTTPS.
+
+Q: What is the future of Millennium Web Services?
+A: With FHIR emergence, Oracle Health expects to migrate Millennium Web Services to FHIR for all services with standard resource equivalents. Some services may never have standard equivalents and will be maintained alongside the FHIR implementation.
+
+Q: What service and protocol is supported?
+A: Current implementation supports the REST API through HTTPS protocol. Any application capable of making HTTPS calls can consume the Oracle Health FHIR implementation. Desktop, web, and mobile applications are supported. The platform supports SMART applications, OAuth2 authentication, and authorization profiles.
+
+Q: What are SMART applications?
+A: SMART (Substitutable Medical applications & Reusable Technology) platform defines a specification for EHRs to safely and securely open other applications with context. SMART applications are commonly web or native mobile apps that use FHIR to read and write EHR data.
+
+Q: Where can I ask a question?
+A: Oracle Health Developer Forums at https://forums.oracle.com/ords/apexds/domain/open-developer-experience
+
+Rate Limits
+
+Q: Are there rate limits?
+A: Yes. Rate limits are enforced to preserve EHR performance. Limits vary between customers based on agreed usage levels.
+
+Q: What happens if I exceed the rate limit?
+A: You receive a 429 (Too Many Requests) status code.
+
+Q: How should I handle a 429 status code?
+A: Implement progressive retry strategy:
+- Pause: Wait briefly before retrying
+- Retry with exponential backoff: retry after 1 second, then 2 seconds, then 4 seconds
+- Maximum 3 retries
+
+Common Issues
+
+Issue: Multiple Resource Calls
+Ensure applications make efficient API calls. Remove duplicate API calls. During technical review, logs are checked for identical calls retrieving the same data set.
+
+Issue: Missing Paging Implementation
+Application should handle paging for all resources, even if Oracle Health server doesn't support it yet.
+- Queries on some resources can return large data sets
+- Without paging logic, application may miss relevant information
+- Use _count parameter to set page size
+- Test with patients who have lots of data in Sandbox domain
+
+Issue: Posting Documents Using DocumentReference Resource
+
+Document Type Requirements:
+- Only XHTML formatted documents are supported
+- System converts XHTML to RTF for the EHR
+- Use self-closed <br /> tags instead of <br>
+- Applet, iframe, link, script, and style tags are removed during sanitization
+- HTML entities must end with semicolon (;)
+- Meta tags must be self-closed
+
+Images in Documents:
+- External image links do not function
+- All images must be embedded as Base64 encoded files using web-safe image formats
+- Example: <img alt="image" src='data:image/png;base64, <ENCODED IMAGE>' />
+
+Issue: Requests by Specific LOINC Codes
+
+Oracle Health maps proprietary codes to standard terminologies. Sometimes these mappings don't cover all variances. When EHRs were originally implemented, proprietary codes were used that don't map directly to LOINC codes.
+
+Example: Hospital A uses code mapping to LOINC 5671-3 for lead, Hospital B uses code mapping to LOINC 77307-71.
+If you query using only code 5671-3, your application works at Hospital A but returns nothing at Hospital B.
+
+Recommendation: Ensure all codes are accounted for so the application works at all sites.
+
+Issue: Using Post-Query Filtering Instead of Query Parameters
+
+Oracle Health recommends using available query parameters because they:
+- Make the dataset more predictable
+- Speed up searches
+- Are more reliable than post-query filtering
+
+Issue: Status Filtering
+
+Ensure appropriate results are displayed by filtering on status:
+- MedicationOrder: Display only Active, On-Hold, or Completed statuses
+- Observation: Display only Final and Amended statuses
+
+Patient safety issue can occur if an uncharted (draft) value is displayed to a user.
+
+Issue: Data Filtering for Patient Personas
+
+Data can be filtered for various reasons:
+- Resources with status "entered-in-error" are filtered for patient personas
+- Sensitive data is filtered
+- Encounter and organization security settings may filter data
+- Privilege and preference build in the domain may affect data
+
+Issue: Registering More Scopes Than Application Uses
+
+Only request scopes that are used. You will be asked to remove unused scopes from registration.
+
+Issue: Authorization Duration
+
+Default access token duration is 570 seconds (~10 minutes). For longer access:
+- Request new token each time, OR
+- Request online_access scope to receive a refresh token valid during the user's authenticated session
+
+Refresh tokens remain valid until:
+- User explicitly logs out
+- Administrator terminates the session
+- Risk mechanisms require re-authentication
+
+Issue: Session Bleed
+
+When running SMART application in multiple open charts in PowerChart, application instance may share patient context.
+
+Re-creation steps:
+1. Open chart for Patient A and open an application
+2. Open chart for Patient B and open an application
+3. On Patient A's chart, select "As Of" to refresh PowerChart
+4. If application shows Patient B's data on Patient A's chart, implement session storage fix
+
+Fix: Upgrade fhir-client.js to v0.1.10 or higher and include additional code from GitHub.
+
+Issue: Using Video in Your Application
+
+Most Oracle Health customers deploy via Citrix Xenapplication sessions. Videos challenge Citrix connections due to bandwidth limitations.
+
+Solution: Open a new window using custom code with APPLINK routine:
+- Add META tag: <META content='APPLINK' name='discern'>
+- Use APPLINK function instead of window.open
+
+Security Review Requirements
+
+Oracle Health performs security review before validation:
+- Threat model of application architecture and external system interactions
+- Static analysis, dynamic analysis, dependency vulnerability check, OS-level security scan
+- Reports on TLS standards and web standards
+- Patching policies and privacy policies

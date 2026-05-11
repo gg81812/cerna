@@ -1,0 +1,491 @@
+# SOURCE: Clinical Pathway — Wikipedia
+# URL: https://en.wikipedia.org/wiki/Clinical_pathway
+# MODULE: PowerChart
+# RETRIEVED: 2026-05-07
+# ---
+
+Systemised approach to medical treatment
+
+This article includes a list of 
+general references
+, but 
+it lacks sufficient corresponding 
+inline citations
+.
+ Please help to 
+improve
+ this article by 
+introducing
+ more precise citations.
+ 
+(
+September 2009
+)
+ (
+Learn how and when to remove this message
+)
+
+A 
+clinical pathway
+, also known as 
+care pathway
+, 
+integrated care pathway
+, 
+critical pathway
+, or 
+care map
+, is one of the main tools used to manage the quality in 
+healthcare
+ concerning the standardisation of care processes.
+ It has been shown that their implementation reduces the variability in 
+clinical practice
+ and improves outcomes.
+ Clinical pathways aim to promote organised and efficient 
+patient
+ care based on 
+evidence-based medicine
+,
+ and aim to optimise outcomes in settings such as 
+acute care
+ and 
+home care
+. A single clinical pathway may refer to multiple 
+clinical guidelines
+ on several topics in a well specified context.
+
+Definition
+
+A clinical pathway is a 
+multidisciplinary
+ management tool based on evidence-based practice for a specific group of patients with a predictable clinical course, in which the different tasks (interventions) by the professionals involved in the patient care are defined, optimized and sequenced either by hour (ED), day (acute care) or visit (homecare). Outcomes are tied to specific interventions.
+
+The concept of clinical pathways may have different meanings to different stakeholders.
+ 
+Managed care organizations
+ often view clinical pathways in a similar way as they view care plans, in which the care provided to a patient is definitive and deliberate. Clinical pathways can range in scope from simple medication utilization to a comprehensive treatment plan. Clinical pathways aim for greater standardization of treatment regimens and sequencing as well as improved outcomes, from both a 
+quality of life
+ and a 
+clinical outcomes
+ perspective.
+
+History
+
+The clinical pathway concept appeared for the first time at the 
+New England Medical Center
+ (
+Boston
+, United States) in 1985, inspired by Karen Zander and Kathleen Bower.
+[
+non-primary source needed
+]
+ Clinical pathways appeared as a result of the adaptation of the documents used in industrial 
+quality management
+, the 
+standard operating procedures
+ (SOPs), whose goals are:
+
+Improve efficiency in the use of resources.
+
+Finish work in a set time.
+
+Characteristics
+
+Clinical pathways (integrated care pathways) can be seen as an application of 
+process management
+ thinking to the improvement of patient healthcare. An aim is to re-center the focus on the patient's overall journey, rather than the contribution of each specialty or caring function independently. Instead, all are emphasised to be working together, in the same way as a 
+cross-functional team
+.
+
+More than just a guideline or a protocol, a care pathway is typically recorded in a single all-encompassing bedside document that will stand as an indicator of the care a patient is likely to be provided in the course of the pathway going forward; and ultimately as a single unified legal record of the care the patient has received, and the progress of their condition, as the pathway has been undertaken.
+
+The pathway design tries to capture the foreseeable actions which will most commonly represent best practice for most patients most of the time, and include prompts for them at the appropriate time in the pathway document to ascertain whether they have been carried out, and whether results have been as expected. In this way results are recorded, and important questions and actions are not overlooked. However, pathways are typically not prescriptive; the patient's journey is an individual one, and an important part of the purpose of the pathway documents is to capture information on "variances", where due to circumstances or clinical judgment different actions have been taken, or different results unfolded. The combined variances for a sufficiently large population of patients are then analysed to identify important or systematic features, which can be used to improve the next iteration of the pathway.
+
+Selection criteria
+
+The following signals may indicate that it may be useful to commit resources to establish and implement a clinical pathway for a particular condition:
+
+Prevalent pathology within the care setting
+
+Pathology with a significant risk for patients
+
+Pathology with a high cost for the hospital
+
+Predictable clinical course
+
+Pathology well defined and that permits homogeneous care
+
+Existence of recommendations of good practices or experts opinions
+
+Unexplained variability of care
+
+Possibility of obtaining professional agreement
+
+Multidisciplinary implementation
+
+Motivation by professionals to work on a specific condition
+
+Examples
+
+Liverpool Care Pathway for the Dying Patient
+
+See also
+
+Clinical formulation
+
+European Pathway Association
+
+Health economics
+
+Medical case management
+
+Nursing care plan
+
+References
+
+Further reading
+
+Allen, Davina (March 2010). "Care pathways: an ethnographic description of the field". 
+International Journal of Care Pathways
+. 
+14
+ (1): 
+4–
+9. 
+doi
+:
+10.1258/jicp.2009.009015
+. 
+S2CID
+ 
+144468659
+.
+
+Bower, Kathleen A. (November 2009). "Clinical pathways: 12 lessons learned over 25 years of experience". 
+International Journal of Care Pathways
+. 
+13
+ (2): 
+78–
+81. 
+doi
+:
+10.1258/jicp.2009.009008
+. 
+S2CID
+ 
+73291011
+.
+
+Evans-Lacko, Sara; Jarrett, Manuela; McCrone, Paul; Thornicroft, Graham (June 2010). 
+"Facilitators and barriers to implementing clinical care pathways"
+. 
+BMC Health Services Research
+. 
+10
+ 182. 
+doi
+:
+10.1186/1472-6963-10-182
+. 
+PMC
+ 
+2912894
+. 
+PMID
+ 
+20584273
+.
+
+Faber, Marjan J; Grande, Stuart; Wollersheim, Hub; Hermens, Rosella; Elwyn, Glyn (June 2014). "Narrowing the gap between organisational demands and the quest for patient involvement: the case for coordinated care pathways". 
+International Journal of Care Coordination
+. 
+17
+ (
+1–
+2): 
+72–
+78. 
+doi
+:
+10.1177/2053435414540616
+. 
+S2CID
+ 
+57930967
+.
+
+Gray, Andrew; Degeling, Pieter; Colebatch, Hal K., eds. (2008). 
+Changing clinical care: experiences and lessons of systematisation
+. Oxford; New York: Radcliffe. 
+ISBN
+ 
+978-1-84619-202-9
+. 
+OCLC
+ 
+181069407
+.
+
+Huang, Zhengxing; Dong, Wei; Ji, Lei; Gan, Chenxi; Lu, Xudong; Duan, Huilong (February 2014). 
+"Discovery of clinical pathway patterns from event logs using probabilistic topic models"
+. 
+Journal of Biomedical Informatics
+. 
+47
+: 
+39–
+57. 
+doi
+:
+10.1016/j.jbi.2013.09.003
+. 
+PMID
+ 
+24076435
+.
+
+Maturen, Virginia; Van Dyck, Lisa (February 1996). "Using outcome-based critical pathways to improve documentation". 
+Journal of Home Health Care Practice
+. 
+8
+ (2): 
+48–
+58. 
+doi
+:
+10.1177/108482239600800213
+. 
+S2CID
+ 
+70492862
+.
+
+Mould, Gillian; Bowers, John (September 2011). "Roles of pathway-based models and their contribution to the redesign of health-care systems". 
+International Journal of Care Pathways
+. 
+15
+ (3): 
+90–
+97. 
+doi
+:
+10.1258/jicp.2011.011003
+. 
+hdl
+:
+1893/6716
+. 
+S2CID
+ 
+72872749
+.
+
+Perer, Adam; Wang, Fei; Hu, Jianying (August 2015). 
+"Mining and exploring care pathways from electronic medical records with visual analytics"
+. 
+Journal of Biomedical Informatics
+. 
+56
+: 
+369–
+378. 
+doi
+:
+10.1016/j.jbi.2015.06.020
+. 
+PMID
+ 
+26146159
+.
+
+Smith, Shawn R. (June 2017). "Enlisting patient and family advisers in the design of clinical pathways". 
+Journal of Healthcare Management
+. 
+62
+ (3): 
+160–
+165. 
+doi
+:
+10.1097/JHM-D-17-00045
+. 
+PMID
+ 
+28471851
+. 
+S2CID
+ 
+44298733
+.
+
+Timmins, Nicholas (14 September 2013). 
+"On the right track? How HealthPathways are improving care in Canterbury, New Zealand"
+. 
+kingsfund.org.uk
+. 
+King's Fund
+. Retrieved 
+12 October
+ 2017
+.
+
+Van Houdt, Sabine; Heyrman, Jan; Vanhaecht, Kris; Sermeus, Walter; De Lepeleire, Jan (August 2013). 
+"Care pathways across the primary-hospital care continuum: using the multi-level framework in explaining care coordination"
+. 
+BMC Health Services Research
+. 
+13
+ 296. 
+doi
+:
+10.1186/1472-6963-13-296
+. 
+PMC
+ 
+3750930
+. 
+PMID
+ 
+23919518
+.
+
+Vanhaecht, Kris; Ovretveit, John; Elliott, Martin J.; Sermeus, Walter; Ellershaw, John; Panella, Massimiliano (March 2012). "Have we drawn the wrong conclusions about the value of care pathways? Is a Cochrane review appropriate?". 
+Evaluation & the Health Professions
+. 
+35
+ (1): 
+28–
+42. 
+doi
+:
+10.1177/0163278711408293
+. 
+PMID
+ 
+21708891
+. 
+S2CID
+ 
+10414989
+.
+
+Vanhaecht, Kris; Panella, Massimiliano; Van Zelm, Ruben; Sermeus, Walter (November 2009). "Is there a future for pathways? Five pieces of the puzzle". 
+International Journal of Care Pathways
+. 
+13
+ (2): 
+82–
+86. 
+doi
+:
+10.1258/jicp.2009.009013
+. 
+S2CID
+ 
+70634103
+.
+
+Vanhaecht, Kris; Panella, Massimiliano; Van Zelm, Ruben; Sermeus, Walter (September 2010). "An overview on the history and concept of care pathways as complex interventions". 
+International Journal of Care Pathways
+. 
+14
+ (3): 
+117–
+123. 
+doi
+:
+10.1258/jicp.2010.010019
+. 
+S2CID
+ 
+71932077
+.
+
+Weber, Philip; Filho, João Bosco Ferreira; Bordbar, Behzad; Lee, Mark; Litchfield, Ian; Backman, Ruth (October 2017). 
+"Automated conflict detection between medical care pathways"
+ 
+(PDF)
+. 
+Journal of Software: Evolution and Process
+. 
+30
+ (7) e1898. 
+doi
+:
+10.1002/smr.1898
+. 
+S2CID
+ 
+51975169
+.
+
+Williams, Sharon J. (2017). 
+Improving healthcare operations: the application of lean, agile, and leagility in care pathway design
+. Palgrave pivot. Cham: 
+Palgrave Macmillan
+. 
+doi
+:
+10.1007/978-3-319-46913-3
+. 
+ISBN
+ 
+978-3-319-46912-6
+. 
+OCLC
+ 
+973211093
+.
+
+External links
+
+"Clinical Pathways Congress"
+. 
+clinicalpathwayscongress.com
+. Retrieved 
+12 October
+ 2017
+.
+
+"European Pathway Association"
+. 
+e-p-a.org
+. Retrieved 
+12 October
+ 2017
+.
+
+"HealthPathways Community, New Zealand"
+. 
+healthpathwayscommunity.org
+. Retrieved 
+12 October
+ 2017
+.
+
+"Journal of Clinical Pathways"
+. 
+journalofclinicalpathways.com
+. Retrieved 
+12 October
+ 2017
+.
+
+"International Journal of Care Coordination (formerly published as the International Journal of Care Pathways)"
+. 
+icp.sagepub.com
+. Retrieved 
+12 October
+ 2017
+.
+ 
+ISSN
+ 
+2053-4345
+, 
+2053-4353
+
+Retrieved from "
+https://en.wikipedia.org/w/index.php?title=Clinical_pathway&oldid=1347923103
+"

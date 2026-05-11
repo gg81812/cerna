@@ -1,0 +1,83 @@
+Oracle Health (Cerner) HL7 FHIR Integration — Deep Dive
+Source: https://6b.health/insight/oracle-health-cerner-hl7-fhir-integration/
+Scraped: 2026-04-19
+
+==============================================================
+
+Core Overview
+
+Oracle Health (formerly Cerner) is a major EHR provider used globally. The platform's Millennium system supports clinical workflows across multiple care settings and serves as a critical source of patient and clinical data.
+
+HL7 FHIR represents the modern interoperability standard developed by Health Level Seven International. Unlike older HL7 v2 and CDA standards, FHIR uses RESTful APIs and supports JSON and XML formats.
+
+Critical Timeline
+
+Oracle Health has committed to deprecating DSTU-2 FHIR APIs by December 2025. HL7 FHIR R4 will become the primary standard moving forward. New integrations should focus exclusively on R4 for long-term compatibility.
+
+Supported FHIR R4 Resources
+
+Available resources include:
+- Patient (demographics)
+- Condition, AllergyIntolerance
+- Appointment, Slot, Schedule
+- Account, Binary
+- Encounter, Procedure
+- Provenance, DocumentReference
+- Observation, DiagnosticReport
+- MedicationRequest, MedicationAdministration
+- CarePlan, CareTeam, Goal
+- Practitioner, PractitionerRole, Organization, Location
+
+The platform supports FHIR Bundles, enabling multiple related requests in single API calls for atomic operations.
+
+Authentication and Security
+
+Oracle Health leverages OAuth 2.0 protocols. Developers register applications with the Oracle Health developer programme, receiving client credentials and appropriate scopes.
+
+Access models:
+- Patient-level access: patient/[Resource].read
+- Provider-level access: user/[Resource].read
+- System-level access: system/[Resource].read
+
+Search and Filtering Capabilities
+
+FHIR R4 APIs support extensive search parameters:
+- Retrieve patient records by identifiers
+- Filter conditions by status
+- Search appointments by date ranges
+- Use _revinclude parameter to retrieve associated Provenance data for auditable change trails
+
+Error Handling
+
+System returns FHIR OperationOutcome resources for invalid requests:
+- 401: Unauthorized access
+- 422: Validation rule failure
+- 404: Resource not found
+
+Integration Approaches
+
+1. SMART on FHIR (EHR-embedded): Apps launch within the EHR UI, receiving clinical context via OAuth 2.0 scopes.
+
+2. SMART on FHIR (backend services): System-to-system automations and analytics without interactive sessions.
+
+3. SMART on FHIR (standalone patient access): Patient applications accessing records outside the EHR via OAuth 2.0.
+
+Migration Considerations
+
+Health systems previously integrated via DSTU-2 APIs must migrate to R4 by December 2025. This involves:
+- Reviewing existing integrations
+- Updating request/response structures
+- Testing against new R4 endpoints
+
+R4 APIs offer greater comprehensiveness and alignment with US Core and international implementation guides.
+
+Write Capability
+
+Third-party apps can write data back into Oracle Health using FHIR. Write access is more restricted than read access. The platform supports create and update operations for selected resources subject to validation, provenance requirements, and client approval.
+
+Implementation Considerations
+
+- Production approval timelines vary: sandbox access is quick but production approval requires security reviews, clinical risk assessment, and contractual agreements
+- Data access through FHIR APIs is near real-time but not event-driven by default
+- For real-time workflows: combine FHIR polling with additional notification mechanisms
+- Teams need expertise in: clinical workflows, healthcare data semantics, FHIR profiling, SMART on FHIR, OAuth 2.0, and healthcare governance

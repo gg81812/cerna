@@ -1,0 +1,76 @@
+Oracle Health (Cerner Millennium) Developer Program
+Source: https://6b.health/insight/what-is-the-oracle-health-cerner-millennium-developer-program/ and https://6b.health/insight/oracle-health-cerner-api-integration/
+Scraped: 2026-04-19
+
+==============================================================
+
+What Is The Oracle Health Developer Program?
+
+Oracle Health (Cerner Millennium) represents the most widely adopted electronic patient record system across NHS Trusts in England, with 35 NHS Trusts having implemented this platform.
+
+The Oracle Health Developer Program supports digital health innovators by offering "a robust platform for developing, testing, and commercialising applications that integrate with Oracle Health." The program provides API documentation, best practice guidelines, and a testing sandbox environment.
+
+Key Features
+
+API Access and Resources:
+- Documentation for Millennium Platform APIs
+- HL7 FHIR standards (DSTU 2 and R4 implementations)
+- SMART documentation
+- Open-source FHIR implementations
+- Application registration via code Console at https://code-console.cerner.com/
+
+Developer Community:
+- Active forum where developers share technical questions, collaborate on solutions, and learn from one another
+- Oracle Health Developer Forums at https://forums.oracle.com/ords/apexds/domain/open-developer-experience
+
+Commercialization Support:
+- Oracle PartnerNetwork provides pathways to commercialization
+- Oracle Health Marketplace for validated application listing
+- Healthcare IT procurement exposure
+
+Application Registration Process:
+1. Register as developer on Oracle Health portal
+2. Create application (define type, required scopes, redirect URIs)
+3. Develop against sandbox (multi-tenant sandbox with synthetic patient data)
+4. Submit for review (technical and security review by Oracle Health)
+5. Approval and production access
+6. Per-site activation (each customer independently approves and configures)
+
+Core Integration Approaches
+
+FHIR APIs:
+Standards-based access to structured clinical data (patient records, allergies, conditions, encounters) using RESTful architecture and OAuth 2.0 authentication.
+
+SMART on FHIR:
+Embedded applications launched directly within clinician workflows for decision support and documentation enhancement.
+
+Oracle Health EHR APIs:
+Platform-specific endpoints enabling deeper customization beyond standard FHIR capabilities for operational workflows.
+
+CareAware:
+Device connectivity supporting near real-time medical device data integration into electronic records.
+
+Technical Requirements:
+Developers typically need experience with RESTful APIs, JSON, OAuth 2.0, and healthcare data standards such as FHIR and HL7.
+
+Security mandates include Transport Layer Security (TLS), JSON Web Key Sets (JWKS) configuration, and structured error handling via OperationOutcome resources.
+
+Benefits of the Developer Program
+
+- Streamlined development and reduced time-to-market
+- Comprehensive training materials and API documentation
+- Testing and validation environment with synthetic patient data
+- Access to healthcare integration expertise
+- Connection to broader Oracle partner ecosystem
+- Validated apps gain competitive advantage in adoption rates
+
+Oracle Health vs. Epic App Orchard Comparison
+
+| Factor | Oracle Health | Epic App Orchard |
+|--------|--------------|-----------------|
+| Registration | Self-service developer portal | Application submission/review |
+| Sandbox | Multi-tenant, immediate access | Through App Orchard, may require approval |
+| Review timeline | 4–8 weeks typical | 2–4 months typical |
+| Per-site activation | Required | Required |
+| Marketplace listing | Optional | Recommended |
+| Documentation | Good, transitioning to Oracle format | Comprehensive |

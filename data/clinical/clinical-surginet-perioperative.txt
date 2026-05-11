@@ -1,0 +1,154 @@
+# Cerner SurgiNet — Surgical and Perioperative Workflow Management
+# MODULE: Clinical
+# SYNTHETIC KNOWLEDGE BASE — Cerna RAG System
+
+## What Is SurgiNet in Cerner?
+
+SurgiNet is Cerner Millennium's perioperative information system, designed to manage the full surgical care continuum from pre-operative scheduling through intraoperative documentation to post-anesthesia recovery and surgical follow-up. It is the primary clinical application for surgical nurses, anesthesiologists, operating room (OR) coordinators, and surgical technicians.
+
+SurgiNet integrates directly with PowerChart, eMAR, BCMA, and the CPOE order entry system to provide a seamless perioperative clinical workflow within the Cerner Millennium platform. The OR tracking board, anesthesia documentation, nursing care plans, and case scheduling are all centralized in SurgiNet.
+
+## SurgiNet Core Components
+
+### 1. OR Tracking Board (Surgical Case Board)
+The OR tracking board provides a real-time view of all surgical cases, room assignments, case status, and staff assignments. Similar to the FirstNet ED tracking board, it displays:
+- Active cases by OR room
+- Surgeon, anesthesiologist, and scrub/circulating nurse assignments
+- Case status (Pre-Op, Patient In Room, Procedure Ongoing, Case Closing, PACU)
+- Estimated case time vs. actual elapsed time
+- Room turnover status between cases
+- On-call cases and add-on case requests
+
+### 2. Pre-Operative Module
+
+#### Pre-Op Assessment Documentation
+Nurses complete the pre-operative assessment PowerForm in SurgiNet before the patient enters the OR:
+- Surgical history and previous anesthesia reactions
+- Current medications (cross-referenced with medication reconciliation)
+- Allergies (verified against BCMA allergy list)
+- NPO (nothing by mouth) status confirmation and time
+- Pre-op vital signs (baseline)
+- Lab and imaging results review
+- Consent verification and documentation
+- Site marking confirmation (laterality, level, surgical site)
+
+#### Pre-Op Checklist
+SurgiNet presents a configurable **pre-operative safety checklist** aligned with the WHO Surgical Safety Checklist:
+- Patient identity verification (two-factor: name + date of birth or MRN)
+- Correct procedure, correct site, correct patient confirmation
+- Consent signed and in chart
+- Pre-op antibiotics administered (timing documented within 60 minutes of incision)
+- Beta-blocker or aspirin management per protocol
+- VTE prophylaxis ordered
+- Implants/special equipment confirmed available
+
+### 3. Intraoperative Documentation Module
+
+#### Intraoperative Nursing Notes
+The circulating nurse documents real-time intraoperative events:
+- Patient in room time, anesthesia start, incision time, closure time, patient out time
+- Positioning (supine, prone, lateral, lithotomy) and protective padding
+- Instruments, sponge, and needle counts (opening, interim, and closing counts)
+- Implants used (device lot numbers, UDI codes for regulatory compliance)
+- Specimen handling and labeling for pathology
+- Blood products administered (linked to blood bank and BCMA)
+- Electrosurgical settings and pad site skin integrity
+
+#### Anesthesia Documentation
+Anesthesia providers document directly in SurgiNet's anesthesia record:
+- Anesthesia type (general, regional, MAC, local)
+- Airway management details (intubation, LMA, tube size)
+- Continuous vital sign capture (many ORs have automated vital sign feeds)
+- Anesthetic agents administered (gases, IV medications)
+- Fluid balance (crystalloids, colloids, blood products)
+- Regional block documentation with medication details
+- Emergence and extubation notes
+
+#### Instrument and Sponge Counting
+SurgiNet supports automated and manual count workflows:
+- **Manual count**: scrub and circulating nurse count and document at opening, intermittently for long cases, and at closing
+- **Electronic counting** (with RFID-capable systems): RFID-tagged sponges and instruments scanned for automated count verification
+- Discrepancy alert: if closing count does not match opening count, SurgiNet fires a mandatory alert — case cannot proceed until discrepancy is resolved or documented with imaging verification
+
+### 4. PACU (Post-Anesthesia Care Unit) Module
+
+After the patient leaves the OR, PACU nurses use SurgiNet for post-anesthesia recovery documentation:
+- Aldrete scoring (post-anesthesia assessment scale) or other discharge scoring systems
+- Vital sign monitoring (continuous or periodic)
+- PACU pain assessment and medication administration (via eMAR/BCMA link)
+- Nausea and vomiting management
+- Emergence delirium documentation
+- Phase 1 (intensive monitoring) and Phase 2 (step-down) PACU distinction
+- PACU discharge criteria met: score threshold and physician order required
+- Transfer documentation to inpatient unit or same-day surgery discharge
+
+## SurgiNet Case Scheduling
+
+### Surgical Scheduling Integration
+SurgiNet's scheduling module manages the surgical slate (OR schedule):
+1. Surgeon office requests case via **SurgiNet Scheduling Portal** or direct scheduling staff entry
+2. Scheduling coordinator reviews:
+   - Surgeon's block time or open scheduling
+   - Room availability and estimated case duration
+   - Required equipment, implants, special teams
+3. Case is confirmed and appears on the OR tracking board
+4. Patient receives pre-op instructions and appointment confirmation
+5. Pre-admission testing (PAT) orders auto-generated
+
+### Block Scheduling
+- Surgeons are assigned **block time** — reserved OR time for their cases
+- Block time management: release unused blocks (typically by 5 PM the day before)
+- Released blocks become open for other surgeons or emergency add-ons
+- Block utilization reports in **SurgiNet Analytics > OR Utilization Dashboard**
+
+## BCMA Integration in SurgiNet
+
+Medications administered intraoperatively are documented via the BCMA scanning workflow even in the OR setting:
+1. Anesthesia provider or circulating nurse scans patient wristband
+2. Scans medication barcode
+3. Documents route and dose in SurgiNet medication administration record
+4. eMAR/BCMA records are part of the unified medication administration history in PowerChart
+
+For high-alert medications (neuromuscular blocking agents, concentrated electrolytes, opioids), the dual-nurse verification process may be configured — same as inpatient BCMA settings.
+
+## SurgiNet Administration and Configuration
+
+### Accessing SurgiNet Administration
+1. Navigate to **Cerner Solutions > SurgiNet Administration**
+2. Or launch SurgiNet > Administration tab (requires SurgiNet admin security role)
+
+### Configuring OR Rooms and Resources
+1. **OR Room Configuration**: define physical OR rooms, capacity, specialty designation
+2. **Equipment Resource Types**: MRI-compatible equipment flags, robot-assisted surgery designation
+3. **Staff Role Configuration**: define OR-specific staff roles (scrub, circulator, anesthesia tech, OR coordinator)
+4. **Block Schedule Templates**: configure weekly block templates by surgeon or surgical specialty
+
+### Configuring Intraoperative Forms
+1. Navigate to **PowerForms Administration > Intraoperative Documentation**
+2. Customize nursing notes sections for different surgical specialties
+3. Configure sponge and instrument count workflows
+4. Set implant/device documentation requirements (UDI capture fields)
+
+### Configuring PACU Scoring
+1. Navigate to **SurgiNet Administration > PACU Configuration**
+2. Select scoring system (Aldrete, Modified Aldrete, MPADSS)
+3. Configure minimum score thresholds for PACU discharge
+4. Set vital sign monitoring frequency defaults
+
+## Key SurgiNet Metrics and Reporting
+
+SurgiNet feeds the perioperative analytics dashboards:
+- **OR utilization**: % of scheduled block time actually used
+- **First case on-time start**: % of first cases starting within 15 minutes of scheduled time
+- **Turnover time**: average time between one case out and next case in
+- **Surgical site infection (SSI) rate**: linked to infection prevention reporting
+- **Implant tracking**: regulatory reporting for device recalls
+
+Access OR analytics: **Discern Analytics > Perioperative Performance Dashboard** or **SurgiNet Analytics > OR Utilization**
+
+## SurgiNet Safety and Compliance
+
+- All documentation is time-stamped and user-attributed for joint commission compliance
+- The WHO Surgical Safety Checklist workflow is configurable and enforcement can be mandatory
+- SurgiNet supports surgical case documentation export for NSQIP (National Surgical Quality Improvement Program) reporting
+- Implant/UDI data can be submitted to device registries per 21st Century Cures Act requirements

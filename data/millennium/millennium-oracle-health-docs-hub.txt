@@ -1,0 +1,80 @@
+Oracle Health Applications Documentation Hub
+Source: https://docs.oracle.com/en/industries/health/
+Scraped: 2026-04-19
+
+==============================================================
+
+Overview
+
+Connected technologies and unified data empower individuals and enable the health ecosystem to accelerate innovation and influence health outcomes. Oracle Health is building an open healthcare platform with intelligent tools for data-driven, human-centric healthcare experiences to connect consumers, healthcare providers, payers, and public health and life sciences organizations.
+
+Resources:
+- Oracle Health Community
+- Oracle Health Support Services
+- Healthcare Support
+
+Healthcare Applications
+
+Health AI Application Suite:
+- Oracle Health EHR
+- Oracle Health Patient Administration
+- Oracle Health Patient Portal
+
+Healthcare Platform:
+- Oracle Healthcare Foundation
+- Clinical Applications
+- Consumer Experience
+- Population Health
+- Oracle Health Services
+- Revenue Cycle and Consumer Management Platform
+
+Health Claims, Prior Authorizations, and Payments:
+- Oracle Health Clinical Data Exchange
+- Oracle Health Connection Hub
+- Clinical and Financial Operations
+
+Healthcare Research:
+- Healthcare Translational Research
+- Health Sciences Translational Research Center
+
+Health Sciences Information Exchange:
+- Healthcare Master Person Index
+- Health Sciences Information Manager
+- Healthcare Data Repository
+
+Health Data Intelligence:
+- Oracle Health Quality Management
+- Oracle Health Quality Management for Payers
+- Oracle Life Sciences AI Data Platform
+
+Oracle Health APIs
+
+Health Data Intelligence:
+- Oracle Health Data Intelligence
+
+Revenue Cycle:
+- Revenue Cycle Management
+
+Millennium:
+- Oracle Health Millennium Platform
+
+Soarian:
+- Oracle Soarian Clinicals
+
+Public Health Applications
+
+COVID-19 Pandemic Response:
+- COVID-19 Patient Monitoring System
+
+Health Management:
+- Oracle Health Immunization Management Cloud Service
+
+Incident Response Orders:
+- Oracle Health Response Readiness
+
+COVID-19 Data Clearinghouse:
+- Data Clearinghouse
+
+Oracle Health Mission
+
+Oracle Health's mission is to work with organizations to solve challenges and improve the accessibility and quality of global healthcare. The platform is designed to be open — enabling third-party developers and health system partners to extend and integrate through standard FHIR APIs.

@@ -1,0 +1,306 @@
+# SOURCE: AHRQ PSNet Primer — Handoffs and Signouts
+# URL: https://psnet.ahrq.gov/primer/handoffs-and-signouts
+# MODULE: PowerChart
+# RETRIEVED: 2026-05-07
+# ---
+
+Handoffs
+
+Citation Text:
+
+Handoffs and Signouts. PSNet [internet]. Rockville (MD): Agency for Healthcare Research and Quality, US Department of Health and Human Services. 2019.
+
+Copy Citation
+
+Format:
+
+Google Scholar
+BibTeX
+EndNote X3 XML
+EndNote 7 XML
+Endnote tagged
+PubMedId
+RIS
+
+Download Citation
+
+Save
+
+ 
+Save to your library
+
+Print
+
+Download PDF
+
+Share
+
+Facebook
+
+Twitter
+
+Linkedin
+
+Copy URL
+
+ Cite
+ 
+
+ Citation
+
+Citation Text:
+
+Handoffs and Signouts. PSNet [internet]. Rockville (MD): Agency for Healthcare Research and Quality, US Department of Health and Human Services. 2019.
+
+Copy Citation
+
+Format:
+
+Google Scholar
+BibTeX
+EndNote X3 XML
+EndNote 7 XML
+Endnote tagged
+PubMedId
+RIS
+
+Download Citation
+
+UC Davis PSNet Editorial Team | June 15, 2024
+
+PSNet primers are regularly reviewed and updated by the UC Davis PSNet Editorial Team to ensure that they reflect current research and practice in the patient safety field. Last reviewed in 2024.
+Background
+A 
+handoff
+ is the process of one healthcare provider updating another of the status of one or more patients for the purpose of handing over responsibility for their care. This can include a physician updating another at the change of shift, a nurse transitioning a patient from one department to another, or 
+emergency medical services
+ handing off a patient to the emergency department.
+This Primer will discuss handoffs in the context of transfers of care during hospitalization. For information about safety issues at the time of hospital discharge, please see the related Patient Safety Primers 
+Adverse Events after Hospital Discharge
+ and 
+Post-Acute Transitional Services: Safety in Home-Based Care Programs
+.
+Handoffs have been linked to adverse clinical events in settings ranging from the 
+emergency department
+ to the intensive care unit. One 
+study
+ found that being cared for by a covering resident was a risk factor for preventable adverse events; more recently, communication failures between providers have been found to be a leading cause of preventable error in studies of closed malpractice claims affecting 
+emergency physicians
+ and 
+trainees
+. The seemingly straightforward act of communicating an accurate medication list is a 
+well-recognized
+ source of error. To avert this problem, hospitals are required to "reconcile" medications across the continuum of care. (For more information, see the related Primer "
+Medication Reconciliation
+.")
+Implementing Effective Handoff Protocols
+Guidelines for safe handoffs focus on standardizing the process. Efforts to improve the quality of clinical handoffs must enhance the quality of both written and verbal communication. In addition to accurate and complete written information, effective handoffs require an environment free of interruptions and distractions, allowing for the clinician receiving the handoff to listen actively and engage in a discussion when necessary. 
+The seminal 
+I-PASS study
+ demonstrated that in a teaching hospital setting, implementation of a standardized handoff bundle—which included a mnemonic for standardized oral and written information, training in handoff communication, faculty development, and efforts to ensure sustainability—markedly reduced the incidence of preventable adverse events associated with handoffs. The I-PASS mnemonic stands for:
+Illness severity: one-word summary of patient acuity ("stable," "watcher," or "unstable")
+Patient summary: brief summary of the patient's diagnoses and treatment plan
+Action list: to-do items to be completed by the clinician receiving signout
+Situation awareness and contingency plans: directions to follow in case of changes in the patient's status, often in an "if—then" format
+Synthesis by receiver: an opportunity for the receiver to ask questions and confirm the plan of care
+The I-PASS signout format is considered the gold standard for effective signout communication between physicians and has also been shown to improve the quality of 
+nursing handoffs
+. The I-PASS handoff tool has been effective in 
+cancer care
+ and 
+pediatric
+ emergency care. It has also been 
+adapted
+ to include patients and families. 
+Another structured handoff tool is 
+Situation, Background, Assessment, Recommendation
+ (SBAR). 
+S
+ituation: What is happening at the moment? (Describe the current issue or concern.)
+B
+ackground: What is the context? (Provide relevant patient history, background, or any pertinent information.)
+A
+ssessment: What do you think the problem is? (State your analysis or interpretation of the situation.)
+R
+ecommendation: What would you suggest or recommend? (Propose the next steps or actions needed.)
+SBAR helps ensure that communication between 
+healthcare
+ professionals is organized, minimizing misunderstandings and improving patient safety. Results are mixed on the 
+effectiveness
+ of SBAR in improving transfer of information. A systematic 
+review
+ found that when it was bundled with other safety interventions, patient outcomes improved. 
+Hospitals may also develop and implement bespoke handoff tools. The University of Pennsylvania developed a handoff tool in the 
+Handoffs and Transitions in Critical Care (HATRICC)
+ prospective cohort study to improve communication between operating room and intensive care unit providers. A simulation study in the United Kingdom tested the 
+Traffic Light
+ communication tool with operating room staff. Traffic light yielded more accurate information transfer, took less time to use, and was preferred by the majority of study participants compared to SBAR. Researchers are also considering how 
+artificial intelligence
+ could support patient handoffs.
+Current Context
+In 2006, the Joint Commission established a 
+National Patient Safety Goal
+ that addressed handoffs and four years later established it as a Provision of Care standard (PC.02.02.01). The standard that requires “the organization's process for hand-off communication provides for the opportunity for discussion between the giver and receiver of patient.” A 
+Sentinel Event Alert
+ was issued in 2017 to improve the quality of hand off communication. The Joint Commission does not recommend a specific handoff tool, but states the communication should include content such as illness assessment, patient summary, to-do action list, and contingency plans, and be delivered face-to-face whenever possible. 
+The Accreditation Council for Graduate Medical Education also requires that 
+residency programs
+ maintain formal educational programs in handoffs and 
+care transitions
+.
+
+This project was funded under contract number 75Q80119C00004 from the Agency for Healthcare Research and Quality (AHRQ), U.S. Department of Health and Human Services. The authors are solely responsible for this report’s contents, findings, and conclusions, which do not necessarily represent the views of AHRQ. Readers should not interpret any statement in this report as an official position of AHRQ or of the U.S. Department of Health and Human Services. None of the authors has any affiliation or financial involvement that conflicts with the material presented in this report. 
+View AHRQ Disclaimers
+
+Save
+
+ 
+Save to your library
+
+Print
+
+Download PDF
+
+Share
+
+Facebook
+
+Twitter
+
+Linkedin
+
+Copy URL
+
+ Cite
+ 
+
+ Citation
+
+Citation Text:
+
+Handoffs and Signouts. PSNet [internet]. Rockville (MD): Agency for Healthcare Research and Quality, US Department of Health and Human Services. 2019.
+
+Copy Citation
+
+Format:
+
+Google Scholar
+BibTeX
+EndNote X3 XML
+EndNote 7 XML
+Endnote tagged
+PubMedId
+RIS
+
+Download Citation
+
+Sections
+
+Background
+
+Current Context
+
+Editor's Picks
+
+ 
+A scoping review of clinical handover mnemonic devices.
+October 18, 2023
+
+Long-term sustainability and adaptation of I-PASS handovers.
+September 13, 2023
+
+An evidence synthesis on perioperative handoffs: a call for balanced sociotechnical solutions.
+April 5, 2023
+
+Perioperative handoff enhancement opportunities through technology and artificial intelligence: a narrative review.
+June 14, 2023
+
+View More
+
+Related WebM&M
+
+ 
+Miscommunication During the Interhospital Transport of a Critically Ill Child
+August 31, 2022
+
+Adverse Event During Intrahospital Transport
+February 1, 2019
+
+Triaging Interhospital Transfers
+February 1, 2019
+
+Perspectives on Safety
+
+ 
+In Conversation With… Amy J. Starmer, MD, MPH
+April 1, 2016
+
+What Have We Learned About Safe Inpatient Handovers?
+March 1, 2011
+
+Related Resources
+
+Patient Safety Primers
+
+Inpatient Transitions of Care: Challenges and Safety Practices
+
+March 27, 2024
+
+Annual Perspective
+
+Improving Diagnostic Safety and Quality 
+
+April 26, 2023
+
+Effect of a multispecialty faculty handoff initiative on safety culture and handoff quality.
+
+April 20, 2022
+
+Does a unit shift report "blackout" period improve patient safety?
+
+April 10, 2019
+
+A standardized handoff simulation promotes recovery from auditory distractions in resident physicians.
+
+August 14, 2018
+
+Quality of handoffs in community pharmacies.
+
+May 10, 2017
+
+Shift change handovers and subsequent interruptions: potential impacts on quality of care.
+
+September 24, 2016
+
+WebM&M Cases
+
+All in the History
+
+March 21, 2009
+
+WebM&M Cases
+
+Triple Handoff
+
+September 1, 2006
+
+WebM&M Cases
+
+Fumbled Handoff
+
+March 1, 2004
+
+View More
+
+See More About The Topic
+
+ 
+ Hospital Medicine
+
+ Discontinuities, Gaps, and Hand-Off Problems
+
+ Interruptions and distractions
+
+ Active Errors
+
+ Structured Hand-offs

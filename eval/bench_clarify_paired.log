@@ -1,0 +1,140 @@
+[Redis] Unavailable (Timeout connecting to server). Falling back to in-memory cache.
+========================================================================
+Slice 1: BGE-failing new-25 queries (expect TRUE on clarify, FALSE on answer)
+========================================================================
+[QueryRewriter] intent=question  modules=['REVENUE_CYCLE', 'CLINICAL']  ambiguous=False  needs_clarify=True  formal='minor patient registration guarantor custody arrangement wor'
+  [hs-clerk-013          ] expected=clarify  needs_clar=True   OK
+      q: "Could you tell me whether there's a legal guardian on record, or are you working from a divorced/separated-parent custody arrangem"
+[QueryRewriter] intent=question  modules=['MILLENNIUM']  ambiguous=False  needs_clarify=False  formal='Cerner Millennium MPages portal accessibility-compliant comp'
+  [hs-it-014             ] expected=answer   needs_clar=False  OK
+[QueryRewriter] intent=question  modules=['CLINICAL']  ambiguous=False  needs_clarify=True  formal='restraint order escalation workflow for patient safety vs on'
+  [hs-nurse-019          ] expected=clarify  needs_clar=True   OK
+      q: 'Could you tell me whether the immediate concern is patient safety right now, or are you asking about the workflow for placing a CM'
+[QueryRewriter] intent=troubleshooting  modules=['FHIR']  ambiguous=False  needs_clarify=True  formal='Sepsis BPA bundle compliance and dismissal workflow'
+  [hs-nurse-020          ] expected=clarify  needs_clar=True   OK
+      q: 'Could you tell me whether all the CMS SEP-1 bundle elements have been documented (lactate, blood cultures, fluids, antibiotics wit'
+[QueryRewriter] intent=question  modules=['POWERCHART']  ambiguous=False  needs_clarify=False  formal='Saving a custom medication order set as a favorite in PowerC'
+  [hs-physician-012      ] expected=answer   needs_clar=False  OK
+  Slice 1: 5/5 matched expectation
+
+========================================================================
+Slice 2: currently-passing answer queries (any TRUE is an FP regression)
+========================================================================
+  Testing 54 passing-answer queries...
+[QueryRewriter] intent=troubleshooting  modules=['CLINICAL']  ambiguous=False  needs_clarify=False  formal='BCMA barcode medication administration scan failure troubles'
+  [ 1/54] [hs-nurse-001          ] needs_clar=False  ok
+[QueryRewriter] intent=troubleshooting  modules=['POWERCHART']  ambiguous=False  needs_clarify=False  formal='patient list filter location membership checks in PowerChart'
+  [ 2/54] [hs-nurse-002          ] needs_clar=False  ok
+[QueryRewriter] intent=troubleshooting  modules=['CLINICAL']  ambiguous=False  needs_clarify=False  formal='BCMA override prompt stuck workflow'
+  [ 3/54] [hs-nurse-004          ] needs_clar=False  ok
+[QueryRewriter] intent=troubleshooting  modules=['CLINICAL']  ambiguous=False  needs_clarify=False  formal='late administration correction workflow for medication admin'
+  [ 4/54] [hs-nurse-005          ] needs_clar=False  ok
+[QueryRewriter] intent=question  modules=['CLINICAL']  ambiguous=False  needs_clarify=False  formal='allergy display in medication administration list workflow'
+  [ 5/54] [hs-nurse-006          ] needs_clar=False  ok
+[QueryRewriter] intent=troubleshooting  modules=['CLINICAL']  ambiguous=False  needs_clarify=False  formal='BCMA barcode medication administration patient wristband sca'
+  [ 6/54] [hs-nurse-008          ] needs_clar=False  ok
+[QueryRewriter] intent=troubleshooting  modules=['CLINICAL']  ambiguous=False  needs_clarify=False  formal='eMAR medication administration record drug interaction alert'
+  [ 7/54] [hs-nurse-009          ] needs_clar=False  ok
+[QueryRewriter] intent=question  modules=['CLINICAL']  ambiguous=False  needs_clarify=False  formal='eMAR medication administration record home medication docume'
+  [ 8/54] [hs-nurse-010          ] needs_clar=False  ok
+[QueryRewriter] intent=follow_up  modules=['POWERCHART', 'CLINICAL']  ambiguous=False  needs_clarify=False  formal='patient account lookup workflow in PowerChart clinical docum'
+  [ 9/54] [hs-clerk-001          ] needs_clar=False  ok
+[QueryRewriter] intent=troubleshooting  modules=['REVENUE_CYCLE']  ambiguous=False  needs_clarify=False  formal='insurance verification failure due to active coverage in pay'
+  [10/54] [hs-clerk-002          ] needs_clar=False  ok
+[QueryRewriter] intent=question  modules=['REVENUE_CYCLE']  ambiguous=False  needs_clarify=False  formal='patient outstanding balance and last payment display in Mill'
+  [11/54] [hs-clerk-005          ] needs_clar=False  ok
+[QueryRewriter] intent=troubleshooting  modules=['REVENUE_CYCLE']  ambiguous=False  needs_clarify=False  formal='Discharge disposition error on claim with patient discharged'
+  [12/54] [hs-clerk-007          ] needs_clar=False  ok
+[QueryRewriter] intent=troubleshooting  modules=['REVENUE_CYCLE']  ambiguous=False  needs_clarify=False  formal='Cerner revenue cycle payer crosswalk update workflow'
+  [13/54] [hs-clerk-008          ] needs_clar=False  ok
+[QueryRewriter] intent=question  modules=['REVENUE_CYCLE']  ambiguous=False  needs_clarify=False  formal='patient payment plan setup workflow in Cerner revenue cycle'
+  [14/54] [hs-clerk-009          ] needs_clar=False  ok
+[QueryRewriter] intent=troubleshooting  modules=['REVENUE_CYCLE']  ambiguous=False  needs_clarify=False  formal='late charge correction process after claim submission'
+  [15/54] [hs-clerk-011          ] needs_clar=False  ok
+[QueryRewriter] intent=question  modules=['REVENUE_CYCLE']  ambiguous=False  needs_clarify=False  formal='W-9 attachment and separate billing address requirements for'
+  [16/54] [hs-clerk-012          ] needs_clar=False  ok
+[QueryRewriter] intent=question  modules=['POWERCHART']  ambiguous=False  needs_clarify=False  formal='CPOE medication order entry workflow from patient chart'
+  [17/54] [hs-physician-001      ] needs_clar=False  ok
+[QueryRewriter] intent=troubleshooting  modules=['POWERCHART']  ambiguous=False  needs_clarify=False  formal='CPOE medication order entry order set default medication loa'
+  [18/54] [hs-physician-002      ] needs_clar=False  ok
+[QueryRewriter] intent=question  modules=['CLINICAL']  ambiguous=False  needs_clarify=False  formal='eMAR medication renewal workflow'
+  [19/54] [hs-physician-003      ] needs_clar=False  ok
+[QueryRewriter] intent=question  modules=['CLINICAL']  ambiguous=False  needs_clarify=False  formal='unsigned clinical documentation workflow and potential conse'
+  [20/54] [hs-physician-004      ] needs_clar=False  ok
+[QueryRewriter] intent=question  modules=['POWERCHART']  ambiguous=False  needs_clarify=False  formal='Bulk acknowledging normal results in PowerChart result revie'
+  [21/54] [hs-physician-007      ] needs_clar=False  ok
+[QueryRewriter] intent=troubleshooting  modules=['CLINICAL']  ambiguous=False  needs_clarify=False  formal='duplicate problem entry in problem list vs historical record'
+  [22/54] [hs-physician-008      ] needs_clar=False  ok
+[QueryRewriter] intent=question  modules=['POWERCHART']  ambiguous=False  needs_clarify=False  formal='PowerChart clinical documentation Millennium search workflow'
+  [23/54] [hs-physician-009      ] needs_clar=False  ok
+[QueryRewriter] intent=troubleshooting  modules=['POWERCHART']  ambiguous=False  needs_clarify=False  formal='PowerChart login access denied troubleshooting'
+  [24/54] [hs-it-001             ] needs_clar=False  ok
+[QueryRewriter] intent=question  modules=['MILLENNIUM']  ambiguous=False  needs_clarify=False  formal='Millennium domain architecture PROD CERT BUILD differences'
+  [25/54] [hs-it-002             ] needs_clar=False  ok
+[QueryRewriter] intent=troubleshooting  modules=['MILLENNIUM']  ambiguous=False  needs_clarify=False  formal='MILLENNIUM JavaScript error logging for MPage component in p'
+  [26/54] [hs-it-003             ] needs_clar=False  ok
+[QueryRewriter] intent=troubleshooting  modules=['REVENUE_CYCLE']  ambiguous=False  needs_clarify=False  formal='User provisioning permission error workflow'
+  [27/54] [hs-it-004             ] needs_clar=False  ok
+[QueryRewriter] intent=question  modules=['MILLENNIUM']  ambiguous=False  needs_clarify=False  formal='Millennium user role assignment lookup without Bedrock'
+  [28/54] [hs-it-005             ] needs_clar=False  ok
+[QueryRewriter] intent=troubleshooting  modules=['MILLENNIUM']  ambiguous=False  needs_clarify=False  formal='MILLENNIUM domain refresh data persistence issue'
+  [29/54] [hs-it-006             ] needs_clar=False  ok
+[QueryRewriter] intent=troubleshooting  modules=['MILLENNIUM']  ambiguous=False  needs_clarify=False  formal='Millennium Active Directory user synchronization issue'
+  [30/54] [hs-it-007             ] needs_clar=False  ok
+[QueryRewriter] intent=troubleshooting  modules=['MILLENNIUM']  ambiguous=False  needs_clarify=False  formal='Millennium service restart troubleshooting after patch insta'
+  [31/54] [hs-it-008             ] needs_clar=False  ok
+[QueryRewriter] intent=troubleshooting  modules=['CLINICAL']  ambiguous=False  needs_clarify=False  formal='CPOE medication order entry workflow for nurses'
+  [32/54] [hs-cross-002          ] needs_clar=False  ok
+[QueryRewriter] intent=troubleshooting  modules=['REVENUE_CYCLE', 'CLINICAL']  ambiguous=False  needs_clarify=False  formal='charge capture vs clinical documentation for procedure billi'
+  [33/54] [hs-cross-003          ] needs_clar=False  ok
+[QueryRewriter] intent=troubleshooting  modules=['POWERCHART']  ambiguous=False  needs_clarify=False  formal='PowerChart task completion status discrepancy between order '
+  [34/54] [hs-cross-006          ] needs_clar=False  ok
+[QueryRewriter] intent=question  modules=['CLINICAL']  ambiguous=False  needs_clarify=False  formal='Rapid response workflow for shock-level blood pressure readi'
+  [35/54] [hs-cross-009          ] needs_clar=False  ok
+[QueryRewriter] intent=question  modules=['FHIR', 'MILLENNIUM']  ambiguous=False  needs_clarify=False  formal='Cerner FHIR R4 API billing account resource exposure'
+  [36/54] [hs-it-009             ] needs_clar=False  ok
+[QueryRewriter] intent=question  modules=['FHIR']  ambiguous=False  needs_clarify=False  formal='FHIR R4 patient resource API query for retrieving combined l'
+  [37/54] [hs-it-010             ] needs_clar=False  ok
+[QueryRewriter] intent=question  modules=['FHIR']  ambiguous=False  needs_clarify=False  formal='FHIR cross-organization patient identity resource'
+  [38/54] [hs-it-011             ] needs_clar=False  ok
+[QueryRewriter] intent=question  modules=['FHIR']  ambiguous=False  needs_clarify=False  formal='FHIR resource for retrieving pacemaker implant history'
+  [39/54] [hs-it-012             ] needs_clar=False  ok
+[QueryRewriter] intent=question  modules=['MILLENNIUM']  ambiguous=False  needs_clarify=False  formal='Cerner engineering recommended patterns for migrating monoli'
+  [40/54] [hs-it-013             ] needs_clar=False  ok
+[QueryRewriter] intent=question  modules=['MILLENNIUM']  ambiguous=False  needs_clarify=False  formal='Millennium API integration canonical index'
+  [41/54] [hs-it-015             ] needs_clar=False  ok
+[QueryRewriter] intent=question  modules=['MILLENNIUM', 'FHIR']  ambiguous=False  needs_clarify=False  formal='Cerner Clinical Knowledge Manager CCL data extraction workfl'
+  [42/54] [hs-it-016             ] needs_clar=False  ok
+[QueryRewriter] intent=question  modules=['MILLENNIUM']  ambiguous=False  needs_clarify=False  formal='Millennium Oracle Cloud Infrastructure migration operational'
+  [43/54] [hs-it-017             ] needs_clar=False  ok
+[QueryRewriter] intent=question  modules=['POWERCHART']  ambiguous=False  needs_clarify=False  formal='PowerChart patient list unit assignment workflow'
+  [44/54] [hs-nurse-016          ] needs_clar=False  ok
+[QueryRewriter] intent=question  modules=['POWERCHART', 'CLINICAL']  ambiguous=False  needs_clarify=False  formal='Discharge medication reconciliation home medication carry-fo'
+  [45/54] [hs-physician-011      ] needs_clar=False  ok
+[QueryRewriter] intent=troubleshooting  modules=['CLINICAL']  ambiguous=False  needs_clarify=False  formal='CPOE order reversal workflow before pharmacy verification'
+  [46/54] [hs-physician-014      ] needs_clar=False  ok
+[QueryRewriter] intent=question  modules=['CLINICAL']  ambiguous=False  needs_clarify=False  formal='Discharge medication reconciliation patient stopped taking b'
+  [47/54] [hs-nurse-017          ] needs_clar=False  ok
+[QueryRewriter] intent=troubleshooting  modules=['POWERCHART', 'CLINICAL']  ambiguous=False  needs_clarify=False  formal='BCMA scanner connectivity issues during medication administr'
+  [48/54] [hs-nurse-018          ] needs_clar=False  ok
+[QueryRewriter] intent=question  modules=['REVENUE_CYCLE']  ambiguous=False  needs_clarify=False  formal='ICD-10 and CPT code placement on claim documentation'
+  [49/54] [hs-clerk-014          ] needs_clar=False  ok
+[QueryRewriter] intent=troubleshooting  modules=['REVENUE_CYCLE']  ambiguous=False  needs_clarify=False  formal='CO-97 denial reason in revenue cycle claim processing workfl'
+  [50/54] [hs-clerk-015          ] needs_clar=False  ok
+[QueryRewriter] intent=question  modules=['REVENUE_CYCLE']  ambiguous=False  needs_clarify=False  formal='clean claim flagging in revenue cycle claim scrubber workflo'
+  [51/54] [hs-clerk-016          ] needs_clar=False  ok
+[QueryRewriter] intent=question  modules=['REVENUE_CYCLE']  ambiguous=False  needs_clarify=False  formal='RevElate revenue cycle platform daily AR workflow changes'
+  [52/54] [hs-clerk-017          ] needs_clar=False  ok
+[QueryRewriter] intent=question  modules=['CLINICAL']  ambiguous=False  needs_clarify=False  formal='BCMA high-alert medication workflow second-nurse verificatio'
+  [53/54] [hs-nurse-021          ] needs_clar=False  ok
+[QueryRewriter] intent=troubleshooting  modules=['CLINICAL']  ambiguous=False  needs_clarify=False  formal='eMAR pain assessment template numeric score documentation wo'
+  [54/54] [hs-nurse-022          ] needs_clar=False  ok
+
+  Slice 2 false positives: 0/54
+
+========================================================================
+SUMMARY
+========================================================================
+  Slice 1 (5 BGE-failing new-25)        : 5/5 correct
+  Slice 2 (passing-answer regression)   : 0 FPs / 54 tested
+  Net delta if shipped: +5 (no regressions)

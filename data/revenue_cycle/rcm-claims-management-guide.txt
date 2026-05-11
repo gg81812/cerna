@@ -1,0 +1,143 @@
+# SOURCE: Cerner Claims Management Guide
+# URL: https://wiki.cerner.com/display/public/1101rcm/Claims+Management+Guide
+# MODULE: Revenue Cycle
+# RETRIEVED: 2026-04-01
+# ---
+
+# Cerner Claims Management Guide
+
+## What is Claims Management?
+
+Claims management encompasses the processes of generating healthcare claims, scrubbing them for errors, submitting them to payers, tracking their adjudication status, and posting payments. In Cerner Millennium, claims management is handled through the Claims Management module (part of the RevElate Revenue Cycle suite), which integrates with clearinghouses and payer systems via standard EDI (Electronic Data Interchange) transactions.
+
+## Claims and EDI Transaction Types
+
+| Transaction | Direction | Purpose |
+|---|---|---|
+| 837P | Outbound | Professional claim (physician billing) |
+| 837I | Outbound | Institutional claim (hospital billing, UB-04) |
+| 835 | Inbound | Electronic remittance advice (payment/denial explanation) |
+| 270/271 | Out/In | Eligibility inquiry and response |
+| 276/277 | Out/In | Claim status inquiry and response |
+| 278 | Out/In | Prior authorization request and response |
+
+## Claim Generation Workflow
+
+### Triggering Claim Generation
+
+Claims are generated after:
+1. All charge lines for the encounter have been reviewed and approved.
+2. Coding is complete (ICD-10-CM diagnosis codes assigned; CPT/procedure codes confirmed).
+3. For inpatient accounts: discharge is complete and the discharge summary is signed.
+
+The system batches approved accounts into claim generation runs. Claim generation frequency:
+- Outpatient: typically daily (same day or next day after service)
+- Inpatient: after discharge (typically within 1–3 days)
+- Emergency: after discharge or registration close
+
+### Claim Scrubbing
+
+Before submission, claims run through a scrubbing engine that checks:
+- Required fields present (patient demographics, payer ID, provider NPI, diagnosis codes, procedure codes)
+- Valid ICD-10-CM codes (no unspecified codes where more specific codes are available)
+- Valid CPT/HCPCS codes for the payer's covered services
+- Diagnosis code supports medical necessity for each procedure code
+- Modifier validity and appropriate use
+- Revenue code-CPT code compatibility (for institutional claims)
+- NPI and taxonomy code for the billing provider
+- Payer-specific edits (each payer has its own additional rules)
+
+Claims that pass scrubbing are submitted to the clearinghouse. Claims that fail scrubbing are held in the "Claim Edit" queue for resolution.
+
+### Clearinghouse Submission
+
+Cerner integrates with clearinghouses (Change Healthcare, Availity, Waystar, etc.) that:
+- Validate the claim format and EDI transaction
+- Route the claim to the appropriate payer
+- Return a 999 transaction (claim acknowledgment) confirming receipt
+- Return a 277CA (claim acknowledgment) confirming the claim was forwarded to the payer
+
+Claims received and accepted by the payer enter the payer's adjudication process.
+
+## Tracking Claim Status
+
+### Claim Status Inquiry (276/277)
+
+After submission, claim status can be queried electronically:
+1. Cerner sends a 276 transaction (Claim Status Inquiry) to the payer.
+2. Payer returns a 277 transaction (Claim Status Response) indicating: Received, Pending, Adjudicated (paid or denied).
+
+In the Cerner Claims Management module:
+- Open the account in the Claims workscreen.
+- View the claim lifecycle: Submitted → Acknowledged → Adjudicated.
+- For claims pending >30 days: work the claim via phone or payer portal to determine status.
+
+### Claim Lifecycle Statuses
+
+| Status | Meaning |
+|---|---|
+| Generated | Claim created, not yet submitted |
+| Submitted | Sent to clearinghouse |
+| Acknowledged | Clearinghouse accepted and forwarded to payer |
+| Pended | Payer is holding for additional information |
+| Paid | Payer issued payment (835 received) |
+| Denied | Payer denied the claim (835 with denial remark code received) |
+| Appealed | Denial was formally appealed |
+
+## Remittance Processing (835)
+
+When the payer processes the claim, they return an 835 Electronic Remittance Advice (ERA):
+- Identifies which claims were paid, denied, or adjusted
+- Includes payment amounts and reason/remark codes for any adjustments
+
+Cerner automatically posts:
+- Payment amounts to the patient's account
+- Contractual adjustments (the difference between the billed charge and the contracted rate)
+- Denial codes to the denial management workflow
+
+After payment posting:
+- If a balance remains: patient responsibility (co-pay, deductible, co-insurance) is calculated and moved to patient billing.
+- Zero-balance accounts are closed.
+
+## Managing Claim Edits
+
+### Claim Edit Workflow
+
+1. Open Claims Management > Claim Edits queue.
+2. Accounts with scrubbing failures appear sorted by edit type and service date.
+3. For each account: review the edit description and resolve:
+   - Correct missing or incorrect data in the account or charge lines.
+   - Add or modify diagnosis codes to support medical necessity.
+   - Correct provider NPI or taxonomy code.
+   - Add payer-required attachments.
+4. Re-submit the corrected claim.
+
+### Common Claim Edits
+
+- Missing NPI — billing provider NPI not configured; update Provider Master in Cerner Administration.
+- Invalid diagnosis code — ICD-10-CM code not in current fiscal year codeset; requires coding review.
+- No authorization on file — prior authorization not entered on the account; obtain retroactively or document exemption.
+- Duplicate claim — payer already received a claim for this encounter; check if the original was paid or denied first.
+- Non-covered service — CPT code not covered by payer for this patient's plan; verify coverage or add medical necessity documentation.
+
+## Timely Filing
+
+Each payer has a deadline for claim submission (timely filing limit):
+- Medicare: 1 year from date of service
+- Medicaid: varies by state (30 days–1 year)
+- Commercial payers: typically 90–180 days from service date (per contract)
+
+Claims submitted after the timely filing limit are denied without right of appeal. Timely filing denials represent 100% revenue loss.
+
+Monitor via HealtheAnalytics:
+- Timely Filing Risk Report — accounts approaching their payer-specific timely filing deadline
+- Alert threshold: flag accounts 30 days before the deadline for priority review
+
+## Best Practices
+
+1. Establish daily claim generation runs — do not allow charge batches to accumulate.
+2. Monitor claim scrubbing first-pass rates — high edit rates indicate systemic upstream problems (CDM, coding, charge capture).
+3. Set timely filing alerts at 30-day warning and 7-day critical thresholds.
+4. Reconcile 835 remittance files daily — unposted ERAs hide true AR balance and inflate AR days.
+5. Review unacknowledged claims daily (no 999 response from clearinghouse) — these claims may have been lost in transmission.
+6. Maintain a clearinghouse dashboard — monitor real-time acceptance/rejection rates at the clearinghouse level.

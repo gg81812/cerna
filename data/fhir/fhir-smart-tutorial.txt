@@ -1,0 +1,91 @@
+Accessing Cerner's FHIR API — SMART on FHIR Tutorial
+Source: https://kyledcrews.medium.com/playing-with-fhir-2e3b7568968f
+Reference: https://engineering.cerner.com/smart-on-fhir-tutorial/
+Scraped: 2026-04-19
+
+==============================================================
+
+Background on Healthcare IT
+
+Healthcare records traditionally rely on fax and HL7 (an older electronic exchange framework). These systems are "complicated, expensive, limited in their functionality, and suffer from a lack of standardization."
+
+Health Information Exchanges (HIEs) function in three primary ways:
+1. Centralized Repository: Collects clinical records from healthcare facilities across a community, state, or nation. Records transfer via HL7, SMTP, or SFTP.
+2. Single Connection Point: Eliminates need for multiple expensive interfaces between disparate EHR systems. Rather than building individual connections costing ~$10,000 each, facilities create one interface to the HIE.
+3. Secure Exchange Platform: Facilitates document, record, image, and diagnostic asset exchange.
+
+What is FHIR?
+
+FHIR (Fast Healthcare Interoperability Resources) is the newest iteration of HL7. "The philosophy behind FHIR is to build a base set of resources that satisfy common use cases."
+
+Benefits:
+- Faster implementations
+- Easier care coordination
+- Lower costs
+- Real-time requests without extensive infrastructure
+
+Accessing Cerner's FHIR API — Step by Step
+
+Step 1: Clone the Cerner SMART tutorial repository:
+  git clone git@github.com:cerner/smart-on-fhir-tutorial.git
+
+Step 2: Obtain authorization code from your developer profile at https://code.cerner.com
+
+Step 3: Locate fhir-client.js in the lib folder and install dependencies
+
+Step 4: Add your authorization code to launch.html
+
+Step 5: Launch the sandbox using launch-patient.html
+
+Key Files in the Tutorial
+
+- launch.html: Entry point that initiates the SMART authorization workflow
+- launch-patient.html: Entry point for standalone patient applications
+- launch-smart-sandbox.html: Configured for SMART Health IT Sandbox testing
+
+Full Instructions: https://engineering.cerner.com/smart-on-fhir-tutorial/#project-setup
+
+SMART App Authorization Flow
+
+1. App is launched (either from EHR or standalone)
+2. App redirects to Cerner's authorization endpoint
+3. User authenticates with CernerCare credentials
+4. User consents to requested scopes
+5. Authorization server returns authorization code
+6. App exchanges code for access token and refresh token
+7. App uses access token in Authorization: Bearer header for FHIR API calls
+
+Key Concepts
+
+Scopes: Fine-grained access control
+- patient/Patient.read: Read the current patient's demographic data
+- patient/Observation.read: Read vital signs and lab results
+- patient/MedicationRequest.read: Read medication orders
+- user/Appointment.read: Read appointments
+
+Contexts: EHR launch passes context as URL parameters
+- launch: Launch token
+- iss: FHIR server base URL
+- patient: Patient ID in context
+
+Sandbox Environment
+
+Cerner provides open sandbox FHIR endpoints for testing:
+- Open (unauthenticated): https://fhir-open.cerner.com/r4/{tenant-id}/
+- Secure (OAuth required): https://fhir-ehr.sandboxcerner.com/r4/{tenant-id}/
+
+Public test tenant: ec2458f2-1e24-41c8-b71b-0e701af7583d
+
+Example API Calls
+
+Get patient demographics:
+GET https://fhir-open.cerner.com/r4/ec2458f2-1e24-41c8-b71b-0e701af7583d/Patient/12724066
+Accept: application/fhir+json
+
+Get conditions:
+GET https://fhir-open.cerner.com/r4/ec2458f2-1e24-41c8-b71b-0e701af7583d/Condition?patient=12724066
+Accept: application/fhir+json
+
+Get medication requests:
+GET https://fhir-open.cerner.com/r4/ec2458f2-1e24-41c8-b71b-0e701af7583d/MedicationRequest?patient=12724066
+Accept: application/fhir+json

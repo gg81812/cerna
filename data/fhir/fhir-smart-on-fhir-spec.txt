@@ -1,0 +1,83 @@
+SMART on FHIR — Standards and Specifications
+Source: https://docs.smarthealthit.org/
+Scraped: 2026-04-18
+
+==============================================================
+
+SMART on FHIR
+
+Standards and Specifications
+
+Foundational Standards:
+- FHIR: "Fast Healthcare Interoperability Resources. Web standard for health interop"
+- CDS Hooks: "Clinical Decision Support Hooks. Web standard for CDS in the EHR workflow"
+
+Data Access:
+- US Core Data Profiles: FHIR data profiles for health data in the US ("core data for interoperability")
+- FHIR Bulk Data API Implementation Guide: FHIR export API for large-scale data access
+
+UI and Security Integration:
+- SMART App Launch: User-facing apps that connect to EHRs and health portals
+- SMART Backend Services: Server-to-server FHIR connections
+
+Tutorials
+
+- Getting started with Browser-based Apps
+- Cerner's Browser-based app tutorial
+- Getting started with CDS Hooks
+- Getting started for EHRs
+
+Software Libraries
+
+JavaScript/TypeScript, Node.js, Python, R, Ruby, Swift (iOS), Java, and .NET implementations available
+
+Test Environments
+
+- SMART App Launcher (no registration required)
+- SMART Bulk Data Server (no registration required)
+- Logica Health Sandbox
+
+Vendor Sandboxes
+
+Allscripts, athenahealth, Cerner, Epic, Intersystems, and Meditech offerings listed
+
+Data
+
+- Synthea: Open source synthetic FHIR data generator
+- SMART Test Data: De-identified records with Python generation tools
+
+Sample Apps
+
+Multiple applications including Growth Chart and BP Centiles apps
+
+Support
+
+FHIR Discussion Board, community mailing list, and SMART Health IT team resources
+
+In Progress Projects
+
+CDS for PAMA, SMART Health Card Framework, Web Messaging, and Bulk Data Import initiatives
+
+SMART App Launch Framework
+
+The SMART App Launch Framework connects third-party applications to Electronic Health Records systems. Apps run against a FHIR API and launch from within or outside an EHR. The launch framework includes:
+- EHR launch sequence: Apps launched from within an EHR context
+- Standalone launch sequence: Apps launched outside the EHR
+- OAuth 2.0 authorization: Scopes for patient-level, user-level, and system-level access
+- OpenID Connect: Identity layer for provider and patient authentication
+
+SMART Scopes
+
+Scopes follow the pattern: context/type.permission
+- patient/Patient.read — read patient data
+- user/Observation.read — read observations for current user
+- launch — request EHR launch context
+- openid, fhirUser — request identity token
+
+Backend Services
+
+SMART Backend Services authorization uses JSON Web Tokens (JWT) signed with RS384 or ES384. Used for bulk export, analytics pipelines, and server-to-server data sharing.
+
+Cerner-Specific Implementation
+
+Cerner supports SMART on FHIR through its developer portal. Apps must be registered and go through a provisioning process. Cerner Ignite APIs expose FHIR R4 resources behind SMART authorization.

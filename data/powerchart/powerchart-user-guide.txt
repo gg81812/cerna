@@ -1,0 +1,181 @@
+# SOURCE: Cerner PowerChart User Guide
+# URL: https://wiki.cerner.com/display/public/1101PowerChartAmbulatory/PowerChart+User+Guide
+# MODULE: PowerChart
+# RETRIEVED: 2026-04-01
+# ---
+
+# Cerner PowerChart User Guide
+
+## What is PowerChart?
+
+PowerChart is Cerner Millennium's core electronic health record (EHR) application for clinicians. It provides physicians, nurses, pharmacists, and other care team members with a unified view of the patient's clinical information — including demographics, problem lists, medications, orders, results, and clinical documentation — and serves as the primary interface for order entry, clinical decision support, and patient chart management.
+
+PowerChart is available as a thick client (Windows application), a web-based version, and via PowerChart Touch (mobile app for iOS and Android).
+
+## Navigation Overview
+
+### Launch and Login
+
+1. Open the PowerChart icon on the desktop.
+2. Log in with your Active Directory (AD) credentials — Single Sign-On (SSO) is typically configured so the Windows login authenticates automatically.
+3. The Patient List view opens showing your assigned patients.
+
+### Main Navigation Areas
+
+**Patient List** — the home screen showing patients assigned to your care team, unit, or custom list. Each row shows: patient name, MRN, bed location, attending provider, age, length of stay.
+
+**Patient Chart** — the individual patient's health record. Accessible by clicking a patient's name from the Patient List.
+
+**Toolbar** — the top navigation bar with access to: Patient List, Find Patient (search), Message Center (InBasket), Reports, and application settings.
+
+**Chart Navigation Bar** — the left panel inside a patient chart containing links to chart sections:
+- Patient Information (demographics, allergies, advance directives)
+- Problem List
+- Medication List
+- Orders
+- Results (labs, imaging, vitals)
+- Documentation (notes, assessments)
+- eMAR
+- Scheduling
+- Discharge
+
+## Patient Chart Sections
+
+### Demographics and Patient Information
+
+The Patient Information section displays:
+- Legal name, date of birth, gender
+- Medical Record Number (MRN) and Financial Identification Number (FIN)
+- Admission date, attending physician, admitting diagnosis
+- Allergies (with reaction type and severity)
+- Advance directives (DNR/DNI status, healthcare proxy)
+- Isolation precautions (contact, droplet, airborne)
+- Insurance information
+
+### Problem List
+
+The Problem List displays chronic and acute diagnoses associated with the patient. Each problem entry includes:
+- ICD-10 diagnosis code and description
+- Clinical status (Active, Resolved, Inactive)
+- Onset date
+- Documenting clinician
+
+Providers maintain the Problem List by adding new diagnoses from CPOE encounters or from the Problem List management screen.
+
+### Medication List
+
+The Medication List shows all medications associated with the patient:
+- Inpatient medications (from current admission, linked to CPOE orders)
+- Home medications (from medication history / reconciliation)
+- Allergies (prominently displayed)
+
+Medications show: drug name, dose, route, frequency, status (active, discontinued, on hold), ordering provider.
+
+### Orders
+
+The Orders section shows all current and historical orders for the patient. Accessible via:
+- Orders menu in the chart navigation bar
+- "Add Order" button to enter new orders in CPOE
+
+Order categories: Medications, Labs, Radiology, Nursing Orders, Diet, Activity, Consults, Procedures.
+
+### Results
+
+The Results section provides access to:
+- **Lab Results** — all laboratory results with reference ranges and critical flag indicators
+- **Radiology Results** — imaging reports from the RIS/PACS integration
+- **Vital Signs** — trended vital signs with graphing capability
+- **Cardiology** — EKG results if integrated
+- **Other** — any other clinical event results (pulmonary function, sleep studies, etc.)
+
+Results can be viewed as a list, in a flowsheet (time-based grid), or as a trend graph.
+
+### Documentation
+
+The Documentation section contains all clinical notes and assessments:
+- Provider Notes (History & Physical, Progress Notes, Consult Notes, Discharge Summary)
+- Nursing Assessments (PowerForms-based)
+- Nursing Notes
+- Social Work Notes
+- Therapy Notes (PT, OT, Speech)
+
+Unsigned notes appear with a "Draft" watermark. Signed notes are part of the legal medical record.
+
+### eMAR
+
+The eMAR (Electronic Medication Administration Record) is accessible from within PowerChart:
+- Shows all medication orders, administration times, and nurse documentation
+- Providers can review eMAR to verify medication adherence
+- Nurses document administrations from this view
+
+### Schedule
+
+The Schedule section shows:
+- Upcoming outpatient appointments (from Cerner Scheduling)
+- Inpatient procedure bookings
+- Ability to place follow-up orders that route to scheduling
+
+## Core Clinical Workflows in PowerChart
+
+### Viewing Lab Results
+
+1. Open the patient chart.
+2. Click "Results" in the chart navigation.
+3. Select "Labs" or use the integrated lab flowsheet view.
+4. Click any result to see the full panel, reference range, and result history.
+5. Critical values (abnormal high/low) are flagged in red with a "!" indicator.
+6. Use the Trend view to see multiple timepoints side by side.
+
+### Documenting a Progress Note
+
+1. Open the patient chart.
+2. Click "Documentation" > "New Document."
+3. Select the note type (e.g., Progress Note, Consult Note, H&P).
+4. The note template opens (PowerNote template or free text, depending on configuration).
+5. Complete the note content.
+6. Click "Sign" to complete the note. The note is immediately viewable by all care team members.
+
+### Viewing Medication History
+
+1. Open the patient chart.
+2. Click "Medication List" to see the combined view of inpatient and home medications.
+3. Click any medication to see full order details, administration history, and ordering provider.
+
+### Accessing the InBasket (Message Center)
+
+The InBasket is the PowerChart inbox for:
+- Lab result notifications
+- Unsigned order notifications
+- Prescription refill requests (ambulatory)
+- Patient messages (from MyChart)
+- Secure provider-to-provider messages
+
+Access via the Message Center icon in the top toolbar or from the main PowerChart home screen.
+
+## Customizing PowerChart
+
+### Personal Preferences
+
+1. Open File > Preferences (or the user settings menu).
+2. Configure:
+   - Default patient list view
+   - Preferred lab result display format
+   - Note template preferences
+   - InBasket notification settings
+   - Font size and display settings
+
+### Custom Patient Lists
+
+See the Patient List Configuration guide for instructions on creating custom patient lists (by unit, by provider, or by custom criteria).
+
+## PowerChart and HL7 Integration
+
+PowerChart is the user-facing interface over the Millennium clinical database. Data flows in from external systems via HL7 interfaces (ADT, lab results, radiology reports) and flows out via FHIR APIs and HL7 interfaces to downstream systems (care management platforms, HIE, billing). Clinicians see a unified record regardless of which underlying interface provided the data.
+
+## Best Practices
+
+1. Log out of PowerChart when leaving a workstation — even a brief unattended session is a HIPAA risk.
+2. Use the Patient Search function to find patients rather than navigating from shared lists, to ensure you are opening the correct patient chart.
+3. Acknowledge critical lab values in the Results section — unacknowledged critical results may generate repeated InBasket alerts.
+4. Sign all documentation promptly — unsigned drafts do not meet clinical documentation standards.
+5. Never share login credentials — every action is audit-logged to your specific user account.

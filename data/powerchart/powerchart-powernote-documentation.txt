@@ -1,0 +1,176 @@
+# SOURCE: Cerner PowerNote Documentation Guide
+# URL: https://wiki.cerner.com/display/public/1101PowerChartAmbulatory/PowerNote+Documentation
+# MODULE: PowerChart
+# RETRIEVED: 2026-04-01
+# ---
+
+# Cerner PowerNote Documentation Guide
+
+## What is PowerNote?
+
+PowerNote is Cerner Millennium's clinical documentation module within PowerChart. It enables providers (physicians, NPs, PAs, residents, and other licensed clinicians) to create, edit, and sign clinical notes such as History & Physical (H&P), Progress Notes, Consult Notes, Discharge Summaries, and Operative Notes.
+
+PowerNote supports both free-text and structured (discrete) documentation, integrates with Dragon (speech-to-text), and enables documentation workflows such as auto-population from structured data, template-based note entry, and addendum workflows.
+
+## Types of Notes
+
+- **History & Physical (H&P)** — comprehensive admission assessment by a provider; required within 24 hours of admission
+- **Progress Note** — daily provider assessment of the patient's condition and plan (SOAP or APSO format)
+- **Consult Note** — documentation from a consulting specialist
+- **Procedure Note** — documents a procedure performed by the provider
+- **Operative Note** — post-operative documentation by the surgeon
+- **Discharge Summary** — comprehensive summary of the hospital stay, prepared at discharge
+- **Nursing Note** — narrative nursing documentation (complement to PowerForms-based assessments)
+- **Social Work Note / Case Management Note** — psychosocial and care coordination documentation
+
+## Accessing PowerNote
+
+From PowerChart:
+1. Open the patient's chart.
+2. Click "Documentation" in the chart navigation bar.
+3. Click "New Document."
+4. Select the note type from the note type picker.
+5. The note template opens for data entry.
+
+Alternatively, from a provider workflow:
+- Some facilities configure note creation links in the nursing Workflow MPage or the rounding list view.
+
+## Note Templates
+
+PowerNote templates are pre-built structures that guide clinicians through a standardized documentation workflow. Templates vary by note type, specialty, and institutional configuration.
+
+### Template Structure
+
+A PowerNote template consists of:
+- **Sections** — logical groupings (e.g., Chief Complaint, HPI, Past Medical History, Physical Exam, Assessment/Plan)
+- **Discrete Fields** — structured data elements that populate into the note AND create codified clinical events
+- **Free-Text Areas** — narrative sections for non-structured content
+- **Auto-Text (dot-phrases)** — abbreviations that expand into pre-defined text blocks
+
+### Auto-Population from Chart Data
+
+PowerNote templates can auto-populate from existing structured data:
+- Current medications (from Medication Reconciliation)
+- Current allergies (from the Allergy module)
+- Active diagnoses (from the Problem List)
+- Vital signs (most recent values)
+- Lab results (most recent selected values)
+- Active consults
+
+Auto-population reduces transcription time and improves accuracy by pulling from the live chart rather than manual re-entry.
+
+## Documenting a Progress Note
+
+### Standard SOAP/APSO Format
+
+**Subjective:**
+- Chief complaint for today's visit
+- Patient-reported symptoms, pain level, sleep, activity tolerance
+- Relevant interval history since last note
+
+**Objective:**
+- Vital signs (auto-populated or manually entered)
+- Physical exam findings by system
+- Relevant lab results (auto-populated from Results)
+- Imaging findings summary
+
+**Assessment:**
+- Clinical assessment of each active problem
+- ICD-10 diagnosis codes linked to the note (required for billing)
+
+**Plan:**
+- Orders placed or pending
+- Medication changes
+- Consults pending or completed
+- Goals for the day
+- Anticipated discharge date
+
+### Linking Diagnoses to the Note
+
+For billing and quality purposes, each Progress Note must link to one or more ICD-10 diagnoses:
+1. In the Assessment section, click "Add Diagnosis."
+2. Search by description or ICD-10 code.
+3. Select the appropriate code.
+4. Code is linked to the note and populates the encounter's diagnosis list.
+
+## Speech-to-Text with Dragon
+
+Most organizations integrate Dragon Medical One (cloud-based) with Cerner PowerNote:
+1. Activate Dragon by clicking the microphone icon in the PowerNote toolbar or using the Dragon handheld microphone.
+2. Speak naturally; Dragon transcribes in real time.
+3. Dragon commands: "New paragraph," "Period," "Scratch that" (undo last dictation), "Select [word]."
+4. Review and correct the transcription before signing.
+
+Dragon integration allows documentation in the note template or in any free-text field within PowerChart.
+
+## Note Signing and Workflow
+
+### Signing a Note
+
+1. Review the complete note.
+2. Click "Sign" in the PowerNote toolbar.
+3. If the note requires a co-signature (e.g., resident note reviewed by attending): the note status becomes "Signed/Pending Co-signature."
+4. An InBasket message routes to the designated co-signer.
+5. The co-signer opens the note from InBasket, reviews, and co-signs.
+6. Both signatures are documented in the note header.
+
+### Unsigned Notes
+
+Unsigned notes (drafts):
+- Are visible to the documenting provider only (configurable per institution)
+- Have a "Draft" watermark when viewed
+- Are NOT part of the legal medical record
+- Generate compliance alerts if left unsigned beyond policy-defined timeframes (typically 24–48 hours)
+
+### Addendums
+
+To add information to a signed note without replacing it:
+1. Open the signed note.
+2. Click "Addendum."
+3. Enter the addendum text.
+4. Sign the addendum.
+5. The addendum is appended to the original note with a timestamp and the addendum author's signature.
+
+Original note content is never modified after signing — addendums are the only mechanism for correction.
+
+### Late Entries
+
+For documentation after the fact (e.g., completing a note from a prior shift):
+1. Open a New Document with the appropriate note type.
+2. Manually set the note date/time to the time of the clinical encounter (not the current time).
+3. Mark the note as a "Late Entry" per institutional policy.
+4. Sign normally.
+
+## H&P and Discharge Summary Workflows
+
+### History & Physical (H&P)
+Required within 24 hours of inpatient admission. Must include:
+- Chief complaint, HPI, past medical/surgical/family/social history
+- Medications, allergies
+- Review of systems
+- Complete physical examination
+- Assessment with ICD-10 diagnoses
+- Admission plan
+
+### Discharge Summary
+Required within 30 days of discharge (CMS requirement); should be completed within 24–48 hours:
+- Admission and discharge dates
+- Admitting and discharge diagnoses
+- Procedures performed during the stay
+- Hospital course summary
+- Condition at discharge
+- Discharge medications (linked from Medication Reconciliation)
+- Follow-up instructions and appointments
+- Pending results at time of discharge (e.g., awaiting culture finalization)
+
+Discharge summaries are transmitted to the referring provider, PCP, and follow-up specialists via HL7/FHIR interface or secure messaging.
+
+## Best Practices
+
+1. Complete documentation on the same day as the patient encounter — memory fades and compliance suffers with delayed documentation.
+2. Never copy-paste from prior notes without updating — note cloning propagates outdated clinical information and is a compliance risk.
+3. Use auto-population for structured data (vitals, labs, meds) — reduces errors and saves time.
+4. Link diagnoses in every note — undocumented diagnoses are neither billed nor trackable for quality measures.
+5. Review Dragon transcription carefully before signing — speech recognition errors in clinical notes can cause clinical harm.
+6. Do not leave notes unsigned for more than 24 hours — unsigned notes are a compliance finding during Joint Commission surveys.
+7. Use addendums to correct signed notes — never delete or re-sign a note to change content.

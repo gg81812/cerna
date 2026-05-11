@@ -1,0 +1,204 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading collections (CHROMA_DIR=C:\Users\gaurav.garje\OneDrive - Accenture\Desktop\cerna\chroma_store)...
+Loading weights:   0%|          | 0/391 [00:00<?, ?it/s]Loading weights:  80%|########  | 313/391 [00:00<00:00, 3108.99it/s]Loading weights: 100%|##########| 391/391 [00:00<00:00, 3119.28it/s]
+[1mBertModel LOAD REPORT[0m from: BAAI/bge-large-en-v1.5
+Key                     | Status     |  | 
+------------------------+------------+--+-
+embeddings.position_ids | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+Loading weights:   0%|          | 0/103 [00:00<?, ?it/s]Loading weights:  76%|#######5  | 78/103 [00:00<00:00, 770.62it/s]Loading weights: 100%|##########| 103/103 [00:00<00:00, 983.94it/s]
+[1mBertModel LOAD REPORT[0m from: sentence-transformers/all-MiniLM-L6-v2
+Key                     | Status     |  | 
+------------------------+------------+--+-
+embeddings.position_ids | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+[Redis] Unavailable (Timeout connecting to server). Falling back to in-memory cache.
+Collections ready.
+
+[QueryRewriter] intent=question  modules=['REVENUE_CYCLE']  ambiguous=False  needs_clarify=False  formal='minor registration guarantor parent custody arrangement work'
+========================================================================================
+[hs-clerk-013]  module=revenue_cycle  expected_behavior=clarify
+  Q       : Registering a minor — guarantor isn't the parent on file, custody arrangement
+  formal  : minor registration guarantor parent custody arrangement workflow
+  expected: ['guarantor', 'minor', 'registration', 'custody', 'relationship']
+
+  BGE top-10:
+    [ 1] 0.403  rcm-patient-access-guide.txt
+    [ 2] 0.425  clinical-discharge-planning-guide.txt
+    [ 3] 0.436  clinical-scheduling-configuration-guide.txt
+    [ 4] 0.440  rcm-patient-access-guide.txt
+    [ 5] 0.441  rcm-patient-access-guide.txt
+    [ 6] 0.443  rcm-wiki-medical-billing.txt
+    [ 7] 0.447  millennium-domain-administration-guide.txt
+    [ 8] 0.451  rcm-patient-access-guide.txt
+    [ 9] 0.452  millennium-security-user-management.txt
+    [10] 0.455  rcm-denial-management-guide.txt
+  BGE keyword hits in top-10: 2/5  hit=['registration', 'relationship']
+  MiniLM top-10:
+    [ 1] 1.370  clinical-cms-restraint-cop.txt
+    [ 2] 1.371  clinical-wiki-clinical-decision-support.txt
+    [ 3] 1.419  fhir-account-resource.md
+    [ 4] 1.425  millennium-security-user-management.txt
+    [ 5] 1.437  rcm-patient-access-guide.txt
+    [ 6] 1.443  millennium-security-user-management.txt
+    [ 7] 1.448  powerchart-cpoe-order-entry-workflow.txt
+    [ 8] 1.449  rcm-wiki-claim-denial.txt
+    [ 9] 1.450  rcm-patient-access-guide.txt
+    [10] 1.450  rcm-patient-accounting-user-guide.txt
+  MiniLM keyword hits in top-10: 2/5  hit=['guarantor', 'registration']
+  Source-set overlap: 2/10  shared=['millennium-security-user-management.txt', 'rcm-patient-access-guide.txt']
+  BGE-only sources : ['clinical-discharge-planning-guide.txt', 'clinical-scheduling-configuration-guide.txt', 'millennium-domain-administration-guide.txt', 'rcm-denial-management-guide.txt', 'rcm-wiki-medical-billing.txt']
+  MiniLM-only      : ['clinical-cms-restraint-cop.txt', 'clinical-wiki-clinical-decision-support.txt', 'fhir-account-resource.md', 'powerchart-cpoe-order-entry-workflow.txt', 'rcm-patient-accounting-user-guide.txt', 'rcm-wiki-claim-denial.txt']
+
+[QueryRewriter] intent=question  modules=['MILLENNIUM']  ambiguous=False  needs_clarify=False  formal='Cerner Millennium MPages portal accessibility-compliant comp'
+========================================================================================
+[hs-it-014]  module=millennium  expected_behavior=answer
+  Q       : Standing up an internal MPages portal — does Cerner have a component library that's accessibility-compliant?
+  formal  : Cerner Millennium MPages portal accessibility-compliant component library
+  expected: ['Terra', 'component', 'accessibility', 'React', 'WCAG']
+
+  BGE top-10:
+    [ 1] 0.265  millennium-mpages-development-guide.txt
+    [ 2] 0.273  millennium-ccl-open-source.txt
+    [ 3] 0.278  fhir-binary-resource.md
+    [ 4] 0.278  millennium-engineering-terra-accessibility.txt
+    [ 5] 0.281  millennium-engineering-terra-accessibility.txt
+    [ 6] 0.285  fhir-r4-overview.md
+    [ 7] 0.288  clinical-ai-scribe-powerchart.txt
+    [ 8] 0.289  millennium-ccl-open-source.txt
+    [ 9] 0.289  fhir-engineering-blog-posts.txt
+    [10] 0.291  millennium-integration-pathways.txt
+  BGE keyword hits in top-10: 5/5  hit=['Terra', 'component', 'accessibility', 'React', 'WCAG']
+  MiniLM top-10:
+    [ 1] 0.727  millennium-ccl-open-source.txt
+    [ 2] 0.728  millennium-engineering-terra-accessibility.txt
+    [ 3] 0.732  millennium-mpages-development-guide.txt
+    [ 4] 0.738  millennium-ccl-open-source.txt
+    [ 5] 0.779  millennium-engineering-terra-accessibility.txt
+    [ 6] 0.804  millennium-engineering-terra-accessibility.txt
+    [ 7] 0.835  millennium-engineering-terra-accessibility.txt
+    [ 8] 0.861  millennium-engineering-terra-accessibility.txt
+    [ 9] 0.865  millennium-mpages-development-guide.txt
+    [10] 0.871  millennium-engineering-terra-accessibility.txt
+  MiniLM keyword hits in top-10: 3/5  hit=['Terra', 'component', 'accessibility']
+  Source-set overlap: 3/10  shared=['millennium-ccl-open-source.txt', 'millennium-engineering-terra-accessibility.txt', 'millennium-mpages-development-guide.txt']
+  BGE-only sources : ['clinical-ai-scribe-powerchart.txt', 'fhir-binary-resource.md', 'fhir-engineering-blog-posts.txt', 'fhir-r4-overview.md', 'millennium-integration-pathways.txt']
+  MiniLM-only      : []
+
+[QueryRewriter] intent=question  modules=['CLINICAL']  ambiguous=False  needs_clarify=False  formal='escalation criteria for restraint orders in clinical workflo'
+========================================================================================
+[hs-nurse-019]  module=clinical  expected_behavior=clarify
+  Q       : Patient pulled out the IV and is trying to get out of bed — when do I have to escalate to restraint orders?
+  formal  : escalation criteria for restraint orders in clinical workflow
+  expected: ['restraint', 'order', 'CMS', 'provider', 'documentation']
+
+  BGE top-10:
+    [ 1] 0.300  clinical-cms-restraint-cop.txt
+    [ 2] 0.332  clinical-ai-scribe-powerchart.txt
+    [ 3] 0.332  powerchart-wiki-clinical-pathway.txt
+    [ 4] 0.332  powerchart-cpoe-order-entry-workflow.txt
+    [ 5] 0.338  clinical-pharmnet-pharmacy-workflow.txt
+    [ 6] 0.339  clinical-implementation-build-guide.txt
+    [ 7] 0.339  powerchart-implementation-build.txt
+    [ 8] 0.343  clinical-wiki-restraint-medical.txt
+    [ 9] 0.345  clinical-wiki-restraint-medical.txt
+    [10] 0.346  clinical-cms-restraint-cop.txt
+  BGE keyword hits in top-10: 4/5  hit=['restraint', 'order', 'CMS', 'documentation']
+  MiniLM top-10:
+    [ 1] 0.926  clinical-wiki-restraint-medical.txt
+    [ 2] 0.947  powerchart-ahrq-cpoe-primer.txt
+    [ 3] 0.947  clinical-wiki-restraint-medical.txt
+    [ 4] 0.963  clinical-wiki-restraint-medical.txt
+    [ 5] 0.989  powerchart-wiki-cpoe.txt
+    [ 6] 0.994  clinical-pharmnet-pharmacy-workflow.txt
+    [ 7] 0.995  clinical-wiki-restraint-medical.txt
+    [ 8] 1.002  powerchart-cpoe-order-entry-workflow.txt
+    [ 9] 1.014  clinical-discharge-planning-guide.txt
+    [10] 1.023  clinical-cms-restraint-cop.txt
+  MiniLM keyword hits in top-10: 4/5  hit=['restraint', 'order', 'CMS', 'provider']
+  Source-set overlap: 4/10  shared=['clinical-cms-restraint-cop.txt', 'clinical-pharmnet-pharmacy-workflow.txt', 'clinical-wiki-restraint-medical.txt', 'powerchart-cpoe-order-entry-workflow.txt']
+  BGE-only sources : ['clinical-ai-scribe-powerchart.txt', 'clinical-implementation-build-guide.txt', 'powerchart-implementation-build.txt', 'powerchart-wiki-clinical-pathway.txt']
+  MiniLM-only      : ['clinical-discharge-planning-guide.txt', 'powerchart-ahrq-cpoe-primer.txt', 'powerchart-wiki-cpoe.txt']
+
+[QueryRewriter] intent=troubleshooting  modules=['CLINICAL']  ambiguous=False  needs_clarify=False  formal='Sepsis Business Performance Alert (BPA) dismissal criteria'
+========================================================================================
+[hs-nurse-020]  module=clinical  expected_behavior=clarify
+  Q       : Sepsis BPA fired again — patient already has fluids and antibiotics on board, do I just dismiss it?
+  formal  : Sepsis Business Performance Alert (BPA) dismissal criteria
+  expected: ['sepsis', 'BPA', 'alert', 'fluids', 'bundle']
+
+  BGE top-10:
+    [ 1] 0.299  powerchart-clinical-decision-support.txt
+    [ 2] 0.303  powerchart-clinical-decision-support.txt
+    [ 3] 0.310  clinical-wiki-sepsis-treatment.txt
+    [ 4] 0.317  clinical-wiki-sepsis-treatment.txt
+    [ 5] 0.320  clinical-wiki-sepsis-treatment.txt
+    [ 6] 0.328  clinical-wiki-sepsis-treatment.txt
+    [ 7] 0.329  clinical-wiki-sepsis-treatment.txt
+    [ 8] 0.330  clinical-wiki-sepsis-treatment.txt
+    [ 9] 0.344  powerchart-clinical-decision-support.txt
+    [10] 0.346  clinical-wiki-sepsis-treatment.txt
+  BGE keyword hits in top-10: 5/5  hit=['sepsis', 'BPA', 'alert', 'fluids', 'bundle']
+  MiniLM top-10:
+    [ 1] 0.937  powerchart-clinical-decision-support.txt
+    [ 2] 0.962  powerchart-clinical-decision-support.txt
+    [ 3] 0.999  clinical-joint-commission-safety.txt
+    [ 4] 1.040  powerchart-clinical-decision-support.txt
+    [ 5] 1.050  clinical-joint-commission-safety.txt
+    [ 6] 1.064  clinical-wiki-sepsis-treatment.txt
+    [ 7] 1.077  clinical-wiki-sepsis-treatment.txt
+    [ 8] 1.099  clinical-cms-restraint-cop.txt
+    [ 9] 1.104  clinical-wiki-sepsis-treatment.txt
+    [10] 1.121  clinical-wiki-clinical-decision-support.txt
+  MiniLM keyword hits in top-10: 4/5  hit=['sepsis', 'BPA', 'alert', 'bundle']
+  Source-set overlap: 2/10  shared=['clinical-wiki-sepsis-treatment.txt', 'powerchart-clinical-decision-support.txt']
+  BGE-only sources : []
+  MiniLM-only      : ['clinical-cms-restraint-cop.txt', 'clinical-joint-commission-safety.txt', 'clinical-wiki-clinical-decision-support.txt']
+
+[QueryRewriter] intent=question  modules=['CLINICAL']  ambiguous=False  needs_clarify=False  formal='Saving a preferred medication order set version as a favorit'
+========================================================================================
+[hs-physician-012]  module=powerchart  expected_behavior=answer
+  Q       : Order set has a med I usually swap — can I save my preferred version as a favorite?
+  formal  : Saving a preferred medication order set version as a favorite in eMAR
+  expected: ['order set', 'favorite', 'CPOE', 'preference', 'template']
+
+  BGE top-10:
+    [ 1] 0.370  clinical-emar-user-guide.txt
+    [ 2] 0.389  clinical-pharmnet-pharmacy-workflow.txt
+    [ 3] 0.392  powerchart-cpoe-order-entry-workflow.txt
+    [ 4] 0.393  fhir-procedure-resource.md
+    [ 5] 0.399  clinical-emar-user-guide.txt
+    [ 6] 0.400  clinical-emar-user-guide.txt
+    [ 7] 0.401  clinical-emar-user-guide.txt
+    [ 8] 0.401  clinical-wiki-emar.txt
+    [ 9] 0.402  clinical-emar-user-guide.txt
+    [10] 0.407  powerchart-cpoe-order-entry-workflow.txt
+  BGE keyword hits in top-10: 1/5  hit=['CPOE']
+  MiniLM top-10:
+    [ 1] 0.961  clinical-emar-user-guide.txt
+    [ 2] 0.985  clinical-emar-user-guide.txt
+    [ 3] 1.020  clinical-emar-user-guide.txt
+    [ 4] 1.028  clinical-pharmnet-pharmacy-workflow.txt
+    [ 5] 1.053  clinical-emar-user-guide.txt
+    [ 6] 1.071  clinical-emar-user-guide.txt
+    [ 7] 1.096  clinical-pharmnet-pharmacy-workflow.txt
+    [ 8] 1.107  clinical-emar-user-guide.txt
+    [ 9] 1.117  clinical-emar-user-guide.txt
+    [10] 1.137  clinical-medication-administration-workflow.txt
+  MiniLM keyword hits in top-10: 1/5  hit=['CPOE']
+  Source-set overlap: 2/10  shared=['clinical-emar-user-guide.txt', 'clinical-pharmnet-pharmacy-workflow.txt']
+  BGE-only sources : ['clinical-wiki-emar.txt', 'fhir-procedure-resource.md', 'powerchart-cpoe-order-entry-workflow.txt']
+  MiniLM-only      : ['clinical-medication-administration-workflow.txt']
+
+========================================================================================
+Summary (rounded to top-k=10):
+  id                     module         exp_beh    BGE kw/exp Mini kw/exp src overlap 
+  hs-clerk-013           revenue_cycle  clarify    2/10       2/10       2/10
+  hs-it-014              millennium     answer     5/10       3/10       3/10
+  hs-nurse-019           clinical       clarify    4/10       4/10       4/10
+  hs-nurse-020           clinical       clarify    5/10       4/10       2/10
+  hs-physician-012       powerchart     answer     1/10       1/10       2/10

@@ -1,0 +1,102 @@
+# SOURCE: ICD-10-CM — Wikipedia
+# URL: https://en.wikipedia.org/wiki/ICD-10-CM
+# MODULE: Revenue Cycle
+# RETRIEVED: 2026-05-07
+# ---
+
+Diagnosis code system for use in the U.S.
+
+The 
+ICD-10 Clinical Modification
+ (
+ICD-10-CM
+) is a set of 
+diagnosis codes
+ used in the 
+United States of America
+.
+ It was developed by a component of the U.S. Department of Health and Human services,
+ as an adaption of the 
+ICD-10
+ with authorization from the 
+World Health Organization
+. In 2015, ICD-10-CM replaced 
+ICD-9-CM
+ as the federally mandated classification. Annual updates are provided.
+
+Development
+
+Since 1979, the US had required ICD-9-CM codes
+ for 
+Medicare
+ and 
+Medicaid
+ claims, and most of the rest of the medical industry in the US followed suit. On January 1, 1999, the ICD-10 (without clinical extensions) was adopted for reporting mortality, however, ICD-9-CM continued to be used for 
+morbidity
+. 
+
+During that time, the U.S. 
+National Center for Health Statistics
+ (NCHS) received permission from the WHO to create a clinical modification of the ICD-10. 
+
+ICD-10-CM adapted ICD-10 in the following ways:
+[
+citation needed
+]
+
+Allow the capture of information for ambulatory and managed care encounters
+
+Expand available injury codes
+
+Combine codes for diagnosis/symptoms to reduce the number of codes needed to describe a problem fully
+
+Provide additional sixth and seventh digit classifications
+
+Add classifications specific to laterality
+
+Refine classification for increased data granularity
+
+Adoption
+
+Adoption of ICD-10-CM was slow. On August 21, 2008, the 
+US Department of Health and Human Services
+ (HHS) proposed new code sets to be used for reporting diagnoses and procedures on health care transactions. Under the proposal, the ICD-9-CM code sets would be replaced with the ICD-10-CM code sets, effective October 1, 2013. On April 17, 2012, the Department of Health and Human Services (HHS) published a proposed rule that would delay the compliance date for the ICD-10-CM and PCS by 12 months-from October 1, 2013, to October 1, 2014.
+ Congress further delayed the implementation date to October 1, 2015, after it was inserted into the "Doc Fix" Bill without debate over the objections of many.
+[
+citation needed
+]
+
+Release
+
+On October 1, 2015, ICD-10-CM replaced volumes 1 and 2 of ICD-9-CM, and 
+ICD-10-PCS
+ replaced volume 3. 
+
+Annual review
+
+The ICD-10-CM code set is reviewed every year.
+ The code set for the 2023 
+fiscal year
+ applies to patient discharges and encounters between October 1, 2022, and September 30, 2023 (inclusive)
+[
+needs update?
+]
+ – with the exception of four codes that were in effect from April 1, 2022.
+
+See also
+
+ICD-10 Procedure Coding System
+, the sister publication for coding procedures
+
+ICD-11
+
+References
+
+External links
+
+ICD-10-CM
+ (USA – modification) at Centers for Disease Control and Prevention. (CDC)
+
+Retrieved from "
+https://en.wikipedia.org/w/index.php?title=ICD-10-CM&oldid=1303405767
+"

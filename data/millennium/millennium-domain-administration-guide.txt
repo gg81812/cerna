@@ -1,0 +1,150 @@
+# SOURCE: Cerner Millennium Domain Administration Guide
+# URL: https://wiki.cerner.com/display/public/1101discernHP/Domain+Administration
+# MODULE: Millennium Platform
+# RETRIEVED: 2026-04-01
+# ---
+
+# Cerner Millennium Domain Administration Guide
+
+## What is a Millennium Domain?
+
+A Cerner Millennium domain is a fully self-contained instance of the Millennium electronic health record (EHR) system. Each domain includes its own set of application servers, database schemas, build data (reference data and configuration), and user security settings. Domains are isolated from each other — changes made in one domain do not affect another.
+
+Healthcare organizations typically run three standard domains:
+
+1. Production (PROD) — the live clinical environment used for real patient care. Tightly change-controlled; changes require formal change management approval.
+2. Certification/Test (CERT or TEST) — used for testing upgrades, new build, and interface changes before promoting to Production.
+3. Training (MTrain or TRAIN) — a stable copy of the Production environment used for end-user training. Refreshed periodically from Production data.
+
+Larger organizations may also maintain additional domains:
+- Development (DEV) — used by developers for building and testing CCL scripts and MPages components before CERT.
+- Disaster Recovery (DR) — a near-real-time replica of Production used for business continuity.
+
+## Domain Architecture
+
+### Application Tier
+Each Millennium domain runs a cluster of application server nodes managed by BEA Tuxedo middleware. Tuxedo routes service requests (SVCDEF transactions) to the appropriate server process. Key application server types:
+
+- PRISMNODE — the primary application node that handles most clinical transactions
+- MCP (Millennium Communication Process) — manages inter-service communication within the domain
+- MPSERVER — hosts MPages server-side components (MCS — Millennium Communication Server)
+- CVLINK — manages code value synchronization between domains
+
+### Database Tier
+Each domain has its own Oracle database instance. The Millennium schema contains thousands of tables, views, and stored procedures. Key schema owners:
+
+- CERNER — primary owner of most Millennium tables (PERSON, ENCOUNTER, ORDERS, etc.)
+- OPERATIONAL — operational/config tables (job scheduling, interface definitions)
+
+Database servers are typically clustered using Oracle RAC (Real Application Clusters) for high availability in Production.
+
+### Interface Tier
+Millennium domains communicate with external systems (HL7 feeds, FHIR APIs, lab systems, billing systems) via:
+- Cerner Millennium Open Engine (CMOE) — legacy HL7 interface engine embedded in Millennium
+- Cerner Integration Engine (CIE) — modern interface engine supporting HL7 v2, HL7 FHIR, and custom formats
+- SMART on FHIR APIs — exposes Millennium clinical data via HL7 FHIR R4 REST APIs
+
+### File System Layout
+Each domain uses a structured directory layout on shared storage:
+- $CCL_DIR — CCL script source and compiled program files
+- $CERNER_INSTALL_DIR/bin — domain executables and configuration
+- $CERNER_DATA_DIR — domain data files (outbound interface spools, report output)
+
+## Domain Nodes
+
+A domain node is an individual application server process within a domain. Multiple nodes may serve the same domain for load balancing and high availability. Each node has:
+
+- Node name (e.g., PRISMNODE01) — unique identifier within the domain
+- Node type — PRISMNODE, MPSERVER, CVLINK, etc.
+- IP address and port assignments
+- Service queue configuration (max concurrent transactions, memory limits)
+
+### Difference Between a Domain and a Node
+- A domain is the complete EHR instance (applications + database + build data).
+- A node is a single server process within that domain.
+- One domain typically has many nodes of different types.
+- Nodes can be started, stopped, and restarted independently without taking the entire domain offline.
+
+## Domain Administration Tasks
+
+### Starting and Stopping a Domain
+
+From the Cerner server as the cerner OS user:
+
+    cd $CERNER_INSTALL_DIR
+    ./cerner.sh start     # Start all domain services
+    ./cerner.sh stop      # Graceful shutdown of all services
+    ./cerner.sh restart   # Stop then start
+
+Individual nodes:
+    ./cerner.sh start PRISMNODE
+    ./cerner.sh stop PRISMNODE01
+
+### Monitoring Domain Health
+
+Use the Operational Thresholds Console (OTC):
+1. Open OTC from the server console or Cerner toolbar.
+2. Navigate to Domain > Node Status.
+3. Green = node up and serving requests; Red = node down; Yellow = degraded.
+
+Key metrics to monitor:
+- Queue depth per node (number of pending transactions)
+- Transaction response times (alert if > 2 seconds for PRISMNODE)
+- Error log rate in $CERNER_INSTALL_DIR/log/
+
+### Log Files
+Domain logs are stored in $CERNER_INSTALL_DIR/log/:
+- cerner.log — startup/shutdown events
+- tux.log — Tuxedo middleware events (service failures, queue overflows)
+- *.elog — individual service error logs
+- interface_*.log — interface engine message logs
+
+Rotate logs regularly; unmanaged log growth can fill disk and crash the domain.
+
+### Code Value Synchronization
+Code values must be kept in sync across domains. Use CVLINK service or the Code Value Migration utility:
+1. Export code values from Production using Code Value Export.
+2. Import into CERT or TRAIN using Code Value Import.
+3. Verify with the Code Value Audit report in Discern Analytics.
+
+### Promoting Build Between Domains
+Configuration (build data) is promoted from DEV → CERT → PROD using:
+- Millennium Domain Transfer Utility — exports and imports tables of configuration data
+- Change control documentation required for PROD promotes
+
+## Security Administration
+
+### User Provisioning
+User accounts in Millennium are tied to PRSNL (personnel) records linked to Active Directory (AD). The provisioning workflow:
+1. Create the AD account in your identity management system.
+2. Create the PRSNL record in Millennium Personnel Manager.
+3. Assign positions and locations (controls what clinical areas the user can access).
+4. Assign security objects (controls which applications and features the user can access).
+5. Test login in the Training domain before enabling Production.
+
+### Position and Location Security
+Access to clinical data is controlled by:
+- Position — a role definition (e.g., "ED Nurse", "Pharmacist") with associated security objects
+- Location — a facility or unit (e.g., "Main Campus ICU") granting access to patients in that area
+- Position + Location together define the user's default context and data visibility
+
+### Password Management
+Millennium uses AD password policies synced via LDAP. Password resets are handled through AD, not directly in Millennium. SSO (Single Sign-On) is typically configured via AD Kerberos/SAML.
+
+## Disaster Recovery and Backup
+
+- Database backups: Oracle RMAN performs nightly full backups and continuous archive log backups.
+- DR failover: Millennium supports Oracle Data Guard for near-real-time replication to a DR domain.
+- DR testing: Organizations should test domain failover in CERT before a real DR event.
+- RPO (Recovery Point Objective): typically < 15 minutes with archive log shipping.
+- RTO (Recovery Time Objective): 1–4 hours depending on domain size and DR configuration.
+
+## Best Practices
+
+1. Never make untested changes directly in Production — always promote from CERT.
+2. Perform Production changes during low-census periods (nights, weekends).
+3. Keep domain node counts matched to anticipated transaction load — under-provisioned nodes cause queue backup.
+4. Archive and rotate log files weekly to prevent disk exhaustion.
+5. Sync code values between domains after every Production upgrade.
+6. Document all build changes in a change management system before promoting.
+7. Regularly test DR failover — untested DR plans fail when needed most.

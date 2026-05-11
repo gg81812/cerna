@@ -1,0 +1,265 @@
+# SOURCE: Medical Software — Wikipedia
+# URL: https://en.wikipedia.org/wiki/Medical_software
+# MODULE: PowerChart
+# RETRIEVED: 2026-05-07
+# ---
+
+Type of software for medical purposes
+
+Medical software
+ is any 
+software
+ item or system used within a medical context.
+ This can include:
+
+Standalone software used for 
+diagnostic
+ or 
+therapeutic
+ purposes.
+
+Software used by health care providers to reduce paperwork and offer digital services to patients, e.g., a 
+patient portal
+.
+
+Software embedded in a 
+medical device
+ (often referred to as "medical device software").
+
+Software that drives a medical device or determines how it is used.
+
+Software that acts as an accessory to a medical device.
+
+Software used in the design, production, and testing of a medical device (or)
+
+Software that provides quality control management of a medical device.
+
+History
+
+Medical software has been in use since at least since the 1960s,
+ a time when the first computerized information-handling system in the 
+hospital
+ sphere was being considered by 
+Lockheed
+.
+ As computing became more widespread and useful in the late 1970s and 1980s, the concept of "medical software" as a data and operations management tool in the medical industry—including in the 
+physician's office
+—became more prevalent.
+ Medical software became more prominent in medical devices in fields such as 
+nuclear medicine
+, 
+cardiology
+, and 
+medical robotics
+ by the early 1990s, prompting additional scrutiny of the "safety-critical" nature of medical software in the research and legislative communities, in part fueled by the 
+Therac-25
+ radiation therapy device scandal.
+
+The development of the ISO 9000-3 standard
+ as well as the European 
+Medical Devices Directive
+ in 1993
+ helped bring some harmonization of existing laws with medical devices and their associated software, and the addition of 
+IEC 62304
+ in 2006 further cemented how medical device software should be developed and tested.
+ The U.S. 
+Food and Drug Administration
+ (FDA) has also offered guidance and driven regulation on medical software, particularly embedded in and used as medical devices.
+ There was an expansion of medical software innovation with the adoption of 
+electronic health records
+ (EHR) and availability of electronic clinical data. In the United States, substantial resources were allocated, starting with the HITECH Act of 2009. 
+
+A portable heart rate variability device is an example of a medical device that contains medical device software.
+
+In the 
+European Union
+, the regulatory landscape shifted significantly with the transition from the 
+Medical Devices Directive
+ (MDD) to the 
+Medical Device Regulation (MDR)
+, which became fully applicable in May 2021.
+ The MDR introduced stricter classification rules for 
+medical device software
+ (specifically Rule 11), resulting in many software products being reclassified to higher risk classes and requiring more rigorous 
+clinical evaluation
+ and 
+post-market surveillance
+.
+
+Medical device software
+
+The global IEC 62304 standard on the software life cycle processes of medical device software states it is a "software system that has been developed for the purpose of being incorporated into the medical device being developed or that is intended for use as a medical device in its own right."
+ In the U.S., the FDA states that "any software that meets the legal definition of a [medical] device" is considered medical device software.
+ A similar "software can be a medical device" interpretation was also made by the European Union in 2007 with an update to its European Medical Devices Directive, when "used specifically for diagnostic and/or therapeutic purposes."
+
+Due to the broad scope covered by these terms, manifold classifications can be proposed for various medical software, based for instance on their technical nature (embedded in a device or standalone), on their level of safety (from the most trivial to the most safety-critical ones), or on their primary function (treatment, education, diagnostics, and/or data management).
+
+A key distinction in medical software classification is between software in a medical device (SiMD) and software as a medical device (SaMD). SiMD refers to software that is essential for a medical device to function, such as control software for robotic surgical systems or firmware in diagnostic instruments. SaMD, on the other hand, operates independently of a hardware device and is designed to fulfill a medical purpose on its own.
+
+Software as a medical device
+
+The dramatic increase in 
+smartphone
+ usage in the twenty-first century triggered the emergence of thousands of standalone health- and medical-related 
+software apps
+, many falling into a gray or borderline area in terms of regulation.
+ While software embedded into a medical device was being addressed, medical software separate from medical hardware—referred to by the International Medical Device Regulators Forum (IMDRF) as "software as a medical device" or "SaMD"
+—was falling through existing regulatory cracks.
+
+In the U.S., the FDA eventually released new draft guidance in July 2011 on "mobile medical applications," with members of the legal community, such as Keith Barritt, speculating it should be read to imply "as applicable to all software, since the test for determining whether a mobile application is a regulated mobile 'medical' application is the same test one would use to determine if any software is regulated."
+ Examples of 
+mobile apps
+ potentially covered by the guidance included those that regulate an installed 
+pacemaker
+ or those that analyze images for 
+cancerous
+ 
+lesions
+, X-rays and 
+MRI
+, graphic data such as 
+EEG
+ waveforms as well as 
+bedside monitors
+, 
+urine analyzers
+, 
+glucometer
+, 
+stethoscopes
+, 
+spirometers
+, 
+BMI
+ calculators, 
+heart rate monitors
+, and body fat calculators.
+
+By the time its final guidance was released in late 2013, however, members of 
+Congress
+ began to be concerned about how the guidance would be used in the future, in particular with what it would mean to the SOFTWARE Act legislation that had recently been introduced.
+ Around the same time, the IMDRF was working on a more global perspective of SaMD with the release of its Key Definitions in December 2013, focused on "[establishing] a common framework for regulators to incorporate converged controls into their regulatory approaches for SaMD."
+ Aside from "not [being] necessary for a hardware medical device to achieve its intended medical purpose," the IMDRF also found that SaMD also could not drive a medical device, though it could be used as a module of or interfaced with one.
+ The group further developed 
+quality management system
+ principles for SaMD in 2015.
+
+Since the late 2010s, medical software has increasingly utilized 
+artificial intelligence
+ (AI) and 
+machine learning
+ (ML) algorithms, particularly in 
+diagnostic imaging
+ and 
+pathology
+.
+ Unlike traditional deterministic software, AI/ML-based software has the potential to adapt and optimize based on new data. 
+
+To address the unique regulatory challenges posed by adaptive algorithms that may change their behavior over time without explicit manual updates, the 
+U.S. FDA
+ released an "Artificial Intelligence/Machine Learning (AI/ML)-Based Software as a Medical Device (SaMD) Action Plan" in 2021.
+
+Software in a medical device
+
+Software in a medical device (SiMD) refers to software that is integral to the operation of a physical medical device. Unlike SaMD, which functions independently, SiMD is embedded within or necessary for the device's intended medical purpose. Examples include software that controls an 
+artificial cardiac pacemaker
+, manages 
+infusion pumps
+, or operates imaging systems like 
+MRI
+ machines.
+
+The development and maintenance of SiMD are governed by international standards to ensure safety and efficacy. IEC 62304:2006 outlines the life cycle requirements for medical device software, establishing a framework for processes, activities, and tasks throughout the software's life cycle. Additionally, ISO 13485:2016 specifies requirements for a quality management system in the design and manufacture of 
+medical devices
+, including software components.
+
+Cybersecurity
+
+With the increasing connectivity of 
+medical devices
+, 
+cybersecurity
+ has become a critical component of medical software safety. Vulnerabilities in medical software can pose direct risks to patient safety (e.g., unauthorized control of an 
+infusion pump
+) and 
+data privacy
+. 
+
+Regulatory bodies like the 
+U.S. FDA
+ and global consortiums like the 
+International Medical Device Regulators Forum
+ (IMDRF) have issued specific guidance mandating that manufacturers incorporate "security by design" principles and maintain a 
+Software Bill of Materials
+ (SBOM) to manage vulnerabilities throughout the product's lifecycle.
+
+International standards
+
+IEC 62304
+ has become the benchmark standard for the development of medical device software, standalone or otherwise, in both the E.U. and the U.S.
+ Innovation in software technologies has led key industry leaders and government regulators to recognize the emergence of numerous standalone medical software products that operate as medical devices. This has been reflected in regulatory changes in the E.U. (European Medical Devices Directive
+) and the U.S. (various FDA guidance documents
+). Additionally, 
+quality management system
+ requirements for manufacturing a software medical device, as is the case with any medical device, are described in the U.S. Quality Systems Regulation
+ of the FDA and also in 
+ISO 13485
+:2016.
+
+Software technology manufacturers that operate within the software medical device space conduct mandatory development of their products in accordance with those requirements. Furthermore, though not mandatory, they may elect to obtain certification from a 
+notified body
+, having implemented such quality system requirements as described within international standards such as ISO 13485:2016.
+
+Further reading
+
+Babelotzky, W; Bohrt, C.; Choudhuri, J.; Handorn, B.; Heidenreich, G.; Neuder, K.; Neumann, G.; Prinz, T.; Rösch, A.; Spyra, G.; Stephan, S.; Wenner, H.; Wufka, M. (2018) 
+Development and Production of Medical Software : Standards in Medical Engineering
+. VDE VERLAG GMBH. pp. 1-207. 
+ISBN
+ 
+9783800745388
+.
+
+Becchetti, C.; Neri, A. (2013). 
+"Chapter 6: Medical Software"
+. 
+Medical Instrument Design and Development: From Requirements to Market Placements
+. Chichester, U.K.: John Wiley & Sons Ltd. pp. 
+359–
+418. 
+ISBN
+ 
+9781119952404
+.
+
+Degoulet, P.; Fieschi, M. (2012). 
+"Chapter 2: Medical Software Development"
+. 
+Introduction to Clinical Informatics
+. New York: Springer Science & Business Media. pp. 
+19–
+34. 
+ISBN
+ 
+9781461268659
+.
+
+See also
+
+Health informatics
+
+Health information technology
+
+Category: Medical software
+
+External links
+
+ Media related to 
+Medical software
+ at Wikimedia Commons
+
+References
+
+Retrieved from "
+https://en.wikipedia.org/w/index.php?title=Medical_software&oldid=1350158606
+"

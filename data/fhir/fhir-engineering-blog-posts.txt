@@ -1,0 +1,68 @@
+Cerner Engineering Blog — Articles and Topics
+Source: https://engineering.cerner.com/
+Scraped: 2026-04-19
+
+==============================================================
+
+About
+
+Cerner Engineering Blog — "a blog by engineers, for engineers"
+Topics: Cloud Architecture, Open Source, TypeScript, GraphQL, Security, Accessibility, Hackathons
+
+Blog Articles
+
+Microservices - The Easy Way is the Wrong Way (Nov 4, 2022)
+- Author: Sean Whitesell, Senior Cloud Architect and Microsoft MVP
+- Topic: Microservices architecture pitfalls and best practices
+
+Rock Solid Components with Typescript and GraphQL (Aug 22, 2022)
+- Author: Mat Warger, senior software developer
+- Topics: TypeScript, GraphQL, React component design
+
+Information Flow Cultures with Dr. Ron Westrum (Apr 1, 2022)
+- Discusses organizational typology and information flow
+- Case study on Boeing; applied to healthcare IT engineering culture
+
+Introducing Inspec Delta (May 11, 2021)
+- Open-source security tool announcement
+- Focus: Infrastructure security benchmarks and DISA STIG compliance
+- Relevant for Cerner Millennium infrastructure security hardening
+
+ShipIt from Anywhere: Our Lessons on Going Virtual (Dec 3, 2020)
+- About Cerner's quarterly 24-hour hackathon events (ShipIt Days)
+- Innovation culture at Cerner engineering
+
+Lessons Learned Building an Accessible Web Application Framework (Sep 24, 2020)
+- Author: Cerner UX Engineering team
+- Discusses Terra web application framework
+- Terra is Cerner's open-source React component library used across all Cerner web applications
+- Topic: Web accessibility, WCAG compliance
+
+Creating the Giant LiteBrite (Aug 26, 2020)
+- DevCon 2019 engineering conference project
+- Demonstrates Cerner's engineering culture and conference events
+
+ShipIt Day XVII & XVI (Feb 2020, Nov 2019)
+- Hackathon event recaps from Cerner's internal innovation program
+
+Cerner SMART on FHIR Tutorial (linked from docs.smarthealthit.org)
+- Cerner provides a browser-based SMART on FHIR app tutorial
+- URL: engineering.cerner.com/smart-on-fhir-tutorial/
+- Covers: OAuth 2.0 authorization, FHIR R4 resource access, EHR launch sequence
+
+Key Engineering Themes at Cerner
+
+1. Open Source: Cerner actively contributes to and maintains open source projects
+2. Cloud Architecture: Transition to OCI (Oracle Cloud Infrastructure) for Millennium hosting
+3. Health Interoperability: FHIR-first API strategy via Ignite platform
+4. Security: DISA STIG compliance, infrastructure hardening
+5. Developer Experience: Terra component library, internal tooling
+6. Innovation Culture: ShipIt hackathon days, DevCon conference
+
+Terra Component Library
+
+Terra is Cerner's open-source React component library:
+- GitHub: github.com/cerner/terra-ui
+- Used across all Cerner clinical web applications
+- WCAG 2.1 AA accessible
+- Supports Cerner's MPages framework for PowerChart customizations

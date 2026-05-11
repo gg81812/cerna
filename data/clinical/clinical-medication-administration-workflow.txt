@@ -1,0 +1,155 @@
+# SOURCE: Cerner Medication Administration Workflow Guide
+# URL: https://wiki.cerner.com/display/public/1101clinical/Medication+Administration+Workflow
+# MODULE: Clinical Workflows
+# RETRIEVED: 2026-04-01
+# ---
+
+# Cerner Medication Administration Workflow Guide
+
+## Overview
+
+The medication administration workflow in Cerner Millennium spans four interconnected systems: CPOE (Computerized Provider Order Entry), PharmNet (Pharmacy), eMAR (Electronic Medication Administration Record), and BCMA (Barcode Medication Administration). Understanding the complete workflow from order to administration is essential for clinical and informatics staff.
+
+## Complete Medication Workflow: Order to Administration
+
+### Step 1: Provider Places Medication Order (CPOE)
+
+The workflow begins when a provider enters a medication order in PowerChart CPOE:
+1. Provider selects a medication from the order catalog.
+2. Provider specifies: dose, route, frequency, start date/time, stop date/time or duration, special instructions.
+3. Clinical Decision Support (CDS) rules fire:
+   - Allergy checks (cross-referenced against ALLERGY table)
+   - Drug-drug interaction checks
+   - Dose range checks (weight-based for pediatrics and oncology)
+   - Duplicate order detection
+4. Provider reviews and acknowledges any alerts.
+5. Provider signs the order.
+6. Order writes to the ORDERS table with order_status = "Ordered."
+
+### Step 2: Pharmacy Receives and Verifies the Order (PharmNet)
+
+1. The medication order appears in the PharmNet pharmacy verification queue.
+2. A pharmacist reviews the order:
+   - Verifies appropriateness (dose, route, frequency, allergies, interactions)
+   - May adjust dose or add instructions
+   - May contact the ordering provider if clarification is needed
+3. Pharmacist verifies the order: status changes to "Verified."
+4. The medication appears on the pharmacy dispensing queue.
+
+### Step 3: Pharmacy Dispenses the Medication (PharmNet)
+
+1. Pharmacy technician prepares or retrieves the medication.
+2. Pharmacist performs a final check on the prepared medication.
+3. Dispense event recorded in PHARMACY_DISPENSE table.
+4. Medication delivered to the nursing unit:
+   - Unit-dose medications delivered to the automated dispensing cabinet (ADC) assigned to the patient's room.
+   - IV medications delivered directly to the nurse or via pneumatic tube.
+   - Oral medications placed in the patient's medication bin in the ADC.
+
+### Step 4: Nurse Retrieves Medication from ADC
+
+Automated Dispensing Cabinets (ADC) — such as Pyxis or Omnicell — are integrated with PharmNet:
+1. Nurse logs in to the ADC with AD credentials.
+2. Selects the patient from the ADC screen.
+3. The ADC shows only medications that have been verified and dispensed for that patient.
+4. Nurse retrieves the medication from the assigned pocket/drawer.
+5. Retrieval is logged in the ADC system and reconciled with PharmNet dispense records.
+
+### Step 5: Nurse Administers the Medication (eMAR + BCMA)
+
+1. Nurse opens the patient's eMAR on the WOW or bedside terminal.
+2. Nurse performs BCMA scanning: patient wristband → medication barcode.
+3. System verifies Five Rights match (patient, drug, dose, route, time).
+4. Nurse documents administration in eMAR: confirms dose given, route, and any special observations.
+5. Administration recorded in MED_ADMIN_EVENT table with:
+   - prsnl_id (nurse ID)
+   - Exact administration timestamp
+   - Dose administered
+   - Route administered
+   - BCMA scan confirmation flag
+   - Any override reason (if applicable)
+
+## Medication Types and Special Workflows
+
+### Scheduled (Routine) Medications
+Standard workflow as described above. Administration times are pre-set by frequency (q4h, q8h, daily, etc.).
+
+### PRN (As Needed) Medications
+- No fixed scheduled time — nurse administers when clinical need arises.
+- Nurse documents indication (e.g., pain level, temperature) and dose given.
+- Minimum re-dose interval enforced by eMAR (e.g., morphine 4mg q4h PRN — system prevents re-dosing within 4 hours).
+- PRN effectiveness assessment required at configured follow-up interval.
+
+### STAT Medications
+- Urgent, immediate administration required.
+- Appear at top of eMAR with red STAT indicator.
+- Pharmacy prioritizes verification (typically within 15–30 minutes of order).
+- Nurse administers as soon as pharmacy verification is complete.
+
+### High-Alert Medications
+High-alert medications (insulin, heparin, chemotherapy, concentrated electrolytes, narcotics) require enhanced safety steps:
+- Mandatory dual-nurse BCMA verification.
+- Both nurses document signatures in the administration event.
+- Independent double-check of dose calculation (weight-based or pump-programmed rate).
+
+### IV Continuous Infusions
+- Pharmacy prepares and labels the IV bag with medication concentration, rate, and patient-specific information.
+- Nurse scans the IV bag barcode and the patient wristband.
+- Nurse programs the IV pump (smart pump integration may pull order data directly from PharmNet).
+- Nurse documents infusion start, rate changes, and bag changes in eMAR.
+- Smart pump integration auto-populates rate and concentration fields where configured.
+
+### Oral Medications
+Standard workflow; unit-dose packaging with individual barcodes required for BCMA scanning.
+
+### Topical / Non-Scannable Medications
+Some medications (ointments, creams, eye drops dispensed in multi-dose containers) may lack individual-dose barcodes. Configure BCMA settings for these medication types:
+- Option 1: Document without scanning (override reason = "Non-scannable product").
+- Option 2: Pharmacy applies patient-specific labels with barcodes to multi-dose containers.
+
+## ADC Integration
+
+### Pyxis / Omnicell Integration with PharmNet
+- Profile-based dispensing: the ADC pocket unlocks only for medications that have been pharmacy-verified for the specific patient.
+- Override dispensing: nurse can access a limited category of medications without a verified order (e.g., emergency medications) using a documented override reason.
+- ADC transactions feed back to PharmNet for charge capture and waste recording.
+
+### Waste Documentation
+For controlled substances (narcotics, benzodiazepines):
+1. Nurse removes the full ordered dose from the ADC.
+2. Nurse administers the ordered dose.
+3. Any unused partial dose must be witnessed and wasted by a second nurse.
+4. Both nurses document the waste in the ADC and in eMAR.
+5. Wasted amounts reconcile with pharmacy controlled substance records.
+
+## Medication Reconciliation
+
+Medication reconciliation is performed at key transition points:
+- Admission: provider reconciles home medications against new inpatient orders.
+- Transfer: medications reviewed when patient moves between units.
+- Discharge: provider generates a discharge medication list reconciling inpatient orders with home medications; patient receives written discharge instructions.
+
+## Downtime Procedures
+
+When Cerner Millennium is unavailable:
+1. Nurses retrieve the most recent printed eMAR (typically printed at shift start or downtime initiation).
+2. Medication administrations are documented on paper MAR.
+3. Upon system restoration, nurses back-enter all administrations from the downtime period.
+4. Pharmacy issues paper medication tickets for STAT orders during downtime.
+5. BCMA scanning is unavailable during downtime — manual Five Rights verification substitutes.
+
+## Regulatory and Compliance Considerations
+
+- Joint Commission Medication Management (MM) standards require documentation of every medication administration.
+- BCMA scanning compliance is a reportable metric — aim for >95% scan rate for scheduled medications.
+- Controlled substance dispensing and waste must reconcile to pharmacy perpetual inventory records.
+- eMAR records are part of the legal medical record and are subject to audit.
+
+## Best Practices
+
+1. Never pre-document administrations — always document at the bedside at the time of administration.
+2. Never remove medications from the ADC for a different patient — each retrieval is logged.
+3. Always document "Not Given" with a reason if a medication is not administered.
+4. Report pharmacy verification delays (>30 min for non-STAT) to the charge pharmacist.
+5. Always perform independent double-check for high-alert medications before administration.
+6. Keep BCMA override rates below 5% — high override rates indicate a workflow or system issue.

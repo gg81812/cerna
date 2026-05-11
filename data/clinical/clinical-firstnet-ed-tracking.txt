@@ -1,0 +1,158 @@
+# Cerner FirstNet — Emergency Department Tracking and Clinical Workflows
+# MODULE: Clinical
+# SYNTHETIC KNOWLEDGE BASE — Cerna RAG System
+
+## What Is FirstNet in Cerner?
+
+FirstNet is Cerner Millennium's emergency department (ED) information system, providing an integrated tracking board, clinical documentation, CPOE order entry, nursing workflows, and patient throughput management specifically designed for the fast-paced emergency department care setting.
+
+FirstNet is the primary clinical application for emergency nurses, physicians, and technicians in the ED. It provides a real-time, at-a-glance view of every patient in the emergency department, their status, assigned staff, pending orders, and acuity — all on a single configurable tracking board.
+
+## FirstNet Tracking Board
+
+The FirstNet tracking board is the central workspace for ED staff. It displays all current patients in the ED in a row-per-patient, column-per-data-point layout. The tracking board is fully configurable to display whatever data elements are most relevant to the ED's workflow.
+
+### Standard Tracking Board Columns
+
+| Column | Data Displayed |
+|--------|---------------|
+| Bed | Current bed or room assignment |
+| Patient Name | Patient's name (may be masked based on privacy policy) |
+| Acuity / ESI | Emergency Severity Index triage level (1-5) |
+| Chief Complaint | Primary reason for visit |
+| Time in ED | Elapsed time since registration |
+| Physician | Assigned attending emergency physician |
+| Nurse | Assigned primary nurse |
+| Status | Current patient status (Triage, Assessment, Orders Pending, Results Pending, Ready for Discharge, etc.) |
+| Orders | Count of pending or active orders |
+| Results | Count of pending lab or radiology results |
+| Last Update | Time of last clinical documentation update |
+
+### Color-Coded Status Indicators
+FirstNet uses color coding on the tracking board to communicate urgency:
+- **Red cells**: critical patients (ESI 1), abnormal results pending, or overdue tasks
+- **Yellow cells**: medium acuity (ESI 2-3), outstanding orders, or items needing attention
+- **Green cells**: lower acuity (ESI 4-5), results returned, or patient ready for disposition
+- **Gray cells**: boarding patients awaiting inpatient bed or transfer
+- **Blue cells**: patients in isolation precautions
+
+## Triage Workflow in FirstNet
+
+### Step 1: Patient Registration
+1. Patient arrives at ED — registration staff create encounter in Cerner (or auto-created from pre-hospital ADT)
+2. Patient appears on tracking board with "Registered" status
+3. Encounter type: EMERGENCY is automatically applied
+
+### Step 2: Triage Assessment
+1. Triage nurse selects the patient from the tracking board
+2. Opens the **Triage PowerForm** within FirstNet
+3. Documents:
+   - Triage date/time
+   - Emergency Severity Index (ESI) level 1-5
+   - Chief complaint (coded and free-text)
+   - Vital signs (BP, HR, RR, SpO2, temperature, pain score)
+   - Allergy documentation
+   - Triage medications (e.g., aspirin for chest pain per protocol)
+4. Triage level automatically updates tracking board acuity column
+5. Patient is assigned to a room/bed on the tracking board
+
+### Step 3: Physician Assessment and CPOE
+1. ED physician opens patient chart from tracking board
+2. Documents History of Present Illness (HPI) in PowerNote or dictation
+3. Enters orders via CPOE:
+   - Laboratory orders (auto-routed to lab via HL7)
+   - Imaging orders (auto-routed to radiology)
+   - Medications (auto-routed to pharmacy/eMAR)
+   - Nursing orders (tasks appear in nursing task list)
+4. Order status updates reflected in tracking board Orders column in real time
+
+### Step 4: Nursing Care Documentation
+1. Nurse completes nursing assessments in PowerForms:
+   - Head-to-toe nursing assessment
+   - Pain assessment
+   - Fall risk (Morse Fall Scale)
+   - Suicide risk screen
+2. Administers medications via eMAR/BCMA workflow (same as inpatient)
+3. Documents IV access, patient education, and care coordination notes
+4. Updates patient status on tracking board (drag-and-drop or status button)
+
+### Step 5: Results Review
+1. Lab results auto-populate in patient chart Results section
+2. Critical values trigger a **critical result notification** alert to the ordering physician via InBasket
+3. Radiology results with preliminary reads appear in chart immediately; final reads update automatically
+4. Physician reviews results and documents assessment update in chart
+
+### Step 6: Disposition Decision
+After evaluation, physician makes disposition:
+- **Discharge**: Discharge order placed → discharge instructions generated in PowerChart
+- **Admission**: Admission order placed → bed request sent to bed management → patient moves to inpatient workflow
+- **Transfer**: Transfer order placed → coordination with receiving facility via HL7 or secure message
+- **Observation**: Observation order placed → encounter type may change to OBSERVATION
+
+## FirstNet-Specific Features
+
+### Nursing Track Board (NTB)
+A nursing-specific view of the tracking board that shows:
+- Outstanding nursing tasks by patient
+- Medication administration due times
+- Patient flow status indicators
+
+### Quick List Orders
+ED physicians can configure personal **Quick Lists** — pre-defined order sets or individual orders accessible from the tracking board with a single click:
+- "Chest Pain Work-up" — troponin, EKG order, aspirin, oxygen
+- "Abdominal Pain Panel" — CBC, CMP, lipase, UA, IV access
+- "Pediatric Fever" — CBC, blood culture, UA, urine culture
+
+### Protocol Orders (Standing Orders)
+Triage nurses can place **standing protocol orders** at triage before physician evaluation:
+- Examples: Chest pain protocol, sepsis screening orders, stroke activation orders
+- Configured in: **FirstNet Administration > Triage Protocol Orders**
+- Requires nursing license scope validation in your state
+
+### Track Board Filters and Views
+The tracking board supports multiple simultaneous views:
+- **All Patients**: complete ED census
+- **By Zone**: grouped by ED zone (Fast Track, Trauma, Medical)
+- **My Patients**: filtered to current user's assigned patients
+- **Boarding**: patients with inpatient admission pending bed assignment
+- **Rooms**: room status view for bed management
+
+## FirstNet Administration and Configuration
+
+### Accessing FirstNet Administration
+1. Navigate to **Cerner Solutions > FirstNet Administration**
+2. Or: launch FirstNet > Administration ribbon tab (requires admin security access)
+
+### Configuring the Tracking Board
+1. **Column Configuration**: add, remove, or reorder tracking board columns
+2. **Color Rules**: define when cells change color (threshold-based on time, result status, or custom criteria)
+3. **Status Labels**: customize the patient status values shown in the Status column
+4. **Sort Order**: configure default sort (by acuity, by time in ED, or by zone)
+
+### Configuring Triage PowerForms
+1. Navigate to **PowerForms Administration > Triage Assessment**
+2. Add or modify form sections (vital sign sections, chief complaint sections)
+3. Map form fields to clinical event codes for data extraction in CCL reports
+
+### Configuring Quick List Orders
+1. Access **FirstNet Administration > Quick Order Lists**
+2. Create ED-specific order groupings by acuity level and chief complaint
+3. Assign to triage protocols or physician preference lists
+
+## Patient Safety Features in FirstNet
+
+- **Wristband printing**: auto-prints patient ID wristband at triage registration with barcode for BCMA scanning
+- **Isolation alerts**: tracking board flags patients in contact, droplet, or airborne isolation
+- **Violence risk flags**: security alerts visible to all staff for patients with behavioral concerns
+- **Diversion tracking**: monitors when ED is on diversion status and alerts bed management
+
+## Reporting and Analytics for the ED
+
+FirstNet feeds key ED metrics to Discern Analytics:
+- **Door-to-provider time**: time from registration to first physician contact
+- **Length of stay (LOS)**: total time from arrival to disposition
+- **Left without being seen (LWBS)**: patients who leave before evaluation
+- **Admit-to-bed time**: time from admission decision to inpatient bed assignment
+- **Boarding time**: time inpatient patients spend in ED waiting for a bed
+
+Access ED dashboards: **Discern Analytics > Emergency Department Performance Dashboard**

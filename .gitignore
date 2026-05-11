@@ -1,0 +1,49 @@
+# Environment
+.env
+.streamlit/secrets.toml
+
+# Vector store — committed for Streamlit Cloud deploys (129 MB, all files <90 MB)
+# Re-exclude locally if you re-ingest and don't want to ship the change:
+#   chroma_store/
+
+# Logs (contains user queries — keep private)
+logs/
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.pytest_cache/
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# Virtual environments
+venv/
+.venv/
+env/
+.env/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb
+cloudflared.exe
+
+# Streamlit runtime / tunnel logs (created by ad-hoc share commands)
+streamlit.log
+tunnel.log
+tunnel_lhr.log
+
+# Claude Code local state
+.claude/

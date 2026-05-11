@@ -262,12 +262,6 @@ def render_left_panel(
         if is_speaking
         else '<div class="idle-dot"></div>'
     )
-    pills_html = "".join(
-        f'<div class="mod-pill{" active" if key == active_module else ""}" '
-        f'style="background:{c}22;border-color:{c}55;color:{c};">{lbl}</div>'
-        for key, (lbl, c) in MODULES.items()
-        if key is not None
-    )
 
     if lottie_data and _LOTTIE_OK:
         _, mid, _ = st.columns([0.3, 2.4, 0.3])
@@ -290,8 +284,6 @@ def render_left_panel(
     <strong>Millennium</strong>, PowerChart, and Clinical workflows.
     Every answer cited to source.
   </div>
-  <div class="mod-pills">{pills_html}</div>
-  <div class="left-footer">{_kb_footer_html(kb_counts)}</div>
 </div>""", unsafe_allow_html=True)
     else:
         speaking_cls = " speaking" if is_speaking else ""
@@ -311,9 +303,17 @@ def render_left_panel(
     <strong>Millennium</strong>, PowerChart, and Clinical workflows.
     Every answer cited to source.
   </div>
-  <div class="mod-pills">{pills_html}</div>
-  <div class="left-footer">{_kb_footer_html(kb_counts)}</div>
 </div>""", unsafe_allow_html=True)
+
+
+def render_left_footer(kb_counts: dict) -> None:
+    """Knowledge-articles footer — rendered after the starter dropdown."""
+    st.markdown(
+        f'<div class="left-panel left-panel-footer-only">'
+        f'<div class="left-footer">{_kb_footer_html(kb_counts)}</div>'
+        f'</div>',
+        unsafe_allow_html=True,
+    )
 
 
 def render_top_bar() -> None:
@@ -369,29 +369,27 @@ def render_top_bar() -> None:
 
 
 def render_starter_grid() -> None:
-    """Always-visible starter prompts shown only when the conversation is empty.
+    """Collapsible starter prompts dropdown in the left panel.
 
-    Mirrors the ChatGPT/Claude default-state pattern: prominent grid of clickable
-    cards directly below the input, no expander to hide them.
+    Hidden by default behind a click-to-open expander styled to match the dark
+    purple LHS background. Auto-hides entirely once a conversation starts.
     """
     if st.session_state.get("messages"):
         return
 
-    st.markdown(
-        '<div style="margin-top:1rem;margin-bottom:0.4rem;font-size:0.72rem;'
-        'font-weight:600;color:#7B3FE4;letter-spacing:0.04em;text-transform:uppercase;">'
-        '⚡ Try one of these to get started'
-        '</div>',
-        unsafe_allow_html=True,
-    )
-    # 4-column grid — fits the wide right panel; 2 rows for 8 chips
-    for i, chip in enumerate(PROMPT_CHIPS):
-        if i % 4 == 0:
-            cols = st.columns(4)
-        with cols[i % 4]:
-            if st.button(chip, key=f"chip_{i}", use_container_width=True):
-                st.session_state.pending_prompt = chip
-                st.rerun()
+    # Wrapper class lets us target the expander styling without affecting
+    # any other expanders in the app.
+    st.markdown('<div class="starter-expander">', unsafe_allow_html=True)
+    with st.expander("⚡ Quick-start prompts", expanded=False):
+        # 2-column grid — fits the narrow left panel
+        for i, chip in enumerate(PROMPT_CHIPS):
+            if i % 2 == 0:
+                cols = st.columns(2)
+            with cols[i % 2]:
+                if st.button(chip, key=f"chip_{i}", use_container_width=True):
+                    st.session_state.pending_prompt = chip
+                    st.rerun()
+    st.markdown('</div>', unsafe_allow_html=True)
 
 
 def render_cerna_response(

@@ -100,6 +100,14 @@ with col_l:
         kb_counts=kb_counts,
     )
 
+    # Collapsible starter-prompts dropdown lives in the left panel, styled
+    # to match the dark purple background. Hidden once the user sends a message.
+    comp.render_starter_grid()
+
+    # Knowledge-articles footer rendered after the dropdown so it stays
+    # at the bottom of the left panel visual hierarchy.
+    comp.render_left_footer(kb_counts)
+
 with col_c:
     # Header + module filter
     comp.render_top_bar()
@@ -118,10 +126,6 @@ with col_c:
             submitted = st.form_submit_button("Send", use_container_width=True)
     if not submitted:
         user_input = None
-
-    # Starter prompt grid — always visible directly below input when the
-    # conversation is empty; auto-hides as soon as the user asks something
-    comp.render_starter_grid()
 
     # Chat transcript (all stored messages)
     comp.render_chat(st.session_state.messages)

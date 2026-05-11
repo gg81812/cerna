@@ -1,3 +1,4 @@
+
 """
 ui/styles.py — Cerna global CSS + Web Speech API voice input injection.
 Call inject_global_css() once at app startup.
@@ -210,6 +211,64 @@ div[data-testid="column"] { padding: 0 !important; }
     border-top: 1px solid rgba(123,63,228,0.2);
     font-size: 0.68rem; color: rgba(160,140,200,0.6);
     text-align: center; line-height: 1.9;
+}
+
+/* Starter-prompts dropdown — styled to blend with the dark purple LHS */
+.starter-expander {
+    margin: 0.8rem 0;
+}
+.starter-expander + div [data-testid="stExpander"],
+.starter-expander ~ div [data-testid="stExpander"]:first-of-type {
+    background: rgba(20, 10, 40, 0.55) !important;
+    border: 1px solid rgba(123, 63, 228, 0.35) !important;
+    border-radius: 12px !important;
+}
+/* Streamlit renders the expander as a sibling div after our wrapper */
+div[data-testid="stExpander"]:has(+ .starter-expander),
+.starter-expander + div[data-testid="stExpander"] {
+    background: rgba(20, 10, 40, 0.55) !important;
+    border: 1px solid rgba(123, 63, 228, 0.35) !important;
+    border-radius: 12px !important;
+}
+/* Catch-all: the only expander on the page is the starter one — safe to scope globally */
+[data-testid="stExpander"] {
+    background: rgba(20, 10, 40, 0.55) !important;
+    border: 1px solid rgba(123, 63, 228, 0.35) !important;
+    border-radius: 12px !important;
+    margin-bottom: 1rem !important;
+}
+[data-testid="stExpander"] summary {
+    color: #E0D4FF !important;
+    font-weight: 600 !important;
+    padding: 0.65rem 0.9rem !important;
+}
+[data-testid="stExpander"] summary:hover {
+    background: rgba(123, 63, 228, 0.12) !important;
+    border-radius: 12px !important;
+}
+[data-testid="stExpander"] summary p,
+[data-testid="stExpander"] summary span {
+    color: #E0D4FF !important;
+}
+/* Expanded content area */
+[data-testid="stExpander"] > details > div {
+    background: transparent !important;
+    padding: 0.6rem 0.7rem !important;
+}
+/* Buttons inside the starter dropdown — keep them readable on dark purple */
+[data-testid="stExpander"] button[kind="secondary"] {
+    background: rgba(123, 63, 228, 0.18) !important;
+    border: 1px solid rgba(123, 63, 228, 0.45) !important;
+    color: #E0D4FF !important;
+    font-size: 0.72rem !important;
+    padding: 0.4rem 0.5rem !important;
+    min-height: auto !important;
+    white-space: normal !important;
+    line-height: 1.25 !important;
+}
+[data-testid="stExpander"] button[kind="secondary"]:hover {
+    background: rgba(123, 63, 228, 0.32) !important;
+    border-color: rgba(123, 63, 228, 0.7) !important;
 }
 .left-footer strong { color: rgba(200,180,255,0.8); }
 

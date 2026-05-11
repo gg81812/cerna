@@ -38,3 +38,10 @@ redis==5.0.8          # pinned — falls back to in-memory LRU if Redis is unrea
 
 # ── Environment & utilities ───────────────────────────────────────────────────
 python-dotenv>=1.0.0
+
+# ── Compatibility pin ─────────────────────────────────────────────────────────
+# chromadb→opentelemetry-proto ships pre-compiled _pb2.py files built against
+# protobuf 3.x. Newer protobuf (>=4.21) removed the descriptor API they use,
+# so without this pin the deploy crashes on `TypeError: Descriptors cannot
+# be created directly`. Fix per the protobuf upgrade-guide.
+protobuf>=3.20.0,<4.0.0

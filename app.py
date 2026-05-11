@@ -111,13 +111,10 @@ with col_c:
     # Header + module filter
     comp.render_top_bar()
 
-    # Spacer so the input doesn't read as part of the header bar
+    # Generous vertical breathing room so the input clearly separates from
+    # the top bar (manager feedback: input was reading as part of the header).
     st.markdown(
-        '<div style="height:2.2rem;"></div>'
-        '<div style="font-size:0.78rem;color:#7B3FE4;font-weight:600;'
-        'letter-spacing:0.04em;text-transform:uppercase;margin-bottom:0.45rem;">'
-        'What can I help you with?'
-        '</div>',
+        '<div style="margin-top:3rem;"></div>',
         unsafe_allow_html=True,
     )
 
@@ -126,8 +123,8 @@ with col_c:
         ti_col, btn_col = st.columns([0.88, 0.12])
         with ti_col:
             user_input = st.text_input(
-                "Ask Cerna",
-                placeholder="Ask Cerner…",
+                "Ask me",
+                placeholder="Ask me…",
                 label_visibility="collapsed",
                 key="chat_text_input",
             )

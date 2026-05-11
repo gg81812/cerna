@@ -9,9 +9,48 @@ ui/components.py renders it into a structured card.
 from __future__ import annotations
 
 import json
+import re
 from typing import Optional
 
 from pydantic import BaseModel, Field, model_validator
+
+
+# ── Internal-filename stripper ────────────────────────────────────────────────
+# The retrieved chunks carry source filenames as metadata, and the LLM
+# sometimes leaks those into the user-facing text (e.g. "see
+# clinical-emar-user-guide.txt"). Those are internal repository paths and
+# should never appear in responses. Patterns below remove them defensively.
+_INTERNAL_REF_PATTERNS: list[re.Pattern] = [
+    # [Source: filename.txt] / [Sources: x.md, y.txt] / (Source: x.md)
+    re.compile(r"[\[\(]\s*Sources?\s*[:\-]\s*[^\]\)]+?\.(?:txt|md|json)\s*[\]\)]", re.IGNORECASE),
+    # "see (the) file/document (named) <filename>" — collapse to nothing
+    re.compile(
+        r"\b(?:see|refer to|check|consult|review|read)\s+(?:the\s+)?(?:file|document)\s+(?:named\s+)?"
+        r"[`\"']?[A-Za-z0-9][A-Za-z0-9_\-./]*\.(?:txt|md|json)[`\"']?",
+        re.IGNORECASE,
+    ),
+    # Bare hyphenated filename refs, e.g. clinical-emar-user-guide.txt or fhir-r4-overview.md
+    re.compile(r"\b[A-Za-z0-9][A-Za-z0-9_\-]*(?:[/\\][A-Za-z0-9_\-]+)*\.(?:txt|md|json)\b"),
+]
+
+
+def _strip_internal_refs(text: str) -> str:
+    """Remove references to internal repo filenames from user-facing text."""
+    if not text:
+        return text
+    cleaned = text
+    for pat in _INTERNAL_REF_PATTERNS:
+        cleaned = pat.sub("", cleaned)
+    # Tidy artifacts left behind: empty brackets/parens, doubled spaces,
+    # orphan punctuation, leading/trailing punctuation on a sentence.
+    cleaned = re.sub(r"\(\s*\)|\[\s*\]", "", cleaned)
+    cleaned = re.sub(r"\s+([,.;:])", r"\1", cleaned)
+    cleaned = re.sub(r"[ \t]+", " ", cleaned)
+    cleaned = re.sub(r"\s{2,}\n", "\n", cleaned)
+    # Drop stray "(, )" or ", ," that the substitutions can leave behind
+    cleaned = re.sub(r",\s*,", ",", cleaned)
+    cleaned = re.sub(r"^[\s,;.]+|[\s,;.]+$", "", cleaned)
+    return cleaned.strip()
 
 
 def _close_truncated_json(s: str) -> str:
@@ -53,7 +92,11 @@ class CernaResponse(BaseModel):
     """Structured response produced by the Cerna main QA pipeline."""
 
     direct_answer: str = Field(
-        description="Concise, direct answer with inline citations [Source: filename]."
+        description=(
+            "Concise, direct answer to the user's question. "
+            "Do NOT include raw source filenames (e.g. clinical-emar-user-guide.txt) — "
+            "those are internal paths. Use natural phrasing like 'per Cerner documentation' instead."
+        )
     )
     context_explanation: str = Field(
         description="Background on the relevant Cerner module(s) and how they relate."
@@ -94,6 +137,17 @@ class CernaResponse(BaseModel):
                 lines = [ln.lstrip("•-*0123456789.) ").strip() for ln in val.splitlines()]
                 data[key] = [ln for ln in lines if ln]
         return data
+
+    @model_validator(mode="after")
+    def _strip_internal_refs_fields(self) -> "CernaResponse":
+        """Defensive post-process: remove internal repo filenames from any text
+        field the LLM might have leaked them into."""
+        self.direct_answer = _strip_internal_refs(self.direct_answer)
+        self.context_explanation = _strip_internal_refs(self.context_explanation)
+        self.recommendations = _strip_internal_refs(self.recommendations)
+        self.step_by_step = [_strip_internal_refs(s) for s in self.step_by_step]
+        self.best_practices = [_strip_internal_refs(bp) for bp in self.best_practices]
+        return self
 
     # ── Serialisation helpers ──────────────────────────────────────────────────
 
@@ -147,10 +201,10 @@ class CernaResponse(BaseModel):
 # ── JSON schema for prompt injection ──────────────────────────────────────────
 
 CERNA_RESPONSE_SCHEMA = """{
-  "direct_answer": "Full answer scaled to question complexity",
+  "direct_answer": "Full answer scaled to question complexity. NEVER cite raw filenames like 'clinical-emar-user-guide.txt' — those are internal paths.",
   "context_explanation": "Background on the Cerner module(s) and why it matters",
   "step_by_step": ["Step 1 with exact menu path...", "Step 2...", "...as many steps as needed, or [] if conceptual"],
   "best_practices": ["Cerner-specific pitfall or tip...", "...as many as relevant, or [] if none apply"],
-  "recommendations": "Concrete next action with specific uCern or build resource",
+  "recommendations": "Concrete next action. Reference uCern, Oracle Help Center, or your facility's build team — but NEVER raw filenames like 'clinical-emar-user-guide.txt'.",
   "confidence": "high | medium | low"
 }"""
